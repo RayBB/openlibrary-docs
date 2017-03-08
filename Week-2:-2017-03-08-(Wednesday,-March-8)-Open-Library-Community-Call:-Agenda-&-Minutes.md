@@ -22,6 +22,11 @@ What are we missing from being a good authoritative source of data?
 - Wing numbers as an identifier 
 - Grouping by publisher -- use subject "publisher"
 
+#openlibrary-g works better than open library mailing list
+
+Opportunities:
+- Author merges
+
 Let's create a button for:
 [books I own | books I've read | books I want]
 private lists which are private
