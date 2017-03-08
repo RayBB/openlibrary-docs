@@ -48,6 +48,8 @@ Badges and karma for librarians (discogs.com has this) [gamify]
 - genre bags
 - how many books you've read
 
+How do we surface the style guides for Open Library?
+
 Standards document:
 - auto validation on a title (warning of data is invalid)
 
