@@ -12,3 +12,4 @@ See: https://github.com/internetarchive/openlibrary/wiki/Roadmap
 
 Note:
 Charles needs a bot with admin access
+cares about pre-1600 books
