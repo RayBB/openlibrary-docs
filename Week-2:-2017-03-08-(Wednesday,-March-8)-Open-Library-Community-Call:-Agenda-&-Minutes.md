@@ -11,7 +11,11 @@ See: https://github.com/internetarchive/openlibrary/wiki/Roadmap
 
 
 Note:
-Charles needs a bot with admin access
+- Charles needs a bot with admin access
+- Current git has to our openlibrary page (dev) -- what version are we running? (use git tag)
+- @skylerbunny's PR for prioritizing oclc > isbn
+- David and charles access to VM for MARC record parsing
+
 cares about pre-1600 books
 
 What are we missing from being a good authoritative source of data?
