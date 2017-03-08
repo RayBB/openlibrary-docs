@@ -8,3 +8,7 @@ T.B.D
 ## Discussing Q2 and Q3 Roadmap
 
 See: https://github.com/internetarchive/openlibrary/wiki/Roadmap
+
+
+Note:
+Charles needs a bot with admin access
