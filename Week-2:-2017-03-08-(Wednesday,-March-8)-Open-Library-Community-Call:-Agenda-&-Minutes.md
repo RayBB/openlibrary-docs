@@ -33,3 +33,12 @@ private lists which are private
 
 Stack-overflow for Open Library
 Wikipedia - every page [Work] has a discussion section
+
+## Ideas
+Subscribe to changes on pages
+A user chat page or messaging
+Badges and karma for librarians (discogs.com has this) [gamify]
+- number of edits
+- works added
+- librarian badgee
+- genre bags
