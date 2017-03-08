@@ -46,6 +46,7 @@ Badges and karma for librarians (discogs.com has this) [gamify]
 - works added
 - librarian badgee
 - genre bags
+- how many books you've read
 
 Standards document:
 - auto validation on a title (warning of data is invalid)
