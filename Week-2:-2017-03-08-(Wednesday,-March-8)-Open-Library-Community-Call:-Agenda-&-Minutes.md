@@ -42,3 +42,10 @@ Badges and karma for librarians (discogs.com has this) [gamify]
 - works added
 - librarian badgee
 - genre bags
+
+Standards document:
+- auto validation on a title (warning of data is invalid)
+
+Like wikipedia, have a banner which shows which pages need 
+flag desired data as missing -- request a change
+How can users request they want to know a field? !!!
