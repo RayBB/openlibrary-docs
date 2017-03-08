@@ -22,7 +22,7 @@ What are we missing from being a good authoritative source of data?
 - Wing numbers as an identifier 
 - Grouping by publisher -- use subject "publisher"
 
-- #openlibrary-g works better than open library mailing list
+openlibrary-g works better than open library mailing list
 
 Opportunities:
 - Author merges
