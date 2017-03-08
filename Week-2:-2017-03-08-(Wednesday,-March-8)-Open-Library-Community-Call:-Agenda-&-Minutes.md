@@ -30,3 +30,6 @@ Opportunities:
 Let's create a button for:
 [books I own | books I've read | books I want]
 private lists which are private
+
+Stack-overflow for Open Library
+Wikipedia - every page [Work] has a discussion section
