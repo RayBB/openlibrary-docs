@@ -16,7 +16,7 @@
   * Recommend a book to a friend upon returning it
   * Surface recommendations on homepage
   * Amazon style book chapter previews
-  * Interactive tables of contents (TOC) on book detail pages
+  * Interactive tables of contents (TOC), chapter titles on book detail pages
   * Listen to eBook - ability to jump directly to using BookReader text-to-speech
   * Import book reviews and/or ratings from Amazon or GoodReads
 * Better **Administrative Tools**
