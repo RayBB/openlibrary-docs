@@ -1,5 +1,7 @@
+# Week 2 2017 03 08 (Wednesday, March 8) Open Library Community Call: Agenda & Minutes
+
 Attendees:
-T.B.D
+- @mek, @charles
 
 ## Blocking problems
 
