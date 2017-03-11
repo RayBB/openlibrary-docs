@@ -33,11 +33,11 @@ In openlibrary/plugins/openlibrary/lists.py
 
 In file openlibrary/plugins/upstream/addbook.py:
 
-   https://openlibrary.org/books/(OL...M)/edit
+    GET https://openlibrary.org/books/(OL...M)/edit
 
 Parameters:
 
-   name="_delete"
+    name="_delete"
 
 Permissions:
 
