@@ -43,11 +43,52 @@ Permissions:
 
 User must be Administrator
 
+Notes:
+
+Deleting the last Edition of a Work via this endpoint will remove the Work also.
+
+**[RESTful API](https://openlibrary.org/dev/docs/restful_api) Delete:**
+
+    PUT https://openlibrary.org/works/(OL...W).json
+
+Body:
+
+    { 
+      "type": { "key": "/type/delete" },
+      "_comment": "<Reason for deletion>"
+    }
+
+Permissions:
+
+User must be Administrator
+
+Notes:
+
+Attempting to delete a Work that still has editions should fail. (Needs verification!)
+Deleting the last Work of an Author will not remove the Author record.
+
 ## Editions
+
+### View
+
+RESTful API
+
+    GET https://openlibrary.org/books/(OL...M).json
 
 ### Create
 
 ### Edit
+
+**[RESTful API](https://openlibrary.org/dev/docs/restful_api) Edit:**
+
+    PUT https://openlibrary.org/books/(OL...M).json
+
+Body:
+
+    {
+      < complete body of current record from GET request, modified as desired >
+      "_comment": "<Description of changes>"
+    }
 
 ### Merge
 
@@ -64,5 +105,24 @@ Parameters:
 Permissions:
 
 User must be Administrator
+
+**[RESTful API](https://openlibrary.org/dev/docs/restful_api) Delete:**
+
+    PUT https://openlibrary.org/books/(OL...M).json
+
+Body:
+
+    { 
+      "type": { "key": "/type/delete" },
+      "_comment": "<Reason for deletion>"
+    }
+
+Permissions:
+
+User must be Administrator
+
+Notes:
+
+Deleting the last Edition of a Work will **NOT** remove the Work. It has to be cleared separately.
 
 ## Subjects
