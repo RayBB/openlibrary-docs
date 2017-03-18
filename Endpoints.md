@@ -75,6 +75,8 @@ RESTful API
 
     GET https://openlibrary.org/books/(OL...M).json
 
+    GET https://openlibrary.org/books/(OL...M).rdf
+
 ### Create
 
 ### Edit
@@ -86,7 +88,7 @@ RESTful API
 Body:
 
     {
-      < complete body of current record from GET request, modified as desired >
+      < complete **JSON** body of current record from GET request, modified as desired >
       "_comment": "<Description of changes>"
     }
 
