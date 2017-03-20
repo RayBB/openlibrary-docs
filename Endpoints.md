@@ -1,6 +1,6 @@
 # Endpoints
 
-An overview of the Open Library internal API.
+An overview (audit) of the Open Library internal "unofficially supported" APIs (which should be replaced with public APIs)
 
 - [Lists](#lists)
   - [Creating Lists](#creating-lists)
