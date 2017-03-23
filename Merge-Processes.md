@@ -2,7 +2,7 @@ This page attempts to document the actual admin process of performing each kind 
 
 ## Pre-Merge States
 
-Theorising that these may apply equally to all record types, Work, Edition, and Author: 
+Theorising that these apply equally to all record types, Work, Edition, and Author: 
 
 1. One record is clearly better, and the other can be safely discarded (i.e less good record's attributes are a subset of the better record)
 1. There is an obvious way to merge data cleanly (copying missing attributes from one to the other) to make a more complete record
