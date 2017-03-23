@@ -34,6 +34,10 @@ where duplicate is a work ID, or list of work IDs to be merged into the canonica
 ## Merge Editions
 
 Current OL admin functionality.
+
+https://openlibrary.org/books/merge 
+takes parameters: `?key=OL...M&key=OL...M` etc
+
 (TODO: link to current code that provides this function on the admin interface. Describe what is being done. Check for gaps)
 
 ## Merge Authors
