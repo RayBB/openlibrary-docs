@@ -6,9 +6,24 @@
 
 # Attendees
 
-Mek, 
+Mek, Charles
 
 # Updates
+
+## Charles
+
+Aggregating list of (unofficial) endpoints. Documenting merging strategy
+Question about bulk upload API? Does it exist?
+
+## Bernat
+
+Welcome! Bernat is working on a mentorship mobile app.
+
+## David
+
+Open Book genome project. Improving data we have: Using openlibrary-client tool, metatools, librarything
+
+## Brenton
 
 ## Mek
 
