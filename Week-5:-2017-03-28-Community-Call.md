@@ -18,10 +18,17 @@ Question about bulk upload API? Does it exist?
 ## Bernat
 
 Welcome! Bernat is working on a mentorship mobile app.
+Suggests react + less, would like overview of feature/beta branch
 
 ## David
 
 Open Book genome project. Improving data we have: Using openlibrary-client tool, metatools, librarything
+- Metadata format
+
+## Neal
+
+Was originally downloading warc files -- give me all pdfs
+researcher vm w/ batch of pdfs on them
 
 ## Brenton
 
