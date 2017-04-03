@@ -6,7 +6,7 @@
 
 # Attendees
 
-Mek, Charles
+Mek, Charles, Neal, Brenton, Bernat, David
 
 # Updates
 
