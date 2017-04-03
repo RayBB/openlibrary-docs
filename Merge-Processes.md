@@ -36,14 +36,25 @@ where duplicate is a work ID, or list of work IDs to be merged into the canonica
 Current OL admin functionality.
 
 https://openlibrary.org/books/merge 
-takes parameters: `?key=OL...M&key=OL...M` etc
+takes parameters: `?key=OL..M&key=OL..M` etc
 
-(TODO: link to current code that provides this function on the admin interface. Describe what is being done. Check for gaps)
+* Editions merge page: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/merge/editions.html
+* Plugin: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/merge_editions.py
+
+(TODO: Describe what is being done. Check for gaps)
 
 ## Merge Authors
 
 Current OL admin functionality.
-(TODO: link to current code that provides this function on the admin interface. Describe what is being done. Check for gaps)
+
+https://openlibrary.org/authors/merge
+takes parameters `?key=OL..A&key=OL..A` etc
+* Author merge page: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/merge/authors.html
+* Author merge plugin: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/merge_authors.py
+Has `BasicMergeEngine` class which could be reused.
+* Plugin Tests: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/tests/test_merge_authors.py
+
+(TODO: Describe what is being done. Check for gaps)
 
 ## Merge Publishers
 Feature request, see https://github.com/internetarchive/openlibrary/issues/372
