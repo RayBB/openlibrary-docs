@@ -11,10 +11,16 @@ If you're joining the design and product team, you probably have a bunch of the 
 - [What capabilities does Open Library have?](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY#heading=h.v7l32m5pq3mh)
 - [Where can I find Open Library design mocks and wireframes?](https://www.dropbox.com/sh/aii0z9j8a4505f1/AABFExKzYJn692IDtQKpWD3Ia)
 
-## Moderators Team
+## Quality Team
+
+This team is built for people who are passionate about improving the quality of Open Library's data. Engineering and administrative moderator roles are both welcome.
 
 What are the actions I can perform as an administrator / mod?
 
 ## Engineering Team
 
-Are you just getting started and are looking for a ticket?
+Looking to get involved and contribute to the code which runs Open Library?
+
+First, get setup with the [Open Library Development Environment](https://github.com/internetarchive/openlibrary#installation)
+
+Next, browse through our list of [easy open tickets](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3Aeasy%20) to get started!
