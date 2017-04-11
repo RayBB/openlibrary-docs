@@ -14,7 +14,7 @@ If you're joining the design and product team, you probably have a bunch of the 
 
 ## Quality Team
 
-This team is for people who are passionate about improving the quality of Open Library's data. Engineering and admin / moderator roles are both welcome. Members of this group will receive either an Open Library Admin account or a privileged Bot account.
+This team is for people who are passionate about improving the quality of Open Library's data. Engineering and admin / moderator roles are both welcome. Members of this group will receive either an Open Library Admin account or a [privileged Bot account](https://openlibrary.org/dev/docs/bots).
 
 What are the actions I can perform as an administrator / mod?
 
