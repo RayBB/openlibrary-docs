@@ -24,3 +24,8 @@ Looking to get involved and contribute to the code which runs Open Library?
 First, get setup with the [Open Library Development Environment](https://github.com/internetarchive/openlibrary#installation)
 
 Next, browse through our list of [easy open tickets](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3Aeasy%20) to get started!
+
+## Research Team
+
+Are you a researcher or developer looking to use Open Library data or APIs in your research experiment?
+[Open Library's APIs and Data Dumps](https://openlibrary.org/developers/api) is a great place to start!
