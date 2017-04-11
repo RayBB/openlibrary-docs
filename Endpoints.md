@@ -161,7 +161,7 @@ An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes 
        `vendor/infogami/infogami/plugins/api/code.py:    path = "/account/login"`
        `vendor/infogami/infogami/plugins/wikitemplates/code.py:    path = "/account/preferences/template_preferences"`
 
-  `## Open Library`
+    `## Open Library`
     `Home Page:`
         `openlibrary/plugins/openlibrary/home.py:    path = "/"`
 
