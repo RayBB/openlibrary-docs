@@ -132,11 +132,7 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
 
 ## List of all Routes
 
-# An Explorer's Map to the Chasm Which is Open Library
-
-A mapping of url routes (endpoints) and the files in which they appear
-
-Informed via: grep -ri "path \= \"[/]" *
+An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes (endpoints) and the files in which they appear. Informed via: grep -ri "path \= \"[/]" *
 
 `## Infogami `
 `Infogami default routes:`
