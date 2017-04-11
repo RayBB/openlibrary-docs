@@ -136,7 +136,6 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
 An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes (endpoints) and the files in which they appear. Informed via: grep -ri "path \= \"[/]" *
 
     `## Infogami`
-
        `Infogami default routes:`
        `infogami/core/code.py:    path = "/account/login"`
        `infogami/core/code.py:    path = "/account/register"`
@@ -163,7 +162,6 @@ An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes 
        `vendor/infogami/infogami/plugins/wikitemplates/code.py:    path = "/account/preferences/template_preferences"`
 
   `## Open Library`
-
     `Home Page:`
         `openlibrary/plugins/openlibrary/home.py:    path = "/"`
 
@@ -175,8 +173,7 @@ An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes 
        `openlibrary/plugins/admin/mem.py:    path = "/memory/id/(.*)"`
        `openlibrary/plugins/openlibrary/dev_instance.py:    path = "/_dev/process_ebooks"`
 
-   `Entities:`
-
+    `Entities:`
        `Books:`
        `openlibrary/core/models.py:    types.register_type('^/books/[^/]*$', '/type/edition')`
        `openlibrary/plugins/books/code.py:add_hook("books", books)`
