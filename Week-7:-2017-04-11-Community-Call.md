@@ -1,9 +1,9 @@
 # Agenda
 
-David working on metatools to parse MARCs on researcher2
-Nicholas, Irene, Bernat, and Jean working on OL Redesign
-Mek working on fixing Archive.org -> Open Library import, speaking w/ Good Reads
-Charles, updating Openlibrary-client and working w/ @mekarpeles on work merging
+- David working on metatools to parse MARCs on researcher2
+- Nicholas, Irene, Bernat, and Jean working on OL Redesign
+- Mek working on fixing Archive.org -> Open Library import, speaking w/ Good Reads
+- Charles, updating Openlibrary-client and working w/ @mekarpeles on work merging
 
 ## Updates
 
