@@ -51,7 +51,7 @@ https://openlibrary.org/authors/merge
 takes parameters `?key=OL..A&key=OL..A` etc
 * Author merge page: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/merge/authors.html
 * Author merge plugin: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/merge_authors.py
-Has `BasicMergeEngine` class which could be reused.
+Has `BasicMergeEngine` [class](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/merge_authors.py#L11) which could be reused.
 * Plugin Tests: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/tests/test_merge_authors.py
 
 (TODO: Describe what is being done. Check for gaps)
