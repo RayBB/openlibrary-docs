@@ -135,33 +135,34 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
 
 An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes (endpoints) and the files in which they appear. Informed via: grep -ri "path \= \"[/]" *
 
-`## Infogami `
-`Infogami default routes:`
-`infogami/core/code.py:    path = "/account/login"`
-`infogami/core/code.py:    path = "/account/register"`
-`infogami/core/code.py:    path = "/account/logout"`
-`infogami/core/code.py:    path = "/account/forgot_password"`
-`infogami/core/code.py:    path = "/account/reset_password"`
-`infogami/core/code.py:    path = "/account/preferences"`
-`infogami/core/code.py:    path = "/account/preferences/change_password"`
-`infogami/core/code.py:    path = "/favicon.ico"`
-`infogami/plugins/api/code.py:    path = "/api/(.*)"`
-`infogami/plugins/api/code.py:    path = "/account/login"`
-`infogami/plugins/wikitemplates/code.py:    path = "/account/preferences/template_preferences"`
-`vendor/infogami/infogami/core/code.py:    path = "/account/login"`
-`vendor/infogami/infogami/core/code.py:    path = "/account/register"`
-`vendor/infogami/infogami/core/code.py:    path = "/account/logout"`
-`vendor/infogami/infogami/core/code.py:    path = "/account/forgot_password"`
-`vendor/infogami/infogami/core/code.py:    path = "/account/reset_password"`
-`vendor/infogami/infogami/core/code.py:    path = "/account/preferences"`
-`vendor/infogami/infogami/core/code.py:    path = "/account/preferences/change_password"`
-`vendor/infogami/infogami/core/code.py:    path = "/favicon.ico"`
-`vendor/infogami/infogami/infobase/client.py:        path = "/" + sitename + path`
-`vendor/infogami/infogami/plugins/api/code.py:    path = "/api/(.*)"`
-`vendor/infogami/infogami/plugins/api/code.py:    path = "/account/login"`
-`vendor/infogami/infogami/plugins/wikitemplates/code.py:    path = "/account/preferences/template_preferences"`
+    `## Infogami`
 
-`## Open Library`
+       `Infogami default routes:`
+       `infogami/core/code.py:    path = "/account/login"`
+       `infogami/core/code.py:    path = "/account/register"`
+       `infogami/core/code.py:    path = "/account/logout"`
+       `infogami/core/code.py:    path = "/account/forgot_password"`
+       `infogami/core/code.py:    path = "/account/reset_password"`
+       `infogami/core/code.py:    path = "/account/preferences"`
+       `infogami/core/code.py:    path = "/account/preferences/change_password"`
+       `infogami/core/code.py:    path = "/favicon.ico"`
+       `infogami/plugins/api/code.py:    path = "/api/(.*)"`
+       `infogami/plugins/api/code.py:    path = "/account/login"`
+       `infogami/plugins/wikitemplates/code.py:    path = "/account/preferences/template_preferences"`
+       `vendor/infogami/infogami/core/code.py:    path = "/account/login"`
+       `vendor/infogami/infogami/core/code.py:    path = "/account/register"`
+       `vendor/infogami/infogami/core/code.py:    path = "/account/logout"`
+       `vendor/infogami/infogami/core/code.py:    path = "/account/forgot_password"`
+       `vendor/infogami/infogami/core/code.py:    path = "/account/reset_password"`
+       `vendor/infogami/infogami/core/code.py:    path = "/account/preferences"`
+       `vendor/infogami/infogami/core/code.py:    path = "/account/preferences/change_password"`
+       `vendor/infogami/infogami/core/code.py:    path = "/favicon.ico"`
+       `vendor/infogami/infogami/infobase/client.py:        path = "/" + sitename + path`
+       `vendor/infogami/infogami/plugins/api/code.py:    path = "/api/(.*)"`
+       `vendor/infogami/infogami/plugins/api/code.py:    path = "/account/login"`
+       `vendor/infogami/infogami/plugins/wikitemplates/code.py:    path = "/account/preferences/template_preferences"`
+
+  `## Open Library`
 
     `Home Page:`
         `openlibrary/plugins/openlibrary/home.py:    path = "/"`
