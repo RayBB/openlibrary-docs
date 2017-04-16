@@ -36,15 +36,15 @@ In file openlibrary/plugins/upstream/addbook.py:
 
     GET https://openlibrary.org/books/(OL...M)/edit
 
-Parameters:
+**Parameters:**
 
     name="_delete"
 
-Permissions:
+**Permissions:**
 
 User must be Administrator
 
-Notes:
+**Notes:**
 
 Deleting the last Edition of a Work via this endpoint will remove the Work also.
 
@@ -52,20 +52,20 @@ Deleting the last Edition of a Work via this endpoint will remove the Work also.
 
     PUT https://openlibrary.org/works/(OL...W).json
 
-Body:
+**Body:**
 
     { 
       "type": { "key": "/type/delete" },
       "_comment": "<Reason for deletion>"
     }
 
-Permissions:
+**Permissions:**
 
 User must be Administrator
 
-Notes:
+**Notes:**
 
-Attempting to delete a Work that still has editions should fail. (Needs verification!)
+Deleting a Work that still has editions will succeed, leaving orphaned Editions, potentially without Authors if the Author was only present on the Work. Care must be taken when deleting Works that this does not occur.
 Deleting the last Work of an Author will not remove the Author record.
 
 ## Editions
@@ -86,7 +86,7 @@ RESTful API
 
     PUT https://openlibrary.org/books/(OL...M).json
 
-Body:
+**Body:**
 
     {
       < complete **JSON** body of current record from GET request, modified as desired >
@@ -101,11 +101,11 @@ In file openlibrary/plugins/upstream/addbook.py:
 
    https://openlibrary.org/books/(OL...M)/edit
 
-Parameters:
+**Parameters:**
 
    name="_delete"
 
-Permissions:
+**Permissions:**
 
 User must be Administrator
 
@@ -113,18 +113,18 @@ User must be Administrator
 
     PUT https://openlibrary.org/books/(OL...M).json
 
-Body:
+**Body:**
 
     { 
       "type": { "key": "/type/delete" },
       "_comment": "<Reason for deletion>"
     }
 
-Permissions:
+**Permissions:**
 
 User must be Administrator
 
-Notes:
+**Notes:**
 
 Deleting the last Edition of a Work will **NOT** remove the Work. It has to be cleared separately.
 
