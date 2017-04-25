@@ -1,1 +1,0 @@
-Weekly community call minutes
