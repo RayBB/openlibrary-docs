@@ -4,26 +4,24 @@ An overview (audit) of the Open Library internal "unofficially supported" APIs (
 
 - [Lists](#lists)
   - [Creating Lists](#creating-lists)
+  - [Adding to Lists](#adding-to-lists)
   - [Searching for Lists](#searching-for-lists)
 - [Works](#works)
 - [Editions](#editions)
 - [Subjects](#subjects)
 - [List of All Routes](#list-of-all-routes)
 
-
 ## Lists
 
 ### Creating Lists
 
-### Addings Seeds to Lists
+### Adding to Lists
 
 ### Searching for Lists
 
 In openlibrary/plugins/openlibrary/lists.py
 
     GET /lists/search?q=
-
-
 
 
 ## Works
