@@ -130,6 +130,11 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
 
 ## Subjects
 
+### Searching for Subjects
+
+See: openlibrary/plugins/worksearch/subjects.py
+
+https://openlibrary.org/search/subjects
 
 ## List of all Routes
 
