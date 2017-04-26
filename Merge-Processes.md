@@ -31,6 +31,8 @@ where duplicate is a work ID, or list of work IDs to be merged into the canonica
 
 **Housekeeping:** Tidy duplicate / unattached author records resulting from the merge (if any). Ensure that the duplicate work's author record is now not unattached from any works (i.e. check the the old Author does not have 0 works). If the old duplicate author record has 0 works, and is a duplicate of the canonical author record, edit the old author to type = `/type/redirect` with link to the canonical author, and add `_comment`.   Need to ensure no data is lost when merging.
 
+Current code exists in OL for WorkBot to perform work merges: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/catalog/works/live.py#L356
+
 ## Merge Editions
 
 Current OL admin functionality.
