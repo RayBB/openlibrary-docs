@@ -3,7 +3,7 @@
 * Clarify confusing **Messaging**
   * "Read vs. Borrow vs. Buy"
   * List "seeds"
-* Revive **BookServer** (OPDS)
+* [X] Revive **BookServer** (OPDS)
   * Enable partners (Aldiko) to feature our books
 * Improve **Search Results**
   * Show Works with ebooks first
@@ -26,7 +26,7 @@
 * Enhance **Lists** Infrastructure
   * Rethinking workflow for user-created lists
   * Including Lists in search results
-  * Make lists searchable
+  * [-] Make lists searchable
   * Use lists to power recommendations
   * Share lists
 * Promote **Discovery**: Homepage, Subjects, Mailing List
