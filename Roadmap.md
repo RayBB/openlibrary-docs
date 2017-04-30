@@ -24,9 +24,10 @@
   * Merge Author (improvements)
   * Change editing UI to reduce # of duplicate author/work/edition entries and allow users to help repair/flag bad data
 * Enhance **Lists** Infrastructure
+  * [X] Fix lists (work/editions count)
+  * [X] Make lists searchable
   * Rethinking workflow for user-created lists
   * Including Lists in search results
-  * [-] Make lists searchable
   * Use lists to power recommendations
   * Share lists
 * Promote **Discovery**: Homepage, Subjects, Mailing List
