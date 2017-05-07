@@ -31,7 +31,9 @@ where duplicate is a work ID, or list of work IDs to be merged into the canonica
 
 **Housekeeping:** Tidy duplicate / unattached author records resulting from the merge (if any). Ensure that the duplicate work's author record is now not unattached from any works (i.e. check the the old Author does not have 0 works). If the old duplicate author record has 0 works, and is a duplicate of the canonical author record, edit the old author to type = `/type/redirect` with link to the canonical author, and add `_comment`.   Need to ensure no data is lost when merging.
 
-Current code exists in OL for WorkBot to perform work merges: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/catalog/works/live.py#L356
+Current code exists in OL for WorkBot to perform work merges: 
+* https://github.com/internetarchive/openlibrary/blob/master/openlibrary/catalog/works/live.py#L356
+* https://github.com/internetarchive/openlibrary/blob/master/openlibrary/catalog/edition_merge/merge_works.py
 
 ## Merge Editions
 
@@ -52,7 +54,8 @@ Current OL admin functionality.
 https://openlibrary.org/authors/merge
 takes parameters `?key=OL..A&key=OL..A` etc
 * Author merge page: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/merge/authors.html
-* Resulting page example: https://openlibrary.org/authors/OL...A/AuthorName?merge=true&duplicates=OL...A,OL...A,OL...A
+  * Resulting page: https://openlibrary.org/authors/OL...A/AuthorName?merge=true&duplicates=OL...A,OL...A
+  * Which uses js to POST to /authors/merge.json with body: `{"master":"/authors/OL...A","duplicates":["/authors/OL...A", "/authors/OL...A"]}`
 * Author merge plugin: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/merge_authors.py
 Has `BasicMergeEngine` [class](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/merge_authors.py#L11) which could be reused.
 * Plugin Tests: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/tests/test_merge_authors.py
