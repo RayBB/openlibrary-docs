@@ -1,1 +1,7 @@
-# Agenda
+# Participants
+
+## hackerfactor
+
+## mek
+
+- subject carousels
