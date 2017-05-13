@@ -8,7 +8,6 @@ If you're joining the design and product team, you probably have a bunch of the 
 
 - [What is the current feature roadmap?](https://github.com/internetarchive/openlibrary/wiki/Roadmap)
 - [Where can I find an ecosystem diagram?](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
-- [What capabilities does Open Library have?](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY#heading=h.v7l32m5pq3mh)
 - [Where can I find Open Library design mocks and wireframes?](https://www.dropbox.com/sh/aii0z9j8a4505f1/AABFExKzYJn692IDtQKpWD3Ia)
 - Where can I find [lending](https://openlibrary.org/stats/lending) or [page view](https://archive.org/stats/#openlibrary) analytics or stats for Open Library?
 
