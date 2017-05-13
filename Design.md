@@ -4,5 +4,5 @@
 
 - [Header](https://drive.google.com/drive/folders/0B1AvV6Nqk7TkVnNWakFvRnJhX2M?usp=sharing)
 - [Home Page / Browse](https://drive.google.com/open?id=0B1AvV6Nqk7TkRFNDNnYxZUtWekk)
-- [Book Page](https://www.dropbox.com/sh/aii0z9j8a4505f1/AABFExKzYJn692IDtQKpWD3Ia)
+- [Books Page](https://drive.google.com/open?id=0B1AvV6Nqk7TkdUJ5WDhBQVpKQ2M)
 - [Search Page](https://docs.google.com/document/d/1UdsVN90cQ5deEcjiemuUK7QJRlvG0e-7mARfTjybj9A)
