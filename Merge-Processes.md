@@ -34,6 +34,7 @@ where duplicate is a work ID, or list of work IDs to be merged into the canonica
 Current code exists in OL for WorkBot to perform work merges: 
 * https://github.com/internetarchive/openlibrary/blob/master/openlibrary/catalog/works/live.py#L356
 * https://github.com/internetarchive/openlibrary/blob/master/openlibrary/catalog/edition_merge/merge_works.py
+* An author's merge-works endpoint also exists here, but has no tempate: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py#L608
 
 ## Merge Editions
 
