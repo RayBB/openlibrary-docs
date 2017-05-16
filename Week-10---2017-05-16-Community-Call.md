@@ -10,5 +10,5 @@
 
 ## Mek
 
-- subject tags
-- work/edition
+- debugging subject carousels performance issues
+- unifying work/edition
