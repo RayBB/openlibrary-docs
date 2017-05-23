@@ -1,0 +1,12 @@
+## Week 1: 2017-03-08 Community Call
+## Week 2: 2017-03-15 Community Call
+## Week 3: 2017-03-21 Community Call
+## Week 4: 2017-03-28 Community Call
+## Week 5: 2017-04-04 Community Call
+## Week 6: 2017-04-11 Community Call
+## Week 7: 2017-04-18 Community Call
+## Week 8: 2017-04-25 Community Call
+## Week 9: 2017-05-2 Community Call
+## Week 10: 2017-05-9 Community Call
+## Week 11: 2017-05-16 Community Call
+## Week 12: 2017-05-23 Community Call
