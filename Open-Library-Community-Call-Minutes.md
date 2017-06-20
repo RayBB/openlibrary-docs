@@ -1,6 +1,6 @@
 # Table of Contents
 
-- [Week 1: 2017-03-08 Community Call](#Week-1-2017-03-08-Community-Call)
+- [Week 1: 2017-03-08 Community Call](#week-1-2017-03-08-community-call)
 
 # Week 1: 2017-03-08 Community Call
 
