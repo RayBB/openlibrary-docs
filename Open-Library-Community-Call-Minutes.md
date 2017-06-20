@@ -1,4 +1,8 @@
-## Week 1: 2017-03-08 Community Call
+# Table of Contents
+
+- [Week 1: 2017-03-08 Community Call](#Week-1-2017-03-08-Community-Call)
+
+# Week 1: 2017-03-08 Community Call
 
 Attendees:
 - @mek, @charles
