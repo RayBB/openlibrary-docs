@@ -63,7 +63,7 @@ Like wikipedia, have a banner which shows which pages need
 flag desired data as missing -- request a change
 How can users request they want to know a field? !!!
 
-## Week 2: 2017-03-15 Community Call
+# Week 2: 2017-03-15 Community Call
 
 Updates:
 1) Vagrant Fixes (auth)
@@ -88,13 +88,44 @@ Todos, opportunities, and blockers:
 7) Entertaining the idea of letting users answer questions / customize their accounts (e.g. location, age, etc) to help with recommendations
 8) Catching up w/ @skylerbunny to identify other problems/bugs of interest
 
-## Week 3: 2017-03-21 Community Call
-## Week 4: 2017-03-28 Community Call
-## Week 5: 2017-04-04 Community Call
-## Week 6: 2017-04-11 Community Call
-## Week 7: 2017-04-18 Community Call
-## Week 8: 2017-04-25 Community Call
-## Week 9: 2017-05-2 Community Call
-## Week 10: 2017-05-9 Community Call
-## Week 11: 2017-05-16 Community Call
-## Week 12: 2017-05-23 Community Call
+# Week 3: 2017-03-21 Community Call
+
+Time: Tuesday, 10:30am PDT
+Attendance:
+- brenton
+- skylerbunny
+- charles
+- nicholas
+- mek
+
+## Updates
+
+**Charles**
+- Has been using APIs to create bots to address data quality
+- Found a way to delete works (e.g. audio works which shouldn't exist on OL)
+- Question: Will deleting a work via API (w/ editions) will fail?
+- Detected bad Author merges
+- Recaptcha2; wants to allow people to more easily edit
+
+1) [Endpoints](https://github.com/internetarchive/openlibrary/wiki/Endpoints) - contributing to document obscure endpoints (seeing which new APIs we need to build)
+2) Administrative Document - documenting processes & practices for merging works, etc.
+3) Updating openlibrary-client
+4) Cross-Linking Authors & Works (VIAF, Wikidata, OL) w/ David
+
+**Skyler**
+- Cares about the mission 1-web-page-per-book
+- Partner w/ Charles on discovering user issues and metadata opportunities
+
+**Mek**
+- Completing rollout of repaired OPDS
+- Looking for designers to help w/ beta branch (separating FE and BE)
+
+# Week 4: 2017-03-28 Community Call
+# Week 5: 2017-04-04 Community Call
+# Week 6: 2017-04-11 Community Call
+# Week 7: 2017-04-18 Community Call
+# Week 8: 2017-04-25 Community Call
+# Week 9: 2017-05-2 Community Call
+# Week 10: 2017-05-9 Community Call
+# Week 11: 2017-05-16 Community Call
+# Week 12: 2017-05-23 Community Call
