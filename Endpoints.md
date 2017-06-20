@@ -1,5 +1,3 @@
-# Endpoints
-
 An overview (audit) of the Open Library internal "unofficially supported" APIs (which should be replaced with public APIs)
 
 - [Lists](#lists)
