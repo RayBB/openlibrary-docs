@@ -1,4 +1,4 @@
-# Welcome!
+## Welcome!
 
 Open Library and its 1.5M users are so grateful you're here!
 
