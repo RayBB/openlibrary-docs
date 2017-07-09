@@ -41,6 +41,8 @@ In openlibrary/plugins/openlibrary/lists.py
         "authors": [{"type": "/type/author_role", "author": {"key": "/authors/<olid>"}}]
     }
 
+Returns the created work's OLID.
+
 ### Deleting Works
 
 In file openlibrary/plugins/upstream/addbook.py:
