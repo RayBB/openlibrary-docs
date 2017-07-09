@@ -5,6 +5,8 @@ An overview (audit) of the Open Library internal "unofficially supported" APIs (
   - [Adding to Lists](#adding-to-lists)
   - [Searching for Lists](#searching-for-lists)
 - [Works](#works)
+  - [Creating Works](#creating-works)
+  - [Deleting Works](#deleting-works)
 - [Editions](#editions)
 - [Subjects](#subjects)
 - [List of All Routes](#list-of-all-routes)
@@ -26,7 +28,17 @@ In openlibrary/plugins/openlibrary/lists.py
 
 ### Creating Works
 
-### Delete
+    POST https://openlibrary.org/api/new.json
+
+**Body (minimum):**
+
+    {
+        "type": {"key": "/type/work"},
+        "title": "<Work Title>",
+        "authors": [{"type": "/type/author_role", "author": {"key": "/authors/<olid>"}}]
+    }
+
+### Deleting Works
 
 In file openlibrary/plugins/upstream/addbook.py:
 
