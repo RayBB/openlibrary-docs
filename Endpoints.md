@@ -8,6 +8,9 @@ An overview (audit) of the Open Library internal "unofficially supported" APIs (
   - [Creating Works](#creating-works)
   - [Deleting Works](#deleting-works)
 - [Editions](#editions)
+  - [Viewing Editions](#viewing-editions)
+  - [Editing Editions](#editing-editions)
+  - [Deleting Editions](#deleting-editions)
 - [Subjects](#subjects)
 - [List of All Routes](#list-of-all-routes)
 
@@ -78,7 +81,7 @@ Deleting the last Work of an Author will not remove the Author record.
 
 ## Editions
 
-### View
+### Viewing Editions
 
 RESTful API
 
@@ -86,9 +89,9 @@ RESTful API
 
     GET https://openlibrary.org/books/(OL...M).rdf
 
-### Create
+### Creating Editions
 
-### Edit
+### Editing Editions
 
 **[RESTful API](https://openlibrary.org/dev/docs/restful_api) Edit:**
 
@@ -101,9 +104,9 @@ RESTful API
       "_comment": "<Description of changes>"
     }
 
-### Merge
+### Merging Editions
 
-### Delete
+### Deleting Editions
 
 In file openlibrary/plugins/upstream/addbook.py:
 
