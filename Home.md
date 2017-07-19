@@ -9,7 +9,7 @@ Open Library and its 1.5M users are so grateful you're here!
 ## How Do We Communicate?
 
 - What are the actions being taken and who is working on what? Ask to join our slack channel.
-- Tuesday Community Calls. There's also a digital meeting every Tuesday @ 10:30am PST where everyone checks in and touches base. The link for that call is: https://zoom.us/j/850313890
+- Tuesday Community Calls. There's also a digital meeting every Tuesday AM PST where everyone checks in and touches base. The link for that call is: https://zoom.us/j/850313890
 - Friday lunches at Internet Archive's HQ at 300 Funston in SF Inner Richmond.
 
 ## SMART Goals for the Open library Re-Design
