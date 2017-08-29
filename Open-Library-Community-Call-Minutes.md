@@ -20,6 +20,7 @@
 -- reactifying the open library experience on the refactor/beta branch
 -- exploring carousel designs
 -- confused widget (the call to action widget on editions and works pages)
+-- You can find design resources here! https://github.com/internetarchive/openlibrary/wiki/Design
 - Charles Horn @charles
 -- Unorphaned 10,000 OL editions (attaching them to existing works). Work + Edition IDs still need to be imported into Archive.org. Maybe we can create an approved admin endpoint w/ baked-in s3 keys to update an edition's work/edition olid on Archive.org?
 - Mek @mek
