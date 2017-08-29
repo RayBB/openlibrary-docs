@@ -169,6 +169,34 @@ researcher vm w/ batch of pdfs on them
 - Nicholas, Irene, Mek, Bernat, Jean, Brenton -- some subset of this group should meet or contribute to the ecosystem diagram (it would be great if Jean can describe the purpose of this doc; I'll do my best)
 
 # Week 5: 2017-04-04 Community Call
+
+## Agenda
+
+1. Review Roadmap
+2. Updates & Progress
+- VIAF, Wikidata, OLID (Done)
+- Fixing book importing (IA -> OL)
+- Adding subject tags to works & indexing in solr
+- Redesign content ideas
+- Merging works & editions
+
+3. Todo
+- Fixing List Works
+
+
+## Charles
+
+Is there an authority for subjects (Library of Congress), LibraryThing. cc: @dvd
+
+## Nicholas
+
+Going to contribute to design doc
+
+## Mek
+
+Share design doc w/ #openlibrary-g and Nicholas
+How do we get subjects added to works and into solr?
+
 # Week 6: 2017-04-11 Community Call
 # Week 7: 2017-04-18 Community Call
 # Week 8: 2017-04-25 Community Call
