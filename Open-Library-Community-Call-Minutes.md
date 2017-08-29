@@ -1,9 +1,15 @@
 # Table of Contents
 
-- [Week 1: 2017-03-08 Community Call](#week-1-2017-03-08-community-call)
-- [Week 2: 2017-03-15 Community Call](#week-2-2017-03-15-community-call)
+- [2017-03-08 Community Call](#2017-03-08-community-call)
+- [2017-03-15 Community Call](#2017-03-15-community-call)
+- [2017-03-21 Community Call](#2017-03-21-community-call)
+- [2017-03-28 Community Call](#2017-03-28-community-call)
+- [2017-04-04 Community Call](#2017-04-04-community-call)
+- [2017-04-11 Community Call](#2017-04-11-community-call)
+- [2017-04-18 Community Call](#2017-04-18-community-call)
+- [2017-05-23 Community Call](#2017-05-23-community-call)
 
-# Week 1: 2017-03-08 Community Call
+# 2017-03-08 Community Call
 
 Attendees:
 - @mek, @charles
@@ -63,7 +69,7 @@ Like wikipedia, have a banner which shows which pages need
 flag desired data as missing -- request a change
 How can users request they want to know a field? !!!
 
-# Week 2: 2017-03-15 Community Call
+# 2017-03-15 Community Call
 
 Updates:
 1) Vagrant Fixes (auth)
@@ -88,7 +94,7 @@ Todos, opportunities, and blockers:
 7) Entertaining the idea of letting users answer questions / customize their accounts (e.g. location, age, etc) to help with recommendations
 8) Catching up w/ @skylerbunny to identify other problems/bugs of interest
 
-# Week 3: 2017-03-21 Community Call
+# 2017-03-21 Community Call
 
 Time: Tuesday, 10:30am PDT
 Attendance:
@@ -120,7 +126,7 @@ Attendance:
 - Completing rollout of repaired OPDS
 - Looking for designers to help w/ beta branch (separating FE and BE)
 
-# Week 4: 2017-03-28 Community Call
+# 2017-03-28 Community Call
 
 ## Agenda
 
@@ -161,14 +167,14 @@ researcher vm w/ batch of pdfs on them
 - Met with Jean Saung about service design (creating an ecosystem diagram for Open Library) https://docs.google.com/a/archive.org/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY/edit?usp=sharing
 - (PR in progress) Added remote_ids: wikidata, VIAF, and librarything IDs to author edit page
 - Mek will write script to ingest 90k Author records and link them to wikidata + VIAF
-- Worked on experimental mobile design for OL + started an experimental front-end which uses existing APIs to createaa combined works & editions page concept
+- Worked on experimental mobile design for OL + started an experimental front-end which uses existing APIs to create combined works & editions page concept
 - Openlibrary-client -- created librarything API (xisbn) (tool for @dvd and @charles)
 
 ## Meetings
 
 - Nicholas, Irene, Mek, Bernat, Jean, Brenton -- some subset of this group should meet or contribute to the ecosystem diagram (it would be great if Jean can describe the purpose of this doc; I'll do my best)
 
-# Week 5: 2017-04-04 Community Call
+# 2017-04-04 Community Call
 
 ## Agenda
 
@@ -197,7 +203,7 @@ Going to contribute to design doc
 Share design doc w/ #openlibrary-g and Nicholas
 How do we get subjects added to works and into solr?
 
-# Week 6: 2017-04-11 Community Call
+# 2017-04-11 Community Call
 ## Agenda
 
 - David working on metatools to parse MARCs on researcher2
@@ -213,9 +219,61 @@ Open Syllabus Project - (subject) collection created of ~500 works which we have
 
 Adding "likes" to user lists
 
-# Week 7: 2017-04-18 Community Call
-# Week 8: 2017-04-25 Community Call
+# 2017-04-18 Community Call
+
+## Agenda
+
+- *Done* this week
+- *Goals* this week
+
+## Done this week
+
+### @mekarpeles
+
+Done:
+- ImportBot
+- Subject classification
+
+### @hornc
+
+Done:
+- merging 15,000 duplicate author records from VIAF import 
+- re-enable author tests and account integration tests
+- removed a bunch of CDs
+
+Todo:
+- Remove recaptcha for devs, admins, bots
+- Lists (any Work or Author on list shows no editions)
+- Delete function to openlibrary-client
+
+### David
+
+Todo:
+- Separating api.openlibrary.org from openlibrary.org
+
 # Week 9: 2017-05-2 Community Call
+
+## mek
+
+- subject carousels
+- mobile header redesign
+
 # Week 10: 2017-05-9 Community Call
 # Week 11: 2017-05-16 Community Call
-# Week 12: 2017-05-23 Community Call
+
+## Charles
+
+- ~15k Authors being merged from VIAF
+- Addressing unicode search problems, e.g. when search > 500 characters
+- Unicode characters that require 2-characters linked is not rendering correctly (half characters)
+
+## Neal
+
+- Searching wb for books
+
+## Mek
+
+- debugging subject carousels performance issues
+- unifying work/edition
+
+# 2017-05-23 Community Call
