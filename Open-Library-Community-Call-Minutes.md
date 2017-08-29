@@ -7,7 +7,11 @@
 - [2017-04-04 Community Call](#2017-04-04-community-call)
 - [2017-04-11 Community Call](#2017-04-11-community-call)
 - [2017-04-18 Community Call](#2017-04-18-community-call)
+- [2017-05-02 Community Call](#2017-05-02-community-call)
+- [2017-05-09 Community Call](#2017-05-09-community-call)
+- [2017-05-16 Community Call](#2017-05-16-community-call)
 - [2017-05-23 Community Call](#2017-05-23-community-call)
+- [2017-08-29 Community Call](#2017-08-29-community-call)
 
 # 2017-03-08 Community Call
 
@@ -251,15 +255,15 @@ Todo:
 Todo:
 - Separating api.openlibrary.org from openlibrary.org
 
-# Week 9: 2017-05-2 Community Call
+# 2017-05-02 Community Call
 
 ## mek
 
 - subject carousels
 - mobile header redesign
 
-# Week 10: 2017-05-9 Community Call
-# Week 11: 2017-05-16 Community Call
+# 2017-05-09 Community Call
+# 2017-05-16 Community Call
 
 ## Charles
 
