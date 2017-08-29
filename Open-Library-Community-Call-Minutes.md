@@ -282,5 +282,11 @@ Todo:
 ## Attendees:
 
 - Justine De Caires @jdecked
+-- reactifying the open library experience on the refactor/beta branch
+-- exploring carousel designs
+-- confused widget (the call to action widget on editions and works pages)
 - Charles Horn @charles
+-- Unorphaned 10,000 OL editions (attaching them to existing works). Work + Edition IDs still need to be imported into Archive.org. Maybe we can create an approved admin endpoint w/ baked-in s3 keys to update an edition's work/edition olid on Archive.org?
 - Mek @mek
+-- `feature/editions-works-availability-v2` - Working on availability v2 integration into work and editions
+-- `refactor/move-work-editions-standalone` - Proposal for new routing, moving editions table from works to its own page
