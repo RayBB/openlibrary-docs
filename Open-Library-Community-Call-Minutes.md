@@ -198,6 +198,21 @@ Share design doc w/ #openlibrary-g and Nicholas
 How do we get subjects added to works and into solr?
 
 # Week 6: 2017-04-11 Community Call
+## Agenda
+
+- David working on metatools to parse MARCs on researcher2
+- Nicholas, Irene, Bernat, and Jean working on OL Redesign
+- Mek working on fixing Archive.org -> Open Library import, speaking w/ Good Reads
+- Charles, updating Openlibrary-client and working w/ @mekarpeles on work merging
+
+## Updates
+
+Open Syllabus Project - (subject) collection created of ~500 works which we have on OL!
+
+## Ideas
+
+Adding "likes" to user lists
+
 # Week 7: 2017-04-18 Community Call
 # Week 8: 2017-04-25 Community Call
 # Week 9: 2017-05-2 Community Call
