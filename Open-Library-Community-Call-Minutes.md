@@ -8,9 +8,7 @@
 - [2017-04-11 Community Call](#2017-04-11-community-call)
 - [2017-04-18 Community Call](#2017-04-18-community-call)
 - [2017-05-02 Community Call](#2017-05-02-community-call)
-- [2017-05-09 Community Call](#2017-05-09-community-call)
 - [2017-05-16 Community Call](#2017-05-16-community-call)
-- [2017-05-23 Community Call](#2017-05-23-community-call)
 - [2017-08-29 Community Call](#2017-08-29-community-call)
 
 # 2017-03-08 Community Call
@@ -262,7 +260,6 @@ Todo:
 - subject carousels
 - mobile header redesign
 
-# 2017-05-09 Community Call
 # 2017-05-16 Community Call
 
 ## Charles
@@ -280,4 +277,10 @@ Todo:
 - debugging subject carousels performance issues
 - unifying work/edition
 
-# 2017-05-23 Community Call
+# 2017-08-29 Community Call
+
+## Attendees:
+
+- Justine De Caires @jdecked
+- Charles Horn @charles
+- Mek @mek
