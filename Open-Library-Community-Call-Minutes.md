@@ -27,12 +27,22 @@
 -- `refactor/move-work-editions-standalone` - Proposal for new routing, moving editions table from works to its own page
 
 
+# 2017-05-16 Community Call
 
+## Charles
 
+- ~15k Authors being merged from VIAF
+- Addressing unicode search problems, e.g. when search > 500 characters
+- Unicode characters that require 2-characters linked is not rendering correctly (half characters)
 
+## Neal
 
+- Searching wb for books
 
+## Mek
 
+- debugging subject carousels performance issues
+- unifying work/edition
 
 # 2017-05-02 Community Call
 
@@ -40,14 +50,6 @@
 
 - subject carousels
 - mobile header redesign
-
-
-
-
-
-
-
-
 # 2017-04-18 Community Call
 
 ## Agenda
@@ -79,22 +81,6 @@ Todo:
 
 Todo:
 - Separating api.openlibrary.org from openlibrary.org
-# 2017-05-16 Community Call
-
-## Charles
-
-- ~15k Authors being merged from VIAF
-- Addressing unicode search problems, e.g. when search > 500 characters
-- Unicode characters that require 2-characters linked is not rendering correctly (half characters)
-
-## Neal
-
-- Searching wb for books
-
-## Mek
-
-- debugging subject carousels performance issues
-- unifying work/edition
 
 # 2017-04-11 Community Call
 ## Agenda
