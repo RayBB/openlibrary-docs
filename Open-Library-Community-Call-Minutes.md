@@ -19,7 +19,21 @@
 - Mek
 - Charles
 
+## Issues this week
+
+- a lot of 
+
+## Ideas
+
+- Have a banner w/ button for volunteers + show jobs (e.g. in blue bar)
+- Have an endpoint for flagging/proposing merge of Work IDs and admin page to review (or for now, spreadsheet)
+- Creating a mailing list -- advertise on Open Library website (for volunteers to interact) 
+
 ## Updates
+
+
+1) Trigger update of archive.org items from IA 
+
 
 # 2017-08-29 Community Call
 
