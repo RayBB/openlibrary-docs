@@ -19,18 +19,18 @@
 - Mek
 - Charles
 
-## Issues this week
-
-- a lot of 
-
 ## Ideas
 
 - Have a banner w/ button for volunteers + show jobs (e.g. in blue bar)
-- Have an endpoint for flagging/proposing merge of Work IDs and admin page to review (or for now, spreadsheet)
-- Creating a mailing list -- advertise on Open Library website (for volunteers to interact) 
+- Have an endpoint for flagging/proposing merge of Work IDs and admin page to review (or for now, create spreadsheet)
 
-## Updates
+## Todos
 
+- @mek: get @charles access to OJF server
+- @mek: create mailing list for OL and add link to Openlibrary website
+- @mek: create a spreadsheet for Alexis + drani's work merges + 
+- [DONE] @mek: solr updater logs for @charles
+- @charles - organize metadata tasks
 
 1) Trigger update of archive.org items from IA 
 
