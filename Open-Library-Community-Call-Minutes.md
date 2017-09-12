@@ -1,5 +1,6 @@
 # Table of Contents
 
+- [2017-09-12 Community Call](#2017-09-12-community-call)
 - [2017-08-29 Community Call](#2017-08-29-community-call)
 - [2017-05-16 Community Call](#2017-05-16-community-call)
 - [2017-05-02 Community Call](#2017-05-02-community-call)
@@ -11,6 +12,14 @@
 - [2017-03-15 Community Call](#2017-03-15-community-call)
 - [2017-03-08 Community Call](#2017-03-08-community-call)
 
+# 2017-09-12 Community Call
+
+## Attendees:
+
+- Mek
+- Charles
+
+## Updates
 
 # 2017-08-29 Community Call
 
