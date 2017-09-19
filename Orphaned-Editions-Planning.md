@@ -17,7 +17,7 @@ these are the records that are borrowable / readable and their discoverability i
 
 **Third stage** Clean out any bad records, spam / bad data / non-book items in the list of orphans to reduce identification and merge workload.
 
-**Fourth stage** The 59% of 192K orphaned OCAIDs with unknown authors need to be checked to see if author information is available from the original records and author / editor data added where possible. Then existing ids can be used to find existing matches using the methods outlined below. Once all ids and author/title matching attempts are completed, any remaining editions can have works created. 
+**Fourth stage** The 59% of 192K orphaned OCAIDs with unknown authors need to be checked to see if author information is available from the original records and author / editor data added where possible. Then existing ids can be used to find matches using the methods outlined below. Once all ids and author/title matching attempts are completed, any remaining editions can have works created. 
 
 
 In the April 2017 data dump there were 4067 duplicate OCAID orphans. In the August 2017 dump there were 7 after the processing and merging by the CleanupBot. These 7 have since been manually merged, so there are no more editions in this class.
