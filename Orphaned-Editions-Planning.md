@@ -11,9 +11,18 @@ Extract 5M orphans.
 
 these are the records that are borrowable / readable and their discoverability is adversely affected by not being associated to works. Has implications for search engine indexing, and the v2 availability API.
 
-**First priority:** Duplicate OCAID orphans. These have two issues -- not associated with any work, and are duplicate records which should be merged down. These can be matched with existing records that have works and turned into redirects, or grouped together and have a single work created for the best record.
+**First priority:** Duplicate OCAID orphans. These have two issues -- not associated with any work, and are duplicate records which should be merged down. These can be matched with existing records that have works and turned into redirects, or grouped together and have a single work created for the best record. **COMPLETED**
 
-**Second stage** Merge down remaining duplicate OCAID works. There are as of August 2017 60,786 identified groups of duplicate works, so at least twice that many records. These groupings need further checking to determine the safest way to merge the records down.
+
+**Second stage** Merge down remaining duplicate OCAID works. There are as of August 2017 60,786 identified groups of duplicate works, so at least twice that many records. These groupings need further checking to determine the safest way to merge the records down. 
+
+| Groupings  | Number of OCAIDs     | Total number of works/editions |
+| ---------- | -------------------: | -----------------------------: |
+| Doubled    |    47,467            |   94,934  |
+| Tripled    |     4,761            |   14,283  |
+| Quadrupled |       666            |    2,664  | 
+| 5+ dupes   |        58     |_(at least)_ 290  |
+|  **TOTAL** |    52,952            |  112,171  |
 
 **Third stage** Clean out any bad records, spam / bad data / non-book items in the list of orphans to reduce identification and merge workload.
 
@@ -27,7 +36,7 @@ Regenerate statistics for the classes shown in my original graphs for the April 
 From the April 2017 graph:
 
 |			|April	|August	|Improvement|
-|-----------------------|-------|-------|----|
+|-----------------------|------:|------:|---:|
 |duplicate OCAIDs	|130K	|128K	| 2K |
 |orphaned dupe OCAIDs	|4067	|0	| 4K |
 |other orphaned OCAIDs	|219K	|192K	|27K |
