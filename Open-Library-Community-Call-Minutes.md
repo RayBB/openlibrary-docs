@@ -1,5 +1,6 @@
 # Table of Contents
 
+- [2017-09-26 Community Call](#2017-09-26-community-call)
 - [2017-09-12 Community Call](#2017-09-12-community-call)
 - [2017-08-29 Community Call](#2017-08-29-community-call)
 - [2017-05-16 Community Call](#2017-05-16-community-call)
@@ -11,6 +12,18 @@
 - [2017-03-21 Community Call](#2017-03-21-community-call)
 - [2017-03-15 Community Call](#2017-03-15-community-call)
 - [2017-03-08 Community Call](#2017-03-08-community-call)
+
+# 2017-09-26 Community Call
+
+## Agenda
+
+- homepage carousels roll-out: https://dev.openlibrary.org
+- olc (`openlibrary-client`) improvements
+- hackathon postmortem + progress w/ Long Now
+- Next steps for work/edition/author merges
+- Wikidata next steps
+- October 11 deadlines: enhanced book pages, likes v. ratings, lists
+- other?
 
 # 2017-09-12 Community Call
 
