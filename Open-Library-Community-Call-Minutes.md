@@ -1,5 +1,6 @@
 # Table of Contents
 
+- [2017-10-03 Community Call](#2017-10-03-community-call)
 - [2017-09-26 Community Call](#2017-09-26-community-call)
 - [2017-09-12 Community Call](#2017-09-12-community-call)
 - [2017-08-29 Community Call](#2017-08-29-community-call)
@@ -12,6 +13,12 @@
 - [2017-03-21 Community Call](#2017-03-21-community-call)
 - [2017-03-15 Community Call](#2017-03-15-community-call)
 - [2017-03-08 Community Call](#2017-03-08-community-call)
+
+# 2017-10-03 Community Call
+
+## Attendees
+
+Charles, Drini, Mek
 
 # 2017-09-26 Community Call
 
