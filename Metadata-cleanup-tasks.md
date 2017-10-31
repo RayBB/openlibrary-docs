@@ -10,7 +10,7 @@
     different translation to fix.
 
   * Combining diacritics (Github issue https://github.com/internetarchive/openlibrary/issues/150 )
-
+      -Some external MARC records have had subsequent correction, reimportation could catch many such cases
   * NFC Normalisation. Of titles, description, place, i.e. all text fields.
     Ensure all input mechanisms normalise correctly. UI + import paths. TEST.
 
@@ -25,8 +25,7 @@
   Not many?
 
 ## URLs in Amazon ids [E]
-  Needs checking. Some url ids appear to resolve correctly. Suspicion that some users are trying to insert affiliate links
-in OL ids. What is our policy on this? Should we be making more effort to ensure only Internet Archive affiliate links are used?
+Needs checking. Some url ids appear to resolve correctly. Suspicion that some users are trying to insert affiliate links in OL ids. What is our policy on this? Should we be making more effort to ensure only Internet Archive affiliate links are used?
 
 ## Invalid ISBNs [E]
   _10 and _13
@@ -34,6 +33,7 @@ in OL ids. What is our policy on this? Should we be making more effort to ensure
   * repair if possible
   * normalise
   * remove if bad
+  * test for reuse on multiple editions
 
 ## Invalid / incorrect other ids [E, W]
   * Identify cases
@@ -71,7 +71,7 @@ If there was some way to go back to the the original edition move and complete t
 ## Authors without Works [A]
 
 ## Orphaned editions without Authors [E]
-  Where author is known to IA, from MARC records. Update the records from the original MARC. Many of the missing authors seem to be on books that have editors rather than striaght authors. Is this a cause of the problem? How to correctly represent editors on Open Library works?
+Where author is known to IA, from MARC records. Update the records from the original MARC. Many of the missing authors seem to be on books that have editors rather than striaght authors. Is this a cause of the problem? How to correctly represent editors on Open Library works?
 
 ## Non-Book items [A, E, W]
 There are 54,000 bad author records associated with Audio CD imports, see github issue https://github.com/internetarchive/openlibrary/issues/152
