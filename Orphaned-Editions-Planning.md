@@ -47,9 +47,9 @@ From the April 2017 graph:
 
 | Group  | Authors    |
 |------- | ---------- |
-|All 25M Editions              | 80% of all editions have author information. |
-|All 5M Orphans                | only 24% of total orphans have authors. |
-|Orphans with OCAIDs (192,800) | 41% of orphans with OCAIDs have authors. |
+|All 25M Editions              | 20M editions have author information. |
+|All 5M Orphans                | 1.2M orphans have authors. |
+|Orphans with OCAIDs (192,800) | 79K orphans with OCAIDs have authors. |
 
 ### What were the sources of orphan records?
 
@@ -93,7 +93,7 @@ Ids to use:
   Identify any orphans that are simply bad data and candidates for deletion.
 To explore.
   * Non-book items
-  * Blank title, low caracter title counts
+  * Blank title, low character title counts
   * Garbage strings / spam
   * not enough data to be worthwile. What is the threshold?
 
