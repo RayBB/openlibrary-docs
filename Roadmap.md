@@ -6,13 +6,13 @@
 * [X] Revive **BookServer** (OPDS)
   * Enable partners (Aldiko) to feature our books
 * Improve **Search Results**
-  * Show Works with ebooks first
-  * Hide confusing daisy results (instead provide advanced search option)
+  * [X] Show Works with ebooks first
+  * [X] Hide confusing daisy results (instead provide advanced search option)
   * Adding user Lists in search results (for Works)
 * Prioritize **Mobile Experience**
   * Responsive design on key pages: home, work/edition, search
 * Better **Book Engagement**
-  * Share on Pinterest (our largest source of shares)
+  * [X] Share on Pinterest (our largest source of shares)
   * Recommend a book to a friend upon returning it
   * Surface recommendations on homepage
   * Amazon style book chapter previews
@@ -26,7 +26,7 @@
 * Enhance **Lists** Infrastructure
   * [X] Fix lists (work/editions count)
   * [X] Make lists searchable
-  * Rethinking workflow for user-created lists
+  * [X] Rethinking workflow for user-created lists
   * Including Lists in search results
   * Use lists to power recommendations
   * Share lists
