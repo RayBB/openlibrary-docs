@@ -68,6 +68,9 @@ https://github.com/internetarchive/openlibrary/issues/44
 Appears to be a merging task now. These editionless works look to be left over from moving editions (translations are a common example) to another work without converting the original work to a redirect.
 If there was some way to go back to the the original edition move and complete the work redirection? Perhaps the WorkBot log at  https://github.com/internetarchive/openlibrary/blob/629f2afe8fbff9e8af50e00a57e756dff45a0d73/openlibrary/catalog/works/live.py#L438 might be helpful??
 
+## Editions unlinked to works
+Appears to occur mainly with apparently editionless works. How common is it? If rare, it should be fairly simple to address manually in librarian mode given a list of such editions.
+
 ## Authors without Works [A]
 
 ## Orphaned editions without Authors [E]
