@@ -12,9 +12,9 @@ You are encouraged to look through our [github issues](github.com/internetarchiv
 
 Feel free to [pen new github issues](https://github.com/internetarchive/openlibrary/issues/new) which you can then include in your proposal!
 
-Requires: Python, JavaScript, git
+**Requires:** Python, JavaScript, git
 
-Bonus: solr, Docker, postgres
+**Bonus:** solr, Docker, postgres
 
 ## Need Inspiration?
 
