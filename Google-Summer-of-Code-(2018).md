@@ -16,7 +16,7 @@ Requires: Python, JavaScript, git
 
 Bonus: solr, Docker, postgres
 
-## Nee Inspiration
+## Need Inspiration?
 
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
 
