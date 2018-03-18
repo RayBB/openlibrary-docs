@@ -1,0 +1,23 @@
+Openlibrary.org is a digital library which lends over a million ebooks each year to her 1.75M patrons. Because we only have one full-time engineer on staff, we graciously rely on an international team of volunteers who bring with them diverse backgrounds in engineering, design, and library science. Still, we’re lacking the engineering power necessary to ensure we reach the underserved communities who need our books most.
+
+Open Library’s closest for-profit alternative, Goodreads, has over 55M members, which goes to show just how many passionate readers Open Library has yet to serve. The Internet Archive is looking for someone self-directed who loves books and technology to help Open Library expand to a global audience, improve search and discovery, and empower communities with tools to fund the books they want available in their digital library.
+
+The ideal GSoC “Open Librarian” would design and submit a coherent proposal with a plan to improve specific metric(s) like:
+- **Number of borrows:** What percentage of our books are being checked out and used? What ideas do you have to improve discovery of books? How can we encourage users to return books they’re not reading so they become available to others?
+- **Engagement (# new members, uniques, time on site):** What changes might we make to promote valuable engagement on Open Library? How can we do better at serving an international audience (e.g. i18n)? Are we missing features (e.g. star ratings) which other websites have proven effective that our members also want? Would more people use the site if it were mobile responsive?
+- **Catalog Coverage:** How can we increase the number of books which are listed in Open Library’s book catalog? How many modern book records are missing from our catalog? What sources / feeds (e.g. ONIX feeds, MARC records, APIs) are available to help keep our catalog of books up to date? How can our website be improved to help the community maintain our catalog? How might our users be able to contribute books into Open Library?
+- **Site Reliability:** How can Open Library move from vagrant to a docker-based production build system with ansible and kubernetes? How can we detect and prevent abuse? How can we increase our test coverage?
+
+You are encouraged to look through our [github issues](github.com/internetarchive/openlibrary/issues) and [2018 roadmap](https://github.com/internetarchive/openlibrary/projects/7#column-2354676) for ideas.
+
+Feel free to [pen new github issues](https://github.com/internetarchive/openlibrary/issues/new) which you can then include in your proposal!
+
+Requires: Python, JavaScript, git
+
+Bonus: solr, Docker, postgres
+
+## Nee Inspiration
+
+Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
+
+> The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit openlibrary and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
