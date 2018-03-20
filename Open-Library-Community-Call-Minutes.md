@@ -45,7 +45,13 @@
     - Updating the internationalization (i18n) wiki as he does this
     - Investigating writing an ONIX parser and using the openlibrary-client: github.com/internetarchive/openlibrary/issues/865
 - Charles
+    - github.com/internetarchive/openlibrary/issues/628
+    - github.com/internetarchive/openlibrary/issues/482
+    - github.com/internetarchive/openlibrary/issues/893
+    - Answering Salman's ONIX + openlibrary-client questions 
+- Mek
     - Create issue to add docstrings for openlibrary-client
+    - https://github.com/internetarchive/openlibrary/issues/844 -- Slow loading works (loanstatus) @mek
 
 ### Wishes
 - Salman
