@@ -24,7 +24,7 @@
 ## 2018-03-20 Community Call
 
 ### Attendees
-- Mek(@mekarpeles)
+- Mek
 - Salman
 - Charles
 
