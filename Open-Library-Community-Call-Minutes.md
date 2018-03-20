@@ -25,16 +25,31 @@
 
 ### Attendees
 - Mek(@mekarpeles)
-- TBA 
+- Salman
 
 ### Agenda
 - Updates & wins this week (what did we work on + discuss last week)
     - Internal stakeholder's Q2 meeting
+    - Q1 board and closed some tasks
 - Open Pull Requests
+    - None this week
 - Blockers & Major bugs?
+    - @charles will need some solr logs soon
     - https://github.com/internetarchive/openlibrary/issues/844 -- Slow loading works (loanstatus) @mek
 - What we're working on this week
     - https://github.com/internetarchive/openlibrary/issues/869 -- Importing OL Wishlist w/ jude coelho @mek
+
+### This Week
+- Salman
+    - Hindi internationalization
+    - Updating the internationalization (i18n) wiki as he does this
+    - Investigating writing an ONIX parser and using the openlibrary-client: github.com/internetarchive/openlibrary/issues/865
+- Charles
+    - Create issue to add docstrings for openlibrary-client
+
+### Wishes
+- Salman
+    - Wants a wiki page for internationlization (how to contribute)
 
 ## 2018-03-13 Community Call
 
