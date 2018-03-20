@@ -1,5 +1,10 @@
 # Table of Contents
 
+## Minutes for 2018
+- [2018-03-20 Community Call](#2018-03-20-community-call)
+- [2018-03-13 Community Call](#2018-03-13-community-call)
+
+## Minutes for 2017
 - [2017-10-03 Community Call](#2017-10-03-community-call)
 - [2017-09-26 Community Call](#2017-09-26-community-call)
 - [2017-09-12 Community Call](#2017-09-12-community-call)
@@ -14,15 +19,41 @@
 - [2017-03-15 Community Call](#2017-03-15-community-call)
 - [2017-03-08 Community Call](#2017-03-08-community-call)
 
-# 2017-10-03 Community Call
+# Minutes for 2018
 
-## Attendees
+## 2018-03-20 Community Call
+
+### Attendees
+- Mek(@mekarpeles)
+- TBA 
+
+### Agenda
+- TBA
+
+## 2018-03-13 Community Call
+
+### Attendees
+- Mek(@mekarpeles) 
+- Charles(@hornc)
+- Salman Shah(@salman-bhai)
+- Tom(@tfmorris)
+- Cdrini(@cdrini)
+
+### Agenda
+- Discussion regarding Issues to be prioritised and nominating Issues before the Stakeholders' meet on Thursday (2018-03-15). 
+
+
+# Minutes for 2017
+
+## 2017-10-03 Community Call
+
+### Attendees
 
 Charles, Drini, Mek
 
-# 2017-09-26 Community Call
+## 2017-09-26 Community Call
 
-## Agenda
+### Agenda
 
 - homepage carousels roll-out: https://dev.openlibrary.org
 - olc (`openlibrary-client`) improvements
@@ -32,19 +63,19 @@ Charles, Drini, Mek
 - October 11 deadlines: enhanced book pages, likes v. ratings, lists
 - other?
 
-# 2017-09-12 Community Call
+## 2017-09-12 Community Call
 
-## Attendees:
+### Attendees:
 
 - Mek
 - Charles
 
-## Ideas
+### Ideas
 
 - Have a banner w/ button for volunteers + show jobs (e.g. in blue bar)
 - Have an endpoint for flagging/proposing merge of Work IDs and admin page to review (or for now, create spreadsheet)
 
-## Todos
+### Todos
 
 - @mek: get @charles access to OJF server
 - @mek: create mailing list for OL and add link to Openlibrary website
@@ -55,9 +86,9 @@ Charles, Drini, Mek
 1) Trigger update of archive.org items from IA 
 
 
-# 2017-08-29 Community Call
+## 2017-08-29 Community Call
 
-## Attendees:
+### Attendees:
 
 - Justine De Caires @jdecked
 -- reactifying the open library experience on the refactor/beta branch
@@ -71,37 +102,38 @@ Charles, Drini, Mek
 -- `refactor/move-work-editions-standalone` - Proposal for new routing, moving editions table from works to its own page
 
 
-# 2017-05-16 Community Call
+## 2017-05-16 Community Call
 
-## Charles
+### Charles
 
 - ~15k Authors being merged from VIAF
 - Addressing unicode search problems, e.g. when search > 500 characters
 - Unicode characters that require 2-characters linked is not rendering correctly (half characters)
 
-## Neal
+### Neal
 
 - Searching wb for books
 
-## Mek
+### Mek
 
 - debugging subject carousels performance issues
 - unifying work/edition
 
-# 2017-05-02 Community Call
+## 2017-05-02 Community Call
 
-## mek
+### mek
 
 - subject carousels
 - mobile header redesign
-# 2017-04-18 Community Call
 
-## Agenda
+## 2017-04-18 Community Call
+
+### Agenda
 
 - *Done* this week
 - *Goals* this week
 
-## Done this week
+### Done this week
 
 ### @mekarpeles
 
@@ -126,25 +158,26 @@ Todo:
 Todo:
 - Separating api.openlibrary.org from openlibrary.org
 
-# 2017-04-11 Community Call
-## Agenda
+## 2017-04-11 Community Call
+
+### Agenda
 
 - David working on metatools to parse MARCs on researcher2
 - Nicholas, Irene, Bernat, and Jean working on OL Redesign
 - Mek working on fixing Archive.org -> Open Library import, speaking w/ Good Reads
 - Charles, updating Openlibrary-client and working w/ @mekarpeles on work merging
 
-## Updates
+### Updates
 
 Open Syllabus Project - (subject) collection created of ~500 works which we have on OL!
 
-## Ideas
+### Ideas
 
 Adding "likes" to user lists
 
-# 2017-04-04 Community Call
+## 2017-04-04 Community Call
 
-## Agenda
+### Agenda
 
 1. Review Roadmap
 2. Updates & Progress
@@ -157,32 +190,32 @@ Adding "likes" to user lists
 3. Todo
 - Fixing List Works
 
-## Charles
+### Charles
 
 Is there an authority for subjects (Library of Congress), LibraryThing. cc: @dvd
 
-## Nicholas
+### Nicholas
 
 Going to contribute to design doc
 
-## Mek
+### Mek
 
 Share design doc w/ #openlibrary-g and Nicholas
 How do we get subjects added to works and into solr?
 
-# 2017-03-28 Community Call
+## 2017-03-28 Community Call
 
-## Agenda
+### Agenda
 
 - Updates: What did we get done this week? What is currently in progress?
 - Blockers: What do we need the community's feedback on?
 - Meetings: What meetings need to occur?
 
-## Attendees
+### Attendees
 
 Mek, Charles, Neal, Brenton, Bernat, David
 
-## Updates
+### Updates
 
 ### Charles
 
@@ -214,21 +247,24 @@ researcher vm w/ batch of pdfs on them
 - Worked on experimental mobile design for OL + started an experimental front-end which uses existing APIs to create combined works & editions page concept
 - Openlibrary-client -- created librarything API (xisbn) (tool for @dvd and @charles)
 
-## Meetings
+### Meetings
 
 - Nicholas, Irene, Mek, Bernat, Jean, Brenton -- some subset of this group should meet or contribute to the ecosystem diagram (it would be great if Jean can describe the purpose of this doc; I'll do my best)
 
-# 2017-03-21 Community Call
+## 2017-03-21 Community Call
 
-Time: Tuesday, 10:30am PDT
-Attendance:
+### Time: 
+
+Tuesday, 10:30am PDT
+
+### Attendance:
 - brenton
 - skylerbunny
 - charles
 - nicholas
 - mek
 
-## Updates
+### Updates
 
 **Charles**
 - Has been using APIs to create bots to address data quality
@@ -250,9 +286,9 @@ Attendance:
 - Completing rollout of repaired OPDS
 - Looking for designers to help w/ beta branch (separating FE and BE)
 
-# 2017-03-15 Community Call
+## 2017-03-15 Community Call
 
-Updates:
+### Updates:
 1) Vagrant Fixes (auth)
 2) Removed link to kindle download (broken)
 3) Bots & admin features
@@ -260,13 +296,13 @@ Updates:
 5) OPDS this week
 6) TODO: fixing Lists (works shows 0 editions)
 
-Folks:
+### Folks:
 - Nicholas (ios, product; wants redesign)
 - Irene (product, business)
 - David (book metadata, search, systems)
 - Brenton, Mek (OL)
 
-Todos, opportunities, and blockers:
+### Todos, opportunities, and blockers:
 1) Getting David access to MARCs, the metatools repo, and a very short overview of the tools / process
 2) Getting @nicholaskinloch and @irenem access to data (happy to do an in person google analytics session, or see what we need to do in order to get the data y'all need)
 3) Following up with @charles about administrative metadata features (possibly updating openlibrary-client to have special functions for `bot` users, like work merge)
@@ -275,16 +311,16 @@ Todos, opportunities, and blockers:
 7) Entertaining the idea of letting users answer questions / customize their accounts (e.g. location, age, etc) to help with recommendations
 8) Catching up w/ @skylerbunny to identify other problems/bugs of interest
 
-# 2017-03-08 Community Call
+## 2017-03-08 Community Call
 
 Attendees:
 - @mek, @charles
 
-## Blocking problems
+### Blocking problems
 
 @mek needs to fix vagrant researcher VM to work w/ updated auth; login w/ email
 
-## Discussing Q2 and Q3 Roadmap
+### Discussing Q2 and Q3 Roadmap
 
 See: https://github.com/internetarchive/openlibrary/wiki/Roadmap
 
@@ -292,11 +328,9 @@ Note:
 - Charles needs a bot with admin access
 - Current git has to our openlibrary page (dev) -- what version are we running? (use git tag)
 - @skylerbunny's PR for prioritizing oclc > isbn
-- David and charles access to VM for MARC record parsing
+- David and charles access to VM for MARC record parsing cares about pre-1600 books
 
-cares about pre-1600 books
-
-What are we missing from being a good authoritative source of data?
+### What are we missing from being a good authoritative source of data?
 - general librarianship (no standard) -- standard geographical location [early books, foreign language books] -- English is the language of metadata
 - supporting multiple languages (accurate records)
 - allow upload on Open Library?... (to archive.org)
@@ -306,7 +340,7 @@ What are we missing from being a good authoritative source of data?
 
 openlibrary-g works better than open library mailing list
 
-Opportunities:
+### Opportunities:
 - Author merges
 
 Let's create a button for:
@@ -316,7 +350,7 @@ private lists which are private
 Stack-overflow for Open Library
 Wikipedia - every page [Work] has a discussion section
 
-## Ideas
+### Ideas
 Subscribe to changes on pages
 A user chat page or messaging
 Badges and karma for librarians (discogs.com has this) [gameify]
@@ -328,7 +362,7 @@ Badges and karma for librarians (discogs.com has this) [gameify]
 
 How do we surface the style guides for Open Library?
 
-Standards document:
+### Standards document:
 - auto validation on a title (warning of data is invalid)
 
 Like wikipedia, have a banner which shows which pages need 
