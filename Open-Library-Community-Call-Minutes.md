@@ -26,6 +26,7 @@
 ### Attendees
 - Mek(@mekarpeles)
 - Salman
+- Charles
 
 ### Agenda
 - Updates & wins this week (what did we work on + discuss last week)
