@@ -28,7 +28,13 @@
 - TBA 
 
 ### Agenda
-- TBA
+- Updates & wins this week (what did we work on + discuss last week)
+    - Internal stakeholder's Q2 meeting
+- Open Pull Requests
+- Blockers & Major bugs?
+    - https://github.com/internetarchive/openlibrary/issues/844 -- Slow loading works (loanstatus) @mek
+- What we're working on this week
+    - https://github.com/internetarchive/openlibrary/issues/869 -- Importing OL Wishlist w/ jude coelho @mek
 
 ## 2018-03-13 Community Call
 
