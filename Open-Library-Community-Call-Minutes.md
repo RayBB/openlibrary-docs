@@ -31,14 +31,16 @@
 ### Agenda
 - Updates & wins this week (what did we work on + discuss last week)
     - Internal stakeholder's Q2 meeting
-    - Q1 board and closed some tasks
 - Open Pull Requests
     - None this week
-- Blockers & Major bugs?
+- **Triage** Blockers & Major bugs
     - @charles will need some solr logs soon
     - https://github.com/internetarchive/openlibrary/issues/844 -- Slow loading works (loanstatus) @mek
-- What we're working on this week
+- What we're working on **this week**
     - https://github.com/internetarchive/openlibrary/issues/869 -- Importing OL Wishlist w/ jude coelho @mek
+
+### Triage
+- went through remaining Q1 board and closed issues
 
 ### This Week
 - Salman
@@ -46,9 +48,9 @@
     - Updating the internationalization (i18n) wiki as he does this
     - Investigating writing an ONIX parser and using the openlibrary-client: github.com/internetarchive/openlibrary/issues/865
 - Charles
-    - github.com/internetarchive/openlibrary/issues/628
-    - github.com/internetarchive/openlibrary/issues/482
-    - github.com/internetarchive/openlibrary/issues/893
+    - https://github.com/internetarchive/openlibrary/issues/628
+    - https://github.com/internetarchive/openlibrary/issues/482
+    - https://github.com/internetarchive/openlibrary/issues/893
     - Answering Salman's ONIX + openlibrary-client questions 
 - Mek
     - Create issue to add docstrings for openlibrary-client
