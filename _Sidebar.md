@@ -1,6 +1,10 @@
 * [Home](Home)
-* Community Calls
-	* [Open Library Community Call Minutes](Open-Library-Community-Call-Minutes)
+* Getting Involved
+        * [Contributor's Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
+        * [Roadmap](https://github.com/internetarchive/openlibrary/projects/7)
+        * [Weekly Community Call](Open-Library-Community-Call-Minutes)
+	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
+	* [Google Summer of Code](Google-Summer-of-Code-(2018))
 * Design Resources
 	* [Design](Design)
 * Developer Resources
@@ -10,13 +14,8 @@
 	* [Testing](Testing)
 	* [Testing Critical Paths](Testing-Critical-Paths)
 	* [Writing Bots](Writing-Bots)
-* Getting Involved
-	* [Google Summer of Code](Google-Summer-of-Code-(2018))
-	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
-	* [Roadmap](Roadmap)
 * Librarian Resources 
-	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
 	* [Guide to Identifiers](Guide-to-Identifiers)
 	* [Merge Processes](Merge-Processes)
 	* [OL-Standards](OL-Standards)
-
+	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
