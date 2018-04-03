@@ -1,7 +1,7 @@
 # Table of Contents
 
 ## Minutes for 2018
-- [2018-04-03 Community Call](#2018-03-20-community-call)
+- [2018-04-03 Community Call](#2018-04-03-community-call)
 - [2018-03-20 Community Call](#2018-03-20-community-call)
 - [2018-03-13 Community Call](#2018-03-13-community-call)
 
