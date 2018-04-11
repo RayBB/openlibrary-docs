@@ -14,10 +14,6 @@
 	* [Frontend-Guide](Frontend-Guide)
 	* [Solr Indexing](Solr-notes,-let's-fix-Solr-indexing!)
 	* [Writing Bots](Writing-Bots)
-* **Getting Involved**
-	* [Google Summer of Code](Google-Summer-of-Code-(2018))
-	* [Google Summer of Code - Sample Proposal](GSoC-Proposal)
-	* [Roadmap](Roadmap)
 * **Librarian Resources** 
 	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
 	* [Guide to Identifiers](Guide-to-Identifiers)
