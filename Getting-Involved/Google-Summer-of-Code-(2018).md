@@ -21,3 +21,7 @@ Feel free to [open new github issues](https://github.com/internetarchive/openlib
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
 
 > The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit openlibrary and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
+
+## Examples
+
+You can view a sample proposal [here](https://docs.google.com/document/d/1IGTAMczT9A1EwyV_E73f2bHWscv85gyYAc7PLXJfPLs/edit?usp=sharing).
