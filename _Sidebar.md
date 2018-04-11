@@ -12,11 +12,11 @@
 	* [Writing Bots](Writing-Bots)
 * Getting Involved
 	* [Google Summer of Code](Google-Summer-of-Code-(2018))
+	* [Google Summer of Code - Sample Proposal](GSoC-Proposal)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Roadmap](Roadmap)
 * Librarian Resources 
 	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
 	* [Guide to Identifiers](Guide-to-Identifiers)
 	* [Merge Processes](Merge-Processes)
-	* [OL-Standards](OL-Standards)
-
+	* [OL Standards](OL-Standards)
