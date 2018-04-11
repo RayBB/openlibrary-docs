@@ -4,6 +4,7 @@
 * Design Resources
 	* [Design](Design)
 * Developer Resources
+	* [Getting Started](Getting-Started)
 	* [Endpoints](Endpoints)
 	* [Frontend-Guide](Frontend-Guide)
 	* [Solr notes, let's fix Solr indexing!](Solr-notes,-let's-fix-Solr-indexing!)
