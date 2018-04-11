@@ -28,3 +28,7 @@ https://openlibrary.org/admin/inspect/store?key=solr-force-update
 
 * Solr updater script log: `/var/log/upstart/ol-solr-updater.log`
 * Solr itself: `/var/log/tomcat6/catalina.out`
+
+### Query Solr directly on dev instance
+On host:
+http://0.0.0.0:18983/solr/select?wt=json&json.nl=arrarr&q=key:/authors/OL18319A
