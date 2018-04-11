@@ -9,15 +9,14 @@
 	* [Design](Design)
 * **Developer Resources**
 	* [Getting Started](Getting-Started)
+	* [Testing](Testing)
 	* [Overview of HTTP Endpoints](Endpoints)
 	* [Frontend-Guide](Frontend-Guide)
-	* [Solr notes, let's fix Solr indexing!](Solr-notes,-let's-fix-Solr-indexing!)
-	* [Testing](Testing)
+	* [Solr Indexing](Solr-notes,-let's-fix-Solr-indexing!)
 	* [Writing Bots](Writing-Bots)
 * **Getting Involved**
 	* [Google Summer of Code](Google-Summer-of-Code-(2018))
 	* [Google Summer of Code - Sample Proposal](GSoC-Proposal)
-	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Roadmap](Roadmap)
 * **Librarian Resources** 
 	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
@@ -25,3 +24,4 @@
 	* [Merge Processes](Merge-Processes)
 	* [OL Standards](OL-Standards)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
+	* [Writing Bots](Writing-Bots)
