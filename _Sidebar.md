@@ -3,19 +3,21 @@
 	* [Contributor's Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
 	* [Roadmap](https://github.com/internetarchive/openlibrary/projects/7)
 	* [Weekly Community Call](Open-Library-Community-Call-Minutes)
-	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
 	* [Google Summer of Code](Google-Summer-of-Code-(2018))
+	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 * **Design Resources**
 	* [Design & Ecosystem Diagram](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
 	* [Logos](https://drive.google.com/file/d/1GlUpiaobyL6dbxu8Ok_i_R87aalpzH_z/view)
 	* [Wireframes](Design)
 * **Developer Resources**
 	* [Getting Started](Getting-Started)
-	* [Testing](Testing)
 	* [Overview of HTTP Endpoints](Endpoints)
 	* [Frontend-Guide](Frontend-Guide)
+	* [Testing](Testing)
+	* [Architecture of Dev Instance](Architecture)
 	* [Solr Indexing](Solr-notes,-let's-fix-Solr-indexing!)
 	* [Writing Bots](Writing-Bots)
+	* [Design Notes](Design-Notes)
 * **Librarian Resources** 
 	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
 	* [Guide to Identifiers](Guide-to-Identifiers)
@@ -23,3 +25,4 @@
 	* [OL Standards](OL-Standards)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Writing Bots](Writing-Bots)
+* **[Appendix](Appendix)**

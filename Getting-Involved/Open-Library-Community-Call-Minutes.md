@@ -1,6 +1,7 @@
 # Table of Contents
 
 ## Minutes for 2018
+- [2018-04-10 Community Call](#2018-04-10-community-call)
 - [2018-04-03 Community Call](#2018-04-03-community-call)
 - [2018-03-20 Community Call](#2018-03-20-community-call)
 - [2018-03-13 Community Call](#2018-03-13-community-call)
@@ -22,9 +23,31 @@
 
 # Minutes for 2018
 
+## 2018-04-10 Community Call
+
+### Attendees
+- Mek
+- Charles
+- Galen
+- Salman
+
+### Agenda
+
+- Updates & wins in the past one week
+- Open Pull Requests? (none this week)
+- What are we working on this week
+- Discussion about Galen's work
+
+### This Week
+- Salman 
+    - Working on updating the README and deprecating code.openlibrary.org
+    - Starting the Open Library Bots and start with having a simple bot which taken in ONIX or MARC feeds and imports it into the Open Library System.
+
 ## 2018-04-03 Community Call
 
 ### Attendees
+- Mek
+- Charles
 
 ### Agenda
 
