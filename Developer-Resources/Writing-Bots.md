@@ -31,7 +31,7 @@ The following are **legacy examples** which used `api.py` (which is deprecated) 
 - [AMillarBot](http://openlibrary.org/people/AMillarBot)
 - [oclcBot, by Bruce Washburn](http://openlibrary.org/people/oclcBot)
 
-# Notes on Bots
+# `Bot` Opportunities
 
 **Legend**
 - A: Authors
@@ -52,7 +52,6 @@ The following are **legacy examples** which used `api.py` (which is deprecated) 
       -Some external MARC records have had subsequent correction, reimportation could catch many such cases
   * NFC Normalisation. Of titles, description, place, i.e. all text fields.
     Ensure all input mechanisms normalise correctly. UI + import paths. TEST.
-
 
 ## Spaces in OCAIDs [E]
   Github issue https://github.com/internetarchive/openlibrary/issues/467
