@@ -7,7 +7,7 @@ OpenLibrary `bot accounts` are used to make http POSTs to work, author, edition,
 # Applying for a `bot account`
 
 Follow these 2 steps to apply for a privileged `bot account`:
-1) First, [register a new OpenLibary account](https://openlibrary.org/account/create) which meets the following guidelines: (a) Your `bot account` should be **different** from your personal OpenLibrary account and (b) the username of your new account should end with the word "Bot" (e.g. `WorkBot`, `ImportBot`). These conventions allow us to monitor / filter through `Recent Changes` to identify only those changes made by `bot account`s. (Since bots tend to repeat the same small operation with high frequency, they would overwhelm the list if shown alongside edits by humans.)
+1) First, [register a new OpenLibary account](https://openlibrary.org/account/create) which meets the following guidelines: (a) Your `bot account` should be **different** from your personal OpenLibrary account and (b) the username of your new account should end with the word "Bot" (e.g. `WorkBot`, `ImportBot`). These conventions allow us to [monitor / filter through `Recent Changes` by `bot`s](https://openlibrary.org/recentchanges#bots) to identify only those changes made by `bot account`s. (Since bots tend to repeat the same small operation with high frequency, they would overwhelm the list if shown alongside edits by humans.)
 2) Open a github issue and ask a site `admin` (e.g. @mekarpeles, as of 2018) to set your account to have `bot` privileges and to [add your account to the `"API" usergroup`](http://openlibrary.org/usergroup/api?m=edit)
 
 # `openlibrary-client` Library
