@@ -1,3 +1,7 @@
+**Legend**
+- A: Authors
+- E: Editions
+- W: Works
 
 ## Unicode [A, E, W]
 
