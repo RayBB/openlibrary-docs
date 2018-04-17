@@ -22,7 +22,9 @@ If possible, `bot accounts` **should not** be used directly to make 1-off change
 
 # Example `Bot`s
 
-The following are legacy examples which used `api.py` (which is deprecated) instead of `openlibrary-client`, but they give an idea of what OpenLibrary `bot`s are, what they do, how they are written, and how they are used. Please refer to the [openlibrary-client documentation](https://github.com/internetarchive/openlibrary-client) for more modern examples:
+[Here's an example by @hornc of a `bot` which uses `openlibrary-client` for merging works/editions and updating records in bulk](https://github.com/hornc/catharbot).
+
+The following are **legacy examples** which used `api.py` (which is deprecated) instead of `openlibrary-client`, but they give an idea of what OpenLibrary `bot`s are, what they do, how they are written, and how they are used. Please refer to the [openlibrary-client documentation](https://github.com/internetarchive/openlibrary-client) for more modern examples:
 
 - [Daniel's IdentifierBot](http://github.com/dmontalvo/IdentifierBot/blob/master/fastadder.py)
 - [Ben's Goodreads bot](https://github.com/internetarchive/openlibrary/blob/master/scripts/2010/04/import_goodreads_ids.py)
