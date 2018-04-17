@@ -1,6 +1,7 @@
 # Table of Contents
 
 ## Minutes for 2018
+- [2018-04-17 Community Call](#2018-04-17-community-call)
 - [2018-04-10 Community Call](#2018-04-10-community-call)
 - [2018-04-03 Community Call](#2018-04-03-community-call)
 - [2018-03-20 Community Call](#2018-03-20-community-call)
@@ -22,6 +23,20 @@
 - [2017-03-08 Community Call](#2017-03-08-community-call)
 
 # Minutes for 2018
+
+## 2018-04-10 Community Call
+
+### Attendees
+
+T.B.D
+
+## Agenda
+
+- Updates & wins in the past one week
+- Open Pull Requests? (none this week)
+- What are we working on this week
+- Special topic(s): Merging endpoint & Writing Bots
+- Next week: Canonical Books Page
 
 ## 2018-04-10 Community Call
 
