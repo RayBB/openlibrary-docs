@@ -1,6 +1,6 @@
 # Introduction
 
-Are you frustrated with the number of metadata mistakes on OpenLibrary editions, works, authors, etc? Do you notice the same problem happening over and over? Are you seeing a lot of duplicate Authors which should be merged or fake books which should be deleted? Are there books missing from OpenLibrary that you'd like to import from other sources? These are jobs for [`bot` accounts](https://openlibrary.org/dev/docs/bots).
+Are you frustrated with the number of metadata mistakes on OpenLibrary editions, works, authors, etc? Do you notice the same problem happening over and over? Are you seeing a lot of duplicate Authors which should be merged or fake books which should be deleted? Are there books missing from OpenLibrary that you'd like to import from other sources? These are jobs for [`bot accounts`](https://openlibrary.org/dev/docs/bots).
 
 OpenLibrary `bot accounts` are used to make http POSTs to work, author, edition, subject, etc., pages in order to correct metadata or create/import new records (e.g. books, authors, bookcovers) in bulk. 
 
