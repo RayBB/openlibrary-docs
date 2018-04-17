@@ -24,7 +24,7 @@
 
 # Minutes for 2018
 
-## 2018-04-10 Community Call
+## 2018-04-17 Community Call
 
 ### Attendees
 
