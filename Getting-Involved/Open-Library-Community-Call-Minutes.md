@@ -28,15 +28,26 @@
 
 ### Attendees
 
-T.B.D
+- Drini
+- Tabish
+- Neal
+- Tom
+- Galen
+- Mek
 
 ## Agenda
 
 - Updates & wins in the past one week
 - Open Pull Requests? (none this week)
 - What are we working on this week
-- Special topic(s): Merging endpoint & Writing Bots
-- Next week: Canonical Books Page
+- Special topic(s): 
+    - This week: 2020 openlibraries Wishlist
+    - Next week: Merging endpoint & Writing Bots
+    - Next next week: Canonical Books Page
+
+### Updates
+
+- openlibrary.php updated within petabox into production + developer modes to allow mocking of lending from within OpenLibrary
 
 ## 2018-04-10 Community Call
 
