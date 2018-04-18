@@ -48,6 +48,7 @@
 ### Updates
 
 - openlibrary.php updated within petabox into production + developer modes to allow mocking of lending from within OpenLibrary
+- Updated https://github.com/internetarchive/openlibrary/wiki/Writing-Bots page
 
 ## 2018-04-10 Community Call
 
