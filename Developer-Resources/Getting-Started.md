@@ -222,7 +222,7 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 ### Credits and special thanks
 
 - [rajbot](https://github.com/rajbot)
-- [gdamdam](https://github.com/gdamiola)
+- [gdamdam](https://github.com/gdamdam)
 - [anandology](https://github.com/anandology)
 - [bfalling](https://github.com/bfalling)
 - [mekarpeles](https://github.com/mekarpeles)
