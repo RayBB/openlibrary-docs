@@ -34,8 +34,6 @@
 - Tabish
 - Mek
 
-I'll post notes to our wiki:
-
 ## Wins
 - @Tabish got his first PR accepted to fix vagrant (npm ssl)! #942
 - @Galen Mancino + @mek launched `embed` feature; #698 #937 #932
