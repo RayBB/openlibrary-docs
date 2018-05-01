@@ -1,6 +1,8 @@
 # Table of Contents
 
 ## Minutes for 2018
+
+- [2018-05-01 Community Call](#2018-05-01-community-call)
 - [2018-04-17 Community Call](#2018-04-17-community-call)
 - [2018-04-10 Community Call](#2018-04-10-community-call)
 - [2018-04-03 Community Call](#2018-04-03-community-call)
@@ -23,6 +25,42 @@
 - [2017-03-08 Community Call](#2017-03-08-community-call)
 
 # Minutes for 2018
+
+## 2018-05-01 Community Call
+
+### Attendees
+- Galen
+- Tom
+- Tabish
+- Mek
+
+I'll post notes to our wiki:
+
+## Wins
+- @Tabish got his first PR accepted to fix vagrant (npm ssl)! #942
+- @Galen Mancino + @mek launched `embed` feature; #698 #937 #932
+- @salman-bhai will be this summer's GSoC champion!
+
+## Todo
+- @brenton to review `embed` feature blog post
+- @tfmorris is investigating multi-cores for solr (so we can test + merge @cdrini's `solr`
+- @abezella, any recommendations on how #openlibrary-g may setup a 2ndary `solr` for testing migrations?
+- @mek + @Tabish investigating https://github.com/internetarchive/openlibrary/issues/925
+- @salman-bhai can we share your roadmap with the community? @Tabish would love to team w/ you on Ansible, Vagrant, Xenial upgrade!
+- @mek finishing `openlibrary.php` bridge + corresponding `openlibrary` changes -- this will allow developer vagrant to connect to fake/mocked lending endpoint
+- @Tabish working on fb + twitter graph metadata for the Reading Log page(s)
+- @Galen Mancino + @mek to discuss next steps:
+-- `add a book` (choose identifier first, fetch data accordingly? include upload -> IA?)
+- @mek to draft ol wiki page to organize notes around `canonical book page`
+- @mek to fix OL -> IA activation to redirect to Open Library login (using @jnelson's updates to xauth) #accessible-epub-g #834
+- @mek to fix `works` page to rm `loan_status` and use `availability v2` #844
+
+## To Be Discussed
+
+- How can we get cover service running in developer vagrant?
+- Next steps for canonical books page
+- Prereqs for @cdrini's code (i.e. re-indexing solr against updated schema) so we can push it live!
+- Upcoming blog-posts?
 
 ## 2018-04-17 Community Call
 
