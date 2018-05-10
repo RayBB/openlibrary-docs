@@ -1,6 +1,7 @@
 Community, please make suggestions to represent your values so we can design as Canonical Books Page everyone is proud of:
 
-**Principles** (for discussion)
+## Principles
+
 1. Our sitemap will index editions
     - Most recently added first
     - 1 edition per language per work, prioritizing books we have digitized?
@@ -19,13 +20,15 @@ Community, please make suggestions to represent your values so we can design as 
 8. As a separate (integrally related) issue, solr search should be updated where possible to insert edition match info results to accommodate facet by language, year, etc
 9. Separate but related issue: How should search results handle works/editions?
 
-The change requires 5 main pieces:
+## Changes Required
+
 1. Redirecting `/works/OL...W/<title>` to the "best" *edition* page (definition of "best" to be discussed)
 2. Adding `work` data (e.g. `description`, `subject-tags`, other `edition`s) to the *edition* page
 3. Overhauling the `Canonical Books Page` (i.e. *edition* page) to have a consistent, mobile friendly design.
 4. Creating a new *work's editions* endpoint `/works/OL...W/<title>/editions` as the comprehensive listing of a work's editions.
 5. Updating the *sitemap* to include "select" editions per works (spanning languages, availability, favoring recent date-added, etc -- again, to be discussed)
 
-Related:
+## Related
+
 https://internetarchive.slack.com/archives/C0ETZV72L/p1521771852000004
 https://github.com/internetarchive/openlibrary/issues/844
