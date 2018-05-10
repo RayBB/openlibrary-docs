@@ -25,4 +25,6 @@
 	* [OL Standards](OL-Standards)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Writing Bots](Writing-Bots)
+* **Open Initiatives**
+	* [Canonical Books Page](Canonical-Books-Page)
 * **[Appendix](Appendix)**
