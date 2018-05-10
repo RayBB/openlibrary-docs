@@ -26,7 +26,7 @@
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Writing Bots](Writing-Bots)
 * **Systems & Dev-ops**
-        * [Services Status Dashboard](http://status.archivelab.org)
+	* [Services Status Dashboard](http://status.archivelab.org)
 * **Open Initiatives (RFCs)**
 	* [Canonical Books Page](Canonical-Books-Page)
 * **[Appendix](Appendix)**
