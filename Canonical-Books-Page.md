@@ -32,3 +32,4 @@ Community, please make suggestions to represent your values so we can design as 
 
 https://internetarchive.slack.com/archives/C0ETZV72L/p1521771852000004
 https://github.com/internetarchive/openlibrary/issues/844
+https://github.com/internetarchive/openlibrary/issues/684
