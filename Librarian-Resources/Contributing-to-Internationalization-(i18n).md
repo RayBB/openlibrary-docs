@@ -37,4 +37,4 @@ At the end of this document is a detailed table of languages and their code. Cre
 The messages template file, `/openlibrary/i18n/messages.pot` should be copied as `messages.po` (note the difference in extension, the `t` for template is dropped for the copy) to your newly created folder.
 
 ## Step 4: Make the translations and send a PR
-You can edit the `message.po` file using your favourite editor, or a .po specific tool such as [poedit](https://poedit.net/) and send in a Pull Request. Pull Request Guidelines can be found on our [README](https://github.com/internetarchive/openlibrary/blob/master/Readme.md) and [CONTRIBUTING](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) guide.
+You can edit the `message.po` file using your favourite editor, or a .po specific tool such as [poedit](https://poedit.net/), and send in a Pull Request. Pull Request Guidelines can be found on our [README](https://github.com/internetarchive/openlibrary/blob/master/Readme.md) and [CONTRIBUTING](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) guide.
