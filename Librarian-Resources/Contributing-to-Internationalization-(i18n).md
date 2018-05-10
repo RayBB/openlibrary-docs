@@ -4,7 +4,7 @@ Kindly take a look at this [Issue thread](https://github.com/internetarchive/ope
 
 ## About
 
-Open Library i18n is handled via the [python Babel library](http://babel.pocoo.org/en/latest/), `gettext`, and the message lists located https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n
+Open Library i18n is handled via the [python Babel library](http://babel.pocoo.org/en/latest/), GNU `gettext`, and the message lists located https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n
 
 More details can be found [here](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/i18n/__init__.py)
 
