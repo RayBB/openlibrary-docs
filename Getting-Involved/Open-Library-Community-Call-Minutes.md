@@ -26,6 +26,35 @@
 
 # Minutes for 2018
 
+## 2018-05-15 Community Call
+
+### Attendees
+- Salman
+- Drini
+- Tabish
+- Mek
+- Charles
+
+## This Week
+- Salman: OL client familiarity  , import records, starting with wishlist import
+ Bots repo; adding bots (NYT bot). Readme. etc. Pending PR for python3 to Catharbot. 
+
+- Drini: Goodreads, Shelfari books, Goodreads Work Edition modelling and diagram -- pros and cons of approaches.
+
+- Tabish, planning to work on social share of reading, looking for small issues to pick up
+   Salman metions Recaptca issue as a possibility to work on.
+
+- Mek: Creating steps required to create canonical books pages. Granular roadmap.
+
+- Charles: PR update for merge authors undo fix, Modern Greek translation branch. FRBR modelling
+(Drini confirmed with example of one ISBN with many covers)
+
+## Todo:
+- Charles - Intro to FRBR for OL on the wiki
+
+## Next week:
+- Review roadmap and tasks in Project wiki.
+
 ## 2018-05-01 Community Call
 
 ### Attendees
