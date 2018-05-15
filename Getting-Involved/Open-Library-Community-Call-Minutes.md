@@ -44,7 +44,7 @@
 - Tabish, planning to work on social share of reading, looking for small issues to pick up
    Salman metions Recaptca issue as a possibility to work on.
 
-- Mek: Creating steps required to create canonical books pages. Granular roadmap.
+- Mek: Creating steps required to (a) create canonical books pages (b) breaking down `wishlist` import
 
 - Charles: PR update for merge authors undo fix, Modern Greek translation branch. FRBR modelling
 (Drini confirmed with example of one ISBN with many covers)
