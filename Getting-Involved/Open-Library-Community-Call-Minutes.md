@@ -34,6 +34,7 @@
 - Tabish
 - Mek
 - Charles
+- num170r
 
 ## This Week
 - Salman: OL client familiarity  , import records, starting with wishlist import
