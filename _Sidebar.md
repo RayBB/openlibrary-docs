@@ -29,4 +29,5 @@
 	* [Services Status Dashboard](http://status.archivelab.org)
 * **Open Initiatives (RFCs)**
 	* [Canonical Books Page](Canonical-Books-Page)
+	* [Importing IA Wishlist](Importing-IA-Wishlist)
 * **[Appendix](Appendix)**
