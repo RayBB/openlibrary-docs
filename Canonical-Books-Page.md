@@ -5,7 +5,7 @@ Community, please make suggestions to represent your values so we can design as 
 1. Our sitemap will index editions
     - Most recently added first _[tfm - [order doesn't matter](https://www.sitemaps.org/faq.html#faq_url_position) ]_
     - 1 edition per language per work, prioritizing books we have digitized? _[tfm - all editions should be in the sitemap]_
-2. `/works` pages will become a redirect page to an edition (i.e. “canonical book” page). A user will not be able to get to a work page. An edition will always be selected / the destination for viewing book information.
+2. `/works` pages will become a redirect page to an edition (i.e. “canonical book” page). A user will not be able to get to a work page. An edition will always be selected / the destination for viewing book information. [lsd - The work metadata must be editable: if work page is inaccessible to users then where?] 
     - redirect to the “best” edition, by default
         - E.g. Borrowable + available, readable, newest, highest rated
         - Can be done dynamically, at time of hitting url
@@ -15,7 +15,7 @@ Community, please make suggestions to represent your values so we can design as 
 4. To see other editions of a work, we may opt to shown the “best” subset of them (in one more many carousel(s)?) on the selected edition page. Where applicable (i.e. the edition has a work), a user may see a comprehensive listing of all editions (including those without ebooks) by going to: `/works/OL...W/<title>/editions`. In this case, we can guarantee there is a work by virtue of there being multiple editions.
     - “best” may mean the same thing as defined above (e.g. newest, available, languages)
 5. For maintainability and clarity, there will be exactly 1 template (disregarding A/B testing) for the “canonical book page”
-6. Not all editions need a work under this approach [tfm - I don't see how this follows. Work metadata is still needed]
+6. Not all editions need a work under this approach [tfm - I don't see how this follows. Work metadata is still needed] 
 7. The Canonical Book Page will be mobile responsive and have a mobile + desktop view
 8. As a separate (integrally related) issue, solr search should be updated where possible to insert edition match info results to accommodate facet by language, year, etc
 9. Separate but related issue: How should search results handle works/editions?
