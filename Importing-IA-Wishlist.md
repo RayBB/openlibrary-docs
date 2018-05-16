@@ -1,5 +1,10 @@
-# Importing Internet Archive Open Libraries Wishlist
-Coming up... I'll have more information shortly (after checking in with @mattmiller who developed the wishlist)
+See: https://github.com/internetarchive/openlibrary/issues/869
+
+## Goal
+
+There are 2.6M items on the Internet Archive Openlibraries Wishlist. We want to make sure each of these books has a corresponding catalog entry in openlibrary.org.
+
+## Steps
 
 - Download the `wishlist`dataset from https://github.com/internetarchive/openlibrary/issues/869 (@mek will provide an updated link)
 - We will take the first 1,000 items in the wishlist (as a test) and see (2.a.) how many are in Open Library...
