@@ -28,6 +28,9 @@ Community, please make suggestions to represent your values so we can design as 
 4. Creating a new *work's editions* endpoint `/works/OL...W/<title>/editions` as the comprehensive listing of a work's editions.
 5. Updating the *sitemap* to include "select" editions per works (spanning languages, availability, favoring recent date-added, etc -- again, to be discussed)
 
+## Research
+- [A superficial record of how other sites (GoodReads, LibraryThing, and Shelfari) handle their Work/edition interactions](https://rawgit.com/wiki/internetarchive/openlibrary/images/works-editions%20research.svg) (interactive SVG; links/hovering work)
+
 ## Related
 
 https://internetarchive.slack.com/archives/C0ETZV72L/p1521771852000004
