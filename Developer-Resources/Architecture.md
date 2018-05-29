@@ -39,3 +39,27 @@ The solr-infogami plugin also calls out to an archive.org PHP script that expand
 
 ### Data 
 We have a bunch of catalog data and fulltext acquired from various sources, either sitting in the Archive or to be uploaded to there. I think the acquisition processes (including web crawling scripts for some of the data) is outside the scope of an Open Library software install. There are a bunch of additional scripts to make the stuff usable in openlibrary and these need to be documented. These include TDB Conversion Scripts written by dbg, and (for OCA fulltext) Archive Spidering and Solr Importing scripts written by phr. 
+
+### Dependencies
+
+The system requires a lot of 3rd party programs as well as a whole bunch of python libraries. We have an installation script which you can run that will setup the entire thing for you but in order to run this script, the following packages have to be installed first.
+
+On Linux, you will also have to install the following dev packages `python-dev`, `libpq-dev` and `libxslt-dev`. These can be installed by running, `sudo apt install python-dev libpq-dev libxslt-dev` [Some Python packages](https://github.com/internetarchive/openlibrary/tree/master/requirements.txt) are also required, but they will be automatically installed by the installation script.
+
+**Git**
+For getting the source repository
+
+**PostgreSQL 8.2 or later (psql)**
+This is where we store our data
+
+**Python 2.5 or later (python)**
+The application is written in python
+
+**Java Runtime (tested with openjdk-6-jre)**
+The indexer (solr) is a Java application
+
+**Python virtualenv (python-virtualenv)**
+Necessary to create “virtual” installations of Python so that we can install packages without touching your system distribution. More details at the [virtualenv PyPI page](http://pypi.python.org/pypi/virtualenv).
+
+**Apache Solr (installed by the installation script)**
+The search engine.
