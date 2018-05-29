@@ -27,7 +27,7 @@
 	* [Writing Bots](Writing-Bots)
 * **Systems & Dev-ops**
 	* [Services Status Dashboard](http://status.archivelab.org)
-* **Open Initiatives (RFCs)**
+* **Features & Initiatives (RFCs)**
 	* [Canonical Books Page](Canonical-Books-Page)
 	* [Importing IA Wishlist](Importing-IA-Wishlist)
 * **[Appendix](Appendix)**
