@@ -17,7 +17,7 @@
 	* [Architecture of Dev Instance](Architecture)
 	* [Solr Indexing](Solr-notes,-let's-fix-Solr-indexing!)
 	* [Writing Bots](Writing-Bots)
-	* [Design Notes](Design-Notes)
+	* [Enabling Feature](Feature-Flagging)
 * **Librarian Resources** 
 	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
 	* [Guide to Identifiers](Guide-to-Identifiers)
