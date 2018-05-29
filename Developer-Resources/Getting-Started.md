@@ -17,6 +17,65 @@
     - [Database](#database)
     - [reCAPTCHA v2](#recaptcha)
 
+## Basic Developer Commands
+
+### bootstrap
+
+~Bootstraps the dev instance.~ This is replaced by vagrant.
+
+```
+$ python setup.py bootstrap
+```
+
+### start
+
+Starts all the OL services:
+
+```
+$ python setup.py start
+```
+
+This command starts supervisord using configuration from `conf/supervisor/linux.ini` or `conf/supervisor/macosx.ini` based on the platform.
+
+Logs of the services are written to var/log.
+
+### shell
+
+Start a bash shell with the env required for running all OL scripts.
+
+```
+$ python setup.py shell
+```
+
+This starts a bash shell with [conf/bashrc](http://github.com/internetarchive/openlibrary/blob/master/conf/bashrc) as rc file.
+
+### test
+
+Runs all the test cases.
+
+```
+$ make tests
+```
+
+Behind the scenes it runs scripts/runtests.sh.
+
+The custom setup.py commands are implemented in [setup_commands.py](http://github.com/internetarchive/openlibrary/tree/master/openlibary/core/setup_commands.py).
+
+To know more about how to add custom setuptools commands, see [this link](http://tarekziade.wordpress.com/2007/09/30/extending-set).
+
+## Database Migrations
+
+Occasionally, new tables get added to Open Library database and some existing tables get altered. Scripts are provided to migrate the existing dev instances to new schema.
+
+To migrate an existing dev instance:
+
+```
+$ python setup.py shell
+$ python scripts/migrate_db.py
+```
+
+This will look the current database schema and identifies its version and upgrades it to the latest version.
+
 ## Using the Open Library Website
 
 ### Logging In
