@@ -3,13 +3,13 @@
 This page contains details on how the dev instance is designed, how the various pieces run and interact with each other.
 
 ## Index
-* [Services used](#services-used)
+* [Services](#services)
 * How they interact
 * How are they managed
 * Logging
 * Config files
 
-## Services used
+## Services
 
 ### Web server 
 lighttpd http server runs infogami through FastCGI interface using Flup. (There can be multiple concurrent infogami instances that the lighttpd server distributes requests between, although we currently just run one.)Infogami is written in Python (we currently require 2.5 or greater) and uses web.py and ThingDB. ThingDB uses PostgreSQL as its data store. Psycopg2 is the Python driver for PostgreSQL. We use supervise (see also daemontools) to make sure everything keeps running.
