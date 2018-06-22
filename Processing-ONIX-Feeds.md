@@ -205,5 +205,20 @@ Cory McCloud from Bibliometa has been collaborating with us to get ONIX records 
 
 ## Which fields does Open Library care about?
 
+- TitleText = title
+- PublisherName = publisher
+- CountryOfPublication = country where published  (Great Britain)
+- CityOfPublication = city where published (oxford)-
+- MediaFileLink = bookcover
+- Language = Language (there may be more than one)
+- Measure = the physical book dimensions which we can add
+
+Some of the fields will need to be discussed:
+
+1. Contributor: We *definitely* want this data, it will be very valuable for creating new authors and merging authors. But, contributor could be author, editor (could be a lot of things). Question: Which means # author? We need to ask @cory
+2. Series: We'll want to ask #openlibrary-g how we want to handle `series` (the title and number)
+3. ProductIDTypes: We'll need to ask @cory for a list of ProductIDTypes (e.g. which of these is ISBN?) Suffice to say, a book may have multiple of these IDs and we'll want to add them
+4. Subject we'll have to ask (where/how to lookup the subject code)
+
 ## Import Strategy
 
