@@ -86,6 +86,12 @@ Needs checking. Some url ids appear to resolve correctly. Suspicion that some us
   * repair if possible
   * delete if junk data
 
+## Titles varied _only_ by punctuation or whitespace [E, W] (where author is the same)
+  * remove trailing ".", ":", ";"
+  * reduce whitespaces to single sp
+  * when one version has a single sp and another has no sp, change latter to single sp (e.g. Hitchhiker's guide --> Hitch hiker's guide)
+  * when one version has embedded punctuation and another does not, change latter to match former (e.g. Hitch hikers guide --> Hitch-hiker's guide)
+
 ## Name Order [A]
   The Open Library convention is natural name order as opposed to "Last, First"
   Is everyone happy with this standard? How should titles be handled? e.g. Sir , Lord, Lady, Mrs. There seems to be variation in the data for this style of name.
@@ -115,5 +121,5 @@ Appears to occur mainly with apparently editionless works. How common is it? If 
 Where author is known to IA, from MARC records. Update the records from the original MARC. Many of the missing authors seem to be on books that have editors rather than striaght authors. Is this a cause of the problem? How to correctly represent editors on Open Library works?
 
 ## Non-Book items [A, E, W]
-There are 54,000 bad author records associated with Audio CD imports, see github issue https://github.com/internetarchive/openlibrary/issues/152
-Each author is linked to at least one edition, and often a work. Many of these records happen to be editions without works as the bulk were imported in 2008, from Amazon, when these sort of data issues were common.
+There were 54,000 bad author records associated with Audio CD imports, see github issue https://github.com/internetarchive/openlibrary/issues/152
+Each author was linked to at least one edition, and often a work. Many of these records happened to be editions without works as the bulk were imported in 2008, from Amazon, when these sort of data issues were common. Most are now corrected.
