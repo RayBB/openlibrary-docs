@@ -1,11 +1,10 @@
 ## Where do ONIX files live?
 
-Cory McCloud from Bibliometa has been collaborating with us to get ONIX records from approved partners into Open Library's catalog. As a start, ~50,000 [bookcovers](https://archive.org/details/onix-for-bookcovers) and [ONIX feed entries](https://archive.org/download/onix-for-books) have been added to archive.org items for an initial batch of processing lead by Salman Shah
+Cory McCloud from Bibliometa has been collaborating with us to get ONIX records from approved partners into Open Library's catalog. As a start, ~50,000 [bookcovers](https://archive.org/details/onix-for-bookcovers) and [ONIX feed entries](https://archive.org/download/onix-for-books) have been added to archive.org items for an initial batch of processing lead by [Salman Shah](https://github.com/salman-bhai)
 
 ## What's an example of an ONIX entry?
 
-```
-
+```xml
  <Product>
   <RecordReference>0198520816</RecordReference>
   <NotificationType>03</NotificationType>
@@ -205,11 +204,85 @@ Cory McCloud from Bibliometa has been collaborating with us to get ONIX records 
 
 ## Which fields does Open Library care about?
 
-- TitleText = title
-- PublisherName = publisher
-- CountryOfPublication = country where published  (Great Britain)
-- CityOfPublication = city where published (oxford)-
-- MediaFileLink = bookcover
+### 1. TitleText = title
+
+- **Full Path:** /Product/Title/TitleText
+- **Accompanying Fields**: TitleType
+
+| Title Type Code Value | Title Type Code Description |
+| --------------------- | --------------------------- |
+|         00            |        Undefined            |
+|         01            |    Distinctive Title        |
+|         02            | ISSN Key Title of Serial    |
+|         03            | Title in Original Language  |
+|         04            |   Title Acronymn    |
+|         05            |        Abbreviated Title            |
+|         06            |     Title in other language     |
+|         07            |   Thematic title of journal issue      |
+|         08            |   Former title       |
+|         10            |        Distributor's title            |
+
+### 2. PublisherName = publisher
+
+- **Full Path:** /Product/Publisher/PublisherName
+- **Accompanying Fields**: PublishingRole
+
+| Publishing Role Code Value | Publishing Role Code Description |
+| --------------------- | --------------------------- |
+|         01            |    Publisher        |
+|         02            | Co Publisher    |
+|         03            | Sponsor  |
+|         04            |   Publisher of original language version    |
+|         05            |   Host/distributor of electronic content        |
+|         06            |    Published for/on behalf of     |
+|         07            |   Published in association with      |
+|         08            |   Published on behalf of     |
+|         09            |   New or acquiring publisher        |
+
+
+### 3. CountryOfPublication = country where published  (Great Britain)
+
+- **Full Path:** /Product/CountryOfPublication
+
+### 4. CityOfPublication = city where published (oxford)-
+
+- **Full Path:** /Product/CityOfPublication
+
+### 5. MediaFileLink = bookcover
+
+- **Full Path:** /Product/MediaFile/MediaFileLink
+
+- **Accompanying Fields**: MediaFileTypeCode
+
+| Media File Type Code Value | Media File Type Code Description |
+| --------------------- | --------------------------- |
+|         01            |    URL        |
+|         02            | DOI    |
+|         03            | PURL  |
+|         04            |   URN    |
+|         05            |   FTP Address        |
+|         06            |    filename     |
+
+- **Accompanying Fields**: MediaFileFormatCode
+
+| Media File Format Code Value | Media File Format Code Description |
+| --------------------- | --------------------------- |
+|         02            |  GIF   |
+|         03            | JPEG  |
+|         05            |   TIF        |
+
+
+- **Accompanying Fields**: MediaFileLinkTypeCode
+
+| Media File Link Type Code Value | Media File Link Type Code Description |
+| --------------------- | --------------------------- |
+|         01            |    URL        |
+|         02            | DOI    |
+|         03            | PURL  |
+|         04            |   URN    |
+|         05            |   FTP Address        |
+|         06            |    filename     |
+
 - Language = Language (there may be more than one)
 - Measure = the physical book dimensions which we can add
 
@@ -221,4 +294,10 @@ Some of the fields will need to be discussed:
 4. Subject we'll have to ask (where/how to lookup the subject code)
 
 ## Import Strategy
+
+The import strategy to import these books is to have a bot which parses through the XML in the ONIX Record. The following steps are followed while processing the ONIX Feed:
+1. Check if there are any errors in the XML File which contains the ONIX Records.
+2. Parsing through a single ONIX Record which is under which is under the Product Tag. Inside a single Product Tag, we parse through tags like `ProductIdentifier`, `Title`, `Publisher`, `CountryOfPublication`, `CityOfPublication`, `MediaFile`, `Language` to obtain the required results.
+3. 
+4. 
 
