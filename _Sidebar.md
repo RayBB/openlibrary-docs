@@ -24,6 +24,7 @@
 	* [Merge Processes](Merge-Processes)
 	* [OL Standards](OL-Standards)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
+	* [Overview of Data Sources](Data-Source-Overview)
 	* [Writing Bots](Writing-Bots)
 * **Systems & Dev-ops**
 	* [Services Status Dashboard](http://status.archivelab.org)
