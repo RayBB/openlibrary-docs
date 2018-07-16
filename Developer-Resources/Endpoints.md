@@ -11,6 +11,7 @@ An overview (audit) of the Open Library internal "unofficially supported" APIs (
   - [Viewing Editions](#viewing-editions)
   - [Editing Editions](#editing-editions)
   - [Deleting Editions](#deleting-editions)
+- [Importing](#importing)
 - [Subjects](#subjects)
 - [List of All Routes](#list-of-all-routes)
 
@@ -140,6 +141,18 @@ User must be Administrator
 **Notes:**
 
 Deleting the last Edition of a Work will **NOT** remove the Work. It has to be cleared separately.
+
+## Importing
+
+    POST /api/import/ia
+
+**POST body:** 
+
+    {
+        "identifier": "<ocaid>",
+        "require_marc": "false"
+    }
+
 
 ## Subjects
 
