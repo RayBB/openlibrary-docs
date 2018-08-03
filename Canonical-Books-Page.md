@@ -27,7 +27,7 @@ Community, please make suggestions to represent your values so we can design as 
 3. Overhauling the `Canonical Books Page` (i.e. *edition* page) to have a consistent, mobile friendly design.
 4. Creating a new *work's editions* endpoint `/works/OL...W/<title>/editions` as the comprehensive listing of a work's editions.
 5. Updating the *sitemap* to include "select" editions per works (spanning languages, availability, favoring recent date-added, etc -- again, to be discussed)
-
+6. Users must be able to easily choose *which* edition they see of a work by identifiers, search result proximity, facets, etc. Getting five hundred editions of Ovid's Metamorphoses when searching for a specific ISBN is not helpful.
 ## Research
 - [A superficial record of how other sites (GoodReads, LibraryThing, and Shelfari) handle their Work/edition interactions](https://rawgit.com/wiki/internetarchive/openlibrary/images/works-editions%20research.svg) (interactive SVG; links/hovering work)
 
