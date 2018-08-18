@@ -16,6 +16,7 @@
 	* [Testing](Testing)
 	* [Architecture of Dev Instance](Architecture)
 	* [Solr Indexing](Solr-notes,-let's-fix-Solr-indexing!)
+	* [Importing](Importing)
 	* [Writing Bots](Writing-Bots)
 	* [Enabling Feature](Feature-Flagging)
 * **Librarian Resources** 
