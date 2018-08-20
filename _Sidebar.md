@@ -26,8 +26,9 @@
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Overview of Data Sources](Data-Source-Overview)
 	* [Writing Bots](Writing-Bots)
-* **Systems & Dev-ops**
-	* [Services Status Dashboard](http://status.archivelab.org)
+* **Administration, Systems & Dev-ops**
+	* [Services Status Dashboard](https://status.archivelab.org)
+        * [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
 * **Features & Initiatives (RFCs)**
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
