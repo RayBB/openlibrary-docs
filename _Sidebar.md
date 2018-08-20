@@ -29,10 +29,10 @@
 * **Administration, Systems & Dev-ops**
 	* [Services Status Dashboard](https://status.archivelab.org)
         * [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
+	* [Production Provisioning](Production-Provisioning)
 * **Features & Initiatives (RFCs)**
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
 	* [Importing IA Wishlist](Importing-IA-Wishlist)
-	* [Processing ONIX Feeds](Processing-ONIX-Feeds)
-	* [Production Provisioning](Production-Provisioning)
+	* [Importing ONIX Feeds](Processing-ONIX-Feeds)
 	* [Importing Bulk MARC](Data-Importing#Bulk-MARC-Import)
