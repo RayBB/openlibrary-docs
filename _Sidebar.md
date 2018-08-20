@@ -19,7 +19,7 @@
 	* [Writing Bots](Writing-Bots)
 	* [Enabling Features](Feature-Flagging)
 * **Librarian Resources** 
-	* [Overview of Standards](OL-Standards)
+	* [Overview of Standards](Library-Standards)
 	* [Guide to Identifiers](Guide-to-Identifiers)
 	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
 	* [Merge Processes](Merge-Processes)
