@@ -28,7 +28,7 @@
 	* [Writing Bots](Writing-Bots)
 * **Administration, Systems & Dev-ops**
 	* [Services Status Dashboard](https://status.archivelab.org)
-        * [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
+	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
 	* [Production Provisioning](Production-Provisioning)
 * **Features & Initiatives (RFCs)**
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
