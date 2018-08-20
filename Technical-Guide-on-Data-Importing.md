@@ -4,7 +4,7 @@ There are three paths by which data can be imported into Open Library.
 2. Through our privileged ImportBot scripts/manage_imports.py which calls openlibrary/plugins/importapi/code.py
 3. Through bulk import API https://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py -- this should be considered deprecated
 
-## MARC Import
+## Bulk MARC Import
 
 We are in the process of designing a 4th entry point called ImportBulkMarcIA which will call a modified version of openlibrary/plugins/importapi/code.py which incorporates the safety and duplication checks performed by #1 (the /books/add endpoint).
 
