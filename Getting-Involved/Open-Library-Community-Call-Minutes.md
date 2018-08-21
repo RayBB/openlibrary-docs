@@ -42,7 +42,7 @@ symlinks on windows causing a problem
 
 @cdrini docker-compose for solr
 
-## UPC / Bookcover Lookup API
+### UPC / Bookcover Lookup API
 
 nealk
 
