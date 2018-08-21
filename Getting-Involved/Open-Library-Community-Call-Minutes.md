@@ -26,6 +26,26 @@
 
 # Minutes for 2018
 
+## 2018-08-21
+
+### Docker
+
+#### Fixes
+
+@hornc fixed psql shut down issue (was causing lot of time)
+
+#### Existing Issues
+
+symlinks on windows causing a problem
+
+#### Next Steps
+
+@cdrini docker-compose for solr
+
+## UPC / Bookcover Lookup API
+
+nealk
+
 ## 2018-05-15 Community Call
 
 ### Attendees
