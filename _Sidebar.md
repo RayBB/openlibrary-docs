@@ -37,3 +37,4 @@
 	* [Importing ONIX Feeds](Processing-ONIX-Feeds)
 	* [Importing Bulk MARC](Data-Importing#Bulk-MARC-Import)
 	* [Switching from Vagrant to Docker](Production-Provisioning#Using-Docker)
+	* [Monthly Newsletter / Mailing List](Mailing List)
