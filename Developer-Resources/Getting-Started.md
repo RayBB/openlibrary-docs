@@ -276,7 +276,7 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 
 - Once you have generated the keys, add them to your local `conf/openlibrary.yml` file by filling in the public and private keys under the `plugin_recaptcha` section.
 
-- From within vagrant, restart the Open Library service via sudo systemctl restart ol-web. You can simply run `vagrant reload` as well for the same.
+- From within vagrant, restart the Open Library service via `sudo systemctl restart ol-web`. You can simply run `vagrant reload` as well for the same.
 
 ### Credits and special thanks
 
