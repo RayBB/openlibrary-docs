@@ -15,7 +15,7 @@
 	* [Testing Your Code](Testing)
 	* [Architecture of Dev Instance](Architecture)
 	* [Solr Indexing](SOLR-Indexing)
-	* [Importing](Data-Importing)
+	* [Importing Book Records](Data-Importing)
 	* [Writing Bots](Writing-Bots)
 	* [Enabling Features](Feature-Flagging)
 * **Librarian Resources** 
