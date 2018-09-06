@@ -14,7 +14,7 @@ There are multiple paths by which data can be imported into Open Library.
 
 ## Bulk MARC Import
 
-We are in the process of designing a 4th entry point called ImportBulkMarcIA which will call a modified version of openlibrary/plugins/importapi/code.py which incorporates the safety and duplication checks performed by #1 (the /books/add endpoint).
+We are in the process of expanding the `api/import/ia` endpoint functionality.
 
 **From a conversation with @mek + @hornc**
 We're going to write a `ImportBulkMarcIABot` in `openlibrary-bots`
