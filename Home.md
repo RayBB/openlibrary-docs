@@ -1,6 +1,6 @@
 ## Welcome!
 
-Open Library and its 1.5M users are so grateful you're here!
+Open Library and its ~1.5M~ 2M users are so grateful you're here!
 
 ## Meet the Team!
 
