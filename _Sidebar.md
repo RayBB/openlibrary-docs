@@ -13,6 +13,7 @@
 	* [Overview of HTTP Endpoints](Endpoints)
 	* [Frontend-Guide](Frontend-Guide)
 	* [Testing Your Code](Testing)
+	* [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)
 	* [Architecture of Dev Instance](Architecture)
 	* [Solr Indexing](SOLR-Indexing)
 	* [Importing Book Records](Data-Importing)
