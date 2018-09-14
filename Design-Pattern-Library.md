@@ -8,7 +8,7 @@ Inspired also by: https://design.wikimedia.org/style-guide/visual-style.html
 Note: this list is unstable and likely to change at any given time, while we refactor the frontend UI.
 If you want to help us document components, please jump in with your image uploads and documenting where these components are in use!
 
-You can also help by contributing to the associated mega-issue #1092 and making sure the codebase reflects this document.
+You can also help by contributing to the associated mega-issue [#1092](https://github.com/internetarchive/openlibrary/issues/1092) and making sure the codebase reflects this document.
 
 ## Components
 
