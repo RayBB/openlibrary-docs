@@ -22,4 +22,23 @@ Used on the following pages:
 * https://openlibrary.org/account/loans
 
 ### Carousel
+(please help document me!)
 
+### dataTables
+(please help document me!)
+
+### editions
+(please help document me!)
+
+### Header-bar
+The header bar appears at the top of every page.
+![HeaderBar](https://user-images.githubusercontent.com/148752/45579420-50538700-b83c-11e8-81c8-02fe4f4bbd09.png)
+
+### mybooks-list
+(please help document me!)
+
+### OLform
+(please help document me!)
+
+### readinglog-stats
+(please help document me!)
