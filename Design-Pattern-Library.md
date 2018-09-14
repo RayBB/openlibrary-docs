@@ -30,12 +30,12 @@ Used on the following pages:
 ### editions
 (please help document me!)
 
-### Header-bar
+### HeaderBar
 The header bar appears at the top of every page.
 ![HeaderBar](https://user-images.githubusercontent.com/148752/45579420-50538700-b83c-11e8-81c8-02fe4f4bbd09.png)
 
-### mybooks-list
-(please help document me!)
+### MyBooksList
+![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
 
 ### OLform
 (please help document me!)
