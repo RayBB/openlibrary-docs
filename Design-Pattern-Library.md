@@ -28,7 +28,8 @@ Arrows are fonts rendered via the slick library.
 
 #### Decorated-Carousel
 A decorated carousel has background:
-![Carousel-decorated](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-
+
+![Carousel-decorated](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-1dd8c07ef575.png)
 
 #### Carousel-section
 A carousel section wraps a carousel and a heading
