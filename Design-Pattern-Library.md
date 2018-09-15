@@ -31,15 +31,19 @@ A decorated carousel has background:
 
 ![Carousel-decorated](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-1dd8c07ef575.png)
 
-used on [https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh](works page)
+This is used on [works page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
+
 
 #### Carousel-section
 A carousel section wraps a carousel and a heading
 ![Carousel-section](https://user-images.githubusercontent.com/148752/45588442-9efb3280-b8c9-11e8-8b37-7dacb990cdce.png)
 
-
 ### dataTables
 (please help document me!)
+
+### Diff
+Renders [a diff](https://openlibrary.org/books/OL7500626M/The_Time_Machine?b=9&a=1&_compare=Compare&m=diff)
+![screen shot 2018-09-15 at 10 05 48 am](https://user-images.githubusercontent.com/148752/45588767-023b9380-b8cf-11e8-99df-2e0142fd1ef7.png)
 
 ### EditionsTable
 ![EditionsTable](https://user-images.githubusercontent.com/148752/45579776-6c0c5c80-b83f-11e8-968e-ab6e9681caec.png)
@@ -51,7 +55,13 @@ When inside a .lists element this renders differently.
 ### History
 ![screen shot 2018-09-15 at 9 47 20 am](https://user-images.githubusercontent.com/148752/45588626-732d7c00-b8cc-11e8-911d-358d86ce04f3.png)
 
-shows at the bottom of the [https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh](works page)
+shows at the bottom of the [works page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
+
+#### RevisionHistoryTable
+Confusingly, a similar table renders on [the revision history page](https://openlibrary.org/books/OL7500626M/The_Time_Machine?m=history)
+
+![RevisionHistoryTable](https://user-images.githubusercontent.com/148752/45588739-82152e00-b8ce-11e8-8509-451692cfd0e9.png)
+
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
 
@@ -59,7 +69,8 @@ shows at the bottom of the [https://openlibrary.org/works/OL69395W/Historie_of_t
 Used to render forms in OpenLibrary
 (please help document me!)
 Some examples:
-- Search at top of [https://openlibrary.org/subjects/science](subject page)
+- Search at top of [subject page](https://openlibrary.org/subjects/science)
+
 - the [edit a work page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh/edit)
 
 ![olform](https://user-images.githubusercontent.com/148752/45588481-5132fa00-b8ca-11e8-8028-66a61c79c1db.png)
@@ -100,9 +111,9 @@ Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
 Renders on the [https://openlibrary.org/subjects/science#](subjects page)
 ![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
 
-
 #### StatsChart
 Can be found on the home page. Graph rendered via an HTML canvas.
+
 ![StatsChart](https://user-images.githubusercontent.com/148752/45588471-29439680-b8ca-11e8-83ae-00ea4f9aa360.png)
 
 ### PageBanner
