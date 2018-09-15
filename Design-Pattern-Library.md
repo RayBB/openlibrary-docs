@@ -31,6 +31,8 @@ A decorated carousel has background:
 
 ![Carousel-decorated](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-1dd8c07ef575.png)
 
+used on [https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh](works page)
+
 #### Carousel-section
 A carousel section wraps a carousel and a heading
 ![Carousel-section](https://user-images.githubusercontent.com/148752/45588442-9efb3280-b8c9-11e8-8b37-7dacb990cdce.png)
@@ -46,11 +48,23 @@ A carousel section wraps a carousel and a heading
 When inside a .lists element this renders differently.
 (please help document me!)
 
+### History
+![screen shot 2018-09-15 at 9 47 20 am](https://user-images.githubusercontent.com/148752/45588626-732d7c00-b8cc-11e8-911d-358d86ce04f3.png)
+
+shows at the bottom of the [https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh](works page)
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
 
 ### OLform
+Used to render forms in OpenLibrary
 (please help document me!)
+Some examples:
+- Search at top of [https://openlibrary.org/subjects/science](subject page)
+- the [edit a work page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh/edit)
+
+![olform](https://user-images.githubusercontent.com/148752/45588481-5132fa00-b8ca-11e8-8028-66a61c79c1db.png)
+![edit olform](https://user-images.githubusercontent.com/148752/45588637-9ce6a300-b8cc-11e8-88ce-bdf91f288d40.png)
+
 
 ### readinglog-stats
 (please help document me!)
@@ -71,7 +85,28 @@ The header bar appears at the top of every page.
 The footer appears at the top of every page.
 ![Footer](https://user-images.githubusercontent.com/978325/45580060-bc84b980-b841-11e8-98e1-8041c4d5be60.png)
 
+### RatingsForm
+![screen shot 2018-09-15 at 9 43 04 am](https://user-images.githubusercontent.com/148752/45588591-e97dae80-b8cb-11e8-9275-bb4d8e1fd44c.png)
+
+### SearchResultItem
+![screen shot 2018-09-15 at 9 44 34 am](https://user-images.githubusercontent.com/148752/45588596-fd291500-b8cb-11e8-9d0a-1508380f00b1.png)
+
+### SearchResultsInstantResult
+Shows up when you search from the header
+![screen shot 2018-09-15 at 9 45 05 am](https://user-images.githubusercontent.com/148752/45588607-25b10f00-b8cc-11e8-9745-4341af79bb94.png)
+
+### ResultCovers
+Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
+Renders on the [https://openlibrary.org/subjects/science#](subjects page)
+![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
+
+
 #### StatsChart
 Can be found on the home page. Graph rendered via an HTML canvas.
 ![StatsChart](https://user-images.githubusercontent.com/148752/45588471-29439680-b8ca-11e8-83ae-00ea4f9aa360.png)
+
+### PageBanner
+![1](https://user-images.githubusercontent.com/148752/45588543-3745e700-b8cb-11e8-8619-6228788dc7a5.png)
+![2](https://user-images.githubusercontent.com/148752/45588544-3745e700-b8cb-11e8-8b83-c8e9026f31f9.png)
+
 
