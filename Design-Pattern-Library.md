@@ -27,7 +27,11 @@ Used on the following pages:
 ### dataTables
 (please help document me!)
 
-### editions
+### EditionsTable
+![EditionsTable](https://user-images.githubusercontent.com/148752/45579776-6c0c5c80-b83f-11e8-968e-ab6e9681caec.png)
+
+#### .lists variant
+When inside a .lists element this renders differently.
 (please help document me!)
 
 ### HeaderBar
