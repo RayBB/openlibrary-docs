@@ -5,6 +5,6 @@
 
 ## Web Application Services
 
-![Read about Open Library's Web Application Services](https://openlibrary.org/about/architecture)
+[Read about Open Library's Web Application Services](https://openlibrary.org/about/architecture)
 
 
