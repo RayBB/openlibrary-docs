@@ -46,3 +46,6 @@ The header bar appears at the top of every page.
 
 ### readinglog-stats
 (please help document me!)
+
+### Footer
+![Footer](https://user-images.githubusercontent.com/978325/45580060-bc84b980-b841-11e8-98e1-8041c4d5be60.png)
