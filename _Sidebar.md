@@ -31,12 +31,12 @@
 * **Administration, Systems & Dev-ops**
 	* [Services Status Dashboard](https://status.archivelab.org)
 	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
-	* [Production Provisioning](Production-Provisioning)
+	* [Production Provisioning](Production-Service-Architecture)
 * **Features & Initiatives (RFCs)**
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
 	* [Importing IA Wishlist](Importing-IA-Wishlist)
 	* [Importing ONIX Feeds](Processing-ONIX-Feeds)
 	* [Importing Bulk MARC](Data-Importing#Bulk-MARC-Import)
-	* [Switching from Vagrant to Docker](Production-Provisioning#Using-Docker)
+	* [Switching from Vagrant to Docker](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md)
 	* [Monthly Newsletter / Mailing List](Mailing-List)
