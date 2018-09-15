@@ -68,4 +68,10 @@ The header bar appears at the top of every page.
 ![HeaderBar](https://user-images.githubusercontent.com/148752/45579420-50538700-b83c-11e8-81c8-02fe4f4bbd09.png)
 
 #### Footer
+The footer appears at the top of every page.
 ![Footer](https://user-images.githubusercontent.com/978325/45580060-bc84b980-b841-11e8-98e1-8041c4d5be60.png)
+
+#### StatsChart
+Can be found on the home page. Graph rendered via an HTML canvas.
+![StatsChart](https://user-images.githubusercontent.com/148752/45588471-29439680-b8ca-11e8-83ae-00ea4f9aa360.png)
+
