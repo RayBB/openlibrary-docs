@@ -1,7 +1,10 @@
 
-# Current Production Setup 
+## Current Production Architecture
+
 ![Open Library Production Architecture](https://archive.org/download/openlibrary-documentation/openlibrary-production-architecture.png)
 
-# Using Docker
+## Web Application Services
 
-https://github.com/internetarchive/openlibrary/pull/1012
+![Read about Open Library's Web Application Services](https://openlibrary.org/about/architecture)
+
+
