@@ -34,10 +34,6 @@ Used on the following pages:
 When inside a .lists element this renders differently.
 (please help document me!)
 
-### HeaderBar
-The header bar appears at the top of every page.
-![HeaderBar](https://user-images.githubusercontent.com/148752/45579420-50538700-b83c-11e8-81c8-02fe4f4bbd09.png)
-
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
 
@@ -47,5 +43,17 @@ The header bar appears at the top of every page.
 ### readinglog-stats
 (please help document me!)
 
-### Footer
+
+### Books Page
+
+#### Books Actions Menu
+![BookActionsMenu](https://user-images.githubusercontent.com/978325/45580136-901d6d00-b842-11e8-8233-14ce3da3babd.png)
+
+### All Pages
+
+#### HeaderBar
+The header bar appears at the top of every page.
+![HeaderBar](https://user-images.githubusercontent.com/148752/45579420-50538700-b83c-11e8-81c8-02fe4f4bbd09.png)
+
+#### Footer
 ![Footer](https://user-images.githubusercontent.com/978325/45580060-bc84b980-b841-11e8-98e1-8041c4d5be60.png)
