@@ -22,7 +22,7 @@ Used on the following pages:
 * https://openlibrary.org/account/loans
 
 ### Carousel
-(please help document me!)
+![Carousel](https://user-images.githubusercontent.com/978325/45579804-9100cf80-b83f-11e8-867e-d212cdddf9ca.png)
 
 ### dataTables
 (please help document me!)
