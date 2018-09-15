@@ -37,6 +37,15 @@ This is used on [the works page](https://openlibrary.org/works/OL69395W/Historie
 A carousel section wraps a carousel and a heading
 ![Carousel-section](https://user-images.githubusercontent.com/148752/45588442-9efb3280-b8c9-11e8-8b37-7dacb990cdce.png)
 
+### ColorBoxOverlay
+An overlay that expands images. Visible when clicking the image of the author on their page.
+[Author page](https://openlibrary.org/authors/OL1194994A/Louise_Fitzhugh)
+
+![screen shot 2018-09-15 at 10 46 02 am](https://user-images.githubusercontent.com/148752/45589089-9ceaa100-b8d4-11e8-82b8-e8a13a4c7e3d.png)
+
+
+(Uses rules #colorbox, #cboxOverlay, #cboxWrapper)
+
 ### dataTables
 (please help document me!)
 
