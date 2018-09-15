@@ -119,7 +119,7 @@ Shows up when you search from the header
 
 ### ResultCovers
 Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
-Renders on the [subjects page](https://openlibrary.org/subjects/science)
+Renders on the [subjects page](https://openlibrary.org/subjects/science), [borrow page](https://openlibrary.org/borrow)
 
 ![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
 
