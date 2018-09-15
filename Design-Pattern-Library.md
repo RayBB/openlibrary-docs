@@ -22,7 +22,18 @@ Used on the following pages:
 * https://openlibrary.org/account/loans
 
 ### Carousel
-![Carousel](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-1dd8c07ef575.png)
+Arrows are fonts rendered via the slick library.
+
+![Carousel](https://user-images.githubusercontent.com/148752/45588422-678c8600-b8c9-11e8-9aaf-daeb1fa1774a.png)
+
+#### Decorated-Carousel
+A decorated carousel has background:
+![Carousel-decorated](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-
+
+#### Carousel-section
+A carousel section wraps a carousel and a heading
+![Carousel-section](https://user-images.githubusercontent.com/148752/45588442-9efb3280-b8c9-11e8-8b37-7dacb990cdce.png)
+
 
 ### dataTables
 (please help document me!)
