@@ -1,9 +1,8 @@
 The design pattern library, audits all the different types of components that exist in the existing openlibrary codebase.
 
-Eventually, we'd love to move these components to:
-https://openlibrary.org/developers/design
+Eventually, we'd love to move these components to [open library's developer design page](https://openlibrary.org/developers/design).
 
-Inspired also by: https://design.wikimedia.org/style-guide/visual-style.html 
+Inspired by [Wikimedia's style guide]( https://design.wikimedia.org/style-guide/visual-style.html ).
 
 Note: this list is unstable and likely to change at any given time, while we refactor the frontend UI.
 If you want to help us document components, please jump in with your image uploads and documenting where these components are in use!
@@ -31,7 +30,7 @@ A decorated carousel has background:
 
 ![Carousel-decorated](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-1dd8c07ef575.png)
 
-This is used on [works page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
+This is used on [the works page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
 
 
 #### Carousel-section
@@ -69,7 +68,7 @@ Confusingly, a similar table renders on [the revision history page](https://open
 Used to render forms in OpenLibrary
 (please help document me!)
 Some examples:
-- Search at top of [subject page](https://openlibrary.org/subjects/science)
+- Search at top of [subjects page](https://openlibrary.org/subjects/science)
 
 - the [edit a work page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh/edit)
 
@@ -108,7 +107,8 @@ Shows up when you search from the header
 
 ### ResultCovers
 Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
-Renders on the [https://openlibrary.org/subjects/science#](subjects page)
+Renders on the [subjects page](https://openlibrary.org/subjects/science)
+
 ![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
 
 #### StatsChart
