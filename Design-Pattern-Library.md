@@ -43,6 +43,9 @@ An overlay that expands images. Visible when clicking the image of the author on
 
 ![screen shot 2018-09-15 at 10 46 02 am](https://user-images.githubusercontent.com/148752/45589089-9ceaa100-b8d4-11e8-82b8-e8a13a4c7e3d.png)
 
+Also used when clicking the image of a book cover on a [book page](https://openlibrary.org/works/OL16028308W/Harriet_the_Spy).
+
+![screen shot 2018-09-15 at 10 48 35 am](https://user-images.githubusercontent.com/148752/45589108-08cd0980-b8d5-11e8-9974-4de64f403c9b.png)
 
 (Uses rules #colorbox, #cboxOverlay, #cboxWrapper)
 
