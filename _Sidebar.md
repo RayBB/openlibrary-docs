@@ -4,6 +4,7 @@
 	* [Roadmap](https://github.com/internetarchive/openlibrary/projects/7)
 	* [Weekly Community Call](Open-Library-Community-Call-Minutes)
 	* [Google Summer of Code](Google-Summer-of-Code-(2018))
+	* [Google Code-in 2018](Google-Code-In-2018)
 * **[Design Resources](Design)**
 	* [Frontend Guide](Frontend-Guide)
 	* [Design Pattern Library](Design-Pattern-Library)
