@@ -1,8 +1,8 @@
 ### Schemas
 
-#### [Authors](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/author.schema.json)
-#### [Editions](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/edition.schema.json)
-#### [Works](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/work.schema.json)
+- [Authors](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/author.schema.json)
+- [Editions](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/edition.schema.json)
+- [Works](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/work.schema.json)
 
 ### Location to publish standards
 Contribute schemas to https://github.com/internetarchive/openlibrary-client/tree/master/olclient/schemata
