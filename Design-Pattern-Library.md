@@ -140,3 +140,7 @@ Appears on [book page](https://openlibrary.org/books/OL1447641M/Women_of_words)
 (please help document me!)
 (Appears on which pages?)
 
+On [works page](https://openlibrary.org/works/OL100238W/The_Titan):
+![screen shot 2018-09-18 at 11 01 54 am](https://user-images.githubusercontent.com/148752/45706914-52666000-bb32-11e8-8d7e-89aeaf43a5c5.png)
+[pictured: dropit tool] 
+
