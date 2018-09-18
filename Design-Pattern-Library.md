@@ -135,3 +135,8 @@ Can be found on the home page. Graph rendered via an HTML canvas.
 ### workDetails
 (please help document me!)
 Appears on [book page](https://openlibrary.org/books/OL1447641M/Women_of_words)
+
+### Tools
+(please help document me!)
+(Appears on which pages?)
+
