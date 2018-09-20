@@ -150,7 +150,8 @@ On [works page](https://openlibrary.org/works/OL100238W/The_Titan):
 Appears on [book page](https://openlibrary.org/books/OL23053293M/Ranma_1_2.). I don't believe it appears anywhere else (??)
 
 ### Dropper
-Used to add books to reading lists!
+The dropper is an enhanced substitution `select` element. At time of writing it does not work without JavaScript (see #1147).
+
 ![screen shot 2018-09-19 at 5 10 04 pm](https://user-images.githubusercontent.com/148752/45788340-e3bafc80-bc2e-11e8-9ab7-cf1fdef06d19.png)
 
 Dropper with dropdown
@@ -159,3 +160,5 @@ Dropper with dropdown
 with activated-check
 ![screen shot 2018-09-19 at 5 11 57 pm](https://user-images.githubusercontent.com/148752/45788381-2f6da600-bc2f-11e8-9ff0-eef3ba1f96fa.png)
 
+When referring to "Drop click" we are referring to this part of the element:
+![screen shot 2018-09-19 at 5 16 48 pm](https://user-images.githubusercontent.com/148752/45788524-f1bd4d00-bc2f-11e8-9045-96320b08964d.png)
