@@ -144,3 +144,7 @@ On [works page](https://openlibrary.org/works/OL100238W/The_Titan):
 ![screen shot 2018-09-18 at 11 01 54 am](https://user-images.githubusercontent.com/148752/45706914-52666000-bb32-11e8-8d7e-89aeaf43a5c5.png)
 [pictured: dropit tool] 
 
+### ShareLinks
+![screen shot 2018-09-19 at 5 01 42 pm](https://user-images.githubusercontent.com/148752/45788170-c8032680-bc2d-11e8-8821-09d5f614dc28.png)
+
+Appears on [book page](https://openlibrary.org/books/OL23053293M/Ranma_1_2.). I don't believe it appears anywhere else (??)
