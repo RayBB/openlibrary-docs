@@ -47,6 +47,9 @@ Also used when clicking the image of a book cover on a [book page](https://openl
 
 ![screen shot 2018-09-15 at 10 48 35 am](https://user-images.githubusercontent.com/148752/45589108-08cd0980-b8d5-11e8-9974-4de64f403c9b.png)
 
+Also used when adding an item to a reading list via a Dropper component:
+![screen shot 2018-09-19 at 5 32 12 pm](https://user-images.githubusercontent.com/148752/45788898-04d11c80-bc32-11e8-9ca5-864bb08704f6.png)
+
 (Uses rules #colorbox, #cboxOverlay, #cboxWrapper)
 
 ### dataTables
