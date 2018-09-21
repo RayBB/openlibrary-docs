@@ -12,6 +12,11 @@ You can also help by contributing to the associated mega-issue [#1092](https://g
 ## Components
 
 These are components on Open Library to be made modular and documented:
+
+### Book
+![screen shot 2018-09-21 at 4 25 39 pm](https://user-images.githubusercontent.com/148752/45910063-1134b100-bdbb-11e8-9b1e-aaf2982c483f.png)
+Is used in the [Carousel](#Carousel component) to display books.
+
 ### BorrowBookForm
 (please help document me!)
 
