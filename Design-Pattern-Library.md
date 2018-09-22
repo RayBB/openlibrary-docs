@@ -15,7 +15,18 @@ These are components on Open Library to be made modular and documented:
 
 ### Book
 ![screen shot 2018-09-21 at 4 25 39 pm](https://user-images.githubusercontent.com/148752/45910063-1134b100-bdbb-11e8-9b1e-aaf2982c483f.png)
-Is used in the [Carousel](#Carousel component) to display books.
+Is used in the [Carousel component](#Carousel) to display books.
+Note, the button inside this component is bespoke (a book-cta) - see #1158.
+
+### ButtonBtn
+![screen shot 2018-09-21 at 5 12 42 pm](https://user-images.githubusercontent.com/148752/45910857-9753f600-bdc1-11e8-9dd5-365237185e62.png)
+AS seen in component [PageBanner](#pagebanner)
+See #1158
+
+### ButtonGeneric
+![screen shot 2018-09-21 at 5 14 15 pm](https://user-images.githubusercontent.com/148752/45910888-c9655800-bdc1-11e8-997c-3bb87da9616b.png)
+As seen in the sign up button!
+See #1158
 
 ### BorrowBookForm
 (please help document me!)
