@@ -15,22 +15,27 @@ These are components on Open Library to be made modular and documented:
 
 ### Book
 ![screen shot 2018-09-21 at 4 25 39 pm](https://user-images.githubusercontent.com/148752/45910063-1134b100-bdbb-11e8-9b1e-aaf2982c483f.png)
+
 Is used in the [Carousel component](#Carousel) to display books.
 Note, the button inside this component is bespoke (a book-cta) - see #1158.
 
 ### ButtonBtn
 ![screen shot 2018-09-21 at 5 12 42 pm](https://user-images.githubusercontent.com/148752/45910857-9753f600-bdc1-11e8-9dd5-365237185e62.png)
-AS seen in component [PageBanner](#pagebanner)
+
+As seen in component [PageBanner](#pagebanner)
+
 See #1158
 
 ### ButtonGeneric
 ![screen shot 2018-09-21 at 5 14 15 pm](https://user-images.githubusercontent.com/148752/45910888-c9655800-bdc1-11e8-997c-3bb87da9616b.png)
+
 As seen in the sign up button!
 See #1158
 
 ### ButtonGhost
 
 Appears in the [iaBar](#iaBar)
+
 ![screen shot 2018-09-24 at 5 44 40 pm](https://user-images.githubusercontent.com/148752/45986619-8bff0580-c021-11e8-8e77-5b3932a2e067.png)
 
 ### BorrowBookForm
@@ -60,11 +65,13 @@ This is used on [the works page]:
 
 
 #### Carousel-section
-A carousel section wraps a carousel and a heading
+A carousel section wraps a carousel and a heading.
+
 ![Carousel-section](https://user-images.githubusercontent.com/148752/45588442-9efb3280-b8c9-11e8-8b37-7dacb990cdce.png)
 
 ### CategoryItem
 ![screen shot 2018-09-24 at 5 40 54 pm](https://user-images.githubusercontent.com/148752/45986547-0e3afa00-c021-11e8-8883-dfc5f9cd1e3d.png)
+
 (appears on home page)
 
 ### ColorBoxOverlay
@@ -78,6 +85,7 @@ Also used when clicking the image of a book cover on a [book page](https://openl
 ![screen shot 2018-09-15 at 10 48 35 am](https://user-images.githubusercontent.com/148752/45589108-08cd0980-b8d5-11e8-9974-4de64f403c9b.png)
 
 Also used when adding an item to a reading list via a Dropper component:
+
 ![screen shot 2018-09-19 at 5 32 12 pm](https://user-images.githubusercontent.com/148752/45788898-04d11c80-bc32-11e8-9ca5-864bb08704f6.png)
 
 (Uses rules #colorbox, #cboxOverlay, #cboxWrapper)
@@ -87,6 +95,7 @@ Also used when adding an item to a reading list via a Dropper component:
 
 ### Diff
 Renders [a diff](https://openlibrary.org/books/OL7500626M/The_Time_Machine?b=9&a=1&_compare=Compare&m=diff)
+
 ![screen shot 2018-09-15 at 10 05 48 am](https://user-images.githubusercontent.com/148752/45588767-023b9380-b8cf-11e8-99df-2e0142fd1ef7.png)
 
 ### EditionsTable
@@ -128,6 +137,7 @@ Some examples:
 - the [edit a work page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh/edit)
 
 ![olform](https://user-images.githubusercontent.com/148752/45588481-5132fa00-b8ca-11e8-8028-66a61c79c1db.png)
+
 ![edit olform](https://user-images.githubusercontent.com/148752/45588637-9ce6a300-b8cc-11e8-88ce-bdf91f288d40.png)
 
 
@@ -144,10 +154,12 @@ Some examples:
 
 #### HeaderBar
 The header bar appears at the top of every page.
+
 ![HeaderBar](https://user-images.githubusercontent.com/148752/45579420-50538700-b83c-11e8-81c8-02fe4f4bbd09.png)
 
 #### Footer
 The footer appears at the top of every page.
+
 ![Footer](https://user-images.githubusercontent.com/978325/45580060-bc84b980-b841-11e8-98e1-8041c4d5be60.png)
 
 ### RatingsForm
