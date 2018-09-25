@@ -28,6 +28,11 @@ See #1158
 As seen in the sign up button!
 See #1158
 
+### ButtonGhost
+
+Appears in the [iaBar](#iaBar)
+![screen shot 2018-09-24 at 5 44 40 pm](https://user-images.githubusercontent.com/148752/45986619-8bff0580-c021-11e8-8e77-5b3932a2e067.png)
+
 ### BorrowBookForm
 (please help document me!)
 
@@ -40,7 +45,7 @@ Used on the following pages:
 * https://openlibrary.org/account/loans
 
 ### Carousel
-Arrows are fonts rendered via the slick library.
+Arrows are fonts rendered via the slick library. This carousel contains several [CategoryItems](#CategoryItem)
 
 ![Carousel](https://user-images.githubusercontent.com/148752/45588422-678c8600-b8c9-11e8-9aaf-daeb1fa1774a.png)
 
@@ -55,6 +60,10 @@ This is used on [the works page](https://openlibrary.org/works/OL69395W/Historie
 #### Carousel-section
 A carousel section wraps a carousel and a heading
 ![Carousel-section](https://user-images.githubusercontent.com/148752/45588442-9efb3280-b8c9-11e8-8b37-7dacb990cdce.png)
+
+### CategoryItem
+![screen shot 2018-09-24 at 5 40 54 pm](https://user-images.githubusercontent.com/148752/45986547-0e3afa00-c021-11e8-8883-dfc5f9cd1e3d.png)
+(appears on home page)
 
 ### ColorBoxOverlay
 An overlay that expands images. Visible when clicking the image of the author on their page.
@@ -94,6 +103,11 @@ shows at the bottom of the [works page](https://openlibrary.org/works/OL69395W/H
 Confusingly, a similar table renders on [the revision history page](https://openlibrary.org/books/OL7500626M/The_Time_Machine?m=history)
 
 ![RevisionHistoryTable](https://user-images.githubusercontent.com/148752/45588739-82152e00-b8ce-11e8-8509-451692cfd0e9.png)
+
+### iaBar
+Internet Archive Bar: A bar that appears at the top of all pages. Makes use of a [ButtonGhost](#ButtonGhost).
+
+![screen shot 2018-09-24 at 5 43 24 pm](https://user-images.githubusercontent.com/148752/45986591-5e19c100-c021-11e8-9993-49d8a71b2621.png)
 
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
@@ -138,6 +152,9 @@ The footer appears at the top of every page.
 ### SearchResultsInstantResult
 Shows up when you search from the header
 ![screen shot 2018-09-15 at 9 45 05 am](https://user-images.githubusercontent.com/148752/45588607-25b10f00-b8cc-11e8-9745-4341af79bb94.png)
+
+### subNav
+(please help document me!)
 
 ### ResultCovers
 Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
