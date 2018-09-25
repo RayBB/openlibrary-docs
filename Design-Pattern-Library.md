@@ -54,7 +54,9 @@ A decorated carousel has background:
 
 ![Carousel-decorated](https://user-images.githubusercontent.com/978325/45579855-f81e8400-b83f-11e8-967c-1dd8c07ef575.png)
 
-This is used on [the works page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
+This is used on [the works page]:
+
+(https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
 
 
 #### Carousel-section
@@ -97,7 +99,9 @@ When inside a .lists element this renders differently.
 ### History
 ![screen shot 2018-09-15 at 9 47 20 am](https://user-images.githubusercontent.com/148752/45588626-732d7c00-b8cc-11e8-911d-358d86ce04f3.png)
 
-shows at the bottom of the [works page](https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
+shows at the bottom of the [works page]
+
+(https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
 
 #### RevisionHistoryTable
 Confusingly, a similar table renders on [the revision history page](https://openlibrary.org/books/OL7500626M/The_Time_Machine?m=history)
@@ -108,6 +112,9 @@ Confusingly, a similar table renders on [the revision history page](https://open
 Internet Archive Bar: A bar that appears at the top of all pages. Makes use of a [ButtonGhost](#ButtonGhost).
 
 ![screen shot 2018-09-24 at 5 43 24 pm](https://user-images.githubusercontent.com/148752/45986591-5e19c100-c021-11e8-9993-49d8a71b2621.png)
+
+### Illustration
+(todo)
 
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
@@ -151,6 +158,7 @@ The footer appears at the top of every page.
 
 ### SearchResultsInstantResult
 Shows up when you search from the header
+
 ![screen shot 2018-09-15 at 9 45 05 am](https://user-images.githubusercontent.com/148752/45588607-25b10f00-b8cc-11e8-9745-4341af79bb94.png)
 
 ### subNav
@@ -180,7 +188,9 @@ Appears on [book page](https://openlibrary.org/books/OL1447641M/Women_of_words)
 (Appears on which pages?)
 
 On [works page](https://openlibrary.org/works/OL100238W/The_Titan):
+
 ![screen shot 2018-09-18 at 11 01 54 am](https://user-images.githubusercontent.com/148752/45706914-52666000-bb32-11e8-8d7e-89aeaf43a5c5.png)
+
 [pictured: dropit tool] 
 
 ### ShareLinks
