@@ -40,9 +40,16 @@ Appears in the [iaBar](#iaBar)
 
 ### ButtonSearch - 
 It is used to submit the search query
+
 Seen - https://openlibrary.org/search?q=harry+potter , https://openlibrary.org/search
 
 ![search-button](https://user-images.githubusercontent.com/31198893/46106369-1bf5a880-c1f6-11e8-8662-d3cf18fe6e1b.png)
+
+### ButtonBorrow - 
+Used to indicate if a book is available for borrow
+
+Seen - https://openlibrary.org/search?q=shakespeare 
+![borrow](https://user-images.githubusercontent.com/31198893/46106876-8b1fcc80-c1f7-11e8-8291-c0c067a94b0f.png)
 
 ### BorrowBookForm
 (please help document me!)
@@ -242,6 +249,9 @@ A list of lists.
 
 ### Mode-options
 Radio buttons to toggle between different 3 different options
+
 Seen - https://openlibrary.org/search , https://openlibrary.org/search?q=harry+potter
 
 ![mode-options](https://user-images.githubusercontent.com/31198893/46106538-99211d80-c1f6-11e8-818a-0ffed5e76aa8.png)
+
+
