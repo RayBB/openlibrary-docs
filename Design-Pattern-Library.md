@@ -239,3 +239,8 @@ A list of lists.
 ![screen shot 2018-09-19 at 5 35 55 pm](https://user-images.githubusercontent.com/148752/45789018-81fc9180-bc32-11e8-815e-015c008429d1.png)
 
 (#widget-lists, .listLists)
+
+### Mode-options
+Radio buttons to toggle between different 3 different options
+Seen - https://openlibrary.org/search , https://openlibrary.org/search?q=harry+potter
+![mode-options](https://user-images.githubusercontent.com/31198893/46106538-99211d80-c1f6-11e8-818a-0ffed5e76aa8.png)
