@@ -48,8 +48,25 @@ Seen - https://openlibrary.org/search?q=harry+potter , https://openlibrary.org/s
 ### ButtonBorrow - 
 Used to indicate if a book is available for borrow
 
-Seen - https://openlibrary.org/search?q=shakespeare 
+Seen - https://openlibrary.org/search?q=harry_potter
+
 ![borrow](https://user-images.githubusercontent.com/31198893/46106876-8b1fcc80-c1f7-11e8-8291-c0c067a94b0f.png)
+
+### ReadButton
+Used to read a book from the online reader
+
+Seen - https://openlibrary.org/search?q=sas
+
+![read](https://user-images.githubusercontent.com/31198893/46107321-ab9c5680-c1f8-11e8-8e18-d1ea6fc05e48.png)
+
+### WaitlistButton 
+There are many form of this button and is used to join a waitlist
+
+Seen - https://openlibrary.org/search?q=sas
+
+![join_waitlist](https://user-images.githubusercontent.com/31198893/46107366-cec70600-c1f8-11e8-9970-5ecfa512a6e3.png)
+
+![join_waitlist_number](https://user-images.githubusercontent.com/31198893/46107369-d1296000-c1f8-11e8-95e9-544b6faf0d8f.png)
 
 ### BorrowBookForm
 (please help document me!)
