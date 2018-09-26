@@ -38,6 +38,12 @@ Appears in the [iaBar](#iaBar)
 
 ![screen shot 2018-09-24 at 5 44 40 pm](https://user-images.githubusercontent.com/148752/45986619-8bff0580-c021-11e8-8e77-5b3932a2e067.png)
 
+### ButtonSearch - 
+It is used to submit the search query
+Seen - https://openlibrary.org/search?q=harry+potter , https://openlibrary.org/search
+
+![search-button](https://user-images.githubusercontent.com/31198893/46106369-1bf5a880-c1f6-11e8-8662-d3cf18fe6e1b.png)
+
 ### BorrowBookForm
 (please help document me!)
 
