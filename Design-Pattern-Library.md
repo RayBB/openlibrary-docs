@@ -19,6 +19,15 @@ These are components on Open Library to be made modular and documented:
 Is used in the [Carousel component](#Carousel) to display books.
 Note, the button inside this component is bespoke (a book-cta) - see #1158.
 
+### CoverMagic
+
+![screen shot 2018-09-28 at 2 48 08 pm](https://user-images.githubusercontent.com/148752/46235083-8826f800-c32d-11e8-90e8-3bba12ed484d.png)
+
+Extremely similar to the [Book](#book) compoonent.
+Seen on https://openlibrary.org/subjects/science
+
+Makes use of [buttonCta](#buttonCta)
+
 ### ButtonBtn
 ![screen shot 2018-09-21 at 5 12 42 pm](https://user-images.githubusercontent.com/148752/45910857-9753f600-bdc1-11e8-9dd5-365237185e62.png)
 
@@ -45,19 +54,19 @@ Seen - https://openlibrary.org/search?q=harry+potter , https://openlibrary.org/s
 
 ![search-button](https://user-images.githubusercontent.com/31198893/46106369-1bf5a880-c1f6-11e8-8662-d3cf18fe6e1b.png)
 
-### ButtonBorrow - 
+### ButtonCta
+
+#### Borrow variant
 Used to indicate if a book is available for borrow
 
 Seen - https://openlibrary.org/search?q=harry_potter
 
 ![borrow](https://user-images.githubusercontent.com/31198893/46106876-8b1fcc80-c1f7-11e8-8291-c0c067a94b0f.png)
 
-### ButtonRead
+#### Read variant
 Used to read a book from the online reader
 
 Seen - https://openlibrary.org/search?q=sas
-
-Looks similar to ButtonBorrow. Should these be merged?
 
 ![read](https://user-images.githubusercontent.com/31198893/46107321-ab9c5680-c1f8-11e8-8e18-d1ea6fc05e48.png)
 
