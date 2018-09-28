@@ -142,6 +142,14 @@ Renders [a diff](https://openlibrary.org/books/OL7500626M/The_Time_Machine?b=9&a
 When inside a .lists element this renders differently.
 (please help document me!)
 
+### HeadedLinkList
+
+A list of links with a heading as seen on https://openlibrary.org/subjects
+
+![screen shot 2018-09-28 at 2 14 56 pm](https://user-images.githubusercontent.com/148752/46233807-fb7a3b00-c328-11e8-85b6-64b604ecc708.png)
+
+We currently make use of .contentQuarter elements to arrange these side by side but it would be useful to have them modeled as their own component and deal with layout separately.
+
 ### History
 ![screen shot 2018-09-15 at 9 47 20 am](https://user-images.githubusercontent.com/148752/45588626-732d7c00-b8cc-11e8-911d-358d86ce04f3.png)
 
