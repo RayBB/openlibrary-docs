@@ -106,6 +106,11 @@ A carousel section wraps a carousel and a heading.
 
 (appears on home page)
 
+### Chart
+As on [subject page](https://openlibrary.org/subjects/fantasy)
+
+![screen shot 2018-09-28 at 9 38 25 am](https://user-images.githubusercontent.com/148752/46221555-7f6cfc80-c302-11e8-880a-7163c194acac.png)
+
 ### ColorBoxOverlay
 An overlay that expands images. Visible when clicking the image of the author on their page.
 [Author page](https://openlibrary.org/authors/OL1194994A/Louise_Fitzhugh)
