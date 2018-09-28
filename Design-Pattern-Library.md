@@ -19,7 +19,7 @@ These are components on Open Library to be made modular and documented:
 Is used in the [Carousel component](#Carousel) to display books.
 Note, the button inside this component is bespoke (a book-cta) - see #1158.
 
-### CoverMagic
+### Cover
 
 ![screen shot 2018-09-28 at 2 48 08 pm](https://user-images.githubusercontent.com/148752/46235083-8826f800-c32d-11e8-90e8-3bba12ed484d.png)
 
