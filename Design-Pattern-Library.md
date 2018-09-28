@@ -56,6 +56,8 @@ Seen - https://openlibrary.org/search?q=harry+potter , https://openlibrary.org/s
 
 ### ButtonCta
 
+Styled with .cta-btn, this button is a little Dr Jekyll and Hyde in how it is defined, but it always looks similar, only varying by color.
+
 #### Borrow variant
 Used to indicate if a book is available for borrow
 
@@ -70,7 +72,7 @@ Seen - https://openlibrary.org/search?q=sas
 
 ![read](https://user-images.githubusercontent.com/31198893/46107321-ab9c5680-c1f8-11e8-8e18-d1ea6fc05e48.png)
 
-### ButtonWaitlist
+#### Waitlist variant
 There are many form of this button and is used to join a waitlist
 
 Seen - https://openlibrary.org/search?q=sas
