@@ -57,6 +57,8 @@ Used to read a book from the online reader
 
 Seen - https://openlibrary.org/search?q=sas
 
+Looks similar to ButtonBorrow. Should these be merged?
+
 ![read](https://user-images.githubusercontent.com/31198893/46107321-ab9c5680-c1f8-11e8-8e18-d1ea6fc05e48.png)
 
 ### WaitlistButton 
