@@ -52,7 +52,7 @@ Seen - https://openlibrary.org/search?q=harry_potter
 
 ![borrow](https://user-images.githubusercontent.com/31198893/46106876-8b1fcc80-c1f7-11e8-8291-c0c067a94b0f.png)
 
-### ReadButton
+### ButtonRead
 Used to read a book from the online reader
 
 Seen - https://openlibrary.org/search?q=sas
@@ -61,7 +61,7 @@ Looks similar to ButtonBorrow. Should these be merged?
 
 ![read](https://user-images.githubusercontent.com/31198893/46107321-ab9c5680-c1f8-11e8-8e18-d1ea6fc05e48.png)
 
-### WaitlistButton 
+### ButtonWaitlist
 There are many form of this button and is used to join a waitlist
 
 Seen - https://openlibrary.org/search?q=sas
