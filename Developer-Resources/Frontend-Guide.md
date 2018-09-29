@@ -1,5 +1,3 @@
-# Front End Guide
-
 Welcome to the Front-End Guide for Open Library, a primer for making front-end changes to the openlibrary.org website.
 
 ## How does url routing work?
