@@ -1,14 +1,24 @@
 # Front End Guide
 
-## Working with JavaScript
+Welcome to the Front-End Guide for Open Library, a primer for making front-end changes to the openlibrary.org website.
 
-### Introduction
+## How does url routing work?
+
+[Lookup the url pattern here](https://github.com/internetarchive/openlibrary/wiki/Endpoints#list-of-all-routes) or via https://dev.openlibrary.org/developers/routes to find out which view class is responsible for generating the template with which you wish to work. Some routes may pass through Open Library (to Infogami) and actually be handled generically by Infogami. This is true for routes like `/books/OL..M/:title` whose route patterns you can see registered at the bottom of `openlibrary/core/models.py`. You may note, most of the url routing is handled within [openlibrary/plugins](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins). Each view class specifies whether it returns json or if it returns a template. If it returns a template, the first argument should be the template's path (relative to the `templates/` directory) where it lives. The values following the template name are variables passed into the template (that the template will have access to). 
+
+## Working with JavaScript
 
 The Open Library website makes heavy use of jQuery libraries. 
 
 Except `jquery` and `jquery-ui`, all other third-party JavaScript libraries are combined and included as `vendor.js`.
 
 All the custom JavaScripts are combined and includes as `all.js`.
+
+Most of the heavy lifting is done by a file in `openlibrary/openlibrary/plugins/openlibrary/js/ol.js`
+
+### How a Page is rendered
+
+
 
 
 ### vendor.js and third party libraries
