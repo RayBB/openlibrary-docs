@@ -35,6 +35,7 @@
 	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
 	* [Production Provisioning](Production-Service-Architecture)
 * **Features & Initiatives (RFCs)**
+	* [Fixing Help & Support](Help-and-Support)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
 	* [Importing IA Wishlist](Importing-IA-Wishlist)
