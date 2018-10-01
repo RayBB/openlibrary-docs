@@ -1,16 +1,10 @@
 # Welcome to Open Library Hacktoberfest 2018!
 
-It’s that time of the year again, everyone: time for Hacktoberfest 2018, the annual event for contributing to Open Source, hosted by DigitalOcean, Github and Twilio! Get free T Shirts and Stickers shipped to your address on contributing 5 Pull Requests for the first 50,000 participants across the Globe. This is an amazing way to support your favorite open source projects? (_cough_ Internet Archive _cough_). Sign up and head to the Open Library Gitter channel in case you need help!
+It’s that time of the year again, everyone: time for Hacktoberfest 2018, the annual event for contributing to Open Source, hosted by DigitalOcean, Github and Twilio! Get free T Shirts and Stickers shipped to your address on contributing 5 Pull Requests for the first 50,000 participants across the Globe. This is an amazing way to support your favorite open source projects.
 
 ## What is Open Library?
 
-Open Library (https://openlibrary.org) is a digital library which lends over a million ebooks each year to its 1.75M patrons. The Internet Archive is looking for someone self-directed who loves books and technology to help Open Library expand to a global audience, improve search and discovery, and empower communities with tools to fund the books they want available in their digital library.
-
-## How do I find an appropriate task?
-
-Find tasks that are labelled with Hacktoberfest. You can find an elaborate list at the following links:
-- [Open Library](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3AHacktoberfest)
-- [Open Library Client](https://github.com/internetarchive/openlibrary-client/issues?q=is%3Aopen+is%3Aissue+label%3AHacktoberfest)
+Open Library (https://openlibrary.org) is a non-profit, open source, digital public library, run by the Internet Archive, which lends over a million ebooks each year to its 2M patrons. Open Library is made possibly by volunteers, like you, from over 5 different countries (US, NZ, IN, UK, DE, GR, CA)
 
 ## Getting Started
 
@@ -25,6 +19,12 @@ Consider labeling some issues Hacktoberfest, as these are picked up by DigitalOc
 Gitter is the way to go! The Open Library community is here to help you out in any manner that they can. 
 
 [Gitter Channel](https://gitter.im/theopenlibrary/Lobby)
+
+## How do I find an appropriate task?
+
+Find tasks that are labelled with Hacktoberfest. You can find an elaborate list at the following links:
+- [Open Library](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3AHacktoberfest)
+- [Open Library Client](https://github.com/internetarchive/openlibrary-client/issues?q=is%3Aopen+is%3Aissue+label%3AHacktoberfest)
 
 ## What are the contributor guidelines?
 
