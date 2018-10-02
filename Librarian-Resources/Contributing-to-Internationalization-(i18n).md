@@ -10,6 +10,7 @@ More details can be found [here](https://github.com/internetarchive/openlibrary/
 
 The messages file format used by the `gettext` toolset is described [here](http://pology.nedohodnik.net/doc/user/en_US/ch-poformat.html), and in the [gettext manual](https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html#PO-Files).
 
+To view Open Library in a preferred language, you will need to [adjust your browser language preferences]( https://www.w3.org/International/questions/qa-lang-priorities). To force a page to appear in a languge, you can also user the `lang=` parameter on the URL with a two character language code, e.g. https://openlibrary.org/?lang=fr
 
 The codebase has now deprecated code and strings located here: https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins/openlibrary/i18n
 
