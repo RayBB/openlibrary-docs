@@ -11,17 +11,17 @@ Here's what this new intermediary page might look like:
 - Why can't I borrow this book?
 - I'm having a different problem borrowing books
 
-### I'm having trouble Signing-Up
+### I'm having trouble Signing-Up or Signing-In
 - The captcha is not working
 - My username is taken
 - It's not accepting my password
-- I' having a different problem signing-up
+- I' having a different problem with my account
 
-### There's book data which needs to be fixed 
+### I need help correcting book data 
 - There are books or authors which need to be merged
 
-### I'm a developer and I have questions
-- ...
+### I'm a developer
+- Can I use Open Library APIs for my project?
 
 ### Other common questions
 - I want to delete my library account
