@@ -253,6 +253,8 @@ Shows up when you search from the header
 Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
 Renders on the [subjects page](https://openlibrary.org/subjects/science), [borrow page](https://openlibrary.org/borrow)
 
+and used for the "you might also like" and "more by <author>" carousels on a [works page](https://openlibrary.org/works/OL16244516W/Harry_Potter)
+
 ![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
 
 #### StatsChart
