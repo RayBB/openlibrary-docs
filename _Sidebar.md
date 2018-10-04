@@ -25,7 +25,7 @@
 * **Librarian Resources** 
 	* [Library Metadata Standards](Library-Metadata-Standards)
 	* [Guide to Identifiers](Guide-to-Identifiers)
-	* [Contributing to Internationalization](Contributing-to-Internationalization-(i18n))
+	* [Contributing to Internationalization](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)
 	* [Merge Processes](Merge-Processes)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Overview of Data Sources](Data-Source-Overview)
