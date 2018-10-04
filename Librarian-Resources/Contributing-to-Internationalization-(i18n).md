@@ -1,6 +1,6 @@
 Want to get started contributing a language towards Open Library internationalization (i18n)?
 
-Kindly take a look at this [Issue thread](https://github.com/internetarchive/openlibrary/issues/871) for more information.
+Kindly take a look at this [Issue thread](https://github.com/internetarchive/openlibrary/issues/871) and [Readme](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/i18n/README.md) for more information.
 
 ## About
 
