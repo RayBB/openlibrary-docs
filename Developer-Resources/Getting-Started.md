@@ -7,6 +7,7 @@
     - [Admin Interface](#admin-interface)
     - [Creating Users](#creating-users)
     - [Lending & Borrowing](#lending-and-borrowing)
+    - [Configuration](#configuration)
 - [Importing Test Data](#importing-test-data)
 - [Frontend Developer's Guide](#frontend-guide)
     - [Building CSS and JS](#building-css-and-js)
@@ -114,6 +115,13 @@ It essentially enables your local developer repository to behave as if it were a
 
 To enable lending on localhost check [this](https://github.com/internetarchive/olsystem/blob/master/Readme.md#enabling-lending-on-localhost)
 
+### Configuring
+
+Various configuration options can be found in conf/openlibrary.yml
+
+**Book covers** By default these might be triggering 404s. Point coverstore_url to https://covers.openlibrary.org/
+
+Be sure to reboot your vagrant instance after any configuration changes.
 ## Importing Test Data
 
 You can copy test data from the live openlibrary.org site into your dev instance. `vagrant ssh` into your dev instance, and run the `copydocs.py` script in `/openlibrary/scripts`. If you want to add a book, you must first copy an author record, then the work record, and then the book record.
@@ -135,6 +143,16 @@ vagrant@ol-dev:/openlibrary/scripts$ ./copydocs.py /books/OL24966433M
     fetching ['/books/OL24966433M']
     saving ['/books/OL24966433M']
     [{'key': '/books/OL24966433M', 'revision': 1}]
+```
+
+Run the following code in the JavaScript console on https://openlibrary.org
+```
+'cd /openlibrary/scripts/\n' + Array.from($('a').map((i, node)=>node.getAttribute('href'))).filter((url)=>url.indexOf('/books/') === 0 || url.indexOf('/works/') === 0 ).map((url) => `./copydocs.py "${url}" --recursive`).join('\n')
+```
+and then copy and paste the result into the vagrant instance to get a good sample set:
+```
+vagrant ssh
+<paste output above>
 ```
 
 ## Frontend Guide
