@@ -1,6 +1,10 @@
 ## Welcome!
 
-Open Library and its ~1.5M~ 2M users are so grateful you're here!
+Open Library and its ~1.5M~ 2M readers are so grateful you're here!
+
+## What is Open Library?
+
+Open Library (https://openlibrary.org) is a non-profit, open source, digital public library, hosted by the [Internet Archive](https://archive.org), which lends over 1 million ebooks each year to its 2M patrons. Open Library is made possible by volunteers, like you, from over 5 different countries (US, NZ, IN, UK, DE, GR, CA). We believe everyone should have a say in their library. That a library should be not only for, but of the people. Together, let's build the World's library.
 
 ## Meet the Team!
 
