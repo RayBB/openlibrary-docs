@@ -161,7 +161,7 @@ A list of links with a heading as seen on https://openlibrary.org/subjects
 
 We currently make use of .contentQuarter elements to arrange these side by side but it would be useful to have them modeled as their own component and deal with layout separately.
 
-See also: [LinkBox](#linkBox)
+See also: [LinkBox](#linkbox)
 
 ### History
 ![screen shot 2018-09-15 at 9 47 20 am](https://user-images.githubusercontent.com/148752/45588626-732d7c00-b8cc-11e8-911d-358d86ce04f3.png)
@@ -207,13 +207,11 @@ Some examples:
 
 Similar to HeadedLinkList but used to show related links, which are listed inline with a smaller heading. This element does not use a ul element, but does function in a very similar way.
 
-Seen on https://openlibrary.org/subjects/science
+Seen on https://openlibrary.org/subjects/science and on book pages
 
 ![screen shot 2018-09-28 at 2 25 40 pm](https://user-images.githubusercontent.com/148752/46234230-81e34c80-c32a-11e8-9da6-90bde50df8d6.png)
 
-It relies on styles relating to .subject
-
-Should be reviewed before further adoption.
+![screen shot 2018-10-06 at 7 59 56 am](https://user-images.githubusercontent.com/148752/46572617-fb3bfa00-c93d-11e8-9344-8426b0910f00.png)
 
 See also [HeadedLinkList](#HeadedLinkList)
 
