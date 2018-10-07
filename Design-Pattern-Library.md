@@ -19,6 +19,15 @@ These are components on Open Library to be made modular and documented:
 Is used in the [Carousel component](#Carousel) to display books.
 Note, the button inside this component is bespoke (a book-cta) - see #1158.
 
+### ContentHead
+Can appear once at the top of any page.
+
+![screen shot 2018-10-07 at 4 06 10 pm](https://user-images.githubusercontent.com/148752/46588080-f6b13780-ca4a-11e8-9217-e47b9c4252cc.png)
+
+Consists of the page title, an inline "count" and a set of tools.
+
+Other elements can be rendered under the tools but are not part of the component.
+
 ### Cover
 
 ![screen shot 2018-09-28 at 2 48 08 pm](https://user-images.githubusercontent.com/148752/46235083-8826f800-c32d-11e8-90e8-3bba12ed484d.png)
