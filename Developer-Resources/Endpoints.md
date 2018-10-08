@@ -144,6 +144,11 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
 
 ## Importing
 
+    POST /api/import
+
+**POST body:**
+(MARC data /  / JSON book representation -- Schema to follow WIP)
+
     POST /api/import/ia
 
 **POST body:** 
@@ -151,8 +156,16 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
     {
         "identifier": "<ocaid>",
         "require_marc": "false"
+        "bulk_marc": "false"
     }
 
+Example data to import a single archive.org item:
+
+    { "identifier": "europe1890194500wink" }
+
+Example data to import one record from a bulk MARC, identifier format `ocaid/filename:offset:length`:
+
+    { "bulk_marc": "true", "identifier": "talis-openlibrary-contribution/talis-openlibrary-contribution.mrc:1353778212:578" }
 
 ## Subjects
 
