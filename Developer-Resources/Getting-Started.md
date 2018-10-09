@@ -146,8 +146,12 @@ vagrant@ol-dev:/openlibrary/scripts$ ./copydocs.py /books/OL24966433M
 ```
 
 Run the following code in the JavaScript console on https://openlibrary.org
+
 ```
-'cd /openlibrary/scripts/\n' + Array.from($('a').map((i, node)=>node.getAttribute('href'))).filter((url)=>url.indexOf('/books/') === 0 || url.indexOf('/works/') === 0 ).map((url) => `./copydocs.py "${url}" --recursive`).join('\n')
+Array.from($('a').map((i, node)=>node.getAttribute('href')))
+    .filter((url)=>url.indexOf('/books/') === 0 || url.indexOf('/works/') === 0 )
+    .map((url) => url.replace(/(books|works)\/([^/]*)\/(.*)/, '$1/$2' ))
+    .map((url) => `./copydocs.py "${url}" --recursive`).join('\n')
 ```
 and then copy and paste the result into the vagrant instance to get a good sample set:
 ```
