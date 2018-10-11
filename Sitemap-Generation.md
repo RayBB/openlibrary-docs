@@ -4,7 +4,7 @@ http://gio.blog.archive.org/2015/02/04/ol-how-to-generate-the-sitemaps/
 
 ## Data Dumps
 
-Sitemaps are generated on `ol-home` using the latest data dump `ol_dump.txt.gz` as the source file. See http://gio.blog.archive.org/2015/03/11/ol-how-to-generate-the-dump-files for more on generating `ol_dump`
+Sitemaps are generated on `ol-home` using the latest data dump `ol_dump.txt.gz` as the source file. See [Generating Data Dumps](Generating-Data-Dumps) for more on generating `ol_dump`
 
 The last dump is available at: http://openlibrary.org/data/ol_dump_works_latest.txt.gz
 for more details you can see https://openlibrary.org/developers/dumps.
