@@ -172,10 +172,10 @@ We currently make use of .contentQuarter elements to arrange these side by side 
 
 See also: [LinkBox](#linkbox)
 
-### History
+### Page-History
 ![screen shot 2018-09-15 at 9 47 20 am](https://user-images.githubusercontent.com/148752/45588626-732d7c00-b8cc-11e8-911d-358d86ce04f3.png)
 
-shows at the bottom of the [works page]
+shows at the bottom of any wiki page, showing the revision history of that page.
 
 (https://openlibrary.org/works/OL69395W/Historie_of_the_raigne_of_King_Henry_the_Seventh).
 
