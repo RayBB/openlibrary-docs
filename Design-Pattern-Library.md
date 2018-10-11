@@ -67,6 +67,13 @@ Seen - https://openlibrary.org/search?q=harry+potter , https://openlibrary.org/s
 
 Styled with .cta-btn, this button is a little Dr Jekyll and Hyde in how it is defined, but it always looks similar, only varying by color.
 
+### ButtonLink
+
+Currently used in the [EditToolbar](#edit-toolbar) component.
+
+![screen shot 2018-10-11 at 9 40 32 am](https://user-images.githubusercontent.com/148752/46819895-ba772300-cd39-11e8-87bc-2eb9bff4b841.png)
+
+
 #### Borrow variant
 Used to indicate if a book is available for borrow
 
@@ -154,6 +161,13 @@ Also used when adding an item to a reading list via a Dropper component:
 Renders [a diff](https://openlibrary.org/books/OL7500626M/The_Time_Machine?b=9&a=1&_compare=Compare&m=diff)
 
 ![screen shot 2018-09-15 at 10 05 48 am](https://user-images.githubusercontent.com/148752/45588767-023b9380-b8cf-11e8-99df-2e0142fd1ef7.png)
+
+### Edit-Toolbar
+
+Any wiki page that can be edited will have an edit toolbar
+
+![screen shot 2018-10-11 at 9 41 46 am](https://user-images.githubusercontent.com/148752/46819962-e5617700-cd39-11e8-8745-513c075e6b96.png)
+
 
 ### EditionsTable
 ![EditionsTable](https://user-images.githubusercontent.com/148752/45579776-6c0c5c80-b83f-11e8-968e-ab6e9681caec.png)
