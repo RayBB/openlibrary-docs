@@ -280,15 +280,15 @@ Can be found on the home page. Graph rendered via an HTML canvas.
 ![1](https://user-images.githubusercontent.com/148752/45588543-3745e700-b8cb-11e8-8619-6228788dc7a5.png)
 ![2](https://user-images.githubusercontent.com/148752/45588544-3745e700-b8cb-11e8-8b83-c8e9026f31f9.png)
 
-### workDetails
-(please help document me!)
+### Work
+A mega component which puts together various other components.
 Appears on [book page](https://openlibrary.org/books/OL1447641M/Women_of_words)
 
-### Tools
-(please help document me!)
-(Appears on which pages?)
+![screen shot 2018-10-12 at 1 07 49 pm](https://user-images.githubusercontent.com/148752/46891776-ea98f180-ce1f-11e8-9f80-b2e973bdece8.png)
 
-On [works page](https://openlibrary.org/works/OL100238W/The_Titan):
+### ListsLists
+
+On [works page](https://openlibrary.org/works/OL100238W/The_Titan) and books pages:
 
 ![screen shot 2018-09-18 at 11 01 54 am](https://user-images.githubusercontent.com/148752/45706914-52666000-bb32-11e8-8d7e-89aeaf43a5c5.png)
 
