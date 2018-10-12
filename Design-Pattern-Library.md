@@ -337,4 +337,10 @@ Seen - https://openlibrary.org/search , https://openlibrary.org/search?q=harry+p
 
 ![mode-options](https://user-images.githubusercontent.com/31198893/46106538-99211d80-c1f6-11e8-818a-0ffed5e76aa8.png)
 
+### Read Panel
+
+Appears on books page.
+
+![screen shot 2018-10-11 at 5 20 57 pm](https://user-images.githubusercontent.com/148752/46840895-11045180-cd7a-11e8-9d29-4f2a0b857ced.png)
+
 
