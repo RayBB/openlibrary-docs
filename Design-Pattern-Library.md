@@ -203,9 +203,6 @@ Internet Archive Bar: A bar that appears at the top of all pages. Makes use of a
 
 ![screen shot 2018-09-24 at 5 43 24 pm](https://user-images.githubusercontent.com/148752/45986591-5e19c100-c021-11e8-9993-49d8a71b2621.png)
 
-### Illustration
-(todo)
-
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
 
@@ -251,7 +248,9 @@ The footer appears at the top of every page.
 ![Footer](https://user-images.githubusercontent.com/978325/45580060-bc84b980-b841-11e8-98e1-8041c4d5be60.png)
 
 ### RatingsForm
-![screen shot 2018-09-15 at 9 43 04 am](https://user-images.githubusercontent.com/148752/45588591-e97dae80-b8cb-11e8-9275-bb4d8e1fd44c.png)
+
+![screen shot 2018-10-12 at 1 00 18 pm](https://user-images.githubusercontent.com/148752/46891462-d0aadf00-ce1e-11e8-93be-a4c0dafcf69c.png)
+
 
 ### SearchResultItem
 ![screen shot 2018-09-15 at 9 44 34 am](https://user-images.githubusercontent.com/148752/45588596-fd291500-b8cb-11e8-9d0a-1508380f00b1.png)
