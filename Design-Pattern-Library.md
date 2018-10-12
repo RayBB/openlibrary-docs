@@ -323,6 +323,8 @@ When referring to "Drop click" we are referring to this part of the element:
 
 ![screen shot 2018-09-19 at 5 16 48 pm](https://user-images.githubusercontent.com/148752/45788524-f1bd4d00-bc2f-11e8-9045-96320b08964d.png)
 
+Clicking this opens the [ReadStatuses](#Readstatuses) component.
+
 ### WidgetLists
 A list of lists.
 
@@ -351,6 +353,8 @@ See https://www.w3.org/MarkUp/html3/deflists.html
 ![screen shot 2018-10-11 at 5 23 36 pm](https://user-images.githubusercontent.com/148752/46841001-70626180-cd7a-11e8-886c-713ff38b6bfb.png)
 
 ### ReadStatuses
+
+Shown when you click the [Dropper](#dropper)component.
 
 ![screen shot 2018-10-11 at 5 33 55 pm](https://user-images.githubusercontent.com/148752/46841305-e0251c00-cd7b-11e8-85f7-1f71a7344585.png)
 
