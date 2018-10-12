@@ -350,3 +350,7 @@ See https://www.w3.org/MarkUp/html3/deflists.html
 
 ![screen shot 2018-10-11 at 5 23 36 pm](https://user-images.githubusercontent.com/148752/46841001-70626180-cd7a-11e8-886c-713ff38b6bfb.png)
 
+### ReadStatuses
+
+![screen shot 2018-10-11 at 5 33 55 pm](https://user-images.githubusercontent.com/148752/46841305-e0251c00-cd7b-11e8-85f7-1f71a7344585.png)
+
