@@ -238,12 +238,6 @@ Seen on https://openlibrary.org/subjects/science and on book pages
 
 See also [HeadedLinkList](#HeadedLinkList)
 
-
-### Books Page
-
-#### Books Actions Menu
-![BookActionsMenu](https://user-images.githubusercontent.com/978325/45580136-901d6d00-b842-11e8-8233-14ce3da3babd.png)
-
 ### All Pages
 
 #### HeaderBar
@@ -339,6 +333,11 @@ Radio buttons to toggle between different 3 different options
 Seen - https://openlibrary.org/search , https://openlibrary.org/search?q=harry+potter
 
 ![mode-options](https://user-images.githubusercontent.com/31198893/46106538-99211d80-c1f6-11e8-818a-0ffed5e76aa8.png)
+
+### Books Page
+
+#### Books Actions Menu
+![BookActionsMenu](https://user-images.githubusercontent.com/978325/45580136-901d6d00-b842-11e8-8233-14ce3da3babd.png)
 
 ### Read Panel
 
