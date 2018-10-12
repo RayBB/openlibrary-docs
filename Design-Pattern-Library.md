@@ -343,4 +343,10 @@ Appears on books page.
 
 ![screen shot 2018-10-11 at 5 20 57 pm](https://user-images.githubusercontent.com/148752/46840895-11045180-cd7a-11e8-9d29-4f2a0b857ced.png)
 
+### Definition List
+
+Definition markup can be used to generate a definition list
+See https://www.w3.org/MarkUp/html3/deflists.html
+
+![screen shot 2018-10-11 at 5 23 36 pm](https://user-images.githubusercontent.com/148752/46841001-70626180-cd7a-11e8-886c-713ff38b6bfb.png)
 
