@@ -2,7 +2,7 @@ With a complicated project, it's always hard to be sure where to get involved. T
 
 # The great lintathon!
 
-We are currently making use of various tools to lint Python, JS and CSS.
+We are currently making use of various tools to lint Python, JS and CSS to improve code consistency, shared understanding and maintainability.
 
 You can contribute by following issues tagged with [linting](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3ALinting)
 
