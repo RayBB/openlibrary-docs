@@ -119,9 +119,15 @@ To enable lending on localhost check [this](https://github.com/internetarchive/o
 
 Various configuration options can be found in conf/openlibrary.yml
 
-**Book covers** By default these might be triggering 404s. Point coverstore_url to https://covers.openlibrary.org/
+Add conf/openlibrary.yaml to .git/info/exclude so that any changes to the conf file do not show up as dirty on git.
+
+**Book covers**
+
+By default these might be triggering 404s. Point coverstore_url to https://covers.openlibrary.org/
+
 
 Be sure to reboot your vagrant instance after any configuration changes.
+
 ## Importing Test Data
 
 You can copy test data from the live openlibrary.org site into your dev instance. `vagrant ssh` into your dev instance, and run the `copydocs.py` script in `/openlibrary/scripts`. If you want to add a book, you must first copy an author record, then the work record, and then the book record.
