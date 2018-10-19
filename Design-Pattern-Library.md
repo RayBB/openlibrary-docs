@@ -318,14 +318,6 @@ When referring to "Drop click" we are referring to this part of the element:
 
 ![screen shot 2018-09-19 at 5 16 48 pm](https://user-images.githubusercontent.com/148752/45788524-f1bd4d00-bc2f-11e8-9045-96320b08964d.png)
 
-
-### WidgetLists
-A list of lists.
-
-![screen shot 2018-09-19 at 5 35 55 pm](https://user-images.githubusercontent.com/148752/45789018-81fc9180-bc32-11e8-815e-015c008429d1.png)
-
-(#widget-lists, .listLists)
-
 ### Mode-options
 Radio buttons to toggle between different 3 different options
 
@@ -356,4 +348,14 @@ See https://www.w3.org/MarkUp/html3/deflists.html
 Shown when you click the [Dropper](#dropper)component.
 
 ![screen shot 2018-10-11 at 5 33 55 pm](https://user-images.githubusercontent.com/148752/46841305-e0251c00-cd7b-11e8-85f7-1f71a7344585.png)
+
+### WidgetBox
+
+Widget boxes are used for layout.
+They consist of a header, a hint and a component (which might be a list or another component on this page)
+
+The screenshot shows a WidgetBox with an unordered list and a WidgetBox containing a ListsLists.
+![screen shot 2018-10-19 at 3 32 17 pm](https://user-images.githubusercontent.com/148752/47246697-3dd8ea00-d3b4-11e8-8c87-920b35fcf05e.png)
+
+
 
