@@ -280,7 +280,7 @@ Can be found on the home page. Graph rendered via an HTML canvas.
 ![1](https://user-images.githubusercontent.com/148752/45588543-3745e700-b8cb-11e8-8619-6228788dc7a5.png)
 ![2](https://user-images.githubusercontent.com/148752/45588544-3745e700-b8cb-11e8-8b83-c8e9026f31f9.png)
 
-### Work
+### Edition (book)
 A mega component which puts together various other components.
 Appears on [book page](https://openlibrary.org/books/OL1447641M/Women_of_words)
 
