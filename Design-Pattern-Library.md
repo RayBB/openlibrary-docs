@@ -357,5 +357,10 @@ They consist of a header, a hint and a component (which might be a list or anoth
 The screenshot shows a WidgetBox with an unordered list and a WidgetBox containing a ListsLists.
 ![screen shot 2018-10-19 at 3 32 17 pm](https://user-images.githubusercontent.com/148752/47246697-3dd8ea00-d3b4-11e8-8c87-920b35fcf05e.png)
 
+### NavEdition
+Appears at the top of book pages. Will probably be merged in future with another component once identified.
+
+![screen shot 2018-10-23 at 6 03 09 pm](https://user-images.githubusercontent.com/148752/47399581-fcb34380-d6ed-11e8-9c2b-7babc86fac17.png)
+
 
 
