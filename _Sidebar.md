@@ -27,7 +27,7 @@
 	* [Library Metadata Standards](Library-Metadata-Standards)
 	* [Guide to Identifiers](Guide-to-Identifiers)
 	* [Contributing to Internationalization](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)
-	* [Merge Processes](Merge-Processes)
+	* [Merging Records](Merging-Records)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Overview of Data Sources](Data-Source-Overview)
 	* [Writing Bots](Writing-Bots)
