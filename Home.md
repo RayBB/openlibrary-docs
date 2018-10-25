@@ -10,11 +10,13 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 - [View Team Member Profiles (created with Google Forms) and add your own profile](https://docs.google.com/forms/d/e/1FAIpQLSch2GjtxEYnCTC0-imVRuIZBsvAmV7lA52vdcaNTvzmHXqS8Q/viewform?usp=sf_link)
 
-## How Do We Communicate?
+## Communication
 
-- What are the actions being taken and who is working on what? Ask to join our slack channel.
-- Tuesday Community Calls. There's also a digital meeting every Tuesday AM PST where everyone checks in and touches base. The link for that call is: https://zoom.us/j/850313890
-- Friday lunches at Internet Archive's HQ at 300 Funston in SF Inner Richmond.
+1. **[Github Issues](https://github.com/internetarchive/openlibrary/issues)** - We try to respond to issues within 24h!
+2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - public, anyone can join and ask questions!
+3. **[Weekly Community Call](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)** - Everyone is welcome to join our [Weekly Community call @ 11:30am PT](https://zoom.us/j/369477551).
+4. **[Slack]** - for active contributors, we have an by-invite slack channel
+5. **[In-person & Office Hours]** - Internet Archive hosts a by-invite lunch each Friday @ 300 Funston, SF in the Inner Richmond. Mek also hosts office hours on Sunday between 11am - 10pm (PT) for anyone who has questions about contributing. For either option, please contact mek@archive.org.
 
 ## SMART Goals for the Open library Re-Design
 
