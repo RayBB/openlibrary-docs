@@ -13,11 +13,11 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 ## Communication
 
 1. **[Github Issues](https://github.com/internetarchive/openlibrary/issues)** - We try to respond to issues within 24h!
-2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - public, anyone can join and ask questions!
+2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - Public, anyone can join and ask questions!
 3. **[Weekly Community Call](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)** - Everyone is welcome to join our [Weekly Community call @ 11:30am PT](https://zoom.us/j/369477551).
-4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - for active contributors, we have an by-invite slack channel
+4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - For active contributors, we have an by-invite slack channel
 5. **[Friday Lunch](https://twitter.com/internetarchive/status/596768668756774914)** - Internet Archive hosts a by-invite lunch each Friday @ 300 Funston, SF in the Inner Richmond. please contact mek@archive.org
-6. **Office Hours** - Mek also hosts office hours on Sunday between 11am - 10pm (PT) for anyone who has questions about contributing. please contact mek@archive.org.
+6. **Office Hours** - Mek hosts office hours on Sunday between 11am - 10pm (PT) for anyone who has questions about contributing. please contact mek@archive.org.
 
 ## SMART Goals for the Open library Re-Design
 
