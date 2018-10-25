@@ -26,3 +26,9 @@ Here's what this new intermediary page might look like:
 ### Other common questions
 - I want to delete my library account
 
+## How can we reduce these problems?
+
+### Realtime account creation feedback
+
+If the user's email is already in use or their username has been taken, [let's let them know](https://github.com/internetarchive/openlibrary/issues/1433) (#1433) 
+
