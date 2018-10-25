@@ -1,5 +1,7 @@
 # Table of Contents
 
+Open Library hosts a Weekly Community Call every Tuesday @ 11:30am PT https://zoom.us/j/369477551
+
 ## Minutes for 2018
 - [2018-05-15 Community Call](#2018-05-15-community-call)
 - [2018-05-01 Community Call](#2018-05-01-community-call)
