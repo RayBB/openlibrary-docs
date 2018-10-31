@@ -14,3 +14,7 @@ https://catalog.simonandschuster.com/?cid=16322
 *Library of Congress*
 25M MARCs
 http://www.loc.gov/cds/products/MDSConnect-books_all.html
+
+*Hathi Trust*
+16.8M volumes, 8M book titles, 38% public domain
+https://www.hathitrust.org/bib_api
