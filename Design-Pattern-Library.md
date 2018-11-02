@@ -186,6 +186,11 @@ We currently make use of .contentQuarter elements to arrange these side by side 
 
 See also: [LinkBox](#linkbox)
 
+### Manage-Covers
+![screen shot 2018-11-01 at 10 11 41 pm](https://user-images.githubusercontent.com/148752/47894990-245b8780-de23-11e8-8364-ed1447477b71.png)
+
+Shows when logged in and with JS enabled when you hover over a cover.
+
 ### Page-History
 ![screen shot 2018-09-15 at 9 47 20 am](https://user-images.githubusercontent.com/148752/45588626-732d7c00-b8cc-11e8-911d-358d86ce04f3.png)
 
