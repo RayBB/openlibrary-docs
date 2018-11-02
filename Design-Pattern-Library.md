@@ -42,6 +42,17 @@ Makes use of [buttonCta](#buttonCta)
 
 As seen in component [PageBanner](#pagebanner)
 
+#### modifiers
+
+If this button is not large enough for add the large modifier ('btn--large')
+
+e.g.
+the read ebook button on [a book page](https://openlibrary.org/books/OL7885696M/Charlotte's_Web)
+
+![screen shot 2018-11-02 at 4 20 35 pm](https://user-images.githubusercontent.com/148752/47944809-46084d80-debb-11e8-8605-3701e29136f8.png)
+
+#### notes
+
 See #1158
 
 ### ButtonGeneric
