@@ -155,7 +155,7 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
 
     {
         "identifier": "<ocaid>",
-        "require_marc": "false"
+        "require_marc": "false",
         "bulk_marc": "false"
     }
 
