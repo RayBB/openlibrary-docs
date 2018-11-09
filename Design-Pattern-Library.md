@@ -267,9 +267,18 @@ The footer appears at the top of every page.
 
 ![screen shot 2018-10-12 at 1 00 18 pm](https://user-images.githubusercontent.com/148752/46891462-d0aadf00-ce1e-11e8-93be-a4c0dafcf69c.png)
 
+### SearchResultContainer
+
+![screen shot 2018-11-08 at 8 30 13 pm](https://user-images.githubusercontent.com/148752/48243418-2ed2cf80-e395-11e8-9c0b-660b17dd959b.png)
+
+[example](https://openlibrary.org/search?q=as&mode=ebooks&m=edit&m=edit&has_fulltext=true)
+
+Contains: #SearchResultItem and #LinkBox
 
 ### SearchResultItem
 ![screen shot 2018-09-15 at 9 44 34 am](https://user-images.githubusercontent.com/148752/45588596-fd291500-b8cb-11e8-9d0a-1508380f00b1.png)
+
+[example](https://openlibrary.org/search?q=as&mode=ebooks&m=edit&m=edit&has_fulltext=true)
 
 ### SearchResultsInstantResult
 Shows up when you search from the header
