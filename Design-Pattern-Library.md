@@ -387,5 +387,9 @@ Appears at the top of book pages. Will probably be merged in future with another
 
 ![screen shot 2018-10-23 at 6 03 09 pm](https://user-images.githubusercontent.com/148752/47399581-fcb34380-d6ed-11e8-9c2b-7babc86fac17.png)
 
+### WmdButtonBar
+![screen shot 2018-11-09 at 3 40 53 pm](https://user-images.githubusercontent.com/148752/48293867-e4edf600-e435-11e8-8d56-11b3e0164722.png)
+
+Seen on http://localhost:8080/people/openlibrary7774?m=edit
 
 
