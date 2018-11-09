@@ -273,7 +273,7 @@ The footer appears at the top of every page.
 
 [example](https://openlibrary.org/search?q=as&mode=ebooks&m=edit&m=edit&has_fulltext=true)
 
-Contains: #SearchResultItem and #LinkBox
+Contains: [#SearchResultItem](#SearchResultItem), [#widgetbox](#widgetbox) and [#LinkBox](#LinkBox)
 
 ### SearchResultItem
 ![screen shot 2018-09-15 at 9 44 34 am](https://user-images.githubusercontent.com/148752/45588596-fd291500-b8cb-11e8-9d0a-1508380f00b1.png)
