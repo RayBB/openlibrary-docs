@@ -1,4 +1,5 @@
 ## 5 Million Orphans
+"Orphaned Editions" are Open Library book records that only have an edition item (OL..M) and no corresponding work (OL..W). Search results list works, and the main landing page for a book is a work page. One work can have many editions. Editions without works break the data model and cause various problems with search, links, and syncing data. There is a hack to make search mostly work with these orphans where the edition is indexed as if it is a work. No current process is creating new orphans, but there exist 5 million from the early days of Open Library. An ongoing task has been to find a way to reduce and fix these completely.
 
 ## 2018 Update
 
