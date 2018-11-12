@@ -1,5 +1,16 @@
 ## 5 Million Orphans
 
+## 2018 Update
+
+The information in the sections below is still accurate, but has been difficult to act upon at scale.
+
+Recently the Import process has been updated to allow reliable re-imports of existing books from individual, or bulk, MARC record sources. Part of this revised process adds works to matched editions if they don't already exist. This means orphaned editions can be fixed by reimporting from their MARC source, or matching archive.org items by using an [import endpoint](https://github.com/internetarchive/openlibrary/wiki/Endpoints#importing).
+
+This is a huge win, and will allow the editions-without-works problem to be solved finally, once we re-process all the data.
+
+### New process drawing on the plans below
+For each category identified below, in priority order, filter the orphan edition records from the OL db dumps, determine the original source from `source_records` and perform the appropriate [re-import request](https://github.com/internetarchive/openlibrary/wiki/Endpoints#importing).
+
 ## Planning
 
 Query to extract all orphans from OL edition dump (25M records). [**DONE!**]
