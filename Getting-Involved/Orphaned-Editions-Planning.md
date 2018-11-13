@@ -95,10 +95,16 @@ Use unique ids on orphaned editions to find a matching edition already associate
 
 This works well if the original data is good. If the data is bad, incorrect associations can be made. Some bad ids can allow many unrelated editions to become collected under the wrong work. The mitigating factor to this is that the data was already incorrect in the database and needed to be fixed, at least this process groups like with like so the data problem should be more visible and can be eventually fixed in one step.
 
-Ids to use: 
+Work IDs to use: 
   * OCAID
-  * ISBN (with xisbn lookups as an extension)
-  * other ids
+  * ISBN (with xisbn lookups as an extension) - xisbn is being decomissioned: [(problem)](https://github.com/xlcnd/isbnlib/issues/51) [(possible solution)](https://github.com/xlcnd/isbntools/issues/96)
+  * other ids: OCLCN, HTID
+
+Author IDs to use:
+  * ISNI
+  * VIAF (careful, these quite often conflate homonymic authors)
+  * Wikidata Q number
+  * LCauth
 
 #### Another approach
  For orphans with author information, look for near title matches also by that author to suggest an existing work. Many near misses may vary only by punctuation marks, accents, or by articles "A ", "The ", "Le ", "L'", "Eine " etc. in variant cataloging of the same edition. Take care not conflate "Part II" vs. "Part III" or similar, which should be treated as different editions of one work. Consider also the possibility of duplicate or conflated author identifiers: "this is not the J. Smith you are looking for". A fuzzy title match and a fuzzy author match should strongly suggest the same work absent contrary information.
