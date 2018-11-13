@@ -69,7 +69,7 @@ From the April 2017 graph:
 
 **Theory:** these were the early imports and user edits before OL automatically created works. Suspect creation dates to be clustered around 2009. Need to confirm this by collected created_date statistics.
 
-Sources: from Amazon records?, from IA MARC records?
+Sources: from Amazon records? (especially from 2008), from IA MARC records?
   * Count and graph sources
   * Count and graph created_dates
 
@@ -101,7 +101,7 @@ Ids to use:
   * other ids
 
 #### Another approach
- For orphans with author information, look for near title matches also by that author to determine an existing work. 
+ For orphans with author information, look for near title matches also by that author to suggest an existing work. Many near misses may vary only by punctuation marks, accents, or by articles "A ", "The ", "Le ", "L'", "Eine " etc. in variant cataloging of the same edition. Take care not conflate "Part II" vs. "Part III" or similar, which should be treated as different editions of one work. Consider also the possibility of duplicate or conflated author identifiers: "this is not the J. Smith you are looking for". A fuzzy title match and a fuzzy author match should strongly suggest the same work absent contrary information.
 
 #### Further reduction techniques:
   Identify any orphans that are simply bad data and candidates for deletion.
