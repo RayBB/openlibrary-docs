@@ -398,3 +398,10 @@ Seen on http://localhost:8080/people/openlibrary7774?m=edit
 
 When editing a profile page, and clicking the link button in the [wmd button bar](WmdButtonBar) this overlay shows. JavaScript is required.
 
+### PageSearchBox
+A form within the page that allows searching the site.
+
+![screen shot 2018-11-16 at 3 58 36 pm](https://user-images.githubusercontent.com/148752/48653227-90f48b80-e9b8-11e8-983d-4ad68fc44404.png)
+
+Seen on http://openlibary.org/subjects/romance
+
