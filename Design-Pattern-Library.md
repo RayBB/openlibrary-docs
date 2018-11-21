@@ -268,9 +268,18 @@ The footer appears at the top of every page.
 
 ![Footer](https://user-images.githubusercontent.com/978325/45580060-bc84b980-b841-11e8-98e1-8041c4d5be60.png)
 
+
 ### RatingsForm
 
 ![screen shot 2018-10-12 at 1 00 18 pm](https://user-images.githubusercontent.com/148752/46891462-d0aadf00-ce1e-11e8-93be-a4c0dafcf69c.png)
+
+### ResultCovers
+Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
+Renders on the [subjects page](https://openlibrary.org/subjects/science), [borrow page](https://openlibrary.org/borrow)
+
+and used for the "you might also like" and "more by <author>" carousels on a [works page](https://openlibrary.org/works/OL16244516W/Harry_Potter)
+
+![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
 
 ### SearchResultContainer
 
@@ -290,16 +299,12 @@ Shows up when you search from the header
 
 ![screen shot 2018-09-15 at 9 45 05 am](https://user-images.githubusercontent.com/148752/45588607-25b10f00-b8cc-11e8-9745-4341af79bb94.png)
 
-### subNav
-(please help document me!)
+### TabsPanel
 
-### ResultCovers
-Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
-Renders on the [subjects page](https://openlibrary.org/subjects/science), [borrow page](https://openlibrary.org/borrow)
+A tab component. See [author page](https://openlibrary.org/authors/OL27173A/Avi/edit) for an example.
 
-and used for the "you might also like" and "more by <author>" carousels on a [works page](https://openlibrary.org/works/OL16244516W/Harry_Potter)
+![screen shot 2018-11-21 at 8 28 22 am](https://user-images.githubusercontent.com/148752/48854732-73804280-ed67-11e8-8548-a11257fc1327.png)
 
-![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
 
 #### StatsChart
 Can be found on the home page. Graph rendered via an HTML canvas.
