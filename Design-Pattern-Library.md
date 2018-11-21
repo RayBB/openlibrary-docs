@@ -149,6 +149,11 @@ As on [subject page](https://openlibrary.org/subjects/fantasy)
 
 ![screen shot 2018-09-28 at 9 38 25 am](https://user-images.githubusercontent.com/148752/46221555-7f6cfc80-c302-11e8-880a-7163c194acac.png)
 
+### ChartStats
+As seen on [stats](https://openlibrary.org/stats)
+
+![screen shot 2018-11-20 at 5 38 47 pm](https://user-images.githubusercontent.com/148752/48813323-31192000-eceb-11e8-9c3f-9a5525a189bf.png)
+
 ### ColorBoxOverlay
 An overlay that expands images. Visible when clicking the image of the author on their page.
 [Author page](https://openlibrary.org/authors/OL1194994A/Louise_Fitzhugh)
