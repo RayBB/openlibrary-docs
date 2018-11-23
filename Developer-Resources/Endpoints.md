@@ -175,6 +175,24 @@ See: openlibrary/plugins/worksearch/subjects.py
 
 https://openlibrary.org/search/subjects
 
+## Recent Changes (edits)
+
+https://openlibrary.org/dev/docs/api/recentchanges
+
+### Recent Changes (edits) by date
+
+### Recent Changes by edit type
+
+edit types: create, update, register (old form of user create by AccountBot), bulk_update (starting 2009-03), add-book (starting 2010-08), add-cover (starting 2010-08), edit-book (starting 2010-08), lists (starting 2010-11), new-account (replaced register),
+
+
+### Recent Changes by both
+
+https://openlibrary.org/recentchanges/2009/12/31/bulk_update.json?bot=true&offset=0&limit=100
+
+offset: default 0, max 10000
+limit: default 100, max 1000
+
 ## List of all Routes
 
 An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes (endpoints) and the files in which they appear. Informed via: grep -ri "path \= \"[/]" *
