@@ -349,6 +349,11 @@ The dropper is an enhanced substitution `select` element. At time of writing it 
 
 ![screen shot 2018-09-19 at 5 10 04 pm](https://user-images.githubusercontent.com/148752/45788340-e3bafc80-bc2e-11e8-9ab7-cf1fdef06d19.png)
 
+#### Dropper-list
+![screen shot 2018-11-27 at 8 09 30 am](https://user-images.githubusercontent.com/148752/49094756-d49e8f00-f21b-11e8-9322-1473de1ce6fb.png)
+
+A variant of the dropper exists for things that are not books. Can be seen on subjects and authors pages.
+
 Dropper with dropdown
 
 (See also [ReadStatuses](#Readstatuses) component, shown in image)
