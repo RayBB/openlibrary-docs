@@ -265,7 +265,7 @@ The header bar appears at the top of every page.
 
 ### FlashMessage
 
-Can be displayed via JS when an error occurs.
+Can be displayed on **any page** via JS to report feedback to a user after some form has been posted.
 
 ![screen shot 2018-12-13 at 6 13 32 pm](https://user-images.githubusercontent.com/148752/49979199-dac28a00-ff02-11e8-897a-bdca47ec8fe5.png)
 
