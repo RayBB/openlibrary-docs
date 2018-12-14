@@ -263,6 +263,18 @@ The header bar appears at the top of every page.
 
 ![HeaderBar](https://user-images.githubusercontent.com/148752/45579420-50538700-b83c-11e8-81c8-02fe4f4bbd09.png)
 
+### FlashMessage
+
+Can be displayed via JS when an error occurs.
+
+![screen shot 2018-12-13 at 6 13 32 pm](https://user-images.githubusercontent.com/148752/49979199-dac28a00-ff02-11e8-897a-bdca47ec8fe5.png)
+
+#### FlashMessageBookAdded
+![screen shot 2018-12-13 at 6 13 07 pm](https://user-images.githubusercontent.com/148752/49979201-dc8c4d80-ff02-11e8-8d3b-8a8c3741f107.png)
+
+#### FlashMessageError
+![screen shot 2018-12-13 at 6 12 42 pm](https://user-images.githubusercontent.com/148752/49979204-ddbd7a80-ff02-11e8-914b-ee9bc540d27d.png)
+
 #### Footer
 The footer appears at the top of every page.
 
