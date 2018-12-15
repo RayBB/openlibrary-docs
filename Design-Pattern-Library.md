@@ -240,9 +240,10 @@ Some examples:
 ![edit olform](https://user-images.githubusercontent.com/148752/45588637-9ce6a300-b8cc-11e8-88ce-bdf91f288d40.png)
 
 
-### readinglog-stats
-(please help document me!)
+### ReadingStats
+![screen shot 2018-12-15 at 1 20 01 pm](https://user-images.githubusercontent.com/148752/50047549-4b38ea80-006c-11e9-9536-147aecdf37eb.png)
 
+Example url: https://openlibrary.org/books/OL16180205M/Harry_Potter_and_the_Sorcerer's_Stone
 
 ### LinkBox
 
