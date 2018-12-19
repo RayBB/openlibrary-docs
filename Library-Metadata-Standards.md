@@ -31,11 +31,12 @@ See also:
 * Dimensions / weight etc... link to external librarianship standards?
 ** Source metadata may simply give 8vo, or inch-measure. Should auto-convert to approximate cm for consistency, i18n.
 ** Dimensions harvested from amazon.com are inches, while the other national amazon sites (e.g. amazon.de) use cm.
-* ISBNs, fields (10, 13 + other), validate that the target exists, don't just do the checksum
+
+* ISBNs, fields (10, 13 + other), strip non-digits, do the checksum, validate that the target was actually published
 **A huge number of bogus ISBNs were created from bad amazon records in 2008, these should be stripped or at least downgraded to ASINs if they cannot be validated as extant on Worldcat
 
-* Dates (currently free text, I have found at least one example of asian dates with kanji month and day) .   Approximate dates?
-**It's the year that matters for copyright, that has to be consistent. Month and day are useful for disambiguation of editions.
+* Dates (currently free text, I have found at least one example of Asian dates with kanji month and day). Approximate dates?
+**It's the year that matters for copyright, that has to be consistent. Month and day are rarely useful for disambiguation of editions.
 
 * External links:  VIAF, Wikidata, ISNI, perhaps wikipedia 
 **confusion over ASIN and OCAID where users sometimes paste URLs instead of ids.
