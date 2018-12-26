@@ -224,6 +224,11 @@ Internet Archive Bar: A bar that appears at the top of all pages. Makes use of a
 
 ![screen shot 2018-09-24 at 5 43 24 pm](https://user-images.githubusercontent.com/148752/45986591-5e19c100-c021-11e8-9993-49d8a71b2621.png)
 
+### MyBooks
+
+Combines [MyBooksList](#MyBooksList) and [MyBooksMenu](#MyBooksMenu)
+In use on https://openlibrary.org/account/books/want-to-read
+
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
 
