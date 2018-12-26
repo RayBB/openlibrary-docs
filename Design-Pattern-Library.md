@@ -323,6 +323,12 @@ Contains: [#SearchResultItem](#SearchResultItem), [#widgetbox](#widgetbox) and [
 
 [example](https://openlibrary.org/search?q=as&mode=ebooks&m=edit&m=edit&has_fulltext=true)
 
+### SearchResultItemCTA
+
+![screen shot 2018-12-26 at 2 32 53 pm](https://user-images.githubusercontent.com/148752/50458854-2588cc80-091b-11e9-96d4-d22631be9423.png)
+
+e.g. https://openlibrary.org/account/books/want-to-read
+
 ### SearchResultsInstantResult
 Shows up when you search from the header
 
