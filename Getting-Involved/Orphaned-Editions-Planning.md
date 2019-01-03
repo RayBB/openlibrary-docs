@@ -12,7 +12,7 @@ This is a huge win, and will allow the editions-without-works problem to be solv
 ### New process drawing on the plans below
 For each category identified below, in priority order, filter the orphan edition records from the OL db dumps, determine the original source from `source_records` and perform the appropriate [re-import request](https://github.com/internetarchive/openlibrary/wiki/Endpoints#importing).
 
-![orphaned editions graph](https://cdn.pbrd.co/images/HS3quc8.png)
+![orphaned editions graph](https://cdn.pbrd.co/images/HUEYUKa.png)
 Early data from https://github.com/internetarchive/openlibrary/issues/153
 
 ## Planning
