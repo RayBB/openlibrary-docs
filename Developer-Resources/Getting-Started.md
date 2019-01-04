@@ -20,14 +20,6 @@
 
 ## Basic Developer Commands
 
-### bootstrap
-
-~Bootstraps the dev instance.~ This is replaced by vagrant.
-
-```
-$ python setup.py bootstrap
-```
-
 ### start
 
 Starts all the OL services:
@@ -130,13 +122,14 @@ Be sure to reboot your vagrant instance after any configuration changes.
 
 ## Importing Test Data
 
-You can copy test data from the live openlibrary.org site into your dev instance. `vagrant ssh` into your dev instance, and run the `copydocs.py` script in `/openlibrary/scripts`. If you want to add a book, you must first copy an author record, then the work record, and then the book record.
-On Docker, you'll want to do the following instead of `vagrant ssh`:
+You can copy test data from the live openlibrary.org site into your dev instance. On Docker, first do the following to connect to your docker image:
 
 ```bash
 cd docker
 docker-compose exec web bash
 ```
+
+Next, run the `copydocs.py` script in `/openlibrary/scripts`. If you want to add a book, you must first copy an author record, then the work record, and then the book record.
 
 ```python
 $ cd /openlibrary/scripts
