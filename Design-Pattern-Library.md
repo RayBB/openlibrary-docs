@@ -302,7 +302,7 @@ The footer appears at the top of every page.
 
 ![screen shot 2018-10-12 at 1 00 18 pm](https://user-images.githubusercontent.com/148752/46891462-d0aadf00-ce1e-11e8-93be-a4c0dafcf69c.png)
 
-### ResultCovers
+### ResultCovers (DEPRECATED)
 Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
 Renders on the [subjects page](https://openlibrary.org/subjects/science), [borrow page](https://openlibrary.org/borrow)
 
