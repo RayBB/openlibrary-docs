@@ -467,3 +467,11 @@ Seen on http://openlibary.org/subjects/romance
 
 Must appear at the top of the page.
 
+### UI-Dialog
+
+Deprecated, but in use when removing lists on books pages. See also [colorbox](#colorboxoverlay)
+
+![screen shot 2019-01-11 at 1 41 48 pm](https://user-images.githubusercontent.com/148752/51061094-db544c00-15a6-11e9-8bed-12b2aabbd679.png)
+
+
+
