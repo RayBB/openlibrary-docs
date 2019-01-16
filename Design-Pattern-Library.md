@@ -39,13 +39,11 @@ Other elements can be rendered under the tools but are not part of the component
 #### cta-btn--unavailable
 ![screen shot 2019-01-15 at 10 14 54 pm](https://user-images.githubusercontent.com/148752/51229922-075b2e80-1913-11e9-9d89-f695cc1071e5.png)
 
+#### cta-btn--available
+![screen shot 2019-01-15 at 10 15 53 pm](https://user-images.githubusercontent.com/148752/51229966-37a2cd00-1913-11e9-962f-ad67a187de50.png)
 ```
 <div class="cta-btn cta-btn--available">CTABtn</div>
 ```
-
-#### cta-btn--available
-![screen shot 2019-01-15 at 10 15 53 pm](https://user-images.githubusercontent.com/148752/51229966-37a2cd00-1913-11e9-962f-ad67a187de50.png)
-
 
 [Example](https://openlibrary.org/search?q=Amy+Tan)
 [Example 2](https://openlibrary.org/works/OL1843755W/The_bonesetter's_daughter)
