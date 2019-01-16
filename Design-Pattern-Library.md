@@ -31,13 +31,17 @@ Other elements can be rendered under the tools but are not part of the component
 ### CtaBtn
 
 ```
-<div class="cta-btn cta-btn--available">CTABtn</div>
+<div class="cta-btn">CTABtn</div>
 ```
 ![screen shot 2019-01-15 at 10 25 48 pm](https://user-images.githubusercontent.com/148752/51230361-8b61e600-1914-11e9-864c-319f056e0d78.png)
 ![screen shot 2019-01-15 at 10 15 16 pm](https://user-images.githubusercontent.com/148752/51229964-35d90980-1913-11e9-8869-eeb10c96be76.png)
 
 #### cta-btn--unavailable
 ![screen shot 2019-01-15 at 10 14 54 pm](https://user-images.githubusercontent.com/148752/51229922-075b2e80-1913-11e9-9d89-f695cc1071e5.png)
+
+```
+<div class="cta-btn cta-btn--available">CTABtn</div>
+```
 
 #### cta-btn--available
 ![screen shot 2019-01-15 at 10 15 53 pm](https://user-images.githubusercontent.com/148752/51229966-37a2cd00-1913-11e9-962f-ad67a187de50.png)
