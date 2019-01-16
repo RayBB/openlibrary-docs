@@ -45,6 +45,16 @@ Other elements can be rendered under the tools but are not part of the component
 <div class="cta-btn cta-btn--available">CTABtn</div>
 ```
 
+#### with badge
+```
+<div class="cta-btn">
+  Join waiting list
+  <div class="cta-btn__badge">4</div>
+</div>
+```
+![screen shot 2019-01-16 at 8 11 39 am](https://user-images.githubusercontent.com/148752/51262084-7ada5b80-1966-11e9-8345-b9c93ce4a92a.png)
+
+
 [Example](https://openlibrary.org/search?q=Amy+Tan)
 [Example 2](https://openlibrary.org/works/OL1843755W/The_bonesetter's_daughter)
 
