@@ -28,6 +28,22 @@ Consists of the page title, an inline "count" and a set of tools.
 
 Other elements can be rendered under the tools but are not part of the component.
 
+### CtaBtn
+
+```
+<div class="cta-btn cta-btn--available">CTABtn</div>
+```
+
+#### cta-btn--unavailable
+![screen shot 2019-01-15 at 10 14 54 pm](https://user-images.githubusercontent.com/148752/51229922-075b2e80-1913-11e9-9d89-f695cc1071e5.png)
+#### cta-btn--missing
+![screen shot 2019-01-15 at 10 15 16 pm](https://user-images.githubusercontent.com/148752/51229964-35d90980-1913-11e9-8869-eeb10c96be76.png)
+#### cta-btn--available
+![screen shot 2019-01-15 at 10 15 53 pm](https://user-images.githubusercontent.com/148752/51229966-37a2cd00-1913-11e9-962f-ad67a187de50.png)
+
+
+[Example](https://openlibrary.org/search?q=Amy+Tan)
+
 ### Cover
 
 ![screen shot 2018-09-28 at 2 48 08 pm](https://user-images.githubusercontent.com/148752/46235083-8826f800-c32d-11e8-90e8-3bba12ed484d.png)
