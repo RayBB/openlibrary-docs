@@ -366,12 +366,11 @@ Shows up when you search from the header
 
 ![screen shot 2018-09-15 at 9 45 05 am](https://user-images.githubusercontent.com/148752/45588607-25b10f00-b8cc-11e8-9745-4341af79bb94.png)
 
-### TabsPanel
+### UI-Tabs / TabsPanel
 
 A tab component. See [author page](https://openlibrary.org/authors/OL27173A/Avi/edit) for an example.
 
 ![screen shot 2018-11-21 at 8 28 22 am](https://user-images.githubusercontent.com/148752/48854732-73804280-ed67-11e8-8548-a11257fc1327.png)
-
 
 #### StatsChart
 Can be found on the home page. Graph rendered via an HTML canvas.
