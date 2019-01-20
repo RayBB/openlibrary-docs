@@ -262,6 +262,8 @@ In use on https://openlibrary.org/account/books/want-to-read
 ### MyBooksList
 ![MyBooksList](https://user-images.githubusercontent.com/148752/45579534-3cf4eb80-b83d-11e8-9891-167aeca012c7.png)
 
+uses [SearchResultItem](#searchresultitem)
+
 ### MyBooksMenu
 
 ![screen shot 2018-12-26 at 2 19 50 pm](https://user-images.githubusercontent.com/148752/50458626-58ca5c00-0919-11e9-9128-9f6749df13a6.png)
