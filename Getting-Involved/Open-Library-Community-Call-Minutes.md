@@ -2,6 +2,9 @@ Open Library hosts a Weekly Community Call every Tuesday @ 11:30am PT https://zo
 
 # Table of Contents
 
+## Minutes for 2019
+- [2019-01-22 Community Call](#2019-01-22-community-call)
+
 ## Minutes for 2018
 - [2018-05-15 Community Call](#2018-05-15-community-call)
 - [2018-05-01 Community Call](#2018-05-01-community-call)
@@ -25,6 +28,17 @@ Open Library hosts a Weekly Community Call every Tuesday @ 11:30am PT https://zo
 - [2017-03-21 Community Call](#2017-03-21-community-call)
 - [2017-03-15 Community Call](#2017-03-15-community-call)
 - [2017-03-08 Community Call](#2017-03-08-community-call)
+
+# Minutes for 2019
+
+## 2019-01-22 community call
+
+- search re-indexing
+- amazon isbn api
+- IA/OL sync and orphaned works
+- design status (v2, next steps)
+- python3 next steps? infogami?
+- fixing search results page + subjects page
 
 # Minutes for 2018
 
