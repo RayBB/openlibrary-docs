@@ -134,17 +134,17 @@ Next, run the `copydocs.py` script in `/openlibrary/scripts`. If you want to add
 ```python
 $ cd /openlibrary/scripts
 
-vagrant@ol-dev:/openlibrary/scripts$ $ ./copydocs.py /authors/OL1385865A --src http://openlibrary.org --dest http://localhost --recursive
+$ ./copydocs.py /authors/OL1385865A --src http://openlibrary.org --dest http://localhost --recursive
     fetching ['/authors/OL1385865A']
     saving ['/authors/OL1385865A']
     [{'key': '/authors/OL1385865A', 'revision': 1}]
 
-vagrant@ol-dev:/openlibrary/scripts$ ./copydocs.py /works/OL14906539W --src http://openlibrary.org --dest http://localhost --recursive
+$ ./copydocs.py /works/OL14906539W --src http://openlibrary.org --dest http://localhost --recursive
     fetching ['/works/OL14906539W']
     saving ['/works/OL14906539W']
     [{'key': '/works/OL14906539W', 'revision': 1}]
 
-vagrant@ol-dev:/openlibrary/scripts$ ./copydocs.py /books/OL24966433M --src http://openlibrary.org --dest http://localhost --recursive
+$ ./copydocs.py /books/OL24966433M --src http://openlibrary.org --dest http://localhost --recursive
     fetching ['/books/OL24966433M']
     saving ['/books/OL24966433M']
     [{'key': '/books/OL24966433M', 'revision': 1}]
