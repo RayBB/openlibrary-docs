@@ -150,7 +150,8 @@ $ ./copydocs.py /books/OL24966433M --src http://openlibrary.org --dest http://lo
     [{'key': '/books/OL24966433M', 'revision': 1}]
 ```
 
-Run the following code in the JavaScript console on https://openlibrary.org
+Run the following code on any page in the JavaScript console on https://openlibrary.org 
+For example running the code on https://openlibrary.org/works/OL59831W/Tales_from_Earthsea will give you a command to copy and paste to clone that page into https://localhost:8080/works/OL59831W/Tales_from_Earthsea 
 
 ```
 Array.from($('a').map((i, node)=>node.getAttribute('href')))
