@@ -1,6 +1,64 @@
 ## 5 Million Orphans
 "Orphaned Editions" are Open Library book records that only have an edition item (OL..M) and no corresponding work (OL..W). Search results list works, and the main landing page for a book is a work page. One work can have many editions. Editions without works break the data model and cause various problems with search, links, and syncing data. There is a hack to make search mostly work with these orphans where the edition is indexed as if it is a work. No current process is creating new orphans, but there exist 5 million from the early days of Open Library. An ongoing task has been to find a way to reduce and fix these completely.
 
+## Feb 2019 Update
+
+Of the remaining 5M orphaned editions:
+* IA sourced orphans: 70381
+These are not getting fixed by re-importing due to various issues where the importer is preventing the import to avoid non-book items. We may want to enable an override to relax the restrictions to fix the missing work?
+
+These remaining items appear to be blocked from re-importing due to:
+
+Microfiche example: 'cihm_01524'
+```
+b'{"error_code": "bad-repub-state", "success": false, "error": "Prohibited Item"}'
+```
+  These are microfiche scans, there are 3746 cihm_ items in this category
+
+Other examples:
+```
+  veteransadminist0383unit: {"error_code": "bad-repub-state", "success": false, "error": "Prohibited Item"}
+  colonnade12andiuoft: {"error_code": "item-is-serial", "success": false, "error": "Invalid item"}
+  deecclesiasticb00schogoog: {"error_code": "noindex-true", "success": false, "error": "Prohibited Item"}
+  americanforests04natiuoft: {"error_code": "invalid-ia-identifier", "success": false, "error": "Invalid item"}
+```
+
+6277 of these ocaid items have source_records from MARC files, so these can be re-imported that way.
+
+* Editions with source records in metadata: 695K
+These are books that were imported from library MARC records in the early days of Open Library, before Works were added. Re-importing these by passing their source to the `/api/import/ia` endpoint will generate the Work. This is currently in progress by a bot task.
+
+```
+18 marc:unc_catalog_marc
+48 marc:bpl_marc
+75 marc:wfm_bk_marc
+140 marc:hollis_marc
+422 marc:marc_binghamton_univ
+884 marc:talis_openlibrary_contribution
+1761 marc:bcl_marc
+1819 marc:marc_laurentian
+2152 marc:CollingswoodLibraryMarcDump10-27-2008
+5179 marc:marc_miami_univ_ohio
+8037 marc:marc_cca
+9066 marc:SanFranPL
+12091 marc:marc_university_of_toronto
+25167 marc:marc_ithaca_college
+33450 marc:marc_western_washington_univ
+46041 marc:marc_oregon_summit_records
+87970 marc:marc_upei
+141227 marc:marc_records_scriblio_net
+634103 marc:marc_loc_updates
+```
+
+* 1.7M items do not have ISBNs -- these seem to be very early imports from MARC records that are not captured in metadata, but are available in the history / comments. These can be fixed by checking the source from the history, and then re-importing. I am currently running a script to discover the source MARC records for these 1.7M items.
+
+* 2.5M do not have a MARC source or an ocaid, but have ISBNs.
+
+Of those, most seem to be imported very early on from Amazon. Some of these will also be from library MARC records where the source is not captured in metadata, and these can be distinguished by running a similar check on the comments for the initial import comment. Unfortunately, the existing Amazon lookup will NOT trigger the creation of a Work if only an edition is found. This needs to be fixed to allow these ISBN / Amazon source editions to generate works. 
+
+
+
+
 ## 2018 Update
 
 The information in the sections below is still accurate, but has been difficult to act upon at scale.
