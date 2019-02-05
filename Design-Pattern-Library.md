@@ -13,6 +13,11 @@ You can also help by contributing to the associated mega-issue [#1092](https://g
 
 These are components on Open Library to be made modular and documented:
 
+### Admin table
+![screen shot 2019-02-04 at 4 54 07 pm](https://user-images.githubusercontent.com/148752/52247175-ad101680-289d-11e9-9ddb-821680f6818c.png)
+![screen shot 2019-02-04 at 4 55 01 pm](https://user-images.githubusercontent.com/148752/52247176-ad101680-289d-11e9-9efe-919f128266fd.png)
+
+Seen on 
 ### Book
 ![screen shot 2018-09-21 at 4 25 39 pm](https://user-images.githubusercontent.com/148752/45910063-1134b100-bdbb-11e8-9b1e-aaf2982c483f.png)
 
