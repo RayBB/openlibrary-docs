@@ -23,10 +23,10 @@ Other examples:
   americanforests04natiuoft: {"error_code": "invalid-ia-identifier", "success": false, "error": "Invalid item"}
 ```
 
-6277 of these ocaid items have source_records from MARC files, so these can be re-imported that way.
+6277 of these ocaid items have source_records from MARC files, so these can be re-imported that way. **[IN PROGRESS]**
 
 * Editions with source records in metadata: 695K
-These are books that were imported from library MARC records in the early days of Open Library, before Works were added. Re-importing these by passing their source to the `/api/import/ia` endpoint will generate the Work. This is currently in progress by a bot task.
+These are books that were imported from library MARC records in the early days of Open Library, before Works were added. Re-importing these by passing their source to the `/api/import/ia` endpoint will generate the Work. This is currently in progress by a bot task. **[IN PROGRESS]**
 
 ```
 18 marc:unc_catalog_marc
