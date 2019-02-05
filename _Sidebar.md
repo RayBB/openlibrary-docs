@@ -39,6 +39,7 @@
 	* [Generating Data Dumps](Generating-Data-Dumps)
 	* [Generating Sitemaps](Sitemap-Generation)
 * **Features & Initiatives (RFCs)**
+	* [Book Drive Program](Book-Drive-Program)
 	* [Fixing Help & Support](Help-and-Support)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
