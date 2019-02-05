@@ -1,7 +1,7 @@
 * **[Home](Home)**
 * **Getting Involved**
 	* [Contributor's Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
-        * [Beginner's FAQ](https://github.com/internetarchive/openlibrary/wiki/Beginner's-FAQ)
+       * [Beginner's FAQ](https://github.com/internetarchive/openlibrary/wiki/Beginner's-FAQ)
 	* [Roadmap](https://github.com/internetarchive/openlibrary/projects/7)
 	* [Weekly Community Call](Open-Library-Community-Call-Minutes)
 	* [Google Summer of Code](Google-Summer-of-Code-(2018))
