@@ -476,9 +476,17 @@ A form within the page that allows searching the site.
 
 ![screen shot 2018-11-16 at 3 58 36 pm](https://user-images.githubusercontent.com/148752/48653227-90f48b80-e9b8-11e8-983d-4ad68fc44404.png)
 
-Seen on http://openlibary.org/subjects/romance
+Seen on http://openlibrary.org/subjects/romance
 
 Must appear at the top of the page.
+
+#### searchInsideForm
+A PageHeadingSearchBox must contain a searchInsideForm
+
+![screen shot 2019-02-08 at 5 56 07 pm](https://user-images.githubusercontent.com/148752/52514918-d47f2000-2bca-11e9-9273-35fe92d9901b.png)
+
+Other examples:
+* http://openlibrary.org/lists
 
 ### UI-Dialog
 
