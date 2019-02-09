@@ -316,13 +316,7 @@ The footer appears at the top of every page.
 
 ![screen shot 2018-10-12 at 1 00 18 pm](https://user-images.githubusercontent.com/148752/46891462-d0aadf00-ce1e-11e8-93be-a4c0dafcf69c.png)
 
-### ResultCovers (DEPRECATED)
-Similar to [Carousel](#Carousel) but implemented differently using jCarousel.
-Renders on the [subjects page](https://openlibrary.org/subjects/science), [borrow page](https://openlibrary.org/borrow)
 
-and used for the "you might also like" and "more by <author>" carousels on a [works page](https://openlibrary.org/works/OL16244516W/Harry_Potter)
-
-![ResultsCovers](https://user-images.githubusercontent.com/148752/45588558-72e0b100-b8cb-11e8-8a8f-256e5422a38c.png)
 
 ### SearchResultContainer
 
