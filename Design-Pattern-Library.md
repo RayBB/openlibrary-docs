@@ -461,6 +461,8 @@ Visit http://openlibrary.org/books/add incognito.
 Styled using #noLogin
 Similar styles exist (with different iconography) for #preMerge, #postMerge, #errorMerge
 
+See also [FlashMessage](#FlashMessage)
+
 ### WmdButtonBar
 ![screen shot 2018-11-09 at 3 40 53 pm](https://user-images.githubusercontent.com/148752/48293867-e4edf600-e435-11e8-8d56-11b3e0164722.png)
 
