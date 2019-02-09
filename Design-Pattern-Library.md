@@ -483,6 +483,13 @@ Appears at the top of book pages. Will probably be merged in future with another
 
 ![screen shot 2018-10-23 at 6 03 09 pm](https://user-images.githubusercontent.com/148752/47399581-fcb34380-d6ed-11e8-9c2b-7babc86fac17.png)
 
+### PageAlert
+![screen shot 2019-02-08 at 5 41 26 pm](https://user-images.githubusercontent.com/148752/52514686-de078880-2bc8-11e9-9287-0758ae459889.png)
+
+Visit http://openlibrary.org/books/add incognito.
+Styled using #noLogin
+Similar styles exist (with different iconography) for #preMerge, #postMerge, #errorMerge
+
 ### WmdButtonBar
 ![screen shot 2018-11-09 at 3 40 53 pm](https://user-images.githubusercontent.com/148752/48293867-e4edf600-e435-11e8-8d56-11b3e0164722.png)
 
