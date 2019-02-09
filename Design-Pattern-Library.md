@@ -419,9 +419,6 @@ Seen - https://openlibrary.org/search , https://openlibrary.org/search?q=harry+p
 
 ### Books Page
 
-#### Books Actions Menu
-![BookActionsMenu](https://user-images.githubusercontent.com/978325/45580136-901d6d00-b842-11e8-8233-14ce3da3babd.png)
-
 ### Read Panel
 
 Appears on books page.
