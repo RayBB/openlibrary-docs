@@ -12,3 +12,6 @@
 **Issue link:** For a full description see: https://github.com/internetarchive/openlibrary/issues/1865
 
 ***
+
+## Open Questions
+
