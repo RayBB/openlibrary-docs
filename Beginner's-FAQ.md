@@ -17,6 +17,12 @@
 **Answer:** Check out the answer for this here: https://github.com/internetarchive/openlibrary/issues/1864
 
 ***
+**Question:** What should I do when book covers won't load in the development environment?
+
+**Answer:** This can be resolved by going to conf/openlibrary.yml and changing `coverstore_url` to https://covers.openlibrary.org
+
+**Issue link:** For a full description see: https://github.com/internetarchive/openlibrary/issues/1897
+***
 
 ## Open Questions
 
