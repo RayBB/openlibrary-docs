@@ -122,47 +122,42 @@ Be sure to reboot your vagrant instance after any configuration changes.
 
 ## Importing Test Data
 
-You can copy test data from the live openlibrary.org site into your dev instance. On Docker, first do the following to connect to your docker image:
-
 ```bash
-cd docker
-docker-compose exec web bash
-```
+docker-compose exec web bash  # Connect to the docker image
+cd scripts
 
-Next, run the `copydocs.py` script in `/openlibrary/scripts`. If you want to add a book, you must first copy an author record, then the work record, and then the book record.
+# Copy an author (JUST the author; no works)
+./copydocs.py /authors/OL1385865A --dest http://localhost
+# Outputs:
+#    fetching ['/authors/OL1385865A']
+#    saving ['/authors/OL1385865A']
+#    [{'key': '/authors/OL1385865A', 'revision': 1}]
 
-```python
-$ cd /openlibrary/scripts
+# Copy a work (JUST the work; no editions. --recursive gets any missing authors)
+./copydocs.py /works/OL14906539W --dest http://localhost --recursive
+# Outputs:
+#    fetching ['/works/OL14906539W']
+#    found references ['/authors/OL30714A', '/authors/OL68291A', '/authors/OL1385865A', '/authors/OL1058879A', '/authors/OL238025A']
+#    fetching ['/authors/OL30714A', '/authors/OL68291A', '/authors/OL1385865A', '/authors/OL1058879A', '/authors/OL238025A']
+#    saving ['/authors/OL30714A', '/authors/OL1058879A', '/authors/OL238025A', '/authors/OL68291A', '/authors/OL1385865A']
+#    [{'key': '/authors/OL30714A', 'revision': 1}, {'key': '/authors/OL1058879A', 'revision': 1}, {'key': '/authors/OL238025A', 'revision': 1}, {'key': '/authors/OL68291A', 'revision': 1}]
+#    saving ['/works/OL14906539W']
+#    [{'key': '/works/OL14906539W', 'revision': 1}]
 
-$ ./copydocs.py /authors/OL1385865A --src http://openlibrary.org --dest http://localhost --recursive
-    fetching ['/authors/OL1385865A']
-    saving ['/authors/OL1385865A']
-    [{'key': '/authors/OL1385865A', 'revision': 1}]
-
-$ ./copydocs.py /works/OL14906539W --src http://openlibrary.org --dest http://localhost --recursive
-    fetching ['/works/OL14906539W']
-    saving ['/works/OL14906539W']
-    [{'key': '/works/OL14906539W', 'revision': 1}]
-
-$ ./copydocs.py /books/OL24966433M --src http://openlibrary.org --dest http://localhost --recursive
-    fetching ['/books/OL24966433M']
-    saving ['/books/OL24966433M']
-    [{'key': '/books/OL24966433M', 'revision': 1}]
-```
-
-Run the following code on any page in the JavaScript console on https://openlibrary.org 
-For example running the code on https://openlibrary.org/works/OL59831W/Tales_from_Earthsea will give you a command to copy and paste to clone that page into https://localhost:8080/works/OL59831W/Tales_from_Earthsea 
-
-```
-Array.from($('a').map((i, node)=>node.getAttribute('href')))
-    .filter((url)=>url.indexOf('/books/') === 0 || url.indexOf('/works/') === 0 )
-    .map((url) => url.replace(/(books|works)\/([^/]*)\/(.*)/, '$1/$2' ))
-    .map((url) => `./copydocs.py "${url}" --src http://openlibrary.org --dest http://localhost --recursive`).join('\n')
-```
-and then copy and paste the result into the vagrant instance to get a good sample set:
-```
-vagrant ssh
-<paste output above>
+# Copy an edition (--recursive also gets works/authors)
+./copydocs.py /books/OL24966433M --dest http://localhost --recursive
+# Outputs:
+#    fetching ['/books/OL24966433M']
+#    found references ['/works/OL14906539W']
+#    fetching ['/works/OL14906539W']
+#    found references ['/authors/OL30714A', '/authors/OL68291A', '/authors/OL1385865A', '/authors/OL1058879A', '/authors/OL238025A']
+#    fetching ['/authors/OL30714A', '/authors/OL68291A', '/authors/OL1385865A', '/authors/OL1058879A', '/authors/OL238025A']
+#    saving ['/authors/OL30714A', '/authors/OL1058879A', '/authors/OL238025A', '/authors/OL68291A', '/authors/OL1385865A']
+#    []
+#    saving ['/works/OL14906539W']
+#    []
+#    saving ['/books/OL24966433M']
+#    [{'key': '/books/OL24966433M', 'revision': 1}]
 ```
 
 ## Frontend Guide
@@ -175,7 +170,7 @@ In local development, after making changes to CSS or JS, make sure to run `make 
 
 - OpenLibrary is rendered using [Templetor](http://webpy.org/docs/0.3/templetor) templates, part of the [web.py](http://webpy.org/) framework.
 
-- The repository you cloned on your local machine is mounted at /openlibrary in the vagrant virtual machine. If you make template changes to files locally, the OpenLibrary instance in the virtual machine should automatically pick up those changes.
+- The repository you cloned on your local machine is mounted at /openlibrary in docker. If you make template changes to files locally, the OpenLibrary instance in the virtual machine should automatically pick up those changes.
 
 - The home page is rendered by [templates/home/index.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/home/index.html), and its controller is [plugins/openlibrary/home.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/home.py#L18).
 
