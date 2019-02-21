@@ -36,7 +36,8 @@
 * **Administration, Systems & Dev-ops**
 	* [Services Status Dashboard](https://status.archivelab.org)
 	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
-	* [Production Provisioning](Production-Service-Architecture)
+	* [Deployment Guide](Deployment-Guide)
+	* [Production Architecture & Provisioning](Production-Service-Architecture)
 	* [Generating Data Dumps](Generating-Data-Dumps)
 	* [Generating Sitemaps](Sitemap-Generation)
 * **Features & Initiatives (RFCs)**
