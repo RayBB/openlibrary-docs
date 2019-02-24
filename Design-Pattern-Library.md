@@ -236,6 +236,13 @@ Internet Archive Bar: A bar that appears at the top of all pages. Makes use of a
 
 ![screen shot 2018-09-24 at 5 43 24 pm](https://user-images.githubusercontent.com/148752/45986591-5e19c100-c021-11e8-9993-49d8a71b2621.png)
 
+### Merge Form
+Url: http://localhost:8080/authors/merge?key=OL6848355A&key=OL18319A&key=OL24522A
+Requires admin access
+
+![screen shot 2019-02-24 at 9 54 06 am](https://user-images.githubusercontent.com/148752/53303008-489c0380-381a-11e9-87af-fb5e3994b9b0.png)
+
+
 ### MyBooks
 
 Combines [MyBooksList](#MyBooksList) and [MyBooksMenu](#MyBooksMenu)
