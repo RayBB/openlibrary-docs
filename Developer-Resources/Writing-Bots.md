@@ -14,7 +14,7 @@ Follow these 2 steps to apply for a privileged `bot account`:
 
 **Question** Great, I now have a bot account, I can start fixing thousands of problems I've noticed, right?
 
-**Answer** Hold on! After you have been granted bot access, *please do not* run a bot script to change metadata in bulk (for more than 100 records) until it has first been reviewed by @charles. The right process is to create a new directory for your bot within the https://github.com/internetarchive/openlibrary-bots repository, to open a PR, and to add @charles (@hornc on github) or myself (@mekarpeles on github) as the reviewer. 
+**Answer** Hold on! After you have been granted bot access, *please do not* run a bot script to change metadata in bulk (for more than 100 records) until it has first been reviewed by charles (@hornc on github). The right process is to create a new directory for your bot within the https://github.com/internetarchive/openlibrary-bots repository, to open a PR, and to add charles (@hornc) or myself (@mekarpeles) as the reviewer. 
 
 ***
 
