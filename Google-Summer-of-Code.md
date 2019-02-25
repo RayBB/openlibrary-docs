@@ -4,6 +4,13 @@
 
 [Apply to Google Summer of Code](https://summerofcode.withgoogle.com)
 
+***
+
+# 2019 GSoC
+
+To be announced
+
+# 2018 GSoC
 Open Library (https://openlibrary.org) is a digital library which lends over a million ebooks each year to its 1.75M patrons. The Internet Archive is looking for someone self-directed who loves books and technology to help Open Library expand to a global audience, improve search and discovery, and empower communities with tools to fund the books they want available in their digital library.
 
 The ideal GSoC “Open Librarian” would design and submit a coherent proposal with a plan to improve specific metric(s) like:
@@ -20,7 +27,7 @@ Feel free to [open new github issues](https://github.com/internetarchive/openlib
 
 **Bonus:** solr, Docker, postgres
 
-## Need Inspiration?
+# Need Inspiration?
 
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
 
