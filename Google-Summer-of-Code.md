@@ -1,4 +1,8 @@
-[Apply to Google Summer of Code (2018)](https://summerofcode.withgoogle.com)
+**Update** Open Library will be participating in Google Summer of Code 2019! 
+
+***
+
+[Apply to Google Summer of Code](https://summerofcode.withgoogle.com)
 
 Open Library (https://openlibrary.org) is a digital library which lends over a million ebooks each year to its 1.75M patrons. The Internet Archive is looking for someone self-directed who loves books and technology to help Open Library expand to a global audience, improve search and discovery, and empower communities with tools to fund the books they want available in their digital library.
 
@@ -20,7 +24,7 @@ Feel free to [open new github issues](https://github.com/internetarchive/openlib
 
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
 
-> The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit openlibrary and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
+> The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit Open Library and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
 
 ## Examples
 
