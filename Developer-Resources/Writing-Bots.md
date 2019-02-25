@@ -10,6 +10,15 @@ Follow these 2 steps to apply for a privileged `bot account`:
 1) First, [register a new OpenLibary account](https://openlibrary.org/account/create) which meets the following guidelines: (a) Your `bot account` should be **different** from your personal OpenLibrary account and (b) the username of your new account should end with the word "Bot" (e.g. `WorkBot`, `ImportBot`). These conventions allow us to [monitor / filter through `Recent Changes` by `bot`s](https://openlibrary.org/recentchanges#bots) to identify only those changes made by `bot account`s. (Since bots tend to repeat the same small operation with high frequency, they would overwhelm the list if shown alongside edits by humans.)
 2) Open a github issue and ask a site `admin` (e.g. @mekarpeles, as of 2018) to set your account to have `bot` privileges and to [add your account to the `"API" usergroup`](http://openlibrary.org/usergroup/api?m=edit)
 
+# Getting Started Rules
+
+wanted to make a quick announcement as there's some interest in writing bots:
+
+1) @hornc (@charles) is our lead on metadata and is a great person to answer questions about the `openlibrary-client` and writing/registering `bots` to fix metadata or add new books to our catalog
+2) Before writing a bot, you'll need to create a new Open Library account and have either @mek or @charles set you up as a `bot` with API access. https://openlibrary.org/dev/docs/bots -- here is how that works
+3) After you have been granted bot access, *please do not* run a bot script to change metadata in bulk (for more than 100 records) until it has first been reviewed by @charles. The right process is to create a new directory for your bot within the https://github.com/internetarchive/openlibrary-bots repository, to open a PR, and to add @charles (@hornc on github) or myself (@mekarpeles on github) as the reviewer. If you need access to that repository, I/@mek can grant it to you.
+4) If you are writing a bot to add new or updated metadata to Open Library from a file(s), those files should also be committed with your script to https://github.com/internetarchive/openlibrary-bots
+
 # `openlibrary-client` Library
 
 Instead of making POSTs to API endpoints directly using a `bot account`, the OpenLibrary community has created an official python client library called [`openlibrary-client`](https://github.com/internetarchive/openlibrary-client) which streamlines the process of making metadata updates and writing `bot`s. `Bot`s used to be written using the http://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py library, but this has been deprecated in favor of the much easier (and safer) `openlibrary-client`.
