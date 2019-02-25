@@ -23,6 +23,12 @@
 
 **Issue link:** For a full description see: https://github.com/internetarchive/openlibrary/issues/1897
 ***
+**Question:** What should I do when I come across an internal error (like the one below) while running Open Library locally on Docker? 
+```
+"Sorry. There seems to be a problem with what you were just looking at. We've noted the error 2019-02-05/193353339339 and will look into it as soon as possible. Head for home?"
+```
+**Answer:** When you hit an error, if you add `?debug=true` to the url (if it's a GET), or (if it's a POST) inspect the form element and add `?debug=true` to the action url, you should see a useful stack trace.
+***
 
 ## Open Questions
 
