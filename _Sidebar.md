@@ -4,7 +4,7 @@
   * [Contributor's FAQ](https://github.com/internetarchive/openlibrary/wiki/Beginner's-FAQ)
   * [Roadmap](https://github.com/internetarchive/openlibrary/projects/7)
   * [Weekly Community Call](Open-Library-Community-Call-Minutes)
-  * [Google Summer of Code](Google-Summer-of-Code-(2018))
+  * [Google Summer of Code](Google-Summer-of-Code)
   * [Google Code-in 2018](https://github.com/internetarchive/openlibrary/milestone/17)
   * [Hacktoberfest 2018](Hacktoberfest-2018)
   * [Library Community Congress 2019?](Library-Congress-2019)
