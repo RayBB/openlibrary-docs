@@ -1,6 +1,8 @@
 ## 5 Million Orphans
 "Orphaned Editions" are Open Library book records that only have an edition item (OL..M) and no corresponding work (OL..W). Search results list works, and the main landing page for a book is a work page. One work can have many editions. Editions without works break the data model and cause various problems with search, links, and syncing data. There is a hack to make search mostly work with these orphans where the edition is indexed as if it is a work. No current process is creating new orphans, but there exist 5 million from the early days of Open Library. An ongoing task has been to find a way to reduce and fix these completely.
 
+![orphaned editions graph](https://docs.google.com/spreadsheets/d/e/2PACX-1vTEIOrqppehDt3GFfGwVsqefoUWkB3syOJHZLakNsf2alWkW28s8G6DaqXf58ZXiOgZZV6oIn5f78Fz/pubchart?oid=1153405837&format=image)
+
 ## Feb 2019 Update
 
 Of the remaining 5M orphaned editions:
@@ -70,8 +72,6 @@ This is a huge win, and will allow the editions-without-works problem to be solv
 ### New process drawing on the plans below
 For each category identified below, in priority order, filter the orphan edition records from the OL db dumps, determine the original source from `source_records` and perform the appropriate [re-import request](https://github.com/internetarchive/openlibrary/wiki/Endpoints#importing).
 
-
-![orphaned editions graph](https://docs.google.com/spreadsheets/d/e/2PACX-1vTEIOrqppehDt3GFfGwVsqefoUWkB3syOJHZLakNsf2alWkW28s8G6DaqXf58ZXiOgZZV6oIn5f78Fz/pubchart?oid=1153405837&format=image)
 
 ## Planning
 
