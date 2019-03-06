@@ -36,6 +36,7 @@ The order in which these files are included is determined by the sort order of t
 
 If you make any changes to any of the JavaScript files, run `make js` to regenerate `build/js/all.js`.
 
+
 ## Working with CSS
 
 All stylesheets are in `static/css`. They are combined to generate `build/css/all.css`, which is included in all the web pages.
@@ -43,3 +44,13 @@ All stylesheets are in `static/css`. They are combined to generate `build/css/al
 It's a good idea to break CSS into multiple logical files, instead of putting it in one monolithic file.
 
 If you make changes to any CSS, run `make css` to regenerate `build/css/all.css`.
+
+### Loading CSS with Javascript
+
+When adding CSS content, while testing you may face an error such as this for example:
+
+```
+ FAIL static/build/page-plain.css: 18.81KB > maxSize 18.8KB (gzip)
+```
+This is telling you that your changes have increased the amount of CSS loaded on the critical path, than the required amount. This can lead to performance degradation so note that it should be avoided wherever possible.
+Instead, new styles can be moved to a file `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import` . This means that CSS will only get loaded via JavaScript.
