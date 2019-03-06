@@ -29,6 +29,16 @@
 ```
 **Answer:** When you hit an error, if you add `?debug=true` to the url (if it's a GET), or (if it's a POST) inspect the form element and add `?debug=true` to the action url, you should see a useful stack trace.
 ***
+**Question:** What should I do if I come across a bundle-size error (like the one below) while running `docker-compose exec web make test` to test? 
+```
+ FAIL static/build/page-plain.css: 18.81KB > maxSize 18.8KB (gzip)
+```
+**Answer:** Consider placing styles in an JavaScript entry point file e.g. `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import`. This CSS will only get loaded via JavaScript and has a much higher bundle size threshold.
+
+**Issue Link**: https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#beware-of-bundle-sizes
+***
+
+
 
 ## Open Questions
 
