@@ -45,12 +45,14 @@ It's a good idea to break CSS into multiple logical files, instead of putting it
 
 If you make changes to any CSS, run `make css` to regenerate `build/css/all.css`.
 
-### Loading CSS with Javascript
+### Beware of bundle sizes
 
 When adding CSS content, while testing you may face an error such as this for example:
 
 ```
  FAIL static/build/page-plain.css: 18.81KB > maxSize 18.8KB (gzip)
 ```
-This is telling you that your changes have increased the amount of CSS loaded on the critical path, than the required amount. This can lead to performance degradation so note that it should be avoided wherever possible.
-Instead, new styles can be moved to a file `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import` . This means that CSS will only get loaded via JavaScript.
+This is telling you that your changes have increased the amount of CSS loaded, more than the required amount. This can lead to performance degradation so note that it should be avoided wherever possible (or be well justified!).
+
+These problems are especially a concern for [CSS files on the critical path](https://www.smashingmagazine.com/2015/08/understanding-critical-css/). Always consider placing styles in an JavaScript entrypoint file e.g. `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import`. This CSS will only get loaded via JavaScript and has a much higher bundlesize threshold.
+
