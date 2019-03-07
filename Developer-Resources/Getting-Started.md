@@ -168,7 +168,7 @@ await fetch(location.href.replace(/[^\/]*$/, 'editions.json?limit=100&offset=0')
 .then(d => './copydocs.py --recursive ' + d.entries.map(e => e.key).join(' '))
 ```
 
-(TIP: You can copy the output of the previous command by running `copy($_)` in your terminal! [Learn more](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Helpers))
+(TIP: You can copy the output of the previous command by running `copy($_)` in the console! [Learn more](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Helpers))
 
 ## Frontend Guide
 
