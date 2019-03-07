@@ -160,12 +160,12 @@ cd scripts
 #    [{'key': '/books/OL24966433M', 'revision': 1}]
 ```
 
-To import a work's editions, run the following JavaScript in your browser's console on the work page. This will place a `copydocs` command you can paste into your terminal. (Note the limit/offset params! The limit defaults to 50.)
+To import a work's editions, run this JavaScript in your browser's console on a work page. This will output a `copydocs` command you can copy/paste into your terminal. (Note the limit/offset params! The limit defaults to 50.)
 
 ```js
-copy('./copydocs.py --recursive ' + await fetch(location.href.replace(/[^\/]*$/, 'editions.json?limit=100&offset=0'))
+await fetch(location.href.replace(/[^\/]*$/, 'editions.json?limit=100&offset=0'))
 .then(r => r.json())
-.then(d => d.entries.map(e => e.key).join(' ')))
+.then(d => './copydocs.py --recursive ' + d.entries.map(e => e.key).join(' '))
 ```
 
 ## Frontend Guide
