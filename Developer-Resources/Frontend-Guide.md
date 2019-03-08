@@ -6,13 +6,9 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 
 ## Working with JavaScript
 
-The Open Library website makes heavy use of jQuery libraries. 
+Open Library uses jQuery. Except `jquery` and `jquery-ui`, other third-party JavaScript libraries are combined and included as `vendor.js`. All the custom JavaScripts are combined and includes as `all.js`.
 
-Except `jquery` and `jquery-ui`, all other third-party JavaScript libraries are combined and included as `vendor.js`.
-
-All the custom JavaScripts are combined and includes as `all.js`.
-
-Most of the heavy lifting is done by a file in `openlibrary/openlibrary/plugins/openlibrary/js/ol.js`
+Most of the heavy application lifting is done by a file in `openlibrary/openlibrary/plugins/openlibrary/js/ol.js`
 
 ### vendor.js and third party libraries
 
@@ -36,6 +32,15 @@ The order in which these files are included is determined by the sort order of t
 
 If you make any changes to any of the JavaScript files, run `make js` to regenerate `build/js/all.js`.
 
+### Working in Docker
+
+Refer to: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md#code-updates
+
+While running the oldev container, gunicorn is configured to auto-reload modified files. To see the effects of your changes in the running container, the following apply:
+
+Editing python files or web templates => simply save the file, gunicorn will auto-reload it.
+Working on frontend css or js => you must run docker-compose exec web make css js. This will re-generate the assets in the persistent ol-build volume mount, so the latest changes will be available between stopping / starting and removing web containers. Note, if you want to view the generated output you will need to attach to the container (docker-compose exec web bash) to examine the files in the volume, not in your local dir.
+Adding or changing core dependencies => you will most likely need to rebuild both olbase and oldev images. This shouldn't happen too frequently. If you are making this sort of change, you will know exactly what you are doing
 
 ## Working with CSS
 
