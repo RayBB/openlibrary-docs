@@ -19,20 +19,6 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 5. **[Friday Lunch](https://twitter.com/internetarchive/status/596768668756774914)** - Internet Archive hosts a by-invite lunch each Friday @ 300 Funston, SF in the Inner Richmond. please contact mek@archive.org
 6. **Office Hours** - Mek hosts office hours on Sunday between 11am - 10pm (PT) for anyone who has questions about contributing. please contact mek@archive.org.
 
-## SMART Goals for the Open library Re-Design
-
-In progress:
-1. Specific. What will the goal accomplish? How and why will it be accomplished? 
-2. Measurable. How will you measure whether or not the goal has been reached (list at least two
-indicators)?
-3. Achievable. Is it possible? Have others done it successfully? Do you have the necessary knowledge,
-skills, abilities, and resources to accomplish the goal? Will meeting the goal challenge you without
-defeating you? 
-4. Results-focused. What is the reason, purpose, or benefit of accomplishing the goal? What is the
-result (not activities leading up to the result) of the goal?
-5. Time-bound. What is the established completion date and does that completion date create a practical
-sense of urgency? 
-
 ## Design & Product Team
 
 If you're joining the design and product team, you probably have a bunch of the following questions:
