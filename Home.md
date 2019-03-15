@@ -10,6 +10,25 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 - [View Team Member Profiles (created with Google Forms) and add your own profile](https://docs.google.com/forms/d/e/1FAIpQLSch2GjtxEYnCTC0-imVRuIZBsvAmV7lA52vdcaNTvzmHXqS8Q/viewform?usp=sf_link)
 
+### Deputy Table
+
+Have a question and not sure who to ask?
+
+| Responsibility                 | Lead               |
+|--------------------------------|--------------------|
+| Product Lead & Policy          | @mek               |
+| Site reliability & Deployment  | @mek / @charles    |
+| Metadata, Client, Bots, Import | @charles           |
+| Openlibrary-client             | @rahul-kumi        |
+| ONIX Bot                       | @akash             |
+| Front-End & Mobile             | @jdlrobson         |
+| Search (solr)                  | @cdrini, @tfmorris |
+| Python 3                       | @cclauss           |
+| Internationalization (i18n)    | @tabish            |
+| Front-end component library    | @koderjoker        |
+| Github pr                      | @brad2014          |
+| Docker + Dev Build System      | @cdrini            |
+
 ## Communication
 
 1. **[Github Issues](https://github.com/internetarchive/openlibrary/issues)** - We try to respond to issues within 24h!
