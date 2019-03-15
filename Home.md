@@ -18,15 +18,16 @@ Have a question and not sure who to ask?
 |--------------------------------|--------------------|
 | Product Lead & Policy          | @mek               |
 | Site reliability & Deployment  | @mek / @charles    |
-| Metadata, Client, Bots, Import | @charles           |
+| Metadata Catalog (APIs)        | @charles           |
 | Openlibrary-client             | @rahul-kumi        |
 | ONIX Bot                       | @akash             |
 | Front-End & Mobile             | @jdlrobson         |
+| Front-End Component Library    | @koderjoker        |
 | Search (solr)                  | @cdrini, @tfmorris |
 | Python 3                       | @cclauss           |
 | Internationalization (i18n)    | @tabish            |
 | Front-end component library    | @koderjoker        |
-| Github pr                      | @brad2014          |
+| Github Processes               | @brad2014          |
 | Docker + Dev Build System      | @cdrini            |
 
 ## Communication
