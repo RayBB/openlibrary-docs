@@ -26,7 +26,6 @@ Have a question and not sure who to ask?
 | Search (solr)                  | @cdrini, @tfmorris |
 | Python 3                       | @cclauss           |
 | Internationalization (i18n)    | @tabish            |
-| Front-end component library    | @koderjoker        |
 | Github Processes               | @brad2014          |
 | Docker + Dev Build System      | @cdrini            |
 
