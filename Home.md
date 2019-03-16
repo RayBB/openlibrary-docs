@@ -21,7 +21,7 @@ Have a question and not sure who to ask?
 | Metadata Catalog (APIs)        | [@hornc](http://github.com/hornc) |
 | Openlibrary-client             | [@rahul-kumi](http://github.com/rahul-kumi) |
 | ONIX Bot                       | [@nimbus98](http://github.com/nimbus98) |
-| Front-End & Mobile             | [@jdlrobson](http://github.com/jdlrobson] |
+| Front-End & Mobile             | [@jdlrobson](http://github.com/jdlrobson) |
 | Front-End Component Library    | [@koderjoker](http://github.com/koderjoker) |
 | Search (solr)                  | [@cdrini](http://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) |
 | Python 3                       | [@cclauss](http://github.com/cclauss) |
