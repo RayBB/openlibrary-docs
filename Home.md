@@ -47,7 +47,7 @@ Reference Materials:
 - [Where can I find an ecosystem diagram?](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
 - Where can I find [lending](https://openlibrary.org/stats/lending) or [page view](https://archive.org/stats/#openlibrary) analytics or stats for Open Library?
 
-Designs and Ideas"
+Design Assets:
 - [Where can I find Open Library design mocks and wireframes?](https://www.dropbox.com/sh/aii0z9j8a4505f1/AABFExKzYJn692IDtQKpWD3Ia)
 
 ## Quality Team
