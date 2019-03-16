@@ -1,6 +1,6 @@
-# Welcome to Open Library Hacktoberfest 2018!
+# Welcome to Open Library Hacktoberfest!
 
-It’s that time of the year again, everyone: time for Hacktoberfest 2018, the annual event for contributing to Open Source, hosted by DigitalOcean, Github and Twilio! Get free T Shirts and Stickers shipped to your address on contributing 5 Pull Requests for the first 50,000 participants across the Globe. This is an amazing way to support your favorite open source projects.
+It’s that time of the year again, everyone: time for Hacktoberfest, the annual event for contributing to Open Source, hosted by DigitalOcean, Github and Twilio! Get free T Shirts and Stickers shipped to your address on contributing 5 Pull Requests for the first 50,000 participants across the Globe. This is an amazing way to support your favorite open source projects.
 
 ## What is Open Library?
 
