@@ -5,9 +5,8 @@
   * [Roadmap](https://github.com/internetarchive/openlibrary/projects/11)
   * [Weekly Community Call](Open-Library-Community-Call-Minutes)
   * [Google Summer of Code](Google-Summer-of-Code)
-  * [Google Code-in 2018](https://github.com/internetarchive/openlibrary/milestone/17)
-  * [Hacktoberfest 2018](Hacktoberfest-2018)
-  * [Library Community Congress 2019?](Library-Congress-2019)
+  * [Google Code-in](https://github.com/internetarchive/openlibrary/milestone/17)
+  * [Hacktoberfest](Hacktoberfest)
 * **[Design Resources](Design)**
 	* [Frontend Guide](Frontend-Guide)
 	* [Design Pattern Library](Design-Pattern-Library)
