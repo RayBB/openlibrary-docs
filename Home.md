@@ -14,20 +14,20 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 Have a question and not sure who to ask?
 
-| Responsibility                 | Lead                |
-|--------------------------------|---------------------|
-| Product Lead & Policy          | @mek                |
-| Site reliability & Deployment  | @mek / @charles     |
-| Metadata Catalog (APIs)        | @charles            |
-| Openlibrary-client             | @rahul-kumi         |
-| ONIX Bot                       | @akash              |
-| Front-End & Mobile             | @jdlrobson          |
-| Front-End Component Library    | @koderjoker         |
-| Search (solr)                  | @cdrini / @tfmorris |
-| Python 3                       | @cclauss            |
-| Internationalization (i18n)    | @tabish             |
-| Github Processes               | @brad2014           |
-| Docker + Dev Build System      | @cdrini             |
+| Responsibility                 | Lead |
+|--------------------------------|------|
+| Product Lead & Policy          | [@mekarpeles](http://github.com/mekarpeles) |
+| Site reliability & Deployment  | [@mekarpeles](http://github.com/mekarpeles) / [@hornc](http://github.com/hornc) |
+| Metadata Catalog (APIs)        | [@hornc](http://github.com/hornc) |
+| Openlibrary-client             | [@rahul-kumi](http://github.com/rahul-kumi) |
+| ONIX Bot                       | [@nimbus98](http://github.com/nimbus98) |
+| Front-End & Mobile             | [@jdlrobson](http://github.com/jdlrobson] |
+| Front-End Component Library    | [@koderjoker](http://github.com/koderjoker) |
+| Search (solr)                  | [@cdrini](http://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) |
+| Python 3                       | [@cclauss](http://github.com/cclauss) |
+| Internationalization (i18n)    | [@tabshaikh ](http://github.com/tabshaikh) |
+| Github Processes               | [@brad2014](http://github.com/brad2014) |
+| Docker + Dev Build System      | [@cdrini](http://github.com/cdrini) |
 
 ## Communication
 
