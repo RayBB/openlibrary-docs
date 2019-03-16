@@ -43,7 +43,7 @@ Have a question and not sure who to ask?
 If you're joining the design and product team, you probably have a bunch of the following questions:
 
 Reference Materials:
-- [What is the current feature roadmap?](https://github.com/internetarchive/openlibrary/wiki/Roadmap)
+- [What is the current feature roadmap?](https://github.com/internetarchive/openlibrary/projects/11)
 - [Where can I find an ecosystem diagram?](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
 - Where can I find [lending](https://openlibrary.org/stats/lending) or [page view](https://archive.org/stats/#openlibrary) analytics or stats for Open Library?
 
