@@ -246,6 +246,7 @@ to **DELETE** a memcached entry:
 - To connect to the db run:
 
 ```bash
+su postgres
 psql openlibrary
 ```
 
