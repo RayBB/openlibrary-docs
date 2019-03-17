@@ -2,7 +2,7 @@
 
 ***
 
-[Apply to Google Summer of Code](https://summerofcode.withgoogle.com)
+[Apply to Google Summer of Code](https://summerofcode.withgoogle.com/organizations/6482109326163968/)
 
 ***
 
