@@ -69,8 +69,10 @@ $ python scripts/migrate_db.py
 
 This will look at the current database schema, identify its version, and upgrade it to the latest version.
 
+<a name="using-the-open-library-website"></a>
 ## Using the Open Library Website
 
+<a name="logging-in"></a>
 ### Logging In
 
 You can log into the OpenLibrary instance as an admin 
@@ -79,12 +81,14 @@ Username: openlibrary@example.com
 Password: openlibrary
 ```
 
+<a name="admin-interface"></a>
 ### Admin Interface
 
 For users with sufficient privileges, an admin interface is available at `http://localhost:8080/admin`.
 
 - If you want to add a new user to the admin group, you can do that at `http://localhost:8080/usergroup/admin`
 
+<a name="creating-users"></a>
 ### Creating Users
 
 - If you create a user, you will have to verify the email address, but you will not be able to send email from your vagrant dev instance. Instead, you can find the verification link in the app server log, which should be in `/var/log/upstart/ol-web.log`.
@@ -99,6 +103,7 @@ The hash you see will be different that above. Just load that link and the user 
 
 **Debugging:** During sign up, if you get an error "INPUT ERROR: K: FORMAT OF SITE KEY WAS INVALID", then it probably means reCAPTCHA has not been set up on your local dev environment. See [reCAPTCHA v2](#recaptcha) below.
 
+<a name="lending-and-borrowing"></a>
 ### Lending and Borrowing
 
 These instructions are fairly specific to Internet Archive staff who are administrating the Open Library service and who have access to the production olsystem repository.
@@ -107,6 +112,7 @@ It essentially enables your local developer repository to behave as if it were a
 
 To enable lending on localhost check [this](https://github.com/internetarchive/olsystem/blob/master/Readme.md#enabling-lending-on-localhost)
 
+<a name="configuration"></a>
 ### Configuring
 
 Various configuration options can be found in conf/openlibrary.yml
@@ -120,6 +126,7 @@ By default these might be triggering 404s. Point coverstore_url to https://cover
 
 Be sure to reboot your vagrant instance after any configuration changes.
 
+<a name="importing-test-data"></a>
 ## Importing Test Data
 
 ```bash
@@ -170,12 +177,15 @@ await fetch(location.href.replace(/[^\/]*$/, 'editions.json?limit=100&offset=0')
 
 (TIP: You can copy the output of the previous command by running `copy($_)` in the console! [Learn more](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Helpers))
 
+<a name="frontend-guide"></a>
 ## Frontend Guide
 
+<a name="building-css-and-js"></a>
 ### Building CSS and JS
 
 In local development, after making changes to CSS or JS, make sure to run `make css` or `make js`, in order to re-compile the build/ static assets. You might also need to restart the webserver and/or clear browser caches to see the changes.
 
+<a name="routing-and-templates"></a>
 ### Routing and Templates
 
 - OpenLibrary is rendered using [Templetor](http://webpy.org/docs/0.3/templetor) templates, part of the [web.py](http://webpy.org/) framework.
@@ -188,8 +198,10 @@ In local development, after making changes to CSS or JS, make sure to run `make 
 
 - A works page is rendered by [templates/type/work/view.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/work/view.html). A work is defined by work type. A work is served by a `/works/OL\d+W` url.
 
+<a name="backend-guide"></a>
 ## Backend Guide
 
+<a name="memcache"></a>
 ### Memcache
 
 - Infobase queries get cached in memcache. In the vagrant dev instance, there is a single-node memcache cluster that you can test by connecting to your test instance using `vagrant ssh` and then typing:
@@ -230,6 +242,7 @@ to **DELETE** a memcached entry:
 >>> mc.get('ia.get_metadata-"houseofscorpion00farmrich"')
 ```
 
+<a name="logs"></a>
 ### Logs
 
 - Logs for the upstart services will be in `/var/log/upstart/`.
@@ -237,6 +250,7 @@ to **DELETE** a memcached entry:
 - The app server logs will be in `/var/log/upstart/ol-web.log`.
 
 
+<a name="database"></a>
 ### Database
 
 - You should never work directly with the database, all the data are indeed managed by OpenLibrary through *infobase*, but, if you are brave and curious, here you can find some useful infos.
@@ -293,6 +307,7 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='52';
 openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 ```
 
+<a name="recaptcha"></a>
 ### Recaptcha
 
 - Currently we use reCAPTCHA v2, which validates users based on the "I'm not a robot" checkbox. 
