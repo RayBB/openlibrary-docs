@@ -67,7 +67,7 @@ $ python setup.py shell
 $ python scripts/migrate_db.py
 ```
 
-This will look the current database schema and identifies its version and upgrades it to the latest version.
+This will look at the current database schema, identify its version, and upgrade it to the latest version.
 
 ## Using the Open Library Website
 
