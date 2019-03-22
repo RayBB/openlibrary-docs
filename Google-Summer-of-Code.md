@@ -42,7 +42,7 @@ Feel free to [open new github issues](https://github.com/internetarchive/openlib
 1. Your application shouldn't just be a collection of issues. Group issues into logical themes. For instance, "my theme for phase one of my roadmap is making Open Library more accessible to people in non-US countries".
 2. Ask lots of questions -- some of your ideas may be easy in principle, but hard because Open Library's code base can be difficult to work with! Ask mentors how long they thing an issue will take, it's one of the most important pieces of value they can offer.
 3. Consider creating Open Library issues proposing features you'd like to include in your application. Get feedback from the community and see whether it's something they also value and will support.
-4. Have an idea of what success means / looks like from the very beginning. How will you know if you've won?
+4. Have an idea of what success means / looks like from the very beginning. How will you know if you've won? Brewster suggests one strategy is, "start with the aspirational blog post and work backwards".
 
 # Need Inspiration?
 
