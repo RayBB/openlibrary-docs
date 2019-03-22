@@ -37,6 +37,12 @@ Feel free to [open new github issues](https://github.com/internetarchive/openlib
 
 **Bonus:** solr, Docker, postgres
 
+# General Advice
+
+1. Your application shouldn't just be a collection of issues. Choose themes
+2. Ask lots of questions -- some of your ideas may be easy in principle, but hard because Open Library's code base can be difficult to work with! Ask mentors how long they thing an issue will take, it's one of the most important pieces of value they can offer.
+3. Consider creating Open Library issues proposing features you'd like to include in your application. Get feedback from the community and see whether it's something they also value and will support.
+
 # Need Inspiration?
 
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
