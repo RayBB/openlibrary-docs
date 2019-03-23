@@ -7,13 +7,13 @@
 	* [Hacktoberfest](Hacktoberfest)
 * **Developer Resources**
 	* [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
-	* **Developer Environment**
+	* **Dev Environment**
 		* [Architecture of Dev Instance](Architecture)
 		* [Getting Setup](Getting-Started)
 		* [Testing Your Code](Testing)
 		* [Importing Book Records](Data-Importing)
 	* **Front-End**
-		* [Frontend Guide](Frontend-Guide)
+		* [Front-end Guide](Frontend-Guide)
 		* [Design Pattern Library](Design-Pattern-Library)
 		* [Overview of HTTP Endpoints](Endpoints)
 	* **Back-End**
