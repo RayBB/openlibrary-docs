@@ -1,28 +1,28 @@
 * **[Home](Home)**
+* **[FAQs](Beginner's-FAQ)**
 * **Getting Involved**
-	* [Contributor's Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
-  * [Contributor's FAQ](https://github.com/internetarchive/openlibrary/wiki/Beginner's-FAQ)
-  * [Roadmap](https://github.com/internetarchive/openlibrary/wiki/Roadmap)
-  * [Weekly Community Call](Open-Library-Community-Call-Minutes)
-  * [Google Summer of Code](Google-Summer-of-Code)
-  * [Google Code-in](https://github.com/internetarchive/openlibrary/milestone/17)
-  * [Hacktoberfest](Hacktoberfest)
+	* [Weekly Community Calls](Open-Library-Community-Call-Minutes)
+	* [Google Summer of Code](Google-Summer-of-Code)
+	* [Google Code-in](https://github.com/internetarchive/openlibrary/milestone/17)
+	* [Hacktoberfest](Hacktoberfest)
+* **Developer Resources**
+	* [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
+	* **Developer Environment**
+		* [Architecture of Dev Instance](Architecture)
+		* [Getting Setup](Getting-Started)
+		* [Testing Your Code](Testing)
+		* [Importing Book Records](Data-Importing)
+	* **Front-End**
+		* [Frontend Guide](Frontend-Guide)
+		* [Design Pattern Library](Design-Pattern-Library)
+		* [Overview of HTTP Endpoints](Endpoints)
+	* **Back-End**
+		* [Enabling Features](Feature-Flagging)
+		* [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)
 * **[Design Resources](Design)**
-	* [Frontend Guide](Frontend-Guide)
-	* [Design Pattern Library](Design-Pattern-Library)
 	* [Design & Ecosystem Diagram](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
 	* [Logos](https://drive.google.com/file/d/1GlUpiaobyL6dbxu8Ok_i_R87aalpzH_z/view)
 	* [Wireframes](Design)
-* **Developer Resources**
-	* [Getting Started](Getting-Started)
-	* [Overview of HTTP Endpoints](Endpoints)
-	* [Testing Your Code](Testing)
-	* [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)
-	* [Architecture of Dev Instance](Architecture)
-	* [Solr Indexing](SOLR-Indexing)
-	* [Importing Book Records](Data-Importing)
-	* [Writing Bots](Writing-Bots)
-	* [Enabling Features](Feature-Flagging)
 * **Librarian Resources** 
 	* [Library Metadata Standards](Library-Metadata-Standards)
 	* [Guide to Identifiers](Guide-to-Identifiers)
@@ -31,13 +31,15 @@
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Overview of Data Sources](Data-Source-Overview)
 	* [Writing Bots](Writing-Bots)
-	* [Dealing with Spam](Anti-Spam-Tools)
+	* [Importing Book Records](Data-Importing)
 * **Administration, Systems & Dev-ops**
-	* [Services Status Dashboard](https://status.archivelab.org)
-	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
-	* [Deployment Guide](Deployment-Guide)
 	* [Production Architecture & Provisioning](Production-Service-Architecture)
+	* [Services Status Dashboard](https://status.archivelab.org)
+	* [Deployment Guide](Deployment-Guide)
+	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
+	* [Dealing with Spam](Anti-Spam-Tools)
 	* [Generating Data Dumps](Generating-Data-Dumps)
+	* [Solr Indexing](SOLR-Indexing)
 	* [Generating Sitemaps](Sitemap-Generation)
 * **Features & Initiatives (RFCs)**
 	* [Book Drive Initiative](Book-Drive)
