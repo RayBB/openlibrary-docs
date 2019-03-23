@@ -1,5 +1,20 @@
-# Q2 / Q3
+# Active Roadmap
 
+https://github.com/internetarchive/openlibrary/projects/11
+
+## 2019
+
+https://docs.google.com/document/d/16rxDNLnVBbkrgzUNd2YVFheB4UtAe63Y-dX_5MHSrY8/edit#heading=h.n0o9aed9lyeh
+
+## 2018
+https://docs.google.com/document/d/1wpa4f-r8jBimam-36CAZGQ_QjApegm10XfH85eG7KAE/edit#
+
+### Q2
+https://docs.google.com/document/d/1yLWc335qsLyMPbWULMj25VGBX-ruJrcBH0JpfLzxy0Y/edit
+
+## 2017
+
+### Q2/Q3
 * Clarify confusing **Messaging**
   * "Read vs. Borrow vs. Buy"
   * List "seeds"
