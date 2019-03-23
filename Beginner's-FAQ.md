@@ -37,8 +37,3 @@
 
 **Issue Link**: https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#beware-of-bundle-sizes
 ***
-
-
-
-## Open Questions
-
