@@ -10,7 +10,13 @@ Theorising that these apply equally to all record types, Work, Edition, and Auth
 
 (Feature request in openlibray-client for a diff tool that distinguishes these states https://github.com/internetarchive/openlibrary-client/issues/7)
 
-## Straightforward Merge Works
+## Merging Works
+
+Merging is actually a bit tricky for a variety of reasons
+
+If work `A` gets merged into work `B`....Then work `A` need to be converted into a *redirect* (@hornc can explain how this is done). But also, we need to transfer all of `A`'s editions to work `B`! And what about the other metadata? What happens if work `A` and work `B` have e.g. different descriptions or years? How should they be combined?
+
+### Straightforward Merge Works
 
 (hypothetical function)
 
@@ -18,11 +24,11 @@ Theorising that these apply equally to all record types, Work, Edition, and Auth
 
 where duplicate is a work ID, or list of work IDs to be merged into the canonical record.
 
-### Scope
+#### Scope
 * Assumes the duplicate work is a minimal work entry and/or there is no relevant data to be copied across from the duplicate to the canonical work. This can be done manually in a prior operation if needed.
 * Does not fix any duplicate editions before, or as a result of the the merge. Duplicate Editions will be dealt with separately.
 
-### Steps
+#### Steps
 
 * Get list of editions under duplicate
 * OPTIONAL? Clear out explicit author fields on editions. Author should be attached to work. Beware of edition specific roles?
@@ -36,7 +42,7 @@ Current code exists in OL for WorkBot to perform work merges:
 * https://github.com/internetarchive/openlibrary/blob/master/openlibrary/catalog/edition_merge/merge_works.py
 * An author's merge-works endpoint also exists here, but has no template: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py#L608
 
-## Merge Editions
+## Merging Editions
 
 Current OL admin functionality.
 
