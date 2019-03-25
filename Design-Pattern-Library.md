@@ -1,16 +1,46 @@
-The design pattern library, audits all the different types of components that exist in the existing openlibrary codebase.
+The Design Pattern Library audits all the different types of components that exist in the Open Library codebase. Eventually, we'd love to move these components to [open library's developer design page](https://openlibrary.org/developers/design).
 
-Eventually, we'd love to move these components to [open library's developer design page](https://openlibrary.org/developers/design).
-
+## Inspiration
 Inspired by [Wikimedia's style guide]( https://design.wikimedia.org/style-guide/visual-style.html ).
 
-Note: 
+### Example
+This is an example of a UI component on openlibrary.org (one of our other projects). 
+![Screen Shot 2019-03-25 at 10 27 28AMPDT](https://user-images.githubusercontent.com/978325/54941943-4e553980-4eeb-11e9-8d04-6d1c5ad9a64f.png)
+
+## How to Contribute
+
+## Notes 
 1. This list is unstable and likely to change at any given time, while we refactor the frontend UI.
 If you want to help us document components, please jump in with your image uploads and documenting where these components are in use!
 2. We are not looking for design changes at the current moment of time and rather would like to focus on making components easier to create. For consistency, try not to design components on a per page basis!
 Please refer to issue [1951](https://github.com/internetarchive/openlibrary/issues/1951#issuecomment-471648372) and issue [1969](https://github.com/internetarchive/openlibrary/issues/1969#issuecomment-471647053).
 
 You can also help by contributing to the associated mega-issue [#1092](https://github.com/internetarchive/openlibrary/issues/1092) and making sure the codebase reflects this document.
+
+### Adding a Component
+The documentation for a UI component includes:
+- a `name` — in this case it’s called `Decorated-Carousel` (required)
+- a `location` (required) which is an example URL or page where the component may be found on the website
+- a `short description` (optional) of what the component is
+- a `screenshot` of the UI component (required)
+
+## Frequently Asked Questions
+
+### _How do I choose a name?_
+
+If you look through the website’s css/html, you may see a class name which describes the component. This is probably the right name to include in the docs for the component, even if it’s not the best name — if you have a suggestion for a better name, *please include both*! It’s important to include the CSS name(s) (even if it’s not the best name) because this is what will help us find the component in our code.
+
+### _How do I know what’s a component?_
+
+Generally, a component will be a visual element which occurs repeatedly on the website (like a special button, a dropdown menu, a box containing download options, etc)
+
+### _How do I add a screenshot!?_
+
+This is actually kind of a hack, sorry! You can't drag screenshots directly into this document. Here's what I do:
+1. Open a new window to http://github.com/internetarchive/iaux/issues/new
+2. The Issues UI **does** allow you to drag a image into the comment section of the issue!
+3. When you drag and drop your screenshot into the issue, it should appear as something like `![Screen Shot 2019-03-25 at 10 50 00AMPDT](https://user-images.githubusercontent.com/978325/54942862-3aaad280-4eed-11e9-8f53-04e734db45ce.png)`
+4. Copy this snippet and paste it into this Design Pattern Library in the appropriate section for the component you are documenting.
 
 ## Components
 
