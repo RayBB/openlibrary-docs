@@ -3,10 +3,6 @@ The Design Pattern Library audits all the different types of components that exi
 ## Inspiration
 Inspired by [Wikimedia's style guide]( https://design.wikimedia.org/style-guide/visual-style.html ).
 
-### Example
-This is an example of a UI component on openlibrary.org (one of our other projects). 
-![Screen Shot 2019-03-25 at 10 27 28AMPDT](https://user-images.githubusercontent.com/978325/54941943-4e553980-4eeb-11e9-8d04-6d1c5ad9a64f.png)
-
 ## How to Contribute
 
 ## Notes 
@@ -23,6 +19,10 @@ The documentation for a UI component includes:
 - a `location` (required) which is an example URL or page where the component may be found on the website
 - a `short description` (optional) of what the component is
 - a `screenshot` of the UI component (required)
+
+### Example
+This is an example of a UI component on openlibrary.org (one of our other projects). 
+![Screen Shot 2019-03-25 at 10 27 28AMPDT](https://user-images.githubusercontent.com/978325/54941943-4e553980-4eeb-11e9-8d04-6d1c5ad9a64f.png)
 
 ## Frequently Asked Questions
 
