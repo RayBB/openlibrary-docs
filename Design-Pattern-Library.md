@@ -5,8 +5,8 @@ Inspired by [Wikimedia's style guide]( https://design.wikimedia.org/style-guide/
 
 ## How to Contribute
 
-## Notes 
-1. This list is unstable and likely to change at any given time, while we refactor the frontend UI.
+### Notes 
+1. This list is unstable and likely to change at any given time, while we refactor the front-end UI.
 If you want to help us document components, please jump in with your image uploads and documenting where these components are in use!
 2. We are not looking for design changes at the current moment of time and rather would like to focus on making components easier to create. For consistency, try not to design components on a per page basis!
 Please refer to issue [1951](https://github.com/internetarchive/openlibrary/issues/1951#issuecomment-471648372) and issue [1969](https://github.com/internetarchive/openlibrary/issues/1969#issuecomment-471647053).
