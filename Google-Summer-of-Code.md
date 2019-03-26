@@ -57,12 +57,14 @@ A good summary addresses the following 5 questions (replace `Open Library` with 
 > Open Library is a non-profit website run by Internet Archive. It tries to catalog every book in the world and has web pages for over 27 million book editions. 4M of the books in their catalog are made accessible online by Internet Archive for reading and controlled digital lending.
 2) Why is Open Library important
 > Not every library is equal. Some cities don’t have libraries at all. Open Library is an opportunity to provide equal opportunity to readers all over the globe.
-3) What Opportunity exists for Open Library, what is the potential impact, who will benefit?
+3) What Opportunity exists for Open Library
 > Today, Open Library is limited to the books Internet Archive decides should be acquired and made available through their library program. But there’s an opportunity to democratize Open Library’s bookshelves and extend this power to patrons so every reader in the world may be empowered to Sponsor books of their choosing.
 4) Why now? Why is this opportunity possible now (and wasn’t possible before?)
 > Last year, Open Library added a Want to Read button to their website enabling patrons to tell us which books we are missing from the library. To our surprise, over 400k unique patrons clicked this button since we added it, teaching us that patrons are eager to tell us which books they want. I believe some percentage of these patrons may also be willing to make a monetary donation to sponsor the accessioning of these desirable books.
 5) What does the solution look like?
-> For GSoC 2019, we’d like to test this hypothesis by adding a `Sponsor this Book` button that will show up on the 23M remaining books which Open Library knows about but have not yet been obtained. Success will mean an important new distribution channel for Open Library donations and empowering our patrons with the capability to democratize our holdings.
+> For GSoC 2019, we’d like to test this hypothesis by adding a `Sponsor this Book` button that will show up on the 23M remaining books which Open Library knows about but have not yet been obtained.
+6) What does success for Open Library look like? What is the potential impact, who will benefit?
+> For Open Library, success means establishing an new distribution channel to receive donations, promoting long term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
 
 ## Examples
 
