@@ -51,7 +51,7 @@ Depending on what you specifically valuable about Open Library, here is an examp
 > The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit Open Library and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
 
 ## What Does a Good Synopsis Look Like?
-A good summary addresses the following 5 questions (replace `Open Library` with whatever project you're applying for): 
+A good summary addresses the following 6 questions (replace `Open Library` with whatever project you're applying for): 
 
 1) What is Open Library
 > Open Library is a non-profit website run by Internet Archive. It tries to catalog every book in the world and has web pages for over 27 million book editions. 4M of the books in their catalog are made accessible online by Internet Archive for reading and controlled digital lending.
