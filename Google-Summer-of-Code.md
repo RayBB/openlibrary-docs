@@ -50,6 +50,20 @@ Depending on what you specifically valuable about Open Library, here is an examp
 
 > The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit Open Library and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
 
+## What Does a Good Synopsis Look Like?
+A good summary addresses the following 5 questions (replace `Open Library` with whatever project you're applying for): 
+
+1) What is Open Library
+> Open Library is a non-profit website run by Internet Archive. It tries to catalog every book in the world and has web pages for over 27 million book editions. 4M of the books in their catalog are made accessible online by Internet Archive for reading and controlled digital lending.
+2) Why is Open Library important
+> Not every library is equal. Some cities don’t have libraries at all. Open Library is an opportunity to provide equal opportunity to readers all over the globe.
+3) What Opportunity exists for Open Library, what is the potential impact, who will benefit?
+> Today, Open Library is limited to the books Internet Archive decides should be acquired and made available through their library program. But there’s an opportunity to democratize Open Library’s bookshelves and extend this power to patrons so every reader in the world may be empowered to Sponsor books of their choosing.
+4) Why now? Why is this opportunity possible now (and wasn’t possible before?)
+> Last year, Open Library added a Want to Read button to their website enabling patrons to tell us which books we are missing from the library. To our surprise, over 400k unique patrons clicked this button since we added it, teaching us that patrons are eager to tell us which books they want. I believe some percentage of these patrons may also be willing to make a monetary donation to sponsor the accessioning of these desirable books.
+5) What does the solution look like?
+> For GSoC 2019, we’d like to test this hypothesis by adding a `Sponsor this Book` button that will show up on the 23M remaining books which Open Library knows about but have not yet been obtained. Success will mean an important new distribution channel for Open Library donations and empowering our patrons with the capability to democratize our holdings.
+
 ## Examples
 
 You can view a sample proposal [here](https://docs.google.com/document/d/1IGTAMczT9A1EwyV_E73f2bHWscv85gyYAc7PLXJfPLs/edit?usp=sharing).
