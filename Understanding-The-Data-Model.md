@@ -3,8 +3,8 @@ Each Infogami page (i.e. something with a URL) has an associated type. Each type
 
 Infogami provides a generic way through it's wiki to create new types as needed. 
 
-# Databses
-Openlibrary in essence only really has **only two database tables**. By default they will have the same pretty basic functionality through Infogami
+# Database Schema
+Open Library in essence only really has **only two database tables**. By default they will have the same pretty basic functionality through Infogami
 
 ### Thing table
 The thing table defines [types](https://openlibrary.org/dev/docs/infogami#anchor5) like editions, works authors, users, languages. The thing table also keeps track of instances of things by their identifiers it basically registers their IDs in the table as an instance.
