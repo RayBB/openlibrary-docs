@@ -6,7 +6,7 @@ In order to keep the list of issues manageable and under control, the **Bug Tria
 
 ## Assignee
 
-As much as possible, each issue should have exactly **one** assignee, who "owns" the issue.
+As much as possible, each issue should have exactly **one** assignee, who "owns" the issue. The goal is to identify who we should turn to find out what is going on with that issue, and who should feel empowered to make decisions about how to resolve it (getting whatever buy-in or review is appropriate).  
 
 Note: as an **owner** of an issue, you may or may not be doing the
 work, you're simply causing it to get done.  It is fine to own
@@ -39,17 +39,15 @@ Every open issue/PR should have a label that indicates:
 - `enhancement` A new user feature to be added.
 - `refactor` Existing code needs to be reworked, fixed or upgraded, without affecting user/ops features.
 
-2. When do we want to deal with it:
-
-- `Needs assessment`
-- `In Progress` (someone is dealing with it now)
-- `2019Q2`, `2019Q3`, etc. Any calendar quarter. We'll wait to deal with it in that quarter.
-- `Deferred` It is still interesting, but we haven't decided when we'll deal with it.
+2.  What state is the issue in?
+- `Needs info` Details of what is needed from whom go into the comments.
+- `WIP` Work in progress.
+- `Needs review` Work is done, looking for feedback, ready to pull/merge, etc.
 
 3. How serious is it:
   - `Priority` A bug we need to address right away.
   - `Looking for Help` We don't have someone to work on it, but want to find a volunteer.
-  - `WIP` (work in progress, for pull requests not ready for merging)
+  - `Good first issue` Suitable for developers new to the team.
 
 4. What part(s) of the code is it in, or data does it relate to?
   - `Doc-user`
@@ -76,6 +74,14 @@ Every open issue/PR should have a label that indicates:
 Labels that begin with `~` are deprecated.
 
 Labels that begin with initials are owned by that person (others should not touch them).  See #5, above.
+
+## Milestones
+
+We generally do planning by quarter, though issues are usually "very hot, must get done right now" or "later, when we find a volunteer".  So milestones are dated based on when we expect to close the corresponding issue:
+
+- `ASAP`  We need to get it out the door As Soon As Possible.
+- `2019Q1`, `2019Q2`, etc. Reminders to pick things up in upcoming quarters.
+- `None` Interesting wish list items, waiting for a volunteer, endless conversations that should migrate to Gitter, etc.
 
 ## Triage:
 
