@@ -1,6 +1,6 @@
 ## GitHub Issues: Triage and Maintenance
 
-* WIP: This is work in progress, super rough.  Do not rely on it yet.*
+*WIP: This is work in progress, super rough.  Do not rely on it yet.*
 
 In order to keep the list of issues manageable and under control, the **Bug Triage Owner** (currently @brad2014) will go through the bugs weekly, and work with the team to make sure issues are getting assessed, categorized, assigned, and closed.  The labeling of issues coordinates closely with the project boards, giving us very simple project management.
 
