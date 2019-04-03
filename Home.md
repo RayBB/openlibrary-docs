@@ -21,7 +21,7 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 ### Deputy Table
 
-Have a question and not sure who to ask?
+Have a question and not sure who to ask? (Current as of 2019-04)
 
 | Responsibility                 | Lead |
 |--------------------------------|------|
