@@ -1,41 +1,12 @@
-**Update** Open Library will be participating in Google Summer of Code 2019! 
-
-***
-
 [Apply to Google Summer of Code](https://summerofcode.withgoogle.com/organizations/6482109326163968/)
 
+**Update:** The application period has ended for Google Summer of Code 2019! 
+
 ***
 
-# 2019 GSoC
-
-More details to be announced. See: [Internet Archive 2019 GSoC Application](https://docs.google.com/document/d/1posF4zhq2lAz7eikloT9_K4LnHXfJ5VWGpCtJS6rJ0M/edit)
-
-Open Library (https://openlibrary.org) is a digital library run by Internet Archive which loans over a 1.5M ebooks each year to over 2M patrons around the world. We’re looking for an engineer to lead us in democratizing book acquisition by giving readers the ability to crowd-fund and sponsor the books they want in their Open Library.
-
-There are 26M books listed in Open Library’s catalog, but only 3M of these web-pages link to readable / borrowable copies of the digital book. The remaining 23M book pages offer useful information, but the books themselves need to be purchased for the library in order to be unlocked to our readers. As an engineer on the project, you will be designing a pilot program which adds actionable “sponsor” buttons to these 23M book pages and allows patrons to fund and sponsor the books they want. Instead of books sitting unused on our bookshelves, let’s instead make the books we love available to the world! [Learn more](http://blog.openlibrary.org/2018/10/27/raising-crypto-for-the-greater-good)
-
-You are encouraged to look through our [github issues](github.com/internetarchive/openlibrary/issues) and [2018 roadmap](https://github.com/internetarchive/openlibrary/projects/7#column-2354676) for ideas.
-
-Feel free to [open new github issues](https://github.com/internetarchive/openlibrary/issues/new) which you can then include in your proposal!
-
-Requires: Python + PHP, JavaScript, CSS/less, Docker, Postgres
-
-# 2018 GSoC
-Open Library (https://openlibrary.org) is a digital library which lends over a million ebooks each year to its 1.75M patrons. The Internet Archive is looking for someone self-directed who loves books and technology to help Open Library expand to a global audience, improve search and discovery, and empower communities with tools to fund the books they want available in their digital library.
-
-The ideal GSoC “Open Librarian” would design and submit a coherent proposal with a plan to improve specific metric(s) like:
-- **Number of borrows:** What percentage of our books are being checked out and used? What ideas do you have to improve discovery of books? How can we encourage users to return books they’re not reading so they become available to others?
-- **Engagement (# new members, uniques, time on site):** What changes might we make to promote valuable engagement on Open Library? How can we do better at serving an international audience (e.g. i18n)? Are we missing features (e.g. star ratings) which other websites have proven effective that our members also want? Would more people use the site if it were mobile responsive?
-- **Catalog Coverage:** How can we increase the number of books which are listed in Open Library’s book catalog? How many modern book records are missing from our catalog? What sources / feeds (e.g. ONIX feeds, MARC records, APIs) are available to help keep our catalog of books up to date? How can our website be improved to help the community maintain our catalog? How might our users be able to contribute books into Open Library?
-- **Site Reliability:** How can Open Library move from vagrant to a docker-based production build system with ansible and kubernetes? How can we detect and prevent abuse? How can we increase our test coverage?
-
-You are encouraged to look through our [github issues](github.com/internetarchive/openlibrary/issues) and [2018 roadmap](https://github.com/internetarchive/openlibrary/projects/7#column-2354676) for ideas.
-
-Feel free to [open new github issues](https://github.com/internetarchive/openlibrary/issues/new) which you can then include in your proposal!
-
-**Requires:** Python, JavaScript, git
-
-**Bonus:** solr, Docker, postgres
+# History
+- [Google Summer of Code 2019](Google-Summer-of-Code-2019)
+- [Google Summer of Code 2018](Google-Summer-of-Code-2018)
 
 # General Advice
 
