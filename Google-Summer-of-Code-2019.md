@@ -1,6 +1,4 @@
-# 2019 GSoC
-
-More details to be announced. See: [Internet Archive 2019 GSoC Application](https://docs.google.com/document/d/1posF4zhq2lAz7eikloT9_K4LnHXfJ5VWGpCtJS6rJ0M/edit)
+See: [Internet Archive 2019 GSoC Application](https://docs.google.com/document/d/1posF4zhq2lAz7eikloT9_K4LnHXfJ5VWGpCtJS6rJ0M/edit)
 
 Open Library (https://openlibrary.org) is a digital library run by Internet Archive which loans over a 1.5M ebooks each year to over 2M patrons around the world. We’re looking for an engineer to lead us in democratizing book acquisition by giving readers the ability to crowd-fund and sponsor the books they want in their Open Library.
 
