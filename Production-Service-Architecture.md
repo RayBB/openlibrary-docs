@@ -1,10 +1,7 @@
 
 ## Current Production Architecture
 Today, our production service architecture consists of ~11 VMs:
-
 ![Open Library Production Architecture](https://archive.org/download/openlibrary-documentation/openlibrary-production-architecture.png)
-
-[Read about Open Library's Web Application Services](https://openlibrary.org/about/architecture)
 
 ## Current Provisioning Setup
 Our current production setup process (as of 2019) for provisioning these 11 VMs is ostensibly **manual** and relies on a lot of manually `scp`ing directories around, as well as a separate repository called `olsystem` which contains the production configs, cron jobs, and infrastructure required to run the official openlibrary.org service.
