@@ -18,3 +18,6 @@ http://www.loc.gov/cds/products/MDSConnect-books_all.html
 *Hathi Trust*
 16.8M volumes, 8M book titles, 38% public domain
 https://www.hathitrust.org/bib_api
+
+*Wikidata*
+lookup any identifier (author, subject, language,...) and find other identifiers for the same entity
