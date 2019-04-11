@@ -91,7 +91,7 @@ For users with sufficient privileges, an admin interface is available at `http:/
 <a name="creating-users"></a>
 ### Creating Users
 
-- If you create a user, you will have to verify the email address, but you will not be able to send email from your vagrant dev instance. Instead, you can find the verification link in the app server log, which should be in `/var/log/upstart/ol-web.log`.
+- If you create a user, you will have to verify the email address, but you will not be able to send email from your dev instance. Instead, you can find the verification link in the app server log, which should be in `/var/log/upstart/ol-web.log`.
 
 The verification link should look like:
 
@@ -124,7 +124,7 @@ Add conf/openlibrary.yaml to .git/info/exclude so that any changes to the conf f
 By default these might be triggering 404s. Point coverstore_url to https://covers.openlibrary.org/
 
 
-Be sure to reboot your vagrant instance after any configuration changes.
+Be sure to restart your dev instance after any configuration changes.
 
 <a name="importing-test-data"></a>
 ## Importing Test Data
@@ -204,10 +204,9 @@ In local development, after making changes to CSS or JS, make sure to run `make 
 <a name="memcache"></a>
 ### Memcache
 
-- Infobase queries get cached in memcache. In the vagrant dev instance, there is a single-node memcache cluster that you can test by connecting to your test instance using `vagrant ssh` and then typing:
+- Infobase queries get cached in memcache. In the dev instance, there is a single-node memcache cluster that you can test by connecting to your test instance using `docker-compose run web bash` and then typing:
 
 ```python
-$ cd /openlibrary
 $ python
 Python 2.7.6 (default, Mar 22 2014, 22:59:56)
 [GCC 4.8.2] on linux2
@@ -325,7 +324,7 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 
 - Once you have generated the keys, add them to your local `conf/openlibrary.yml` file by filling in the public and private keys under the `plugin_recaptcha` section.
 
-- From within vagrant, restart the Open Library service via `sudo systemctl restart ol-web`. You can simply run `vagrant reload` as well for the same.
+- From within the Docker container, restart the Open Library service via `sudo systemctl restart ol-web`. You can simply run `docker-compose restart` as well for the same.
 
 ### Credits and special thanks
 
