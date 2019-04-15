@@ -25,18 +25,18 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 
 | Responsibility                 | Lead |
 |--------------------------------|------|
-| Product Lead & Policy          | [@mekarpeles](http://github.com/mekarpeles) |
-| Site reliability & Deployment  | [@mekarpeles](http://github.com/mekarpeles) / [@hornc](http://github.com/hornc) |
-| Metadata Catalog (APIs)        | [@hornc](http://github.com/hornc) |
-| Openlibrary-client             | [@rahul-kumi](http://github.com/rahul-kumi) |
-| ONIX Bot                       | [@nimbus98](http://github.com/nimbus98) |
-| Front-End & Mobile             | [@jdlrobson](http://github.com/jdlrobson) |
-| Front-End Component Library    | [@koderjoker](http://github.com/koderjoker) |
-| Search (solr)                  | [@cdrini](http://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) |
-| Python 3                       | [@cclauss](http://github.com/cclauss) |
-| Internationalization (i18n)    | [@tabshaikh ](http://github.com/tabshaikh) |
-| Github Processes               | [@brad2014](http://github.com/brad2014) |
-| Docker + Dev Build System      | [@cdrini](http://github.com/cdrini) |
+| Product Lead & Policy          | [@mekarpeles](https://github.com/mekarpeles) |
+| Site reliability & Deployment  | [@mekarpeles](https://github.com/mekarpeles) / [@hornc](https://github.com/hornc) |
+| Metadata Catalog (APIs)        | [@hornc](https://github.com/hornc) |
+| Openlibrary-client             | [@rahul-kumi](https://github.com/rahul-kumi) |
+| ONIX Bot                       | [@nimbus98](https://github.com/nimbus98) |
+| Front-End & Mobile             | [@jdlrobson](https://github.com/jdlrobson) |
+| Front-End Component Library    | [@koderjoker](https://github.com/koderjoker) |
+| Search (solr)                  | [@cdrini](https://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) |
+| Python 3                       | [@cclauss](https://github.com/cclauss) |
+| Internationalization (i18n)    | [@tabshaikh ](https://github.com/tabshaikh) |
+| Github Processes               | [@brad2014](https://github.com/brad2014) |
+| Docker + Dev Build System      | [@cdrini](https://github.com/cdrini) |
 
 ### Design & Product Team
 
@@ -58,7 +58,7 @@ What are the actions I can perform as an administrator / mod?
 
 
 Are there tools
-You might also consider trying the [openlibrary-client](github.com/internetarchive/openlibrary-client) python tool which provides
+You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides
 
 ## Engineering & Ops Team
 
@@ -75,4 +75,4 @@ Next, browse through our list of [easy open tickets](https://github.com/internet
 Are you a researcher or developer looking to use Open Library data or APIs in your research experiment?
 [Open Library's APIs and Data Dumps](https://openlibrary.org/developers/api) is a great place to start!
 
-You might also consider trying the [openlibrary-client](github.com/internetarchive/openlibrary-client) python tool which provides convenience methods for downloading book, author, list, and subject data.
+You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides convenient methods for downloading book, author, list, and subject data.
