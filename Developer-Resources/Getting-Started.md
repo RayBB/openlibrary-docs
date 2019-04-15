@@ -213,7 +213,7 @@ Python 2.7.6 (default, Mar 22 2014, 22:59:56)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import yaml
 >>> from openlibrary.utils import olmemcache
->>> y = yaml.safe_load(open('/openlibrary/conf/openlibrary.yml'))
+>>> y = yaml.safe_load(open('/openlibrary/conf/openlibrary-docker.yml'))
 >>> mc = olmemcache.Client(y['memcache_servers'])
 ```
 
