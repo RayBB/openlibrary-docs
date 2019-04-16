@@ -33,7 +33,7 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 | Front-End & Mobile             | [@jdlrobson](https://github.com/jdlrobson) | |
 | Front-End Component Library    | [@koderjoker](https://github.com/koderjoker) | |
 | Search (solr)                  | [@cdrini](https://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) | |
-| Python 3                       | [@cclauss](https://github.com/cclauss) | ['Python 3'](https://github.com/internetarchive/openlibrary/labels/Python%203)|
+| Python 3                       | [@cclauss](https://github.com/cclauss) | [`Python 3`](https://github.com/internetarchive/openlibrary/labels/Python%203)|
 | Internationalization (i18n)    | [@tabshaikh ](https://github.com/tabshaikh) | |
 | Github Processes               | [@brad2014](https://github.com/brad2014) | |
 | Docker + Dev Build System      | [@cdrini](https://github.com/cdrini) | |
