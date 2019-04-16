@@ -28,12 +28,12 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 | Product Lead & Policy          | [@mekarpeles](https://github.com/mekarpeles) | |
 | Site reliability & Deployment  | [@mekarpeles](https://github.com/mekarpeles) / [@hornc](https://github.com/hornc) | |
 | Metadata Catalog (APIs)        | [@hornc](https://github.com/hornc) | |
-| Openlibrary-client             | [@rahul-kumi](https://github.com/rahul-kumi) | |
+| Openlibrary-client             | [@rahul-kumi](https://github.com/rahul-kumi) | [`openlibrary-client`](https://github.com/internetarchive/openlibrary/labels?utf8=%E2%9C%93&q=openlibrary-client) |
 | ONIX Bot                       | [@nimbus98](https://github.com/nimbus98) | |
 | Front-End & Mobile             | [@jdlrobson](https://github.com/jdlrobson) | |
 | Front-End Component Library    | [@koderjoker](https://github.com/koderjoker) | |
 | Search (solr)                  | [@cdrini](https://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) | |
-| Python 3                       | [@cclauss](https://github.com/cclauss) | |
+| Python 3                       | [@cclauss](https://github.com/cclauss) | ['Python 3'](https://github.com/internetarchive/openlibrary/labels/Python%203)|
 | Internationalization (i18n)    | [@tabshaikh ](https://github.com/tabshaikh) | |
 | Github Processes               | [@brad2014](https://github.com/brad2014) | |
 | Docker + Dev Build System      | [@cdrini](https://github.com/cdrini) | |
