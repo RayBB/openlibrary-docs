@@ -32,7 +32,7 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 | ONIX Bot                       | [@nimbus98](https://github.com/nimbus98) | |
 | Front-End & Mobile             | [@jdlrobson](https://github.com/jdlrobson) | |
 | Front-End Component Library    | [@koderjoker](https://github.com/koderjoker) | |
-| Search (solr)                  | [@cdrini](https://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) | [`search`, `solr`] |
+| Search (solr)                  | [@cdrini](https://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) | [`search`], [`solr`] |
 | Python 3                       | [@cclauss](https://github.com/cclauss) | [`Python 3`](https://github.com/internetarchive/openlibrary/labels/Python%203) |
 | Internationalization (i18n)    | [@tabshaikh ](https://github.com/tabshaikh) | |
 | Book Sponsorship Program       | [@tabshaikh ](https://github.com/tabshaikh) | [`book-sponsorship`](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=label%3Abook-sponsorship+)|
