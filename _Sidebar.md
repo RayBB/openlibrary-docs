@@ -50,5 +50,4 @@
 	* [Importing IA Wishlist](Importing-IA-Wishlist)
 	* [Importing ONIX Feeds](Processing-ONIX-Feeds)
 	* [Importing Bulk MARC](Data-Importing#Bulk-MARC-Import)
-	* [Switching from Vagrant to Docker](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md)
 	* [Monthly Newsletter / Mailing List](Mailing-List)
