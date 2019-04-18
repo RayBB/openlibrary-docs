@@ -19,7 +19,7 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 - [View Team Member Profiles (created with Google Forms) and add your own profile](https://docs.google.com/forms/d/e/1FAIpQLSch2GjtxEYnCTC0-imVRuIZBsvAmV7lA52vdcaNTvzmHXqS8Q/viewform?usp=sf_link)
 
-### Leads Table
+### Team Leads Table
 
 Have a question and not sure who to ask? (Current as of 2019-04)
 
