@@ -44,7 +44,6 @@
 	* [Generating Sitemaps](Sitemap-Generation)
 * **Features & Initiatives (RFCs)**
 	* [Book Drive Initiative](Book-Drive)
-	* [Fixing Help & Support](Help-and-Support)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
 	* [Importing IA Wishlist](Importing-IA-Wishlist)
