@@ -32,7 +32,7 @@ If you are a developer filing an issue to represent something you are working on
 
 Otherwise, new bugs get reviewed by the *Bug Triage Owner* weekly, who can chat with developers to see how issues should be handled.  We are mostly volunteers — non-urgent issues generally wait until someone is interested and available to deal with them. We welcome volunteers: computer technical, library technical, non-technical, all!
 
-## Titles matter
+## Titles Matter
 
 As a developer working on an issue, consider starting by editing the title from what the submitter thinks it is to what you realize it should be.  Often this will involve reframing the issue, and adding detail to the title.
 
