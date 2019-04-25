@@ -36,9 +36,10 @@
 	* [Writing Bots](Writing-Bots)
 	* [Importing Book Records](Data-Importing)
 * **Administration, Systems & Dev-ops**
-	* [Production Architecture & Provisioning](Production-Service-Architecture)
 	* [Services Status Dashboard](https://status.archivelab.org)
+	* [Production Architecture & Provisioning](Production-Service-Architecture)
 	* [Deployment Guide](Deployment-Guide)
+	* [Disaster Recovery Guide](Disaster-Recovery)
 	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
 	* [Dealing with Spam](Anti-Spam-Tools)
 	* [Generating Data Dumps](Generating-Data-Dumps)
