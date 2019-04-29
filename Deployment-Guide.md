@@ -11,7 +11,7 @@ Checklist for Deployment:
     - [ ] [Rolling Back](#rolling-back)
 7. [ ] [Git Tag Successful Release](#git-tagging-a-release)
 
-8. [ ] Optional / as required [Service / Config upgrade testing (Memchache)](#service-config-upgrade-testing-memchache)
+8. [ ] Optional / as required [Service / Config upgrade testing (Memchache)](#service--config-upgrade-testing-memchache)
 
 # Introduction
 
