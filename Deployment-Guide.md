@@ -11,6 +11,8 @@ Checklist for Deployment:
     - [ ] [Rolling Back](#rolling-back)
 7. [ ] [Git Tag Successful Release](#git-tagging-a-release)
 
+8. [ ] Optional / as required [Service / Config upgrade testing (Memchache)](#service-config-upgrade-testing-memchache)
+
 # Introduction
 
 Greetings deployer! You are one of the select few who has privileged access to Internet Archive infrastructure and is tasked with the important responsibility of deploying the Open Library website. Deploys typically occur on Thursday, after the candidate code has had a few days to be tested on staging (https://dev.openlibrary.org). The following are instructions which we hope will ease you in your journey towards a successful deploy of the Open Library system. For more information on the system architecture, please refer to the [Production Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture) 
