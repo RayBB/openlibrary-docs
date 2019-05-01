@@ -7,6 +7,7 @@
 	* [Hacktoberfest](Hacktoberfest)
 * **Developer Resources**
 	* [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
+	* [Working with Github Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)
 	* **Dev Environment**
 		* [Architecture of Dev Instance](Architecture)
 		* [Getting Setup](Getting-Started)
@@ -19,9 +20,6 @@
 		* [Enabling Features](Feature-Flagging)
 		* [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)
 		* [Understanding The Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
-
-	* [Working with Github Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)
-
 * **[Design Resources](Design)**
 	* [Design & Ecosystem Diagram](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
 	* [Logos](https://drive.google.com/file/d/1GlUpiaobyL6dbxu8Ok_i_R87aalpzH_z/view)
