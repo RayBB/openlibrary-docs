@@ -28,6 +28,7 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 | Product Lead & Policy          | [@mekarpeles](https://github.com/mekarpeles) | [`priority`](https://github.com/internetarchive/openlibrary/labels?utf8=%E2%9C%93&q=priority), [`roadmap`](https://github.com/internetarchive/openlibrary/projects/11), [`epic`](https://github.com/internetarchive/openlibrary/labels/epic) |
 | Metadata Catalog               | [@hornc](https://github.com/hornc) | [`metadata`](https://github.com/internetarchive/openlibrary/labels/metadata), [`data-cleaup`](https://github.com/internetarchive/openlibrary/labels/Data%20Cleanup) |
 | Site reliability & Deployment  | [@mekarpeles](https://github.com/mekarpeles) / [@hornc](https://github.com/hornc) | [`blocker`](https://github.com/internetarchive/openlibrary/labels/blocker) |
+| Lead Community Librarian       | [@seabelis](https://github.com/seabelis) | [`editing`](https://github.com/internetarchive/openlibrary/labels/editing) |
 | Openlibrary-client             | [@rahul-kumi](https://github.com/rahul-kumi) | [`openlibrary-client`](https://github.com/internetarchive/openlibrary/labels?utf8=%E2%9C%93&q=openlibrary-client) |
 | ONIX Bot                       | [@nimbus98](https://github.com/nimbus98) | |
 | Front-End & Mobile             | [@jdlrobson](https://github.com/jdlrobson) | |
