@@ -11,7 +11,7 @@ sudo make test
 
 # Integration Tests
 
-Integration tests use the Splinter webdriver with Google Chrome. For instructions on installation requirements and running integration tests, [see Integration Tests README](tests/integration/README.md). Integration tests are **not** run automatically and they require a non-headless machine (i.e. a web browser is currently required). You can do this on your local machine (not in Docker) within your tmp directory:
+Integration tests use the Splinter webdriver with Google Chrome. For instructions on installation requirements and running integration tests, [see Integration Tests README](/internetarchive/openlibrary/blob/master/tests/integration/README.md). Integration tests are **not** run automatically and they require a non-headless machine (i.e. a web browser is currently required). You can do this on your local machine (not in Docker) within your tmp directory:
 
 ```
 cd /tmp
