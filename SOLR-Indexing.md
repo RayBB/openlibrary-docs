@@ -1,14 +1,15 @@
 ### Solr updater script
 [Solr updater script](https://github.com/internetarchive/openlibrary/blob/master/scripts/new-solr-updater.py)
 
-Which is [configured to run as a service](https://github.com/internetarchive/openlibrary/blob/master/conf/init/ol-solr-updater.conf)
+Which is configured to run as a service in production and a background process in the development 
+[docker-compose environment](https://github.com/internetarchive/openlibrary/blob/cb167b78fac4199e57096009f1bbbdeb23ed4c72/docker/ol-docker-start.sh#L35).
 
-Get the service status:
+To get the production solr-updater service status:
 `sudo status ol-solr-updater`
 
-### Expected behaviour and timings
+### Expected behavior and timings
 
-Changes to the Solr index are _supposed_ to be visible on the live Open Library site after [about 15 minutes](https://github.com/internetarchive/openlibrary/blob/c4d877ee6410df6f70ab45718baebe52fdf366ba/openlibrary/templates/admin/solr.html#L21).
+Changes to the Solr index are _supposed_ to be visible on the live Open Library site in no more than [about 15 minutes](https://github.com/internetarchive/openlibrary/blob/c4d877ee6410df6f70ab45718baebe52fdf366ba/openlibrary/templates/admin/solr.html#L21), but the latency depends on how far the Solr updater is behind in processing the database update queue.
 
 The updater script looks for document changes in the Infobase logs at `http://<internal-infobase-url>/openlibrary.org/log` and has _(possibly incomplete)_ logic to update Solr accordingly.
 
