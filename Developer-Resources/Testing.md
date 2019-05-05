@@ -1,6 +1,10 @@
 # Automated Tests
 
-From the root of the openlibrary project, make sure you're either in ol-dev0 venv or in Docker. Assuming the feature is staged on dev (skip ssh and venv if in Docker):
+From the root of your local openlibrary project, you can run the JavaScript and Python unit tests in a Docker container with the following command:
+
+    docker-compose run web make test 
+
+To run the same tests on the shared development server, `ol-dev0` (requires ssh access), make sure you activate venv:
 
 ```
 ssh -A ol-dev0
