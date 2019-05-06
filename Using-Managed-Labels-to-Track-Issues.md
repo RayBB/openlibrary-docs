@@ -21,6 +21,7 @@ The sections below contain:
     - [Affects](#affects)
     - [Module](#module)
     - [Additional Lables](#additional-labels)
+- [Personal Labels, Deprecated Labels](#personal-labels-and-deprecated-labels)
 - [Tips for Filtering Issues and Updating Their Labels](#tips-for-filtering-issues-and-updating-their-labels)
 
 ## Owners
@@ -148,6 +149,18 @@ A few remaining labels that are not in any group, because of github conventions,
 Color|Label|Description 
 -|-|-
 ![7057ff](https://via.placeholder.com/30x30/7057ff/7057ff.jpg) | **Good First Issue** | Easy issue. Good for newcomers. [managed]
+
+## Personal Labels and Deprecated Labels
+
+If you have a large number of issues assigned to you, there may be times when you want to divide them into groups by your own criteria.  You can do this by creating your own labels.  They all go into the repository label set, so we ask that you:
+
+- pick your own color that you apply to all your personal labels, and
+
+- prefix the label name with your initials.
+
+For example, Chris Horne has labels with prefix `CH: ` and color #1d76db.
+
+Labels that are grey and start with a tilde `~` are *deprecated*.  They typically are not used much, and shouldn't be added to issues going forward.
 
 ## Tips for Filtering Issues and Updating Their Labels
 
