@@ -1,4 +1,4 @@
-# Managed Labels
+# Labeling Issues
 
 We reserve a set of labels for use with Github issues, to assist with issue handling and project management for OpenLibrary.
 
@@ -7,6 +7,21 @@ Most generally, an issue evolves through a series of states, for example:
 submitted -> assessed -> scheduled -> fixed -> closed.  
 
 On the way down that path, lots of things can happen.  The labels below can be applied and removed during initial triage (either by the submitter, or by an initial triage), and thereafter by the owner of the bug.
+
+The sections below contain:
+- [Owners](#owners)
+- [Milestones](#milestones)
+- [Managed Labels By Group](#managed-labels-by-group)
+    - [Type](#type)
+    - [Priority](#priority)
+    - [State](#state)
+    - [Needs](#needs)
+    - [Close](#close)
+    - [Theme](#theme)
+    - [Affects](#affects)
+    - [Module](#module)
+    - [Additional Lables](#additional-labels)
+- [Tips for Filtering Issues and Updating Their Labels](#tips-for-filtering-issues-and-updating-their-labels)
 
 ## Owners
 
@@ -17,6 +32,14 @@ During submission and triage, the assigned owner is not necessarily the person w
 Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). 
 
 Any open bug that is unowned is in need of triage.
+
+## Milestones
+
+Much of our work is done by volunteers. So we plan very lightly, by year and by quarter, given the resources we have available. As new volunteers join, plans may change to accommodate their skills and interests.
+
+Things we'd like to get done during a given year get the milestone for that year, e.g. "2019".  For things we expect to be done in by the end of a given quarter, we apply the quarterly milestone, e.g. "2019 Q1" for things to get done on or before March 31, 2019.
+
+If a milestone deadline passes, whatever is not done gets rescheduled or [backlogged](#state).
 
 ## Managed Labels By Group
 
