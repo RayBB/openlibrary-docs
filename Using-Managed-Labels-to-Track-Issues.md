@@ -12,9 +12,9 @@ On the way down that path, lots of things can happen.  The labels below can be a
 
 A note about owners: The top assignee of an issue is considered its *owner*. During submission and triage, the assigned owner is not necessarily the person who will fix the issue (it is not necessarily even established if or when the issue will be fixed at all), but rather they are the person who will do as much or as little as needed to handle the issue (asking questions, soliciting input, establishing and updating the priority, closing duplicates, etc). Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). Any open bug that is unowned is in need of triage.
 
-## Managed Labels
+## Managed Labels By Group
 
-Labels are grouped by prefix and color. If you create a label outside the managed set, prefix it with your initials. We are continually evolving the managed set to meet our needs.
+Labels are grouped by prefix and color. If you create a label outside the managed set, prefix it with your initials and give your personal labels a common color. We are continually evolving the managed set to meet our needs. If you think a label deserves to be in the managed set, just mention it.
 
 The labels are grouped into different axes for slicing and dicing issues:
 
