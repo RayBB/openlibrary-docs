@@ -126,7 +126,7 @@ Color|Label|Description
 -|-|-
 ![7057ff](https://via.placeholder.com/30x30/7057ff/7057ff.jpg) | **Good First Issue** | Easy issue. Good for newcomers. [managed]
 
-## Hints for Searching
+## Tips for Filtering Issues and Updating Their Labels
 
 - The default [issues page](/internetarchive/openlibrary/issues) presents several search fields.  There is one at the very top, for searching the repository or all of github. There is another one under the `issues` tab that searches through the issues.  To the right of the issues filter is the labels button, which gives you a "labels list" to browse and drill down to issues.  <img width="600" alt="Issues Page Snippet" src="https://user-images.githubusercontent.com/6502462/57257705-7bece100-705a-11e9-8272-3879419dedd3.png">
 
