@@ -10,7 +10,13 @@ On the way down that path, lots of things can happen.  The labels below can be a
 
 ## Owners
 
-A note about owners: The top assignee of an issue is considered its *owner*. During submission and triage, the assigned owner is not necessarily the person who will fix the issue (it is not necessarily even established if or when the issue will be fixed at all), but rather they are the person who will do as much or as little as needed to handle the issue (asking questions, soliciting input, establishing and updating the priority, closing duplicates, etc). Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). Any open bug that is unowned is in need of triage.
+A note about owners: The top assignee of an issue is considered its *owner*. 
+
+During submission and triage, the assigned owner is not necessarily the person who will fix the issue (it is not necessarily even established if or when the issue will be fixed at all), but rather they are the person who will do as much or as little as needed to handle the issue (asking questions, soliciting input, establishing and updating the priority, closing duplicates, etc). 
+
+Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). 
+
+Any open bug that is unowned is in need of triage.
 
 ## Managed Labels By Group
 
@@ -18,7 +24,7 @@ Labels are grouped by prefix and color. If you create a label outside the manage
 
 The labels are grouped into different axes for slicing and dicing issues:
 
-## Type
+### Type:
 
 What kind of issue this is.  Is it something that is broken that should (perhaps) be fixed, or is it a request for a new feature or enhancement, or is it a reminder to reorganize or cleanup some aspect of the code base?
 
@@ -30,7 +36,7 @@ Color|Label|Description
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Refactor/Cleanup** | Issues related to reorganization/clean-up of code (e.g. for maintainability). [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Subtask of Epic** | A subtask that is part of the work breakdown of an epic issue (see comments). [managed]
 
-## Priority
+### Priority:
 
 Priority describes how urgent the bug is. Very urgent bugs generally have an active conversation on the slack channel, so that they can be fixed right away.
 
@@ -41,7 +47,7 @@ Color|Label|Description
 ![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 2: Normal** | Optional label: neither high nor low priority. [managed]
 ![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 3: Low** | Issues that we can consider at our leisure. [managed]
 
-## State
+### State:
 
 Use these labels to distinguish between issues that we're actively working on, those that we plan to work on, and those that seem to be good ideas that we'll consider when we have the additional time and resources required.  If no state label is present, the issue needs assessment.  If someone was working on an issue but had to set it aside, the state label might be changed to "Backlogged," or the current owner might find someone to hand it off to, or it might even be closed (if we decide it didn't need to be addressed after all).
 
@@ -53,7 +59,7 @@ Color|Label|Description
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Scheduled** | A decision has been made that this issue should be addressed. [managed]
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Work In Progress** | This issue is being actively worked on. [managed]
 
-## Needs
+### Needs:
 
 These labels indicate that an issue or pull request is stuck because the owner needs someone to respond - they'll add comments to the issue saying what exactly they need.  Remember to remove this label once the need is met and the issue is unstuck.
 
@@ -64,7 +70,7 @@ Color|Label|Description
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Detail** | Submitter needs to provide more detail for this issue to be assessed (see comments). [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Review** | This issue/PR needs to be reviewed in order to be closed or merged (see comments). [managed]
 
-## Close
+### Close:
 
 Issues typically lead to pull requests to modify the repo in order to resolve the bug.  
 It is considered good form, immediately prior to closing a bug, to add a label indicating if it was closed for any of the following reasons.
@@ -76,7 +82,7 @@ Color|Label|Description
 ![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Not an Issue** | Questions and discussions resolved or moved to gitter/slack. [managed]
 ![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Will Not Fix** | Closed because we have decided not to address this (e.g. out of scope). [managed]
 
-## Theme
+### Theme:
 
 There are some issues that affect multiple modules, or are related to a user story or workflow that touches multiple systems, and we use "theme" labels to identify them.  This list is expected to grow.
 
@@ -88,7 +94,7 @@ Color|Label|Description
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Testing** | Work related to tests that need to be written or fixed. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Translation** | Work related to language accessibility. [managed]
 
-## Affects
+### Affects:
 
 The broad area this issue is related to, often suggesting who first should consider it.
 
@@ -102,9 +108,9 @@ Color|Label|Description
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Server** | Issues with the server or its plugins. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: UI** | The issue is focused on the User Interface. [managed]
 
-## Module
+### Module:
 
-These labels identify the specific module or service that the issue relates to.  This list is expected to grow.
+These labels identify the specific module or service that the issue relates to. Often this corresponds to a particular directory in the repo hierarchy. This list is expected to grow.
 
 Color|Label|Description 
 -|-|-
@@ -112,7 +118,7 @@ Color|Label|Description
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Memcache** | Issues related to memcache, memcached, cache invalidation, cache corruption, etc. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Solr** | Issues related to Solr, data indexing, search, etc. [managed]
 
-## Additional labels
+### Additional labels
 
 A few remaining labels that are not in any group, because of github conventions, or for other reasons.
 
