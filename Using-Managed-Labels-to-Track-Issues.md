@@ -126,4 +126,16 @@ Color|Label|Description
 -|-|-
 ![7057ff](https://via.placeholder.com/30x30/7057ff/7057ff.jpg) | **Good First Issue** | Easy issue. Good for newcomers. [managed]
 
+## Hints for Searching
 
+- The default [issues page](/internetarchive/openlibrary/issues) presents several search fields.  There is one at the very top, for searching the repository or all of github. There is another one under the `issues` tab that searches through the issues.  To the right of the issues filter is the labels button, which gives you a "labels list" to browse and drill down to issues.  <img width="600" alt="Issues Page Snippet" src="https://user-images.githubusercontent.com/6502462/57257705-7bece100-705a-11e9-8272-3879419dedd3.png">
+
+- You can type a label search term directly into the issues filter search field, you type `label:<labelname>` to include issues containing the label, and `-label:<labelname>` to exclude issues containing that label.  Because all the managed label names contain spaces and colons, you need to quote them if you are typing them directly into the issue search bar.  For example, `label:"affects: documentation"` (case doesn't matter).
+
+- If the issues filter field contains multiple labels terms, you will see the issues that match *all* those label terms. There is no way to see a list issues that contain label A *or* label B.
+
+- If you're not sure exactly what the label is, just use the labels pull down, and in its search bar type any word that is in the label name or description, and the matches will be displayed.  Click on the labels you want to add to your issues filter.
+
+- All the managed labels have `[managed]` in their description, so an easy way to browse just the managed labels is to search labels on that string. 
+
+- It is easy (and sometimes dangerous) to do batch updates of labels (or milestone, or assign, or close).  Just filter the issues to the ones you want to change, select the issues you want to label. When you select one or more issues, the pulldown menu changes from filter mode to update mode. Pull down the label menu, and you can select which labels you want to add or remove (it's a toggle). <br/><img width="600" alt="issues list in update mode" src="https://user-images.githubusercontent.com/6502462/57258627-439ad200-705d-11e9-8cca-adf8e45f44d0.png">
