@@ -1,3 +1,11 @@
+[Apache Solr](http://lucene.apache.org/solr/features.html) is used to power the search box, but is also used internally by the system and is intrinsic to the correct operation of the system. Some examples of places that it's used include:
+* Enumerating the list of works for an author
+* Enumerating the list of editions for a work
+* Autocomplete by author name when editing a work and selecting authors
+* Various "top" things like the top items to list in a carousel, an author's top work or subjects, etc.
+
+Proper operation of the OpenLibrary Solr instance requires that it be updated when authors, works, and editions are edited or the search index will not correctly reflect the underlying database.
+
 ### Solr updater script
 [Solr updater script](https://github.com/internetarchive/openlibrary/blob/master/scripts/new-solr-updater.py)
 
@@ -33,3 +41,6 @@ https://openlibrary.org/admin/inspect/store?key=solr-force-update
 ### Query Solr directly on dev instance
 On host:
 http://0.0.0.0:18983/solr/select?wt=json&json.nl=arrarr&q=key:/authors/OL18319A
+Equivalent for Docker:
+http://192.168.100.100:8983/solr/select?wt=json&json.nl=arrarr&q=key:/authors/OL18319A
+where 192.168.100.100 is the IP address returned by `docker-machine ip` on OS X or Windows.
