@@ -2,15 +2,24 @@
 
 We reserve a set of labels for use with Github issues, to assist with issue handling and project management for OpenLibrary.
 
-Most generally, an issue evolves through a series of states, for example: submitted -> assessed -> scheduled -> fixed -> closed.  On the way down that path, lots of things can happen.  The labels below can be applied and removed during initial triage (either by the submitter, or by an initial triage), and thereafter by the owner of the bug.
+Most generally, an issue evolves through a series of states, for example: 
 
-A note about owners: The top assignee of an issue is considered its *owner*. An issue may be created with an owner suggested by the submitter (develops occasionally create issues which they assign to themselves).  During submission and triage, the assigned owner is not necessarily the person who will fix the issue (it is not necessarily even established if or when the issue will be fixed at all), but rather they are the person who will do whatever is needed to handle the issue (asking questions, soliciting input, establishing and updating the priority, closing duplicates, etc). Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off).
+submitted -> assessed -> scheduled -> fixed -> closed.  
+
+On the way down that path, lots of things can happen.  The labels below can be applied and removed during initial triage (either by the submitter, or by an initial triage), and thereafter by the owner of the bug.
+
+## Owners
+
+A note about owners: The top assignee of an issue is considered its *owner*. During submission and triage, the assigned owner is not necessarily the person who will fix the issue (it is not necessarily even established if or when the issue will be fixed at all), but rather they are the person who will do as much or as little as needed to handle the issue (asking questions, soliciting input, establishing and updating the priority, closing duplicates, etc). Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). Any open bug that is unowned is in need of triage.
+
+## Managed Labels
 
 Labels are grouped by prefix and color. If you create a label outside the managed set, prefix it with your initials. We are continually evolving the managed set to meet our needs.
 
 The labels are grouped into different axes for slicing and dicing issues:
 
 ## Type
+
 What kind of issue this is.  Is it something that is broken that should (perhaps) be fixed, or is it a request for a new feature or enhancement, or is it a reminder to reorganize or cleanup some aspect of the code base?
 
 Color|Label|Description 
@@ -36,6 +45,8 @@ Color|Label|Description
 
 Use these labels to distinguish between issues that we're actively working on, those that we plan to work on, and those that seem to be good ideas that we'll consider when we have the additional time and resources required.  If no state label is present, the issue needs assessment.  If someone was working on an issue but had to set it aside, the state label might be changed to "Backlogged," or the current owner might find someone to hand it off to, or it might even be closed (if we decide it didn't need to be addressed after all).
 
+If an issue is "State: Scheduled", it must have a milestone that indicates by when it is scheduled to be completed. We plan by quarters, so "2019 Q1" means it is an issue we expect to resolve on or before March 31, 2019.
+
 Color|Label|Description 
 -|-|-
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Backlogged** | No one working on it, not in any milestone, but want to leave open to consider later. [managed]
@@ -55,6 +66,7 @@ Color|Label|Description
 
 ## Close
 
+Issues typically lead to pull requests to modify the repo in order to resolve the bug.  
 It is considered good form, immediately prior to closing a bug, to add a label indicating if it was closed for any of the following reasons.
 
 Color|Label|Description 
