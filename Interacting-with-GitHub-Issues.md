@@ -55,7 +55,7 @@ An issue without an owner is not being worked on.
 
 We try to keep the set of labels organized and under control. Talk to the "label owner" if a generally useful label needs to be added, and we'll document it here. You may freely add your own labels, just make sure they are prefixed with your initials.
 
-[Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Managed-Labels) are used for triage and project management. 
+[Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues) are used for triage and project management. 
 
 Note the following:
 
