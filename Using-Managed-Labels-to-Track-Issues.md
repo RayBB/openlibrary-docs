@@ -171,10 +171,10 @@ The broad area this issue is related to, often suggesting who first should consi
 
 Color|Label|Description 
 -|-|-
+![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Admin/Maintenance** | Issues relating to support scripts, bots, cron jobs and admin web pages. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Configuration** | Issues related to system configuration (production, staging, or development). [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Data** | Issues that affect book/author metadata or user/account data. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Documentation** | Issues related to developer or ops or data documentation. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Admin/Maintenance** | Issues relating to support scripts, bots, cron jobs and admin web pages. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Mobile/Responsive** | Affects the responsive UI on mobile devices. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Server** | Issues with the server or its plugins. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: UI** | The issue is focused on the User Interface. [managed]
