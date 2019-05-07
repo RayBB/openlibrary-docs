@@ -201,6 +201,8 @@ Color|Label|Description
 -|-|-
 ![7057ff](https://via.placeholder.com/30x30/7057ff/7057ff.jpg) | **Good First Issue** | Easy issue. Good for newcomers. [managed]
 
+A `good first issue` should be clear, should not require a lot of context, should be low risk and easy to review.  Issues that involve high priority or global changes to the production system code are not good candidates.
+
 ## Personal Labels and Deprecated Labels
 
 If you have a large number of issues assigned to you, there may be times when you want to divide them into groups by your own criteria.  You can do this by creating your own labels.  They all go into the repository label set, so we ask that you:
