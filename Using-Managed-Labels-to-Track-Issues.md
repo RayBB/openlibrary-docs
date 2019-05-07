@@ -158,7 +158,7 @@ If you have a large number of issues assigned to you, there may be times when yo
 
 - prefix the label name with your initials.
 
-For example, Chris Horn has labels with prefix `CH: ` and color #1d76db.
+For example, Charles Horn has labels with prefix `CH: ` and color #1d76db.
 
 Labels that are grey and start with a tilde `~` are *deprecated*.  They typically are not used much, and shouldn't be added to issues going forward.
 
