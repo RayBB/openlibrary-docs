@@ -26,11 +26,17 @@ The sections below contain:
 
 ## Owners
 
-A note about owners: The top assignee of an issue is considered its *owner*. 
+The assignee of an issue is considered its *owner*.
 
-During submission and triage, the assigned owner is not necessarily the person who will fix the issue (it is not necessarily even established if or when the issue will be fixed at all), but rather they are the person who will do as much or as little as needed to handle the issue (asking questions, soliciting input, establishing and updating the priority, closing duplicates, etc). 
+At submission and prior to triage, the assigned owner is *not necessarily the person* who will fix the issue (it is not necessarily even established, at that point, if or when the issue will be fixed at all), but rather they are the person who will do as much or as little as needed to handle the issue (asking questions, soliciting input, establishing and updating the priority, checking if it is a duplicate, etc). 
+
+Once an issue is labeled `State: Work In Progress`, the owner is the individual doing the work, or leading/coordinating the group that is doing the work.
 
 Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). 
+
+An example of a common [search](#tips-for-filtering-issues-and-updating-their-labels) might be `assignee:cdrini label:"state: work in progress"` to see what Drini is working on.
+
+Singular ownership is important to make sure things don't fall on the floor. We therefore avoid multiple assignees.  Most issues have multiple individuals involved in various aspects of assessing and resolving it - those people are "mentioned" (e.g. "@hornc") in the issue comments.
 
 Any open bug that is unowned is in need of triage.
 
@@ -40,7 +46,7 @@ Much of our work is done by volunteers. So we plan very lightly, by year and by 
 
 Things we'd like to get done during a given year get the milestone for that year, e.g. "2019".  For things we expect to be done in by the end of a given quarter, we apply the quarterly milestone, e.g. "2019 Q1" for things to get done on or before March 31, 2019.
 
-If a milestone deadline passes, whatever is not done gets rescheduled or [backlogged](#state).
+Milestones are closed when their deadline arrives. Issues associated with that milestone that are not done get rescheduled (the milestone is changed) or [backlogged](#state) (labeled `State: Backlogged`).
 
 ## Managed Labels By Group
 
@@ -55,10 +61,14 @@ What kind of issue this is.  Is it something that is broken that should (perhaps
 Color|Label|Description 
 -|-|-
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Bug** | Something isn't working. [managed]
-![e08000](https://via.placeholder.com/30x30/e08000/e08000.jpg) | **Type: Epic** | A feature or refactor that is big enough to require subissues. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Feature** | Issue describes a feature or enhancement we'd like to implement. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Refactor/Cleanup** | Issues related to reorganization/clean-up of code (e.g. for maintainability). [managed]
+![e08000](https://via.placeholder.com/30x30/e08000/e08000.jpg) | **Type: Epic** | A feature or refactor that is big enough to require subissues. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Subtask of Epic** | A subtask that is part of the work breakdown of an epic issue (see comments). [managed]
+
+Epics and subtasks are used when we want to separate out the ownership, comment stream, and timing of different parts of a large project.  The Epic is closed when all its subtasks have been closed.  For most issues, putting a checklist in the comment stream suffices (when everything is checked off, the issue can be closed). The "Needs: Breakdown" label can be used for any issue (epic or not) that needs a decision identifying the list of steps that will be taken in order to close the issue.
+
+Note that `Bug`, `Feature`, `Refactor`, `Subtask` are mutually exclusive.  Every issue (post-triage) should have one of these.  If an issue is labeled `Epic`, it probably also should have a `Feature` or `Refactor` label.
 
 ### Priority:
 
@@ -71,11 +81,21 @@ Color|Label|Description
 ![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 2: Normal** | Optional label: neither high nor low priority. [managed]
 ![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 3: Low** | Issues that we can consider at our leisure. [managed]
 
+When a priority label is applied to an issue by the submitter, or on any issue without an owner, it represents a suggestion, not a decision. Priorities are not immutable - even while an issue is being worked on, the owner may decide to move the priority up or down.
+
+Although priorities indicate urgency rather than timing, a helpful frame for assigning priority is to ask questions such as these - think of them as "rules of thumb":
+
+- Is the issue preventing numerous users from successfully using the website?  Is the issue related to leaking sensitive information?  Is the issue related to usage or running processes actively corrupting our data? Does it really need to be fixed in the next 48 hours?  Mark it `Priority 0: Urgent`. If it requires conversation or multiple developers to fix, they should all be talking in a slack channel right now.
+
+- Should a developer interrupt and set aside their current activity to get this issue resolved?  Does it need to be fixed in the next 14 days?  Assign an owner who will label it `Priority 1: High`.  If you can't find a volunteer to own it, it can't be `Priority 1`.
+
+- The other two priority labels, medium and low, are available to memorialize your assessment.  They mostly indicate, "I've looked at this, and it is not urgent."
+
+At most, one `Priority` label can be assigned to an issue.  If there is no `Priority` label, consider the priority unassessed.  It is good form to mark all your issues with some priority level, because it gives us a historical record of the distribution of issues by priority.
+
 ### State:
 
-Use these labels to distinguish between issues that we're actively working on, those that we plan to work on, and those that seem to be good ideas that we'll consider when we have the additional time and resources required.  If no state label is present, the issue needs assessment.  If someone was working on an issue but had to set it aside, the state label might be changed to "Backlogged," or the current owner might find someone to hand it off to, or it might even be closed (if we decide it didn't need to be addressed after all).
-
-If an issue is "State: Scheduled", it must have a milestone that indicates by when it is scheduled to be completed. We plan by quarters, so "2019 Q1" means it is an issue we expect to resolve on or before March 31, 2019.
+Use these labels to distinguish between issues that we're actively working on, those that we plan to work on, and those that seem to be good ideas that we'll consider when we have the additional time and resources required.
 
 Color|Label|Description 
 -|-|-
@@ -83,16 +103,31 @@ Color|Label|Description
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Scheduled** | A decision has been made that this issue should be addressed. [managed]
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Work In Progress** | This issue is being actively worked on. [managed]
 
+If no state label is present, the issue needs assessment.  
+
+If someone was working on an issue but had to set it aside, the state label might be changed to "Backlogged," or the current owner might find someone to hand it off to, or it might even be closed (if we decide it didn't need to be addressed after all).
+
+If an issue is "State: Scheduled", it must have a milestone that indicates by when it is scheduled to be completed. We plan by quarters, so "2019 Q1" means it is an issue we expect to resolve on or before March 31, 2019.
+
+If an issue is `Priority 0` or `Priority 1`, and the state is not `Work In Progress`, something is wrong, and alarms should sound.
+
 ### Needs:
 
-These labels indicate that an issue or pull request is stuck because the owner needs someone to respond - they'll add comments to the issue saying what exactly they need.  Remember to remove this label once the need is met and the issue is unstuck.
+These labels indicate that an issue or pull request is stuck because the owner needs someone to respond - they'll add comments to the issue saying what exactly they need. 
 
 Color|Label|Description 
 -|-|-
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Assessment** | This issue needs triage. The team needs to decide who should own it, what to do, by when. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Breakdown** | This big issue needs a checklist or subissues to describe a breakdown of work. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Detail** | Submitter needs to provide more detail for this issue to be assessed (see comments). [managed]
+![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Help** | We are looking for someone to step up and take on this issue. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Review** | This issue/PR needs to be reviewed in order to be closed or merged (see comments). [managed]
+
+If you see one or more of these labels on an issue, assume we are not making progress on it.  
+
+If you are the owner of an issue and add this label, always add a comment that indicates, as best you can, what you need to get unstuck.  If you think you need the help of another team member, make sure to mention them by their handle in the comment.
+
+Remember to remove this label once the need is met and the issue is unstuck.
 
 ### Close:
 
@@ -106,6 +141,14 @@ Color|Label|Description
 ![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Not an Issue** | Questions and discussions resolved or moved to gitter/slack. [managed]
 ![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Will Not Fix** | Closed because we have decided not to address this (e.g. out of scope). [managed]
 
+Some observations:
+
+- You'll almost always want to add additional detail in the comments as to how the decision to close was arrived at.  Liberally mention other people you consulted with (for example, "I spoke to @jeff and we agreed this affects very few users.") and other issues (super-common: "this is a duplicate of issue #XXXX").
+
+- One of the best ways to attract attention to an issue that you feel is unfairly ignored is to close it prematurely.
+
+- If there is (or should be) another `State: Scheduled` issue to fix a big problem, and fixing the big problem would also resolve this issue, we have a choice: we could address this issue (e.g. with a stop-gap solution, right now, while we wait for the big fix), or close this issue (i.e. decide to leave it broken).  In the comments, reference the big picture issue (e.g. "This issue will be properly resolved when we address issue #XXXX."), and explain your intentions.  For example, you might comment "We'll leave this broken until then," and label `Close: Will Not Fix`, or comment "In the meantime, we'll deploy the following stop-gap" and label this issue, say, `Priority 1: High`.
+
 ### Theme:
 
 There are some issues that affect multiple modules, or are related to a user story or workflow that touches multiple systems, and we use "theme" labels to identify them.  This list is expected to grow.
@@ -117,6 +160,10 @@ Color|Label|Description
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Python3** | Work related to the transition from Py2 to Py3. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Testing** | Work related to tests that need to be written or fixed. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Translation** | Work related to language accessibility. [managed]
+
+The unifying characteristic of Themes is that they involve issues that touch many parts of the repo (UI, Server, Configuration, Documentation, Data).
+
+It is expected that an issue will have at most one `Theme:` label.
 
 ### Affects:
 
@@ -132,15 +179,19 @@ Color|Label|Description
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Server** | Issues with the server or its plugins. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: UI** | The issue is focused on the User Interface. [managed]
 
+It is preferred that an issue only have one `Affects:` label, but we're not religious about it. If you notice that an issue affects multiple areas in the above list, you may want to split it into multiple issues, one per area.  If it makes sense to resolve them independently, that's enough.  If they all need to be resolved in a coordinated fashion, create an `Type: Epic` issue which can remain open until all the subissues are closed.
+
 ### Module:
 
-These labels identify the specific module or service that the issue relates to. Often this corresponds to a particular directory in the repo hierarchy. This list is expected to grow.
+These labels identify the specific module or service that the issue relates to. Often this corresponds to a particular directory or file or interface or class present in the repo hierarchy. This list is expected to grow.
 
 Color|Label|Description 
 -|-|-
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Accounts** | Issues related to authentication, account maintenance, etc. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Memcache** | Issues related to memcache, memcached, cache invalidation, cache corruption, etc. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Solr** | Issues related to Solr, data indexing, search, etc. [managed]
+
+A common search might be something like `label:"Affects: Server" label:"Module: Solr" label:"State: Work In Progress"` to see who is actively working on calls to solr in the server.  If you wanted to pick up issues in that area, you could see who else is doing so.
 
 ### Additional labels
 
@@ -154,13 +205,13 @@ Color|Label|Description
 
 If you have a large number of issues assigned to you, there may be times when you want to divide them into groups by your own criteria.  You can do this by creating your own labels.  They all go into the repository label set, so we ask that you:
 
-- pick your own color that you apply to all your personal labels, and
+- Pick your own unique (!) color that you apply to all your personal labels, and
 
-- prefix the label name with your initials.
+- Prefix the label name with your initials.
 
-For example, Charles Horn has labels with prefix `CH: ` and color #1d76db.
+For example, Charles Horn creates his own labels with prefix `CH: ` and color #1d76db.
 
-Labels that are grey and start with a tilde `~` are *deprecated*.  They typically are not used much, and shouldn't be added to issues going forward.
+Labels that are grey and/or start with a tilde `~` are *deprecated*.  They typically are not used much, and shouldn't be added to issues going forward.
 
 ## Tips for Filtering Issues and Updating Their Labels
 
