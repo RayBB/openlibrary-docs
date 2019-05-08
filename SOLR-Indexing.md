@@ -45,56 +45,62 @@ Equivalent for Docker:
 http://192.168.100.100:8983/solr/select?wt=json&json.nl=arrarr&q=key:/authors/OL18319A
 where 192.168.100.100 is the IP address returned by `docker-machine ip` on OS X or Windows.
 
-# Docs from GIO
+# Docs from GIO - Updating the Search Engine (notes by: Anand Chitipothu)
+Open Library uses Apache Solr for providing search functionality to the website. The Solr instance maintains its index of all the items to be search in its data directory. This index is informally called a “search index”. All book, work and author records are stored in the same search engine.
 
-OL: Updating the Search Engine (notes by: Anand Chitipothu)
-Open Library uses Apache Solr for providing search functionality to the website. The Solr instance maintains its an index of the all the items to be search in its data directory. This index is informally called as “search index”. All book, work and author records are stored in the same search engine.
+## Updating the Search Engine
 
-:: Updating the Search Engine
+Whenever a record is updated on Open Library, the corresponding entry in the search engine must be updated to get up-to-date results. Open Library has two different ways to update the search index:
 
-Whenever a record is updated on Open Library, the corresponding entry in the search engine must be updated to get the uptodate results. Open Library has two different ways to update the search index.
-
-The Manual Way
-The openlibrary/solr module provides a script called update_work.py for updating solr. Even though the script name is indicating only work, it can be used for updating even edition and author documents in solr.
+### 1. The Manual Way
+The openlibrary/solr module provides a script called `update_work.py` for updating solr. Even though the script name is indicating only work, it can be used for updating even edition and author documents in solr.
 
 To update a one or more entries manually:
 WARNING: be sure to use the right openlibrary.yml file…
 
-$ python openlibrary/update_work.py --config openlibrary.yml /books/OL123M /works/OL234W /authors/OL45A
+```sh
+python openlibrary/update_work.py --config openlibrary.yml /books/OL123M /works/OL234W /authors/OL45A
+```
+
 By default, the script performs an commit to the Solr. Doing a commit ensures that the changes are flushed to the disk and available to search requests from now on. However, it is very expensive operation and takes more than 5 minutes (at the time of writing this).
 
-To update the documents without out committing them, add `–nocommit` flag.
+To update the documents without out committing them, add `–nocommit` flag:
 
-$ python openlibrary/update_work.py --config openlibrary.yml --nocommit /books/OL123M /works/OL234W /authors/OL45A
-The Solr Updater
-There is a script scripts/new_solr_updater.py, which is run as a daemon process, listens to the edits happening to the database and updates the corresponding documents in Solr.
+```sh
+python openlibrary/update_work.py --config openlibrary.yml --nocommit /books/OL123M /works/OL234W /authors/OL45A
+```
+
+### 2. The Solr Updater
+There is a script `scripts/new_solr_updater.py`, which is run as a daemon process, listens to the edits happening to the database and updates the corresponding documents in Solr.
 
 Infobase, the system that handles the all the modifications to the system, maintains a log of all changes. It writes a JSON entry to a log file whenever something is modified in the database. It also provides an API to request these log entries.
 
-The solr updater script uses this to get new modifitions made after what it has last seen. It uses those entries to find which documents should be updated in the search engine.
+The solr updater script uses this to get new modifications made after what it has last seen. It uses those entries to find which documents should be updated in the search engine.
 
 While this looks like a fair approach, the solr updater script can fail at a bad record or fail at an unexpected data. When this happen the solr updater dies and starts from the same point when it comes up and thus gets into an infinite loop.
 
 The current position of the log file consumed by the solr updated is maintained in a state file. The state file will be at /var/run/openlibrary/solr-update.offset, or any other path specified as argument to the solr updater script.
 
-:: The Updating Process
+## The Updating Process
 
 To understand what is involved in updating a record in solr, lets restrict to work search and try to visualize a work record with bunch of editions.
 
-The work record should appear in search results, when any one the following terms are used in the search query.
+The work record should appear in search results, when any one the following terms are used in the search query:
 
-title of the work
-title of any of its editions (could be in other languages)
-ISBN or any other ID of the editions
-name of the the authors
-(and some more)
-To get all this information, the solr document needs information from the following sources.
+- title of the work
+- title of any of its editions (could be in other languages)
+- ISBN or any other ID of the editions
+- name of the the authors
+- (and some more)
 
-The work record from OL database
-All the edition records belonged to that work
-All the author records belonged to that work
-Data about all the records which have been marked as redirect to any of the above records
-IA metadata for each edition having a scan
+To get all this information, the solr document needs information from the following sources:
+
+- The work record from OL database
+- All the edition records belonged to that work
+- All the author records belonged to that work
+- Data about all the records which have been marked as redirect to any of the above records
+- IA metadata for each edition having a scan
+
 When updating multiple records at once, getting these individually might be too inefficient. So, some efforts have gone into it to make the process faster by making requests in batches whenever possible and directly take to the database to avoid middle layer overheads.
 
 The flow will be similar for author records as well.
