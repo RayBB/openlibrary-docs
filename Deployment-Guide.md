@@ -21,7 +21,7 @@ Greetings deployer! You are one of the select few who has privileged access to I
 
 Before code is pushed to production, it pass all tests -- see [Testing Guide](https://github.com/internetarchive/openlibrary/wiki/Testing) -- and should be QA tested on development, i.e. ol-dev0 (https://dev.openlibrary.org). If packages are missing, make sure you track them in your `requirements.txt` and `scripts/bootstrap.sh` as these will have to be [manually installed on production](#Satisfying_Dependency_Changes).
 
-```
+```sh
 ssh -A ol-dev0
 cd /opt/openlibrary/openlibrary  # where OL code lives
 git checkout <branch>  # checkout the correct branch name
@@ -38,7 +38,7 @@ sudo /olsystem/bin/upstart-service openlibrary-server :7071 &  # restart
 
 As unideal as it my be, the deployment process is not yet fully configured to understand and be responsive to changes in your Python requirements.txt / library or your `apt-get` ubuntu dependencies. As a result, you'll need to manually make sure `ol-home`, `ol-web3`, `ol-web4`, and `ol-www1` have the correct dependencies using `pip` and `apt-get`:
 
-```
+```sh
 ssh ol-web3 # needed for openlibrary restart
 cd /opt/openlibrary
 sudo su openlibrary
@@ -80,14 +80,14 @@ Caution: Because one of our two web servers (namely `ol-web3`, our blue node) is
 
 On ol-home (make sure you ssh with -A to forwards ssh keys, required if you don't want "permission denied for pubkey" errors or restart) issue the following commands to initiate a deployment to all production nodes:
 
-```
+```sh
 ssh -A ol-home
 /olsystem/bin/deploy-code openlibrary
 ```
 
 If you've made a change to your configuration in `olsystem` (i.e. /opt/openlibrary/olsystem) then from `ol-home` you will also run:
 
-```
+```sh
 /olsystem/bin/deploy-code olsystem
 ```
 
@@ -95,7 +95,7 @@ If you've made a change to your configuration in `olsystem` (i.e. /opt/openlibra
 
 `ssh` into the public facing web-head (i.e. `ol-www1`), activate the VM's virtualenv, and try importing the openlibrary package directly from python and start the service on a different port for testing:
 
-```
+```sh
 source /opt/openlibrary/venv/bin/activate
 python import openlibrary  # detect any obvious breaking problems
 
@@ -109,13 +109,13 @@ sudo kill -9 `pgrep -f openlibrary-server`  # kill previous instance
 
 From `ol-home`, once the deployment(s) are complete and you've [tested deployment](#Testing_Deployment), you are ready to restart the production web-nodes `ol-web3` and `ol-web4` in blue-green fashion. Consult [Monitoring Deployment](#Monitoring_Deployment) after **each** web-node is restarted:
 
-```
+```sh
 ssh ol-web3 sudo supervisorctl restart openlibrary  # blue node;
 ```
 
 Before proceeding, [check haproxy loadbalancer](https://openlibrary.org/admin?stats) to ensure the blue node succeeds before attempting to restart the green node.
 
-```
+```sh
 ssh ol-web4 sudo supervisorctl restart openlibrary  # green node;
 ```
 
@@ -142,16 +142,15 @@ After you have deployed to ol-home (production Open Library), tag the master bra
 
 Check that you're on master...
 
-```
-> git branch
-* master
+```sh
+git branch
 ```
 
 Fill in the years, months, days where appropriate...
 
-```
-> git tag deploy-yyyy-mm-dd
-> git push origin deploy-yyyy-mm-dd
+```sh
+git tag deploy-yyyy-mm-dd
+git push origin deploy-yyyy-mm-dd
 ```
 
 # Service / Config upgrade testing (Memchache)
