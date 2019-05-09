@@ -42,7 +42,7 @@
 	* [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
 	* [Dealing with Spam](Anti-Spam-Tools)
 	* [Generating Data Dumps](Generating-Data-Dumps)
-	* [Solr Indexing](SOLR-Indexing)
+	* [Solr](Solr)
 	* [Generating Sitemaps](Sitemap-Generation)
 * **Features & Initiatives (RFCs)**
 	* [Book Drive Initiative](Book-Drive)
