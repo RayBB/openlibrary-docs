@@ -192,7 +192,7 @@ Color|Label|Description
 -|-|-
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Accounts** | Issues related to authentication, account maintenance, etc. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Memcache** | Issues related to memcache, memcached, cache invalidation, cache corruption, etc. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Solr** | Issues related to Solr, data indexing, search, etc. [managed]
+![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Solr** | Issues related to the configuration or use of the Solr subsystem. [managed]
 
 A common search might be something like `label:"Affects: Server" label:"Module: Solr" label:"State: Work In Progress"` to see who is actively working on calls to solr in the server.  If you wanted to pick up issues in that area, you could see who else is doing so.
 
