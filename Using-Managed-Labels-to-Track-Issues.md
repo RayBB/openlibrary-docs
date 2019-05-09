@@ -157,6 +157,7 @@ Color|Label|Description
 -|-|-
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Accessibility** | Work related to disability accessibility. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Design** | Issues related to UI design, branding, etc. [managed]
+![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Performance** | Issues related to UI or Server performance. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Python3** | Work related to the transition from Py2 to Py3. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Testing** | Work related to tests that need to be written or fixed. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Translation** | Work related to language accessibility. [managed]
@@ -177,7 +178,7 @@ Color|Label|Description
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Documentation** | Issues related to developer or ops or data documentation. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Mobile/Responsive** | Affects the responsive UI on mobile devices. [managed]
 ![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Server** | Issues with the server or its plugins. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: UI** | The issue is focused on the User Interface. [managed]
+![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: UI** | The issue is focused on the web user interface and user experience. [managed]
 
 It is preferred that an issue only have one `Affects:` label, but we're not religious about it. If you notice that an issue affects multiple areas in the above list, you may want to split it into multiple issues, one per area.  If it makes sense to resolve them independently, that's enough.  If they all need to be resolved in a coordinated fashion, create an `Type: Epic` issue which can remain open until all the subissues are closed.
 
