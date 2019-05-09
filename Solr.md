@@ -45,6 +45,31 @@ Equivalent for Docker:
 http://192.168.100.100:8983/solr/select?wt=json&json.nl=arrarr&q=key:/authors/OL18319A
 where 192.168.100.100 is the IP address returned by `docker-machine ip` on OS X or Windows.
 
+## Creating a Solr Backup
+
+```sh
+ssh -A ol-home
+
+# 1. Stop solr-updater so that the index doesn't change while we make the backup
+sudo supervisorctl stop solr-updater
+
+ssh -A ol-solr2
+tmux
+
+# Commit any pending docs
+# check how many docs are pending
+curl http://localhost:8983/solr/admin/stats.jsp | grep -A 2 Pending
+# ** This didn't work earlier! It took 7+ minutes, so we just abandoned it **
+curl http://localhost:8983/solr/update?commit=true
+
+ssh -A ol-home
+cd /1/solr-backups
+time ssh -A mek@ol-solr2 "sudo -uroot tar zcf - /var/lib/solr/data" > backup-$(date +%F).tar.gz
+
+ssh -A ol-home
+sudo supervisorctl start solr-updater
+```
+
 # Docs from GIO - Updating the Search Engine (notes by: Anand Chitipothu)
 Open Library uses Apache Solr for providing search functionality to the website. The Solr instance maintains its index of all the items to be search in its data directory. This index is informally called a “search index”. All book, work and author records are stored in the same search engine.
 
