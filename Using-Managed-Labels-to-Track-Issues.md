@@ -159,6 +159,7 @@ Color|Label|Description
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Book Sponsorship** | Issues related to the workflow for book sponsorship. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Backup/Restore** | Issues related to disaster recovery, backup/restore, data dumps. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Design** | Issues related to UI design, branding, etc. [managed]
+![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Development** | Issues related to the developer experience and the dev environment. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Identifiers** | Issues related to ISBN's or other identifiers in metadata. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Performance** | Issues related to UI or Server performance. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Upgrade to Python 3** | Issues relating to the systemwide upgrade from Python 2 to Python 3. [managed]
