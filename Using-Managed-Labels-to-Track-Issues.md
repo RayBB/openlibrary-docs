@@ -191,6 +191,7 @@ These labels identify the specific module or service that the issue relates to. 
 Color|Label|Description 
 -|-|-
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Accounts** | Issues related to authentication, account maintenance, etc. [managed]
+![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Docker** | Issues related to the configuration or use of Docker. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Infogami** | Issues related to the configuration or use of the Infogami subsystem. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Memcache** | Issues related to the configuration or use of the Memcache subsystem. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Solr** | Issues related to the configuration or use of the Solr subsystem. [managed]
