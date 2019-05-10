@@ -157,6 +157,7 @@ Color|Label|Description
 -|-|-
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Accessibility** | Work related to disability accessibility. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Book Sponsorship** | Issues related to the workflow for book sponsorship. [managed]
+![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Backup/Recovery** | Issues related to disaster recovery, backup/restore, data dumps. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Design** | Issues related to UI design, branding, etc. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Identifiers** | Issues related to ISBN's or other identifiers in metadata. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Performance** | Issues related to UI or Server performance. [managed]
