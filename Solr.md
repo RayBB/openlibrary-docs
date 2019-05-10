@@ -47,6 +47,8 @@ where 192.168.100.100 is the IP address returned by `docker-machine ip` on OS X 
 
 ## Creating a Solr Backup
 
+Creates a `.tar.gz` file of the Solr index.
+
 ```sh
 ssh -A ol-home
 
@@ -56,16 +58,18 @@ sudo supervisorctl stop solr-updater
 ssh -A ol-solr2
 tmux
 
-# Commit any pending docs
+# 2. Commit any pending docs
 # check how many docs are pending
 curl http://localhost:8983/solr/admin/stats.jsp | grep -A 2 Pending
 # ** This didn't work earlier! It took 7+ minutes, so we just abandoned it **
 curl http://localhost:8983/solr/update?commit=true
 
+# 3. Create the backup (~35 min on 8 May 2019; ~13 GB)
 ssh -A ol-home
 cd /1/solr-backups
 time ssh -A mek@ol-solr2 "sudo -uroot tar zcf - /var/lib/solr/data" > backup-$(date +%F).tar.gz
 
+# 4. Restart Solr updater
 ssh -A ol-home
 sudo supervisorctl start solr-updater
 ```
