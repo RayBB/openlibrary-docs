@@ -195,6 +195,7 @@ Color|Label|Description
 -|-|-
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Accounts** | Issues related to authentication, account maintenance, etc. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Docker** | Issues related to the configuration or use of Docker. [managed]
+![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Git** | Issues related to the git repo, branches, commit messages, etc. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Infogami** | Issues related to the configuration or use of the Infogami subsystem. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: JavaScript** | Issues related to the JavaScript functionality. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Memcache** | Issues related to the configuration or use of the Memcache subsystem. [managed]
