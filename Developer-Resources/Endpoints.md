@@ -160,7 +160,8 @@ The raw POST data is parsed by [`parse_body()`](https://github.com/internetarchi
     {
         "identifier": "<ocaid>",
         "require_marc": "false",
-        "bulk_marc": "false"
+        "bulk_marc": "false",
+        "local_id": "<optional local_id config key>"
     }
 
 Example data to import a single archive.org item:
@@ -170,6 +171,8 @@ Example data to import a single archive.org item:
 Example data to import one record from a bulk MARC, identifier format `ocaid/filename:offset:length`:
 
     { "bulk_marc": "true", "identifier": "talis-openlibrary-contribution/talis-openlibrary-contribution.mrc:1353778212:578" }
+
+If importing from a partner's MARC records where we want to store their `local_id` (in practice this is expected to be a scannable barcode) the optional `local_id` parameter can be supplied which will read the configuration from an entry under https://openlibrary.org/local_ids to extract an id from any controlfield (e.g. `100$`) or any other MARC subfield (e.g. `919$a`) as specified in the `"id_location"` of that entry. Example: `"local_id": "trent"`.
 
 ## Subjects
 
