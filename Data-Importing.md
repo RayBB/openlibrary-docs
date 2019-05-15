@@ -12,6 +12,8 @@ There are multiple paths by which data can be imported into Open Library.
 4. Through our privileged ImportBot [scripts/manage_imports.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/manage-imports.py)  which POSTs to the IA import API via `Openlibrary.import_ocaid()` from [openlibrary/api.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py) 
 3. Through bulk import API [openlibrary/api.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py) -- this should be considered deprecated
 
+# MARC Records
+
 ## Bulk MARC Import
 
 We are in the process of expanding the `api/import/ia` endpoint functionality.
@@ -26,3 +28,9 @@ e.g. http://www.archive.org/download/trent_test_marc/180221_ItemID_Test_001.mrc?
 4. We'll take the MARC, call the MarcBinary code in `openlibrary/catalog/marc/marc_binary.py`
 5. We'll have to exposed a new endpoint within `openlibrary/plugins/importapi/code.py` for MARC import (w/o IA book item) 
 6. Add `"local_id": ["urn:trent:12345"]`key to openlibrary book metadata in addition to correctly formatted `source_record` so archive.org can search for the records using the OL books API from
+
+## Importing Partner MARCs with Local ID Barcodes
+
+https://github.com/internetarchive/openlibrary/wiki/Endpoints#import-by-archiveorg-reference
+
+> If importing from a partner's MARC records where we want to store their local_id (in practice this is expected to be a scannable barcode) the optional local_id parameter can be supplied which will read the configuration from an entry under https://openlibrary.org/local_ids to extract an id from any controlfield (e.g. 100$) or any other MARC subfield (e.g. 919$a) as specified in the "id_location" of that entry. Example: "local_id": "trent"
