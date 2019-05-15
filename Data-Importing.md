@@ -34,7 +34,7 @@ e.g. http://www.archive.org/download/trent_test_marc/180221_ItemID_Test_001.mrc?
 Even before starting, if we’re creating an instance of Open Library from scratch, we’ll need to create a new infogami `thing` called `local_ids` which is of type `page`. Next:
 
 - A new partner named `foo` appears and their local_id barcode is in field `999$a` within their MARCs
-- As an admin, navigate to https://openlibrary.org/local_ids/foo.yml?m=edit and set the following metadata (you can refer to https://openlibrary.org/local_ids/trent.yml)
+- As an admin, navigate to https://openlibrary.org/local_ids/foo.yml?m=edit and set the following metadata. The following example presumes that `foo-archive-item` is the name of an archive.org item (preferably within the `archive.org/details/ol_data` collection) which contains one or more `.mrc` file(s). You can refer to https://openlibrary.org/local_ids/trent.yml for a live example.
 ```
 id_location: 999$a
 key: /local_ids/foo
