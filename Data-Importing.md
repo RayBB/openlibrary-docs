@@ -31,6 +31,17 @@ e.g. http://www.archive.org/download/trent_test_marc/180221_ItemID_Test_001.mrc?
 
 ## Importing Partner MARCs with Local ID Barcodes
 
-https://github.com/internetarchive/openlibrary/wiki/Endpoints#import-by-archiveorg-reference
+Even before starting, if we’re creating an instance of Open Library from scratch, we’ll need to create a new infogami `thing` called `local_ids` which is of type `page`. Next:
 
-> If importing from a partner's MARC records where we want to store their local_id (in practice this is expected to be a scannable barcode) the optional local_id parameter can be supplied which will read the configuration from an entry under https://openlibrary.org/local_ids to extract an id from any controlfield (e.g. 100$) or any other MARC subfield (e.g. 919$a) as specified in the "id_location" of that entry. Example: "local_id": "trent"
+- A new partner named `foo` appears and their local_id barcode is in field `999$a` within their MARCs
+- As an admin, navigate to https://openlibrary.org/local_ids/foo.yml?m=edit and set the following metadata (you can refer to https://openlibrary.org/local_ids/trent.yml)
+```
+id_location: 999$a
+key: /local_ids/foo
+name: Foo
+source_ocaid: foo-archive-item
+type:
+    key: /type/local_id
+urn_prefix: foo
+```
+- save, and you should be ready to start importing MARCs using the following instructions: https://github.com/internetarchive/openlibrary/wiki/Endpoints#import-by-archiveorg-reference
