@@ -8,10 +8,10 @@ Checklist for Deployment:
     - [ ] [Test the Deployment](#testing-deployment)
     - [ ] [Restart OpenLibrary Service](#restarting-services)
 5. [ ] [Monitor Deployment](#monitoring-deployment)
-6. [ ] [Troubleshoot a Failed Deployment](#recovering-from-a-failed-deployment)
+6. [ ] [Git Tag Successful Release](#git-tagging-a-release)
+7. [ ] [Troubleshoot a Failed Deployment](#recovering-from-a-failed-deployment)
     - [ ] [Diagnosing Failed Deployment](#failed-deploys)
     - [ ] [Rolling Back](#rolling-back)
-7. [ ] [Git Tag Successful Release](#git-tagging-a-release)
 
 # Introduction
 
@@ -150,6 +150,23 @@ After deploying Open Library, verify all systems are green via the following pro
 - Check HAProxy to ensure both `ol-web3` and `ol-web4` are up (as is `ol-www1`)
 - Check for [red flags in nagios](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail&limit=0&start=100&limit=100)
 
+# Git Tagging a Release
+
+After you have deployed to ol-home (production Open Library), tag the master branch accordingly:
+
+Check that you're on master...
+
+```sh
+git branch
+```
+
+Fill in the years, months, days where appropriate...
+
+```sh
+git tag deploy-yyyy-mm-dd
+git push origin deploy-yyyy-mm-dd
+```
+
 # Recovering from a Failed Deployment
 
 ## Failed Deploys
@@ -177,20 +194,3 @@ Sometimes deploys don't fail to succeed, they just succeed in deploying or buggy
 To roll back, go to the particular server(s), e.g. ol-web3 and ol-web4, reset the `/opt/openlibrary/openlibrary` symlink to point to the desired earlier directory in `/opt/openlibrary/deploys` and then restart openlibrary.
 
 The same procedure applies to olsystem (although olsystem doesn't need to be restart; however, openlibrary may need a restart after deploying olsystem).
-
-# Git Tagging a Release
-
-After you have deployed to ol-home (production Open Library), tag the master branch accordingly:
-
-Check that you're on master...
-
-```sh
-git branch
-```
-
-Fill in the years, months, days where appropriate...
-
-```sh
-git tag deploy-yyyy-mm-dd
-git push origin deploy-yyyy-mm-dd
-```
