@@ -3,11 +3,13 @@ Checklist for Deployment:
 2. [ ] [Test & QA changes on Staging](#testing-on-staging)
 3. [ ] [Handle dependency changes](#satisfying-dependency-changes)
 4. [ ] [Deploy to Production](#deploying-to-production)
-    - [ ] [Deploy OpenLibrary & Olsystem](#deploying-openlibrary)
+    - [ ] [Deploy olsystem](#deploying-olsystem)
+    - [ ] [Deploy Open Library](#deploying-openlibrary)
     - [ ] [Test the Deployment](#testing-deployment)
     - [ ] [Restart OpenLibrary Service](#restarting-services)
 5. [ ] [Monitor Deployment](#monitoring-deployment)
 6. [ ] [Troubleshoot a Failed Deployment](#recovering-from-a-failed-deployment)
+    - [ ] [Diagnosing Failed Deployment](#failed-deploys)
     - [ ] [Rolling Back](#rolling-back)
 7. [ ] [Git Tag Successful Release](#git-tagging-a-release)
 
@@ -66,6 +68,10 @@ After dependencies are installed, restart solr-updater, openlibrary and make sur
 
 # Deploying to Production
 
+## Background
+
+`ol-home` actually has 2 openlibrary repos on it. One is in `/opt/openlibrary/openlibrary` (the same convention as the other Open Library servers). `ol-home` also has a repo within `/1/var/lib/openlibrary/deploy/openlibrary`. When a new deploy of `openlibrary` is performed, it is executed on `/1/var/lib/openlibrary/deploy/openlibrary` and then rsync'ed to each server's `/opt/openlibrary/openlibrary` path. This is why deploys must be done from `ol-home`.
+
 ## Strategy
 
 On production, Open Library practices [blue-green](http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/) deployment. The purpose of a blue-green deploy is to gracefully deploy without downtime. Blue-green deployment is a 2-stage strategy whereby deployment is performed on a non-active secondary node (blue) without any changes being made to the primary (green) active node. Once it has been ensured that deployment of the blue node has completed successfully, a command is issued to switch the roles of the blue and green node (the newly deployed blue node becomes the green node). The previous green node may then be used as a secondary green node within a load-blanced pool until it is needed again as a blue node (as is the case with our setup). Open Library has two web nodes (`ol-web3` and `ol-web4`) which are load balanced using `haproxy` behind `nginx` (`ol-www1`).
@@ -73,6 +79,28 @@ On production, Open Library practices [blue-green](http://blog.christianposta.co
 For Open Library, we have a haproxy load-balancer (`ol-www1`) which coordinates several services, including 2 instances of the openlibrary website (`ol-web3` and `ol-web4`) which it distributes balanced workloads to. During our blue-green deploy, we deploy to both `ol-web3` and `ol-web4` but we only restart `ol-web3` (our blue node) while `ol-web4` (green) continues to serve clients using the stable code. This way, if there is a problem with deployment, 
 
 Caution: Because one of our two web servers (namely `ol-web3`, our blue node) is effectively being recommissioned as a staging server during deployment, additional stress will be applied to `ol-web4` in the event where `ol-web3` experiences a failure and goes offline. Therefore, it is not advised to deploy during times of high user traffic.
+
+## Deploying olsystem
+
+[Olsystem](https://github.com/internetarchive/olsystem) is the configuration repository for Open Library. Most deployments shouldn't require change to these configurations. If you're deploying `olsystem` changes which affect memcached servers, solr, or databases, it's best practice to stop Open Library services which use these configs before deploying and then restart them after the config is deployed:
+- [ ] stop `ol-web3` and `ol-web4`: `ssh ol-web3 sudo supervisorctl stop openlibrary;ssh ol-web4 sudo supervisorctl stop openlibrary`
+- [ ] stop `ol-dev` (which uses the production config): `sudo kill -9 `pgrep -f openlibrary-server`
+- [ ] stop `ol-mem[3-5]`: e.g. `ssh ol-mem3 sudo /etc/init.d/memcached stop`
+- [ ] stop `ol-home` services (import-bot, solr-updater, infobase): e.g. `ssh ol-home supervisorctl stop infobase`
+
+Once your to your `olsystem` configuration changes are tested on `ol-dev` and merged to master, you may deploy `olsystem` from `ol-home` by running:
+
+```sh
+/olsystem/bin/deploy-code olsystem
+```
+
+At this point, if a deploy of `openlibrary` is also necessary, **now would be a good time to continue with the [Deploying OpenLibrary](#deploying-openlibrary) instructions** prior to restarting these services. 
+
+Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`, then once the deploy succeeds, restart the above services in reverse order:
+- [ ] start `ol-home` services (import-bot, solr-updater, infobase): `ssh ol-home supervisorctl start infobase`
+- [ ] for `ol-mem[3-5]` run `sudo /etc/init.d/memcached stop` 
+- [ ] on ol-dev run `sudo /olsystem/bin/upstart-service openlibrary-dev-server :7071 &`
+- [ ] start `ol-web3` and `ol-web4`: `ssh ol-web3 sudo supervisorctl restart openlibrary;ssh ol-web4 sudo supervisorctl restart openlibrary`
 
 ## Deploying OpenLibrary
 
@@ -83,11 +111,7 @@ ssh -A ol-home
 /olsystem/bin/deploy-code openlibrary
 ```
 
-If you've made a change to your configuration in `olsystem` (i.e. /opt/openlibrary/olsystem) then from `ol-home` you will also run:
-
-```sh
-/olsystem/bin/deploy-code olsystem
-```
+If `openlibrary` deployment exits with a failure, see the [failed deploys](#failed-deploys) troubleshooting guide.
 
 ## Testing Deployment
 
@@ -126,9 +150,27 @@ After deploying Open Library, verify all systems are green via the following pro
 
 # Recovering from a Failed Deployment
 
+## Failed Deploys
+
+In some cases, a deployment fails to complete and exits pre-maturely with an error. Here are a few common reasons this may occur:
+
+### Unstashed Changes on ol-home
+
+The most common case of failed `openlibrary` deployment is unstashed changes within `/1/var/lib/openlibrary/deploy/openlibrary`. This is especially true for the `package-lock.json` files which sometimes gets modified while the deploy is building `nodejs` dependencies. This error will manifest as something like:
+
+```
+[ol-home] out: Updating 811fbbf..058c6ce
+[ol-home] out: error: Your local changes to the following files would be overwritten by merge:
+[ol-home] out:     package-lock.json
+[ol-home] out: Please, commit your changes or stash them before you can merge.
+[ol-home] out: Aborting
+```
+
+To resolve, `cd` to `/1/var/lib/openlibrary/deploy/openlibrary` and either `git stash` or `git checkout` any files which are causing conflicts.
+
 ## Rolling Back
 
-The base directories of all previous deploys are stored by Git commit hash in `/opt/openlibrary/deploys` with the currently deployed code symlinked from `/opt/openlibrary/openlibrary`.
+Sometimes deploys don't fail to succeed, they just succeed in deploying or buggy code. The zero-day fix is to roll-back. Once a deploy is completed, previous deploys will be preserved (within directories named by their git commit hash) within `/opt/openlibrary/deploys`. The currently deployed/live code directory is symlinked from `/opt/openlibrary/openlibrary`.
 
 To roll back, go to the particular server(s), e.g. ol-web3 and ol-web4, reset the `/opt/openlibrary/openlibrary` symlink to point to the desired earlier directory in `/opt/openlibrary/deploys` and then restart openlibrary.
 
