@@ -82,6 +82,8 @@ Caution: Because one of our two web servers (namely `ol-web3`, our blue node) is
 
 ## Deploying olsystem
 
+Note: If you are following these instructions while provisioning new servers for the Open Library service (e.g. adding a memcached server to the pool) please also refer to the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide).
+
 [Olsystem](https://github.com/internetarchive/olsystem) is the configuration repository for Open Library. Most deployments shouldn't require change to these configurations. If you're deploying `olsystem` changes which affect memcached servers, solr, or databases, it's best practice to stop Open Library services which use these configs before deploying and then restart them after the config is deployed:
 - [ ] stop `ol-web3` and `ol-web4`: `ssh ol-web3 sudo supervisorctl stop openlibrary;ssh ol-web4 sudo supervisorctl stop openlibrary`
 - [ ] stop `ol-dev` (which uses the production config): `sudo kill -9 `pgrep -f openlibrary-server`
