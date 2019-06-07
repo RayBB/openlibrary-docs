@@ -1,3 +1,5 @@
+## UPDATES
+- 2019: `ol-mem[0-2]` trusty VMs have been reprovisioned as `ol-mem[3-5]` following the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide)
 
 ## Current Production Architecture
 Today, our production service architecture consists of ~11 VMs:
