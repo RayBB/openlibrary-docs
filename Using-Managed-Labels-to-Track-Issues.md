@@ -121,7 +121,7 @@ Color|Label|Description
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Breakdown** | This big issue needs a checklist or subissues to describe a breakdown of work. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Detail** | Submitter needs to provide more detail for this issue to be assessed (see comments). [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Feedback** | A proposed feature or bug resolution needs community feedback prior to forging ahead. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Help** | We are looking for someone to step up and take on this issue. [managed]
+![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Help** | Issues, typically substantial ones, that need a dedicated developer to take them on. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Review** | This issue/PR needs to be reviewed in order to be closed or merged (see comments). [managed]
 
 If you see one or more of these labels on an issue, assume we are not making progress on it.  
