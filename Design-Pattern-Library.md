@@ -201,13 +201,16 @@ As seen on [stats](https://openlibrary.org/stats)
 
 ### ColorBoxOverlay
 An overlay that expands images. Visible when clicking the image of the author on their page.
-[Author page](https://openlibrary.org/authors/OL1194994A/Louise_Fitzhugh)
+[Author page](https://dev.openlibrary.org/authors/OL21718A/Bill_Bryson)
 
-![screen shot 2018-09-15 at 10 46 02 am](https://user-images.githubusercontent.com/148752/45589089-9ceaa100-b8d4-11e8-82b8-e8a13a4c7e3d.png)
+![Screen Shot 2019-06-22 at 14 25 17PMPDT](https://user-images.githubusercontent.com/978325/59980045-17072f00-95a5-11e9-994b-e3c4c6941a7b.png)
 
-Also used when clicking the image of a book cover on a [book page](https://openlibrary.org/works/OL16028308W/Harriet_the_Spy).
+Also used when clicking the image of a book cover on a [book page](https://dev.openlibrary.org/books/OL3684559M/A_short_history_of_nearly_everything).
 
-![screen shot 2018-09-15 at 10 48 35 am](https://user-images.githubusercontent.com/148752/45589108-08cd0980-b8d5-11e8-9974-4de64f403c9b.png)
+![Screen Shot 2019-06-23 at 10 51 30AMPDT](https://user-images.githubusercontent.com/978325/59980043-140c3e80-95a5-11e9-939b-16e3ff992ab8.png)
+
+![Screen Shot 2019-06-22 at 14 25 43PMPDT](https://user-images.githubusercontent.com/978325/59980047-20909700-95a5-11e9-9708-f94f74338a85.png)
+
 
 Also used when adding an item to a reading list via a Dropper component:
 
