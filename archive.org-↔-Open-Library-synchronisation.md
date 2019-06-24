@@ -3,6 +3,13 @@ In order for Open Library users to access readable and borrowable books from arc
 
 This page documents the specific and technical requirements, and lists potential challenges to keeping the records synchronised.
 
+## Existing fields
+
+### archive.org items
+ * `openlibrary_edition`, format example: `OL12345M`, creates a link from the item's details page to the exact Open Library edition represented by this scan.
+ * `openlibrary_work`, format example: `OL12345W`, creates a link from the item's details page to the Open Library work that groups other editions of this scan.
+ * `openlibrary`, format example: `OL5189756M`, a now **DEPRECATED** reference to an Open Library edition. Potentially used in the archive.org scanning process to locate MARC records, and in Open Library import code as a short cut for matching existing records. Both uses need to be investigated and updated to use the newer fields above.
+
 ## Technical requirements
 
 * All archive.org book items with a populated `openlibrary` metadata field should also have `openlibrary_edition`.
