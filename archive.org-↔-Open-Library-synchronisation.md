@@ -46,7 +46,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 
      * [Printdisabled only without ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20NOT%20%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND NOT isbn:*`
         * 387 items
-        * The collections that seem to signify these items without ISBNs are good books are `internetarchivebooks` and `americana` -- the criteria for non-lendable books below should be update to include these pre-isbn books that are likely to have good metadata.
+        * The collections that seem to signify these items without ISBNs are good books are `internetarchivebooks` and `americana` -- the criteria for non-lendable books below should be updated to include these pre-isbn books that are likely to have good metadata.
 
 
 * All archive.org book items with `openlibrary_edition` **MUST** have `openlibrary_work`, and vice versa.
