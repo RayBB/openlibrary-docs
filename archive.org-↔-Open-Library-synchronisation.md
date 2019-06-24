@@ -39,6 +39,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
     * [Open collection](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Aprintdisabled%20AND%20NOT%20collection%3Ainlibrary): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:printdisabled AND NOT collection:inlibrary`
       * 6,801
       * Following an example, we have two ia scans https://archive.org/details/annalenderphysi249unkngoog https://archive.org/details/bub_gb_xAQ4AAAAMAAJ an 1833 and an 1803 edition, which both point (using different fields) to a 1900 Open Library edition, further complicated because this item is a serial
+      * This category needs to be filtered down -- to only include open items in known good collections
 
      * [Printdisabled only with ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND isbn:*`
         * 3,124
