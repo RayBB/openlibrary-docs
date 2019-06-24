@@ -26,7 +26,28 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 
 * All archive.org book items with a populated `openlibrary` metadata field should also have `openlibrary_edition`.
   * [CRITERION NOT MET QUERY](https://archive.org/search.php?query=mediatype%3Atexts+AND+openlibrary%3A%2A+AND+NOT+openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:*`
-  
+  * Possible issue: just because an item has an old `openlibrary` field does not neccesarily mean it should be on OL if it doesn't meet the other criteria listed on this page.
+
+  * Total @ June 2019: 25,190
+
+  * Breaking this category down further into other categories listed further down:
+
+     * [In Library](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20collection%3Ainlibrary): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND collection:inlibrary` 
+       * 14,878 items In Library without openlibrary_edition that have openlibrary.
+       * spot checks: https://archive.org/details/cavalierinwhite00mull_cc9 and https://archive.org/details/bostonaccess00wurm_0 -> listed OL item points to a different IA scan
+
+    * [Open collection](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Aprintdisabled%20AND%20NOT%20collection%3Ainlibrary): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:printdisabled AND NOT collection:inlibrary`
+      * 6,801
+
+
+     * [Printdisabled only with ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND isbn:*`
+        * 3,124
+
+     * [Printdisabled only without ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20NOT%20%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND NOT isbn:*`
+        * 387 items
+        * The collections that seem to signify these items without ISBNs are good books are `internetarchivebooks` and `americana` -- the criteria for non-lendable books below should be update to include these pre-isbn books that are likely to have good metadata.
+
+
 * All archive.org book items with `openlibrary_edition` **MUST** have `openlibrary_work`, and vice versa.
    * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_edition%3A%2A%20AND%20NOT%20openlibrary_work%3A%2A): `mediatype:texts AND openlibrary_edition:* AND NOT openlibrary_work:*`
    * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_work%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary_work:* AND NOT openlibrary_edition:*`
