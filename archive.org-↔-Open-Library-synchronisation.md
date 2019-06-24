@@ -9,5 +9,21 @@ This page documents the specific and technical requirements, and lists potential
   * [CRITERION NOT MET QUERY](https://archive.org/search.php?query=mediatype%3Atexts+AND+openlibrary%3A%2A+AND+NOT+openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:*`
   
 * All archive.org book items with `openlibrary_edition` **MUST** have `openlibrary_work`, and vice versa.
-   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_edition%3A%2A%20AND%20NOT%20openlibrary_work%3A%2A): mediatype:texts AND openlibrary_edition:* AND NOT openlibrary_work:*
-   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_work%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A): mediatype:texts AND openlibrary_work:* AND NOT openlibrary_edition:*
+   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_edition%3A%2A%20AND%20NOT%20openlibrary_work%3A%2A): `mediatype:texts AND openlibrary_edition:* AND NOT openlibrary_work:*`
+   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_work%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary_work:* AND NOT openlibrary_edition:*`
+
+* Openlibrary identifiers on archive.org should only be on `mediatype:texts` items as only books should be represented on Open Library.
+  * [CRITERION NOT MET](https://archive.org/search.php?query=openlibrary%3A%2A%20OR%20openlibrary_edition%3A%2A%20OR%20openlibrary_work%3A%2A%20AND%20NOT%20mediatype%3Atexts) `openlibrary:* OR openlibrary_edition:* OR openlibrary_work:* AND NOT mediatype:texts`
+  * Some items not meeting this technical criterion may be legitimate. Some items appears to be gallery catalogs (i.e. books) that are linked to `mediatype:image`, and other archive.org items could be legitimate books that are mis-categorised. @ June 2019 there are 55 items matched above. Each item needs to be examined to find the fix, or at least to come up with a set of fix categories. Simply deleting the linking metadata would be incorrect in many of these situations as the links are probably a sign of further data issues on OL or IA.
+
+* All borrowable `collection:inlibrary` books should have `openlibrary_edition`:
+  * [CRITERION NOT MET](https://archive.org/search.php?query=collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A): `collection:inlibrary AND NOT openlibrary_edition:*`
+  * As of June 2019 there are 60K archive.org items that do not meet this condition.
+    * ex 1: has no MARC so wasn't imported: https://archive.org/details/nairobigrit
+             TRY FIX:  import with require_marc = False
+
+    * ex 2: https://archive.org/details/buildingvirtuall0000unse  has MARC, also on OL, but OL record points to non-lendable copy
+             TRY FIX: re-import, should update ocaid.    If import adds an ia source record, it should also update the ocaid!!!!  
+
+     * ex 3: https://archive.org/details/isbn_9781481758765  has MARC -- simply not yet imported
+             TRY FIX: import from MARC
