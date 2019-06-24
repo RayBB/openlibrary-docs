@@ -11,7 +11,7 @@ This page documents the specific and technical requirements, and lists potential
  * `openlibrary`, format example: `OL5189756M`, a now **DEPRECATED** reference to an Open Library edition. Potentially used in the archive.org scanning process to locate MARC records, and in Open Library import code as a short cut for matching existing records. Both uses need to be investigated and updated to use the newer fields above.
 
 ### Open Library Edition level metadata
- * `ocaid`, format example: `callofdistantmam00ward`
+ * `ocaid`, format example: `callofdistantmam00ward` This is the primary useful link back to an archive.org item. It only stores one value, so there is an issue when there exists multiple scans of an edition on archive.org. Only one is linked from OL to IA, even though multiple IA items may refer to the same edition. The current OL sync process only automatically updates the archive.org item present in this `ocaid` field. 
  * `source_records`, format example: `["ia:callofdistantmam00ward", ...]`
 
 Other less common IA related fields, possibly to be deprecated?:
