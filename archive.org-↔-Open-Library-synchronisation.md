@@ -18,7 +18,7 @@ Other less common IA related fields, possibly to be deprecated?:
  * `"ia_box_id": ["IA113601"]`
  * `"ia_loaded_id": ["callofdistantmam00ward"]`
 
-**Note** All fake-subject references to archive.org categories that may have once been used for classifying borrowable status are now deprecated. Examples: `In Library`, `Protected DAISY`, `Accessible_book`, `Internet Archive Wishlist` and possibly others. [Issue #2107](https://github.com/internetarchive/openlibrary/issues/2107) tracks this clean up.  
+**Note** All fake-subject references to archive.org categories that may have once been used for classifying borrowable status are now deprecated. Examples: `In Library`, `Protected DAISY`, `Accessible_book`, `Internet Archive Wishlist`, `Lending library` and possibly others. [Issue #2107](https://github.com/internetarchive/openlibrary/issues/2107) tracks this clean up.  
 
 See [Open Library Client JSON schemata](https://github.com/internetarchive/openlibrary-client/tree/master/olclient/schemata) for the currently recognised and useful metadata fields for Open Library records.
 
@@ -50,3 +50,4 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 * archive.org print disabled collection items representing _books_, which are not necessarily borrowable by users without print disabilities, should have entries on Open Library to capture the existance of a book we know about, and aid discovery by print disabled users. The following query uses the presence of an ISBN as an indicator that an item is a book with sufficient metadata to count as good for importing.
   * [CRITERIA NOT MET](https://archive.org/search.php?query=collection%3Aprintdisabled%20AND%20NOT%20collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20isbn%3A%2A): `collection:printdisabled AND NOT collection:inlibrary AND NOT openlibrary_edition:* AND isbn:*`
     * **note** the number of items resulting from this query will depend on user account privileges, and not all users will see all print disabled only items by default on archive.org. @ June 2019, there are 330K items in the maximal list that are not linked to Open Library.
+    * [Existing issue #1047](https://github.com/internetarchive/openlibrary/issues/1047)
