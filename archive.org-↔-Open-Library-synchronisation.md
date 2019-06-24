@@ -10,6 +10,18 @@ This page documents the specific and technical requirements, and lists potential
  * `openlibrary_work`, format example: `OL12345W`, creates a link from the item's details page to the Open Library work that groups other editions of this scan.
  * `openlibrary`, format example: `OL5189756M`, a now **DEPRECATED** reference to an Open Library edition. Potentially used in the archive.org scanning process to locate MARC records, and in Open Library import code as a short cut for matching existing records. Both uses need to be investigated and updated to use the newer fields above.
 
+### Open Library Edition level metadata
+ * `ocaid`, format example: `callofdistantmam00ward`
+ * `source_records`, format example: `["ia:callofdistantmam00ward", ...]`
+
+Other less common IA related fields, possibly to be deprecated?:
+ * `"ia_box_id": ["IA113601"]`
+ * `"ia_loaded_id": ["callofdistantmam00ward"]`
+
+**Note** All fake-subject references to archive.org categories that may have once been used for classifying borrowable status are now deprecated. Examples: `In Library`, `Protected DAISY`, `Accessible_book`, `Internet Archive Wishlist` and possibly others. [Issue #2107](https://github.com/internetarchive/openlibrary/issues/2107) tracks this clean up.  
+
+See [Open Library Client JSON schemata](https://github.com/internetarchive/openlibrary-client/tree/master/olclient/schemata) for the currently recognised and useful metadata fields for Open Library records.
+
 ## Technical requirements
 
 * All archive.org book items with a populated `openlibrary` metadata field should also have `openlibrary_edition`.
