@@ -3,6 +3,10 @@ In order for Open Library users to access readable and borrowable books from arc
 
 This page documents the specific and technical requirements, and lists potential challenges to keeping the records synchronised.
 
+## Significance
+
+At of 2019-06-24, 60,000 books were in our `inlibrary` lending program but not available through Archive.org. That is about 6% of our entire catalog which is not borrowable through Open Library. There are another [281k books](https://archive.org/search.php?query=collection%3Aprintdisabled%20AND%20-openlibrary_edition%3A%2A%20AND%20-openlibrary%3A%2A%20AND%20isbn%3A%2A%20AND%20format%3AMARC%20AND%20%21collection%3Ainlibrary) (excluding `inlibrary`) in `printdisabled` which have isbns and MARCs and are not on Openlibrary.org. Without linking up archive.org and open Library we also lose out on the ability to reliably determine the availability of our works. We have chosen now as the time to work on this project because over the past months we have eliminated hundreds of thousands of orphaned additions which was a prerequisite to this project. Successful IA ↔ OL sync also means a revitalized import process which is more effective at importing internet archive works moving forward.
+
 ## Existing fields
 
 ### archive.org items
