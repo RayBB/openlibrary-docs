@@ -95,21 +95,21 @@ NONE are duplicated
 
 the remaining 17301 were not resolved due to the following issues:
 
-* bad-repub-state:
+* bad-repub-state: -- Need advice from Andrea or Jude. Repub state 6 is micro-film.
   * 5927
-* invalid-ia-identifier:
+* invalid-ia-identifier: -- Consider wiping invalid IDs. These should get repaired if the archive.org item is reimported.
   * 209
-* invalid-marc-record:
+* invalid-marc-record: -- ignore for
   * 43
-* item-is-serial:
+* item-is-serial: -- investigate for quick way to match existing (if possible) otherwise, create the works.
   * 9766
-* item-not-book:
+* item-not-book: -- needs further, possibily delete?
   * 754
-* no-imagecount:
+* no-imagecount: -- delete 
   * 41
-* noindex-true:
+* noindex-true: -- delete
   * 470
-* not-texts-item:
+* not-texts-item: -- a BWB protodonation item to be fixed manually
   * 1
 
 **Proposal:** the `no-imagecount` and `noindex-true` OL orphans should simply be deleted. They tend to have been created from problematic archive.org records that we would not currently import, and the main reason for the no-index flag appears to be mismatched metadata, or otherwise bad scans. The records I have checked all seem to have better non-broken scanned items elsewhere, and have been imported properly via those.
