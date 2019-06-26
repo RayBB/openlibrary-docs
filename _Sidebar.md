@@ -34,7 +34,7 @@
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Overview of Data Sources](Data-Source-Overview)
 	* [Writing Bots](Writing-Bots)
-	* [Importing Book Records](Data-Importing)
+	* [Importing Book Records](Developer's-Guide-to-Data-Importing)
 * **Administration, Systems & Dev-ops**
 	* [Services Status Dashboard](https://status.archivelab.org)
 	* [Production Architecture & Provisioning](Production-Service-Architecture)
