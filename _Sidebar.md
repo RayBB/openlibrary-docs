@@ -49,3 +49,4 @@
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
 	* [Monthly Newsletter / Mailing List](Mailing-List)
+	* [IA↔OL ID Sync](archive.org-↔-Open-Library-synchronisation)
