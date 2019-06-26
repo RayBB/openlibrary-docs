@@ -1,4 +1,6 @@
-# Importing Guide
+# Data Importing Guide
+
+For programmatically bulk importing new books and authors into Open Library.
 
 ## Programatic Imports
 The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
