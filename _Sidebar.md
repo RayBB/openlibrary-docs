@@ -46,10 +46,6 @@
 	* [Solr](Solr)
 	* [Generating Sitemaps](Sitemap-Generation)
 * **Features & Initiatives (RFCs)**
-	* [Book Drive Initiative](Book-Drive)
 	* [Orphaned Editions Planning](Orphaned-Editions-Planning)
 	* [Canonical Books Page](Canonical-Books-Page)
-	* [Importing IA Wishlist](Importing-IA-Wishlist)
-	* [Importing ONIX Feeds](Processing-ONIX-Feeds)
-	* [Importing Bulk MARC](Data-Importing#Bulk-MARC-Import)
 	* [Monthly Newsletter / Mailing List](Mailing-List)
