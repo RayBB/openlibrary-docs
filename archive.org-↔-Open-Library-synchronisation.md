@@ -78,4 +78,38 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
     * **note** the number of items resulting from this query will depend on user account privileges, and not all users will see all print disabled only items by default on archive.org. @ June 2019, there are 330K items in the maximal list that are not linked to Open Library.
     * [Existing issue #1047](https://github.com/internetarchive/openlibrary/issues/1047)
 
-* The following query attempts to locate items that are printdisabled only, do NOT have ISBNs in metadata, but are good scanned books `collection:printdisabled AND NOT collection:inlibrary AND NOT openlibrary_edition:* AND NOT isbn:* AND collection:internetarchivebooks` there are 13,708 results, but most appear to have incomplete titles ... strangely _with_ ISBNs in the title field. It looks like these have stalled in the scanning process somehow? 
+* The following query attempts to locate items that are printdisabled only, do NOT have ISBNs in metadata, but are good scanned books `collection:printdisabled AND NOT collection:inlibrary AND NOT openlibrary_edition:* AND NOT isbn:* AND collection:internetarchivebooks` there are 13,708 results, but most appear to have incomplete titles ... strangely _with_ ISBNs in the title field. It looks like these have stalled in the scanning process somehow?
+
+## Orphaned items with ocaid
+
+remaining total @ 26 June 2019: 38347
+
+NONE are duplicated
+
+### re-running re-import process
+
+20730 were successfully matched or had works created, fixing the orphan (54%)
+
+316 were matched on a _different_ existing edition.
+**!!FIX for these:**  get orphan by opening https://openlibrary.org/books/ia:<ocaid> and then associate it with the matched work.
+
+the remaining 17301 were not resolved due to the following issues:
+
+* bad-repub-state:
+  * 5927
+* invalid-ia-identifier:
+  * 209
+* invalid-marc-record:
+  * 43
+* item-is-serial:
+  * 9766
+* item-not-book:
+  * 754
+* no-imagecount:
+  * 41
+* noindex-true:
+  * 470
+* not-texts-item:
+  * 1
+
+**Proposal:** the `no-imagecount` and `noindex-true` OL orphans should simply be deleted. They tend to have been created from problematic archive.org records that we would not currently import, and the main reason for the no-index flag appears to be mismatched metadata, or otherwise bad scans. The records I have checked all seem to have better non-broken scanned items elsewhere, and have been imported properly via those.
