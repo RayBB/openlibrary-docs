@@ -1,3 +1,18 @@
+# Importing Guide
+
+## Programatic Imports
+The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
+1. [Import by ISBN](#Import-by-ISBN)
+2. [Import by MARC](#MARC-Records)
+3. [Import by Archive.org Identifier](#Import-by-OCAID)
+4. [Import by ONIX Feeds](Processing-ONIX-Feeds)
+
+## Historical Reference
+Here's a list of sourced we've historically imported. See also `https://archive.org/details/ol_data`.
+- https://openlibrary.org/dev/docs/data - a list of major sources we've imported
+- https://openlibrary.org/about/help
+
+## Import Code-Paths
 There are multiple paths by which data can be imported into Open Library.
 
 1. Through the website UI and the Open Library Client which both use the endpoint: https://openlibrary.org/books/add 
@@ -12,9 +27,19 @@ There are multiple paths by which data can be imported into Open Library.
 4. Through our privileged ImportBot [scripts/manage_imports.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/manage-imports.py)  which POSTs to the IA import API via `Openlibrary.import_ocaid()` from [openlibrary/api.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py) 
 3. Through bulk import API [openlibrary/api.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py) -- this should be considered deprecated
 
-# MARC Records
+# Import APIs
 
-## Bulk MARC Import
+## Import by ISBN
+
+`https://openlibrary.org/isbn/:isbn`
+
+## Import by OCAID
+
+TODO
+
+## MARC Records
+
+### Bulk MARC Import
 
 We are in the process of expanding the `api/import/ia` endpoint functionality.
 
@@ -29,7 +54,7 @@ e.g. http://www.archive.org/download/trent_test_marc/180221_ItemID_Test_001.mrc?
 5. We'll have to exposed a new endpoint within `openlibrary/plugins/importapi/code.py` for MARC import (w/o IA book item) 
 6. Add `"local_id": ["urn:trent:12345"]`key to openlibrary book metadata in addition to correctly formatted `source_record` so archive.org can search for the records using the OL books API from
 
-## Importing Partner MARCs with Local ID Barcodes
+### Importing Partner MARCs with Local ID Barcodes
 
 **Cold Start:** If we’re creating an instance of Open Library service from scratch, before the following instructions, we’ll first need to create a new infogami `thing` called `local_ids` which is of type `page`. Next:
 
