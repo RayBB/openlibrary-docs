@@ -1,4 +1,4 @@
-# Data Importing Guide
+# Developer's Guide for Data Importing
 
 For programmatically bulk importing new books and authors into Open Library.
 
