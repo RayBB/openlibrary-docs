@@ -15,7 +15,7 @@ The following resources are for developers doing bulk book record creation via o
 4. Follow the [Bots Getting Started instructions](https://github.com/internetarchive/openlibrary/wiki/Writing-Bots#getting-started-rules) before running your bot.
 
 ## Historical Reference
-Here's a list of sourced we've historically imported. See also `https://archive.org/details/ol_data`.
+Here's a list of sourced we've historically imported. Many of the data sets themselves are archived within the `https://archive.org/details/ol_data` collection.
 - https://openlibrary.org/dev/docs/data - a list of major sources we've imported
 - https://openlibrary.org/about/help
 
