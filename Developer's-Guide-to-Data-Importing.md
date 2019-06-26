@@ -38,7 +38,39 @@ There are multiple paths by which data can be imported into Open Library.
 
 ## Import by ISBN
 
-`https://openlibrary.org/isbn/:isbn`
+If you know the isbn of a book, you can import it using the `https://openlibrary.org/isbn/:isbn` API.
+
+### Submitting ISBNs in Bulk
+
+Ultimately, we'd like to create an ongoing ISBN import pipeline which discovers book isbns as they are published and imports their metadata into openlibrary.org. This requires 3 steps:
+
+1. **Discovery** - writing bots to find isbns in web content such as catalogs and APIs 
+2. **Submission** - uploading these isbns to https://archive.org/details/ol_data and processing them with @hornc's [`modern-import-bot`](https://github.com/internetarchive/openlibrary-bots/tree/master/modern-import-bot)
+3. **Importing** - updating isbn import endpoints to prevent duplicating existing authors and importing undesirable content (like CDs)
+
+improve a general purpose openlibrary.org endpoint which takes `isbn` (10, 13) and imports an item onto Open Library using our Amazon Affiliate API -- this includes logic to make sure only books (i.e. non-book items on amazon, like CDs) get imported and we avoid duplicating existing authors, works, and editions.
+
+#### Discovering ISBNS 
+We'll want to write bots to discover isbns in web content, such as catalogs and APIs. These bots will live in a dedicated repo called `openlibrary-bots` (https://github.com/internetarchive/openlibrary-bots). Each bot will have its own directory in the project with a README.md explaining how to run the bot to harvest isbns. I imagine the community will work on several bots (Amazon bots, Goodreads bots, Google Books bots, Better World Books bots, etc) which continuously look at sources at some regular interval to discover new isbns.
+
+If we plan on creating a new bot, it's probably best practice to first *open an issue* on the `openlibrary-bots` repo explaining:
+- what data source we plan on using
+- what technology we’d like to use
+
+For instance, let’s say we want to create a bot which discovers isbns from Amazon’s new arrivals:
+1) You’d create an issue on https://github.com/internetarchive/openlibrary-bots/issues describing how it will work, what tech we will use, what the directory will be called
+2) Once we get feedback, we’d create a directory in the project (e.g. amazon-new-arrivals-bot)
+3) We’d add a README.md and a code a bot which discovers isbns
+4) Create a new Archive.org item within the https://archive.org/details/ol_data collection named after your bot or data source, where your isbns will live (e.g. for our example `amazon-new-arrivals-bot` consider making a new item on Archive.org called `amazon-new-arrivals-isbns` within the `ol_data` collection). Add the url of this bot's archive.org item (where isbns will get uploaded/submitted) to the bot README. 
+5) Add a few basic unit tests to ensure the software is working correctly (e.g. it works correctly against a static amazon page)
+
+#### Submitting ISBNs in Bulk
+Please do not run this list of isbns directly against our https://openlibrary.org/isbn/:isbn` API because it is highly rate-limited. Instead, @hornc is writing a [`modern-import-bot`](https://github.com/internetarchive/openlibrary-bots/tree/master/modern-import-bot) designed to take safely lists of isbns (from a specified archive.org item) and queue the isbns up to be safely imported into Open Library.
+
+As a result, once your bot has collected a list of isbns for a certain time period, the first step is to upload the isbns to its Archive.org item (which should have been created in step #1 and named according to the bot which generated the isbns -- e.g. https://archive.org/details/amazon-new-arrivals-isbns` within the https://archive.org/details/ol_data collection) as `<date>_<source>_isbns.csv` -- e.g. `2019-06-25_amazon_isbns.csv`
+
+#### Updating ISBN Import
+In order for this entire process to work correctly and not produce bad data, we'll need to first make change to the isbn import endpoint to prevent duplication. For instance, to make sure only books (i.e. non-book items on amazon, like CDs) get imported and we avoid duplicating existing authors, works, and editions.
 
 ## Import by OCAID
 `ocaid` stands for [Open Content Alliance Identifier](https://en.wikipedia.org/wiki/Open_Content_Alliance). The name was coined when Internet Archive and other groups institutions around the world worked together to create an ID system they could universally share for accessing books. Today, `ocaid` means the equivalent of Archive.org identifier. When you go to https://archive.org/details/ol_data, `ol_data` is the `ocaid` / Archive.org identifier. This section deals with importing Archive.org book items (by their `ocaid` / Archive.org identifier) into Open Library.
