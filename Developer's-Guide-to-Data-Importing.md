@@ -1,11 +1,18 @@
 For programmatically bulk importing new books and authors into Open Library.
 
-## Programatic Imports
+## Bulk Import Options
 The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
 1. [Import by ISBN](#Import-by-ISBN)
 2. [Import by MARC](#MARC-Records)
 3. [Import by Archive.org Identifier](#Import-by-OCAID)
-4. [Import by ONIX Feeds](Processing-ONIX-Feeds)
+4. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
+
+## Procedure for Bulk Imports
+1. Make sure your source data is archived and uploaded to https://archive.org/details/ol_data
+2. Add/register your source to the https://openlibrary.org/dev/docs/data document
+3. [Apply for a `bot` account](https://github.com/internetarchive/openlibrary/wiki/Writing-Bots) with API access
+4. Create a new bot script for https://github.com/internetarchive/openlibrary-bots (each bot gets its own directory and contains a README so others in the future can see exactly how your data was imported)
+4. Follow the [Bots Getting Started instructions](https://github.com/internetarchive/openlibrary/wiki/Writing-Bots#getting-started-rules) before running your bot.
 
 ## Historical Reference
 Here's a list of sourced we've historically imported. See also `https://archive.org/details/ol_data`.
