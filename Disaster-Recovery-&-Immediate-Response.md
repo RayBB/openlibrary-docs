@@ -4,6 +4,7 @@
 - [ ] Consult the [Troubleshooting](#Troubleshooting) section to identify likely suspects
 - [ ] Identify issues using our [stats dashboard](http://ol-home.us.archive.org:8088/dashboard) and [open library nagios alerts](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) 
 - [ ] If the baremetal machine is hanging, contact #ops on slack or [manually restart baremetal](https://gnt-webmgr.us.archive.org/)
+- [ ] If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
 
 # Troubleshooting
 
