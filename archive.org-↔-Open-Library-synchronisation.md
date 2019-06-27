@@ -99,7 +99,7 @@ the remaining 17301 were not resolved due to the following issues:
   * 5927
 * invalid-ia-identifier: -- Consider wiping invalid IDs. These should get repaired if the archive.org item is reimported.
   * 209
-* invalid-marc-record: -- ignore for
+* invalid-marc-record: -- ignore for now
   * 43
 * item-is-serial: -- investigate for quick way to match existing (if possible) otherwise, create the works.
   * 9766
