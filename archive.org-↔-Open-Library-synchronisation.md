@@ -103,13 +103,13 @@ the remaining 17301 were not resolved due to the following issues:
   * 43
 * item-is-serial: -- investigate for quick way to match existing (if possible) otherwise, create the works.
   * 9766
-* item-not-book: -- needs further, possibily delete?
+* item-not-book: -- needs further investigation, possibily delete?
   * 754
 * no-imagecount: -- delete 
-  * 41
+  * 41 ;   Examples: https://archive.org/details/OSIEontarioreadersfourth00miniuoft https://archive.org/details/ioannisvaluerdi01hamugoog
 * noindex-true: -- delete
-  * 470
+  * 470   Example: https://archive.org/details/miscelaneajurid00unkngoog https://archive.org/details/whatcountssocial00mook incorrect metadata example: https://archive.org/details/pamelaorvirtuer00popegoog
 * not-texts-item: -- a BWB protodonation item to be fixed manually
-  * 1
+  * 1  FIXED!
 
 **Proposal:** the `no-imagecount` and `noindex-true` OL orphans should simply be deleted. They tend to have been created from problematic archive.org records that we would not currently import, and the main reason for the no-index flag appears to be mismatched metadata, or otherwise bad scans. The records I have checked all seem to have better non-broken scanned items elsewhere, and have been imported properly via those.
