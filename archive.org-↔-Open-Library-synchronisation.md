@@ -103,8 +103,8 @@ the remaining 17301 were not resolved due to the following issues:
   * 43
 * item-is-serial: -- investigate for quick way to match existing (if possible) otherwise, create the works.
   * 9766
-* item-not-book: -- needs further investigation, possibily delete?
-  * 754
+* item-not-book: -- needs further investigation, possibly delete?
+  * 754 ; includes scores: https://archive.org/details/xiisolosforgerma00rani pamphlets: whatbritainhasdo00slsnuoft ?? Monographic component part?: https://archive.org/details/washingtonsfirst00wornrich  Perhaps we should relax the import criteria to allow these as they are very 'book like' in order to repair existing records, but not actively seek out to import more at the moment? If a user chose to add these, I think we'd let them stand.
 * no-imagecount: -- delete 
   * 41 ;   Examples: https://archive.org/details/OSIEontarioreadersfourth00miniuoft https://archive.org/details/ioannisvaluerdi01hamugoog
 * noindex-true: -- delete
