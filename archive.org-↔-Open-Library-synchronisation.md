@@ -72,7 +72,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 
      * ex 3: https://archive.org/details/isbn_9781481758765  has MARC -- simply not yet imported
              TRY FIX: import from MARC
-  * **SYNCH TASK RESULTS:**
+  * :bangbang: **SYNCH TASK RESULTS:**
     * Matched: 42016 (these are the duplicate archive.org items)
     * Modified: 659  (these were resolved and synchronised)
     * bad-repub-state: 2
@@ -88,7 +88,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
     * Of those, 11695 Open Library items were updated to reference the _lendable_ copy of that item where previously a printdisabled only copy was linked.
     * This has added 11695 lendable items to OL.
     * Only 24 items could not be synched due to orphaned editions. (see below for more details on this category)
-    * @ 3 July, there are now 19,823 unsynched items in this category (improvement: ~40k)
+    * @ 3 July, there are now [19,823 unsynched items in this category](https://archive.org/search.php?query=collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A) (improvement: ~40k)
 
 * archive.org print disabled collection items representing _books_, which are not necessarily borrowable by users without print disabilities, should have entries on Open Library to capture the existance of a book we know about, and aid discovery by print disabled users. The following query uses the presence of an ISBN as an indicator that an item is a book with sufficient metadata to count as good for importing.
   * ⭐ [CRITERIA NOT MET](https://archive.org/search.php?query=collection%3Aprintdisabled%20AND%20NOT%20collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20isbn%3A%2A): `collection:printdisabled AND NOT collection:inlibrary AND NOT openlibrary_edition:* AND isbn:*`
