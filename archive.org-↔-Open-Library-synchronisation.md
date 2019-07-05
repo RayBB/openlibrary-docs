@@ -28,40 +28,6 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 
 ## Technical requirements
 
-### Deprecate `openlibrary` in favour of `openlibrary_edition` + `_work`
-* All archive.org book items with a populated `openlibrary` metadata field should also have `openlibrary_edition`.
-  * [CRITERION NOT MET QUERY](https://archive.org/search.php?query=mediatype%3Atexts+AND+openlibrary%3A%2A+AND+NOT+openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:*`
-  * Possible issue: just because an item has an old `openlibrary` field does not neccesarily mean it should be on OL if it doesn't meet the other criteria listed on this page.
-
-  * Total @ June 2019: 25,190
-
-  * Breaking this category down further into other categories listed further down:
-
-     * [In Library](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20collection%3Ainlibrary): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND collection:inlibrary` 
-       * 14,878 items In Library without openlibrary_edition that have openlibrary.
-       * spot checks: https://archive.org/details/cavalierinwhite00mull_cc9 and https://archive.org/details/bostonaccess00wurm_0 -> listed OL item points to a different IA scan
-
-    * [Open collection](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Aprintdisabled%20AND%20NOT%20collection%3Ainlibrary): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:printdisabled AND NOT collection:inlibrary`
-      * 6,801
-      * Following an example, we have two ia scans https://archive.org/details/annalenderphysi249unkngoog https://archive.org/details/bub_gb_xAQ4AAAAMAAJ an 1833 and an 1803 edition, which both point (using different fields) to a 1900 Open Library edition, further complicated because this item is a serial
-      * This category needs to be filtered down -- to only include open items in known good collections Filtering these down to items in the `americana` and `internetarchivebooks` shows that most of those remaining are early serials that get excluded from the latest import criteria.
-
-     * [Printdisabled only with ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND isbn:*`
-        * 3,124
-
-     * [Printdisabled only without ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20NOT%20%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND NOT isbn:*`
-        * 387 items
-        * The collections that seem to signify these items without ISBNs are good books are `internetarchivebooks` and `americana` -- the criteria for non-lendable books below should be updated to include these pre-isbn books that are likely to have good metadata.
-
-* All archive.org book items with `openlibrary_edition` **MUST** have `openlibrary_work`, and vice versa.
-   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_edition%3A%2A%20AND%20NOT%20openlibrary_work%3A%2A): `mediatype:texts AND openlibrary_edition:* AND NOT openlibrary_work:*`
-   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_work%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary_work:* AND NOT openlibrary_edition:*`
-
-### Only import and synchronise books (IA `mediatype:texts`)
-* Openlibrary identifiers on archive.org should only be on `mediatype:texts` items as only books should be represented on Open Library.
-  * [CRITERION NOT MET](https://archive.org/search.php?query=openlibrary%3A%2A%20OR%20openlibrary_edition%3A%2A%20OR%20openlibrary_work%3A%2A%20AND%20NOT%20mediatype%3Atexts) `openlibrary:* OR openlibrary_edition:* OR openlibrary_work:* AND NOT mediatype:texts`
-  * Some items not meeting this technical criterion may be legitimate. Some items appears to be gallery catalogs (i.e. books) that are linked to `mediatype:image`, and other archive.org items could be legitimate books that are mis-categorised. @ June 2019 there are 55 items matched above. Each item needs to be examined to find the fix, or at least to come up with a set of fix categories. Simply deleting the linking metadata would be incorrect in many of these situations as the links are probably a sign of further data issues on OL or IA.
-
 ### PRIORITY: Borrowable books should be synchronised properly to enable discovery and utilisation
 * All borrowable `collection:inlibrary` books should have `openlibrary_edition`:
   * ⭐ [CRITERION NOT MET](https://archive.org/search.php?query=collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A): `collection:inlibrary AND NOT openlibrary_edition:*`
@@ -99,6 +65,41 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
     * [Existing issue #1047](https://github.com/internetarchive/openlibrary/issues/1047)
 
 * The following query attempts to locate items that are printdisabled only, do NOT have ISBNs in metadata, but are good scanned books `collection:printdisabled AND NOT collection:inlibrary AND NOT openlibrary_edition:* AND NOT isbn:* AND collection:internetarchivebooks` there are 13,708 results, but most appear to have incomplete titles ... strangely _with_ ISBNs in the title field. It looks like these have stalled in the scanning process somehow?
+
+### Deprecate `openlibrary` in favour of `openlibrary_edition` + `_work`
+* All archive.org book items with a populated `openlibrary` metadata field should also have `openlibrary_edition`.
+  * [CRITERION NOT MET QUERY](https://archive.org/search.php?query=mediatype%3Atexts+AND+openlibrary%3A%2A+AND+NOT+openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:*`
+  * Possible issue: just because an item has an old `openlibrary` field does not neccesarily mean it should be on OL if it doesn't meet the other criteria listed on this page.
+
+  * Total @ June 2019: 25,190
+
+  * Breaking this category down further into other categories listed further down:
+
+     * [In Library](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20collection%3Ainlibrary): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND collection:inlibrary` 
+       * 14,878 items In Library without openlibrary_edition that have openlibrary.
+       * spot checks: https://archive.org/details/cavalierinwhite00mull_cc9 and https://archive.org/details/bostonaccess00wurm_0 -> listed OL item points to a different IA scan
+
+    * [Open collection](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Aprintdisabled%20AND%20NOT%20collection%3Ainlibrary): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:printdisabled AND NOT collection:inlibrary`
+      * 6,801
+      * Following an example, we have two ia scans https://archive.org/details/annalenderphysi249unkngoog https://archive.org/details/bub_gb_xAQ4AAAAMAAJ an 1833 and an 1803 edition, which both point (using different fields) to a 1900 Open Library edition, further complicated because this item is a serial
+      * This category needs to be filtered down -- to only include open items in known good collections Filtering these down to items in the `americana` and `internetarchivebooks` shows that most of those remaining are early serials that get excluded from the latest import criteria.
+
+     * [Printdisabled only with ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND isbn:*`
+        * 3,124
+
+     * [Printdisabled only without ISBN](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20NOT%20collection%3Ainlibrary%20AND%20collection%3Aprintdisabled%20AND%20NOT%20%20isbn%3A%2A):`mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:* AND NOT collection:inlibrary AND collection:printdisabled AND NOT isbn:*`
+        * 387 items
+        * The collections that seem to signify these items without ISBNs are good books are `internetarchivebooks` and `americana` -- the criteria for non-lendable books below should be updated to include these pre-isbn books that are likely to have good metadata.
+
+* All archive.org book items with `openlibrary_edition` **MUST** have `openlibrary_work`, and vice versa.
+   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_edition%3A%2A%20AND%20NOT%20openlibrary_work%3A%2A): `mediatype:texts AND openlibrary_edition:* AND NOT openlibrary_work:*`
+   * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_work%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary_work:* AND NOT openlibrary_edition:*`
+
+### Only import and synchronise books (IA `mediatype:texts`)
+* Openlibrary identifiers on archive.org should only be on `mediatype:texts` items as only books should be represented on Open Library.
+  * [CRITERION NOT MET](https://archive.org/search.php?query=openlibrary%3A%2A%20OR%20openlibrary_edition%3A%2A%20OR%20openlibrary_work%3A%2A%20AND%20NOT%20mediatype%3Atexts) `openlibrary:* OR openlibrary_edition:* OR openlibrary_work:* AND NOT mediatype:texts`
+  * Some items not meeting this technical criterion may be legitimate. Some items appears to be gallery catalogs (i.e. books) that are linked to `mediatype:image`, and other archive.org items could be legitimate books that are mis-categorised. @ June 2019 there are 55 items matched above. Each item needs to be examined to find the fix, or at least to come up with a set of fix categories. Simply deleting the linking metadata would be incorrect in many of these situations as the links are probably a sign of further data issues on OL or IA.
+
 
 ## Orphaned items with ocaid
 This problem affects the ability of items to become synchronised using the existing mechanisms. The requirement for including both `work` id and `edition` id is affected. The solution is to resolve and add works for all editions which don't have them. This overall effort is being tracked on (another wiki page)[https://github.com/internetarchive/openlibrary/wiki/Orphaned-Editions-Planning], but the following notes relate to orphans with OCAIDs.
