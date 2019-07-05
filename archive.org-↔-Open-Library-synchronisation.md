@@ -28,6 +28,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 
 ## Technical requirements
 
+### Deprecate `openlibrary` in favour of `openlibrary_edition` + `_work`
 * All archive.org book items with a populated `openlibrary` metadata field should also have `openlibrary_edition`.
   * [CRITERION NOT MET QUERY](https://archive.org/search.php?query=mediatype%3Atexts+AND+openlibrary%3A%2A+AND+NOT+openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary:* AND NOT openlibrary_edition:*`
   * Possible issue: just because an item has an old `openlibrary` field does not neccesarily mean it should be on OL if it doesn't meet the other criteria listed on this page.
@@ -52,15 +53,16 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
         * 387 items
         * The collections that seem to signify these items without ISBNs are good books are `internetarchivebooks` and `americana` -- the criteria for non-lendable books below should be updated to include these pre-isbn books that are likely to have good metadata.
 
-
 * All archive.org book items with `openlibrary_edition` **MUST** have `openlibrary_work`, and vice versa.
    * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_edition%3A%2A%20AND%20NOT%20openlibrary_work%3A%2A): `mediatype:texts AND openlibrary_edition:* AND NOT openlibrary_work:*`
    * [CRITERION NOT MET](https://archive.org/search.php?query=mediatype%3Atexts%20AND%20openlibrary_work%3A%2A%20AND%20NOT%20openlibrary_edition%3A%2A): `mediatype:texts AND openlibrary_work:* AND NOT openlibrary_edition:*`
 
+### Only import and synchronise books (IA `mediatype:texts`)
 * Openlibrary identifiers on archive.org should only be on `mediatype:texts` items as only books should be represented on Open Library.
   * [CRITERION NOT MET](https://archive.org/search.php?query=openlibrary%3A%2A%20OR%20openlibrary_edition%3A%2A%20OR%20openlibrary_work%3A%2A%20AND%20NOT%20mediatype%3Atexts) `openlibrary:* OR openlibrary_edition:* OR openlibrary_work:* AND NOT mediatype:texts`
   * Some items not meeting this technical criterion may be legitimate. Some items appears to be gallery catalogs (i.e. books) that are linked to `mediatype:image`, and other archive.org items could be legitimate books that are mis-categorised. @ June 2019 there are 55 items matched above. Each item needs to be examined to find the fix, or at least to come up with a set of fix categories. Simply deleting the linking metadata would be incorrect in many of these situations as the links are probably a sign of further data issues on OL or IA.
 
+### PRIORITY: Borrowable books should be synchronised properly to enable discovery and utilisation
 * All borrowable `collection:inlibrary` books should have `openlibrary_edition`:
   * ⭐ [CRITERION NOT MET](https://archive.org/search.php?query=collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A): `collection:inlibrary AND NOT openlibrary_edition:*`
   * As of June 2019 there are 60K archive.org items that do not meet this condition.
@@ -90,6 +92,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
     * Only 24 items could not be synched due to orphaned editions. (see below for more details on this category)
     * @ 3 July, there are now [19,823 unsynched items in this category](https://archive.org/search.php?query=collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A) (improvement: ~40k)
 
+### PRIORITY: Items with print-disabled digital copies should be correctly synchronised to enable discovery for those who need them
 * archive.org print disabled collection items representing _books_, which are not necessarily borrowable by users without print disabilities, should have entries on Open Library to capture the existance of a book we know about, and aid discovery by print disabled users. The following query uses the presence of an ISBN as an indicator that an item is a book with sufficient metadata to count as good for importing.
   * ⭐ [CRITERIA NOT MET](https://archive.org/search.php?query=collection%3Aprintdisabled%20AND%20NOT%20collection%3Ainlibrary%20AND%20NOT%20openlibrary_edition%3A%2A%20AND%20isbn%3A%2A): `collection:printdisabled AND NOT collection:inlibrary AND NOT openlibrary_edition:* AND isbn:*`
     * **note** the number of items resulting from this query will depend on user account privileges, and not all users will see all print disabled only items by default on archive.org. @ June 2019, there are 330K items in the maximal list that are not linked to Open Library.
@@ -98,6 +101,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 * The following query attempts to locate items that are printdisabled only, do NOT have ISBNs in metadata, but are good scanned books `collection:printdisabled AND NOT collection:inlibrary AND NOT openlibrary_edition:* AND NOT isbn:* AND collection:internetarchivebooks` there are 13,708 results, but most appear to have incomplete titles ... strangely _with_ ISBNs in the title field. It looks like these have stalled in the scanning process somehow?
 
 ## Orphaned items with ocaid
+This problem affects the ability of items to become synchronised using the existing mechanisms. The requirement for including both `work` id and `edition` id is affected. The solution is to resolve and add works for all editions which don't have them. This overall effort is being tracked on (another wiki page)[https://github.com/internetarchive/openlibrary/wiki/Orphaned-Editions-Planning], but the following notes relate to orphans with OCAIDs.
 
 remaining total @ 26 June 2019: 38347
 
