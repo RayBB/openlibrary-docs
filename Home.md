@@ -58,8 +58,8 @@ This team is for people who are passionate about improving the quality of Open L
 What are the actions I can perform as an administrator / mod?
 
 
-Are there tools
-You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides
+Are there tools?
+You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides convenient methods for downloading book, author, list, and subject data.
 
 ## Engineering & Ops Team
 
