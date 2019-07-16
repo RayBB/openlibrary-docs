@@ -4,6 +4,8 @@ From the root of your local openlibrary project, you can run the JavaScript and 
 
     docker-compose run web make test 
 
+General Docker instructions are to be found in the repo at https://github.com/internetarchive/openlibrary/tree/master/docker and repo testing instructions are in the main README: https://github.com/internetarchive/openlibrary/blob/master/Readme.md#running-tests
+
 To run the same tests on the shared development server, `ol-dev0` (requires ssh access), make sure you activate venv:
 
 ```
