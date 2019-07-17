@@ -103,7 +103,7 @@ See [Open Library Client JSON schemata](https://github.com/internetarchive/openl
 
 
 ## Orphaned items with ocaid
-This problem affects the ability of items to become synchronised using the existing mechanisms. The requirement for including both `work` id and `edition` id is affected. The solution is to resolve and add works for all editions which don't have them. This overall effort is being tracked on (another wiki page)[https://github.com/internetarchive/openlibrary/wiki/Orphaned-Editions-Planning], but the following notes relate to orphans with OCAIDs.
+This problem affects the ability of items to become synchronised using the existing mechanisms. The requirement for including both `work` id and `edition` id is affected. The solution is to resolve and add works for all editions which don't have them. This overall effort is being tracked on [another wiki page](https://github.com/internetarchive/openlibrary/wiki/Orphaned-Editions-Planning) , but the following notes relate to orphans with OCAIDs.
 
 remaining total @ 26 June 2019: 38347
 
