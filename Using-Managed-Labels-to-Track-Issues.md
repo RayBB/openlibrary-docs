@@ -100,6 +100,7 @@ Use these labels to distinguish between issues that we're actively working on, t
 Color|Label|Description 
 -|-|-
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Backlogged** | No one working on it, not in any milestone, but want to leave open to consider later. [managed]
+![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Blocked** | Progress has stopped, we are waiting for something. [managed]
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Scheduled** | A decision has been made that this issue should be addressed. [managed]
 ![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Work In Progress** | This issue is being actively worked on. [managed]
 
