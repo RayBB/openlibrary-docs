@@ -4,7 +4,7 @@ https://developer.penguinrandomhouse.com/docs/read/enhanced_prh_api
 *Google Books*
 https://developers.google.com/books/docs/v1/getting_started
 
-*OCLC Book Lookup*
+*OCLC Worldcat Book Lookup*
 https://platform.worldcat.org/api-explorer/apis/Classify/ClassificationResource/Search
 
 *Simon and Schuster*
@@ -13,7 +13,7 @@ https://catalog.simonandschuster.com/?cid=16322
 
 *Library of Congress*
 25M MARCs
-http://www.loc.gov/cds/products/MDSConnect-books_all.html
+https://www.loc.gov/cds/products/MDSConnect-books_all.html
 
 *Hathi Trust*
 16.8M volumes, 8M book titles, 38% public domain
@@ -21,3 +21,4 @@ https://www.hathitrust.org/bib_api
 
 *Wikidata*
 lookup any identifier (author, subject, language,...) and find other identifiers for the same entity
+https://www.wikidata.org/
