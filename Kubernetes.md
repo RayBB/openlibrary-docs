@@ -5,6 +5,8 @@ This will enable trusted contributors to:
 * not have to ask for branch switching on the current single dev server, dev.openlibrary.org
 * post review app links (to pods) in PRs
 
+This repo is used as a building block: https://gitlab.com/internetarchive/kre8
+
 # Plans for Kubernetes (2019-08)
 
 1. no near-term plans (def not before October) yet to move production piece of OL into kubernetes
