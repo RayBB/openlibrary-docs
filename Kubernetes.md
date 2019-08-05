@@ -1,0 +1,7 @@
+# Plans for Kubernetes (2019-08)
+
+1. no near-term plans (def not before October) yet to move production piece of OL into kubernetes
+2. there is a git.archive.org gitlab repo containing the altered version of OL docker (internal access only — we’ll grant spin-up-only access to these pods to blessed/trusted members — no ssh read / writes of the pods themselves)
+3. near-term plan is to fix dev.openlibrary.org to be a test for `master` only (before openlibrary.org gets deploys)
+4. kube pods will be used to allow trusted members to spin up versions of OL to test specific branches on/in prod-like environments
+5. down the road, kubernetes may help us scale (as you suggest) memcached, solr, and perhaps our gunicorn web heads
