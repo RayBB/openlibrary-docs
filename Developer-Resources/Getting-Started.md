@@ -5,7 +5,7 @@
 - [Using the Open Library Website](#using-the-open-library-website)
     - [Logging In (As Admin)](#logging-in)
     - [Admin Interface](#admin-interface)
-    - [Creating Users](#creating-users)
+    - [Testing the site with different users](#creating-users)
     - [Lending & Borrowing](#lending-and-borrowing)
     - [Configuration](#configuration)
 - [Importing Test Data](#importing-test-data)
@@ -89,19 +89,23 @@ For users with sufficient privileges, an admin interface is available at `http:/
 - If you want to add a new user to the admin group, you can do that at `http://localhost:8080/usergroup/admin`
 
 <a name="creating-users"></a>
-### Creating Users
+### Testing the site with different users
 
-- If you create a user, you will have to verify the email address, but you will not be able to send email from your dev instance. Instead, you can find the verification link in the app server log, which should be in `/var/log/upstart/ol-web.log`.
+To view and test the site as a non-admin user
 
-The verification link should look like:
+1) Login to your local dev instance (http://localhost:8080) as the openlibrary@example.com admin user
+2) enter the admin interface URL: http://localhost:8080/admin and select the `People` option (http://localhost:8080/admin/people)
+3) click on `AccountBot` from the "Recent Accounts" table
+4) At the top of the user page (http://localhost:8080/admin/people/AccountBot) there will be two red buttons -- click on "login as this user"
+  You should now be logged in as a standard user, `AccountBot`, and will be able to make edits, but not delete items etc.
 
-```
-http://localhost:8080/account/verify/bdc41d12bd734b27bf1522233dde03b2
-```
+To add AccountBot to a specific usergroup, such as `librarians`:
 
-The hash you see will be different that above. Just load that link and the user will be created in your dev instance.
+As the admin user openlibrary@example.com
 
-**Debugging:** During sign up, if you get an error "INPUT ERROR: K: FORMAT OF SITE KEY WAS INVALID", then it probably means reCAPTCHA has not been set up on your local dev environment. See [reCAPTCHA v2](#recaptcha) below.
+1) got to http://localhost:8080/usergroup/librarians?m=edit
+2) add `/people/AccountBot` in the first "Members" slot and save the page
+  Now you should be able to login as AccountBot using the instructions above and operate as a librarian.
 
 <a name="lending-and-borrowing"></a>
 ### Lending and Borrowing
