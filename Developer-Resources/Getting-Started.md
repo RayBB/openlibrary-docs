@@ -97,15 +97,17 @@ To view and test the site as a non-admin user:
 2) Enter the admin interface URL: http://localhost:8080/admin and select the `People` option (http://localhost:8080/admin/people)
 3) Select the user `AccountBot` from the "Recent Accounts" table.
 4) At the top of the user page (http://localhost:8080/admin/people/AccountBot) there will be two red buttons -- click on "login as this user".
-  You should now be logged in as a standard user, `AccountBot`, and will be able to make edits, but not delete items etc.
+
+You should now be logged in as a standard user, `AccountBot`, and will be able to make edits, but not delete items etc.
 
 To add AccountBot to a specific usergroup, such as `librarians`:
 
 As the admin user openlibrary@example.com;
 
 1) Open the `librarians` usergroup page in edit mode: http://localhost:8080/usergroup/librarians?m=edit
-2) add `/people/AccountBot` in the first "Members" slot and save the page
-  Now you should be able to login as AccountBot using the instructions above and operate as a librarian.
+2) Add `/people/AccountBot` in the first "Members" slot and save the page.
+
+Now you should be able to login as AccountBot using the instructions above and operate as a librarian.
 
 <a name="lending-and-borrowing"></a>
 ### Lending and Borrowing
