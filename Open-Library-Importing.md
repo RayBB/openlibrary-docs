@@ -55,10 +55,15 @@ IDEA: Define a bookseller metadata quality threshold. Heuristics to decide wheth
   * Mismatched identifiers contribute to conflation issues
 
 ## Current state
+_.. notes written, pending .._
 
 ## Other issues related to importing
-
+* Add book UI
+  * Consolidate add_book endpoints
+  * UI add book should use and leverage the import API checks and available fields for consistency and code maintainability
+  * https://github.com/internetarchive/openlibrary/issues/1163
 ## Related resources
+* Current [project board for import pipeline efforts](https://github.com/internetarchive/openlibrary/projects/16)
 * https://github.com/internetarchive/openlibrary/wiki/Developer's-Guide-to-Data-Importing
 * https://github.com/internetarchive/openlibrary/wiki/Endpoints#importing
 * https://github.com/internetarchive/openlibrary/wiki/Data-Source-Overview
