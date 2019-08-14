@@ -57,3 +57,12 @@ IDEA: Define a bookseller metadata quality threshold. Heuristics to decide wheth
 ## Current state
 
 ## Other issues related to importing
+
+## Related resources
+* https://github.com/internetarchive/openlibrary/wiki/Developer's-Guide-to-Data-Importing
+* https://github.com/internetarchive/openlibrary/wiki/Endpoints#importing
+* https://github.com/internetarchive/openlibrary/wiki/Data-Source-Overview
+* https://github.com/internetarchive/openlibrary-bots/tree/master/modern-import-bot
+### Historical -- we likely want to resume the intent of these efforts:
+* https://openlibrary.org/dev/docs/data
+* https://openlibrary.org/about/help
