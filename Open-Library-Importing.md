@@ -4,7 +4,7 @@ Here is a list of generally expressed goals for importing:
 * Quality imports
 * Newer, more recent books
 * More useful items, what are our users searching for and not finding?
-* Ongoing, automated pipeline so OL stays current
+* Ongoing, automated pipeline so OL stays (or becomes..) current
 * Flexible, extensible import process that can import a wide range of available and new data sources
 * Synchronisation with current and potential data partners (BWB, Wikidata, etc.)
 
