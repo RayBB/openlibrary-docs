@@ -71,3 +71,4 @@ _.. notes written, pending .._
 ### Historical -- we likely want to resume the intent of these efforts:
 * https://openlibrary.org/dev/docs/data
 * https://openlibrary.org/about/help
+* https://openlibrary.org/about/requirements
