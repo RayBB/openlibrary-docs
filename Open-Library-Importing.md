@@ -23,6 +23,9 @@ In order to measure progress and gaps, we need some metrics...
 * What is being searched for and not found by users?
 * Overlap stats with partner data (needs requirement details)
 
+## Published dates in Open Library -- books with ISBN (14M out of 25M) @ July 2019
+![Editions by publication year graph for July 2019](https://docs.google.com/spreadsheets/d/e/2PACX-1vRXTYkmE6wRV82Z-zJaCsPAJ91SBIEWOyCaPCK1U89c379_Ing4RReHsnTX_0JiShyDnySLgjd5ejKN/pubchart?oid=723822477&format=image)
+
 ## Sources of import metadata
 * Libraries, MARC data
   * PROs:
