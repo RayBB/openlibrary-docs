@@ -19,7 +19,19 @@ A component should be reusable. It should not make sure of id's in any way and i
 
 2. When a component is progressively enhanced it  must not cause [reflow or repaint](https://javascript.tutorialhorizon.com/2015/06/06/what-are-reflows-and-repaints-and-how-to-avoid-them/) when rendered. This is important as it keeps the experience smooth.
 
-## All components
+3. No duplication. A component should have a single source of truth. 
+```
+class UI:
+  def goodform( btnLabel ):
+     return '<div class="form">%s</div>'%self::btn(btnLabel)
+  def badform( btnLabel ):
+     return '<div class="form"><button class="btn">%s</button></div>'%btnLabel
+  def btn( label ):
+     return '<button class="btn">%s</button>'%label
+
+```
+
+## JS components
 1.   Components must be scoped and cannot have side effects on things outside their scope.
 
 When considering the DOM tree, a component should not be able to access any parent elements. Likewise another component cannot make modifications to it.  This means a component cannot bind events to document.body for example. This is important as it avoids unexpected conflicting behaviours, for example consider the following example where a list widget registers an event to close itself, but a SearchBar stops propagation preventing that event from ever occurring:
@@ -43,13 +55,15 @@ function Bar() { sb.state.foo = 2 }
 ```
 
 
-2. Components are event-driven
+3. Components are event-driven
 
 I would like us to take an event driven approach to building out components in OpenLibrary. 
 
 The components should not make assumptions such as "clicking X saves something to localStorage". This will be left to the consumer.
 
 This ensures that our components are as reusable as possible and that we can document them with minimum dependencies in storybook ui.
+
+It also means the widget can be used in other contexts. For example we might want to add a search bar in a lists widget feature as well as the main header.
 
 ```
 function SearchBar( node ) {
@@ -59,10 +73,11 @@ function SearchBar( node ) {
 new SearchBar( { onButtonClick: function () { alert('I clicked a button!' ); } )
 ```
 
-3. Composition not inheritance
+4. Composition not inheritance
 
 React.js and similar libraries have shown that the composition pattern is much better for UIs than the inheritance model. 
 
+https://reactjs.org/docs/composition-vs-inheritance.html
 
 # Refactoring existing components
 
