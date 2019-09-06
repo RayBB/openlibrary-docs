@@ -65,6 +65,8 @@ This ensures that our components are as reusable as possible and that we can doc
 
 It also means the widget can be used in other contexts. For example we might want to add a search bar in a lists widget feature as well as the main header.
 
+We may want to consider the [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) as part of this.
+
 ```
 function SearchBar( node ) {
   node.querySelectorAll( '.buttons' ).addEventListener( 'click', onButtonClick );
@@ -78,6 +80,14 @@ new SearchBar( { onButtonClick: function () { alert('I clicked a button!' ); } )
 React.js and similar libraries have shown that the composition pattern is much better for UIs than the inheritance model. 
 
 https://reactjs.org/docs/composition-vs-inheritance.html
+
+5. No inheritance
+
+We should not make use of class `extends` with the exception of a framework base class.
+
+For instance if we are using React, it is acceptable for `class Element extends React.Component` but we should not be extending anything else e.g. `Poodle extends Dog`.
+
+https://codeburst.io/inheritance-is-evil-stop-using-it-6c4f1caf5117
 
 # Refactoring existing components
 
