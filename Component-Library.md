@@ -15,11 +15,18 @@ A component should be reusable. It should not make sure of id's in any way and i
 # Rules for a component
 
 ## Server side rendered components
-1. A component must be usable when JavaScript is disabled. JavaScript progressively enhances such components to add functionality (for example changing a link to open a dialog instead).
 
-2. When a component is progressively enhanced it  must not cause [reflow or repaint](https://javascript.tutorialhorizon.com/2015/06/06/what-are-reflows-and-repaints-and-how-to-avoid-them/) when rendered. This is important as it keeps the experience smooth.
+### A component must be usable when JavaScript is disabled.
 
-3. No duplication. A component should have a single source of truth. 
+JavaScript progressively enhances such components to add functionality (for example changing a link to open a dialog instead).
+
+### When a component is progressively enhanced it  must not cause [reflow or repaint](https://javascript.tutorialhorizon.com/2015/06/06/what-are-reflows-and-repaints-and-how-to-avoid-them/)
+
+This is important as it keeps the experience smooth.
+
+### No duplication.
+
+A component should have a single source of truth. 
 ```
 class UI:
   def goodform( btnLabel ):
@@ -32,7 +39,8 @@ class UI:
 ```
 
 ## JS components
-1.   Components must be scoped and cannot have side effects on things outside their scope.
+
+### Components must be scoped and cannot have side effects on things outside their scope.
 
 When considering the DOM tree, a component should not be able to access any parent elements. Likewise another component cannot make modifications to it.  This means a component cannot bind events to document.body for example. This is important as it avoids unexpected conflicting behaviours, for example consider the following example where a list widget registers an event to close itself, but a SearchBar stops propagation preventing that event from ever occurring:
 
@@ -43,7 +51,7 @@ new SearchBar();
 new ListWidget();
 ```
 
-2. Components manage their own state
+### Components manage their own state
 
 We will probably want to use something like Redux to manage application state, but while we refactor and in the absence of such as library we should at least ensure that components keep their own state. This means that other components should not be changing.
 
@@ -55,7 +63,7 @@ function Bar() { sb.state.foo = 2 }
 ```
 
 
-3. Components are event-driven
+### Components are event-driven
 
 I would like us to take an event driven approach to building out components in OpenLibrary. 
 
@@ -75,13 +83,13 @@ function SearchBar( node ) {
 new SearchBar( { onButtonClick: function () { alert('I clicked a button!' ); } )
 ```
 
-4. Composition not inheritance
+### Composition not inheritance
 
 React.js and similar libraries have shown that the composition pattern is much better for UIs than the inheritance model. 
 
 https://reactjs.org/docs/composition-vs-inheritance.html
 
-5. No inheritance
+### No inheritance
 
 We should not make use of class `extends` with the exception of a framework base class.
 
@@ -91,9 +99,9 @@ https://codeburst.io/inheritance-is-evil-stop-using-it-6c4f1caf5117
 
 # Refactoring existing components
 
-1. Write unit tests
+##  Write unit tests
 We should look to write unit tests first and for all with the existing code before doing this. To support testing we should do the minimum possible e.g. exposing functions where necessary and adding return values when we need to check the return value of something.
 
 The existence of tests should be a precursor to any large refactor as it defines a specification of how a feature behaves and makes it easier for others in the team to verify that the new component is an adequate replacement.
 
-2. Refactor.
+## Refactor.
