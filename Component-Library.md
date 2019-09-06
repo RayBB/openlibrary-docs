@@ -62,3 +62,13 @@ new SearchBar( { onButtonClick: function () { alert('I clicked a button!' ); } )
 3. Composition not inheritance
 
 React.js and similar libraries have shown that the composition pattern is much better for UIs than the inheritance model. 
+
+
+# Refactoring existing components
+
+1. Write unit tests
+We should look to write unit tests first and for all with the existing code before doing this. To support testing we should do the minimum possible e.g. exposing functions where necessary and adding return values when we need to check the return value of something.
+
+The existence of tests should be a precursor to any large refactor as it defines a specification of how a feature behaves and makes it easier for others in the team to verify that the new component is an adequate replacement.
+
+2. Refactor.
