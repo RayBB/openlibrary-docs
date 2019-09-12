@@ -2,11 +2,24 @@
 
 - [ ] Report outage on #ops and #openlibrary on Slack
 - [ ] Consult the [Troubleshooting](#Troubleshooting) section to identify likely suspects
-- [ ] Identify issues using our [stats dashboard](http://ol-home.us.archive.org:8088/dashboard) and [open library nagios alerts](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) 
+- [ ] Check the dashboards:
+    - [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail)
+    - [HAProxy](https://openlibrary.org/admin?stats)
+    - https://status.archivelab.org/?admin=true - links to all the dashboards
+    - [stats dashboard](http://ol-home.us.archive.org:8088/dashboard/)
 - [ ] If the baremetal machine is hanging, contact #ops on slack or [manually restart baremetal](https://gnt-webmgr.us.archive.org/)
 - [ ] If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
 
 # Troubleshooting
+
+1. If solr-updater or import-bot or deploy issue, or infobase (API), check `ol-home`
+2. If lending information e.g. books appear as available on OL when they are waitlisted on IA, this is a freak incident w/ memcached and we'll need to ssh into each memcached (ol-mem*) and `sudo service memcached restart`
+3. If there's an issue with ssl termination, static assets, connecting to the website, check `ol-www1` (which is where all traffic enters and goes into haproxy -- which also lives on this machine). Another case is abuse, which is documented in the troubleshooting guide (usually haproxy limits or banning via nginx `/opt/openlibrary/olsystem/etc/nginx/deny.conf`
+4. If there's a database problem, sorry (`ol-db0` primary, `ol-db1` replication, `ol-backup1`)
+5. We don't generally have solr issues, but that would be `ol-solr2` (to be replaced w/ `ol-solr0`)
+6. If we're seeing `ol-web3` and `ol-web4` offline, it may be network, upstream, DNS, or a breaking dependency, CHECK [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) + alert #ops + #openlibrary. Check the logs in `/var/log/openlibrary/` (esp. `upstart.log`)
+7. If you notice a disk filling up rapidly or almost out of space... CREATE A BASILISK FILE (an empty 2GB placeholder `dd`'d file that we can delete and have the ability to `ls`, etc)
+8. Look at the troubleshooting guide history
 
 - [Is the server having trouble after rebooting?](#Handling_Server_Reboot)
 - [Is OpenLibrary getting slammed with traffic, crawlers, or bad actors?](#Handling_DDOS)
