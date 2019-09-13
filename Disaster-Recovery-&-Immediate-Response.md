@@ -126,6 +126,17 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
 
 # History
 Outage scenarios in descending order of occurrence:
+   * 2019-09-12 19:59 - 20:52 ET: `ol-web3:/var/log/openlibrary/upstart.log` exploding in size possibly due to archive.org serving 503s ; some user disruption due to archive.org unavailability
+       * **19:59**: abazella notified on slack about `ol-web3:/var/log/openlibrary` filling up
+       * **20:17**: Drini investigated and found `upstart.log` was 188GB, and was spitting out:
+         ```
+         2019-09-13 00:18:43 [28300] [openlibrary.core.lending] [ERROR] POST failed
+         ...
+         HTTPError: HTTP Error 503: Service Temporarily Unavailable
+         ```
+       * **20:26**: Linked to archive.org outage
+       * **20:44**: Drini (with buy-in from Mek) truncated the log file: `sudo truncate upstart.log  --size 0`
+       * **Conclusion**: It looks like `ol-web3` is not rolling the log file correctly; that should be investigated.
    * 2019-03-29 5:00pm PST OL requests for archive.org ES getting queued until stopped
       * https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery#overloaded-search
    * 2017-11-09 10:00pm PST
