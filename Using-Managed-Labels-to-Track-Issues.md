@@ -119,8 +119,8 @@ These labels indicate that an issue or pull request is stuck because the owner n
 Color|Label|Description 
 -|-|-
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Assessment** | This issue needs triage. The team needs to decide who should own it, what to do, by when. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Breakdown** | This big issue needs a checklist or subissues to describe a breakdown of work. [managed]!
-[0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Community Discussion** | This issue is to be brought up in the next community call. [managed]
+![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Breakdown** | This big issue needs a checklist or subissues to describe a breakdown of work. [managed]
+![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Community Discussion** | This issue is to be brought up in the next community call. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Detail** | Submitter needs to provide more detail for this issue to be assessed (see comments). [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Feedback** | A proposed feature or bug resolution needs community feedback prior to forging ahead. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Help** | Issues, typically substantial ones, that need a dedicated developer to take them on. [managed]
