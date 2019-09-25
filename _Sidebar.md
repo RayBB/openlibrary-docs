@@ -1,4 +1,5 @@
 * **[Home](Home)**
+* **[Onboarding](Onboarding)**
 * **[FAQs](Beginner's-FAQ)**
 * **Getting Involved**
 	* [Weekly Community Calls](Open-Library-Community-Call-Minutes)
