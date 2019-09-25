@@ -1,15 +1,15 @@
 * **[Home](Home)**
 * **[Onboarding](Onboarding)**
-* **[FAQs](Beginner's-FAQ)**
-* **Getting Involved**
+* **Ways to Get Involved**
 	* [Weekly Community Calls](Open-Library-Community-Call-Minutes)
 	* [Google Summer of Code](Google-Summer-of-Code)
+	* [Hacktoberfest (October)](Hacktoberfest)
 	* [Google Code-in](https://github.com/internetarchive/openlibrary/milestone/17)
-	* [Hacktoberfest](Hacktoberfest)
 * **Developer Resources**
 	* [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
 	* [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)
 	* [Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)
+	* [FAQs](Beginner's-FAQ)
 	* **Dev Environment**
 		* [Architecture of Dev Instance](Architecture)
 		* [Getting Setup](Getting-Started)
