@@ -1,6 +1,6 @@
 ## Welcome!
 
-Open Library and its ~1.5M~ 2M readers are so grateful you're here!
+Open Library and its 2.5M readers are so grateful you're here!
 
 ## What is Open Library?
 
