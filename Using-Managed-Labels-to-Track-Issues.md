@@ -62,7 +62,7 @@ Color|Label|Description
 -|-|-
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Bug** | Something isn't as intended. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Feature** | Issue describes new functionality we'd like to implement. [managed]
-![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Refactor/Clean-up** | Issues related to reorganization/clean-up of data or code (e.g. for maintainability). See https://refactoring.com . [managed]
+![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Refactor/Clean-up** | Issues related to reorganization/clean-up of data or code (e.g. for maintainability). Specifically "restructuring of an existing body of code, altering its internal structure **without changing its external behavior**. (https://refactoring.com). [managed]
 ![e08000](https://via.placeholder.com/30x30/e08000/e08000.jpg) | **Type: Epic** | A feature or refactor that is big enough to require subissues. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Subtask of Epic** | A subtask that is part of the work breakdown of an epic issue (see comments). [managed]
 
