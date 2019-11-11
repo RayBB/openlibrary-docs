@@ -9,9 +9,7 @@ To use:
 2. Open the repo in VS Code
 3. Edit the last line of `docker/ol-docker-start.sh` to say `workers 1` instead of `4`
 4. `docker-compose up -d`
-5. Edit `.vscode/launch.json`:
-  a. if using a docker machine (or docker toolbox), update `host` (run `docker-machine ip`)
-  b. on Windows, I had to change `localRoot` to be `c:/Users/MyUser/openlibrary/`; if you get "file not found" errors, you might have to do the same.
+5. If using a docker machine (or docker toolbox), edit `.vscode/launch.json` and update `host` (run `docker-machine ip` to find the ip to use)
 6. Go to http://localhost:8080/admin/attach_debugger (or whatever your docker ip is) and click "Start"
 7. Go to the debug panel (Ctrl+Shift+D) in VS Code, and click "Python: Attach"
 8. Debug!
