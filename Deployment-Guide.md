@@ -27,7 +27,7 @@ cd /opt/openlibrary/openlibrary  # where OL code lives
 git checkout <branch>  # checkout the correct branch name
 
 # Rebuild CSS, JS dependencies
-sudo make css; sudo make js
+sudo make css js
 
 # Restart the dev server
 sudo kill -9 `pgrep -f openlibrary-server`  # kill previous instance
