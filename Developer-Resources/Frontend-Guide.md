@@ -61,3 +61,57 @@ This is telling you that your changes have increased the amount of CSS loaded, m
 
 These problems are especially a concern for [CSS files on the critical path](https://www.smashingmagazine.com/2015/08/understanding-critical-css/). Always consider placing styles in an JavaScript entrypoint file e.g. `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import`. This CSS will only get loaded via JavaScript and has a much higher bundlesize threshold.
 
+## Templetor Notes
+
+Open Library uses templetor syntax in our HTML. See it's documentation first: http://webpy.org/docs/0.3/templetor
+
+Here are some quick/useful snippets:
+```html
+$# Rendering sanitized text vs. HTML; replace `$` with `$:` in any of the following statements
+$cond(True, 'a < 3', '')
+$# Renders as:
+a %lt; 3
+$cond(True, '<li>x</li>', '')
+$# Renders as:
+<li>x</li>
+
+$# Short if/else statement
+$ show_foo = true
+<span>Hello, $cond(show_foo, 'foo', 'bar')!</span>
+$# Renders as:
+<span>Hello, foo!</span>
+
+$# Add commas to an integer
+$commify(1000)
+$# Renders as:
+1,000
+
+$# Rendering other templates/macros
+$:macros.EditButtons(comment="")
+```
+
+### Internationalization
+Any text that will be visible to the user should be internationalized. Use the special `$_` function.
+See the webpy templetor i18n docs as well: http://webpy.org/cookbook/i18n_support_in_template_file
+
+Example:
+```html
+<a title="$('Add this book to your Want to Read shelf')">$_('Want to Read')</a>
+```
+
+There is also a helper functions to handle pluralization:
+```html
+$# Pluralization: rendering pluralized text
+$ungettext("There is one person waiting for this book.", "There are %(n)s people waiting for this book.", wlsize, n=wlsize)
+```
+
+In the translation file, this would like:
+
+```po
+#: borrow.html:114
+#, python-format
+msgid "There is one person waiting for this book."
+msgid_plural "There are %(n)s people waiting for this book."
+msgstr[0] "Une personne attend ce livre."
+msgstr[1] "%(n)s personnes attendent ce livre."
+```
