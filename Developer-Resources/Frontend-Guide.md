@@ -70,7 +70,7 @@ Here are some quick/useful snippets:
 $# Rendering sanitized text vs. HTML; replace `$` with `$:` in any of the following statements
 $cond(True, 'a < 3', '')
 $# Renders as:
-a %lt; 3
+a &lt; 3
 $:cond(True, '<li>x</li>', '')
 $# Renders as:
 <li>x</li>
