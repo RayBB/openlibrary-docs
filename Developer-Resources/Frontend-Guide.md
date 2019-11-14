@@ -61,7 +61,7 @@ This is telling you that your changes have increased the amount of CSS loaded, m
 
 These problems are especially a concern for [CSS files on the critical path](https://www.smashingmagazine.com/2015/08/understanding-critical-css/). Always consider placing styles in an JavaScript entrypoint file e.g. `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import`. This CSS will only get loaded via JavaScript and has a much higher bundlesize threshold.
 
-## Templetor Notes
+## Working with HTML
 
 Open Library uses templetor syntax in our HTML. See it's documentation first: http://webpy.org/docs/0.3/templetor
 
