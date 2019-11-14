@@ -71,7 +71,7 @@ $# Rendering sanitized text vs. HTML; replace `$` with `$:` in any of the follow
 $cond(True, 'a < 3', '')
 $# Renders as:
 a %lt; 3
-$cond(True, '<li>x</li>', '')
+$:cond(True, '<li>x</li>', '')
 $# Renders as:
 <li>x</li>
 
@@ -86,26 +86,25 @@ $commify(1000)
 $# Renders as:
 1,000
 
-$# Rendering other templates/macros
+$# Rendering other macros/templates
 $:macros.EditButtons(comment="")
+$:render_template("lib/pagination", pagecount, pageindex, "/admin/loans?page=%(page)s")
 ```
 
-### Internationalization
+### Internationalization (i18n)
 Any text that will be visible to the user should be internationalized. Use the special `$_` function.
 See the webpy templetor i18n docs as well: http://webpy.org/cookbook/i18n_support_in_template_file
 
 Example:
 ```html
+$# Simple string i18n
 <a title="$('Add this book to your Want to Read shelf')">$_('Want to Read')</a>
-```
 
-There is also a helper functions to handle pluralization:
-```html
 $# Pluralization: rendering pluralized text
 $ungettext("There is one person waiting for this book.", "There are %(n)s people waiting for this book.", wlsize, n=wlsize)
 ```
 
-In the translation file, this would like:
+In the translation file, this would look like:
 
 ```po
 #: borrow.html:114
