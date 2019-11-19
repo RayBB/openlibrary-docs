@@ -63,7 +63,7 @@ These problems are especially a concern for [CSS files on the critical path](htt
 
 ## Working with HTML
 
-Open Library uses templetor syntax in our HTML. See it's documentation first: http://webpy.org/docs/0.3/templetor
+Open Library uses templetor syntax in our HTML. See its documentation first: http://webpy.org/docs/0.3/templetor
 
 Here are some quick/useful snippets:
 ```html
