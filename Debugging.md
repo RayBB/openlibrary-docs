@@ -1,3 +1,12 @@
+# Debugging a Server Error
+
+**Question:** What should I do when I come across an internal error (like the one below) while running Open Library locally on Docker? 
+```
+"Sorry. There seems to be a problem with what you were just looking at. We've noted the error 2019-02-05/193353339339 and will look into it as soon as possible. Head for home?"
+```
+**Answer:** When you hit an error, if you add `?debug=true` to the url (if it's a GET), or (if it's a POST) inspect the form element and add `?debug=true` to the action url, you should see a useful stack trace.
+
+# Using a Debugger
 BETA: See https://github.com/internetarchive/openlibrary/pull/2097
 
 Using a debugger is one of the best ways to understand how code works and to find bug fixes. We use [VS Code](https://code.visualstudio.com/) (along with its [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)) to remote debug into the docker container; we can't use regular debugging because the docker container behaves like a virtual machine.
