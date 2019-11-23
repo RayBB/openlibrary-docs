@@ -12,8 +12,8 @@
 	* **Dev Environment**
 		* [Architecture of Dev Instance](Architecture)
 		* [Getting Setup](Getting-Started)
+		* [Debugging](Debugger)
 		* [Testing Your Code](Testing)
-		* [Debugger](Debugger)
 	* **Front-End**
 		* [Front-end Guide](Frontend-Guide)
 		* [Design Pattern Library](Design-Pattern-Library)
