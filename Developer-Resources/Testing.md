@@ -84,6 +84,10 @@ cd tests/integration
 - From "Want to Read", "Currently Reading", "Already Read"; change state
 - From "Want to Read", "Currently Reading", "Already Read"; remove state
 
-*On Account My-books Pages*
+# Troubleshooting
 
-TODO
+**Question:** Travis CI build fails due to linting errors?
+
+**Answer:** This can be solved by running `npm run lint:fix` inside the docker container.
+
+**Issue link:** For a full description see: https://github.com/internetarchive/openlibrary/issues/1868
