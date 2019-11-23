@@ -17,6 +17,8 @@
     - [Log Files](#logs)
     - [Database](#database)
     - [reCAPTCHA v2](#recaptcha)
+- [FAQs](#faqs)
+- [Credits](#credits)
 
 ## Basic Developer Commands
 
@@ -332,7 +334,13 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 
 - From within the Docker container, restart the Open Library service via `sudo systemctl restart ol-web`. You can simply run `docker-compose restart` as well for the same.
 
-### Credits and special thanks
+## FAQs
+
+**Question:** Why do I hit a 404-page on local when the page shows up on openlibrary.org site?
+**Answer:** Check out the answer for this here: https://github.com/internetarchive/openlibrary/issues/1864
+
+## Credits
+And special thanks
 
 - [rajbot](https://github.com/rajbot)
 - [gdamdam](https://github.com/gdamdam)
