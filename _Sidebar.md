@@ -12,7 +12,7 @@
 	* **Dev Environment**
 		* [Architecture of Dev Instance](Architecture)
 		* [Getting Setup](Getting-Started)
-		* [Debugging](Debugger)
+		* [Debugging](Debugging)
 		* [Testing Your Code](Testing)
 	* **Front-End**
 		* [Front-end Guide](Frontend-Guide)
