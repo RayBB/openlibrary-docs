@@ -31,7 +31,7 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 | Front-End & Mobile             | [@jdlrobson](https://github.com/jdlrobson) | |
 | [Front-End Component Library](https://github.com/internetarchive/openlibrary/wiki/Design-Pattern-Library)    | [@koderjoker](https://github.com/koderjoker) | |
 | Search (solr)                  | [@cdrini](https://github.com/cdrini) / [@tfmorris](http://github.com/tfmorris) | [`search`](https://github.com/internetarchive/openlibrary/labels/search), [`solr`](https://github.com/internetarchive/openlibrary/labels/solr) |
-| Python 3                       | [@cclauss](https://github.com/cclauss), [@salman-bhai](https://github.com/salman-bhai) | [`Python 3`](https://github.com/internetarchive/openlibrary/labels/Python%203) |
+| [Python 3](https://github.com/internetarchive/openlibrary/issues/890)                       | [@cclauss](https://github.com/cclauss) | [`Python 3`](https://github.com/internetarchive/openlibrary/labels/Python%203) |
 | [Book Sponsorship Program](https://docs.google.com/document/d/1Ym9RRNB5_k7I7z6ZehKKn0TISYgF1yofE-rtw6NtMWM/edit?ts=5c88fde7#heading=h.re0jke5xmq3c)       | [@tabshaikh ](https://github.com/tabshaikh) | [`book-sponsorship`](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=label%3Abook-sponsorship+)|
 | Github Processes               | [@brad2014](https://github.com/brad2014) | [`Needs-Assessment`](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=label%3ANeeds-Assessment) |
 | Docker + Dev Build System      | [@cdrini](https://github.com/cdrini) | [`Provisioning`, `docker`, `dev-instance`](https://github.com/internetarchive/openlibrary/labels?utf8=%E2%9C%93&q=Provisioning+docker+dev-instance)  |
