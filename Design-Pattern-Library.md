@@ -537,5 +537,12 @@ Deprecated, but in use when removing lists on books pages. See also [colorbox](#
 
 ![screen shot 2019-01-11 at 1 41 48 pm](https://user-images.githubusercontent.com/148752/51061094-db544c00-15a6-11e9-8bed-12b2aabbd679.png)
 
+### Throbber
+
+Used when loading the carousel for changing covers for a book. Possibly reusable for other things?
+
+![Screenshot 2019-12-06 at 3 24 50 PM](https://user-images.githubusercontent.com/148752/70363262-97aca580-183c-11ea-8a66-9c2015bda78a.png)
+
+
 
 
