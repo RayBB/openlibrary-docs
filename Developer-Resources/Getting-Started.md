@@ -334,6 +334,12 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 
 - From within the Docker container, restart the Open Library service via `sudo systemctl restart ol-web`. You can simply run `docker-compose restart` as well for the same.
 
+### Caching
+The home page is cached by default. To clear the cache of any page in cache run the following command:
+```
+docker-compose restart memcached
+```
+
 ## FAQs
 
 **Question:** Why do I hit a 404-page on local when the page shows up on openlibrary.org site?
