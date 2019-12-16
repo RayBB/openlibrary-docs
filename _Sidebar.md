@@ -1,6 +1,5 @@
 **[Home](Home)**
 
----
 **Ways to Get Involved**
 * [Weekly Community Calls](Open-Library-Community-Call-Minutes)
 * [Google Summer of Code](Google-Summer-of-Code)
