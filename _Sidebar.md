@@ -1,11 +1,12 @@
 **[Home](Home)**
 
+---
 **Ways to Get Involved**
 * [Weekly Community Calls](Open-Library-Community-Call-Minutes)
 * [Google Summer of Code](Google-Summer-of-Code)
 * [Hacktoberfest (October)](Hacktoberfest)
 * [Google Code-in](https://github.com/internetarchive/openlibrary/milestone/17)
-
+---
 **Developer Resources**
 * [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
 * [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)
@@ -24,12 +25,12 @@
 	* [Enabling Features](Feature-Flagging)
 	* [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)
 	* [Understanding The Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
-
+---
 **[Design Resources](Design)**
 * [Design & Ecosystem Diagram](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
 * [Logos](https://drive.google.com/file/d/1GlUpiaobyL6dbxu8Ok_i_R87aalpzH_z/view)
 * [Wireframes](Design)
-
+---
 **[Librarian Resources](Librarians-Guide-of-Procedures)** 
 * [Library Metadata Standards](Library-Metadata-Standards)
 * [Guide to Identifiers](Guide-to-Identifiers)
@@ -39,7 +40,7 @@
 * [Overview of Data Sources](Data-Source-Overview)
 * [Writing Bots](Writing-Bots)
 * [Importing Book Records](Developer's-Guide-to-Data-Importing)
-
+---
 **Administration, Systems & Dev-ops**
 * [Services Status Dashboard](https://status.archivelab.org)
 * [Production Architecture & Provisioning](Production-Service-Architecture)
@@ -50,7 +51,7 @@
 * [Generating Data Dumps](Generating-Data-Dumps)
 * [Solr](Solr)
 * [Generating Sitemaps](Sitemap-Generation)
-
+---
 **Features & Initiatives (RFCs)**
 * [Open Library Importing](Open-Library-Importing)
 * [Orphaned Editions Planning](Orphaned-Editions-Planning)
