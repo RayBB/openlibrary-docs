@@ -1,3 +1,8 @@
+Contents:
+- [Main Git Flow](#main-git-flow)
+- [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
+- [Commit History Manipulation](#commit-history-manipulation)
+
 ## Main Git flow
 1. Fork the Open Library repository using the GitHub UI by logging in to Github, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
 ![GitHub Fork](https://archive.org/download/screenshot20191211at11.12.56/fork.jpg)
@@ -66,7 +71,7 @@ docker-compose exec web make test
 
 11. Your code is now ready for review!
 
-## Updating your Pull Request
+## Making Updates to Your Pull Request
 
 Pull requests often receive feedback; to make changes to your existing pull requests:
 
