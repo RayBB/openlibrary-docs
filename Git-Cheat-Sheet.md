@@ -1,5 +1,3 @@
-# Git Cheat Sheet
-
 ## Getting Started
 1. Fork the Open Library repository using the GitHub UI by logging in to Github, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
 ![GitHub Fork](https://archive.org/download/screenshot20191211at11.12.56/fork.jpg)
