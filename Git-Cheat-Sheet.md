@@ -1,3 +1,5 @@
+`Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes created with `git 2.22`.
+
 Contents:
 - [Main Git Flow](#main-git-flow)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
@@ -93,7 +95,7 @@ git rebase master
 | --- |
 | Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. |
 
-3. Make your edits and commit (same as steps 7-9 in the Main Git flow flow)
+3. Make your edits and commit (same as steps 7-9 in the [Main Git Flow](#main-git-flow))
 
 
 ## Commit History Manipulation
