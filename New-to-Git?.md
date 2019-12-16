@@ -36,7 +36,7 @@ A commit message should answer three primary questions;
 * How does this commit address the issue?
 * What effects does this change have?
 
-8.Push the branch:
+8. Push the branch:
 
 $ git push origin HEAD
  (note HEAD refers to your current branch; so make sure you're on the right branch!)
