@@ -1,11 +1,12 @@
 `Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes created with `git 2.22`.
 
 Contents:
-- [Main Git Flow](#main-git-flow)
+- [Setting Up](#setting-up)
+- [Creating a Pull Request](#creating-a-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
 
-## Main Git flow
+## Setting Up
 1. Fork the Open Library repository using the GitHub UI by logging in to Github, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
 ![GitHub Fork](https://archive.org/download/screenshot20191211at11.12.56/fork.jpg)
 
@@ -28,14 +29,16 @@ git remote add upstream https://github.com/internetarchive/openlibrary.git#
 git remote -v
 ```
 
-5. Make sure master is up-to-date:
+## Creating a Pull Request
+
+1. Make sure master is up-to-date:
 
 ```sh
 git checkout master
 git pull upstream master
 ```
 
-6. [Create a new branch for the feature of issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.
+2. [Create a new branch for the feature of issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.
 
 ```sh
 git checkout -b 1234/fix/fix-the-thing
@@ -43,7 +46,7 @@ git checkout -b 1234/fix/fix-the-thing
 
 (specifying `-b` creates a new branch, and `checkout` checks it out).
 
-7. Make changes/commit:
+3. Make changes/commit:
 
 ```sh
 git add the-file.html
@@ -55,23 +58,23 @@ A commit message should answer three primary questions;
 * How does this commit address the issue?
 * What effects does this change have?
 
-8. Push the branch:
+4. Push the branch:
 
 ```sh
 git push origin HEAD
 ```
 (note HEAD refers to your current branch; so make sure you're on the right branch!)
 
-9. Test your changes:
+5. Test your changes:
 
 ```sh
 docker-compose exec web make test
 ```
 
-10. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.
+6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.
 ![GitHub pull request](https://archive.org/download/screenshot20191211at11.12.56/pull-request.png)
 
-11. Your code is now ready for review!
+Your code is now ready for review!
 
 ## Making Updates to Your Pull Request
 
@@ -95,7 +98,7 @@ git rebase master
 | --- |
 | Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. |
 
-3. Make your edits and commit (same as steps 7-9 in the [Main Git Flow](#main-git-flow))
+3. Make your edits and commit (same as steps 3-5 in [Creating a Pull Request](#creating-a-pull-request)). Once you `push` your branch, the pull request will automatically update.
 
 
 ## Commit History Manipulation
