@@ -62,13 +62,14 @@ Color|Label|Description
 -|-|-
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Bug** | Something isn't as intended. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Feature** | Issue describes new functionality we'd like to implement. [managed]
+![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Question** | This issue doesn't require code. A question needs an answer. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Refactor/Clean-up** | Issues related to reorganization/clean-up of data or code (e.g. for maintainability). Specifically "restructuring of an existing body of code, altering its internal structure **without changing its external behavior**. (https://refactoring.com). [managed]
 ![e08000](https://via.placeholder.com/30x30/e08000/e08000.jpg) | **Type: Epic** | A feature or refactor that is big enough to require subissues. [managed]
 ![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Subtask of Epic** | A subtask that is part of the work breakdown of an epic issue (see comments). [managed]
 
 Epics and subtasks are used when we want to separate out the ownership, comment stream, and timing of different parts of a large project.  The Epic is closed when all its subtasks have been closed.  For most issues, putting a checklist in the comment stream suffices (when everything is checked off, the issue can be closed). The "Needs: Breakdown" label can be used for any issue (epic or not) that needs a decision identifying the list of steps that will be taken in order to close the issue.
 
-Note that `Bug`, `Feature`, `Refactor`, `Subtask` are mutually exclusive.  Every issue (post-triage) should have one of these.  If an issue is labeled `Epic`, it probably also should have a `Feature` or `Refactor` label.
+Note that `Bug`, `Feature`, `Question`, `Refactor`, `Subtask` are mutually exclusive.  Every issue (post-triage) should have one of these.  If an issue is labeled `Epic`, it probably also should have a `Feature` or `Refactor` label.
 
 ### Priority:
 
@@ -76,10 +77,11 @@ Priority describes how urgent the bug is. Very urgent bugs generally have an act
 
 Color|Label|Description 
 -|-|-
-![d12f29](https://via.placeholder.com/30x30/d12f29/d12f29.jpg) | **Priority 0: Urgent** | Issues that prevent users from using the site, or that corrupt site data. [managed]
-![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 1: High** | Issues that we should be working on now. [managed]
-![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 2: Normal** | Optional label: neither high nor low priority. [managed]
-![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 3: Low** | Issues that we can consider at our leisure. [managed]
+![d12f29](https://via.placeholder.com/30x30/d12f29/d12f29.jpg) | **Priority 0: Immediate** | Issues that prevent users from using the site, or that corrupt site data. [managed]
+![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 1: Urgent** | Do this week, receiving emails, time sensitive. [managed]
+![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 2: High** | Important, as time permits. [managed]
+![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 3: Normal** | Issues that we can consider at our leisure. [managed]
+![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 4: Low** | An issue, but should be worked on when no other pressing work can be done. [managed]
 
 When a priority label is applied to an issue by the submitter, or on any issue without an owner, it represents a suggestion, not a decision. Priorities are not immutable - even while an issue is being worked on, the owner may decide to move the priority up or down.
 
@@ -89,7 +91,7 @@ Although priorities indicate urgency rather than timing, a helpful frame for ass
 
 - Should a developer interrupt and set aside their current activity to get this issue resolved?  Does it need to be fixed in the next 14 days?  Assign an owner who will label it `Priority 1: High`.  If you can't find a volunteer to own it, it can't be `Priority 1`.
 
-- The other two priority labels, medium and low, are available to memorialize your assessment.  They mostly indicate, "I've looked at this, and it is not urgent."
+- The other priority labels are available to memorialize your assessment.  They mostly indicate, "I've looked at this, and it is not urgent."
 
 At most, one `Priority` label can be assigned to an issue.  If there is no `Priority` label, consider the priority unassessed.  It is good form to mark all your issues with some priority level, because it gives us a historical record of the distribution of issues by priority.
 
@@ -118,7 +120,7 @@ These labels indicate that an issue or pull request is stuck because the owner n
 
 Color|Label|Description 
 -|-|-
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Assessment** | This issue needs triage. The team needs to decide who should own it, what to do, by when. [managed]
+![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Triage** | This issue needs triage. The team needs to decide who should own it, what to do, by when. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Breakdown** | This big issue needs a checklist or subissues to describe a breakdown of work. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Community Discussion** | This issue is to be brought up in the next community call. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Detail** | Submitter needs to provide more detail for this issue to be assessed (see comments). [managed]
@@ -126,6 +128,7 @@ Color|Label|Description
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Help** | Issues, typically substantial ones, that need a dedicated developer to take them on. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Review** | This issue/PR needs to be reviewed in order to be closed or merged (see comments). [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Submitter Input** | This issue/PR needs a response from the submitter. [managed]
+![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Investigation** | This issue/PR needs a root-cause analysis to determine a solution. [managed]
 
 If you see one or more of these labels on an issue, assume we are not making progress on it.  
 
@@ -172,6 +175,8 @@ Color|Label|Description
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Upgrade to Python 3** | Issues relating to the systemwide upgrade from Python 2 to Python 3. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Testing** | Work related to tests that need to be written or fixed. [managed]
 ![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Translation** | Work related to language accessibility. [managed]
+![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Public-APIs** | Issues related to APIs accessible to external parties. [managed]
+![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Editing** | Issues related to APIs accessible to external parties. [managed]
 
 The unifying characteristic of Themes is that they involve issues that touch many parts of the repo (UI, Server, Configuration, Documentation, Data).
 
@@ -207,6 +212,7 @@ Color|Label|Description
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: JavaScript** | Issues related to the JavaScript functionality. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Memcache** | Issues related to the configuration or use of the Memcache subsystem. [managed]
 ![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Solr** | Issues related to the configuration or use of the Solr subsystem. [managed]
+![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: CSS** | Issues related to CSS stylesheets. [managed] 
 
 A common search might be something like `label:"Affects: Server" label:"Module: Solr" label:"State: Work In Progress"` to see who is actively working on calls to solr in the server.  If you wanted to pick up issues in that area, you could see who else is doing so.
 
