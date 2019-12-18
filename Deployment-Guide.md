@@ -30,8 +30,8 @@ git checkout <branch>  # checkout the correct branch name
 sudo make css js
 
 # Restart the dev server
-sudo kill -9 `pgrep -f openlibrary-server`  # kill previous instance
-sudo /olsystem/bin/upstart-service openlibrary-server :7071 &  # restart 
+sudo kill -9 `pgrep -f openlibrary-dev-server`  # kill previous instance
+sudo /olsystem/bin/upstart-service openlibrary-dev-server :7071 &  # restart 
 ```
 
 # Satisfying Dependency Changes
