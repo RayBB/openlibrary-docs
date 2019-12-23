@@ -148,3 +148,12 @@ For when you want to render links inside text; you should try to avoid this wher
 ```html
 $:_('By saving a change to this wiki, you agree that your contribution is given freely to the world under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="This link to Creative Commons will open in a new window">CC0</a>. Yippee!')
 ```
+
+This sentence however _can_ be represented without i18n-ing the HTML by using python template strings:
+
+```html
+$def cc0_link():
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="$_('This link to Creative Commons will open in a new window')">$_('CC0')</a>
+
+$_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % cc0_link()
+```
