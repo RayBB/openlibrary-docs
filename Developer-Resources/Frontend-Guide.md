@@ -116,12 +116,18 @@ $:render_template("lib/pagination", pagecount, pageindex, "/admin/loans?page=%(p
 Any text that will be visible to the user should be internationalized. Use the special `$_` function.
 See the webpy templetor i18n docs as well: http://webpy.org/cookbook/i18n_support_in_template_file
 
-Example:
-```html
-$# Simple string i18n
-<a title="$('Add this book to your Want to Read shelf')">$_('Want to Read')</a>
+Examples:
 
-$# Pluralization: rendering pluralized text
+#### Simple string i18n
+
+~80% of i18n falls into this category:
+```html
+<a title="$('Add this book to your Want to Read shelf')">$_('Want to Read')</a>
+```
+
+#### Singular/plural text
+For when you want to render things like "1 edition" vs. "2 edition**s**".
+```html
 $ungettext("There is one person waiting for this book.", "There are %(n)s people waiting for this book.", wlsize, n=wlsize)
 ```
 
@@ -134,4 +140,11 @@ msgid "There is one person waiting for this book."
 msgid_plural "There are %(n)s people waiting for this book."
 msgstr[0] "Une personne attend ce livre."
 msgstr[1] "%(n)s personnes attendent ce livre."
+```
+
+#### HTML i18n
+For when you want to render links inside text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages.
+
+```html
+$:_('By saving a change to this wiki, you agree that your contribution is given freely to the world under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="This link to Creative Commons will open in a new window">CC0</a>. Yippee!')
 ```
