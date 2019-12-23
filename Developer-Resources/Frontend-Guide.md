@@ -143,7 +143,7 @@ msgstr[1] "%(n)s personnes attendent ce livre."
 ```
 
 #### HTML i18n
-For when you want to render links inside text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages.
+For when you want to render links inside text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML.)
 
 ```html
 $:_('By saving a change to this wiki, you agree that your contribution is given freely to the world under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="This link to Creative Commons will open in a new window">CC0</a>. Yippee!')
@@ -151,9 +151,11 @@ $:_('By saving a change to this wiki, you agree that your contribution is given 
 
 This sentence however _can_ be represented without i18n-ing the HTML by using python template strings:
 
+@cdrini TODO untested this will actually work
+
 ```html
 $def cc0_link():
   <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="$_('This link to Creative Commons will open in a new window')">$_('CC0')</a>
 
-$_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % cc0_link()
+$:(_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % str(cc0_link()))
 ```
