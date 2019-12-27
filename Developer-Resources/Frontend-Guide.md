@@ -2,13 +2,10 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 
 ## File organization
 
-**assets**: css/less in /static/css and js in /openlibrary/plugins/openlibrary/js
-
-**models**: `/openlibrary/core/` and `/openlibrary/plugins/upstream/models.py`, data + ORM
-
-**controllers**: in `/openlibrary/plugins/` (maps urls [via regex] → classes w/ GET + POST functions which receive/serve content to clients)
-
-**templates**: in `/openlibrary/templates` and `openlibrary/macros`. Macros are special template components because they can be rendered (by librarians + admins) as `{{macros()}}` in infogami wiki pages
+- **assets**: css/less in /static/css and js in /openlibrary/plugins/openlibrary/js
+- **models**: `/openlibrary/core/` and `/openlibrary/plugins/upstream/models.py`, data + ORM
+- **controllers**: in `/openlibrary/plugins/` (maps urls [via regex] → classes w/ GET + POST functions which receive/serve content to clients)
+- **templates**: in `/openlibrary/templates` and `openlibrary/macros`. Macros are special template components because they can be rendered (by librarians + admins) as `{{macros()}}` in infogami wiki pages
 
 ## How does url routing work?
 
@@ -110,21 +107,14 @@ The two primary i18n message functions are:
 
 Examples:
 
-#### Simple string i18n
+| Template | Description |
+| --- | --- |
+| `<a title="$_('Add this book to your Want to Read shelf')">$_('Want to Read')</a>` | **Simple string i18n**: ~80% of i18n falls into this category. (Note that the title is translated as well since it's visible to the user in hover text.) |
+| `$_("Hi, %(user)s", user=username)!` | **Substitution**: For rendering variables inside the string. |
+| `$ungettext("One person waiting", "%(n)s people waiting", wlsize, n=wlsize)` | **Singular/Plural text**: For when you want to render things like "1 edition" vs. "2 edition**s**". \* |
+| `$:_('Licensed under <a href="https://...">CC0</a>. Yippee!')` | **HTML i18n**: For when you want to include links in text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML.)\*\* |
 
-~80% of i18n falls into this category:
-```html
-<a title="$_('Add this book to your Want to Read shelf')">$_('Want to Read')</a>
-```
-Note that the title is translated as well since it's visible to the user in hover text.
-
-#### Singular/plural text
-For when you want to render things like "1 edition" vs. "2 edition**s**".
-```html
-$ungettext("There is one person waiting for this book.", "There are %(n)s people waiting for this book.", wlsize, n=wlsize)
-```
-
-In the translation file, this would look like:
+\* In the translation file, this would look like:
 
 ```po
 #: borrow.html:114
@@ -136,17 +126,8 @@ msgstr[1] "%(n)s personnes attendent ce livre."
 ```
 The top of the file declares the number of different plural forms for the language since this varies widely among languages. There is more information on plural forms support here: https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
 
-#### HTML i18n
-For when you want to include links in text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML.)
-
-```html
-$:_('By saving a change to this wiki, you agree that your contribution is given freely to the world under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="This link to Creative Commons will open in a new window">CC0</a>. Yippee!')
-```
-
-
+\*\* @cdrini TODO untested if this will actually work
 This sentence however _can_ be represented without i18n-ing the HTML by using python template strings:
-
-@cdrini TODO untested this will actually work
 
 ```html
 $def cc0_link():
