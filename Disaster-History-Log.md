@@ -1,8 +1,14 @@
-# History
 Outage scenarios in descending order of occurrence:
-   * 2019-12-27 15:15 PT: `ol-web3` and `ol-web4` failing fetch betterworldbooks prices
-       * BWB switched their product API (e.g. 'https://products.betterworldbooks.com/service.aspx?ItemId=9780142410752') to only use https (for PCI compliance reasons) and this was breaking Open Library and `urllib2`. The issue was documented in https://github.com/internetarchive/openlibrary/pull/2779 and we solved by switching to `requests`. When deployed, this still didn't fix on production. The solution was to upgrade `pip` on production machines and installing the latest `pyopenssl` and `cryprography`.
-    * 2019-03-28 (and the week thereof): **Overloaded ElasticSearch** https://docs.google.com/document/d/1toBEk01cJ0uUyfOFIxrASlFzX9aPIML3vdj4WAXrxyY/edit# Open Library was experiencing unresponsive web heads (ol-web3, ol-web4) via haproxy. The reason for the outage was that recent changes have been made with Archive.org Elastic Search so that clients who make many concurrent requests get demoted and queued, so that these requests do not take priority over users making individual requests. It's hypothesized that Open Library (as a whole) is somehow being treated as a single client (instead of Open Library's clients being passed through and treated as individual end-users) and presumably this is resulting in Open Library being penalized for its high volume of searches. The end result is ol-web3 and ol-web4 search requests queue are being queued to the point of the Open Library service becoming unresponsive. Sam was able to discover the issue by attaching `strace` to a single thread of `ol-home` and notice the process was hanging on search dispatch to Archive.org Elastic Search. The solution required unblocking Elastic Search on Archive.org's side. On the ol-web3, debug went like:
+
+## Failing BWB Price Lookups
+
+2019-12-27 15:15 PT: `ol-web3` and `ol-web4` failing fetch betterworldbooks prices
+
+BWB switched their product API (e.g. 'https://products.betterworldbooks.com/service.aspx?ItemId=9780142410752') to only use https (for PCI compliance reasons) and this was breaking Open Library and `urllib2`. The issue was documented in https://github.com/internetarchive/openlibrary/pull/2779 and we solved by switching to `requests`. When deployed, this still didn't fix on production. The solution was to upgrade `pip` on production machines and installing the latest `pyopenssl` and `cryprography`.
+
+## OpenLibrary Blacklisted by ElasticSearch
+
+2019-03-28 (and the week thereof): **Overloaded ElasticSearch** https://docs.google.com/document/d/1toBEk01cJ0uUyfOFIxrASlFzX9aPIML3vdj4WAXrxyY/edit# Open Library was experiencing unresponsive web heads (ol-web3, ol-web4) via haproxy. The reason for the outage was that recent changes have been made with Archive.org Elastic Search so that clients who make many concurrent requests get demoted and queued, so that these requests do not take priority over users making individual requests. It's hypothesized that Open Library (as a whole) is somehow being treated as a single client (instead of Open Library's clients being passed through and treated as individual end-users) and presumably this is resulting in Open Library being penalized for its high volume of searches. The end result is ol-web3 and ol-web4 search requests queue are being queued to the point of the Open Library service becoming unresponsive. Sam was able to discover the issue by attaching `strace` to a single thread of `ol-home` and notice the process was hanging on search dispatch to Archive.org Elastic Search. The solution required unblocking Elastic Search on Archive.org's side. On the ol-web3, debug went like:
 ```
 # Update `/olsystem/bin/upstart-service` so “function openlibrary-server” has NUM_WORKERS=1 
 $ sudo supervisorctl stop openlibrary  # stop gunicorn
@@ -12,7 +18,10 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
 # Use curl to see what's happening and then audit the strace
 # revert/checkout `/olsystem/bin/upstart-service` back to normal when finished
 ```
-   * 2019-09-12 19:59 - 20:52 ET: `ol-web3:/var/log/openlibrary/upstart.log` exploding in size possibly due to archive.org serving 503s ; some user disruption due to archive.org unavailability
+
+## Upstart Log Massively Large
+
+2019-09-12 19:59 - 20:52 ET: `ol-web3:/var/log/openlibrary/upstart.log` exploding in size possibly due to archive.org serving 503s ; some user disruption due to archive.org unavailability
        * **19:59**: abazella notified on slack about `ol-web3:/var/log/openlibrary` filling up
        * **20:17**: Drini investigated and found `upstart.log` was 188GB, and was spitting out:
          ```
@@ -23,6 +32,9 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
        * **20:26**: Linked to archive.org outage
        * **20:44**: Drini (with buy-in from Mek) truncated the log file: `sudo truncate upstart.log  --size 0`
        * **Conclusion**: It looks like `ol-web3` is not rolling the log file correctly; that should be investigated.
+
+## Older History
+
    * 2019-03-29 5:00pm PST OL requests for archive.org ES getting queued until stopped
       * https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery#overloaded-search
    * 2017-11-09 10:00pm PST
