@@ -96,25 +96,17 @@ $:cond(True, '<li>x</li>', '')
 $# Renders as:
 <li>x</li>
 
-$# Short if/else statement
-$ show_foo = true
-<span>Hello, $cond(show_foo, 'foo', 'bar')!</span>
-$# Renders as:
-<span>Hello, foo!</span>
-
-$# Add commas to an integer
-$commify(1000)
-$# Renders as:
-1,000
-
 $# Rendering other macros/templates
 $:macros.EditButtons(comment="")
 $:render_template("lib/pagination", pagecount, pageindex, "/admin/loans?page=%(page)s")
 ```
 
-### Internationalization (i18n)
-Any text that will be visible to the user should be internationalized. Use the special `$_` function.
-See the webpy templetor i18n docs as well: http://webpy.org/cookbook/i18n_support_in_template_file
+## Internationalization (i18n) - For programmers
+Any text that will be visible to the user must be internationalized. The basics of Web.py's templator I18N support is described here: http://webpy.org/cookbook/i18n_support_in_template_file
+
+The two primary i18n message functions are:
+* `gettext()` which is bound to '_' as a convenience since it's commonly used 
+* `ngettext()` (or `ungettext()` as we've historically used) which currently needs to be spelled out, but is commonly bound to `N_`, so that's a convention we may adopt.
 
 Examples:
 
@@ -122,8 +114,9 @@ Examples:
 
 ~80% of i18n falls into this category:
 ```html
-<a title="$('Add this book to your Want to Read shelf')">$_('Want to Read')</a>
+<a title="$_('Add this book to your Want to Read shelf')">$_('Want to Read')</a>
 ```
+Note that the title is translated as well since it's visible to the user in hover text.
 
 #### Singular/plural text
 For when you want to render things like "1 edition" vs. "2 edition**s**".
@@ -141,13 +134,15 @@ msgid_plural "There are %(n)s people waiting for this book."
 msgstr[0] "Une personne attend ce livre."
 msgstr[1] "%(n)s personnes attendent ce livre."
 ```
+The top of the file declares the number of different plural forms for the language since this varies widely among languages. There is more information on plural forms support here: https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
 
 #### HTML i18n
-For when you want to render links inside text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML.)
+For when you want to include links in text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML.)
 
 ```html
 $:_('By saving a change to this wiki, you agree that your contribution is given freely to the world under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="This link to Creative Commons will open in a new window">CC0</a>. Yippee!')
 ```
+
 
 This sentence however _can_ be represented without i18n-ing the HTML by using python template strings:
 
@@ -159,3 +154,9 @@ $def cc0_link():
 
 $:(_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % str(cc0_link()))
 ```
+
+## Internationalization (i18n) - For translators
+
+If you are starting a new language translation, copy the template to the correct place in the directory hierarchy, add the plural forms info at the top and replace the English version of the `msgstr` text values with the translated versions for your language.
+
+If you find something which can't be translated correctly (perhaps because the text is being concatenated in the code rather than in the message formatting), please create an issue describing the location and what the problem is.
