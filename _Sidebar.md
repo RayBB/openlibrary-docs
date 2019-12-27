@@ -45,6 +45,7 @@
 * [Production Architecture & Provisioning](Production-Service-Architecture)
 * [Deployment Guide](Deployment-Guide)
 * [Disaster Recovery Guide](Disaster-Recovery-&-Immediate-Response)
+* [Disaster History Log](Disaster-History-Log)
 * [Responding to DDOS](https://git.archive.org/mek/detect-abuse)
 * [Dealing with Spam](Anti-Spam-Tools)
 * [Generating Data Dumps](Generating-Data-Dumps)
