@@ -2,11 +2,11 @@
 
 ## How-To
 
-When someone goes wrong/unplanned on openlibrary.org, it’s recommended to open a new issue of Type: Post-Mortem (using the issue template -- which should automatically set Type: Post-Mortem and Priority: 0 and to make sure yourself or someone else is the assignee as the designated notetaker and/or person responsible leading effort.  Please also specify an Affects: label to help others search and/or get up to speed.
+When someone goes wrong/unplanned on openlibrary.org, it’s recommended to open a new issue of Type: Post-Mortem (using the issue template -- which should automatically set [Type: Post-Mortem](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=label%3A%22Type%3A+Post-Mortem%22+) and Priority: 0 and to make sure yourself or someone else is the assignee as the designated notetaker and/or person responsible leading effort.  Please also specify an Affects: label to help others search and/or get up to speed.
 
 ## History
 
-We used to track brief notes about outages and ops issues on https://github.com/internetarchive/openlibrary/wiki/Disaster-History-Log. The goal was a searchable log of past events (in case of a repeat emergency). On 2019-12-27 @cdrini + @mekarpeles decided to switch to using github issues with Type: Post-Mortem  labels to document issues as they are happening (and to post retro reflections).
+We used to track brief notes about outages and ops issues on https://github.com/internetarchive/openlibrary/wiki/Disaster-History-Log. The goal was a searchable log of past events (in case of a repeat emergency). On 2019-12-27 @cdrini + @mekarpeles decided to switch to using github issues with [Type: Post-Mortem](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=label%3A%22Type%3A+Post-Mortem%22+)  labels to document issues as they are happening (and to post retro reflections).
 
 Outage scenarios in descending order of occurrence:
 
