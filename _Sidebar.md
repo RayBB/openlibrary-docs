@@ -1,10 +1,11 @@
 **[Home](Home)**
-
+---
 **Ways to Get Involved**
-* [Weekly Community Calls](Open-Library-Community-Call-Minutes)
+* [Ask Question on Gitter](https://gitter.im/theopenlibrary/Lobby)
+* [Request Slack Invite](https://github.com/internetarchive/openlibrary/issues/686)
+* [Weekly Community Calls](https://docs.google.com/document/u/1/d/16eAABOSLrmCbOkRbwVXzis2x4dz2gEQWJsXK-crDCqg/edit#heading=h.xk7q1resqew)
 * [Google Summer of Code](Google-Summer-of-Code)
 * [Hacktoberfest (October)](Hacktoberfest)
-* [Google Code-in](https://github.com/internetarchive/openlibrary/milestone/17)
 ---
 **Developer Resources**
 * [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
