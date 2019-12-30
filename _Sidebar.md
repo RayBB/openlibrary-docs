@@ -1,11 +1,9 @@
 **[Home](Home)**
 
 **Ways to Get Involved**
-* [Weekly Community Calls](Open-Library-Community-Call-Minutes)
+* [Weekly Community Calls](https://docs.google.com/document/d/16eAABOSLrmCbOkRbwVXzis2x4dz2gEQWJsXK-crDCqg/edit#heading=h.xk7q1resqew)
 * [Google Summer of Code](Google-Summer-of-Code)
 * [Hacktoberfest (October)](Hacktoberfest)
-* [Google Code-in](https://github.com/internetarchive/openlibrary/milestone/17)
----
 **Developer Resources**
 * [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
 * [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)
