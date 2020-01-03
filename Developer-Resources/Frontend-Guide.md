@@ -126,8 +126,7 @@ msgstr[1] "%(n)s personnes attendent ce livre."
 ```
 The top of the file declares the number of different plural forms for the language since this varies widely among languages. There is more information on plural forms support here: https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
 
-\*\* @cdrini TODO untested if this will actually work
-This sentence however _can_ be represented without i18n-ing the HTML by using python template strings:
+\*\* This sentence however _can_ be represented without i18n-ing the HTML by using python template strings:
 
 ```html
 $def cc0_link():
@@ -135,6 +134,8 @@ $def cc0_link():
 
 $:(_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % str(cc0_link()))
 ```
+
+In this way, only the text is presented to the translators.
 
 ## Internationalization (i18n) - For translators
 
