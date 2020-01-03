@@ -132,7 +132,7 @@ The top of the file declares the number of different plural forms for the langua
 $def cc0_link():
   <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="$_('This link to Creative Commons will open in a new window')">$_('CC0')</a>
 
-$:(_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % str(cc0_link()))
+$:(_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % str(cc0_link()).strip())
 ```
 
 In this way, only the text is presented to the translators.
