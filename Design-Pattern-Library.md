@@ -72,16 +72,23 @@ Other elements can be rendered under the tools but are not part of the component
 <div class="cta-btn">CTABtn</div>
 ```
 ![screen shot 2019-01-15 at 10 25 48 pm](https://user-images.githubusercontent.com/148752/51230361-8b61e600-1914-11e9-864c-319f056e0d78.png)
-![screen shot 2019-01-15 at 10 15 16 pm](https://user-images.githubusercontent.com/148752/51229964-35d90980-1913-11e9-8869-eeb10c96be76.png)
+
+![openlibrary org_search_q=cracking+code mode=everything](https://user-images.githubusercontent.com/978325/71931917-bd86dc00-3153-11ea-9540-dabe0f33288f.png)
 
 #### cta-btn--unavailable
 ![screen shot 2019-01-15 at 10 14 54 pm](https://user-images.githubusercontent.com/148752/51229922-075b2e80-1913-11e9-9d89-f695cc1071e5.png)
 
 #### cta-btn--available
 ![screen shot 2019-01-15 at 10 15 53 pm](https://user-images.githubusercontent.com/148752/51229966-37a2cd00-1913-11e9-962f-ad67a187de50.png)
+![openlibrary org_books_OL1395236M_Influence (1)](https://user-images.githubusercontent.com/978325/71932013-ea3af380-3153-11ea-8077-43a5e1ce0494.png)
+
 ```
 <div class="cta-btn cta-btn--available">CTABtn</div>
 ```
+
+#### cta-btn--preview
+![openlibrary org_books_OL18628948M_Cracking_the_communication_code](https://user-images.githubusercontent.com/978325/71932174-338b4300-3154-11ea-8c78-c7f1561316c4.png)
+
 
 #### with badge
 ```
