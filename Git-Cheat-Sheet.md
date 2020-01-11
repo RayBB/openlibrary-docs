@@ -98,7 +98,20 @@ git rebase master
 | --- |
 | Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. |
 
-3. Make your edits and commit (same as steps 3-5 in [Creating a Pull Request](#creating-a-pull-request)). Once you `push` your branch, the pull request will automatically update.
+3. Make your edits and commit (same as steps 3 in [Creating a Pull Request](#creating-a-pull-request)).
+
+4. Push your changes up.
+
+```
+git push origin HEAD
+```
+
+**Note**: If the master rebase pulled in new changes, you will have to _force push_: `git push origin HEAD -f`.
+
+| Info |
+| --- |
+| Force pushing _replaces_ the commits on the remote branch with the commits on your local branch. Non-force pushing just adds new commits. Whenever you perform a rebase, you will have to force push to your branch. |
+| You should only force push if working on one of your own branches. If working on a branch which other people are also pushing to, force pushing is dangerous because it can override others' work. In that case, use `--force-with-lease`; this will force push _only_ if someone else hasn't made any changes to the branch. |
 
 
 ## Commit History Manipulation
