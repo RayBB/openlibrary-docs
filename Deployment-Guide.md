@@ -203,7 +203,7 @@ ssh -A ol-web3
 sudo su openlibrary
 cd /opt/openlibrary
 rm openlibrary
-ln -s deploys/openlibrary/{{COMMITSHA}}
+ln -s deploys/openlibrary/{{COMMITSHA}} openlibrary
 logout
 sudo supervisorctl restart openlibrary
 ```
