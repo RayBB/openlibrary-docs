@@ -194,3 +194,16 @@ Sometimes deploys don't fail to succeed, they just succeed in deploying or buggy
 To roll back, go to the particular server(s), e.g. ol-web3 and ol-web4, reset the `/opt/openlibrary/openlibrary` symlink to point to the desired earlier directory in `/opt/openlibrary/deploys` and then restart openlibrary.
 
 The same procedure applies to olsystem (although olsystem doesn't need to be restart; however, openlibrary may need a restart after deploying olsystem).
+
+TODO: Make this more compact/elegant
+
+For each server:
+```sh
+ssh -A ol-web3
+sudo su openlibrary
+cd /opt/openlibrary
+rm openlibrary
+ln -s deploys/openlibrary/{{COMMITSHA}}
+logout
+sudo supervisorctl restart openlibrary
+```
