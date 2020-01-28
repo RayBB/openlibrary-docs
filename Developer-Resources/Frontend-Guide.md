@@ -148,11 +148,18 @@ Must DOs:
 
 DON'Ts:
 * Don't display internal status / keyword values from the code directly to the user. These can't be internationalized.
-* Don't do pluralization or string concatenation in code or templates. This fixes ordering in ways that can't be translated. Give the translators completed sentence or phrases, with embedded replacements, to work with so they can create natural translations.
+* Don't do pluralization or string concatenation in code or templates. This mandates ordering in ways that can't be translated. Give the translators completed sentences or phrases, with embedded replacements, to work with so they can create natural translations.
 * Don't use inline styling or links in text, if at all possible. e.g. <em>, <a href=foo>
-* Don't update the translated message catalogs. Because the merging process is inexact, it's better for the translators to handle this so that they can validate the results.
+* Don't update the translated message catalogs. Because the merging process is inexact, it's better for the translators to handle this so that they can validate the results. Do update the message templates though (ie `messages.pot`)
 
 ## Internationalization (i18n) - For translators
+
+If you are updating an existing translation, run `scripts/i18n-messages update` to merge the new msgids from the `i18n/messages.pot` message templates into your `i18n/<lang>/messages.po` message catalog. Review all `fuzzy` matches and either remove the `fuzzy` keyword, if a correct match, or update and remove the `fuzzy` keyword. Also review all entries with an empty `msgstr` and add correct translations for them.
+
+Remember:
+* keep the substitution variable names and data types unchanged in your translated text (e.g. `%(count)%s`)
+* don't translate embedded HTML markup (e.g. <b>, <a href=>, etc)
+* do escape any embedded quotes (e.g. `\"`)
 
 If you are starting a new language translation, copy the template to the correct place in the directory hierarchy, add the plural forms info at the top and replace the English version of the `msgstr` text values with the translated versions for your language.
 
