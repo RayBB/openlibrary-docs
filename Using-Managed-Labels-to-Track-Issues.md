@@ -127,6 +127,7 @@ Color|Label|Description
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Feedback** | A proposed feature or bug resolution needs community feedback prior to forging ahead. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Help** | Issues, typically substantial ones, that need a dedicated developer to take them on. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Review** | This issue/PR needs to be reviewed in order to be closed or merged (see comments). [managed]
+![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Special Deploy** | PR needs a non-standard deploy. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Submitter Input** | This issue/PR needs a response from the submitter. [managed]
 ![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Investigation** | This issue/PR needs a root-cause analysis to determine a solution. [managed]
 
