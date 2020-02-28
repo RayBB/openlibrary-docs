@@ -98,11 +98,11 @@ Once your to your `olsystem` configuration changes are tested on `ol-dev` and me
 
 At this point, if a deploy of `openlibrary` is also necessary, **now would be a good time to continue with the [Deploying OpenLibrary](#deploying-openlibrary) instructions** prior to restarting these services. 
 
-Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`, then once the deploy succeeds, restart the above services in reverse order:
-- [ ] start `ol-home` services (import-bot, solr-updater, infobase): `ssh ol-home supervisorctl start infobase`
+Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`, then once the deploy succeeds, restart the above services in reverse order. Note we use [supervisorctl update](http://supervisord.org/running.html#supervisorctl-actions) here so that the config files are reloaded from disk.
+- [ ] start `ol-home` services (import-bot, solr-updater, infobase): `ssh ol-home supervisorctl update infobase`
 - [ ] for `ol-mem[3-5]` run `sudo /etc/init.d/memcached stop` 
 - [ ] on ol-dev run `sudo /olsystem/bin/upstart-service openlibrary-dev-server :7071 &`
-- [ ] start `ol-web3` and `ol-web4`: `ssh ol-web3 sudo supervisorctl restart openlibrary;ssh ol-web4 sudo supervisorctl restart openlibrary`
+- [ ] start `ol-web3` and `ol-web4`: `ssh ol-web3 sudo supervisorctl update openlibrary;ssh ol-web4 sudo supervisorctl update openlibrary`
 
 ## Deploying OpenLibrary
 
