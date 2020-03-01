@@ -20,7 +20,7 @@ git remote add origin https://github.com/USERNAME/openlibrary.git
 3. Add 'upstream' repo to list of remotes
 
 ```sh
-git remote add upstream https://github.com/internetarchive/openlibrary.git#
+git remote add upstream https://github.com/internetarchive/openlibrary.git
 ```
 
 4. Verify the new remote named 'upstream'
