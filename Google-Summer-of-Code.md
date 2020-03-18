@@ -37,4 +37,4 @@ A good summary addresses the following 6 questions (replace `Open Library` with 
 
 ## Examples
 
-You can view a sample proposal template [here](https://docs.google.com/document/d/1IGTAMczT9A1EwyV_E73f2bHWscv85gyYAc7PLXJfPLs/edit?usp=sharing).
+You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
