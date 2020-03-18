@@ -1,7 +1,5 @@
 [Apply to Google Summer of Code](https://summerofcode.withgoogle.com/organizations/6482109326163968/)
 
-**Update:** The application period has ended for Google Summer of Code 2019! 
-
 ***
 
 # History
