@@ -2,13 +2,24 @@
 
 ***
 
-# History
-- [Google Summer of Code 2019](Google-Summer-of-Code-2019)
-- [Google Summer of Code 2018](Google-Summer-of-Code-2018)
+## Sample
+
+You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
+
+# Requirements
+
+Your proposal should be **focused**, **thematic**, **realistic**, and **metric-driven**:
+
+e.g.
+- I believe X is important for Internet Archive and Open Library because...
+- I have identified a way to increase X by Y
+- Here's evidence X can be increased by Y
+- Here's is my proposal for increasing X by Y (diagrams? wireframes? architecture overview? features?)
+- Here are the risks (what could go wrong)
 
 # General Advice
 
-1. Your application shouldn't just be a collection of issues. Group issues into logical themes. For instance, "my theme for phase one of my roadmap is making Open Library more accessible to people in non-US countries".
+1. Your application **should not** just be a collection of issues. Group issues into logical themes. For instance, "my theme for phase one of my roadmap is making Open Library more accessible to people in non-US countries".
 2. Ask lots of questions -- some of your ideas may be easy in principle, but hard because Open Library's code base can be difficult to work with, an issue may take longer than expected! Ask mentors how long they think an issue will take, it's one of the most important pieces of value they can offer.
 3. Consider creating Open Library issues proposing features you'd like to include in your application. Get feedback from the community and see whether it's something they also value and will support.
 4. Have an idea of what success means / looks like from the very beginning. How will you know if you've won? Brewster suggests one strategy is, "start with the aspirational blog post and work backwards".
@@ -35,6 +46,6 @@ A good summary addresses the following 6 questions (replace `Open Library` with 
 6) What does success for Open Library look like? What is the potential impact, who will benefit?
 > For Open Library, success means establishing an new distribution channel to receive donations, promoting long term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
 
-## Examples
-
-You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
+# History
+- [Google Summer of Code 2019](Google-Summer-of-Code-2019)
+- [Google Summer of Code 2018](Google-Summer-of-Code-2018)
