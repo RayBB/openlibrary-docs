@@ -1,4 +1,4 @@
-[Apply to Google Summer of Code](https://summerofcode.withgoogle.com/organizations/6482109326163968/)
+[**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/organizations/6482109326163968/)
 
 ***
 
@@ -6,16 +6,18 @@
 
 You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
 
-# Requirements
+# Minimum Requirements
 
 Your proposal should be **focused**, **thematic**, **realistic**, and **metric-driven**:
 
 e.g.
-- I believe X is important for Internet Archive and Open Library because...
-- I have identified a way to increase X by Y
-- Here's evidence X can be increased by Y
-- Here's is my proposal for increasing X by Y (diagrams? wireframes? architecture overview? features?)
+- I believe [Theme] is important for Internet Archive and Open Library because...
+- [Theme] is best measured by metric X because...
+- I have an idea on how to increase X by Y%
+- Here's evidence X can be increased by Y%
+- Here's is my proposal for increasing X by Y% (diagrams? wireframes? architecture overview? features?)
 - Here are the risks (what could go wrong)
+- Here are my open questions (for mentors)
 
 # General Advice
 
@@ -24,13 +26,13 @@ e.g.
 3. Consider creating Open Library issues proposing features you'd like to include in your application. Get feedback from the community and see whether it's something they also value and will support.
 4. Have an idea of what success means / looks like from the very beginning. How will you know if you've won? Brewster suggests one strategy is, "start with the aspirational blog post and work backwards".
 
-# Need Inspiration?
+# Thoughtfully Choose a Meaningful Theme
 
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
 
 > The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit Open Library and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
 
-## What Does a Good Synopsis Look Like?
+## What Does a Good Proposal Look Like?
 A good summary addresses the following 6 questions (replace `Open Library` with whatever project you're applying for): 
 
 1) What is Open Library
