@@ -168,6 +168,10 @@ Currently used in the [EditToolbar](#edit-toolbar) component.
 A table listing 
 ![BorrowTable](https://user-images.githubusercontent.com/148752/45578856-d4a40b00-b838-11e8-826f-9e54f2051257.png)
 
+the table appears differently if loans are activated:
+<img width="936" alt="Screen Shot 2020-03-28 at 10 56 04 AM" src="https://user-images.githubusercontent.com/148752/77830018-cea41100-70e2-11ea-94c1-4f9da1a2d35f.png">
+
+
 Used on the following pages:
 * https://openlibrary.org/account/loans
 
