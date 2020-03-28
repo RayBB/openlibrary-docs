@@ -551,5 +551,11 @@ Used when loading the carousel for changing covers for a book. Possibly reusable
 ![Screenshot 2019-12-06 at 3 24 50 PM](https://user-images.githubusercontent.com/148752/70363262-97aca580-183c-11ea-8a66-9c2015bda78a.png)
 
 
+### SubNav
 
+A list of navigation links (tabs) that  appear under the title e.g. [Recent changes](https://openlibrary.org/recentchanges). When one is selected it should be bolded.
 
+<img width="626" alt="Screen Shot 2020-03-28 at 10 50 05 AM" src="https://user-images.githubusercontent.com/148752/77829855-eaf37e00-70e1-11ea-94b0-f0773830b9b3.png">
+(Note the title "Recent Changes" should not be considered part of the component.
+
+<img width="481" alt="Screen Shot 2020-03-28 at 10 51 16 AM" src="https://user-images.githubusercontent.com/148752/77829876-0f4f5a80-70e2-11ea-8dc3-734c423f8a39.png">
