@@ -154,7 +154,9 @@ DON'Ts:
 
 ## Internationalization (i18n) - For translators
 
-If you are updating an existing translation, run `scripts/i18n-messages update` to merge the new msgids from the `i18n/messages.pot` message templates into your `i18n/<lang>/messages.po` message catalog. Review all `fuzzy` matches and either remove the `fuzzy` keyword, if a correct match, or update and remove the `fuzzy` keyword. Also review all entries with an empty `msgstr` and add correct translations for them.
+If you are updating an existing translation, run `scripts/i18n-messages update` to merge the new msgids from the `i18n/messages.pot` message templates into your `i18n/<lang>/messages.po` message catalog. Review all `fuzzy` matches and either remove the `fuzzy` keyword, if a correct match, or update and remove the `fuzzy` keyword. Make sure it's an exact match before removing the `fuzzy` label. Sometimes there are minor, but important changes like datatype changes, e.g. `%(count)s` to `%(count)d`. Also review all entries with an empty `msgstr` and add correct translations for them. 
+
+If the text was revised and the update/matching algorithm didn't think it was a close enough match to even label a `fuzzy` match, you may find it at the bottom of the file in the section commented out with tildes (~). Any text in that section which is not useful to reuse or save, can be deleted.
 
 Remember:
 * keep the substitution variable names and data types unchanged in your translated text (e.g. `%(count)%s`)
