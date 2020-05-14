@@ -23,6 +23,11 @@ The updater script looks for document changes in the Infobase logs at `http://<i
 
 The updater script checks for updates every [5 seconds](https://github.com/internetarchive/openlibrary/blob/0748d2ab0db7966fd82b0a84572edac293e08d24/scripts/new-solr-updater.py#L268) and sends an update + commit to Solr every [100 updates, or 60 seconds](https://github.com/internetarchive/openlibrary/blob/0748d2ab0db7966fd82b0a84572edac293e08d24/scripts/new-solr-updater.py#L198) whichever occurs first.
 
+Here's a useful solr command for checking how far behind solr-updater is:
+
+```sh
+curl "ol-home:7000/openlibrary.org/log/$(cat /var/run/openlibrary/solr-update.offset)?limit=1"
+```
 
 ### Admin force Solr update endpoint
 
@@ -37,6 +42,14 @@ https://openlibrary.org/admin/inspect/store?key=solr-force-update
 
 * Solr updater script log: `/var/log/upstart/ol-solr-updater.log`
 * Solr itself: `/var/log/tomcat6/catalina.out`
+
+Here's a useful command for counting log output:
+
+```sh
+ssh -A ol-solr2
+sudo bash
+cat /var/log/tomcat6/catalina.2020-05-13.log | grep '^May' | cut -c1-24 | sed 's/:[0-9][0-9] //' | sort | uniq -c > tmp.txt
+```
 
 ### Query Solr directly on dev instance
 On host:
