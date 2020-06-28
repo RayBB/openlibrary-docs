@@ -139,17 +139,16 @@ Be sure to restart your dev instance after any configuration changes.
 
 ```bash
 docker-compose exec web bash  # Connect to the docker image
-cd scripts
 
 # Copy an author (JUST the author; no works)
-./copydocs.py /authors/OL1385865A
+./scripts/copydocs.py /authors/OL1385865A
 # Outputs:
 #    fetching ['/authors/OL1385865A']
 #    saving ['/authors/OL1385865A']
 #    [{'key': '/authors/OL1385865A', 'revision': 1}]
 
 # Copy a work (JUST the work; no editions. --recursive gets any missing authors)
-./copydocs.py /works/OL14906539W --recursive
+./scripts/copydocs.py /works/OL14906539W --recursive
 # Outputs:
 #    fetching ['/works/OL14906539W']
 #    found references ['/authors/OL30714A', '/authors/OL68291A', '/authors/OL1385865A', '/authors/OL1058879A', '/authors/OL238025A']
@@ -160,7 +159,7 @@ cd scripts
 #    [{'key': '/works/OL14906539W', 'revision': 1}]
 
 # Copy an edition (--recursive also gets works/authors)
-./copydocs.py /books/OL24966433M --recursive
+./scripts/copydocs.py /books/OL24966433M --recursive
 # Outputs:
 #    fetching ['/books/OL24966433M']
 #    found references ['/works/OL14906539W']
