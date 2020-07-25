@@ -40,11 +40,11 @@
 
 ---
 
-**[Librarian Resources](Librarians-Guide-of-Procedures)**  
+**[Librarian Resources](https://openlibrary.org/about/lib)**  
 [Library Metadata Standards](Library-Metadata-Standards)  
 [Guide to Identifiers](Guide-to-Identifiers)  
 [Contributing to Internationalization](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
-[Merging Records](Merging-Records)  
+[Merging Records](https://openlibrary.org/about/lib)  
 [Orphaned Editions Planning](Orphaned-Editions-Planning)  
 [Overview of Data Sources](Data-Source-Overview)  
 [Writing Bots](Writing-Bots)  
