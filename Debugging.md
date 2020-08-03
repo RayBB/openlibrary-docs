@@ -22,3 +22,11 @@ To use:
 6. Go to http://localhost:8080/admin/attach_debugger (or whatever your docker ip is) and click "Start"
 7. Go to the debug panel (Ctrl+Shift+D) in VS Code, and click "Python: Attach"
 8. Debug!
+
+
+
+Admin login troubles:
+
+- Should login as openlibrary@example.com / admin123
+- If you ever logged in with something else, it goes a little crazy; reset your docker volumes: `docker-compose build web` and then log in again
+(TODO: Move this to a better documentation page)
