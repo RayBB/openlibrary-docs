@@ -14,3 +14,4 @@ This repo is used as a building block: https://gitlab.com/internetarchive/kre8
 3. near-term plan is to fix dev.openlibrary.org to be a test for `master` only (before openlibrary.org gets deploys)
 4. kube pods will be used to allow trusted members to spin up versions of OL to test specific branches on/in prod-like environments
 5. down the road, kubernetes may help us scale (as you suggest) memcached, solr, and perhaps our gunicorn web heads
+6. there is a well written post here on [setting up dynamic nfs server in kubernetes](https://redblink.com/setup-nfs-server-provisioner-kubernetes/)
