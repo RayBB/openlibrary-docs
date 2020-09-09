@@ -207,3 +207,13 @@ ln -s deploys/openlibrary/{{COMMITSHA}} openlibrary
 logout
 sudo supervisorctl restart openlibrary
 ```
+
+# Docker-based deploys (Alpha)
+
+This will change quickly and frequently. Up-to-date as of 2020-09-09
+
+## staging.openlibrary.org
+
+```sh
+PYENV_VERSION=3.8.5 docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml up --no-deps -d web
+```
