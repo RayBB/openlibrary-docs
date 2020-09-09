@@ -5,6 +5,9 @@
 
 ## Lead Community Librarian
 
+Repo: https://github.com/internetarchive/openlibrary-librarians
+Slack channel: #open-librarians-g
+
 * Welcome new librarians in #open-librarians-g
 * Identify broken or necessary librarian features on openlibrary.org
 * Identify spam (e.g. https://openlibrary.org/recentchanges) and report to staff.
