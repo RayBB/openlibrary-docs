@@ -14,7 +14,7 @@
 * Collect, vet (check for accuracy), and execute **`Author`** merge requests.
 * Collect, vet (check for accuracy), and execute **`Works`** merge requests.
 * Create + manage issues on https://github.com/internetarchive/openlibrary-librarians.
-* Maintain list of projects for new librarians looking for projects.
+* Maintain list of projects for new librarians looking for [projects](https://github.com/internetarchive/openlibrary-librarians/issues).
 * Identify and promote promising open librarian candidates.
 
 ### Tips
