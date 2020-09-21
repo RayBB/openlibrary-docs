@@ -16,7 +16,7 @@
 
 # Overview Video
 
-[![archive org_details_openlibrary-tour-2020_internal-staff-deployment mp4](https://user-images.githubusercontent.com/978325/93828018-56e11a00-fc1f-11ea-9a6b-89ddc4b9feb3.png)](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide/_edit)
+[![archive org_details_openlibrary-tour-2020_internal-staff-deployment mp4](https://user-images.githubusercontent.com/978325/93828018-56e11a00-fc1f-11ea-9a6b-89ddc4b9feb3.png)](https://archive.org/details/openlibrary-tour-2020/internal-staff-deployment.mp4)
 
 # Introduction
 
