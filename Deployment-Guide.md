@@ -1,4 +1,5 @@
-Checklist for Deployment:
+# Checklist for Deployment
+
 1. [ ] [Verify all Automated Tests pass](https://github.com/internetarchive/openlibrary/wiki/Testing)
 2. [ ] [Test & QA changes on Staging](#testing-on-staging)
 3. [ ] [Handle dependency changes](#satisfying-dependency-changes)
@@ -12,6 +13,10 @@ Checklist for Deployment:
 7. [ ] [Troubleshoot a Failed Deployment](#recovering-from-a-failed-deployment)
     - [ ] [Diagnosing Failed Deployment](#failed-deploys)
     - [ ] [Rolling Back](#rolling-back)
+
+# Overview Video
+
+[![archive org_details_openlibrary-tour-2020_internal-staff-deployment mp4](https://user-images.githubusercontent.com/978325/93828018-56e11a00-fc1f-11ea-9a6b-89ddc4b9feb3.png)](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide/_edit)
 
 # Introduction
 
