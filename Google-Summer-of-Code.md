@@ -2,6 +2,20 @@
 
 ***
 
+# Welcome
+
+Google Summer of Code (GSoC) is a global program (paid internship) focused on bringing more student developers into open source software development. Students work with an open source organization on a 3 month programming project during their break from school. You can read more [on Google's GSoC website](https://summerofcode.withgoogle.com). The program is run by Google, which selects aligns organizations to mentor students on projects.
+
+Candidates (active students) apply by submitting an application to one or more participating/mentoring organization. Open Library GSoC projects may span everything from writing bots to imports or organize books, to new crowd-source programs which allow patrons to fund and sponsor books they love for the library.
+
+## History
+
+Internet Archive has participated in Google Summer of Code for 3+ years. Open Library has participated twice (2018, 2020). In 2019, the Internet Archive did not receive enough slots for Open Library to participate and so we designed our own Internet Archive Summer of Code (IASoC) internship with a similar design. 
+
+## Your chances
+
+Typically, hundreds of candidates email us to inquire about GSoC. 15 or so set up the Open Library code base, join the community slack channel, and make contributions to the project. Around 25 submit applications. So if you're very dedicated and invest time meeting mentors and working with them to understand the codebase and the project's needs and problems, you're chances could be ~1/25!
+
 ## Sample
 
 You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
