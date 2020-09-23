@@ -16,7 +16,6 @@
 [Git Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 
 **Dev Environment**  
-[Architecture of Dev Instance](Architecture)  
 [Getting Setup](Getting-Started)  
 [Debugging](Debugging)  
 [Testing Your Code](Testing)  
