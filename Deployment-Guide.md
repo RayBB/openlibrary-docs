@@ -227,5 +227,7 @@ vim _dev-merged.txt
 sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
 # Starts a py3 web node
+docker-compose down
+docker-compose up --no-deps -d memcache
 docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
 ```
