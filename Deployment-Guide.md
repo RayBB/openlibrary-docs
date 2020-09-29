@@ -217,7 +217,7 @@ sudo supervisorctl restart openlibrary
 
 # Docker-based deploys (Alpha)
 
-This will change quickly and frequently. Up-to-date as of 2020-09-09
+This will change quickly and frequently. Up-to-date as of 2020-09-29
 
 ## staging.openlibrary.org
 
