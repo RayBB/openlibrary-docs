@@ -224,7 +224,7 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 ```sh
 # Add/remove branches you want to test
 vim _dev-merged.txt
-sudo ./scripts/make-integration-branch _dev-merged.txt dev-merged
+sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
 # Starts a py3 web node
 docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
