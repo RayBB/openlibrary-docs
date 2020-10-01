@@ -219,7 +219,7 @@ sudo supervisorctl restart openlibrary
 
 This will change quickly and frequently. Up-to-date as of 2020-09-29
 
-## staging.openlibrary.org
+## staging.openlibrary.org is dev1 running Python 3
 
 ```sh
 # Add/remove branches you want to test
