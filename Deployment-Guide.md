@@ -224,7 +224,7 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 ```sh
 # Add/remove branches you want to test
 sudo vim _dev-merged.txt
-sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
+sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged ; git rev-parse --short HEAD
 
 # Starts a py3 web node
 sudo docker-compose down ; \
