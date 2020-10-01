@@ -223,12 +223,12 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 
 ```sh
 # Add/remove branches you want to test
-vim _dev-merged.txt
+sudo vim _dev-merged.txt
 sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
 # Starts a py3 web node
-docker-compose down
-docker-compose up --no-deps -d memcached
-docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
+sudo docker-compose down ; \
+    sudo docker-compose up --no-deps -d memcached ; \
+    sudo docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
 ```
 Visit http://staging.openlibrary.org/status to test the server.
