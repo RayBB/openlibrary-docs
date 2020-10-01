@@ -231,4 +231,4 @@ docker-compose down
 docker-compose up --no-deps -d memcached
 docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
 ```
-https://staging.openlibrary.org/status to test the server.
+Visit http://staging.openlibrary.org/status to test the server.
