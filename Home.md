@@ -63,7 +63,7 @@ Looking to get involved and contribute to the code which runs Open Library?
 
 First, get setup with the [Open Library Development Environment](https://github.com/internetarchive/openlibrary#installation)
 
-Next, browse through our list of [easy open tickets](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3Aeasy%20) to get started!
+Next, browse through our list of [good first issues](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A"Good+First+Issue") to get started!
 
 [Are services running smoothly?](https://status.archivelab.org)
 
