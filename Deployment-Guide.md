@@ -236,6 +236,16 @@ Visit http://staging.openlibrary.org/status to test the server.
 ## ol-web1
 
 ```sh
+cd /opt/openlibrary
+git pull origin master
+cd vendor/infogami
+git pull origin master
+cd ../..
+
+docker-compose build --pull
+```
+
+```sh
 sudo docker-compose down
 sudo docker-compose up -d --no-deps memcached
 sudo PYENV_VERSION=3.8.6 docker-compose \
