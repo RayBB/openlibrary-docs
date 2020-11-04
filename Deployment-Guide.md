@@ -242,6 +242,6 @@ sudo PYENV_VERSION=3.8.6 docker-compose \
     -f docker-compose.yml \
     -f docker-compose.infogami-local.yml \
     -f docker-compose.production.yml \
-    up -d --no-deps
+    up -d --no-deps web
 sudo docker-compose logs -f --tail=10 web
 ```
