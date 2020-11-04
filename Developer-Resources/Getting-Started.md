@@ -1,5 +1,8 @@
 # Quick Start for OpenLibrary's developers
 
+| **WARNING: This documentation is _very_ out of date and needs to be re-written. Most of it is wrong, but some of it is right. If you're getting started, you likely want to take a look at https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment instead. |
+| -- |
+
 ## Table of Contents
 
 - [Using the Open Library Website](#using-the-open-library-website)
