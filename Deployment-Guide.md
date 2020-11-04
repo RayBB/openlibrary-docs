@@ -232,3 +232,16 @@ sudo docker-compose down ; \
     sudo docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
 ```
 Visit http://staging.openlibrary.org/status to test the server.
+
+## ol-web1
+
+```sh
+sudo docker-compose down
+sudo docker-compose up -d --no-deps memcached
+sudo PYENV_VERSION=3.8.6 docker-compose \
+    -f docker-compose.yml \
+    -f docker-compose.infogami-local.yml \
+    -f docker-compose.production.yml \
+    up -d
+sudo docker-compose logs -f --tail=10 web
+```
