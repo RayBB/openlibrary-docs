@@ -242,7 +242,7 @@ cd vendor/infogami
 git pull origin master
 cd ../..
 
-docker-compose build --pull
+docker-compose build --pull web
 ```
 
 ```sh
