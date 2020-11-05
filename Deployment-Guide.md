@@ -238,12 +238,12 @@ Visit http://staging.openlibrary.org/status to test the server.
 ```sh
 cd /opt/openlibrary
 sudo docker-compose down
-git pull origin master
+sudo git pull origin master
 cd vendor/infogami
-git pull origin master
+sudo git pull origin master
 cd ../..
 cd /opt/olsystem
-git pull origin master
+sudo git pull origin master
 cd /opt/openlibrary
 
 sudo docker-compose build --pull web
