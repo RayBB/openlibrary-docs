@@ -249,7 +249,7 @@ git pull origin master
 cd ../..
 
 sudo docker-compose up -d --no-deps memcached
-sudo docker-compose \
+HOSTNAME="$HOSTNAME" sudo docker-compose \
     -f docker-compose.yml \
     -f docker-compose.infogami-local.yml \
     -f docker-compose.production.yml \
