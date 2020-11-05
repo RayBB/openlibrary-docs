@@ -236,17 +236,18 @@ Visit http://staging.openlibrary.org/status to test the server.
 ## ol-web1
 
 ```sh
+mkdir -p /opt/openlibrary-next
+cd /opt/openlibrary-next
+git pull origin master
+sudo docker-compose build --pull web
+
 cd /opt/openlibrary
+sudo docker-compose down
 git pull origin master
 cd vendor/infogami
 git pull origin master
 cd ../..
 
-sudo docker-compose build --pull web
-```
-
-```sh
-sudo docker-compose down
 sudo docker-compose up -d --no-deps memcached
 sudo docker-compose \
     -f docker-compose.yml \
