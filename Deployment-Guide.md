@@ -227,8 +227,8 @@ sudo vim _dev-merged.txt
 sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged ; git rev-parse --short HEAD
 
 # Starts a py3 web node
-sudo docker-compose down ; \
-    sudo docker-compose up --no-deps -d memcached ; \
+sudo docker-compose down && \
+    sudo docker-compose up --no-deps -d memcached && \
     sudo docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
 ```
 Visit http://staging.openlibrary.org/status to test the server.
