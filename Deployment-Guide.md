@@ -248,7 +248,7 @@ docker-compose build --pull web
 ```sh
 sudo docker-compose down
 sudo docker-compose up -d --no-deps memcached
-sudo PYENV_VERSION=3.8.6 docker-compose \
+sudo docker-compose \
     -f docker-compose.yml \
     -f docker-compose.infogami-local.yml \
     -f docker-compose.production.yml \
