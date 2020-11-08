@@ -27,40 +27,81 @@
 
 ### start
 
+We Use Docker at openlibrary. These are some of the basic commands, refer [here](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment) for some more useful commands.
+
 Starts all the OL services:
 
-```
-$ python setup.py start
+```bash
+$ docker-compose up
 ```
 
-This command starts supervisord using configuration from `conf/supervisor/linux.ini` or `conf/supervisor/macosx.ini` based on the platform.
+Start a specific service: 
 
-Logs of the services are written to var/log.
+The following command starts the `solr` service in the detached mode 
+
+```bash
+$ docker-compose up --no-deps -d solr
+```
+
+Logs of the services can be found:
+
+```bash
+$ docker-compose logs web # replace "web" with any other service name to see that particular service's log
+```
 
 ### shell
 
-Start a bash shell with the env required for running all OL scripts.
+Start a bash shell inside the container:
 
+```bash
+$ docker-compose exec web bash # replace "web" with any other service name
 ```
-$ python setup.py shell
-```
-
-This starts a bash shell with [conf/bashrc](http://github.com/internetarchive/openlibrary/blob/master/conf/bashrc) as rc file.
 
 ### test
 
-Runs all the test cases.
+Runs all the tests
 
+```bash
+$ docker-compose exec web make test
 ```
-$ make tests
+
+We Use Docker at openlibrary. These are some of the basic commands, refer [here](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment) for some more useful commands.
+
+Starts all the OL services:
+
+```bash
+$ docker-compose up
 ```
 
-Behind the scenes it runs scripts/runtests.sh.
+Start a specific service: 
 
-The custom setup.py commands are implemented in [setup_commands.py](http://github.com/internetarchive/openlibrary/tree/master/openlibary/core/setup_commands.py).
+The following command starts the `solr` service in the detached mode 
 
-To know more about how to add custom setuptools commands, see [this link](http://tarekziade.wordpress.com/2007/09/30/extending-set).
+```bash
+$ docker-compose up --no-deps -d solr
+```
 
+Logs of the services can be found:
+
+```bash
+$ docker-compose logs web # replace "web" with any other service name to see that particular service's log
+```
+
+### shell
+
+Start a bash shell inside the container:
+
+```bash
+$ docker-compose exec web bash # replace "web" with any other service name
+```
+
+### test
+
+Runs all the tests
+
+```bash
+$ docker-compose exec web make test
+```
 ## Database Migrations
 
 Occasionally, new tables get added to Open Library database and some existing tables get altered. Scripts are provided to migrate the existing dev instances to new schema.
@@ -347,7 +388,6 @@ docker-compose restart memcached
 **Question:** Why do I hit a 404-page on local when the page shows up on openlibrary.org site?
 **Answer:** Check out the answer for this here: https://github.com/internetarchive/openlibrary/issues/1864
 
-***
 
 ***
 **Question:** What should I do to find the endpoints/files relating to the components I want to contribute to?
