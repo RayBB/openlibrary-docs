@@ -237,21 +237,23 @@ Visit http://staging.openlibrary.org/status to test the server.
 
 ```sh
 cd /opt/openlibrary
-sudo docker-compose down
 sudo git pull origin master
-cd vendor/infogami
+cd /opt/openlibrary/vendor/infogami
 sudo git pull origin master
-cd ../..
 cd /opt/olsystem
 sudo git pull origin master
 cd /opt/openlibrary
 
 export SERVICE=${SERVICE:-"web"}  # options: web, covers, infobase, home
+echo "Starting $SERVICE"
+cd /opt/openlibrary
 sudo docker-compose build --pull $SERVICE
+sudo docker-compose down
+sudo docker-compose up -d --no-deps memcached
 HOSTNAME=${HOSTNAME:-$HOST} sudo docker-compose \
     -f docker-compose.yml \
     -f docker-compose.infogami-local.yml \
     -f docker-compose.production.yml \
     up -d --no-deps $SERVICE
-sudo docker-compose logs -f --tail=10 $SERVICE
+# sudo docker-compose logs -f --tail=10 $SERVICE
 ```
