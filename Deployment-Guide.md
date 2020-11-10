@@ -246,7 +246,7 @@ cd /opt/olsystem
 sudo git pull origin master
 cd /opt/openlibrary
 
-export SERVICE=${SERVICE:-"web"}
+export SERVICE=${SERVICE:-"web"}  # options: web, covers, infobase, home
 sudo docker-compose build --pull $SERVICE
 HOSTNAME=${HOSTNAME:-$HOST} sudo docker-compose \
     -f docker-compose.yml \
