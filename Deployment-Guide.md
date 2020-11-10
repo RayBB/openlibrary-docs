@@ -246,11 +246,12 @@ cd /opt/olsystem
 sudo git pull origin master
 cd /opt/openlibrary
 
-sudo docker-compose build --pull web
-HOSTNAME="$HOSTNAME" sudo docker-compose \
+export SERVICE=${SERVICE:-"web"}
+sudo docker-compose build --pull $SERVICE
+HOSTNAME=${HOSTNAME:-$HOST} sudo docker-compose \
     -f docker-compose.yml \
     -f docker-compose.infogami-local.yml \
     -f docker-compose.production.yml \
-    up -d --no-deps web
-sudo docker-compose logs -f --tail=10 web
+    up -d --no-deps $SERVICE
+sudo docker-compose logs -f --tail=10 $SERVICE
 ```
