@@ -246,7 +246,9 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 1. Ensure the above servers are setup and running
 2. Warn Slack channels `openlibrary` and `openlibrary-g`
 3. Open https://openlibrary.org/admin?stats to monitor server status
-4. On ol-web1 and ol-web2 run the run_olserver.sh script but ___not___ the last `docker-compose up` command
+4. On ol-web1 and ol-web2:
+    1. `sudo docker volume prune`
+    2. run the run_olserver.sh script but ___not___ the last `docker-compose up` command
 5. On ol-www1:
     1. `sudo vi /etc/haproxy/haproxy.cfg` to uncomment web{1,2} and comment out web3
     2. `sudo service haproxy restart`
