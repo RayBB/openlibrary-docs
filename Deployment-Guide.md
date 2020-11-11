@@ -215,9 +215,24 @@ logout
 sudo supervisorctl restart openlibrary
 ```
 
-# Docker-based deploys (Alpha)
+# Docker-based deploys (Beta)
 
 This will change quickly and frequently. Up-to-date as of 2020-09-29
+
+## Servers for running Open Library on Python 3 on Ubuntu 20.04.1 LTS (Focal Fossa)
+| Server | Setup script | Run script |
+| --- | --- | --- |
+| ol-home0 | scripts/setup_olserver.sh | SERVICE=home /opt/openlibrary/scripts/run_olserver.sh |
+| ol-web1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh |
+| ol-web2 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh |
+| ol-covers0 | scripts/setup_olserver.sh | SERVICE=covers /opt/openlibrary/scripts/run_olserver.sh |
+
+Initial setup:
+1. export GITHUB_USERNAME=cclauss
+2. export GITHUB_TOKEN=123abc  # Create this token at https://github.com/settings/tokens
+3. Manually copy `scripts/setup_olserver.sh` to your home directory and run it.
+4. export SERVICE = xxx  # Options for xxx are web, covers, home, infobase
+5. Run the script at the bottom of this page to launch the Docker containers on the server.
 
 ## staging.openlibrary.org is dev1 running Python 3
 
