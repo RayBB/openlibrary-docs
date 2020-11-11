@@ -232,6 +232,7 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 | ol-solr1 | ? scripts/setup_olserver.sh ? | /opt/openlibrary/scripts/start-solr.sh | 20.04.1 |
 | ol-web1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
 | ol-web2 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
+| ol-www1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
 
 
 Initial setup:
@@ -240,6 +241,17 @@ Initial setup:
 3. Manually copy `scripts/setup_olserver.sh` to your home directory and run it.
 4. export SERVICE = xxx  # Options for xxx are web, covers, home, infobase
 5. Run the script at the bottom of this page to launch the Docker containers on the server.
+
+Transitioning to Python 3:
+1. Ensure the above servers are setup and running
+2. Warn Slack channels `openlibrary` and `openlibrary-g`
+3. Open https://openlibrary.org/admin?stats to monitor server status
+4. On ol-www1:
+    1. `sudo vi /etc/haproxy/haproxy.cfg` to uncomment web{1,2} and comment web{3,4}
+    2. `sudo service haproxy restart`
+5. On `ol-mem{3,4,5}` do `sudo service memcached restart`
+
+Reverting to legacy Python: Repeat steps 3. thru 5. reversing web{1,2} and web{3,4}
 
 ## staging.openlibrary.org is dev1 running Python 3
 
