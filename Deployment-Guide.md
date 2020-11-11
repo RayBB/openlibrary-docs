@@ -252,7 +252,7 @@ sudo docker-compose down && \
 ```
 Visit http://staging.openlibrary.org/status to test the server.
 
-## ol-web1
+## /opt/openlibrary/scripts/run_olserver.sh
 
 ```sh
 cd /opt/openlibrary
