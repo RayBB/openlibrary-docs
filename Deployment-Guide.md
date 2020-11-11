@@ -221,7 +221,7 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 
 ## Servers for running Open Library on Python 3 on Ubuntu 20.04.1 LTS (Focal Fossa)
 | Server | Setup script | Run script | cat /etc/os-release |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | ol-covers0 | scripts/setup_olserver.sh | SERVICE=covers /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
 | ol-dev1 | scripts/setup_olserver.sh | N/A | ___16.04.7___ |
 | ol-home0 | scripts/setup_olserver.sh | SERVICE=home /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
