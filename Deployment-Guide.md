@@ -246,10 +246,19 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 1. Ensure the above servers are setup and running
 2. Warn Slack channels `openlibrary` and `openlibrary-g`
 3. Open https://openlibrary.org/admin?stats to monitor server status
-4. On ol-www1:
-    1. `sudo vi /etc/haproxy/haproxy.cfg` to uncomment web{1,2} and comment web{3,4}
+4. On ol-web1 and ol-web2 run the run_olserver.sh script but ___not___ the last `docker-compose up` command
+5. On ol-www1:
+    1. `sudo vi /etc/haproxy/haproxy.cfg` to uncomment web{1,2} and comment out web3
     2. `sudo service haproxy restart`
-5. On `ol-mem{3,4,5}` do `sudo service memcached restart`
+6. on ol-web3 `sudo supervisorctl stop openlibrary`
+7. On ol-web1 and ol-web2 run the `docker-compose up` command
+8. Go to https://openlibrary.org/admin?stats and ensure that web{1,2,4} are all green.
+9. On ol-www1:
+    1. `sudo vi /etc/haproxy/haproxy.cfg` to comment out web4
+    2. `sudo service haproxy restart`
+10. On ol-web4 `sudo supervisorctl stop openlibrary`
+11. On `ol-mem{3,4,5}` do `sudo service memcached restart`
+12. Go to https://openlibrary.org/admin?stats and ensure that web{1,2} are all green.
 
 ### Reverting to legacy Python: Repeat steps 3. thru 5. reversing web{1,2} and web{3,4}
 
