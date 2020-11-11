@@ -220,15 +220,18 @@ sudo supervisorctl restart openlibrary
 This will change quickly and frequently. Up-to-date as of 2020-09-29
 
 ## Servers for running Open Library on Python 3 on Ubuntu 20.04.1 LTS (Focal Fossa)
-| Server | Setup script | Run script |
+| Server | Setup script | Run script | cat /etc/os-release |
 | --- | --- | --- |
-| ol-covers0 | scripts/setup_olserver.sh | SERVICE=covers /opt/openlibrary/scripts/run_olserver.sh |
-| ol-dev1 | scripts/setup_olserver.sh | N/A |
-| ol-home0 | scripts/setup_olserver.sh | SERVICE=home /opt/openlibrary/scripts/run_olserver.sh |
-| ol-solr0 | ? scripts/setup_olserver.sh ? | /opt/openlibrary/scripts/start-solr.sh |
-| ol-solr1 | ? scripts/setup_olserver.sh ? | /opt/openlibrary/scripts/start-solr.sh |
-| ol-web1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh |
-| ol-web2 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh |
+| ol-covers0 | scripts/setup_olserver.sh | SERVICE=covers /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
+| ol-dev1 | scripts/setup_olserver.sh | N/A | ___16.04.7___ |
+| ol-home0 | scripts/setup_olserver.sh | SERVICE=home /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
+| ol-mem3 | ??? | ??? | ___16.04.7___ |
+| ol-mem4 | ??? | ??? | ___16.04.7___ |
+| ol-mem5 | ??? | ??? | ___16.04.7___ |
+| ol-solr0 | ? scripts/setup_olserver.sh ? | /opt/openlibrary/scripts/start-solr.sh | 20.04.1 |
+| ol-solr1 | ? scripts/setup_olserver.sh ? | /opt/openlibrary/scripts/start-solr.sh | 20.04.1 |
+| ol-web1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
+| ol-web2 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
 
 
 Initial setup:
