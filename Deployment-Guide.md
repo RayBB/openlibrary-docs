@@ -232,7 +232,7 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 | ol-solr1 | ? scripts/setup_olserver.sh ? | /opt/openlibrary/scripts/start-solr.sh | 20.04.1 |
 | ol-web1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
 | ol-web2 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
-| ol-www1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
+| ol-www1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | ___14.04.1___ |
 
 
 Initial setup:
