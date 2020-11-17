@@ -239,8 +239,11 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 1. export GITHUB_USERNAME=cclauss
 2. export GITHUB_TOKEN=123abc  # Create this token at https://github.com/settings/tokens
 3. Manually copy `scripts/setup_olserver.sh` to your home directory and run it.
-4. export SERVICE = xxx  # Options for xxx are web, covers, home, infobase
-5. Run the script at the bottom of this page to launch the Docker containers on the server.
+4. Extras for some servers
+    * `ol-covers` requires `cd /opt && sudo git clone https://git.archive.org/jake/booklending_utils`
+    * ??? required volume mount `/olsystem/etc/ia.ini:/openlibrary/.config/ia.ini`
+5. export SERVICE = xxx  # Options for xxx are web, covers, home, infobase
+6. Run the script at the bottom of this page to launch the Docker containers on the server.
 
 ### Transitioning to Python 3:
 1. Ensure the above servers are setup and running
