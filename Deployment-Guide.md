@@ -289,7 +289,8 @@ cd /opt/olsystem
 sudo git pull origin master
 cd /opt/openlibrary
 
-export SERVICE=${SERVICE:-"web"}  # options: web, covers, infobase, home
+# $SERVICE options: web, covers, infobase, home
+export SERVICE=${SERVICE:-web}
 echo "Starting $SERVICE"
 cd /opt/openlibrary
 sudo docker-compose build --pull $SERVICE
