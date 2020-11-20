@@ -4,6 +4,8 @@ Open Library hosts a Weekly Community Call every Tuesday @ 11:30am PT https://zo
 
 **Update (2019-02-26):** Starting on 2019-02, our notes have moved to [this Google Doc](https://docs.google.com/document/d/16eAABOSLrmCbOkRbwVXzis2x4dz2gEQWJsXK-crDCqg/edit#)
 
+**Update (2020-11-20):** Notes for 2020 are at [this Google Doc] (https://docs.google.com/document/u/0/d/1FEG-bdOTsi8Q3IHgFboL_LZImN18Q4wsWWWtlV8RgKk/edit#)
+
 ***
 
 # Table of Contents
