@@ -86,10 +86,10 @@ Caution: Because one of our two web servers (namely `ol-web1`, our blue node) is
 Note: If you are following these instructions while provisioning new servers for the Open Library service (e.g. adding a memcached server to the pool) please also refer to the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide).
 
 [Olsystem](https://github.com/internetarchive/olsystem) is the configuration repository for Open Library. Most deployments shouldn't require change to these configurations. If you're deploying `olsystem` changes which affect memcached servers, solr, or databases, it is best practice to stop Open Library services which use these configs before deploying and then restart them after the config is deployed:
-- [ ] stop `ol-web1` and `ol-web2`: `ssh ol-webX cd /opt/openlibrary; docker-compose down`  Repeat on all ol-webX servers.
-- [ ] stop `ol-staging` (which uses the production config): `ssh ol-dev1 cd /opt/openlibrary; docker-compose down`
+- [ ] stop `ol-web1` and `ol-web2`: `ssh ol-webX cd /opt/openlibrary ; docker-compose down`  Repeat on all ol-webX servers.
+- [ ] stop `ol-staging` (which uses the production config): `ssh ol-dev1 cd /opt/openlibrary ; docker-compose down`
 - [ ] stop `ol-mem[3-5]`: e.g. `ssh ol-mem3 sudo /etc/init.d/memcached stop`
-- [ ] stop `ol-home0` services (import-bot, solr-updater, infobase): e.g. `ssh ol-dev1 cd /opt/openlibrary && docker-compose down`
+- [ ] stop `ol-home0` services (import-bot, solr-updater, infobase): e.g. `ssh ol-dev1 cd /opt/openlibrary ; docker-compose down`
 
 **TODO:** Once your to your `olsystem` configuration changes are tested on `ol-staging` and merged to master, you may deploy `olsystem` from `ol-home` by running:
 
