@@ -14,3 +14,18 @@ If the edit to a page contains any of the spam words or email of the user is fro
 
 Measures taken:
 I’ve added the common words found in the recent spam to the spam words blacklisted mail.com as almost all of the spam was coming from that domain. This may stop some genuine people from registering and making edits. blocked and reverted edits lot of accounts
+
+Other approaches:
+
+On `ol-db1` investigate volume and patterns:
+- `select * from store where key like 'account/%/verify' order by id desc limit 50;`
+
+Check nginx access logs for common vectoros on `ol-www1`
+- `sudo cat /var/log/nginx/access.log | grep "/people"`
+- `sudo cat /var/log/nginx/access.log | grep "/account/create"
+
+Sam's magic sauce:
+```
+netstat -n | /home/samuel/work/reveal-abuse/mktable
+sudo cat /var/log/nginx/access.log | cut -d ' ' -f 1 | sort | uniq -c  | sort -n | tail -n 10 | /home/samuel/work/reveal-abuse/reveal | /home/samuel/work/reveal-abuse/shownames 
+```
