@@ -269,15 +269,21 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 
 ## staging.openlibrary.org is dev1 running Python 3
 
+
+
 ```sh
+# Make sure you're in the docker group, to avoid sudo-ing all the docker commands
+sudo usermod -aG docker USER_NAME
+# Exit/re-enter to take effect
+
 # Add/remove branches you want to test
 sudo vim _dev-merged.txt
 sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged ; git rev-parse --short HEAD
 
 # Starts a py3 web node
-sudo docker-compose down
-sudo docker-compose up --no-deps -d memcached
-HOSTNAME=${HOSTNAME:-$HOST} sudo docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
+export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml"
+docker-compose down
+HOSTNAME=${HOSTNAME:-$HOST} docker-compose up --no-deps -d web memcached
 ```
 Visit http://staging.openlibrary.org/status to test the server.
 
