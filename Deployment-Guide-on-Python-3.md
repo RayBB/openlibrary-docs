@@ -28,8 +28,13 @@ Greetings deployer! You are one of the select few who has privileged access to I
 Before code is pushed to production, it pass all tests -- see [Testing Guide](https://github.com/internetarchive/openlibrary/wiki/Testing) -- and should be QA tested on development, i.e. ol-dev1 (https://staging.openlibrary.org). Ensure any missing packages are added to the `requirements*.txt` and `scripts/bootstrap.sh` files so that these dependencies are update on the next build (#Satisfying_Dependency_Changes).
 
 ```sh
+# ol-dev01 is http://staging.openlibrary.org
+
 ssh -A ol-dev1
 cd /opt/openlibrary  # where OL code lives
+
+# Predefine the Docker Compose files that make a staging build
+export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml"
 
 git branch
 git status   # see if there are any changes that you want to save or stash
@@ -42,22 +47,11 @@ git pull origin master
 # if you want to test out one or more branches...
 sudo vi _dev-merged.txt && sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
-1. minor changes...
-docker restart openlibrary_web_1 && docker-compose logs -f --tail=10 web
+docker-compose down && PYENV_VERSION=3.8.6 docker-compose up -d && docker-compose logs -f --tail=10 web
 
-2. major changes...
-docker-compose down && \
-    docker-compose up -d memcached && \
-    PYENV_VERSION=3.8.6 docker-compose \
-        -f docker-compose.yml \
-        -f docker-compose.infogami-local.yml \
-        -f docker-compose.staging.yml \
-        up -d web && \
-    docker-compose logs -f --tail=10 web
-
-3. Full rebuild...
+For a full rebuild...
 docker build -t openlibrary/olbase:latest -f docker/Dockerfile.olbase .
-# Followed by 2. above 
+# Followed by the docker-compose command above 
 ```
 
 # Satisfying Dependency Changes
