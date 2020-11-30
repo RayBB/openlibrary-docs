@@ -47,7 +47,10 @@ git pull origin master
 # if you want to test out one or more branches...
 sudo vi _dev-merged.txt && sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
-docker-compose down && PYENV_VERSION=3.8.6 docker-compose up -d && docker-compose logs -f --tail=10 web
+docker-compose down && \
+    docker-compose up -d memcached && \
+    PYENV_VERSION=3.8.6 docker-compose up -d && \
+    docker-compose logs -f --tail=10 web
 
 For a full rebuild...
 docker build -t openlibrary/olbase:latest -f docker/Dockerfile.olbase .
