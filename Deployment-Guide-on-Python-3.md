@@ -40,10 +40,10 @@ export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker
 export HOSTNAME=$HOSTNAME
 
 git branch
-git status   # see if there are any changes that you want to save or stash
+git status  # see if there are any changes that you want to save or stash
 
 git checkout master
-git status   # see if there are any changes that you want to save or stash
+git status  # see if there are any changes that you want to save or stash
 
 git pull origin master
 
@@ -77,9 +77,9 @@ docker build -t openlibrary/olbase:latest -f docker/Dockerfile.olbase .
 
 ## Strategy
 
-On production, Open Library practices [blue-green](http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/) deployment. The purpose of a blue-green deploy is to gracefully deploy without downtime. Blue-green deployment is a 2-stage strategy whereby deployment is performed on a non-active secondary node (blue) without any changes being made to the primary (green) active node. Once it has been ensured that deployment of the blue node has completed successfully, a command is issued to switch the roles of the blue and green node (the newly deployed blue node becomes the green node). The previous green node may then be used as a secondary green node within a load-blanced pool until it is needed again as a blue node (as is the case with our setup). Open Library has two web nodes (`ol-web1` and `ol-web2`) which are load balanced using `haproxy` behind `nginx` (`ol-www1`).
+On production, Open Library practices [blue-green](http://blog.christianposta.com/deploy/blue-green-deployments-a-b-testing-and-canary-releases/) deployment. The purpose of a blue-green deploy is to gracefully deploy without downtime. Blue-green deployment is a 2-stage strategy whereby deployment is performed on a non-active secondary node (blue) without any changes being made to the primary (green) active node. Once it has been ensured that deployment of the blue node has completed successfully, a command is issued to switch the roles of the blue and green node (the newly deployed blue node becomes the green node). The previous green node may then be used as a secondary green node within a load-balanced pool until it is needed again as a blue node (as is the case with our setup). Open Library has two web nodes (`ol-web1` and `ol-web2`) which are load balanced using `haproxy` behind `nginx` (`ol-www1`).
 
-For Open Library, we have a haproxy load-balancer (`ol-www1`) which coordinates several services, including 2 instances of the openlibrary website (`ol-web1` and `ol-web2`) which it distributes balanced workloads to. During our blue-green deploy, we deploy to both `ol-web1` and `ol-web2` but we only restart `ol-web1` (our blue node) while `ol-web2` (green) continues to serve clients using the stable code. This way, if there is a problem with deployment, we can take down `ol-web1` and revert it to the software from the previous deployment.
+For Open Library, we have a haproxy load-balancer (`ol-www1`) which coordinates several services, including 2 instances of the Open Library website (`ol-web1` and `ol-web2`) which it distributes balanced workloads to. During our blue-green deploy, we deploy to both `ol-web1` and `ol-web2` but we only restart `ol-web1` (our blue node) while `ol-web2` (green) continues to serve clients using the stable code. This way, if there is a problem with deployment, we can take down `ol-web1` and revert it to the software from the previous deployment.
 
 Caution: One of our two web servers (namely `ol-web1`, our blue node) is effectively being recommissioned as a staging server during deployment.  This means that additional stress will be applied to `ol-web2` in the event where `ol-web1` experiences a failure and goes offline. Therefore, it is not advised to deploy during periods of high user traffic.
 
@@ -90,7 +90,7 @@ Caution: One of our two web servers (namely `ol-web1`, our blue node) is effecti
 
 Note: If you are following these instructions while provisioning new servers for the Open Library service (e.g. adding a memcached server to the pool) please also refer to the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide).
 
-[Olsystem](https://github.com/internetarchive/olsystem) is the configuration repository for Open Library. Most deployments shouldn't require change to these configurations. If you're deploying `olsystem` changes which affect memcached servers, solr, or databases, it is best practice to stop Open Library services which use these configs before deploying and then restart them after the config is deployed:
+[Olsystem](https://github.com/internetarchive/olsystem) is the configuration repository for Open Library. Most deployments shouldn't require changes to these configurations. If you're deploying `olsystem` changes which affect memcached servers, solr, or databases, it is best practice to stop Open Library services which use these configs before deploying and then restart them after the config is deployed:
 - [ ] stop `ol-web1` and `ol-web2`: `ssh ol-webX cd /opt/openlibrary ; docker-compose down`  Repeat on all ol-webX servers.
 - [ ] stop `ol-staging` (which uses the production config): `ssh ol-dev1 cd /opt/openlibrary ; docker-compose down`
 - [ ] stop `ol-mem[3-5]`: e.g. `ssh ol-mem3 sudo /etc/init.d/memcached stop`
@@ -102,7 +102,7 @@ Note: If you are following these instructions while provisioning new servers for
 /olsystem/bin/deploy-code olsystem
 ```
 
-At this point, if a deploy of `openlibrary` is also necessary, **now would be a good time to continue with the [Deploying OpenLibrary](#deploying-openlibrary) instructions** prior to restarting these services. 
+At this point, if a deployment of `openlibrary` is also necessary, **now would be a good time to continue with the [Deploying OpenLibrary](#deploying-openlibrary) instructions** prior to restarting these services. 
 
 Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`, then once the deploy succeeds, restart the above services in reverse order. Note we use [supervisorctl update](http://supervisord.org/running.html#supervisorctl-actions) here so that the config files are reloaded from disk.
 - [ ] start `ol-home` services (import-bot, solr-updater, infobase): run_olserver.sh
@@ -112,8 +112,8 @@ Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`
 ```
 ssh -a ol-webX
 
-````ssh ol-web3 sudo supervisorctl update openlibrary;ssh ol-web4 sudo supervisorctl update openlibrary`
-
+ssh ol-web3 sudo supervisorctl update openlibrary;ssh ol-web4 sudo supervisorctl update openlibrary
+```
 ## Deploying OpenLibrary
 
 On ol-home (make sure you ssh with -A to forwards ssh keys, required if you don't want "permission denied for pubkey" errors or restart) issue the following commands to initiate a deployment to all production nodes:
@@ -127,7 +127,7 @@ If `openlibrary` deployment exits with a failure, see the [failed deploys](#fail
 
 ## Testing Deployment
 
-`ssh` into the public facing web-head (i.e. `ol-www1`), activate the VM's virtualenv, and try importing the openlibrary package directly from python and start the service on a different port for testing:
+`ssh` into the public-facing web-head (i.e. `ol-www1`), activate the VM's virtualenv, and try importing the openlibrary package directly from python and start the service on a different port for testing:
 
 ```sh
 source /opt/openlibrary/venv/bin/activate
@@ -136,7 +136,7 @@ python3 import openlibrary  # detect any obvious breaking problems
 # Run OL (in stand-alone debug mode) on a different port
 sudo /olsystem/bin/upstart-service openlibrary-server :1234
 # Ctrl+c to kill this process or...
-sudo kill -9 `pgrep -f openlibrary-server`  # kill previous instance 
+sudo kill -9 `pgrep -f openlibrary-server`  # kill the previous instance 
 ```
 
 ## Restarting Services
@@ -185,7 +185,7 @@ In some cases, a deployment fails to complete and exits pre-maturely with an err
 
 ### Unstashed Changes on ol-home0
 
-The most common case of failed `openlibrary` deployment is unstashed changes within `/1/var/lib/openlibrary/deploy/openlibrary`. This is especially true for the `package-lock.json` files which sometimes gets modified while the deploy is building `nodejs` dependencies. This error will manifest as something like:
+The most common cause of failed `openlibrary` deployment is unstashed changes within `/1/var/lib/openlibrary/deploy/openlibrary`. This is especially true for the `package-lock.json` files which sometimes gets modified while the deploy is building `nodejs` dependencies. This error will manifest as something like:
 
 ```
 [ol-home0] out: Updating 811fbbf..058c6ce
