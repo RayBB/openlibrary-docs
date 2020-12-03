@@ -132,9 +132,9 @@ If `openlibrary` deployment exits with a failure, see the [failed deploys](#fail
 source /opt/openlibrary/venv/bin/activate
 python3 import openlibrary  # detect any obvious breaking problems
 
-# Run OL (in stand-alone debug mode) on a different port
+# Run Open Library (in stand-alone debug mode) on a different port
 sudo /olsystem/bin/upstart-service openlibrary-server :1234
-# Ctrl+c to kill this process or...
+
 `cd /opt/openlibrary && docker-compose down`
 ```
 
@@ -224,17 +224,17 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 ## Servers for running Open Library on Python 3 on Ubuntu 20.04.1 LTS (Focal Fossa)
 | Server | Setup script | Run script | /etc/os-release |
 | --- | --- | --- | --- |
-| ol-covers0 | scripts/setup_olserver.sh | SERVICE=covers /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
+| ol-covers0 | scripts/setup_olserver.sh | SERVICE=covers scripts/run_olserver.sh | 20.04.1 |
 | ol-dev1 | scripts/setup_olserver.sh | N/A | ___16.04.7___ |
-| ol-home0 | scripts/setup_olserver.sh | SERVICE=home /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
+| ol-home0 | scripts/setup_olserver.sh | SERVICE=home scripts/run_olserver.sh | 20.04.1 |
 | ol-mem3 | ??? | ??? | ___16.04.7___ |
 | ol-mem4 | ??? | ??? | ___16.04.7___ |
 | ol-mem5 | ??? | ??? | ___16.04.7___ |
 | ol-solr0 | ? scripts/setup_olserver.sh ? | See scripts/solr_builder readme | 20.04.1 |
 | ol-solr1 | ? scripts/setup_olserver.sh ? | See scripts/solr_builder readme | 20.04.1 |
-| ol-web1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
-| ol-web2 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | 20.04.1 |
-| ol-www1 | scripts/setup_olserver.sh | SERVICE=web /opt/openlibrary/scripts/run_olserver.sh | ___14.04.1___ |
+| ol-web1 | scripts/setup_olserver.sh | SERVICE=web scripts/run_olserver.sh | 20.04.1 |
+| ol-web2 | scripts/setup_olserver.sh | SERVICE=web scripts/run_olserver.sh | 20.04.1 |
+| ol-www1 | scripts/setup_olserver.sh | ???? | ___14.04.1___ |
 
 
 ### Initial setup:
