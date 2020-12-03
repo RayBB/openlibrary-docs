@@ -25,15 +25,15 @@ Greetings deployer! You are one of the select few who has privileged access to I
 
 # Testing on Staging
 
-Before code is pushed to production, it pass all tests -- see [Testing Guide](https://github.com/internetarchive/openlibrary/wiki/Testing) -- and should be QA tested on development, i.e. ol-dev1 (https://staging.openlibrary.org). Ensure any missing packages are added to the `requirements*.txt` and `scripts/bootstrap.sh` files so that these dependencies are update on the next build (#Satisfying_Dependency_Changes).
+Before code is pushed to production, it pass all tests -- see [Testing Guide](https://github.com/internetarchive/openlibrary/wiki/Testing) -- and should be QA tested on development, i.e. `ol-dev1` (https://staging.openlibrary.org). Ensure any missing packages are added to the `requirements*.txt` and `scripts/bootstrap.sh` files so that these dependencies are updated on the next build (#Satisfying_Dependency_Changes).
 
 ```sh
-# ol-dev01 is http://staging.openlibrary.org
+# ol-dev01.us.archive.org is http://staging.openlibrary.org
 
 ssh -A ol-dev1
-cd /opt/openlibrary  # where OL code lives
+cd /opt/openlibrary  # where Open Library code lives
 
-# Predefine the Docker Compose files that make a staging build
+# Predefine the Docker Compose files that are required for a staging build
 export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml"
 
 # Ensure that the hostname will appear on http://staging.openlibrary.org/status and in logs
@@ -54,7 +54,7 @@ sudo vi _dev-merged.txt && sudo ./scripts/make-integration-branch.sh _dev-merged
 docker-compose down && \
     PYENV_VERSION=3.8.6 docker-compose up -d memcached web && \
     docker-compose logs -f --tail=10 web
-# Check http://staging.openlibrary.org/status for Python version and hostname
+# In your browser, check http://staging.openlibrary.org/status to verify the Python version and hostname
 
 For a normal build...
 docker-compose build --pull web
@@ -66,6 +66,8 @@ docker build -t openlibrary/olbase:latest -f docker/Dockerfile.olbase .
 ```
 
 # Satisfying Dependency Changes
+
+I dependencies are changed, perform a build as discussed above.
 
 (Not much left to say here except solr-updater?)
 
@@ -81,10 +83,11 @@ On production, Open Library practices [blue-green](http://blog.christianposta.co
 
 For Open Library, we have a haproxy load-balancer (`ol-www1`) which coordinates several services, including 2 instances of the Open Library website (`ol-web1` and `ol-web2`) which it distributes balanced workloads to. During our blue-green deploy, we deploy to both `ol-web1` and `ol-web2` but we only restart `ol-web1` (our blue node) while `ol-web2` (green) continues to serve clients using the stable code. This way, if there is a problem with deployment, we can take down `ol-web1` and revert it to the software from the previous deployment.
 
-Caution: One of our two web servers (namely `ol-web1`, our blue node) is effectively being recommissioned as a staging server during deployment.  This means that additional stress will be applied to `ol-web2` in the event where `ol-web1` experiences a failure and goes offline. Therefore, it is not advised to deploy during periods of high user traffic.
+Caution: One of our two web servers (namely `ol-web1`, our blue node) is effectively being recommissioned as a staging server during a deployment.  This means that additional stress will be applied to `ol-web2` in the event where `ol-web1` experiences a failure and goes offline. Therefore, it is not advised to deploy during periods of high user traffic.
 
 ## Deploying olsystem
 
+- [ ] Check for [red flags in nagios](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail&limit=0&start=100&limit=100)
 - [ ] Warn Slack channels `openlibrary` and `openlibrary-g` of imminent downtime!
 - [ ] Open https://openlibrary.org/admin?stats so that you can monitor server status
 
@@ -107,13 +110,9 @@ At this point, if a deployment of `openlibrary` is also necessary, **now would b
 Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`, then once the deploy succeeds, restart the above services in reverse order. Note we use [supervisorctl update](http://supervisord.org/running.html#supervisorctl-actions) here so that the config files are reloaded from disk.
 - [ ] start `ol-home` services (import-bot, solr-updater, infobase): run_olserver.sh
 - [ ] for `ol-mem[3-5]` run `sudo /etc/init.d/memcached start` 
-- [ ] on ol-dev run `sudo /olsystem/bin/upstart-service openlibrary-dev-server :7071 &`
-- [ ] start `ol-web3` and `ol-web4`: See 
-```
-ssh -a ol-webX
+- [ ] on ol-dev1 redo the (#Testing_on_Staging) process
+- [ ] On `ol-web3` and `ol-web4` run `SERVICE=web scripts/run_olserver.sh`
 
-ssh ol-web3 sudo supervisorctl update openlibrary;ssh ol-web4 sudo supervisorctl update openlibrary
-```
 ## Deploying OpenLibrary
 
 On ol-home (make sure you ssh with -A to forwards ssh keys, required if you don't want "permission denied for pubkey" errors or restart) issue the following commands to initiate a deployment to all production nodes:
@@ -136,7 +135,7 @@ python3 import openlibrary  # detect any obvious breaking problems
 # Run OL (in stand-alone debug mode) on a different port
 sudo /olsystem/bin/upstart-service openlibrary-server :1234
 # Ctrl+c to kill this process or...
-sudo kill -9 `pgrep -f openlibrary-server`  # kill the previous instance 
+`cd /opt/openlibrary && docker-compose down`
 ```
 
 ## Restarting Services
