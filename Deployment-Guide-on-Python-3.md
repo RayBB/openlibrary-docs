@@ -283,28 +283,5 @@ HOSTNAME=${HOSTNAME:-$HOST} sudo docker-compose -f docker-compose.yml -f docker-
 ```
 Visit http://staging.openlibrary.org/status to test the server.
 
-## /opt/openlibrary/scripts/run_olserver.sh
-
-```sh
-cd /opt/openlibrary
-sudo git pull origin master
-cd /opt/openlibrary/vendor/infogami
-sudo git pull origin master
-cd /opt/olsystem
-sudo git pull origin master
-cd /opt/openlibrary
-
-# $SERVICE options: web, covers, infobase, home
-export SERVICE=${SERVICE:-web}
-echo "Starting $SERVICE"
-cd /opt/openlibrary
-sudo docker-compose build --pull $SERVICE
-sudo docker-compose down
-sudo docker-compose up -d --no-deps memcached
-HOSTNAME=${HOSTNAME:-$HOST} sudo docker-compose \
-    -f docker-compose.yml \
-    -f docker-compose.infogami-local.yml \
-    -f docker-compose.production.yml \
-    up -d --no-deps $SERVICE
-# sudo docker-compose logs -f --tail=10 $SERVICE
-```
+## Code for scripts/run_olserver.sh
+[`scripts/run_olserver.sh`](https://github.com/internetarchive/openlibrary/blob/master/scripts/run_olserver.sh)
