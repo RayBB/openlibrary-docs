@@ -36,6 +36,9 @@ cd /opt/openlibrary  # where OL code lives
 # Predefine the Docker Compose files that make a staging build
 export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml"
 
+# Ensure that the hostname will appear on http://staging.openlibrary.org/status and in logs
+export HOSTNAME=$HOSTNAME
+
 git branch
 git status   # see if there are any changes that you want to save or stash
 
@@ -47,14 +50,19 @@ git pull origin master
 # if you want to test out one or more branches...
 sudo vi _dev-merged.txt && sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
+# Restart the server http://staging.openlibrary.org ...
 docker-compose down && \
-    docker-compose up -d memcached && \
-    PYENV_VERSION=3.8.6 docker-compose up -d && \
+    PYENV_VERSION=3.8.6 docker-compose up -d memcached web && \
     docker-compose logs -f --tail=10 web
+# Check http://staging.openlibrary.org/status for Python version and hostname
+
+For a normal build...
+docker-compose build --pull web
+# Followed by the docker-compose down/up commands above
 
 For a full rebuild...
 docker build -t openlibrary/olbase:latest -f docker/Dockerfile.olbase .
-# Followed by the docker-compose command above 
+# Followed by the docker-compose down/up commands above 
 ```
 
 # Satisfying Dependency Changes
@@ -65,7 +73,7 @@ docker build -t openlibrary/olbase:latest -f docker/Dockerfile.olbase .
 
 ## Background
 
-`ol-home0` actually has 2 openlibrary repos on it. One is in `/opt/openlibrary/openlibrary` (the same convention as the other Open Library servers). `ol-home0` also has a repo within `/1/var/lib/openlibrary/deploy/openlibrary`. When a new deploy of `openlibrary` is performed, it is executed on `/1/var/lib/openlibrary/deploy/openlibrary` and then rsync'ed to each server's `/opt/openlibrary/openlibrary` path. This is why deploys must be done from `ol-home1`.
+`ol-home0` actually has 2 openlibrary repos on it. One is in `/opt/openlibrary/openlibrary` (the same convention as all other Open Library servers). In addition, `ol-home0` also has a repo within `/1/var/lib/openlibrary/deploy/openlibrary`. When a new deploy of `openlibrary` is performed, it is executed on `/1/var/lib/openlibrary/deploy/openlibrary` and then rsync'ed to each server's `/opt/openlibrary/openlibrary` path. This is why deploys must be done from `ol-home1`.
 
 ## Strategy
 
@@ -73,7 +81,7 @@ On production, Open Library practices [blue-green](http://blog.christianposta.co
 
 For Open Library, we have a haproxy load-balancer (`ol-www1`) which coordinates several services, including 2 instances of the openlibrary website (`ol-web1` and `ol-web2`) which it distributes balanced workloads to. During our blue-green deploy, we deploy to both `ol-web1` and `ol-web2` but we only restart `ol-web1` (our blue node) while `ol-web2` (green) continues to serve clients using the stable code. This way, if there is a problem with deployment, we can take down `ol-web1` and revert it to the software from the previous deployment.
 
-Caution: Because one of our two web servers (namely `ol-web1`, our blue node) is effectively being recommissioned as a staging server during deployment, additional stress will be applied to `ol-web2` in the event where `ol-web1` experiences a failure and goes offline. Therefore, it is not advised to deploy during periods of high user traffic.
+Caution: One of our two web servers (namely `ol-web1`, our blue node) is effectively being recommissioned as a staging server during deployment.  This means that additional stress will be applied to `ol-web2` in the event where `ol-web1` experiences a failure and goes offline. Therefore, it is not advised to deploy during periods of high user traffic.
 
 ## Deploying olsystem
 
@@ -86,9 +94,9 @@ Note: If you are following these instructions while provisioning new servers for
 - [ ] stop `ol-web1` and `ol-web2`: `ssh ol-webX cd /opt/openlibrary ; docker-compose down`  Repeat on all ol-webX servers.
 - [ ] stop `ol-staging` (which uses the production config): `ssh ol-dev1 cd /opt/openlibrary ; docker-compose down`
 - [ ] stop `ol-mem[3-5]`: e.g. `ssh ol-mem3 sudo /etc/init.d/memcached stop`
-- [ ] stop `ol-home0` services (import-bot, solr-updater, infobase): e.g. `ssh ol-dev1 cd /opt/openlibrary ; docker-compose down`
+- [ ] stop `ol-home0` services (import-bot, solr-updater, infobase): e.g. `ssh ol-home0 cd /opt/openlibrary ; docker-compose down`
 
-**TODO:** Once your to your `olsystem` configuration changes are tested on `ol-staging` and merged to master, you may deploy `olsystem` from `ol-home` by running:
+**TODO:** Once your `olsystem` configuration changes are tested on `ol-dev1` (staging) and merged to master, you may deploy `olsystem` from `ol-home` by running:
 
 ```sh
 /olsystem/bin/deploy-code olsystem
@@ -98,9 +106,13 @@ At this point, if a deploy of `openlibrary` is also necessary, **now would be a 
 
 Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`, then once the deploy succeeds, restart the above services in reverse order. Note we use [supervisorctl update](http://supervisord.org/running.html#supervisorctl-actions) here so that the config files are reloaded from disk.
 - [ ] start `ol-home` services (import-bot, solr-updater, infobase): run_olserver.sh
-- [ ] for `ol-mem[3-5]` run `sudo /etc/init.d/memcached stop` 
+- [ ] for `ol-mem[3-5]` run `sudo /etc/init.d/memcached start` 
 - [ ] on ol-dev run `sudo /olsystem/bin/upstart-service openlibrary-dev-server :7071 &`
-- [ ] start `ol-web3` and `ol-web4`: `ssh ol-web3 sudo supervisorctl update openlibrary;ssh ol-web4 sudo supervisorctl update openlibrary`
+- [ ] start `ol-web3` and `ol-web4`: See 
+```
+ssh -a ol-webX
+
+````ssh ol-web3 sudo supervisorctl update openlibrary;ssh ol-web4 sudo supervisorctl update openlibrary`
 
 ## Deploying OpenLibrary
 
