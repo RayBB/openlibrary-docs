@@ -47,8 +47,11 @@ git status  # see if there are any changes that you want to save or stash
 
 git pull origin master
 
-# if you want to test out one or more branches...
+# If you want to test out one or more branches...
 sudo vi _dev-merged.txt && sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
+
+# To see what this software version should be at http://staging.openlibrary.org/status
+git rev-parse --short HEAD
 
 # Restart the server http://staging.openlibrary.org ...
 docker-compose down && \
@@ -139,6 +142,7 @@ sudo /olsystem/bin/upstart-service openlibrary-server :1234
 ```
 
 ## Restarting Services
+See code for [`scripts/run_olserver.sh`](https://github.com/internetarchive/openlibrary/blob/master/scripts/run_olserver.sh)
 
 From `ol-home`, once the deployment(s) are complete and you've [tested deployment](#Testing_Deployment), you are ready to restart the production web-nodes `ol-web1` and `ol-web2` in blue-green fashion. Consult [Monitoring Deployment](#Monitoring_Deployment) after **each** web-node is restarted:
 
@@ -247,7 +251,9 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 5. export SERVICE = xxx  # Options for xxx are web, covers, home, infobase
 6. Run the script at the bottom of this page to launch the Docker containers on the server.
 
-### Transitioning to Python 3:
+---
+
+### Transitioning to Python 3: (Hopefully these steps will not be needed again.)
 1. Ensure the above servers are setup and running
 2. Warn Slack channels `openlibrary` and `openlibrary-g`
 3. Open https://openlibrary.org/admin?stats to monitor server status
@@ -268,20 +274,3 @@ This will change quickly and frequently. Up-to-date as of 2020-09-29
 12. Go to https://openlibrary.org/admin?stats and ensure that web{1,2} are all green.
 
 ### Reverting to legacy Python: Repeat steps 3. thru 5. reversing web{1,2} and web{3,4}
-
-## staging.openlibrary.org is dev1 running Python 3
-
-```sh
-# Add/remove branches you want to test
-sudo vim _dev-merged.txt
-sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged ; git rev-parse --short HEAD
-
-# Starts a py3 web node
-sudo docker-compose down
-sudo docker-compose up --no-deps -d memcached
-HOSTNAME=${HOSTNAME:-$HOST} sudo docker-compose -f docker-compose.yml -f docker-compose.infogami-local.yml -f docker-compose.staging.yml up --no-deps -d web
-```
-Visit http://staging.openlibrary.org/status to test the server.
-
-## Code for scripts/run_olserver.sh
-[`scripts/run_olserver.sh`](https://github.com/internetarchive/openlibrary/blob/master/scripts/run_olserver.sh)
