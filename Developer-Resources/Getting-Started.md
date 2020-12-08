@@ -264,7 +264,9 @@ Python 2.7.6 (default, Mar 22 2014, 22:59:56)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import yaml
 >>> from openlibrary.utils import olmemcache
->>> y = yaml.safe_load(open('/openlibrary/conf/openlibrary-docker.yml'))
+>>> with open('/openlibrary/conf/openlibrary-docker.yml') as in_file:
+...     y = yaml.safe_load(in_file)
+...
 >>> mc = olmemcache.Client(y['memcache_servers'])
 ```
 
@@ -286,7 +288,9 @@ to **DELETE** a memcached entry:
 ```python
 >>> import yaml
 >>> import memcache
->>> y = yaml.safe_load(open('openlibrary.yml'))
+>>> with open('openlibrary.yml') as in_file:
+...     y = yaml.safe_load(in_file)
+...
 >>> mc = memcache.Client(y['memcache_servers'])
 
 >>> mc.get('ia.get_metadata-"houseofscorpion00farmrich"')
