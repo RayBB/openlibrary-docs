@@ -24,7 +24,7 @@ We triage issues by assigning labels, milestones, and moving them around project
 
     b. **Module:** JS/CSS, Pages, API, Solr, Memcache, Infogami, Database, etc.  These usually imply who the assignee is (we have deputies for the various modules and subsystems of OpenLibrary)
 
-    c. **Theme:** Big, module-independent themes and initiatives, typically off the yearly plan goals.  E.g. the move to python3, UI design, testing, etc.
+    c. **Theme:** Big, module-independent themes and initiatives, typically off the yearly plan goals.  E.g. the migration to Python 3, UI design, testing, etc.
 
 ## Intake
 
