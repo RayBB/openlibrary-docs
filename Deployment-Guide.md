@@ -55,7 +55,7 @@ git rev-parse --short HEAD
 
 # Restart the server http://staging.openlibrary.org ...
 docker-compose down && \
-    PYENV_VERSION=3.8.6 docker-compose up -d memcached web && \
+    PYENV_VERSION=3.8.6 docker-compose up -d --no-deps memcached web && \
     docker-compose logs -f --tail=10 web
 # In your browser, check http://staging.openlibrary.org/status to verify the Python version and hostname
 
