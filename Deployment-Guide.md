@@ -114,7 +114,7 @@ Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`
 - [ ] start `ol-home` services (import-bot, solr-updater, infobase): run_olserver.sh
 - [ ] for `ol-mem[3-5]` run `sudo /etc/init.d/memcached start` 
 - [ ] on ol-dev1 redo the (#Testing_on_Staging) process
-- [ ] On `ol-web3` and `ol-web4` run `SERVICE=web scripts/run_olserver.sh`
+- [ ] On `ol-web1` and `ol-web2` run `SERVICE=web scripts/run_olserver.sh`
 
 ## Deploying OpenLibrary
 
