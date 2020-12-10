@@ -85,6 +85,15 @@ cd /opt/openlibrary/deploys/openlibrary
 ls -lathr | grep 2017 | awk 'NF>1{print $NF}' | sudo xargs rm -r`
 ```
 
+## Docker
+
+Docker logs can take up a ton of space. @cdrini mentions one solution is:
+(Truncating docker logs for container with ID d12b...)
+```
+sudo df -h - See the sizes of a bunch of things on the VM
+truncate -s 0 $(docker inspect --format='{{.LogPath}}' d12b518475e1)
+```
+
 ## upstart.log
 There is a possibility supervisor can get confused (perhaps related to permissions/`chown`), and instead of rotating logs, will start writing to `/var/log/openlibrary/upstart.log` until `/dev/vda1` (or wherever root / is mounted) runs out of space. The solution is to restart "supervisor" (not openlibrary via supervistorctl but supervisor itself) on the aflicted node (e.g. `ol-web4` in this example):
 
