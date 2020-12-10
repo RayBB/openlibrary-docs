@@ -10,7 +10,7 @@ sudo find /opt/booklending_utils -type d -exec chmod g+s {} \;
 2. [x] Do a classic deploy so that ol-www1 has up-to-date static files
     - [x] Confirm web{3,4} not restarted
 
-## for node in web{1,2}:
+### for node in web{1,2}:
 1. [x, x] Down
 (down first so code in memory that's currently running is not out-of-sync with what's on the filesystem)
 ```sh
