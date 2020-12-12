@@ -1,5 +1,8 @@
 ## 2020-12-10 Deploy
 
+THINGS I FORGOT TO DO:
+- `docker-compose run -uroot --rm home make i18n` (Added after-the-fact)
+
 1. [x] On web{1,2} chown /booklending_utils
 ```sh
 sudo chown 999:staff -R /opt/booklending_utils
@@ -34,6 +37,7 @@ git pull origin master
 ```sh
 export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.production.yml"
 docker-compose build --pull web
+docker-compose run -uroot --rm home make i18n
 ```
 
 4. [x, x] Restart
