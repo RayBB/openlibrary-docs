@@ -14,7 +14,7 @@ Using a debugger is one of the best ways to understand how code works and to fin
 ![Debugger in action](https://user-images.githubusercontent.com/6251786/56706388-bd889e00-66e2-11e9-9d9b-449f0458305a.gif)
 
 To use:
-1. `docker-compose up -d` as usual and **login as admin**. Then `docker-compose down`. (see https://github.com/internetarchive/openlibrary/issues/2122 )
+1. `docker-compose up -d` as usual and [**login as admin**](https://github.com/internetarchive/openlibrary/wiki/Getting-Started#logging-in). Then `docker-compose down`. (see https://github.com/internetarchive/openlibrary/issues/2122 )
 2. Open the repo in VS Code
 3. Edit the last line of `docker/ol-docker-start.sh` to say `workers 1` instead of `4`
 4. `docker-compose up -d`
