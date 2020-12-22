@@ -11,7 +11,9 @@
     * `export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.production.yml"`
 
 Once you have set `$COMPOSE_FILE`, you can:
-`docker-compose down && PYENV_VERSION=3.8.6 docker-compose up -d && docker-compose logs -f --tail=10`
+```
+docker-compose down && PYENV_VERSION=3.8.6 docker-compose up -d && docker-compose logs -f --tail=10
+```
 
 For more details see: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md
 
