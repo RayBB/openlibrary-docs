@@ -1,18 +1,47 @@
 ## UPDATES
 - 2019: `ol-mem[0-2]` trusty VMs have been reprovisioned as `ol-mem[3-5]` following the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide)
+- Dec. 2020: Migration to Docker-based deployments based on docker-compose
 
+## Three ways to deploy:
+1. localhost for Developers -- http://localhost:8080/status
+    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.override.yml:docker-compose.infogami-local.yml"`
+2. dev or staging servers -- ol-dev01 is http://staging.openlibrary.org/status
+    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml"`
+3. production on multiple servers -- ol-web1 and ol-web2 are http://openlibrary.org/status
+    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.production.yml"`
+
+Once you have set `$COMPOSE_FILE`, you can:
+`docker-compose down && PYENV_VERSION=3.8.6 docker-compose up -d && docker-compose logs -f --tail=10`
+
+For more details see: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md
+
+The remainder of this document will focus on production deployments.
+ 
 ## Current Production Architecture
-Today, our production service architecture consists of ~11 VMs:
+Today, our production service architecture consists of the following Docker containers:
+1. affiliate-server
+2. covers
+3. covers_nginx
+4. cron (in progress)
+5. db
+6. home
+7. importbot (in progress)
+8. infobase
+9. infobase_nginx
+10. memcached
+11. solr
+12. solr-updater
+13. web
+
 ![Open Library Production Architecture](https://archive.org/download/openlibrary-documentation/openlibrary-production-architecture.png)
 
 ## Current Provisioning Setup
-Our current production setup process (as of 2019) for provisioning these 11 VMs is ostensibly **manual** and relies on a lot of manually `scp`ing directories around, as well as a separate repository called `olsystem` which contains the production configs, cron jobs, and infrastructure required to run the official openlibrary.org service.
+Our current production setup process (as of 2021) for provisioning these Docker containers is **manual** and relies on a lot of manually rsync-ing images around, as well as a separate repository called `olsystem` which contains the production configs, cron jobs, and infrastructure required to run the official openlibrary.org service.
 
-Each of our 11 VMs are more-or-less provisioned identically:
-- Every VM has an `/opt` directory containing all the "business"
-- Within `/opt` there is an `openlibrary/` and a `petabox/` directory. It's very likely `/opt/petabox` is not required by all VMs, though it's not currently well understood which services may rely on it (e.g. the `ol-home` VM makes heavy use of `olsystem` which may reference petabox)
-- `/opt/openlibrary` contains all the business logic for the Open Library project:
-
+Our Docker containers are more-or-less provisioned identically:
+- The `docker-compose*.yml` files at openlibrary`s root directory contains the Docker configuration data for each container
+- These containers may mount external volumes such as `olsystem`, `petabox`, and `1` to access config and shared data.
+- `/opt/openlibrary` contains the business logic for the Open Library project:
 ```
 /opt/
 /opt/petabox
@@ -29,7 +58,7 @@ Each of our 11 VMs are more-or-less provisioned identically:
 /opt/openlibrary/openlibrary -- symlink to active openlibrary: /opt/deploys/openlibrary/olsystem
 ```
 
-At minimum, re-provisioning a VM requires:
+At a minimum, re-provisioning a container requires:
 - setting up firewall rules and installing core packages (e.g. git, docker) by running an ansible playbook
-- `scp`'ing over the legacy VM's `/opt` directory (preferably as an external mountable `/1` volume which can be moved in the future)
+- rsync-ing over the legacy VM's `/opt` directory (preferably as an external mountable `/1` volume which can be moved in the future)
 - Setting up `olsystem` so that its files within `/opt/openlibrary/olsystem/etc` symlink to the right locations within `/etc` 
