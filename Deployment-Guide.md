@@ -34,7 +34,7 @@ ssh -A ol-dev1
 cd /opt/openlibrary  # where Open Library code lives
 
 # Predefine the Docker Compose files that are required for a staging build
-export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml"
+export COMPOSE_FILE="docker-compose.yml:docker-compose.staging.yml"
 
 # Ensure that the hostname will appear on http://staging.openlibrary.org/status and in logs
 export HOSTNAME=$HOSTNAME
