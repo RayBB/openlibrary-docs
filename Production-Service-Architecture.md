@@ -1,14 +1,15 @@
 ## UPDATES
 - 2019: `ol-mem[0-2]` trusty VMs have been reprovisioned as `ol-mem[3-5]` following the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide)
 - Dec. 2020: Migration to Docker-based deployments based on docker-compose
+- Jan. 2021: Upgrade to Infogami master and drop `docker-compose.infogami-local.yml`
 
 ## Three ways to deploy:
 1. localhost for Developers -- http://localhost:8080/status
-    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.override.yml:docker-compose.infogami-local.yml"`
+    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.override.yml"`
 2. dev or staging servers -- ol-dev01 is http://staging.openlibrary.org/status
-    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml"`
+    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.staging.yml"`
 3. production on multiple servers -- ol-web1 and ol-web2 are http://openlibrary.org/status
-    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.production.yml"`
+    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"`
 
 Once you have set `$COMPOSE_FILE`, you can:
 ```
