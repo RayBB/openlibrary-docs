@@ -35,14 +35,14 @@ git pull origin master
 
 3. [x, x] Build
 ```sh
-export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.production.yml"
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 docker-compose build --pull web
 docker-compose run -uroot --rm home make i18n
 ```
 
 4. [x, x] Restart
 ```sh
-export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.production.yml"
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 HOSTNAME=$HOSTNAME PYENV_VERSION=3.8.6 docker-compose up -d --no-deps web
 ```
 
