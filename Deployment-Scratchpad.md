@@ -17,7 +17,7 @@ sudo find /opt/booklending_utils -type d -exec chmod g+s {} \;
 1. [x, x] Down
 (down first so code in memory that's currently running is not out-of-sync with what's on the filesystem)
 ```sh
-export COMPOSE_FILE="docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.production.yml"
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 docker-compose down
 ```
 
