@@ -82,8 +82,9 @@ cd /opt/openlibrary
 docker image prune
 
 # ~2min
-time docker load < oldev_latest.tar.gz
+time docker load < /opt/olimages/oldev_latest.tar.gz
 
+cd /opt/openlibrary
 # Manually for now, since haven't rsynced/git pulled the repo
 echo "FROM oldev:latest" | docker build -t "oldev:2daebf4bd51fa309ee74d5b2fb7fd22d2ba9eed4" -
 # echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
