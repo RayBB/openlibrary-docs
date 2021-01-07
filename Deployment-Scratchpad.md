@@ -22,10 +22,10 @@ docker-compose build --pull web
 docker-compose run -uroot --rm home make i18n
 ```
 
-4. [ ] @cclauss Create /opt/olimages for everything 
-    - [ ] ol-web1
-    - [ ] ol-web2
-    - [ ] ol-covers0
+4. [x] @cclauss Create /opt/olimages for everything 
+    - [x] ol-web1
+    - [x] ol-web2
+    - [x] ol-covers0
     - [x] @cdrini ol-home0
 
 ```sh
@@ -43,26 +43,49 @@ echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
 
 cd /opt/olimages
 
-time docker save oldev:latest | gzip > oldev_latest.tar.gz
+time docker save oldev:latest | gzip > oldev_latest.tar.gz \*2
 # ~3 min, final file 820 MB ; image in docker container ls was 2.6 GB
 ```
 
-
-
-6. [ ] Modify fabfile to rsync docker image to all the hosts 
+6. [x] ~Modify fabfile to~ rsync docker image to all the hosts 
 
 ```sh
 cd /opt/olimages
-rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web1:/opt/olimages/"
-rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web2:/opt/olimages/"
-rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-covers0:/opt/olimages/"
+# each takes ~18s
+time rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web1:/opt/olimages/"
+time rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web2:/opt/olimages/"
+time rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-covers0:/opt/olimages/"
 ```
 
-7. [ ] docker load on all hosts
+6. [...] Do old style deploy using mek's code so that it doesn't try to rsync to ol-web{1,2} ol-covers0 ol-home0
+    - Put mek's fabfile.py changes into `fab_file_changes.diff`
+
+```sh
+ssh -A ol-home
+/olsystem/bin/deploy-code openlibrary
+```
+
+6. [_ web1, _ web2, _ covers0] @cclauss git pull latest code
+
+```sh
+cd /opt/olsystem                    && sudo git pull origin master
+cd /opt/booklending_utils           && sudo git pull origin master
+cd /opt/openlibrary                 && sudo git pull origin master
+cd /opt/openlibrary/vendor/infogami && sudo git pull origin master
+cd /opt/openlibrary
+```
+
+7. [x web1, _ web2, _ covers0] docker load on all hosts \*3
     - The new docker image should have label "SHA" as well as "latest"
 ```sh
-docker load < oldev_latest.tar.gz
-echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
+docker image prune
+
+# ~2min
+time docker load < oldev_latest.tar.gz
+
+# Manually for now, since haven't rsynced/git pulled the repo
+echo "FROM oldev:latest" | docker build -t "oldev:2daebf4bd51fa309ee74d5b2fb7fd22d2ba9eed4" -
+# echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
 ```
 
 ### for node in ol-web{1,2} ol-covers0
@@ -86,6 +109,41 @@ HOSTNAME="$HOSTNAME" docker-compose up --no-deps -d web
 # Make sure you're in the docker group, to avoid sudo-ing all the docker commands
 sudo usermod -aG docker USER_NAME
 # Exit/re-enter to take effect
+```
+
+2. We might want a date-based instead of SHA-based image label, so that this is more human readable (maybe `date +%Y-%m-%dT%H%M`)
+
+3. It looks like `docker load` reloads all the layers!
+
+Here is `docker image ls` before:
+
+```
+drini@ol-web1:/opt/olimages$ docker image ls
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+oldev                latest              24e7730de44e        3 weeks ago         2.55GB
+openlibrary/olbase   latest              7107cde0123e        4 weeks ago         2.43GB
+openlibrary/olbase   <none>              e7ad65c36ade        5 weeks ago         2.45GB
+openlibrary/olbase   <none>              5bc304b7af6a        6 weeks ago         2.46GB
+openlibrary/olbase   <none>              8b9ba7350023        8 weeks ago         2.46GB
+openlibrary/olbase   <none>              089f94fd1626        8 weeks ago         2.45GB
+```
+
+It notes: 
+```
+The image oldev:latest already exists, renaming the old one with ID sha256:24e7730de44e45356224fd9ec0f58eb39ef104f5e38b28227ff100ed67a1d0f6 to empty string
+Loaded image: oldev:latest
+```
+After:
+```
+drini@ol-web1:/opt/olimages$ docker image ls
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+oldev                latest              8b1a1ec051bf        About an hour ago   2.58GB
+<none>               <none>              24e7730de44e        3 weeks ago         2.55GB
+openlibrary/olbase   latest              7107cde0123e        4 weeks ago         2.43GB
+openlibrary/olbase   <none>              e7ad65c36ade        5 weeks ago         2.45GB
+openlibrary/olbase   <none>              5bc304b7af6a        6 weeks ago         2.46GB
+openlibrary/olbase   <none>              8b9ba7350023        8 weeks ago         2.46GB
+openlibrary/olbase   <none>              089f94fd1626        8 weeks ago         2.45GB
 ```
 
 ## 2020-12-10 Deploy
