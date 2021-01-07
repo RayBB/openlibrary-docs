@@ -79,7 +79,7 @@ cd /opt/openlibrary
 7. [x web1, x web2, _ covers0] docker load on all hosts \*3
     - The new docker image should have label "SHA" as well as "latest"
 ```sh
-# ~
+# ~2min
 time docker image prune
 
 # ~2min
