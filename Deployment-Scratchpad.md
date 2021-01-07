@@ -12,24 +12,47 @@ ssh -A ol-home
 
 2. [ ] @mek Checkout infogami 7595ae7 on ol-home
 
-
-
+---
 
 3. [x] @cclauss ol-home0 pull latest code of all repo
-4. [ ] @cclauss ol-home0 build the image
+4. [x] @cclauss ol-home0 build the image \*1
 ```sh
 export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 docker-compose build --pull web
 docker-compose run -uroot --rm home make i18n
 ```
 
-5. [ ] Docker save image
+4. [ ] Create /opt/olimages for everything 
+    - [ ] ol-web1
+    
+
+5. [x] @cdrini Docker save image
 ```sh
+sudo mkdir -p /opt/olimages
+sudo chown root:staff /opt/olimages
+sudo chmod g+w /opt/olimages
+sudo chmod g+s /opt/olimages
+
+cd /opt/openlibrary
+docker image prune # Not necessary; but cleanup
 echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
-docker save oldev:latest | gzip > oldev_latest.tar.gz
+
+cd /opt/olimages
+
+time docker save oldev:latest | gzip > oldev_latest.tar.gz
+# ~3 min, final file 820 MB ; image in docker container ls was 2.6 GB
 ```
 
-6. [ ] Modify fabfile to Rsync docker image to all the hosts 
+
+
+6. [ ] Modify fabfile to rsync docker image to all the hosts 
+
+```sh
+cd /opt/olimages
+rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web1:/opt/olimages/"
+rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web2:/opt/olimages/"
+rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-covers0:/opt/olimages/"
+```
 
 7. [ ] docker load on all hosts
     - The new docker image should have label "SHA" as well as "latest"
@@ -38,7 +61,7 @@ docker load < oldev_latest.tar.gz
 echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
 ```
 
-## for node in ol-web{1,2} ol-covers0
+### for node in ol-web{1,2} ol-covers0
 7. [ ] Down / up
 ```sh
 export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
@@ -48,7 +71,17 @@ docker-compose up --no-deps -d covers
 ```sh
 export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 docker-compose down
-docker-compose up --no-deps -d web
+HOSTNAME="$HOSTNAME" docker-compose up --no-deps -d web
+```
+
+### Notes
+
+1. Hit a docker error: `ERROR: Couldn't connect to docker daemon` . Was not in docker group
+
+```
+# Make sure you're in the docker group, to avoid sudo-ing all the docker commands
+sudo usermod -aG docker USER_NAME
+# Exit/re-enter to take effect
 ```
 
 ## 2020-12-10 Deploy
