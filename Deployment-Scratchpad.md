@@ -76,10 +76,11 @@ cd /opt/openlibrary/vendor/infogami && sudo git pull origin master
 cd /opt/openlibrary
 ```
 
-7. [x web1, _ web2, _ covers0] docker load on all hosts \*3
+7. [x web1, x web2, _ covers0] docker load on all hosts \*3
     - The new docker image should have label "SHA" as well as "latest"
 ```sh
-docker image prune
+# ~
+time docker image prune
 
 # ~2min
 time docker load < /opt/olimages/oldev_latest.tar.gz
@@ -94,7 +95,10 @@ echo "FROM oldev:latest" | docker build -t "oldev:2daebf4bd51fa309ee74d5b2fb7fd2
 7. [ ] Down / up
 ```sh
 export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
-docker-compose up --no-deps -d covers
+# WARNING! Moment of downtime 😬 
+docker-compose down
+docker volume rm openlibrary_ol-vendor openlibrary_ol-build openlibrary_ol-nodemodules
+docker-compose up --no-deps -d --scale covers=2 covers_nginx
 ```
 
 ```sh
