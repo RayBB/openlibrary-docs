@@ -1,5 +1,55 @@
 ## 2021-01-07 Deploy
 
+1. [ ] @mek Modify fabfile to rsync ol code repos to the new servers in their expected directories
+```sh
+cp ol-home:/deploy/latest/opt/openlibrary ol-web1:/opt/openlibrary
+```
+2. [ ] @mek Run old-style deploy from ol-home
+```sh
+ssh -A ol-home
+/olsystem/bin/deploy-code openlibrary
+```
+
+2. [ ] @mek Checkout infogami 7595ae7 on ol-home
+
+
+
+
+3. [x] @cclauss ol-home0 pull latest code of all repo
+4. [ ] @cclauss ol-home0 build the image
+```sh
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
+docker-compose build --pull web
+docker-compose run -uroot --rm home make i18n
+```
+
+5. [ ] Docker save image
+```sh
+echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
+docker save oldev:latest | gzip > oldev_latest.tar.gz
+```
+
+6. [ ] Modify fabfile to Rsync docker image to all the hosts 
+
+7. [ ] docker load on all hosts
+    - The new docker image should have label "SHA" as well as "latest"
+```sh
+docker load < oldev_latest.tar.gz
+echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
+```
+
+## for node in ol-web{1,2} ol-covers0
+7. [ ] Down / up
+```sh
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
+docker-compose up --no-deps -d covers
+```
+
+```sh
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
+docker-compose down
+docker-compose up --no-deps -d web
+```
 
 ## 2020-12-10 Deploy
 
