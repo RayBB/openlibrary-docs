@@ -52,8 +52,8 @@ Sort of issue? On web2, got a weird issue; `git pull origin master` was not pull
 ---
 
 Note: need to build to JS and everything else as well!
-What is the status of https://github.com/internetarchive/openlibrary/issues/2032 ?
 
+What is the status of https://github.com/internetarchive/openlibrary/issues/2032 ?
 
 Option:
 1) Merge your olsystem PR, and test running the old deploy code (should do checkout on all the nodes)
