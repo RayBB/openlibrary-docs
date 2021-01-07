@@ -57,15 +57,16 @@ time rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web2:/opt/oli
 time rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-covers0:/opt/olimages/"
 ```
 
-6. [...] Do old style deploy using mek's code so that it doesn't try to rsync to ol-web{1,2} ol-covers0 ol-home0
+6. [...] Do old style deploy using mek's code so that it doesn't try to rsync to ol-web{1,2} ol-covers0 ol-home0 \*4
     - Put mek's fabfile.py changes into `fab_file_changes.diff`
+
 
 ```sh
 ssh -A ol-home
 /olsystem/bin/deploy-code openlibrary
 ```
 
-6. [_ web1, _ web2, _ covers0] @cclauss git pull latest code
+6. [x web1, x web2, _ covers0] @cclauss git pull latest code
 
 ```sh
 cd /opt/olsystem                    && sudo git pull origin master
@@ -98,7 +99,12 @@ docker-compose up --no-deps -d covers
 ```sh
 export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 docker-compose down
+# Remove these because they contain stale copies of the build/vendor/nodemodules files.
+# Want to use the files inside the docker image, since it's freshly built.
+# NOTE: longer term, we likely don't want these volume mount for production
+docker volume rm openlibrary_ol-vendor openlibrary_ol-build openlibrary_ol-nodemodules
 HOSTNAME="$HOSTNAME" docker-compose up --no-deps -d web
+docker-compose run -uroot --rm home make i18n
 ```
 
 ### Notes
@@ -145,6 +151,8 @@ openlibrary/olbase   <none>              5bc304b7af6a        6 weeks ago        
 openlibrary/olbase   <none>              8b9ba7350023        8 weeks ago         2.46GB
 openlibrary/olbase   <none>              089f94fd1626        8 weeks ago         2.45GB
 ```
+
+4. TODO for @cdrini: Remove all refs to ol-solr2 in olsystem
 
 ## 2020-12-10 Deploy
 
