@@ -22,17 +22,21 @@ docker-compose build --pull web
 docker-compose run -uroot --rm home make i18n
 ```
 
-4. [ ] Create /opt/olimages for everything 
+4. [ ] @cclauss Create /opt/olimages for everything 
     - [ ] ol-web1
-    
+    - [ ] ol-web2
+    - [ ] ol-covers0
+    - [x] @cdrini ol-home0
 
-5. [x] @cdrini Docker save image
 ```sh
 sudo mkdir -p /opt/olimages
 sudo chown root:staff /opt/olimages
 sudo chmod g+w /opt/olimages
 sudo chmod g+s /opt/olimages
+```
 
+5. [x] @cdrini Docker save image
+```sh
 cd /opt/openlibrary
 docker image prune # Not necessary; but cleanup
 echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
