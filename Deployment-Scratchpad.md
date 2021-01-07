@@ -57,7 +57,7 @@ time rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-web2:/opt/oli
 time rsync -a --no-owner --group --verbose oldev_latest.tar.gz "ol-covers0:/opt/olimages/"
 ```
 
-6. [...] Do old style deploy using mek's code so that it doesn't try to rsync to ol-web{1,2} ol-covers0 ol-home0 \*4
+6. [x] Do old style deploy using mek's code so that it doesn't try to rsync to ol-web{1,2} ol-covers0 ol-home0 \*4
     - Put mek's fabfile.py changes into `fab_file_changes.diff`
 
 
@@ -66,7 +66,7 @@ ssh -A ol-home
 /olsystem/bin/deploy-code openlibrary
 ```
 
-6. [x web1, x web2, _ covers0] @cclauss git pull latest code
+6. [x web1, x web2, x covers0] @cclauss git pull latest code
 
 ```sh
 cd /opt/olsystem                    && sudo git pull origin master
@@ -104,8 +104,8 @@ docker-compose down
 # Want to use the files inside the docker image, since it's freshly built.
 # NOTE: longer term, we likely don't want these volume mount for production
 docker volume rm openlibrary_ol-vendor openlibrary_ol-build openlibrary_ol-nodemodules
-HOSTNAME="$HOSTNAME" docker-compose up --no-deps -d web
 docker-compose run -uroot --rm home make i18n
+HOSTNAME="$HOSTNAME" docker-compose up --no-deps -d web
 ```
 
 ### Notes
