@@ -52,6 +52,7 @@ Sort of issue? On web2, got a weird issue; `git pull origin master` was not pull
 ---
 
 Note: need to build to JS and everything else as well!
+What is the status of https://github.com/internetarchive/openlibrary/issues/2032 ?
 
 
 Option:
