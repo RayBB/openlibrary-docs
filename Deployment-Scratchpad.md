@@ -90,13 +90,13 @@ echo "FROM oldev:latest" | docker build -t "oldev:$(git rev-parse HEAD)" -
 ```
 
 ### for node in ol-web{1,2} ol-covers0
-7. [ ] Down / up
+7. [x] Down / up
 ```sh
 export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 # WARNING! Moment of downtime 😬 
 docker-compose down
 docker volume rm openlibrary_ol-vendor openlibrary_ol-build openlibrary_ol-nodemodules
-HOSTNAME="$HOSTNAME" docker-compose up --no-deps -d --scale covers=2 covers_nginx memcached
+HOSTNAME="$HOSTNAME" docker-compose up -d --scale covers=2 covers_nginx memcached
 ```
 
 ```sh
