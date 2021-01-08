@@ -1,5 +1,20 @@
 ## 2021-01-07 Deploy
 
+THINGS WE FORGOT:
+
+1. To down/up infobase:
+
+```sh
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
+docker-compose down
+docker volume rm openlibrary_ol-vendor openlibrary_ol-build openlibrary_ol-nodemodules
+HOSTNAME="$HOSTNAME" docker-compose up -d --no-deps infobase infobase_nginx affiliate-server
+```
+
+2. To check for new errors on Sentry 😅
+
+---
+
 1. [ ] @mek Modify fabfile to rsync ol code repos to the new servers in their expected directories
 ```sh
 cp ol-home:/deploy/latest/opt/openlibrary ol-web1:/opt/openlibrary
