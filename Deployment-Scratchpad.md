@@ -8,7 +8,9 @@
 6. __ol-home0__: rsync the four repos to ol-web{1,2}, ol-covers
 7. __all hosts__: docker-compose up the appropriate docker services for that host
 
-When `start_production_deploy.sh` is run on `ol-home0` it should achieve steps 1 thru 4
+---
+
+When `start_production_deploy.sh` is run on `ol-home0` it should achieve steps 1. thru 4. above.
 ```bash
 #!/bin/bash
 
