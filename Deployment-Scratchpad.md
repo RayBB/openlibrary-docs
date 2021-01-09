@@ -1,12 +1,12 @@
 ## 2021-01-09 Deployment steps
-1. ol-home0: `sudo git pull origin master` the four repos
-2. ol-home0: build new Docker image
-3. ol-home0: docker save the image with both tags `:SHA` and `:latest`
+1. __ol-home0__: `sudo git pull origin master` the four repos
+2. __ol-home0__: build new Docker image
+3. __ol-home0__: docker save the image with both tags `:SHA` and `:latest`
     * Should we used date-time instead of `:SHA`?
-4. ol-home0: rsync the :SHA-tagged image to ol-web{1,2}, ol-covers
-5. ol-web{1,2}, ol-covers: docker image prune && docker load the image with both tags `:SHA` and `:latest`
-6. ol-home0: rsync the four repos to ol-web{1,2}, ol-covers
-7. all hosts: docker-compose up the appropriate docker services for that host
+4. __ol-home0__: rsync the :SHA-tagged image to ol-web{1,2}, ol-covers
+5. __ol-web{1,2}, ol-covers__: docker image prune && docker load the image with both tags `:SHA` and `:latest`
+6. __ol-home0__: rsync the four repos to ol-web{1,2}, ol-covers
+7. __all hosts__: docker-compose up the appropriate docker services for that host
 
 
 ## 2021-01-07 Deploy
