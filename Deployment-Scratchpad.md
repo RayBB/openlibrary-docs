@@ -8,6 +8,65 @@
 6. __ol-home0__: rsync the four repos to ol-web{1,2}, ol-covers
 7. __all hosts__: docker-compose up the appropriate docker services for that host
 
+When `start_production_deploy.sh` is run on `ol-home0` it should achieve steps 1 thru 4
+```bash
+#!/bin/bash
+
+# https://github.com/internetarchive/openlibrary/wiki/Deployment-Scratchpad
+
+# This script must be run on ol-home0 to start a new deployment.
+
+if [[ ${HOSTNAME:-$HOST} != "ol-home0" ]]; then
+    echo "FATAL: Must only be run on ol-home0" ;
+    exit 1 ;
+fi
+
+# `sudo git pull origin master` the core Open Library repos:
+# 1. https://github.com/internetarchive/olsystem
+# 2. https://git.archive.org/jake/booklending_utils
+# 3. https://github.com/internetarchive/openlibrary
+# 4. https://github.com/internetarchive/infogami
+REPO_DIRS="/opt/olsystem /opt/booklending_utils /opt/openlibrary /opt/openlibrary/vendor/infogami"
+for REPO_DIR in $REPO_DIRS
+do
+    cd $REPO_DIR
+    sudo git pull origin master
+done
+
+# These commands were run once and probably do not need to be repeated
+sudo mkdir -p /opt/olimages || true
+sudo chown root:staff /opt/olimages
+sudo chmod g+w /opt/olimages
+sudo chmod g+s /opt/olimages
+docker image prune
+
+# Build the oldev Docker image
+cd /opt/openlibrary
+export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
+docker-compose build --pull web
+docker-compose run -uroot --rm home make i18n
+
+# Add a timestamp tag to the image to facilitate rapid rollback
+TIMESTAMP=$(date +%Y-%m-%d_%H-%M)
+# FILENAME="oldev_$TIMESTAMP.tar.gz"
+FILENAME="oldev_latest.tar.gz"
+echo "FROM oldev:latest" | docker build -t "oldev:$TIMESTAMP" -
+docker image ls
+
+# Compress the image in a .tar.gz file for transfer to other hosts
+cd /opt/olimages
+docker save oldev:$TIMESTAMP | gzip > $FILENAME \*2
+
+# Transfer the .tar.gz image to other hosts
+REMOTE_HOSTS="ol-covers0 ol-web1 ol-web2"
+for REMOTE_HOST in $REMOTE_HOSTS
+do
+    echo "Starting rsync of $FILENAME to $REMOTE_HOST..."
+    rsync -a --no-owner --group --verbose $FILENAME "$REMOTE_HOST:/opt/olimages/"
+    echo "Finished rsync of $FILENAME to $REMOTE_HOST..."
+done
+```
+
 
 ## 2021-01-07 Deploy
 
