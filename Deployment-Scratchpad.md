@@ -1,3 +1,14 @@
+## 2021-01-09 Deployment steps
+1. ol-home0: `sudo git pull origin master` the four repos
+2. ol-home0: build new Docker image
+3. ol-home0: docker save the image with both tags `:SHA` and `:latest`
+    * Should we used date-time instead of `:SHA`?
+4. ol-home0: rsync the :SHA-tagged image to ol-web{1,2}, ol-covers
+5. ol-web{1,2}, ol-covers: docker image prune && docker load the image with both tags `:SHA` and `:latest`
+6. ol-home0: rsync the four repos to ol-web{1,2}, ol-covers
+7. all hosts: docker-compose up the appropriate docker services for that host
+
+
 ## 2021-01-07 Deploy
 
 THINGS WE FORGOT:
@@ -118,8 +129,8 @@ HOSTNAME="$HOSTNAME" docker-compose up -d --scale covers=2 covers_nginx memcache
 export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"
 docker-compose down
 # Remove these because they contain stale copies of the build/vendor/nodemodules files.
-# Want to use the files inside the docker image, since it's freshly built.
-# NOTE: longer term, we likely don't want these volume mount for production
+# Want to use the files inside the docker image since it's freshly built.
+# NOTE: longer term, we likely don't want these volume mounted for production
 docker volume rm openlibrary_ol-vendor openlibrary_ol-build openlibrary_ol-nodemodules
 docker-compose run -uroot --rm home make i18n
 HOSTNAME="$HOSTNAME" docker-compose up --no-deps -d web
@@ -135,7 +146,7 @@ sudo usermod -aG docker USER_NAME
 # Exit/re-enter to take effect
 ```
 
-2. We might want a date-based instead of SHA-based image label, so that this is more human readable (maybe `date +%Y-%m-%dT%H%M`)
+2. We might want a date-based instead of SHA-based image label, so that this is more human-readable (maybe `date +%Y-%m-%dT%H%M`)
 
 3. It looks like `docker load` reloads all the layers!
 
