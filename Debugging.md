@@ -28,5 +28,6 @@ To use:
 Admin login troubles:
 
 - Should login as openlibrary@example.com / admin123
+    - https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin
 - If you ever logged in with something else, it goes a little crazy; reset your docker volumes: `docker-compose build web` and then log in again
 (TODO: Move this to a better documentation page)
