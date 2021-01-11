@@ -124,7 +124,7 @@ This will look at the current database schema, identify its version, and upgrade
 You can log into the OpenLibrary instance as an admin 
 ```
 Username: openlibrary@example.com
-Password: openlibrary
+Password: admin123
 ```
 
 <a name="admin-interface"></a>
