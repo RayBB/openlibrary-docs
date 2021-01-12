@@ -1,4 +1,4 @@
-Open Library hosts a Weekly Community Call every Tuesday @ 11:30am PT https://zoom.us/j/369477551
+Open Library hosts a Weekly Community Call every Tuesday @ 10:00am PT https://zoom.us/j/369477551
 
 ***
 
