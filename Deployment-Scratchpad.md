@@ -1,3 +1,22 @@
+## 2021-01-15 Deployment steps
+Use the scripts from https://github.com/internetarchive/openlibrary/pull/4395
+1. __ol-home0__: Run `scripts/deployment/start_production_deploy.sh`
+    * **NOTE:** Login problem with `booklending_utils` (redo manually)
+2. __ol-home0, ol-web1, ol-covers__: Run `scripts/deployment/continue_production_deploy.sh`
+    * Run the script only until just before the `docker-compose down` step.
+    * Open `https://openlibrary.org/admin?stats`
+    * Once all three hosts are ready, run commands from `docker-compose down` to the bottom of the script.
+    * Check `https://openlibrary.org/admin?stats` and `http://ol-web1.us.archive.org:8080/status`
+3. Repeat step 2 only on the host __ol-web2_
+
+NOTE: On both `ol-web{1, 2}`, the command `docker-compose run -uroot --rm home make i18n` failed with:
+```
+ERROR: An HTTP request took too long to complete. Retry with --verbose to obtain debug information.
+If you encounter this issue regularly because of slow network conditions, consider setting
+    COMPOSE_HTTP_TIMEOUT to a higher value (current value: 60).
+```
+Manually re-running the command finished in a few seconds with no warnings or errors.
+
 ## 2021-01-09 Deployment steps
 1. __ol-home0__: `sudo git pull origin master` the four repos
 2. __ol-home0__: build new Docker image
