@@ -7,7 +7,7 @@ Use the scripts from https://github.com/internetarchive/openlibrary/pull/4395
     * Open `https://openlibrary.org/admin?stats`
     * Once all three hosts are ready, run commands from `docker-compose down` to the bottom of the script.
     * Check `https://openlibrary.org/admin?stats` and `http://ol-web1.us.archive.org:8080/status`
-3. Repeat step 2 only on the host __ol-web2_
+3. Repeat step 2 only on the host __ol-web2__
 
 NOTE: On both `ol-web{1, 2}`, the command `docker-compose run -uroot --rm home make i18n` failed with:
 ```
