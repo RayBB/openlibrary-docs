@@ -17,6 +17,9 @@ If you encounter this issue regularly because of slow network conditions, consid
 ```
 Manually re-running the command finished in a few seconds with no warnings or errors.
 
+THINGS WE FORGOT:
+Old-style install on `ol-home` -- `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`
+
 ## 2021-01-09 Deployment steps
 1. __ol-home0__: `sudo git pull origin master` the four repos
 2. __ol-home0__: build new Docker image
