@@ -1,3 +1,50 @@
+## 2021-01-21
+
+- `solr-updater`
+   - Needed `/opt/.petabox/dbserver`, with perms for openlibrary user +x.
+   - Something weird had happened on ol-home! the .offset files had disappeared :/ Seemed like solr-updater was stuck in a restart loop. Also infobase had been running on it for ~10h. Likely at some point the entire ol-home VM was restarted, causing supervisor to restart all the processes.
+   - Remove the old processes from /etc/supervisor/conf.d, and ran `sudo supervisorctl update`
+   - solr-updater is running ol-home0 from 2021-01-21 ; likely missed ~10h of edits or something. No clue how long the break was.
+   - To check last edit + offset processed by solr-updater on ol-home0: `docker-compose exec solr-updater cat '/solr-updater-data/solr-update.offset'`
+   - To get the last record/datetime: `curl -s "ol-home0:7000/openlibrary.org/log/$(docker-compose exec solr-updater cat '/solr-updater-data/solr-update.offset')?limit=1"`
+- `import-bot`
+   - It launched ok, but we noticed that on both ol-home and ol-home0 we were getting loads of errors:
+
+```
+l: https://openlibrary.org/api/import/ia. Response:
+importbot_1         | 2021-01-21 18:43:06 [178] [openlibrary.importer] [INFO] sleeping for 5 seconds before next attempt.
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.api] [INFO] POST /api/import/ia
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.importer] [WARNING] Failed to contact OL server. error=403 Client Error: Forbidden for url: https://openlibrary.org/api/import/ia. Response:
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.importer] [ERROR] failed with internal error
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.imports] [INFO] set-status professioncallgi0000luca - failed internal-error None
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.importer] [INFO] importing istanbultocairoo0000hump
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.api] [INFO] POST /api/import/ia
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.importer] [WARNING] Failed to contact OL server. error=403 Client Error: Forbidden for url: https://openlibrary.org/api/import/ia. Response:
+importbot_1         | 2021-01-21 18:43:11 [178] [openlibrary.importer] [INFO] sleeping for 5 seconds before next attempt.
+importbot_1         | 2021-01-21 18:43:16 [178] [openlibrary.api] [INFO] POST /api/import/ia
+importbot_1         | 2021-01-21 18:43:17 [178] [openlibrary.importer] [WARNING] Failed to contact OL server. error=403 Client Error: Forbidden for url: https://openlibrary.org/api/import/ia. Response:
+importbot_1         | 2021-01-21 18:43:17 [178] [openlibrary.importer] [INFO] sleeping for 5 seconds before next attempt.
+importbot_1         | 2021-01-21 18:43:22 [178] [openlibrary.api] [INFO] POST /api/import/ia
+importbot_1         | 2021-01-21 18:43:22 [178] [openlibrary.importer] [WARNING] Failed to contact OL server. error=403 Client Error: Forbidden for url: https://openlibrary.org/api/import/ia. Response:
+```
+
+```
+Response: None
+2021-01-21 18:30:31 [2374] [openlibrary.importer] [ERROR] failed with internal error
+2021-01-21 18:30:31 [2374] [openlibrary.imports] [INFO] set-status practicalapproac0000sime_g7a3 - failed internal-error None
+0.0 (1): UPDATE import_item SET status = 'failed', error = 'internal-error', import_time = '2021-01-21T18:30:31.230473', ol_key = NULL WHERE id=2424861
+2021-01-21 18:30:31 [2374] [openlibrary.importer] [INFO] importing catalogueofmisce00slei_5
+2021-01-21 18:30:31 [2374] [openlibrary.api] [INFO] POST /api/import/ia
+/opt/openlibrary/venv/local/lib/python2.7/site-packages/urllib3/util/ssl_.py:139: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning,
+2021-01-21 18:30:31 [2374] [openlibrary.importer] [WARNING] Failed to contact OL server. error=403 Client Error: Forbidden for url: https://openlibrary.org/api/import/ia. Response:
+2021-01-21 18:30:31 [2374] [openlibrary.importer] [INFO] sleeping for 5 seconds before next attempt.
+2021-01-21 18:30:36 [2374] [openlibrary.api] [INFO] POST /api/import/ia
+/opt/openlibrary/venv/local/lib/python2.7/site-packages/urllib3/util/ssl_.py:139: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning,
+2021-01-21 18:30:36 [2374] [openlibrary.importer] [WARNING] Failed to contact OL server. error=403 Client Error: Forbidden for url: https://openlibrary.org/api/import/ia. Response:
+```
+
 ## 2021-01-15 Deployment steps
 Use the scripts from https://github.com/internetarchive/openlibrary/pull/4395
 1. __ol-home0__: Run `scripts/deployment/start_production_deploy.sh`
