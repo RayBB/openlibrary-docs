@@ -1,3 +1,12 @@
+## 2021-01-25
+
+- Using scripts/deployment
+    - 4-minute docker build
+    - need to time make i18n
+    - 4-minute docker save
+    - rsyncs fail :-(
+    
+
 ## 2021-01-21
 
 - `solr-updater`
