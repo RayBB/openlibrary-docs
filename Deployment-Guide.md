@@ -136,13 +136,13 @@ See https://github.com/internetarchive/openlibrary/pull/4457
 scripts/deployment/restart_servers.sh ol-home0 ol-covers0 ol-web1
 ```
 Once ol-web1 turns green in https://openlibrary.org/admin?stats ...
-... Visit ol-web1.us.archive.org:8080/status and ensure that site is functioning as expected.
+... Visit https://ol-web1.us.archive.org:8080/status and ensure that site is functioning as expected.
 
 If you are satisfied that ol-web1 is functioning as expected then reboot ol-web2 as well.
 ```sh
 scripts/deployment/restart_servers.sh ol-web2
 ```
-... Visit ol-web2.us.archive.org:8080/status and ensure that site is functioning as expected.
+... Visit https://ol-web2.us.archive.org:8080/status and ensure that site is functioning as expected.
 
 ---
 
