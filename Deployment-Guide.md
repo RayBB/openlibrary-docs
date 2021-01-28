@@ -122,10 +122,28 @@ On ol-home (make sure you ssh with -A to forwards ssh keys, required if you don'
 
 ```sh
 ssh -A ol-home
-/olsystem/bin/deploy-code openlibrary
+scripts/deployment/deploy.sh
 ```
 
-If `openlibrary` deployment exits with a failure, see the [failed deploys](#failed-deploys) troubleshooting guide.
+If `deploy.sh` exits with a failure, see the [failed deploys](#failed-deploys) troubleshooting guide.
+
+- [ ] Check for [red flags in nagios](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail&limit=0&start=100&limit=100)
+- [ ] Warn Slack channels `openlibrary` and `openlibrary-g` of imminent downtime!
+- [ ] Open https://openlibrary.org/admin?stats so that you can monitor server status
+
+See https://github.com/internetarchive/openlibrary/pull/4457
+```sh
+scripts/deployment/restart_servers.sh ol-home0 ol-covers0 ol-web1
+```
+Once ol-web1 turns green in https://openlibrary.org/admin?stats ...
+... Visit ol-web1.us.archive.org:8080/ an ensure the site is functioning as expected.
+
+If you are satisfied with ol-web1 then reboot ol-web2 as well.
+```sh
+scripts/deployment/restart_servers.sh ol-web2
+```
+
+---
 
 ## Testing Deployment
 
