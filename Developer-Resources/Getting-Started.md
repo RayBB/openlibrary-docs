@@ -214,10 +214,10 @@ In local development, after making changes to CSS or JS, make sure to run `make 
 <a name="memcache"></a>
 ### Memcache
 
-- Infobase queries get cached in memcache. In the dev instance, there is a single-node memcache cluster that you can test by connecting to your test instance using `docker-compose run web bash` and then typing:
+- Infobase queries get cached in memcache. In the dev instance, there is a single-node memcache instance that you can test by connecting to it:
 
 ```python
-$ python
+$ docker-compose run --rm home python
 Python 2.7.6 (default, Mar 22 2014, 22:59:56)
 [GCC 4.8.2] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
@@ -244,7 +244,7 @@ to **DELETE** a memcached entry:
 
 - You can also find memcached items using the Internet Archive ID (import `memcache` instead of `olmemecache`):
 
-```python
+```pyshell
 >>> import yaml
 >>> import memcache
 >>> with open('openlibrary.yml') as in_file:
@@ -257,6 +257,9 @@ to **DELETE** a memcached entry:
 
 <a name="logs"></a>
 ### Logs
+
+| **WARNING: This section is likely out of date and might need to be re-written. |
+| -- |
 
 - Logs for the upstart services will be in `/var/log/upstart/`.
 
@@ -341,6 +344,10 @@ This will look at the current database schema, identify its version, and upgrade
 <a name="using-the-open-library-website"></a>
 
 ### Recaptcha
+
+
+| **WARNING: This section is likely out of date and might need to be re-written. |
+| -- |
 
 - Currently we use reCAPTCHA v2, which validates users based on the "I'm not a robot" checkbox. 
 
