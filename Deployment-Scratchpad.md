@@ -1,3 +1,17 @@
+## 2021-02-02 -- Process to update the infogami submodule...
+
+pwd  # openlibrary/vendor/infogami
+git pull upstream master  # Ensure we have the latest infogami
+git status
+cd ../..
+git status
+git branch
+git checkout -b update-infogami
+git add vendor/infogami
+git status
+git commit -m"update infogami"
+git push --set-upstream origin update-infogami  # Create a PR and merge it
+
 ## 2021-01-25
 
 - Using scripts/deployment
