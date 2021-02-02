@@ -23,6 +23,9 @@
 - [FAQs](#faqs)
 - [Credits](#credits)
 
+## Getting Up & Running
+We use Docker at openlibrary. Follow the instructions on https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment first to get your local copy of Open Library up and running!.
+
 ## Basic Developer Commands
 
 ### start
@@ -62,66 +65,16 @@ $ docker-compose exec web bash # replace "web" with any other service name
 Runs all the tests
 
 ```bash
-$ docker-compose exec web make test
+$ docker-compose run --rm home make test
 ```
 
-We Use Docker at openlibrary. These are some of the basic commands, refer [here](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment) for some more useful commands.
-
-Starts all the OL services:
-
-```bash
-$ docker-compose up
-```
-
-Start a specific service: 
-
-The following command starts the `solr` service in the detached mode 
-
-```bash
-$ docker-compose up --no-deps -d solr
-```
-
-Logs of the services can be found:
-
-```bash
-$ docker-compose logs web # replace "web" with any other service name to see that particular service's log
-```
-
-### shell
-
-Start a bash shell inside the container:
-
-```bash
-$ docker-compose exec web bash # replace "web" with any other service name
-```
-
-### test
-
-Runs all the tests
-
-```bash
-$ docker-compose exec web make test
-```
-## Database Migrations
-
-Occasionally, new tables get added to Open Library database and some existing tables get altered. Scripts are provided to migrate the existing dev instances to new schema.
-
-To migrate an existing dev instance:
-
-```
-$ python setup.py shell
-$ python scripts/migrate_db.py
-```
-
-This will look at the current database schema, identify its version, and upgrade it to the latest version.
-
-<a name="using-the-open-library-website"></a>
-## Using the Open Library Website
+## Using the local Open Library Website
 
 <a name="logging-in"></a>
 ### Logging In
 
-You can log into the OpenLibrary instance as an admin 
+You can log into the Open Library instance as an admin 
+
 ```
 Username: openlibrary@example.com
 Password: admin123
@@ -130,12 +83,13 @@ Password: admin123
 <a name="admin-interface"></a>
 ### Admin Interface
 
-For users with sufficient privileges, an admin interface is available at `http://localhost:8080/admin`.
-
-- If you want to add a new user to the admin group, you can do that at `http://localhost:8080/usergroup/admin`
+For users with sufficient privileges, an admin interface is available at http://localhost:8080/admin.
 
 <a name="creating-users"></a>
 ### Testing the site with different users
+
+| **WARNING: This section is very out of date and needs to be re-written. |
+| -- |
 
 To view and test the site as a non-admin user:
 
@@ -157,6 +111,9 @@ Now you should be able to login as AccountBot using the instructions above and o
 
 <a name="lending-and-borrowing"></a>
 ### Lending and Borrowing
+
+| **WARNING: This section is very out of date and needs to be re-written. |
+| -- |
 
 These instructions are fairly specific to Internet Archive staff who are administrating the Open Library service and who have access to the production olsystem repository.
 
@@ -227,6 +184,8 @@ await fetch(location.href.replace(/[^\/]*$/, 'editions.json?limit=100&offset=0')
 ```
 
 (TIP: You can copy the output of the previous command by running `copy($_)` in the console! [Learn more](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Helpers))
+
+Covers don't quite work correctly on the local environment. To test something with covers, change `coverstore_url` inside `conf/openlibrary.yml` to point to the production covers (covers.openlibrary.org). Avoid uploading when this is set.
 
 <a name="frontend-guide"></a>
 ## Frontend Guide
@@ -362,6 +321,25 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 ```
 
 <a name="recaptcha"></a>
+
+## Database Migrations
+
+| **WARNING: This section is very out of date and needs to be re-written. |
+| -- |
+
+Occasionally, new tables get added to Open Library database and some existing tables get altered. Scripts are provided to migrate the existing dev instances to new schema.
+
+To migrate an existing dev instance:
+
+```
+$ python setup.py shell
+$ python scripts/migrate_db.py
+```
+
+This will look at the current database schema, identify its version, and upgrade it to the latest version.
+
+<a name="using-the-open-library-website"></a>
+
 ### Recaptcha
 
 - Currently we use reCAPTCHA v2, which validates users based on the "I'm not a robot" checkbox. 
