@@ -1,3 +1,21 @@
+## 2021-02-04 -- Deployment...
+
+DO NOT sudo bash (or rsync will be unhappy)
+
+cd /opt/openlibrary
+scripts/deployment/deploy.sh
+Provide userid/password for git.archive.org
+Provide userid/token for github.com
+Q: Why do we get dumped into emacs? (This was sudo bash)
+4 minutes to docker-compose build --pull web
+32 seconds to docker-compose run -uroot --rm home make i18n
+REPOSITORY           TAG                                        IMAGE ID            CREATED             SIZE
+oldev                7dbe17f2a809697acf53766bd89d60443653260d   9c8a9bb06afc        37 seconds ago      2.87GB
+4 minutes to gzip
+1 minute per server to rsync image plus repos
+Need to time docker load
+
+
 ## 2021-02-02 -- Process to update the infogami submodule...
 
 pwd  # openlibrary/vendor/infogami
