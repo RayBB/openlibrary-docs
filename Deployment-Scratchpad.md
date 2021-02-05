@@ -2,7 +2,7 @@
 
 DO NOT sudo bash (or rsync will be unhappy)
 
-cd /opt/openlibrary
+OL-HOME0 cd /opt/openlibrary
 scripts/deployment/deploy.sh
 Provide userid/password for git.archive.org
 Provide userid/token for github.com
