@@ -52,7 +52,8 @@ Broswe `ol-web2.us.archive.org:8080/status`:
 * [x] Software version 	[c446875]
 * [x] Python version 	3.8.6
 * [x] Host 	        ol-web1.us.archive.org
-* [ ] Browse -- Perfect!
+* [x] Browse -- Perfect!
+
 DONE!
 
 ## 2021-02-04 -- Deployment...
