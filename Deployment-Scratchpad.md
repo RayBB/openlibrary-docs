@@ -20,7 +20,10 @@ When running deploy you must enter:
 One Docker image download failed so `deploy.sh` needed to be halted and rerun.
 
 After deploy.sh finishes successfully, run
-`/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-home0, ol-covers0, ol-web1
+`/opt/openlibrary/scripts/deployment/restart_servers.sh` on:
+* [ ] ol-home0
+* [ ] ol-covers0
+* [ ] ol-web1
 
 ```
 Creating openlibrary_covers_2    ... error
