@@ -32,7 +32,7 @@ ERROR: for covers  Cannot create container for service covers: failed to mkdir /
 Encountered errors while bringing up the project.
 ```
 
-https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
+* [ ] https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
 
 Broswe `ol-web1.us.archive.org:8080/status`:
 * [x] Software version 	[c446875]
@@ -45,8 +45,14 @@ Broswe `ol-web1.us.archive.org:8080/status`:
 Old-style deploy: `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`
 
 Once things look stable and correct...
-* [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-covers0
-https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
+* [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-web2
+* [ ] https://openlibrary.org/admin?stats ol-web2 goes green --> red --> green
+
+Broswe `ol-web2.us.archive.org:8080/status`:
+* [x] Software version 	[c446875]
+* [x] Python version 	3.8.6
+* [x] Host 	        ol-web1.us.archive.org
+* [ ] Browse -- Perfect!
 DONE!
 
 ## 2021-02-04 -- Deployment...
