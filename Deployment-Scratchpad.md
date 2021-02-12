@@ -2,6 +2,23 @@
 
 ## 2021-02-12 -- Deployment...
 
+> Check for red flags in nagios
+
+How do I log in???
+
+Not confident about all repos:
+1. are set to the master branch
+2. have no uncommitted changes
+3. `git pull` works properly
+
+Created a script in `~cclauss/are_repos_in_sync.sh` to ensure repos are all using the same SHA on all hosts
+
+When running deploy you must enter:
+1: GitLab id and password
+2: GitHub id and password
+
+One Docker image download failed and deploy needed to be rerun.
+
 
 ## 2021-02-04 -- Deployment...
 
