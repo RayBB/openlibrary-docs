@@ -19,6 +19,35 @@ When running deploy you must enter:
 
 One Docker image download failed and deploy needed to be rerun.
 
+After deploy.sh finishes successfully, run
+`/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-home0, ol-covers0, ol-web1
+
+```
+Creating openlibrary_covers_2    ... error
+Creating openlibrary_memcached_1 ... done
+
+ERROR: for openlibrary_covers_2  Cannot create container for service covers: failed to mkdir /var/lib/docker/volumes/openlibrary_ol-vendor/_data/infogami/infogami: mkdir /var/lib/docker/volumes/openlibrary_ol-vendor/_data/infogami/infogami: file exists
+
+ERROR: for covers  Cannot create container for service covers: failed to mkdir /var/lib/docker/volumes/openlibrary_ol-vendor/_data/infogami/infogami: mkdir /var/lib/docker/volumes/openlibrary_ol-vendor/_data/infogami/infogami: file exists
+Encountered errors while bringing up the project.
+```
+
+https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
+
+Broswe `ol-web1.us.archive.org:8080/status`:
+* [x] Software version 	[c446875]
+* [x] Python version 	3.8.6
+* [x] Host 	        ol-web1.us.archive.org
+* [ ] Browse -- No covers
+    * Rerun `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-covers0
+    * Do Old-style deploy
+
+Old-style deploy: `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`
+
+Once things look stable and correct...
+* [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-covers0
+https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
+DONE!
 
 ## 2021-02-04 -- Deployment...
 
