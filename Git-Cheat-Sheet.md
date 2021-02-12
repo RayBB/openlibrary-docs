@@ -5,6 +5,7 @@ Contents:
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
+- [Resolving Rebase Conflicts](#resolving-rebase-conflicts)
 
 ## Setting Up
 1. Fork the Open Library repository using the GitHub UI by logging in to Github, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
@@ -98,6 +99,10 @@ git rebase master
 | --- |
 | Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. |
 
+| Info |
+| --- |
+| Sometimes there will be changes in the master branch to the same lines in your branch. This results in a conflict, because `git` can't decide which changes to use. See [Resolving rebase conflicts](#resolving-rebase-conflicts). |
+
 3. Make your edits and commit (same as steps 3 in [Creating a Pull Request](#creating-a-pull-request)).
 
 4. Push your changes up.
@@ -112,7 +117,6 @@ git push origin HEAD
 | --- |
 | Force pushing _replaces_ the commits on the remote branch with the commits on your local branch. Non-force pushing just adds new commits. Whenever you perform a rebase, you will have to force push to your branch. |
 | You should only force push if working on one of your own branches. If working on a branch which other people are also pushing to, force pushing is dangerous because it can override others' work. In that case, use `--force-with-lease`; this will force push _only_ if someone else hasn't made any changes to the branch. |
-
 
 ## Commit History Manipulation
 
@@ -159,9 +163,15 @@ pick 23961be Clean up trailing whitespace
 
 If you decide you want to cancel the rebase, delete everything, and then save. That tells `git` to do nothing.
 
-To continue with the rebase, save the file. `git` will then replay all the instructions/commits in that file. If it hits a conflict, it will stop, and let you fix it. I find fixing conflicts in VS Code to be best; open up the Source Control panel (Ctrl-Shift-G). Conflicts will be shown in red at the top with a "C" next to them. Click on it to find and resolve the conflicts. Once you've resolved them all, press the "+" button next to the file in the source control panel; this is the same as running `git add FILE`. Once you've resolved all the conflicts, run `git rebase --continue` to continue.
+To continue with the rebase, save the file. `git` will then replay all the instructions/commits in that file. If there is a conflict, it will pause to let you fix them. See [Resolving rebase conflicts](#resolving-rebase-conflicts).
 
-If the conflicts look too much, and you want to abandon it and cancel, run `git rebase --abort`.
+## Resolving Rebase Conflicts
+
+Sometimes when you `rebase` your branch, you will get conflicts! This happens when the master branch edited some of the same lines that your branch has edited, and `git` can't determine which changes to use. So it asks you to decide :)
+
+If it hits a conflict during the rebase, it will stop, and let you fix it. I find fixing conflicts in VS Code to work well. In VS Code, open up the Source Control panel (Ctrl-Shift-G). Conflicts will be shown in red at the top with a "C" next to them. Click on the file to find and resolve the conflicts. Once you've resolved them all, press the "+" button next to the file in the source control panel; this is the same as running `git add FILE`. Once you've resolved all the conflicts, run `git rebase --continue` to continue the rebase.
+
+If the conflicts look too much, and you want to abandon the rebase and go back to where your code was before, run `git rebase --abort`.
 
 ## References
 - Getting Started flow roughly based on https://gist.github.com/Chaser324/ce0505fbed06b947d962
