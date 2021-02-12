@@ -6,7 +6,7 @@
 
 How do I log in???
 
-Not confident about all repos:
+Not confident that all repos:
 1. are set to the master branch
 2. have no uncommitted changes
 3. `git pull` works properly
