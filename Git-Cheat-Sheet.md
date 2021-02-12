@@ -135,6 +135,7 @@ git rebase -i master
 | Info |
 | --- |
 | By default, `git` will open up an editor in your terminal (likely `vim`). If you would rather use VS Code, run `git config --global core.editor "code"` once, and then `git` will always use VS Code when prompting for a rebase, or a commit message. |
+| If you happen to find yourself stuck in `vim` and don't know how to get out, press `ggdG:wq` (in order: `g` for "go to", `g` for "top of file", `d` for delete, `G` for "to bottom of file". So `ggdG` is for "go to the top of the file, and delete everything". This is how you cancel `git rebase -i`. Then: `:` for "enter command-line mode", `w` for "save", `q` for "quit". So `wq` is "save and quit". If you're interested in learning more about `vim`, see https://vim.fandom.com/wiki/Tutorial |
 
 This will open a text editor, and let you edit all the commits that your branch has. It will look something like this:
 
