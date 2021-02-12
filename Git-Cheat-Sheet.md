@@ -159,5 +159,9 @@ pick 23961be Clean up trailing whitespace
 
 If you decide you want to cancel the rebase, delete everything, and then save. That tells `git` to do nothing.
 
+To continue with the rebase, save the file. `git` will then replay all the instructions/commits in that file. If it hits a conflict, it will stop, and let you fix it. I find fixing conflicts in VS Code to be best; open up the Source Control panel (Ctrl-Shift-G). Conflicts will be shown in red at the top with a "C" next to them. Click on it to find and resolve the conflicts. Once you've resolved them all, press the "+" button next to the file in the source control panel; this is the same as running `git add FILE`. Once you've resolved all the conflicts, run `git rebase --continue` to continue.
+
+If the conflicts look too much, and you want to abandon it and cancel, run `git rebase --abort`.
+
 ## References
 - Getting Started flow roughly based on https://gist.github.com/Chaser324/ce0505fbed06b947d962
