@@ -17,7 +17,7 @@ When running deploy you must enter:
 1. GitLab id and password
 2. GitHub id and password
 
-One Docker image download failed and deploy needed to be rerun.
+One Docker image download failed so `deploy.sh` needed to be halted and rerun.
 
 After deploy.sh finishes successfully, run
 `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-home0, ol-covers0, ol-web1
