@@ -1,3 +1,8 @@
+## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
+
+## 2021-02-12 -- Deployment...
+
+
 ## 2021-02-04 -- Deployment...
 
 DO NOT sudo bash (or rsync will be unhappy)
