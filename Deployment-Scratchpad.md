@@ -14,8 +14,8 @@ Not confident that all repos:
 Created a script in `~cclauss/are_repos_in_sync.sh` to ensure repos are all using the same SHA on all hosts
 
 When running deploy you must enter:
-1: GitLab id and password
-2: GitHub id and password
+1. GitLab id and password
+2. GitHub id and password
 
 One Docker image download failed and deploy needed to be rerun.
 
