@@ -51,7 +51,7 @@ Once things look stable and correct...
 Broswe `ol-web2.us.archive.org:8080/status`:
 * [x] Software version 	[c446875]
 * [x] Python version 	3.8.6
-* [x] Host 	        ol-web1.us.archive.org
+* [x] Host 	        ol-web2.us.archive.org
 * [x] Browse -- Perfect!
 
 DONE!
