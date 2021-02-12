@@ -128,6 +128,10 @@ git rebase -i master
 | --- |
 | The `-i` is for interactive. The command is also specified often as something like `git rebase -i HEAD~2`. `HEAD` refers to the current, latest commit in your branch; `~2` goes back 2 in the history, so you'll be manipulating the last 2 commits. `git rebase -i master` lets you manipulate all the commits on your branch. |
 
+| Info |
+| --- |
+| By default, `git` will open up an editor in your terminal (likely `vim`). If you would rather use VS Code, run `git config --global core.editor "code"` once, and then `git` will always use VS Code when prompting for a rebase, or a commit message. |
+
 This will open a text editor, and let you edit all the commits that your branch has. It will look something like this:
 
 ```
@@ -153,7 +157,7 @@ pick 23961be Clean up trailing whitespace
 # These lines can be re-ordered; they are executed from top to bottom.
 ```
 
-If you see something you don't expect in this file, delete everything, and then save. That tells `git` to do nothing.
+If you decide you want to cancel the rebase, delete everything, and then save. That tells `git` to do nothing.
 
 ## References
 - Getting Started flow roughly based on https://gist.github.com/Chaser324/ce0505fbed06b947d962
