@@ -39,7 +39,7 @@ git checkout master
 git pull upstream master
 ```
 
-2. [Create a new branch for the feature of issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.
+2. [Create a new branch for the feature or issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.
 
 ```sh
 git checkout -b 1234/fix/fix-the-thing
