@@ -22,7 +22,7 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 
 | Responsibility                 | Lead | Github Label |
 |--------------------------------|------|---|
-| Product Lead & Policy          | [@mekarpeles](https://github.com/mekarpeles) | [`priority`](https://github.com/internetarchive/openlibrary/labels?utf8=%E2%9C%93&q=priority), [`roadmap`](https://github.com/internetarchive/openlibrary/projects/11), [`epic`](https://github.com/internetarchive/openlibrary/labels/epic) |
+| Product Lead & Policy          | [@mekarpeles](https://github.com/mekarpeles) | [`priority`](https://github.com/internetarchive/openlibrary/labels?utf8=%E2%9C%93&q=priority), [`roadmap`](https://github.com/internetarchive/openlibrary/projects/28), [`epic`](https://github.com/internetarchive/openlibrary/labels/epic) |
 | Metadata Catalog               | [@mekarpeles](https://github.com/mekarpeles) | [`metadata`](https://github.com/internetarchive/openlibrary/labels/metadata), [`data-cleaup`](https://github.com/internetarchive/openlibrary/labels/Data%20Cleanup) |
 | Site Reliability & Deployment  | [@mekarpeles](https://github.com/mekarpeles) / [@cdrini](https://github.com/cdrini) | [`blocker`](https://github.com/internetarchive/openlibrary/labels/blocker) |
 | Lead Community Librarian       | [@seabelis](https://github.com/seabelis) | [`editing`](https://github.com/internetarchive/openlibrary/labels/editing) |
@@ -40,7 +40,7 @@ Have a question and not sure who to ask? (Current as of 2019-04)
 If you're joining the design and product team, you probably have a bunch of the following questions:
 
 Reference Materials:
-- [What is the current feature roadmap?](https://github.com/internetarchive/openlibrary/projects/11)
+- [What is the current feature roadmap?](https://github.com/internetarchive/openlibrary/projects/28)
 - [Where can I find an ecosystem diagram?](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
 - Where can I find [lending](https://openlibrary.org/stats/lending) or [page view](https://archive.org/stats/#openlibrary) analytics or stats for Open Library?
 
