@@ -6,6 +6,7 @@
 [Weekly Community Calls](https://docs.google.com/document/d/1YXh4SvaY9kyI-IIYnVQPDQIeDHoDcvvqvyHfkkTfPX8)  
 [Google Summer of Code](Google-Summer-of-Code)  
 [Hacktoberfest (October)](Hacktoberfest)  
+[View 2021 Roadmap](https://docs.google.com/document/d/1U2zolE0q_H4ydO4ss4RvD9Tv-DJpNMs4T9k8Qxef20A/edit#heading=h.exy6eztn4j46)
 
 ---
 
