@@ -1,5 +1,15 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
+## 2021-03-04 -- Deployment...
+Do old-style deploy FIRST
+
+One cover job failed on an error -- Restarting the server cleaned it up.
+
+Troubles on ol-home because of
+1. a lack of diskspace
+    * Remove older files from ol-home:/opt/openlibrary/deploys/openlibrary
+2. Problems with one or more PRs in the deployment
+
 ## 2021-02-12 -- Deployment...
 
 > Check for red flags in nagios
