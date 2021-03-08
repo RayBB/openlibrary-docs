@@ -41,7 +41,7 @@
 ---
 
 **[Librarian Resources](https://openlibrary.org/about/lib)**  
-[Creating Community Lists](Creating-Community-Lists) 
+[Creating Community Lists](Creating-Community-Lists)  
 [Library Metadata Standards](Library-Metadata-Standards)  
 [Guide to Identifiers](Guide-to-Identifiers)  
 [Contributing to Internationalization](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
