@@ -4,7 +4,9 @@ https://openlibrary.org/people/booklists
 1. An administrator may login to this account by going to:
 https://openlibrary.org/admin/people/booklists
 
-Note: You must be logged in to Open Library in order to create or add to a list.
+Note 1: These same instructions should work for your own personal account if you have a list of Open Library identifiers (olids) and want to test creating a list in bulk.
+
+Note 2: You must be logged in to Open Library in order to create or add to a list.
 
 2. Once logged in, a list must be created manually for at least 1 seed and given a "title" and a "description".
 
@@ -47,4 +49,4 @@ await fetch("https://openlibrary.org/people/booklists/lists/OL194558L/seeds.json
 });
 ```
 
-Note: I (@mekarpeles) believe this list is limited to either 50 or 100 keys at a time. And a key must be of the form `/works/OL...W` or `/books/OL...M`, etc. They can't be urls like `https://openlibrary.org/works/OL...W` and they can't include slugs like `/works/OL...W/hello-world`.
+Note 3: I (@mekarpeles) believe this list is limited to either 50 or 100 keys at a time. And a key must be of the form `/works/OL...W` or `/books/OL...M`, etc. They can't be urls like `https://openlibrary.org/works/OL...W` and they can't include slugs like `/works/OL...W/hello-world`.
