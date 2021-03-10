@@ -1,10 +1,10 @@
-[**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/organizations/6482109326163968/)
+[**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/organizations/5089442861154304/)
 
 ***
 
 # Welcome
 
-Google Summer of Code (GSoC) is a global program (paid internship) focused on bringing more student developers into open source software development. Students work with an open source organization on a 3 month programming project during their break from school. You can read more [on Google's GSoC website](https://summerofcode.withgoogle.com). The program is run by Google, which selects aligns organizations to mentor students on projects.
+Google Summer of Code (GSoC) is a global program (paid mentorship program) focused on bringing more student developers into open source software development. Students work with an open source organization on a 3 month programming project during their break from school. You can read more [on Google's GSoC website](https://summerofcode.withgoogle.com). The program is run by Google, which selects aligns organizations to mentor students on projects.
 
 Candidates (active students) apply by submitting an application to one or more participating/mentoring organization. Open Library GSoC projects may span everything from writing bots to imports or organize books, to new crowd-source programs which allow patrons to fund and sponsor books they love for the library.
 
@@ -44,13 +44,13 @@ e.g.
 
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
 
-> The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit Open Library and borrow books. First we'll add an option to account creation which allows users to select their country and language (see issue #XXX on github)...
+> The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit Open Library and borrow books. First, we'll add an option to account creation that allows users to select their country and language (see issue #XXX on github)...
 
 ## What Does a Good Proposal Look Like?
 A good summary addresses the following 6 questions (replace `Open Library` with whatever project you're applying for): 
 
 1) What is Open Library
-> Open Library is a non-profit website run by Internet Archive. It tries to catalog every book in the world and has web pages for over 27 million book editions. 4M of the books in their catalog are made accessible online by Internet Archive for reading and controlled digital lending.
+> Open Library is a non-profit website run by Internet Archive. It tries to catalog every book in the world and has web pages for over 27 million book editions. 4M of the books in their catalog is made accessible online by Internet Archive for reading and controlled digital lending.
 2) Why is Open Library important
 > Not every library is equal. Some cities don’t have libraries at all. Open Library is an opportunity to provide equal opportunity to readers all over the globe.
 3) What Opportunity exists for Open Library
@@ -60,8 +60,10 @@ A good summary addresses the following 6 questions (replace `Open Library` with 
 5) What does the solution look like?
 > For GSoC 2019, we’d like to test this hypothesis by adding a `Sponsor this Book` button that will show up on the 23M remaining books which Open Library knows about but have not yet been obtained.
 6) What does success for Open Library look like? What is the potential impact, who will benefit?
-> For Open Library, success means establishing an new distribution channel to receive donations, promoting long term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
+> For Open Library, success means establishing a new distribution channel to receive donations, promoting long-term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
 
 # History
+- [Google Summer of Code 2021](Google-Summer-of-Code-2021)
+- [Google Summer of Code 2020](Google-Summer-of-Code-2020)
 - [Google Summer of Code 2019](Google-Summer-of-Code-2019)
 - [Google Summer of Code 2018](Google-Summer-of-Code-2018)
