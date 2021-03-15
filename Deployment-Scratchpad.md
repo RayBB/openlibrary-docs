@@ -22,9 +22,9 @@
 - [ ] Run `~/are_repos_in_sync.sh` to ensure the three servers have the same Docker latest.
 After deploy.sh finishes successfully, run
 `/opt/openlibrary/scripts/deployment/restart_servers.sh` on:
-- [ ] ol-home0
-- [ ] ol-covers0
-- [ ] ol-web1
+    - [ ] ol-home0
+    - [ ] ol-covers0
+    - [ ] ol-web1
 - [ ] https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
 
 Browse http://ol-web1.us.archive.org:8080/status :
