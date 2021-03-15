@@ -1,7 +1,53 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
+## 2021-03-15 -- Deployment
+- [ ] Open a terminal tab and log into ol-home0
+- [ ] Open a terminal tab and log into ol-covers0
+- [ ] Open a terminal tab and log into ol-web1
+- [ ] Open https://openlibrary.org/admin?stats so that you can monitor server status
+- [ ] **Warn Slack channels `openlibrary` and `openlibrary-g` of imminent downtime!**
+- [ ] On `ol-home0`
+    - [ ] cd /opt/openlibrary
+    - [ ] sudo git checkout master && sudo git pull
+    - [ ] make git
+    - [ ] cd /opt/olsystem
+    - [ ] sudo git checkout master && sudo git pull  # -- Enter GitHub userid & token
+    - [ ] cd /opt/booklending-utils
+    - [ ] sudo git checkout master && sudo git pull  # -- Enter git.archive.org userid & password
+    - [ ] cd /opt/openlibrary
+- [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending-utils
+- [ ] Run `~/are_repos_in_sync.sh` to ensure the three servers are in sync.
+- [ ] Start an old-style deploy: `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`
+- [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
+- [ ] Run `~/are_repos_in_sync.sh` to ensure the three servers have the same Docker latest.
+After deploy.sh finishes successfully, run
+`/opt/openlibrary/scripts/deployment/restart_servers.sh` on:
+- [ ] ol-home0
+- [ ] ol-covers0
+- [ ] ol-web1
+- [ ] https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
+
+Browse http://ol-web1.us.archive.org:8080/status :
+- [ ] Software version 	[???]
+- [ ] Python version 	3.8.6
+- [ ] Host 	        ol-web1.us.archive.org
+- [ ] Browse the site looking for issues
+
+Once things look stable and correct...
+- [ ] Log out of ol-web1 and into ol-web2
+- [ ] Sync the repos
+- [ ] Run `~/are_repos_in_sync.sh` to ensure the repos and Docker latest match all other servers
+- [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-web2
+- [ ] https://openlibrary.org/admin?stats ol-web2 goes green --> red --> green
+
+Broswe `ol-web2.us.archive.org:8080/status`:
+- [ ] Software version 	[???]
+- [ ] Python version 	3.8.6
+- [ ] Host 	        ol-web2.us.archive.org
+- [ ] Browse -- Perfect!
+
 ## 2021-03-04 -- Deployment...
-Do old-style deploy FIRST
+Do old-style deploy EARLY
 
 One cover job failed on an error -- Restarting the server cleaned it up.
 
