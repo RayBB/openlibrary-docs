@@ -21,8 +21,8 @@
 - [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
 - [ ] Run `~/are_repos_in_sync.sh` to ensure the three servers have the same Docker latest.
 
-After deploy.sh finishes successfully, run
-`/opt/openlibrary/scripts/deployment/restart_servers.sh` on:
+After deploy.sh finishes successfully,
+- [ ] run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on:
     - [ ] ol-home0
     - [ ] ol-covers0
     - [ ] ol-web1
