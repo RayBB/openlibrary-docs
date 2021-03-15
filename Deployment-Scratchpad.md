@@ -41,7 +41,7 @@ Once things look stable and correct...
 - [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-web2
 - [ ] https://openlibrary.org/admin?stats ol-web2 goes green --> red --> green
 
-Broswe `ol-web2.us.archive.org:8080/status`:
+Broswe ol-web2.us.archive.org:8080/status :
 - [ ] Software version 	[???]
 - [ ] Python version 	3.8.6
 - [ ] Host 	        ol-web2.us.archive.org
