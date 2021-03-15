@@ -118,7 +118,7 @@ Otherwise, (if your change only affects `olsystem` configs and not `openlibrary`
 
 ## Deploying OpenLibrary
 
-On ol-home (make sure you ssh with -A to forwards ssh keys, required if you don't want "permission denied for pubkey" errors or restart) issue the following commands to initiate a deployment to all production nodes:
+On ol-home (make sure you ssh with -A to forwards ssh keys, required if you don't want "permission denied for pubkey" errors or restart) issue the following [commands](https://github.com/internetarchive/openlibrary/tree/master/scripts/deployment) to initiate a deployment to all production nodes:
 
 ```sh
 ssh -A ol-home0
