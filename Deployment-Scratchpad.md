@@ -22,6 +22,13 @@
 - [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers have the same Docker latest.
 
 **ADD A PIECE ON ROLLBACK WITH AND WITHOUT VOLUME MOUNTS**
+* https://docs.docker.com/engine/reference/commandline/tag
+To do a rollback on `ol-home0`:
+1. `docker image ls`
+2. Write down the Docker `IMAGE ID` that you want to roll back to.
+3. `docker tag oldev:<IMAGE ID> oldev:latest`
+4. Run `/opt/openlibrary/scripts/deployments/restart_servers.sh`
+5. Repeat the above steps as required on `ol-covers0`, `ol-web1`, `ol-web2`
 
 **EnvVariable $OLDEV_DOCKER_SHA for which Docker image to use oldev:latest vs oldev:SomeSHA**
 
