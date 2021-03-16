@@ -17,7 +17,8 @@
     - [ ] cd /opt/openlibrary
 - [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending-utils
 - [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers are in sync.
-- [ ] Start an old-style deploy: `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`
+- [ ] ~Start an old-style deploy: `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`~
+- [ ] Copy files out Docker image and put them on `ol-www1`
 - [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
 - [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers have the same Docker latest.
 
