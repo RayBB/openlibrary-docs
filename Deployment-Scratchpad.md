@@ -9,7 +9,7 @@
 - [ ] On `ol-home0`
     - [ ] cd /opt/openlibrary
     - [ ] sudo git checkout master && sudo git pull
-    - [ ] make git
+    - [ ] sudo make git
     - [ ] cd /opt/olsystem
     - [ ] sudo git checkout master && sudo git pull  # -- Enter GitHub userid & token
     - [ ] cd /opt/booklending-utils
