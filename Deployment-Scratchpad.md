@@ -1,5 +1,18 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
+Open an ssh tunnel; i.e. ssh -L 8080:ol-web1:8080 -qAy cclauss@sshgw-sf.us.archive.org
+Then you'll be able to test at localhost:8080
+```
+# Make a backup of static assets
+ssh -A ol-www1 'sudo cp -r /opt/openlibrary/openlibrary/static /opt/openlibrary/openlibrary/_static'
+STATIC_DIR=/tmp/ol-static-$(date '+%Y-%m-%d')
+docker cp $(docker create --rm oldev:latest):/openlibrary/static $STATIC_DIR
+rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
+# TODO: There's another static dir!
+ssh -A ol-www1 "sudo mkdir -p /opt/openlibrary/openlibrary/static-new && sudo cp -r $STATIC_DIR/* /opt/openlibrary/openlibrary/static-new"
+ssh -A ol-www1 'sudo chown -R openlibrary:openlibrary /opt/openlibrary/openlibrary/static-new'
+ssh -A ol-www1 'sudo rm -r /opt/openlibrary/openlibrary/static && sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
+```
 ## 2021-03-15 -- Deployment
 - [ ] Open a terminal tab and log into ol-home0
 - [ ] Open a terminal tab and log into ol-covers0
