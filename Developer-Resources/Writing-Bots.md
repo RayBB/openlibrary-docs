@@ -57,4 +57,5 @@ The following are **legacy examples** which used `api.py` (which is deprecated) 
 
 # `Bot` Opportunities
 Migrated to https://github.com/internetarchive/openlibrary/issues/2863
+
 Also see [`Ideas for new bots`](https://github.com/internetarchive/openlibrary-bots/labels/Ideas%20for%20new%20bots)
