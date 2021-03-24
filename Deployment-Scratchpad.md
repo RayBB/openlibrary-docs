@@ -1,6 +1,7 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
-## 2021-03-24 -- Deployment -- Lot's of dependency updates after turning on dependabot
+## 2021-03-24 -- Deployment -- IMAGE ID b634610574fc
+* Lot's of dependency updates after turning on dependabot
 - [ ] Follow 2021-03-15 gameplan below
 
 ---
