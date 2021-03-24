@@ -4,8 +4,10 @@
 - [ ] Open a terminal tab and log into ol-home0
 
 ---
+
 Open an ssh tunnel; i.e. ssh -L 8080:ol-web1:8080 -qAy cclauss@sshgw-sf.us.archive.org
 Then you'll be able to test at localhost:8080
+
 ---
 ```
 # Make a backup of static assets
