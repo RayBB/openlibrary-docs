@@ -1,7 +1,7 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
-## 2021-03-15 -- Deployment
-- [ ] Open a terminal tab and log into ol-home0
+## 2021-03-24 -- Deployment -- Lot's of dependency updates after turning on dependabot
+- [ ] Follow 2021-03-15 gameplan below
 
 ---
 
@@ -38,9 +38,9 @@ ssh -A ol-www1 'sudo rm -r /opt/openlibrary/openlibrary/static && sudo mv /opt/o
     - [ ] cd /opt/openlibrary
 - [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending_utils
 - [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers are in sync.
+- [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
 - [ ] ~Start an old-style deploy: `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`~
 - [ ] Copy files out Docker image and put them on `ol-www1`
-- [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
 - [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers have the same Docker latest.
 
 **ADD A PIECE ON ROLLBACK WITH AND WITHOUT VOLUME MOUNTS**
