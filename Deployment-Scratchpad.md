@@ -12,7 +12,7 @@ Then you'll be able to test at localhost:8080
 ---
 ```
 # Make a backup of static assets
-ssh -A ol-www1 'sudo cp -r /opt/openlibrary/openlibrary/static /opt/openlibrary/openlibrary/_static'
+ssh -A ol-www1 'sudo cp -r /opt/openlibrary/openlibrary/static /opt/openlibrary/openlibrary/static_backup'
 STATIC_DIR=/tmp/ol-static-$(date '+%Y-%m-%d')
 docker cp $(docker create --rm oldev:latest):/openlibrary/static $STATIC_DIR
 rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
