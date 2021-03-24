@@ -29,4 +29,5 @@ Admin login troubles:
 - Should login as openlibrary@example.com / admin123
     - https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin
 - If you ever logged in with something else, it goes a little crazy; reset your docker volumes: `docker-compose build web` and then log in again
+- If you're running Linux ensure that a docker group is created, and you are a member of the group. If you are not a member of the group you may not be able to access admin while logging in.
 (TODO: Move this to a better documentation page)
