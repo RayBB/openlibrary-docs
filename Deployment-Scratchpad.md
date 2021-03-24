@@ -25,10 +25,10 @@ ssh -A ol-www1 'sudo rm -r /opt/openlibrary/openlibrary/static && sudo mv /opt/o
     - [ ] sudo make git
     - [ ] cd /opt/olsystem
     - [ ] sudo git checkout master && sudo git pull  # -- Enter GitHub userid & token
-    - [ ] cd /opt/booklending-utils
+    - [ ] cd /opt/booklending_utils
     - [ ] sudo git checkout master && sudo git pull  # -- Enter git.archive.org userid & password
     - [ ] cd /opt/openlibrary
-- [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending-utils
+- [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending_utils
 - [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers are in sync.
 - [ ] ~Start an old-style deploy: `ssh -A ol-home /olsystem/bin/deploy-code openlibrary`~
 - [ ] Copy files out Docker image and put them on `ol-www1`
