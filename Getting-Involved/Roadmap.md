@@ -1,16 +1,22 @@
-# Active Roadmap
-
+# Active Work
 https://github.com/internetarchive/openlibrary/projects/11
 
-## 2019
+# Past Roadmaps
 
-https://docs.google.com/document/d/16rxDNLnVBbkrgzUNd2YVFheB4UtAe63Y-dX_5MHSrY8/edit#heading=h.n0o9aed9lyeh
+## 2021
+https://docs.google.com/document/d/1AfgtFGAufNKtxl7wllBEXBO2lo0O_I2uPxYQ-HLvWz4/
+
+## 2020
+https://docs.google.com/document/d/1gP5q0W3S2Fj5GMJMzi064CEy1zWzyl8Lzjgws-7lpt4/
+
+## 2019
+https://docs.google.com/document/d/16rxDNLnVBbkrgzUNd2YVFheB4UtAe63Y-dX_5MHSrY8/
 
 ## 2018
-https://docs.google.com/document/d/1wpa4f-r8jBimam-36CAZGQ_QjApegm10XfH85eG7KAE/edit#
+https://docs.google.com/document/d/1wpa4f-r8jBimam-36CAZGQ_QjApegm10XfH85eG7KAE/
 
 ### Q2
-https://docs.google.com/document/d/1yLWc335qsLyMPbWULMj25VGBX-ruJrcBH0JpfLzxy0Y/edit
+https://docs.google.com/document/d/1yLWc335qsLyMPbWULMj25VGBX-ruJrcBH0JpfLzxy0Y/
 
 ## 2017
 
