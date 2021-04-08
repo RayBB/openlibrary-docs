@@ -1,5 +1,9 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
+## 2021-04-08 -- FAILED
+
+HALT DEPLOYMENT: docker-compose incompatibility discussed in #5007
+
 ## 2021-03-24 -- Deployment -- IMAGE ID b634610574fc -- Software ver f4f9233
 * Lot's of dependency updates after turning on dependabot
 - [ ] Follow 2021-03-15 gameplan below
