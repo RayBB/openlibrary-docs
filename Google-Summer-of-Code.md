@@ -10,7 +10,7 @@ Candidates (active students) apply by submitting an application to one or more p
 
 ## History
 
-Internet Archive has participated in Google Summer of Code for 3+ years. Open Library has participated twice (2018, 2020). In 2019, the Internet Archive did not receive enough slots for Open Library to participate and so we designed our own Internet Archive Summer of Code (IASoC) internship with a similar design. 
+Internet Archive has participated in Google Summer of Code for 3+ years. Open Library has participated twice (2018, 2020). In 2019, the Internet Archive did not receive enough slots for Open Library to participate and so we designed and ran our own Internet Archive Summer of Code (IASoC) internship. 
 
 ## Your chances
 
