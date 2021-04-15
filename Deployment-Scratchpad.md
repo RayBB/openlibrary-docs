@@ -18,6 +18,7 @@
 - [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending_utils
 - [ ] Run `./scripts/deployment/are_servers_in_sync.sh` to ensure the three servers are in sync.
 - [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
+    - NOTE: Run sudo (note note: it superflously rsyncs the repos over to the other clients; we might want to rm the step? Or maybe not git pull?)
 - [ ] Copy static files out Docker image and put them on `ol-www1`
 ```
 # Make a backup of static assets
