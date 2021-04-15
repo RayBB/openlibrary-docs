@@ -8,12 +8,12 @@
 - [ ] **Warn Slack channels `openlibrary` and `openlibrary-g` of imminent downtime!**
 - [ ] On `ol-home0`
     - [ ] cd /opt/openlibrary
-    - [ ] sudo git checkout master && sudo git pull
+    - [ ] sudo git checkout master && sudo git pull origin master
     - [ ] sudo make git
     - [ ] cd /opt/olsystem
-    - [ ] sudo git checkout master && sudo git pull  # -- Enter GitHub userid & token
+    - [ ] sudo git checkout master && sudo git pull origin master  # -- Enter GitHub userid & token
     - [ ] cd /opt/booklending_utils
-    - [ ] sudo git checkout master && sudo git pull  # -- Enter git.archive.org userid & password
+    - [ ] sudo git checkout master && sudo git pull origin master  # -- Enter git.archive.org userid & password
     - [ ] cd /opt/openlibrary
 - [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending_utils
 - [ ] Run `./scripts/deployment/are_servers_in_sync.sh` to ensure the three servers are in sync.
