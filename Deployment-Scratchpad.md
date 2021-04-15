@@ -1,5 +1,80 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
+### 2021-04-15 -- Deployment
+- [ ] Open a terminal tab and log into ol-home0
+- [ ] Open a terminal tab and log into ol-covers0
+- [ ] Open a terminal tab and log into ol-web1
+- [ ] Open https://openlibrary.org/admin?stats so that you can monitor server status
+- [ ] **Warn Slack channels `openlibrary` and `openlibrary-g` of imminent downtime!**
+- [ ] On `ol-home0`
+    - [ ] cd /opt/openlibrary
+    - [ ] sudo git checkout master && sudo git pull
+    - [ ] sudo make git
+    - [ ] cd /opt/olsystem
+    - [ ] sudo git checkout master && sudo git pull  # -- Enter GitHub userid & token
+    - [ ] cd /opt/booklending_utils
+    - [ ] sudo git checkout master && sudo git pull  # -- Enter git.archive.org userid & password
+    - [ ] cd /opt/openlibrary
+- [ ] Repeat the same steps on `ol-covers0` and `ol-web1`  # `covers` does not need booklending_utils
+- [ ] Run `./scripts/deployment/are_servers_in_sync.sh` to ensure the three servers are in sync.
+- [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
+- [ ] Copy static files out Docker image and put them on `ol-www1`
+```
+# Make a backup of static assets
+ssh -A ol-www1 'sudo cp -r /opt/openlibrary/openlibrary/static /opt/openlibrary/openlibrary/static_backup'
+STATIC_DIR=/tmp/ol-static-$(date '+%Y-%m-%d')
+docker cp $(docker create --rm oldev:latest):/openlibrary/static $STATIC_DIR
+rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
+# TODO: There's another static dir!
+ssh -A ol-www1 "sudo mkdir -p /opt/openlibrary/openlibrary/static-new && sudo cp -r $STATIC_DIR/* /opt/openlibrary/openlibrary/static-new"
+ssh -A ol-www1 'sudo chown -R openlibrary:openlibrary /opt/openlibrary/openlibrary/static-new'
+ssh -A ol-www1 'sudo rm -r /opt/openlibrary/openlibrary/static && sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
+```
+- [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers have the same Docker latest.
+- [ ] Deploy to ol-web2
+
+### 2020-03-X?
+
+**ADD A PIECE ON ROLLBACK WITH AND WITHOUT VOLUME MOUNTS**
+* https://docs.docker.com/engine/reference/commandline/tag
+To do a rollback on `ol-home0`:
+1. `docker image ls`
+2. Write down the Docker `IMAGE ID` that you want to roll back to.
+3. `docker tag oldev:<IMAGE ID> oldev:latest`
+4. Run `/opt/openlibrary/scripts/deployment/restart_servers.sh`
+5. Repeat the above steps as required on `ol-covers0`, `ol-web1`, `ol-web2`
+
+**EnvVariable $OLDEV_DOCKER_SHA for which Docker image to use oldev:latest vs oldev:SomeSHA**
+
+After deploy.sh finishes successfully,
+- [ ] run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on:
+    - [ ] ol-home0
+    - [ ] ol-covers0
+    - [ ] ol-web1
+- [ ] https://openlibrary.org/admin?stats ol-web1 goes green --> red --> green
+
+Browse http://ol-web1.us.archive.org:8080/status :
+- [ ] Software version 	[???]
+- [ ] Python version 	3.8.6
+- [ ] Host 	        ol-web1.us.archive.org
+- [ ] Browse other pages of the site looking for issues
+
+Once things look stable and correct...
+- [ ] Log out of ol-web1 and into ol-web2
+- [ ] Sync the repos
+- [ ] Run `~/are_servers_in_sync.sh` to ensure the repos and Docker latest match all other servers
+- [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh` on ol-web2
+- [ ] https://openlibrary.org/admin?stats ol-web2 goes green --> red --> green
+
+Broswe http://ol-web2.us.archive.org:8080/status :
+- [ ] Software version 	[???]
+- [ ] Python version 	3.8.6
+- [ ] Host 	        ol-web2.us.archive.org
+- [ ] Browse other pages of the site looking for issues
+
+
+
+
 ## 2021-04-08 -- FAILED
 
 HALT DEPLOYMENT: docker-compose incompatibility discussed in [#5007](https://github.com/internetarchive/openlibrary/issues/5007)
