@@ -69,7 +69,6 @@
 ---
 
 **Features & Initiatives (RFCs)**  
-[Open Library Importing](Open-Library-Importing)  
 [Orphaned Editions Planning](Orphaned-Editions-Planning)  
 [Canonical Books Page](Canonical-Books-Page)  
 [Monthly Newsletter / Mailing List](Mailing-List)  
