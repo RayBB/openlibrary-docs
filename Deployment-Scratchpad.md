@@ -8,7 +8,7 @@
 - [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
 - [ ] Run `./scripts/deployment/are_servers_in_sync.sh` to ensure the three servers are in sync.
     - They were not in sync :/ Had to git pull on ol-web2. Shouldn't be an issue after PR, I believe.
-- [ ] Copy static files out Docker image and put them on `ol-www1`
+- [ ] Copy static files out Docker image and put them on `ol-www1` **GO LINE BY LINE**
 ```
 # Make a backup of static assets
 ssh -A ol-www1 'sudo cp -r /opt/openlibrary/openlibrary/static /opt/openlibrary/openlibrary/static_backup'
@@ -18,7 +18,7 @@ rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
 # TODO: There's another static dir!
 ssh -A ol-www1 "sudo mkdir -p /opt/openlibrary/openlibrary/static-new && sudo cp -r $STATIC_DIR/* /opt/openlibrary/openlibrary/static-new"
 ssh -A ol-www1 'sudo chown -R openlibrary:openlibrary /opt/openlibrary/openlibrary/static-new'
-ssh -A ol-www1 'sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
+ssh -A ol-www1 'sudo rm -r /opt/openlibrary/openlibrary/static && sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
 ```
 - [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-web1 ol-covers0`
 - [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0 && docker restart openlibrary_infobase_nginx_1`
