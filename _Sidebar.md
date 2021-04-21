@@ -43,11 +43,15 @@
 
 ---
 
+**Internationalization**
+[Contributing Translations](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
+
+---
+
 **[Librarian Resources](https://openlibrary.org/about/lib)**  
 [Creating Community Lists](Creating-Community-Lists)  
 [Library Metadata Standards](Library-Metadata-Standards)  
 [Guide to Identifiers](Guide-to-Identifiers)  
-[Contributing to Internationalization](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
 [Merging Records](https://openlibrary.org/about/lib)  
 [Orphaned Editions Planning](Orphaned-Editions-Planning)  
 [Overview of Data Sources](Data-Source-Overview)  
