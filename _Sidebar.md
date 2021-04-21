@@ -31,6 +31,9 @@
 [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 [Understanding The Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 
+**Developer Tutorials**
+[The Reading Log](Developing-The-Reading-Log)
+
 ---
 
 **[Design Resources](Design)**  
