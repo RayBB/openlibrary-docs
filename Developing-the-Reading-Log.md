@@ -36,5 +36,5 @@ By unrealistic, we mean that this proposal currently will not work as implemente
 
 ## More practical applications 
 
-[This same example](https://github.com/internetarchive/openlibrary/issues/5080#issue-864008133) (which pretends to add Search filtering to the Reading Log) can be adapted to add an option to sort one's Reading Log entries by date added.
+[The same example above](https://github.com/internetarchive/openlibrary/issues/5080#issue-864008133) (which pretends to add Search filtering to the Reading Log) can be adapted to add an option to sort one's Reading Log entries by date added, such as is requested in [Issue #4267](https://github.com/internetarchive/openlibrary/issues/4267).
 
