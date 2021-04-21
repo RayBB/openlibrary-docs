@@ -4,15 +4,7 @@
 - [ ] Open a terminal tab and log into ol-home0
 - [ ] Open https://openlibrary.org/admin?stats so that you can monitor server status
 - [ ] **Warn Slack channels `openlibrary` and `openlibrary-g` of imminent downtime!**
-- [ ] On `ol-home0`
-    - [ ] cd /opt/openlibrary
-    - [ ] sudo git checkout master && sudo git pull origin master
-    - [ ] sudo make git
-    - [ ] cd /opt/olsystem
-    - [ ] sudo git checkout master && sudo git pull origin master  # -- Enter GitHub userid & token
-    - [ ] cd /opt/booklending_utils
-    - [ ] sudo git checkout master && sudo git pull origin master  # -- Enter git.archive.org userid & password
-    - [ ] cd /opt/openlibrary
+- [ ] On `ol-home0` run `cd /opt/openlibrary && sudo git pull origin master`
 - [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
 - [ ] Run `./scripts/deployment/are_servers_in_sync.sh` to ensure the three servers are in sync.
 - [ ] Copy static files out Docker image and put them on `ol-www1`
