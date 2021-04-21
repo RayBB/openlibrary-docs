@@ -7,6 +7,7 @@
 - [ ] On `ol-home0` run `cd /opt/openlibrary && sudo git pull origin master`
 - [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
 - [ ] Run `./scripts/deployment/are_servers_in_sync.sh` to ensure the three servers are in sync.
+    - They were not in sync :/ Had to git pull on ol-web2. Shouldn't be an issue after PR, I believe.
 - [ ] Copy static files out Docker image and put them on `ol-www1`
 ```
 # Make a backup of static assets
