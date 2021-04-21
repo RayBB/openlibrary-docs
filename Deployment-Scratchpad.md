@@ -25,10 +25,12 @@ rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
 # TODO: There's another static dir!
 ssh -A ol-www1 "sudo mkdir -p /opt/openlibrary/openlibrary/static-new && sudo cp -r $STATIC_DIR/* /opt/openlibrary/openlibrary/static-new"
 ssh -A ol-www1 'sudo chown -R openlibrary:openlibrary /opt/openlibrary/openlibrary/static-new'
-ssh -A ol-www1 'sudo rm -r /opt/openlibrary/openlibrary/static && sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
+ssh -A ol-www1 'sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
 ```
-- [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers have the same Docker latest.
-- [ ] Deploy to ol-web2
+- [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-web1 ol-covers0`
+- [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0`
+- [ ] Run `docker restart openlibrary_infobase_nginx_1`
+- [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-web2`
 
 ### 2021-04-15 -- Deployment
 - [ ] Open a terminal tab and log into ol-home0
