@@ -1,5 +1,35 @@
 ## [Deployment Guide](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#deploying-openlibrary)
 
+### 2021-04-21 -- Deployment
+- [ ] Open a terminal tab and log into ol-home0
+- [ ] Open https://openlibrary.org/admin?stats so that you can monitor server status
+- [ ] **Warn Slack channels `openlibrary` and `openlibrary-g` of imminent downtime!**
+- [ ] On `ol-home0`
+    - [ ] cd /opt/openlibrary
+    - [ ] sudo git checkout master && sudo git pull origin master
+    - [ ] sudo make git
+    - [ ] cd /opt/olsystem
+    - [ ] sudo git checkout master && sudo git pull origin master  # -- Enter GitHub userid & token
+    - [ ] cd /opt/booklending_utils
+    - [ ] sudo git checkout master && sudo git pull origin master  # -- Enter git.archive.org userid & password
+    - [ ] cd /opt/openlibrary
+- [ ] On `ol-home0` run `/opt/openlibrary/scripts/deployment/deploy.sh`
+- [ ] Run `./scripts/deployment/are_servers_in_sync.sh` to ensure the three servers are in sync.
+- [ ] Copy static files out Docker image and put them on `ol-www1`
+```
+# Make a backup of static assets
+ssh -A ol-www1 'sudo cp -r /opt/openlibrary/openlibrary/static /opt/openlibrary/openlibrary/static_backup'
+STATIC_DIR=/tmp/ol-static-$(date '+%Y-%m-%d')
+docker cp $(docker create --rm oldev:latest):/openlibrary/static $STATIC_DIR
+rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
+# TODO: There's another static dir!
+ssh -A ol-www1 "sudo mkdir -p /opt/openlibrary/openlibrary/static-new && sudo cp -r $STATIC_DIR/* /opt/openlibrary/openlibrary/static-new"
+ssh -A ol-www1 'sudo chown -R openlibrary:openlibrary /opt/openlibrary/openlibrary/static-new'
+ssh -A ol-www1 'sudo rm -r /opt/openlibrary/openlibrary/static && sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
+```
+- [ ] Run `~/are_servers_in_sync.sh` to ensure the three servers have the same Docker latest.
+- [ ] Deploy to ol-web2
+
 ### 2021-04-15 -- Deployment
 - [ ] Open a terminal tab and log into ol-home0
 - [ ] Open a terminal tab and log into ol-covers0
