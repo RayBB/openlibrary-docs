@@ -20,8 +20,7 @@ ssh -A ol-www1 'sudo chown -R openlibrary:openlibrary /opt/openlibrary/openlibra
 ssh -A ol-www1 'sudo mv /opt/openlibrary/openlibrary/static-new /opt/openlibrary/openlibrary/static'
 ```
 - [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-web1 ol-covers0`
-- [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0`
-- [ ] Run `docker restart openlibrary_infobase_nginx_1`
+- [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0 && docker restart openlibrary_infobase_nginx_1`
 - [ ] Run `/opt/openlibrary/scripts/deployment/restart_servers.sh ol-web2`
 
 ### 2021-04-15 -- Deployment
