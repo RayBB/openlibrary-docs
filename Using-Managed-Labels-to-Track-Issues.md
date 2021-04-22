@@ -34,6 +34,8 @@ Once an issue is labeled `State: Work In Progress`, the owner is the individual 
 
 Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). 
 
+See the [Team Leads Table](https://github.com/internetarchive/openlibrary/wiki#team-leads-table) to get an idea of who to tag.
+
 An example of a common [search](#tips-for-filtering-issues-and-updating-their-labels) might be [`assignee:cdrini label:"state: work in progress"`](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=assignee%3Acdrini+label%3A%22state%3A+work+in+progress%22) to see what Drini is working on.
 
 Singular ownership is important to make sure things don't fall on the floor. We therefore avoid multiple assignees.  Most issues have multiple individuals involved in various aspects of assessing and resolving it - those people are "mentioned" (e.g. "@hornc") in the issue comments.
