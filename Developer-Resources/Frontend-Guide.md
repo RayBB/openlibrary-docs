@@ -69,6 +69,8 @@ It's a good idea to break CSS into multiple logical files, instead of putting it
 
 If you make changes to any CSS, run `make css` to regenerate `build/css/all.css`.
 
+We are transitioning towards using [BEM notation](http://getbem.com/) for CSS classes. Please bear this in mind when contributing to our codebase and providing new classes or modifying existing classes. This simplifies our CSS and makes it easier to manage.
+
 ### Beware of bundle sizes
 
 When adding CSS content, while testing you may face an error such as this for example:
