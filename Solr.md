@@ -146,3 +146,7 @@ To get all this information, the solr document needs information from the follow
 When updating multiple records at once, getting these individually might be too inefficient. So, some efforts have gone into it to make the process faster by making requests in batches whenever possible and directly take to the database to avoid middle layer overheads.
 
 The flow will be similar for author records as well.
+
+## Analyzing Queries
+
+`/solr/#/openlibrary/analysis?analysis.fieldvalue=The%20Mar[…]tput=0&analysis.query=the%20mark%20of%20the%20crown`
