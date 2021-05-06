@@ -12,7 +12,7 @@
 5. [ ] Deploy to Production
     - `ssh -A ol-home0`
         ```sh
-        /opt/openlibrary/scripts/deployment/deploy.sh
+        time /opt/openlibrary/scripts/deployment/deploy.sh  # TODO: Add timing (takes a while)
         ./scripts/deployment/are_servers_in_sync.sh
         # Ensure all the git repos are in sync across all servers
         
