@@ -72,6 +72,7 @@
 [Generating Data Dumps](Generating-Data-Dumps)  
 [Solr](Solr)  
 [Generating Sitemaps](Sitemap-Generation)  
+[Cron Jobs](Cron-Jobs)  
 
 ---
 
