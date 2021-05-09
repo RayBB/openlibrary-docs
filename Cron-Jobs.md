@@ -34,11 +34,11 @@ First, shell into the docker container for cron jobs:
 
 Run:
 ```bash
-$ /openlibrary/scripts/store_counts.py /olsystem/etc/infobase.yml /olsystem/etc/openlibrary.yml /olsystem/etc/coverstore.yml 1
+$ /openlibrary/scripts/store_counts.py /olsystem/etc/infobase.yml /olsystem/etc/openlibrary.yml /olsystem/etc/coverstore.yml 30
 ```
 Which produces:
 ```
-root@ol-home0:/etc/cron.d# /openlibrary/scripts/store_counts.py /olsystem/etc/infobase.yml /olsystem/etc/openlibrary.yml /olsystem/etc/coverstore.yml 1
+root@ol-home0:/etc/cron.d# /openlibrary/scripts/store_counts.py /olsystem/etc/infobase.yml /olsystem/etc/openlibrary.yml /olsystem/etc/coverstore.yml 30
 INFO     : stats.py    : 110 : Parsing config file
 DEBUG    : stats.py    :  40 :  Postgres Database : openlibrary
 DEBUG    : stats.py    :  40 :  Postgres Database : coverstore
