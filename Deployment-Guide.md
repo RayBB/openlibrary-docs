@@ -7,7 +7,7 @@
     - Sentry ol-web: https://sentry.archive.org/sentry/ol-web/
     - Sentry ol-covers: https://sentry.archive.org/sentry/ol-covers/
     - Sentry ol-infobase: https://sentry.archive.org/sentry/ol-infobase/
-3. [ ] Confirm staging is working as expected: http://staging.openlibrary.org:9090/
+3. [ ] Confirm staging is working as expected: http://staging.openlibrary.org
 4. [ ] Warn slack channels `#openlibrary-g` and `#openlibrary` of deploy and momentary downtime
 5. [ ] Deploy to Production
     - `ssh -A ol-home0`
