@@ -9,7 +9,13 @@
     - Sentry ol-infobase: https://sentry.archive.org/sentry/ol-infobase/
 3. [ ] Confirm staging is working as expected: http://staging.openlibrary.org
 4. [ ] Warn slack channels `#openlibrary-g` and `#openlibrary` of deploy and momentary downtime
-5. [ ] Deploy to Production
+5. [ ] Ensure your Internet Archive VM account has correct access to servers (1-time)
+    - Repeat for each host:
+        ```
+        ssh -A ol-<host>
+        sudo usermod -a -G docker <your-username>
+        ```
+6. [ ] Deploy to Production
     - `ssh -A ol-home0`
         ```sh
         time /opt/openlibrary/scripts/deployment/deploy.sh  # TODO: Add timing (takes a while)
