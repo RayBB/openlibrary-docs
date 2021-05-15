@@ -169,3 +169,18 @@ Remember:
 If you are starting a new language translation, copy the template to the correct place in the directory hierarchy, add the plural forms info at the top and replace the English version of the `msgstr` text values with the translated versions for your language.
 
 If you find something which can't be translated correctly (perhaps because the text is being concatenated in the code rather than in the message formatting), please create an issue describing the location and what the problem is.
+
+## Browser Support
+
+We support both Firefox and Chromium-based browsers on desktop and mobile (IOS and Android).
+
+### Internet Explorer 11
+As of May 14, 2021, Internet Explorer is in 10th (after Opera, Amazon Silk, and YaBrowser) with .32% (~1,172 patrons). Nearly of those all are IE11.
+
+In short:
+* Things should _function_ in IE11
+* It is alright if things _look_ wonky in IE11
+
+We will move away from IE11 support at some point, just like (Internet Archive did)[http://blog.archive.org/2020/05/01/farewell-to-ie11/].
+
+(Relevant Thread)[https://internetarchive.slack.com/archives/C0ETZV72L/p1621029402256800]
