@@ -12,13 +12,9 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - For active contributors, we have an by-invite slack channel
 5. **[Friday Lunch](https://twitter.com/internetarchive/status/596768668756774914)** - Internet Archive hosts a by-invite lunch each Friday @ 300 Funston, SF in the Inner Richmond. please contact mek@archive.org
 
-## Meet the Team!
-
-- [View Team Member Profiles (created with Google Forms) and add your own profile](https://docs.google.com/forms/d/e/1FAIpQLSch2GjtxEYnCTC0-imVRuIZBsvAmV7lA52vdcaNTvzmHXqS8Q/viewform?usp=sf_link)
-
 ### Team Leads Table
 
-Have a question and not sure who to ask? (Current as of 2019-04)
+Have a question and not sure who to ask?
 
 See our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels.
 
