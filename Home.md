@@ -20,6 +20,8 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 Have a question and not sure who to ask? (Current as of 2019-04)
 
+See our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) list.
+
 | Responsibility                 | Lead | Github Label |
 |--------------------------------|------|---|
 | Product Lead & Policy          | [@mekarpeles](https://github.com/mekarpeles) | [`priority`](https://github.com/internetarchive/openlibrary/labels?utf8=%E2%9C%93&q=priority), [`roadmap`](https://github.com/internetarchive/openlibrary/projects/28), [`epic`](https://github.com/internetarchive/openlibrary/labels/epic) |
