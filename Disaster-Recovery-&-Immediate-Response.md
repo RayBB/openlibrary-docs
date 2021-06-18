@@ -28,6 +28,15 @@ Before continuing, you may want to check our [Port-mortems](https://github.com/i
 - [Is OpenLibrary getting slammed with traffic, crawlers, or bad actors?](#Handling_DDOS)
 - [Is Search Overloading archive.org elastic search upstream?](#Overloaded_Search)
 
+# Solr Search Issues
+
+You can restart solr via docker as:
+
+```
+ssh -A ol-solr1
+docker restart solr_builder_solr_1
+```
+
 # Handling DDOS
 
 First, ssh over to `ol-www1` (which is the entry point for all traffic) and determine who the bad actor(s) are. Because we anonymize IPs, you'll first have to populate a map of anonymous IPs to IPs we can actually block:
