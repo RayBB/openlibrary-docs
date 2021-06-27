@@ -1,5 +1,7 @@
 `Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes created with `git 2.22`.
 
+Note: This document replaces the version in the [Open Library Archives](https://openlibrary.org/dev/docs/committing?v=15)
+
 Contents:
 - [Setting Up](#setting-up)
 - [Creating a Pull Request](#creating-a-pull-request)
