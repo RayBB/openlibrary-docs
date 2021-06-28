@@ -18,6 +18,8 @@
 6. [ ] Deploy to Production
     - `ssh -A ol-home0`
         ```sh
+        # Pull olystem and openlibrary before continuing
+        # so we have latest docker-compose, etc
         time /opt/openlibrary/scripts/deployment/deploy.sh  # 4m30
         ./scripts/deployment/are_servers_in_sync.sh
         # Ensure all the git repos are in sync across all servers
