@@ -11,24 +11,9 @@
 - [ ] If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
 - [ ] Create a new [postmortem](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Post-Mortem%2C+Priority%3A+0%2C+GJ%3A+Triage+Exception&template=post_mortem.md&title=) issue
 
-# Troubleshooting
+# Common Issues
 
-Before continuing, you may want to check our [Port-mortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22+) to see if this is a known / already solved problem.
-
-1. If solr-updater or import-bot or deploy issue, or infobase (API), check `ol-home`
-2. If lending information e.g. books appear as available on OL when they are waitlisted on IA, this is a freak incident w/ memcached and we'll need to ssh into each memcached (ol-mem*) and `sudo service memcached restart`
-3. If there's an issue with ssl termination, static assets, connecting to the website, check `ol-www1` (which is where all traffic enters and goes into haproxy -- which also lives on this machine). Another case is abuse, which is documented in the troubleshooting guide (usually haproxy limits or banning via nginx `/opt/openlibrary/olsystem/etc/nginx/deny.conf`
-4. If there's a database problem, sorry (`ol-db0` primary, `ol-db1` replication, `ol-backup1`)
-5. We don't generally have solr issues, but that would be `ol-solr2` (to be replaced w/ `ol-solr0`)
-6. If we're seeing `ol-web3` and `ol-web4` offline, it may be network, upstream, DNS, or a breaking dependency, CHECK [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) + alert #ops + #openlibrary. Check the logs in `/var/log/openlibrary/` (esp. `upstart.log`)
-7. If you notice a disk filling up rapidly or almost out of space... CREATE A BASILISK FILE (an empty 2GB placeholder `dd`'d file that we can delete and have the ability to `ls`, etc)
-8. Look at the troubleshooting guide history
-
-- [Is the server having trouble after rebooting?](#Handling_Server_Reboot)
-- [Is OpenLibrary getting slammed with traffic, crawlers, or bad actors?](#Handling_DDOS)
-- [Is Search Overloading archive.org elastic search upstream?](#Overloaded_Search)
-
-# Solr Search Issues
+## Solr Search Issues
 
 You can restart solr via docker as:
 
@@ -36,6 +21,8 @@ You can restart solr via docker as:
 ssh -A ol-solr1
 docker restart solr_builder_solr_1
 ```
+
+## Suspected DDOS (Denial of Service Attack)
 
 # Handling DDOS
 
@@ -62,16 +49,33 @@ At this point, you can add the IPs to /olsystem/etc/nginx/deny.conf or add class
 
 Or, you can block on a per-IP basis in `/opt/openlibrary/olsystem/etc/nginx/deny.conf`.
 
-# Handling Server Reboot
+# Troubleshooting
 
-When `ol-web3` or `ol-web4` are restarted, there is a chance one of them may have trouble restarting. You can usually learn why by looking in /var/log/openlibrary/upstart. Chances are it will complain about upstart.log being unwritable and or there being no directory /var/run/openlibrary owned by openlibrary. First, we should find out why this happens! To fix:
+Before continuing, you may want to check our [Port-mortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22+) to see if this is a known / already solved problem.
 
-```
-ssh -A ol-web3 # or ol-web4
-sudo chown openlibrary:openlibrary /var/log/openlibrary/upstart.log
-sudo mkdir /var/run/openlibrary
-sudo chown openlibrary:openlibrary /var/run/openlibrary
-```
+1. If solr-updater or import-bot or deploy issue, or infobase (API), check `ol-home`
+2. If lending information e.g. books appear as available on OL when they are waitlisted on IA, this is a freak incident w/ memcached and we'll need to ssh into each memcached (ol-mem*) and `sudo service memcached restart`
+3. If there's an issue with ssl termination, static assets, connecting to the website, check `ol-www1` (which is where all traffic enters and goes into haproxy -- which also lives on this machine). Another case is abuse, which is documented in the troubleshooting guide (usually haproxy limits or banning via nginx `/opt/openlibrary/olsystem/etc/nginx/deny.conf`
+4. If there's a database problem, sorry (`ol-db0` primary, `ol-db1` replication, `ol-backup1`)
+5. If we're seeing `ol-web1` and `ol-web2` offline, it may be network, upstream, DNS, or a breaking dependency, CHECK [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) + alert #ops + #openlibrary. Check the logs in `/var/log/openlibrary/` (esp. `upstart.log`)
+7. If you notice a disk filling up rapidly or almost out of space... CREATE A BASILISK FILE (an empty 2GB placeholder `dd`'d file that we can delete and have the ability to `ls`, etc)
+8. Look at the troubleshooting guide history
+
+- [Is the server having trouble after rebooting?](#Handling_Server_Reboot)
+- [Is OpenLibrary getting slammed with traffic, crawlers, or bad actors?](#Handling_DDOS)
+- [Is Search Overloading archive.org elastic search upstream?](#Overloaded_Search)
+
+# Rebuilding Js + Css
+
+# Hot-patching production web
+
+XXX Todo
+
+# Handling Power Outage / Server Reboot
+
+Most services should restart themselves
+
+**XXX** Add commands for (re)starting docker on ol-web[1,2] 
 
 Make sure solr-updater is up and run ol-solr-indexer.py to sync any skipped OL db -> OL solr records:
 
