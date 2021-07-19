@@ -19,7 +19,7 @@ You can restart solr via docker as:
 
 ```
 ssh -A ol-solr1
-docker restart solr_builder_solr_1
+docker restart solr_builder_solr_1 solr_builder_haproxy_1
 ```
 
 ## Suspected DDOS (Denial of Service Attack)
