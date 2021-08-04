@@ -1,5 +1,31 @@
 For programmatically bulk importing new books and authors into Open Library.
 
+## Recipes
+
+From `openlibrary_cron-jobs_1` on `ol-home0` enqueue a batch:
+```
+cd /openlibrary/scripts
+PYTHONPATH=/openlibrary python /openlibrary/scripts/manage-imports.py --config /olsystem/etc/openlibrary.yml add-new-scans 2021-07-28
+```
+
+Run import on an ID from `openlibrary_importbot_1` on ol-home0
+```
+cd /openlibrary/scripts
+PYTHONPATH=/openlibrary python
+```
+
+```
+import web
+import infogami
+from openlibrary import config
+config.load_config('/olsystem/etc/openlibrary.yml')
+config.setup_infobase_config('/olsystem/etc/infobase.yml')
+modi = __import__("manage-imports")
+import internetarchive as ia
+item = modi.ImportItem.find_by_identifier('itinerariosporlo0000garc')
+x = modi.ol_import_request(item, servername='https://openlibrary.org', require_marc=False)
+```
+
 ## Bulk Import Options
 The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
 1. [Import by ISBN](#Import-by-ISBN)
