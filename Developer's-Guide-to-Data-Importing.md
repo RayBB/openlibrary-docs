@@ -20,10 +20,10 @@ import infogami
 from openlibrary import config
 config.load_config('/olsystem/etc/openlibrary.yml')
 config.setup_infobase_config('/olsystem/etc/infobase.yml')
-modi = __import__("manage-imports")
+importer = __import__("manage-imports")
 import internetarchive as ia
-item = modi.ImportItem.find_by_identifier('itinerariosporlo0000garc')
-x = modi.ol_import_request(item, servername='https://openlibrary.org', require_marc=False)
+item = importer.ImportItem.find_by_identifier('itinerariosporlo0000garc')
+x = importer.ol_import_request(item, servername='https://openlibrary.org', require_marc=False)
 ```
 
 ## Bulk Import Options
@@ -31,7 +31,8 @@ The following resources are for developers doing bulk book record creation via o
 1. [Import by ISBN](#Import-by-ISBN)
 2. [Import by MARC](#MARC-Records)
 3. [Import by Archive.org Identifier](#Import-by-OCAID)
-4. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
+4. [Import by JSON](Importing-JSON)
+5. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
 
 ## Procedure for Bulk Imports
 1. Make sure your source data is archived and uploaded to https://archive.org/details/ol_data
@@ -101,7 +102,8 @@ In order for this entire process to work correctly and not produce bad data, we'
 ## Import by OCAID
 `ocaid` stands for [Open Content Alliance Identifier](https://en.wikipedia.org/wiki/Open_Content_Alliance). The name was coined when Internet Archive and other groups institutions around the world worked together to create an ID system they could universally share for accessing books. Today, `ocaid` means the equivalent of Archive.org identifier. When you go to https://archive.org/details/ol_data, `ol_data` is the `ocaid` / Archive.org identifier. This section deals with importing Archive.org book items (by their `ocaid` / Archive.org identifier) into Open Library.
 
-### Ongoing Automatic Imports 
+### Ongoing Automatic Imports
+
 Most qualifying Archive.org books are automatically imported into Open Library through a process calls **ImportBot**. [ImportBot](https://github.com/internetarchive/openlibrary/blob/master/scripts/manage-imports.py) is a script in the `scripts/` directory which is continuously run via a supervisorctl task on an internal machine called `ol-home`. The script makes a privileged call to [`core/ia.py`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/ia.py#L358) which queries Archive.org for books which meet import criteria (i.e. have a MARC record, have the right digitization `repub-state`, etc). The call to `core/ia.py`'s `get_candidate_ocaids` returns a list of `ocaids` which are batch-submitted using a queue to https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/importapi/code.py -- 
 See #3 on [Import Code-Paths](#Import-Code-Paths) above.
 
@@ -113,6 +115,28 @@ https://openlibrary.org/api/import/ia
 Assuming you have API write access, you can use ImportBot's [`import_ocaids`](https://github.com/internetarchive/openlibrary/blob/master/scripts/manage-imports.py#L67) method directly to import a list of Archive.org items into Open Library by ocaid.
 
 **NB** As of 2019-07, the ocaid import process is being revised by @charles to relax some outdated ocaid import constraints which are currently [preventing Open Library from importing tens of thousands of valid book items and their records](https://github.com/internetarchive/openlibrary/wiki/archive.org-%E2%86%94-Open-Library-synchronisation). e.g. right now MARC records and `repub-state`s are required, which we may want to relax. Also, we run into problems when Archive.org has multiple books for the same `isbn` (this causes a collision where a valid duplicate editions is rightfully caught by our duplication detector and prevented from being imported as a new edition). Ideally, perhaps, editions on Open Library would have multiple `ocaids`, but we're not there yet in our data model.
+
+## JSON Importing
+
+Sufficiently privileged patrons can POST JSON following the https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json scheme to https://openlibrary.org/api/import
+
+e.g.
+```
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+from olclient import OpenLibrary
+ol = OpenLibrary() # Requires auth
+adapter = HTTPAdapter(max_retries=Retry(
+    total=5,
+    read=5,
+    connect=5,
+    backoff_factor=0.3
+))
+ol.session.mount('https://', adapter)
+url = 'https://openlibrary.org/api/import'
+data = {} # See: https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json
+r = ol.session.post(url, data=json.dumps(data))
+```
 
 ## MARC Records
 
