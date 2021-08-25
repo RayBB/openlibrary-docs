@@ -225,3 +225,18 @@ _.. notes written, pending .._
 * https://openlibrary.org/dev/docs/data
 * https://openlibrary.org/about/help
 * https://openlibrary.org/about/requirements
+
+# Unified Import System
+
+How we'd like an unified import system to behave:
+
+1. We have a single cron container on ol-home0 which queries for, or fetches, data from sources (archive.org, partners / nytimes / openstax / bwb) and submit either archive.org IDs or json book records to a queue managed by scripts/manage-imports.py
+2. A service container on ol-home `ImportBot` continuously listens for new batches and imports them into Open Library.
+
+## Challenges
+
+1. manage-imports.py currently only works on archive.org IDs (imports IA items) rather than on json data.
+2. When we fetch a day of changes from Archive.org during our daily cron-check, it's easy for us to submit a batch to the `ImportBot` service. But when we fetch large volumes of monthly partner data which has millions of records, it's unclear how we should batch this and submit it to the `ImportBot` and how to know which [batches] are failing or succeeding. Do we submit 5000 batches of 1000 (e.g. 5M)?
+3. `import_item` table only supports archive_id right now, what if it supported `data` as an alternative column and what would happen if this table had hundreds of millions of records.
+
+
