@@ -1,6 +1,23 @@
 For programmatically bulk importing new books and authors into Open Library.
 
-## Recipes
+## Bulk Import Options
+The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
+1. [Import by ISBN](#Import-by-ISBN)
+2. [Import by MARC](#MARC-Records)
+3. [Import by Archive.org Identifier](#Import-by-OCAID)
+4. [Import by JSON](Importing-JSON)
+5. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
+
+## Production Automatic Import Pipeline
+
+Open Library's production automatic import pipeline consists of two components:
+
+1. A Cron service with a collection of jobs which routinely pulls data from partner source and enqueues them in a database
+2. An ImportBot which polls this unified database of queued import requests and process the imports them into the catalog  
+
+![viz-js com_](https://user-images.githubusercontent.com/978325/130883227-bce286f6-862a-419a-8e7d-6e214bfbe1b7.png)
+
+## 
 
 From `openlibrary_cron-jobs_1` on `ol-home0` enqueue a batch:
 ```
@@ -25,14 +42,6 @@ import internetarchive as ia
 item = importer.ImportItem.find_by_identifier('itinerariosporlo0000garc')
 x = importer.ol_import_request(item, servername='https://openlibrary.org', require_marc=False)
 ```
-
-## Bulk Import Options
-The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
-1. [Import by ISBN](#Import-by-ISBN)
-2. [Import by MARC](#MARC-Records)
-3. [Import by Archive.org Identifier](#Import-by-OCAID)
-4. [Import by JSON](Importing-JSON)
-5. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
 
 ## Procedure for Bulk Imports
 1. Make sure your source data is archived and uploaded to https://archive.org/details/ol_data
