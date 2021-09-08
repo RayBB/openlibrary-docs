@@ -1,17 +1,15 @@
-The Design Pattern Library audits all the different types of components that exist in the Open Library codebase. Eventually, we'd love to move these components to [open library's developer design page](https://openlibrary.org/developers/design).
+The Design Pattern Library audits all the different types of components that exist in the Open Library codebase. We are currently in the process of migrating this to a Storybook instance (see #4179).
 
 ## Inspiration
 Inspired by [Wikimedia's style guide]( https://design.wikimedia.org/style-guide/visual-style.html ).
 
 ## How to Contribute
 
-### Notes 
-1. This list is unstable and likely to change at any given time, while we refactor the front-end UI.
-If you want to help us document components, please jump in with your image uploads and documenting where these components are in use!
-2. We are not looking for design changes at the current moment of time and rather would like to focus on making components easier to create. For consistency, try not to design components on a per page basis!
-Please refer to issue [1951](https://github.com/internetarchive/openlibrary/issues/1951#issuecomment-471648372) and issue [1969](https://github.com/internetarchive/openlibrary/issues/1969#issuecomment-471647053).
 
-You can also help by contributing to the associated mega-issue [#1092](https://github.com/internetarchive/openlibrary/issues/1092) and making sure the codebase reflects this document.
+- Help us get the storybook added in #4179 publishing to github pages.
+- Link the storybook from this page
+- If a component is documented here, add it to the storybook and remove it from this wiki page.
+- When this page is fully migrated to storybook, please make this page redirect to the new storybook instance
 
 ### Adding a Component
 The documentation for a UI component includes:
@@ -67,6 +65,8 @@ Consists of the page title, an inline "count" and a set of tools.
 Other elements can be rendered under the tools but are not part of the component.
 
 ### CtaBtn
+
+See Storybook instance.
 
 ```
 <div class="cta-btn">CTABtn</div>
