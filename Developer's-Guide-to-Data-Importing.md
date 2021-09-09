@@ -10,7 +10,7 @@ The following resources are for developers doing bulk book record creation via o
 
 ## Production Automatic Import Pipeline
 
-For instructions and context on testing the Cron + ImportBot piplines, please see notes in [issue #5588](https://github.com/internetarchive/openlibrary/pull/5588) and the [video](xxx) which will be uploaded shortly (bharat + mek)
+For instructions and context on testing the Cron + ImportBot piplines, please see notes in [issue #5588](https://github.com/internetarchive/openlibrary/pull/5588) and [this overview video](https://archive.org/details/openlibrary-tour-2020/ol_imports_comprehensive.mp4) (bharat + mek)
 
 Open Library's production automatic import pipeline consists of two components:
 
@@ -53,6 +53,9 @@ x = importer.ol_import_request(item, servername='https://openlibrary.org', requi
 4. Follow the [Bots Getting Started instructions](https://github.com/internetarchive/openlibrary/wiki/Writing-Bots#getting-started-rules) before running your bot.
 
 ## Historical Reference
+
+Watch [this video by @hornc](https://archive.org/details/openlibrary-tour-2020/openlibrary-book-imports-2018.ogv) about the foundations of our import pipeline.
+
 Here's a list of sourced we've historically imported. Many of the data sets themselves are archived within the `https://archive.org/details/ol_data` collection.
 - https://openlibrary.org/dev/docs/data - a list of major sources we've imported
 - https://openlibrary.org/about/help
