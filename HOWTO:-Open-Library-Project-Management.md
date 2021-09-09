@@ -3,7 +3,7 @@
 The Open Library team has several weekly calls:
 
 - The internal ABC (Archive Book Catalog) Team call (1h, Monday @ 12pm PT) [2021](https://docs.google.com/document/d/146GDpF6RjTIYFksve8ic4og0xZVauSVHXQERxpLZtPI/edit)
-- The public Open Library Community Call (1h, Tuesday @ 10am PT) [2021](https://tinyurl.com/openlibrary-call-2021), [2020](https://tinyurl.com/openlibrary-call-2020)
+- The public Open Library Community Call (1h, Tuesday @ 10am PT) [2021](https://tinyurl.com/openlibrary-call-2021), [2020](https://tinyurl.com/openlibrary-call-2020), [more](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)
 - M/W engineering standups at 11am (20min)
 - Weekly 1:1's (45min)
 
