@@ -28,6 +28,18 @@ Every three months (before the end of the quarter) we use our ABC weekly staff m
 
 The [staff ABC call](https://docs.google.com/document/d/146GDpF6RjTIYFksve8ic4og0xZVauSVHXQERxpLZtPI/edit#heading=h.7n8f6liomx2q), the [Open Library Community Call](https://www.google.com/url?q=https://tinyurl.com/openlibrary-call-2021&sa=D&source=editors&ust=1631148982172000&usg=AOvVaw2lUBYeP96ottteiWjBQLnc), Internet Archive Product Team engineering standups, and 1:1s collectively constitute our weekly planning.
 
+## Project-based Planning
+
+When we have large/epic projects spanning multiple issues or individuals, we typically use a google doc to flesh out the initial idea, as well as a placeholder github issue with the `epic` label. The [Book Sponsorship Program](https://docs.google.com/document/d/1Ym9RRNB5_k7I7z6ZehKKn0TISYgF1yofE-rtw6NtMWM/edit#heading=h.re0jke5xmq3c), our [Migration to Python 3](https://docs.google.com/document/d/1VoSiTzsO3r2Qlhs5OoRFfbZR_u1ft8uR-72g_Mz175Y/edit), the [Canonical Books Page Re-Design](https://docs.google.com/document/d/1DDb2VX-otD5jPMbF_6ccI_wv8nrWMpNAWSBc4kXud2k/edit), and [Community Book Tags Project](https://docs.google.com/document/d/13Qrxfnd7BbSoMyRIAMM1wekr78sOVbaZpaOfH03tHe0/edit#) are four such examples. Once the proposal outline has been reviewed with stakeholders, we update the placeholder Epic issue to include sub-issues which may be added to upcoming milestones, as deemed appropriate. Each project of this size is assigned a team Lead who is responsible for overseeing its progress and coordinating with contributors. Leads are invited to use whatever project management works best for their style, though a popular approach is getting permission to registering a new [Project Board](https://github.com/internetarchive/openlibrary/projects).
+
 ## Long Term Vision (5y)
 
 In 2018, Mek, Drini Cami, and Charles Horn, went through the process of high-level, long-term strategic planning. Some internal documents are available, as well as copious internal notes. We also have years of notes from previous members of the Open Library team. At this point, they have not been compiled into a single publicly available 5-year proposal. 
+
+## Contributing
+
+Our contributing guide offers many project management tips for those wishing to learn more about effectively contributing to the Open Library project:
+
+* [Contributing](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-issues)
+* [Using Github Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)
+* [Managed Github Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)
