@@ -10,6 +10,8 @@ The following resources are for developers doing bulk book record creation via o
 
 ## Production Automatic Import Pipeline
 
+For instructions and context on testing the Cron + ImportBot piplines, please see notes in [issue #5588](https://github.com/internetarchive/openlibrary/pull/5588) and the [video](xxx) which will be uploaded shortly (bharat + mek)
+
 Open Library's production automatic import pipeline consists of two components:
 
 1. A Cron service with a collection of jobs which routinely pulls data from partner source and enqueues them in a database
