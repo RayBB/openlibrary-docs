@@ -79,16 +79,17 @@ See Storybook instance.
 ![screen shot 2019-01-15 at 10 14 54 pm](https://user-images.githubusercontent.com/148752/51229922-075b2e80-1913-11e9-9d89-f695cc1071e5.png)
 
 #### cta-btn--available
-![screen shot 2019-01-15 at 10 15 53 pm](https://user-images.githubusercontent.com/148752/51229966-37a2cd00-1913-11e9-962f-ad67a187de50.png)
-![openlibrary org_books_OL1395236M_Influence (1)](https://user-images.githubusercontent.com/978325/71932013-ea3af380-3153-11ea-8077-43a5e1ce0494.png)
-
 ```
 <div class="cta-btn cta-btn--available">CTABtn</div>
 ```
+![screen shot 2019-01-15 at 10 15 53 pm](https://user-images.githubusercontent.com/148752/51229966-37a2cd00-1913-11e9-962f-ad67a187de50.png)
+![openlibrary org_books_OL1395236M_Influence (1)](https://user-images.githubusercontent.com/978325/71932013-ea3af380-3153-11ea-8077-43a5e1ce0494.png)
 
-#### cta-btn--preview
+#### cta-btn--shell cta-btn--preview
+```
+<div class="cta-btn cta-btn--shell cta-btn--preview">Preview</div>
+```
 ![openlibrary org_books_OL18628948M_Cracking_the_communication_code](https://user-images.githubusercontent.com/978325/71932174-338b4300-3154-11ea-8c78-c7f1561316c4.png)
-
 
 #### with badge
 ```
