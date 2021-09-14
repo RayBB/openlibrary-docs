@@ -93,15 +93,13 @@ sudo -u openlibrary /olsystem/bin/olenv HOME=/home/openlibrary OPENLIBRARY_RCFIL
 
 ## Cleanup Deploys
 
-Sometimes too many deploys accumulate in `/opt/openlibrary/deploys/openlibrary` on our `ol-` servers. Usually, the solution to free up space is to remove files from previous years or months. For instance, the following removes all old deploys from the year 2017 in order to free up space:
+There are few servers which we expect to fill up. ol-db1/2 and ol-covers0/1 are candidates because their job is to store temporary or long term data. ol-home0 is another service which generates data dumps, aggregates partner data, and generates sitemaps. These three servers likely need a manual investigation when nagios reports their space is low.
 
-```
-ssh -A ol-web3  # etc
-cd /opt/openlibrary/deploys/openlibrary
-ls -lathr | grep 2017 | awk 'NF>1{print $NF}' | sudo xargs rm -r`
-```
+## Docker images
 
-## Docker
+Even with this being the case, a very common cause of disk fill are out docker images which have not been pruned during our deploy process. These can be many GB over time. Run `docker image ls` for a listing of images registered in docker to see if any of them can be pruned or deleted.
+
+## Docker Logs
 
 Docker logs can take up a ton of space. @cdrini mentions one solution is:
 (Truncating docker logs for container with ID d12b...)
