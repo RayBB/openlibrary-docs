@@ -6,7 +6,7 @@ To determine what PR is conflicting, find the block for your PR in the Jenkins d
 1. Select the "Build dev-merged" step
 2. Expand the `git checkout` block
 
-(IMG)
+![f](https://github.com/internetarchive/openlibrary/wiki/images/Screenshot%202021-09-28%20123145.jpg)
 
 3. Find your PR (`ctrl-f` for the PR number, or for `CONFLICT`)
 
