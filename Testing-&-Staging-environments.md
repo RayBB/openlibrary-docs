@@ -4,7 +4,7 @@ Sometimes, you will try to put a PR deploy on staging, but it will conflict with
 To determine what PR is conflicting, find the block for your PR in the Jenkins dashboard for the PR Deploy:
 
 1. Select the "Build dev-merged" step
-2. Expand the `git checkout block`
+2. Expand the `git checkout` block
 
 (IMG)
 
