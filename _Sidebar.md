@@ -73,6 +73,7 @@
 [Solr](Solr)  
 [Generating Sitemaps](Sitemap-Generation)  
 [Cron Jobs](Cron-Jobs)  
+[Testing & Staging environments](Testing-&-Staging-environments)
 
 ---
 
