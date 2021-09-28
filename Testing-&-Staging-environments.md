@@ -1,5 +1,5 @@
 ### Handling a conflicting PR
-Sometimes, you will try to put a PR deploy on staging, but it will conflict with another PR there, and be unable to be deployed.
+Sometimes, you will try to put a PR on testing, but it will conflict with another PR there, and be unable to be deployed.
 
 To determine what PR is conflicting, find the block for your PR in the Jenkins dashboard for the PR Deploy:
 
