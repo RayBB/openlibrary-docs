@@ -66,7 +66,7 @@ Other elements can be rendered under the tools but are not part of the component
 
 ### CtaBtn
 
-See Storybook instance.
+See [Storybook instance](http://internetarchive.github.io/openlibrary/?path=/story/legacy-button--cta-btn).
 
 ```
 <div class="cta-btn">CTABtn</div>
