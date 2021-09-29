@@ -10,9 +10,13 @@
 
 ---
 
+**Project Management**  
+[Project Management Overview](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)  
+[Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
+[GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
+
 **Developer Resources**  
 [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
-[GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
 [Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
 [Git Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 
