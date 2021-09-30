@@ -5,7 +5,7 @@ The following resources are for developers doing bulk book record creation via o
 1. [Import by ISBN](#Import-by-ISBN)
 2. [Import by MARC](#MARC-Records)
 3. [Import by Archive.org Identifier](#Import-by-OCAID)
-4. [Import by JSON](Importing-JSON)
+4. [Import by JSON](#Importing-JSON)
 5. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
 
 ## Production Automatic Import Pipeline
@@ -130,7 +130,7 @@ Assuming you have API write access, you can use ImportBot's [`import_ocaids`](ht
 
 **NB** As of 2019-07, the ocaid import process is being revised by @charles to relax some outdated ocaid import constraints which are currently [preventing Open Library from importing tens of thousands of valid book items and their records](https://github.com/internetarchive/openlibrary/wiki/archive.org-%E2%86%94-Open-Library-synchronisation). e.g. right now MARC records and `repub-state`s are required, which we may want to relax. Also, we run into problems when Archive.org has multiple books for the same `isbn` (this causes a collision where a valid duplicate editions is rightfully caught by our duplication detector and prevented from being imported as a new edition). Ideally, perhaps, editions on Open Library would have multiple `ocaids`, but we're not there yet in our data model.
 
-## JSON Importing
+## Importing JSON
 
 Sufficiently privileged patrons can POST JSON following the https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json scheme to https://openlibrary.org/api/import
 
@@ -140,15 +140,8 @@ from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 from olclient import OpenLibrary
 ol = OpenLibrary() # Requires auth
-adapter = HTTPAdapter(max_retries=Retry(
-    total=5,
-    read=5,
-    connect=5,
-    backoff_factor=0.3
-))
-ol.session.mount('https://', adapter)
 url = 'https://openlibrary.org/api/import'
-data = {} # See: https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json
+data = {"authors": [{"name": "hu, yang"}], "isbn_13": ["9781099972591"], "languages": ["eng"], "number_of_pages": "150", "publish_date": "2019", "publishers": ["Independently Published"], "source_records": ["bwb:9781099972591"], "title": "Easy Learning Design Patterns Javascript : Build Better Coding and Design Patterns", "weight": "0.395"} # See: https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json
 r = ol.session.post(url, data=json.dumps(data))
 ```
 
