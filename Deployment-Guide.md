@@ -42,6 +42,7 @@
         # Restart things (check the site and sentry after each)
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web1 ol-covers0
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0 && docker restart openlibrary_infobase_nginx_1
+        docker stop openlibrary_solr8-updater_1
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web2
         ````
 - [ ] Notify slack of deploy completion
