@@ -1,10 +1,25 @@
-Here the instructions about how to generate the ol_dump.txt.gz files.
+As of 2021-10-13, data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary_cron-jobs_1` docker container:
+
+```
+tmux
+# ---
+COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml" \
+HOSTNAME="$HOSTNAME" \
+docker-compose run \
+    -u openlibrary \
+    -e "SCRIPTS=/openlibrary/scripts" \
+    cron-jobs \
+    bash
+# ---
+chmod u+x /openlibrary/scripts/oldump.sh #DARNIT
+PSQL_PARAMS='***see cron file in olsystem***' TMPDIR='/1/var/tmp' /openlibrary/scripts/oldump.sh `date -d yesterday +%Y-%m-%d` --archive
+```
+
+# History
 
 See original by @gdamdam at: http://gio.blog.archive.org/2015/03/11/ol-how-to-generate-the-dump-files/
 
-## Where to genererate
-
-ol-home is the right place to do this.
+# How it Works
 
 ## Dumping the DB
 
