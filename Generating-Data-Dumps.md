@@ -14,6 +14,11 @@ docker-compose run \
 chmod u+x /openlibrary/scripts/oldump.sh #DARNIT
 PSQL_PARAMS='***see cron file in olsystem***' TMPDIR='/1/var/tmp' /openlibrary/scripts/oldump.sh `date -d yesterday +%Y-%m-%d` --archive
 ```
+# Related Issues
+
+https://github.com/internetarchive/openlibrary/issues/5402 - cron is presently broken
+https://github.com/internetarchive/openlibrary/issues/5719 - fix for October 2021-10
+
 
 # History
 
