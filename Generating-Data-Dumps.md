@@ -11,8 +11,7 @@ docker-compose run \
     cron-jobs \
     bash
 # ---
-chmod u+x /openlibrary/scripts/oldump.sh #DARNIT
-PSQL_PARAMS='***see cron file in olsystem***' TMPDIR='/1/var/tmp' /openlibrary/scripts/oldump.sh `date -d yesterday +%Y-%m-%d` --archive
+rm -rf /1/var/tmp/dumps/ol_* && su openlibrary -c "SCRIPTS=/openlibrary/scripts PSQL_PARAMS='***see cron file in olsystem***' TMPDIR='/1/var/tmp' /openlibrary/scripts/oldump.sh `date -d yesterday '+%Y-%m-%d'` --archive"
 ```
 # Related Issues
 
