@@ -49,7 +49,8 @@
 
 **Internationalization (i18n)**  
 [Contributing Translations](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
-[i18n Pages](https://github.com/internetarchive/openlibrary/wiki/i18n-Pages)
+[i18n Pages](https://github.com/internetarchive/openlibrary/wiki/i18n-Pages)  
+
 ---
 
 **[Librarian Resources](https://openlibrary.org/about/lib)**  
