@@ -68,6 +68,7 @@ Sometimes, an issue will be high priority and must be deployed directly and inde
 5. Exit the docker container `exit`
 6. Restart the container `docker restart openlibrary_web_1`
 7. Test that the fix is live
+8. Add "Patch Deployed" label to the PR
 
 ## Setup stuff
 
