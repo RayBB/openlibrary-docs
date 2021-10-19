@@ -9,12 +9,7 @@
     - Sentry ol-infobase: https://sentry.archive.org/sentry/ol-infobase/
 3. [ ] Confirm staging is working as expected: http://staging.openlibrary.org
 4. [ ] Warn slack channels `#openlibrary-g` and `#openlibrary` of deploy and momentary downtime
-5. [ ] Ensure your Internet Archive VM account has correct access to servers (1-time)
-    - Repeat for each host:
-        ```
-        ssh -A ol-<host>
-        sudo usermod -a -G docker <your-username>
-        ```
+5. [ ] Ensure your Internet Archive VM account has access to docker (one-time)
 6. [ ] Deploy to Production
     - `ssh -A ol-home0`
         ```sh
@@ -68,7 +63,19 @@ Sometimes, an issue will be high priority and must be deployed directly and inde
 
 1. Go to eg `https://github.com/internetarchive/openlibrary/pull/5772.diff`, and copy the url (it will redirect)
 2. Go to each web node
-3. `docker exec openlibrary_web_1 bash`
+3. `docker exec -it openlibrary_web_1 bash` (make sure your user is in the docker group)
 4. `curl 'URL' | git apply`
 5. Exit the docker container `exit`
 6. Restart the container `docker restart openlibrary_web_1`
+7. Test that the fix is live
+
+## Setup stuff
+
+### Adding your user to the docker group
+
+```sh
+ssh -A ol-<host>
+sudo usermod -a -G docker <your-username>
+```
+
+Then logout and log back in.
