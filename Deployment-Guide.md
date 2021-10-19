@@ -61,3 +61,14 @@ To roll back to a previous deploy, run: `OLIMAGE="openlibrary/olbase:3f372be" /o
 Note:
 - Only the last ~2 deploys are kept around
 - You cannot rollback JS/CSS changes easily, since they are outside of the docker flow.
+
+## Patch Deploying a PR
+
+Sometimes, an issue will be high priority and must be deployed directly and independently of whatever else might be on master. To patch deploy a specific PR:
+
+1. Go to eg `https://github.com/internetarchive/openlibrary/pull/5772.diff`, and copy the url (it will redirect)
+2. Go to each web node
+3. `docker exec openlibrary_web_1 bash`
+4. `curl 'URL' | git apply`
+5. Exit the docker container `exit`
+6. Restart the container `docker restart openlibrary_web_1`
