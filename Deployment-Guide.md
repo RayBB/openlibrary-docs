@@ -70,6 +70,13 @@ Sometimes, an issue will be high priority and must be deployed directly and inde
 7. Test that the fix is live
 8. Add "Patch Deployed" label to the PR
 
+### Reverting a Patch Deployment
+
+A patch deployment can be reverted by following the above steps, adding `-R` to the end of step 4:
+```
+curl 'URL' | git apply -R
+```
+
 ## Setup stuff
 
 ### Adding your user to the docker group
