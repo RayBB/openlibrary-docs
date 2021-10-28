@@ -9,7 +9,7 @@
     - Sentry ol-infobase: https://sentry.archive.org/sentry/ol-infobase/
 3. [ ] Confirm staging is working as expected: http://staging.openlibrary.org
 4. [ ] Warn slack channels `#openlibrary-g` and `#openlibrary` of deploy and momentary downtime
-5. [ ] Ensure your Internet Archive VM account [has access to docker](#adding-your-user-to-the-docker-group) (one-time)
+5. [ ] Follow one-time set-up instructions found [here](#setup-stuff)
 6. [ ] Deploy to Production
     - `ssh -A ol-home0`
         ```sh
@@ -78,12 +78,13 @@ curl 'URL' | git apply -R
 ```
 
 ## Setup stuff
+These things that only need to happen once:
 
-### Adding your user to the docker group
-
+1. Add your username to the `docker` group, using the following commands:
 ```sh
 ssh -A ol-<host>
 sudo usermod -a -G docker <your-username>
 ```
-
-Then logout and log back in.
+1. Request that a team member send you a Docker Hub invitation.
+2. Ensure that you are in the `staff` group in `ol-home0`.
+3. SSH from `ol-home0` to every other node, agreeing to the prompt with "yes".
