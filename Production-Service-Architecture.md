@@ -2,6 +2,7 @@
 - 2019: `ol-mem[0-2]` trusty VMs have been reprovisioned as `ol-mem[3-5]` following the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide)
 - Dec. 2020: Migration to Docker-based deployments based on docker-compose
 - Jan. 2021: Upgrade to Infogami master and drop `docker-compose.infogami-local.yml`
+- Oct./Nov. 2021: Decomission ol-mem{3,4,5} on Ubuntu Xenial in favor of ol-mem{0,1,2} on Ubuntu Focal
 
 ## Three ways to deploy:
 1. localhost for Developers -- http://localhost:8080/status
