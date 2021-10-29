@@ -65,4 +65,7 @@ Our Docker containers are more-or-less provisioned identically:
 At a minimum, re-provisioning a container requires:
 - setting up firewall rules and installing core packages (e.g. git, docker) by running an ansible playbook
 - rsync-ing over the legacy VM's `/opt` directory (preferably as an external mountable `/1` volume which can be moved in the future)
-- Setting up `olsystem` so that its files within `/opt/openlibrary/olsystem/etc` symlink to the right locations within `/etc` 
+- Setting up `olsystem` so that its files within `/opt/openlibrary/olsystem/etc` symlink to the right locations within `/etc`
+
+## Replace a memcache server (Nov. 2021)
+[internetarchive/olsystem#138](https://github.com/internetarchive/olsystem/pull/138)
