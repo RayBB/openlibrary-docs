@@ -4,7 +4,11 @@ Data dumps are introduced at https://openlibrary.org/developers/dumps
 
 Successful data dumps are transferred to https://archive.org/details/ol_exports?sort=-publicdate
 
-As of 2021-10-13, data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary_cron-jobs_1` docker container:
+Data dumps should be created on `ol-home0` within the `openlibrary_cron-jobs_1` Docker container.
+* That container uses `docker/ol-cron-start.sh`
+* The jobs are in `olsystem/etc/cron.d/openlibrary.ol_home0`
+
+As of 2021-10-13, data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary_cron-jobs_1` Docker container:
 
 ```
 tmux
