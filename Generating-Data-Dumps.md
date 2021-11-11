@@ -2,7 +2,7 @@
 
 Data dumps are introduced at https://openlibrary.org/developers/dumps
 
-Successful data dumps can be found at https://archive.org/details/ol_exports?sort=-publicdate
+Successful data dumps are transferred to https://archive.org/details/ol_exports?sort=-publicdate
 
 As of 2021-10-13, data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary_cron-jobs_1` docker container:
 
