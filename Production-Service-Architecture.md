@@ -70,4 +70,4 @@ At a minimum, re-provisioning a container requires:
 ## Replace a memcache server (Nov. 2021)
 * [x] ~ol-mem5~ --> ol-mem0 in [internetarchive/olsystem#138](https://github.com/internetarchive/olsystem/pull/138)
 * [x] ~ol-mem4~ --> ol-mem1 in [internetarchive/olsystem#144](https://github.com/internetarchive/olsystem/pull/144) (06 Dec 2021)
-* [ ] ~ol-mem3~ --> ol-mem2 in 
+* [ ] ~ol-mem3~ --> ol-mem2 in [internetarchive/olsystem#144](https://github.com/internetarchive/olsystem/pull/144) (?? Dec 2021)
