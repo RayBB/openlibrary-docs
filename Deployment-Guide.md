@@ -39,6 +39,8 @@
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0 && docker restart openlibrary_infobase_nginx_1
         docker stop openlibrary_importbot_1
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web2
+        # Not currently production facing
+        /opt/openlibrary/scripts/deployment/restart_servers.sh ol-www0
         ````
 - [ ] Notify slack of deploy completion
 
