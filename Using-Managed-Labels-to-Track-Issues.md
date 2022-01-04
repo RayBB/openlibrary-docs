@@ -42,9 +42,20 @@ Any open bug that is unowned is in need of triage.
 
 Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). 
 
-See [this description](https://github.com/internetarchive/openlibrary/issues/6003#issuecomment-1005159553) about how/why leads are set.
+A Lead is someone who has been appointed by staff because of their experience to help manage a specific aspect of Open Library. Anyone may apply to be considered for a specific lead position (like i18n, js standards, etc).
+
+The Lead is responsible for:
+* Making sure a feature is one that the community agrees with (through community calls or tagging/asking staff)
+* Assigning members of the community to an issue and committing to give them mentorship
+* Helping conduct code reviews
 
 See the [Team Leads Table](https://github.com/internetarchive/openlibrary/wiki#team-leads-table) to get an idea of who to tag.
+
+## Triage
+
+Every issue on Open Library's tracker should be assigned a `Lead: @person` and a `Priority: #` label by a member of staff.
+
+Issues which have `Needs: Lead` and or `Needs: Triage` labels do not yet have a lead/mentor assigned and have not yet been vetted or evaluated for the community. Once an issue has been triaged, members of the community may request to be assigned to an issue and enjoy the mentorship of the designated `Lead`.
 
 ## Milestones
 
