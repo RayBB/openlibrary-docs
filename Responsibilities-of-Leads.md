@@ -1,3 +1,8 @@
+This document needs an overhaul to match https://openlibrary.org/volunteer. 
+
+For other general responsibilities of Leads, see:
+https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues#leads
+
 ## Roles
 
 * [Lead Community Librarian](#Lead-Community-Librarian)
