@@ -84,6 +84,17 @@ DEBUG    : stats.py    :  40 :  Postgres Database : coverstore
 2021-05-07 22:57:29 [7965] [openlibrary.admin.stats] [INFO] Removing sqlite file used for ipstats
 ```
 
+### Running Import Bot Daemon
+
+```
+ol-home0:~$ docker exec -it openlibrary_importbot_1 bash
+scripts/manage-imports.py --config "$OL_CONFIG" import-all
+```
+
+### Monthly Data Dumps
+
+
+
 ### Archive.org Imports
 
 #### Adding 1 day
