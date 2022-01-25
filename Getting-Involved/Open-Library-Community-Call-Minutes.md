@@ -1,5 +1,7 @@
 Open Library hosts a Weekly Community Call every Tuesday @ 10:00am PT https://zoom.us/j/369477551
 
+2022 Community notes for Q1: https://docs.google.com/document/d/1LEbzsLZ1F9_YIQOoZzO7GoZnG1z-rudhZ9HNtsameTc/edit#
+
 ***
 
 **Update (2019-02-26):** Starting on 2019-02, our notes have moved to [this Google Doc](https://docs.google.com/document/d/16eAABOSLrmCbOkRbwVXzis2x4dz2gEQWJsXK-crDCqg/edit#)
