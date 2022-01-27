@@ -34,3 +34,22 @@ sudo vim _dev-merged.txt
 # Find your PR by its number, and then remove the line.
 # Then trigger another PR deploy.
 ```
+
+### Manually deploying to testing
+
+```sh
+cd /opt/openlibrary
+
+# add PR number + comment with name
+sudo vim /opt/openlibrary/_dev-merged.txt
+
+# Pull down all branches
+sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
+
+# restart service
+export COMPOSE_FILE='docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml'
+docker-compose down
+docker-compose up -d web memcached
+
+# Run any build steps that need re-running e.g. make js css, etc.
+```
