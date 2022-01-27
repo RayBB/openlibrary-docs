@@ -25,7 +25,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 4. Note the conflicting file, and `ctrl-f` for it to see which PR it came from.
 5. If it is reasonable to do so, remove the PR from testing and trigger a new PR deploy.
 
-### Removing a PR from testing
+### Removing a PR from `testing.openlibrary.org`
 
 ```sh
 ssh -A ol-dev1
@@ -35,7 +35,7 @@ sudo vim _dev-merged.txt
 # Then trigger another PR deploy.
 ```
 
-### Manually deploying to testing
+### Manually deploying to `testing.openlibrary.org`
 
 ```sh
 cd /opt/openlibrary
