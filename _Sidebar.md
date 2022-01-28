@@ -52,7 +52,9 @@
 
 **Internationalization (i18n)**  
 [Contributing Translations](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
+[Making HTML Translatable](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-programmers)  
 [i18n Pages](https://github.com/internetarchive/openlibrary/wiki/i18n-Pages)  
+
 
 ---
 
