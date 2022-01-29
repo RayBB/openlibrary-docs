@@ -19,8 +19,6 @@ Open Library's production automatic import pipeline consists of two components:
 
 ![viz-js com_](https://user-images.githubusercontent.com/978325/130883227-bce286f6-862a-419a-8e7d-6e214bfbe1b7.png)
 
-## 
-
 From `openlibrary_cron-jobs_1` on `ol-home0` enqueue a batch:
 ```
 cd /openlibrary/scripts
@@ -270,4 +268,11 @@ How we'd like an unified import system to behave:
 2. When we fetch a day of changes from Archive.org during our daily cron-check, it's easy for us to submit a batch to the `ImportBot` service. But when we fetch large volumes of monthly partner data which has millions of records, it's unclear how we should batch this and submit it to the `ImportBot` and how to know which [batches] are failing or succeeding. Do we submit 5000 batches of 1000 (e.g. 5M)?
 3. `import_item` table only supports archive_id right now, what if it supported `data` as an alternative column and what would happen if this table had hundreds of millions of records.
 
+## IA Import Bot
+
+Video walkthrough here: (how OL Imports work) https://archive.org/details/openlibrary-tour-2020/ol_imports_comprehensive.mp4
+See code: https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/ia.py#L313-L399
+
+* There is a thing called the ImportBot daemon. It runs 24/7 checking the ImportQueue for new batches of ~1,000 records. These batches can include ia or any number of partner records.
+* There's also a cron job (i.e. a timed linux job) which runs IA Imports once a day. This cron job calls the code above (i.e. get_candidate_ocaids) to fetch archive.org IDs (i.e. ocaids) and submits them to the ImportQueueto be processed by [1]
 
