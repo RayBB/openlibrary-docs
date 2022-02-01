@@ -6,12 +6,11 @@
 [Weekly Community Calls](https://docs.google.com/document/d/1YXh4SvaY9kyI-IIYnVQPDQIeDHoDcvvqvyHfkkTfPX8)  
 [Google Summer of Code](Google-Summer-of-Code)  
 [Hacktoberfest (October)](Hacktoberfest)  
-[View 2021 Roadmap](https://docs.google.com/document/d/1U2zolE0q_H4ydO4ss4RvD9Tv-DJpNMs4T9k8Qxef20A/edit#heading=h.exy6eztn4j46)
 
 ---
 
 **Project Management**  
-[Open Library Executive Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3)  
+[View Roadmaps](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3)
 [HOWTO: Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)  
 [Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
 [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
