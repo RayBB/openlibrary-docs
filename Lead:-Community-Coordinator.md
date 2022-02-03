@@ -9,11 +9,11 @@ This document describes the responsibilities and process of the Community Coordi
 
 ## Process
 
-1. We'll do a query for recently updated issues once a week
+Once a week, Community Coordinator will run a query for recently updated issues:
 https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+comments%3A%3E1+created%3A%3E2021-01-01+
-2. If someone is asking to be assigned and the issue doesn't have `label:"Needs: Help"` then ping the Lead on slack :)
-3. If someone is asking to be assigned and there is a `label:"Needs: Help"` then feel free to assign them.
-4. If someone is asking for help or clarification and hasn't been helped, tag the Lead on slack using their slack @handle (can be in public channel)
 
+1. If someone is asking to be assigned and there is a `label:"Needs: Help"` then feel free to **assign** them and leave a comment -- "Thank you! If you need help or more details, please ask the team @lead here!"
+2. If someone is asking to be assigned and the issue doesn't have `label:"Needs: Help"` then **add label** `label:"Needs: Response"`
+3. If someone is asking for help or clarification and hasn't been helped, tag the Lead on slack using their slack @handle (can be in public channel) then **add label** `label:"Needs: Response"`
 
-
+Each week during ABC staff call, the staff will review issues which `Needs: Response` for each @lead. The @lead will remove `Needs: Response` after the necessary actions have been taken.
