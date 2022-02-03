@@ -87,7 +87,7 @@
 ---
 
 **Leads Corner**  
-[Lead: Community Librarian](Lead:-Community-Librarian)   
+[Lead: Community Librarian](Lead:-Community-Librarian)  
 [Lead: Community Coordinator](Lead:-Community-Coordinator)  
 
 ---
