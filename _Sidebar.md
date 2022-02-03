@@ -87,8 +87,8 @@
 ---
 
 **Leads Corner**  
-[Lead: Community Librarian](Lead:-Community-Librarian)  
-[Lead: Community Coordinator](Lead:-Community-Coordinator)  
+[Lead: Community Librarian](https://github.com/internetarchive/openlibrary/wiki/Lead:-Community-Librarian)  
+[Lead: Community Coordinator](https://github.com/internetarchive/openlibrary/wiki/Lead:-Community-Coordinator)  
 
 ---
 
