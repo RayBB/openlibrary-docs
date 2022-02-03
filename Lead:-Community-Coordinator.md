@@ -1,4 +1,4 @@
-Doc owner: Tumin
+Doc owner: [@tuminzee](https://github.com/tuminzee)
 
 This document describes the responsibilities and process of the Community Coordinator who as of 2022-02-01 is Tumin.
 
@@ -16,9 +16,9 @@ https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+sor
 2. If someone is asking to be assigned and the issue doesn't have `label:"Needs: Help"` then **add label** `label:"Needs: Response"` and comment: "This issue doesn't isn't listed as Needs Help yet, I've marked it as Needs Response so @lead can provide us with more info this week".
 3. If someone is asking for help or clarification and hasn't been helped, tag the Lead on slack using their slack @handle (can be in public channel) then **add label** `label:"Needs: Response"`
 
-Each week during ABC staff call, the staff will review issues which `Needs: Response` for each @lead. The @lead will remove `Needs: Response` after the necessary actions have been taken.
+Each week during ABC staff call, **staff** will review issues which `Needs: Response` for each @lead. The @lead will remove `Needs: Response` after the necessary actions have been taken.
 
-Each week during Open Library community call (when/if convenient for Community Coordinator), share our win!
+Each week during Open Library community call (when/if convenient for Community Coordinator), Community Coordinator will share the community's wins!
 - how many contributors were assigned?
 - how many contributors offered help but can't be assigned yet?
 - how many contributors had questions?
