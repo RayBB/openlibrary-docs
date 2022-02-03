@@ -86,6 +86,12 @@
 
 ---
 
+**Leads Corner** 
+[Lead: Community Librarian](#Lead-Community-Librarian)   
+[Lead: Community Coordinator](https://github.com/internetarchive/openlibrary/wiki/Lead:-Community-Coordinator)  
+
+---
+
 **Features & Initiatives (RFCs)**  
 [Orphaned Editions Planning](Orphaned-Editions-Planning)  
 [Canonical Books Page](Canonical-Books-Page)  
