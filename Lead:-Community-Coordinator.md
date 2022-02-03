@@ -17,3 +17,8 @@ https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+sor
 3. If someone is asking for help or clarification and hasn't been helped, tag the Lead on slack using their slack @handle (can be in public channel) then **add label** `label:"Needs: Response"`
 
 Each week during ABC staff call, the staff will review issues which `Needs: Response` for each @lead. The @lead will remove `Needs: Response` after the necessary actions have been taken.
+
+Each week during Open Library community call (when/if convenient for Community Coordinator), share our win!
+- how many contributors were assigned?
+- how many contributors offered help but can't be assigned yet?
+- how many contributors had questions?
