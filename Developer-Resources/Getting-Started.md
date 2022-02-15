@@ -148,8 +148,8 @@ docker-compose exec web bash  # Connect to the docker image
 #    saving ['/authors/OL1385865A']
 #    [{'key': '/authors/OL1385865A', 'revision': 1}]
 
-# Copy a work (JUST the work; no editions. --recursive gets any missing authors)
-./scripts/copydocs.py /works/OL14906539W --recursive
+# Copy a work and all its editions/authors
+./scripts/copydocs.py /works/OL14906539W
 # Outputs:
 #    fetching ['/works/OL14906539W']
 #    found references ['/authors/OL30714A', '/authors/OL68291A', '/authors/OL1385865A', '/authors/OL1058879A', '/authors/OL238025A']
@@ -159,8 +159,8 @@ docker-compose exec web bash  # Connect to the docker image
 #    saving ['/works/OL14906539W']
 #    [{'key': '/works/OL14906539W', 'revision': 1}]
 
-# Copy an edition (--recursive also gets works/authors)
-./scripts/copydocs.py /books/OL24966433M --recursive
+# Copy an edition and its works/authors
+./scripts/copydocs.py /books/OL24966433M
 # Outputs:
 #    fetching ['/books/OL24966433M']
 #    found references ['/works/OL14906539W']
@@ -174,16 +174,6 @@ docker-compose exec web bash  # Connect to the docker image
 #    saving ['/books/OL24966433M']
 #    [{'key': '/books/OL24966433M', 'revision': 1}]
 ```
-
-To import a work's editions, run this JavaScript in your browser's console on a work page. This will output a `copydocs` command you can copy/paste into your terminal. (Note the limit/offset params! The limit defaults to 50.)
-
-```js
-await fetch(location.href.replace(/[^\/]*$/, 'editions.json?limit=100&offset=0'))
-.then(r => r.json())
-.then(d => './copydocs.py --recursive ' + d.entries.map(e => e.key).join(' '))
-```
-
-(TIP: You can copy the output of the previous command by running `copy($_)` in the console! [Learn more](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Helpers))
 
 Covers don't quite work correctly on the local environment. To test something with covers, change `coverstore_url` inside `conf/openlibrary.yml` to point to the production covers (covers.openlibrary.org). Avoid uploading when this is set.
 
