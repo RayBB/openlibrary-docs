@@ -15,12 +15,14 @@ Contents:
 
 ```sh
 git clone git@github.com:USERNAME/openlibrary.git
-git remote add origin https://github.com/USERNAME/openlibrary.git
 ```
+
+This creates a local copy of your own fork of the Open Library repository, in a directory called *openlibrary*. Your fork on the GitHub servers is a remote called *origin*. By default, you are looking at the *master* branch. 
 
 3. Add 'upstream' repo to list of remotes
 
 ```sh
+cd openlibrary
 git remote add upstream https://github.com/internetarchive/openlibrary.git
 ```
 
