@@ -3,7 +3,7 @@
 **Ways to Get Involved**  
 [Ask Question on Gitter](https://gitter.im/theopenlibrary/Lobby)  
 [Request Slack Invite](https://github.com/internetarchive/openlibrary/issues/686)  
-[Weekly Community Calls](https://docs.google.com/document/d/1YXh4SvaY9kyI-IIYnVQPDQIeDHoDcvvqvyHfkkTfPX8)  
+[Weekly Community Calls](https://docs.google.com/document/d/1LEbzsLZ1F9_YIQOoZzO7GoZnG1z-rudhZ9HNtsameTc)  
 [Google Summer of Code](Google-Summer-of-Code)  
 [Hacktoberfest (October)](Hacktoberfest)  
 
