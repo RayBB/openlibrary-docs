@@ -181,6 +181,6 @@ In short:
 * Things should _function_ in IE11
 * It is alright if things _look_ wonky in IE11
 
-We will move away from IE11 support at some point, just like (Internet Archive did)[http://blog.archive.org/2020/05/01/farewell-to-ie11/].
+We will move away from IE11 support at some point, just like [Internet Archive did](http://blog.archive.org/2020/05/01/farewell-to-ie11/).
 
-(Relevant Thread)[https://internetarchive.slack.com/archives/C0ETZV72L/p1621029402256800]
+[Relevant Thread](https://internetarchive.slack.com/archives/C0ETZV72L/p1621029402256800)
