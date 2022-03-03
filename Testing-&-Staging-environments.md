@@ -3,12 +3,13 @@ Sometimes, you will try to put a PR on testing, but it will conflict with anothe
 
 To determine what PR is conflicting, find the block for your PR in the Jenkins dashboard for the PR Deploy:
 
-1. Select the "Build dev-merged" step
-2. Expand the `git checkout` block
+1. Select the "ol-dev1-deploy (internal)" step
+2. Select the "Build dev-merged" step
+3. Expand the `git checkout` block
 
 ![f](https://github.com/internetarchive/openlibrary/wiki/images/Screenshot%202021-09-28%20123145.jpg)
 
-3. Find your PR (`ctrl-f` for the PR number, or for `CONFLICT`)
+4. Find your PR (`ctrl-f` for the PR number, or for `CONFLICT`)
 
 ```
 origin pull/5644/head  
