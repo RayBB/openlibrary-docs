@@ -68,6 +68,9 @@ At a minimum, re-provisioning a container requires:
 - Setting up `olsystem` so that its files within `/opt/openlibrary/olsystem/etc` symlink to the right locations within `/etc`
 
 ## Replace a memcache server (Nov. 2021)
+
+When provisioning a new memcached server, remember to edit /etc/memcached.conf `-m` setting to whatever is available on the machine, less perhaps 300mb for OS level memory needs (e.g. perhaps if the machine has 9.7GB, use `-m 9300` or a bit higher 
+
 * [x] ~ol-mem5~ --> ol-mem0 in [internetarchive/olsystem#138](https://github.com/internetarchive/olsystem/pull/138)
 * [x] ~ol-mem4~ --> ol-mem1 in [internetarchive/olsystem#144](https://github.com/internetarchive/olsystem/pull/144) (06 Dec 2021)
 * [x] ~ol-mem3~ --> ol-mem2 in [internetarchive/olsystem#145](https://github.com/internetarchive/olsystem/pull/145) (?? Dec 2021)
