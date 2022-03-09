@@ -69,7 +69,7 @@ At a minimum, re-provisioning a container requires:
 
 ## Replace a memcache server (Nov. 2021)
 
-When provisioning a new memcached server, remember to edit /etc/memcached.conf `-m` setting to whatever is available on the machine, less perhaps 300mb for OS level memory needs (e.g. perhaps if the machine has 9.7GB, use `-m 9300` or a bit higher 
+When provisioning a new memcached server, remember to update/edit `/etc/memcached.conf` to increase the `-m` setting to use whatever resources are available on the machine (less perhaps 300mb for OS level memory needs -- e.g. perhaps if the machine has 9.7GB, use -m 9300 or a bit higher). By default memcached only uses 64mb.
 
 * [x] ~ol-mem5~ --> ol-mem0 in [internetarchive/olsystem#138](https://github.com/internetarchive/olsystem/pull/138)
 * [x] ~ol-mem4~ --> ol-mem1 in [internetarchive/olsystem#144](https://github.com/internetarchive/olsystem/pull/144) (06 Dec 2021)
