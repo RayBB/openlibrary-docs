@@ -86,7 +86,7 @@ cd tests/integration
 
 # Troubleshooting
 
-**Question:** Travis CI build fails due to linting errors?
+**Question:** GitHub Actions CI build fails due to linting errors?
 
 **Answer:** This can be solved by running `npm run lint:fix` inside the docker container.
 
