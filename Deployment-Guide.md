@@ -16,6 +16,7 @@
         cd /opt/openlibrary
         # Pull olystem and openlibrary before continuing
         # so we have latest docker-compose, etc
+        # NOTE: Ensure that the `master` branch is checked out first.
         sudo git pull origin master
 
         time /opt/openlibrary/scripts/deployment/deploy.sh  # 15min
