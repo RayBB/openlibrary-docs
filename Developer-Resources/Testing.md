@@ -1,4 +1,6 @@
-# Automated Tests
+# Running Tests, Writing Testing, & Continuous Integration
+
+## Running Automated Tests
 
 From the root of your local openlibrary project, you can run the JavaScript and Python unit tests in a Docker container with the following command:
 
