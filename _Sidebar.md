@@ -16,17 +16,19 @@
 [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
 
 **Developer Resources**  
-[Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
-[Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
-[Git Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
-
-**Dev Environment**  
-[Getting Setup](Getting-Started)  
-[Debugging](Debugging)  
+[Quick Start](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
+[Running a Developer Environment](Getting-Started)  
+[Logging in Locally](Getting-Started#logging-in)  
+[Loading Production Book Data](Loading-Production-Book-Data)  
+[Enabling Debugging](Debugging)  
 [Testing Your Code](Testing)  
+[How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
+[Other Frequent Developer](Getting-Started)  
 
 **Front-End**  
 [Front-end Guide](Frontend-Guide)  
+[Building JS & CSS](Frontend-Guide#building-css-and-js)  
+[Routing & Templates](Frontend-Guide#routing-and-templates)  
 [Design Pattern Library](Design-Pattern-Library)  
 [Overview of HTTP Endpoints](Endpoints)  
 
