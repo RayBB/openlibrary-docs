@@ -16,7 +16,7 @@
 [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
 
 **Developer Resources**  
-[Quick Start](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
+[Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
 [Running a Developer Environment](Getting-Started)  
 [Logging in Locally](Getting-Started#logging-in)  
 [Importing Production Book Data](Loading-Production-Book-Data)  
