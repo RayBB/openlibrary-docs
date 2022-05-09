@@ -11,10 +11,8 @@
     - [Testing the site with different users](#creating-users)
     - [Lending & Borrowing](#lending-and-borrowing)
     - [Configuration](#configuration)
-- [Importing Test Data](Loading-Production-Book-Data)
-- [Frontend Developer's Guide](#frontend-guide)
-    - [Building CSS and JS](#building-css-and-js)
-    - [Routing & Templates](#routing-and-templates)
+- [Importing Test Data](Loading-Production-Book-Data) (moved)
+- [Frontend Developer's Guide](Frontend-Guide) (moved)
 - [Backend Developer's Guide](#backend-guide)
     - [Memcache](#memcache)
     - [Log Files](#logs)
@@ -135,28 +133,15 @@ By default these might be triggering 404s. Point coverstore_url to https://cover
 
 Be sure to restart your dev instance after any configuration changes.
 
+<a name="importing-test-data"></a>
+## Importing Test Data
 
+This section moved [here](Loading-Production-Book-Data).
 
 <a name="frontend-guide"></a>
 ## Frontend Guide
 
-<a name="building-css-and-js"></a>
-### Building CSS and JS
-
-In local development, after making changes to CSS or JS, make sure to run `make css` or `make js`, in order to re-compile the build/ static assets. You might also need to restart the webserver and/or clear browser caches to see the changes.
-
-<a name="routing-and-templates"></a>
-### Routing and Templates
-
-- OpenLibrary is rendered using [Templetor](http://webpy.org/docs/0.3/templetor) templates, part of the [web.py](http://webpy.org/) framework.
-
-- The repository you cloned on your local machine is mounted at /openlibrary in docker. If you make template changes to files locally, the OpenLibrary instance in the virtual machine should automatically pick up those changes.
-
-- The home page is rendered by [templates/home/index.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/home/index.html), and its controller is [plugins/openlibrary/home.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/home.py#L18).
-
-- A books page is rendered by [templates/type/edition/view.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/edition/view.html). An edition is defined by edition type. An edition is served by a `/books/OL\d+M` url.
-
-- A works page is rendered by [templates/type/work/view.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/work/view.html). A work is defined by work type. A work is served by a `/works/OL\d+W` url.
+This section moved [here](Frontend-Guide).
 
 <a name="backend-guide"></a>
 ## Backend Guide
