@@ -23,7 +23,7 @@
 [Enabling Debugging](Debugging)  
 [Testing Your Code](Testing)  
 [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
-[Other Frequent Developer](Getting-Started)  
+[Other Frequent Developer Tasks](Getting-Started)  
 
 **Front-End**  
 [Front-end Guide](Frontend-Guide)  
