@@ -1,34 +1,47 @@
 Welcome to the Front-End Guide for Open Library, a primer for making front-end changes to the openlibrary.org website.
 
-## File organization
+- [File Organization Overview](#File-Organization-Overview)
+- [CSS, JS, & HTML](#css-js-and-html)
+  - [Building CSS & JS](#building-css-and-js)
+  - [Working with CSS](#working-with-css)
+  - [Working with Javascript](#working-with-javascript)
+  - [Working with HTML Templates](#working-with-html)
+- [HOWTO: Routing & Templates](#routing-and-templates)
+- [HOWTO: URL Routing](#url-routing)
+- [HOWTO: The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
+- [HOWTO: Infogami Types](#infogami-types)
+
+## File Organization Overview
 
 - **assets**: css/less in /static/css and js in /openlibrary/plugins/openlibrary/js
 - **models**: `/openlibrary/core/` and `/openlibrary/plugins/upstream/models.py`, data + ORM
 - **controllers**: in `/openlibrary/plugins/` (maps urls [via regex] → classes w/ GET + POST functions which receive/serve content to clients)
 - **templates**: in `/openlibrary/templates` and `openlibrary/macros`. Macros are special template components because they can be rendered (by librarians + admins) as `{{macros()}}` in infogami wiki pages
 
-## How does url routing work?
+## CSS, JS, and HTML
 
-[Lookup the url pattern here](https://github.com/internetarchive/openlibrary/wiki/Endpoints#list-of-all-routes) or via https://dev.openlibrary.org/developers/routes to find out which view class is responsible for generating the template with which you wish to work. Some routes may pass through Open Library (to Infogami) and actually be handled generically by Infogami. This is true for routes like `/books/OL..M/:title` whose route patterns you can see registered at the bottom of `openlibrary/core/models.py`. You may note, most of the url routing is handled within [openlibrary/plugins](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins). Each view class specifies whether it returns json or if it returns a template. If it returns a template, the first argument should be the template's path (relative to the `templates/` directory) where it lives. The values following the template name are variables passed into the template (that the template will have access to). 
+<a name="building-css-and-js"></a>
+### Building CSS and JS
 
-### How a Request is Processed by Open Library:
-When a user submits a url, like https://openlibrary.org/home, the url is first checked by /openlibrary/core/processors/readableurls.py to see (a) if the url has to be re-written (e.g. did you know that http://openlibrary.org/b/OL10317216M is a valid url?) and (b) whether the url contains names which need to be translated from terms our patrons use (e.g. /books/OL...M) to the internal infogami type names registered in the database (e.g. /editions/OL...M).
+In local development, after making changes to CSS or JS, make sure to run `make css` or `make js`, in order to re-compile the build/ static assets. You might also need to restart the webserver and/or clear browser caches to see the changes.
 
-From here, a distinction is made between pages which are custom defined by us (whose controllers live in /openlibrary/plugins) and pages which are managed by infogami (and whose controllers are implicitly defined -- i.e. there is no explicit controller in the code). In the case of /home, this is an endpoint we defined and has a controller defined in /openlibrary/plugins/openlibrary/home.py. This controller declares the url pattern it's responsible for (i.e. /home), fetches the data it needs from various models, and (where applicable) explicitly passes this data into a template (in this case, /openlibrary/templates/home/index.html). The controller then returns the rendered result of this template injected with data to the patron. This differs from the magical process by which urls are resolved for infogami pages.
+### Working with CSS
 
-### Infogami Types:
-Open Library sits on top of a Wiki/CRM platform called Infogami which helps us define page types. By default, an infogami page (like https://openlibrary.org/about) is of /type/page. We've defined a bunch of other special page types (e.g. /type/page, /type/edition, /type/work, /type/author, /type/user -- see all of them here: https://openlibrary.org/type). Unlike endpoints we define (e.g. by registering controllers within /openlibrary/plugins), infogami has a generic engine which implicitly / invisibly defines controllers for all infogami pages. This engine intrinsically resolves pages of designed types directly to their corresponding templates, without there being any explicit controller represented in the code. This can sometimes make it really confusing when you're trying to figure out where the code is for a specific endpoint (spoiler: it probably only exists abstractly).
+All stylesheets are in `static/css`. They are combined to generate `build/css/all.css`, which is included in all the web pages.
 
-When you request a url (for an infogami page), /openlibrary/core/processors/readableurls.py again first maps the url to the correct underlying infogami type, the infogami engine generically fetches the requested page object (e.g. /about or /edition/OL...M) from the infogami database (infostore) and then passes it directly to the infogami template with the matching type as defined in /openlibrary/templates/type (e.g. edition, page, work, author, etc).
-Re-iterated, infogami pages don't have different explicit controllers defined within the code -- urls which address infogami pages are caught by infogami, the matching db object is fetched by infogami and passed as generic variable called page into special infogami-specific templates which live in /openlibrary/templates/type/{type}/view.html via the line $def with (page). The corresponding properties and attributes of page are confusingly defined (according to the page's type) in /openlibrary/plugins/upstream/models.py
+It's a good idea to break CSS into multiple logical files, instead of putting it in one monolithic file.
 
-## Working with JavaScript
+If you make changes to any CSS, run `make css` to regenerate `build/css/all.css`.
+
+We are transitioning towards using [BEM notation](http://getbem.com/) for CSS classes. Please bear this in mind when contributing to our codebase and providing new classes or modifying existing classes. This simplifies our CSS and makes it easier to manage.
+
+### Working with JavaScript
 
 Open Library uses jQuery. Except `jquery` and `jquery-ui`, other third-party JavaScript libraries are combined and included as `vendor.js`. All the custom JavaScripts are combined and includes as `all.js`.
 
 Most of the heavy application lifting is done by a file in `openlibrary/openlibrary/plugins/openlibrary/js/ol.js`
 
-### vendor.js and third party libraries
+#### vendor.js and third party libraries
 
 All third-party JavaScripts are added in the `vendor/js`_ directory in the  repository and `static/build/vendor.js` is generated by combining these  JavaScripts. The files included in `static/build/vendor.js` are specified in a shell script `static/js/vendor.jsh`.
 
@@ -42,7 +55,7 @@ $ make js
 ```
 * Commit vendor.jsh and the library added to the repository
 
-### all.js and custom JavaScripts
+#### all.js and custom JavaScripts
 
 All the custom JavaScript files are put in the repo at `openlibrary/plugins/openlibrary/js`. All these JavaScript files are combined to generate `build/js/all.js`.
 
@@ -50,39 +63,7 @@ The order in which these files are included is determined by the sort order of t
 
 If you make any changes to any of the JavaScript files, run `make js` to regenerate `build/js/all.js`.
 
-### Working in Docker
-
-Refer to: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md#code-updates
-
-While running the oldev container, gunicorn is configured to auto-reload modified files. To see the effects of your changes in the running container, the following apply:
-
-* Editing python files or web templates => simply save the file, gunicorn will auto-reload it.
-* Working on frontend css or js => you must run `docker-compose exec web make css js`. This will re-generate the assets in the persistent ol-build volume mount, so the latest changes will be available between stopping / starting and removing web containers. 
-  * If you want to view the generated output you will need to attach to the container (`docker-compose exec web bash`) to examine the files in the volume, not in your local dir.
-* Adding or changing core dependencies => you will most likely need to rebuild both olbase and oldev images. This shouldn't happen too frequently. If you are making this sort of change, you will know exactly what you are doing
-
-## Working with CSS
-
-All stylesheets are in `static/css`. They are combined to generate `build/css/all.css`, which is included in all the web pages.
-
-It's a good idea to break CSS into multiple logical files, instead of putting it in one monolithic file.
-
-If you make changes to any CSS, run `make css` to regenerate `build/css/all.css`.
-
-We are transitioning towards using [BEM notation](http://getbem.com/) for CSS classes. Please bear this in mind when contributing to our codebase and providing new classes or modifying existing classes. This simplifies our CSS and makes it easier to manage.
-
-### Beware of bundle sizes
-
-When adding CSS content, while testing you may face an error such as this for example:
-
-```
- FAIL static/build/page-plain.css: 18.81KB > maxSize 18.8KB (gzip)
-```
-This is telling you that your changes have increased the amount of CSS loaded, more than the required amount. This can lead to performance degradation so note that it should be avoided wherever possible (or be well justified!).
-
-These problems are especially a concern for [CSS files on the critical path](https://www.smashingmagazine.com/2015/08/understanding-critical-css/). Always consider placing styles in an JavaScript entrypoint file e.g. `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import`. This CSS will only get loaded via JavaScript and has a much higher bundlesize threshold.
-
-## Working with HTML
+### Working with HTML
 
 Open Library uses templetor syntax in our HTML. See its documentation first: http://webpy.org/docs/0.3/templetor
 
@@ -100,6 +81,60 @@ $# Rendering other macros/templates
 $:macros.EditButtons(comment="")
 $:render_template("lib/pagination", pagecount, pageindex, "/admin/loans?page=%(page)s")
 ```
+
+<a name="routing-and-templates"></a>
+## Routing and Templates
+
+- OpenLibrary is rendered using [Templetor](http://webpy.org/docs/0.3/templetor) templates, part of the [web.py](http://webpy.org/) framework.
+
+- The repository you cloned on your local machine is mounted at /openlibrary in docker. If you make template changes to files locally, the OpenLibrary instance in the virtual machine should automatically pick up those changes.
+
+- The home page is rendered by [templates/home/index.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/home/index.html), and its controller is [plugins/openlibrary/home.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/home.py#L18).
+
+- A books page is rendered by [templates/type/edition/view.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/edition/view.html). An edition is defined by edition type. An edition is served by a `/books/OL\d+M` url.
+
+- A works page is rendered by [templates/type/work/view.html](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/work/view.html). A work is defined by work type. A work is served by a `/works/OL\d+W` url.
+
+## URL Routing
+
+[Lookup the url pattern here](https://github.com/internetarchive/openlibrary/wiki/Endpoints#list-of-all-routes) or via https://dev.openlibrary.org/developers/routes to find out which view class is responsible for generating the template with which you wish to work. Some routes may pass through Open Library (to Infogami) and actually be handled generically by Infogami. This is true for routes like `/books/OL..M/:title` whose route patterns you can see registered at the bottom of `openlibrary/core/models.py`. You may note, most of the url routing is handled within [openlibrary/plugins](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins). Each view class specifies whether it returns json or if it returns a template. If it returns a template, the first argument should be the template's path (relative to the `templates/` directory) where it lives. The values following the template name are variables passed into the template (that the template will have access to). 
+
+## The Lifecycle of a Network Request 
+
+Here's how a network request from a patron flows through the Open Library application: When a user submits a url, like https://openlibrary.org/home, the url is first checked by /openlibrary/core/processors/readableurls.py to see (a) if the url has to be re-written (e.g. did you know that http://openlibrary.org/b/OL10317216M is a valid url?) and (b) whether the url contains names which need to be translated from terms our patrons use (e.g. /books/OL...M) to the internal infogami type names registered in the database (e.g. /editions/OL...M).
+
+From here, a distinction is made between pages which are custom defined by us (whose controllers live in /openlibrary/plugins) and pages which are managed by infogami (and whose controllers are implicitly defined -- i.e. there is no explicit controller in the code). In the case of /home, this is an endpoint we defined and has a controller defined in /openlibrary/plugins/openlibrary/home.py. This controller declares the url pattern it's responsible for (i.e. /home), fetches the data it needs from various models, and (where applicable) explicitly passes this data into a template (in this case, /openlibrary/templates/home/index.html). The controller then returns the rendered result of this template injected with data to the patron. This differs from the magical process by which urls are resolved for infogami pages.
+
+## Infogami Types
+
+Open Library sits on top of a Wiki/CRM platform called Infogami which helps us define page types. By default, an infogami page (like https://openlibrary.org/about) is of /type/page. We've defined a bunch of other special page types (e.g. /type/page, /type/edition, /type/work, /type/author, /type/user -- see all of them here: https://openlibrary.org/type). Unlike endpoints we define (e.g. by registering controllers within /openlibrary/plugins), infogami has a generic engine which implicitly / invisibly defines controllers for all infogami pages. This engine intrinsically resolves pages of designed types directly to their corresponding templates, without there being any explicit controller represented in the code. This can sometimes make it really confusing when you're trying to figure out where the code is for a specific endpoint (spoiler: it probably only exists abstractly).
+
+When you request a url (for an infogami page), /openlibrary/core/processors/readableurls.py again first maps the url to the correct underlying infogami type, the infogami engine generically fetches the requested page object (e.g. /about or /edition/OL...M) from the infogami database (infostore) and then passes it directly to the infogami template with the matching type as defined in /openlibrary/templates/type (e.g. edition, page, work, author, etc).
+Re-iterated, infogami pages don't have different explicit controllers defined within the code -- urls which address infogami pages are caught by infogami, the matching db object is fetched by infogami and passed as generic variable called page into special infogami-specific templates which live in /openlibrary/templates/type/{type}/view.html via the line $def with (page). The corresponding properties and attributes of page are confusingly defined (according to the page's type) in /openlibrary/plugins/upstream/models.py
+
+### Working in Docker
+
+Refer to: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md#code-updates
+
+While running the oldev container, gunicorn is configured to auto-reload modified files. To see the effects of your changes in the running container, the following apply:
+
+* Editing python files or web templates => simply save the file, gunicorn will auto-reload it.
+* Working on frontend css or js => you must run `docker-compose exec web make css js`. This will re-generate the assets in the persistent ol-build volume mount, so the latest changes will be available between stopping / starting and removing web containers. 
+  * If you want to view the generated output you will need to attach to the container (`docker-compose exec web bash`) to examine the files in the volume, not in your local dir.
+* Adding or changing core dependencies => you will most likely need to rebuild both olbase and oldev images. This shouldn't happen too frequently. If you are making this sort of change, you will know exactly what you are doing
+
+### Beware of bundle sizes
+
+When adding CSS content, while testing you may face an error such as this for example:
+
+```
+ FAIL static/build/page-plain.css: 18.81KB > maxSize 18.8KB (gzip)
+```
+This is telling you that your changes have increased the amount of CSS loaded, more than the required amount. This can lead to performance degradation so note that it should be avoided wherever possible (or be well justified!).
+
+These problems are especially a concern for [CSS files on the critical path](https://www.smashingmagazine.com/2015/08/understanding-critical-css/). Always consider placing styles in an JavaScript entrypoint file e.g. `<file_name>--js.less` and load it inside `static/css/js-all.less` via `@import`. This CSS will only get loaded via JavaScript and has a much higher bundlesize threshold.
+
+
 
 ## Internationalization (i18n) - For programmers
 Any text that will be visible to the user must be internationalized. The basics of web.py's `templator` I18N support is described here: http://webpy.org/cookbook/i18n_support_in_template_file
