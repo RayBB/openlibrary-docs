@@ -39,7 +39,6 @@
 
 **Tutorials**  
 [Developing the Reading Log](Developing-The-Reading-Log)  
-[How Imports Work](https://archive.org/details/openlibrary-tour-2020/ol_imports_comprehensive.mp4)  
 [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 
 ---
