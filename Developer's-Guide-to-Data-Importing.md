@@ -1,5 +1,9 @@
 For programmatically bulk importing new books and authors into Open Library.
 
+## Start here
+
+Watch [this video](https://archive.org/details/openlibrary-tour-2020/ol_imports_comprehensive.mp4) about how Open Library import pipeline works.
+
 ## Bulk Import Options
 The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
 1. [Import by ISBN](#Import-by-ISBN)
