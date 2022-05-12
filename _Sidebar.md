@@ -19,7 +19,7 @@
 [Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
 [Running a Developer Environment](Getting-Started)  
 [Logging in Locally](Getting-Started#logging-in)  
-[Importing Production Book Data](Loading-Production-Book-Data)  
+[Importing Production Book Data Locally](Loading-Production-Book-Data)  
 [Enabling Debugging](Debugging)  
 [Testing Your Code](Testing)  
 [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
