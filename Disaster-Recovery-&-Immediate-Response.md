@@ -126,3 +126,10 @@ After truncating, you'll want to restart `openlibrary`, e.g.
 ```
 ssh ol-web4 sudo supervisorctl restart openlibrary
 ```
+
+# Homepage Errors
+
+Sometimes an error occurs while compiling the homepage and an empty body is cached:
+https://github.com/internetarchive/openlibrary/issues/6646
+
+*Solution:* You can use this the url to hit to clear the homepage memcache entry: https://openlibrary.org/admin/inspect/memcache?keys=home.homepage.en.pd-&action=delete . Note the .pd . Remove that if you want to clear the cache for non printdisabled users.
