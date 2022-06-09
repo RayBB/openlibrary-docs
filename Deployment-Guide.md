@@ -24,7 +24,7 @@
         # Ensure all the git repos are in sync across all servers
         
         # Deploy the static files to ol-www1 ; this will not be needed once it's using docker
-        CUR_SHA=$(git rev-parse HEAD | head -c7)        
+        CUR_SHA=$(sudo git rev-parse HEAD | head -c7)        
         STATIC_DIR=/tmp/ol-static-$CUR_SHA
         docker cp $(docker create --rm openlibrary/olbase:latest):/openlibrary/static $STATIC_DIR
         rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
