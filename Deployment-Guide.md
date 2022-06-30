@@ -1,6 +1,6 @@
 ## Setup
 
-In advance of conducting a deploy, the following one-time setup steps must be performed:
+In order to conduct deploys, the following one-time setup steps must be performed:
 
 1. Add your username to the `docker` group, using the following commands:
 ```sh
