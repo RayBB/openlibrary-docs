@@ -82,7 +82,7 @@ curl 'URL' | git apply -R
 ## Recovering from Restart Loops
 
 On ol-home0, a live, breaking change could be made to certain services, e.g. `affiliate-service` which result in the service entering a restart loop. In order to fix this and resume from a clean-slate, the service may be taken down with:
-`docker stop openlibrary_affiliate-server_1; docker rm openlibrary_afilliate-server_1` and then brought back up online with `PRODUCTION="docker-compose.yml:docker-compose.production.yml" HOSTNAME=$HOST OLIMAGE=openlibrary/olbase:latest docker-compose --profile affiliate-server up --build --no-deps -d .`
+`docker stop openlibrary_affiliate-server_1; docker rm openlibrary_afilliate-server_1` and then brought back up online with `DOCKER_COMPOSE="docker-compose.yml:docker-compose.production.yml" HOSTNAME=$HOSTNAME docker-compose up -d affiliate-server`.
 
 ## Setup stuff
 These things that only need to happen once:
