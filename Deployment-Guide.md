@@ -1,3 +1,16 @@
+## Setup
+
+In advance of conducting a deploy, the following one-time setup steps must be performed:
+
+1. Add your username to the `docker` group, using the following commands:
+```sh
+ssh -A ol-<host>
+sudo usermod -a -G docker <your-username>
+```
+1. Request that a team member send you a Docker Hub invitation.
+2. Ensure that you are in the `staff` group in `ol-home0`.
+3. SSH from `ol-home0` to every other node, agreeing to the prompt with "yes".
+
 ## Checklist for Deployment
 
 1. [ ] Check merged PRs to get an idea of potential risks (update dates): https://github.com/internetarchive/openlibrary/pulls?q=is%3Apr%20is%3Amerged%20merged%3A2021-04-28T23%3A39%3A46Z..2021-05-06T19%3A05%3A48Z%20sort%3Aupdated-asc
@@ -48,7 +61,6 @@
 
 Greetings deployer! You are one of the select few who has privileged access to Internet Archive infrastructure and is tasked with the important responsibility of deploying the Open Library website. Deploys typically occur on Thursday, after the candidate code has had a few days to be tested on staging (https://staging.openlibrary.org). The following are instructions that we hope will ease your journey towards a successful deployment of the Open Library system. For more information on the system architecture, please refer to the [Production Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture) 
 
-
 ## Recovering from a Failed Deployment
 
 ### Rolling Back
@@ -89,14 +101,9 @@ And then brought back up online with:
 
 ```COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml" HOSTNAME=$HOSTNAME docker-compose up -d affiliate-server```
 
-## Setup stuff
-These things that only need to happen once:
+## Deployment Development
 
-1. Add your username to the `docker` group, using the following commands:
-```sh
-ssh -A ol-<host>
-sudo usermod -a -G docker <your-username>
-```
-1. Request that a team member send you a Docker Hub invitation.
-2. Ensure that you are in the `staff` group in `ol-home0`.
-3. SSH from `ol-home0` to every other node, agreeing to the prompt with "yes".
+### Spin up a Vanilla Container for Dev
+
+Once you've built a release of an `olbase` image, you can use the following command to spin up a vanilla container for testing commands:
+`docker run -it --rm openlibrary/olbase:latest bash`. This is especially useful for testing whether deploys are working correctly and if commands (such as `npm ci`) succeed.
