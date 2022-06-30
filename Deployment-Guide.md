@@ -83,7 +83,7 @@ curl 'URL' | git apply -R
 
 On ol-home0, a live, breaking change could be made to certain services, e.g. `affiliate-service` which result in the service entering a restart loop. In order to fix this and resume from a clean-slate, the service may be taken down with:
 
-```docker stop openlibrary_affiliate-server_1; docker rm openlibrary_afilliate-server_1```
+```docker rm -f openlibrary_affiliate-server_1```
 
 And then brought back up online with:
 
