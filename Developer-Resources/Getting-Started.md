@@ -1,6 +1,6 @@
-# Quick Start for OpenLibrary's developers
+# Quick Start for Open Library's developers
 
-| **WARNING: This documentation is _very_ out of date and needs to be re-written. Most of it is wrong, but some of it is right. If you're getting started, you likely want to take a look at https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment instead. |
+| **WARNING: This documentation is _very_ out of date and needs to be re-written. Most of it is wrong, but some of it is right. If you're getting started, you likely want to take a look at https://github.com/internetarchive/openlibrary/tree/master/docker#readme instead. |
 | -- |
 
 ## Table of Contents
@@ -22,15 +22,15 @@
 - [Credits](#credits)
 
 ## Getting Up & Running
-We use Docker at openlibrary. Follow the instructions on https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment first to get your local copy of Open Library up and running!.
+We use Docker at Open Library. Follow the instructions on https://github.com/internetarchive/openlibrary/tree/master/docker#readme first to get your local copy of Open Library up and running!.
 
 ## Basic Developer Commands
 
 ### start
 
-We Use Docker at openlibrary. These are some of the basic commands, refer [here](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-new-docker-based-open-library-development-environment) for some more useful commands.
+We use Docker at Open Library. These are some of the basic commands, refer [here](https://github.com/internetarchive/openlibrary/tree/master/docker#readme) for some more useful commands.
 
-Starts all the OL services:
+Starts all the Open Library services:
 
 ```bash
 $ docker-compose up
@@ -38,7 +38,7 @@ $ docker-compose up
 
 Start a specific service: 
 
-The following command starts the `solr` service in the detached mode 
+The following command starts the `solr` service in the detached mode (in the background)
 
 ```bash
 $ docker-compose up --no-deps -d solr
@@ -47,7 +47,7 @@ $ docker-compose up --no-deps -d solr
 Logs of the services can be found:
 
 ```bash
-$ docker-compose logs web # replace "web" with any other service name to see that particular service's log
+$ docker-compose logs web  # replace "web" with any other service name to see that particular service's log
 ```
 
 ### shell
@@ -55,7 +55,7 @@ $ docker-compose logs web # replace "web" with any other service name to see tha
 Start a bash shell inside the container:
 
 ```bash
-$ docker-compose exec web bash # replace "web" with any other service name
+$ docker-compose exec web bash  # replace "web" with any other service name
 ```
 
 ### test
@@ -91,7 +91,7 @@ For users with sufficient privileges, an admin interface is available at http://
 
 To view and test the site as a non-admin user:
 
-1) Login to your local dev instance (http://localhost:8080) as the openlibrary@example.com admin user.
+1) Log into your local dev instance (http://localhost:8080) as the openlibrary@example.com admin user.
 2) Enter the admin interface URL: http://localhost:8080/admin and select the `People` option (http://localhost:8080/admin/people)
 3) Select the user `AccountBot` from the "Recent Accounts" table.
 4) At the top of the user page (http://localhost:8080/admin/people/AccountBot) there will be two red buttons -- click on "login as this user".
@@ -128,8 +128,7 @@ Add conf/openlibrary.yaml to .git/info/exclude so that any changes to the conf f
 
 **Book covers**
 
-By default these might be triggering 404s. Point coverstore_url to https://covers.openlibrary.org/
-
+By default, these might be triggering 404s. Point coverstore_url to https://covers.openlibrary.org/
 
 Be sure to restart your dev instance after any configuration changes.
 
@@ -153,8 +152,8 @@ This section moved [here](Frontend-Guide).
 
 ```python
 $ docker-compose run --rm home python
-Python 2.7.6 (default, Mar 22 2014, 22:59:56)
-[GCC 4.8.2] on linux2
+Python 3.10.5 (main, Jun 23 2022, 17:14:57)
+[Clang 13.1.6 (clang-1316.0.21.2.5)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import yaml
 >>> from openlibrary.utils import olmemcache
@@ -204,9 +203,9 @@ to **DELETE** a memcached entry:
 <a name="database"></a>
 ### Database
 
-- You should never work directly with the database, all the data are indeed managed by OpenLibrary through *infobase*, but, if you are brave and curious, here you can find some useful infos.
+- You should never work directly with the database, all the data are indeed managed by Open Library through *infobase*, but, if you are brave and curious, here you can find some useful info.
 
-- The first thing you have to know is that OpenLibrary is based on a [triplestore](https://en.wikipedia.org/wiki/Triplestore) database running on *Postgres*.
+- The first thing you have to know is that Open Library is based on a [triplestore](https://en.wikipedia.org/wiki/Triplestore) database running on *Postgres*.
 
 - To connect to the db run:
 
@@ -265,7 +264,7 @@ openlibrary=# SELECT count(*) as count FROM thing WHERE type='22';
 | **WARNING: This section is very out of date and needs to be re-written. |
 | -- |
 
-Occasionally, new tables get added to Open Library database and some existing tables get altered. Scripts are provided to migrate the existing dev instances to new schema.
+Occasionally, new tables get added to the Open Library database and some existing tables get altered. Scripts are provided to migrate the existing dev instances to the new schema.
 
 To migrate an existing dev instance:
 
@@ -284,7 +283,7 @@ This will look at the current database schema, identify its version, and upgrade
 | **WARNING: This section is likely out of date and might need to be re-written. |
 | -- |
 
-- Currently we use reCAPTCHA v2, which validates users based on the "I'm not a robot" checkbox. 
+- Currently, we use reCAPTCHA v2, which validates users based on the "I'm not a robot" checkbox. 
 
 - To develop with reCAPTCHA v2 locally, for testing new user signups and edits that require a user to prove they are human, you will need to [sign up for a reCAPTCHA API key pair](https://www.google.com/recaptcha/admin#list) from Google Developers (Google account required): `https://developers.google.com/recaptcha/docs/display`
 
