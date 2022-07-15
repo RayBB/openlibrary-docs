@@ -28,7 +28,7 @@ The updater script checks for updates every [5 seconds](https://github.com/inter
 Here's a useful solr command for checking how far behind solr-updater is:
 
 ```sh
-curl "ol-home:7000/openlibrary.org/log/$(cat /var/run/openlibrary/solr-update.offset)?limit=1"
+curl "ol-home:7000/openlibrary.org/log/$(docker exec openlibrary_solr-next-updater_1 cat /solr-updater-data/solr-update.offset)?limit=1"
 ```
 
 ### Admin force Solr update endpoint
