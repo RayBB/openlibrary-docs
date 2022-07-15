@@ -9,11 +9,13 @@ Proper operation of the Open Library Solr instance requires that it be updated w
 ### Solr updater script
 [Solr updater script](https://github.com/internetarchive/openlibrary/blob/master/scripts/new-solr-updater.py)
 
-Which is configured to run as a service in production and a background process in the development 
-[docker-compose environment](https://github.com/internetarchive/openlibrary/blob/cb167b78fac4199e57096009f1bbbdeb23ed4c72/docker/ol-docker-start.sh#L35).
+- Forcing a restart if solr-updater stuck in restart loop:
 
-To get the production solr-updater service status:
-`sudo status ol-solr-updater`
+```sh
+### NOTE THE DATE!! Set that to where you want to restart from.
+docker run --rm -it -v openlibrary_solr-updater-data:/solr-updater-data openlibrary/olbase:latest bash -c 'echo "2022-06-06:0" > /solr-updater-data/solr-next-update.offset'
+docker run --rm -it -v openlibrary_solr-updater-data:/solr-updater-data openlibrary/olbase:latest bash -c 'echo "2022-06-06:0" > /solr-updater-data/solr-update.offset'
+```
 
 ### Expected behavior and timings
 
