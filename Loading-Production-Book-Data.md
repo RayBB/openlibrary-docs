@@ -3,8 +3,7 @@
 The local developer environment comes with a small pre-loaded data set. Some developer tasks require importing more or specific records from production into their local environment. These instructions achieve this import:	
 
 ```bash	
-docker-compose exec web bash  # Connect to the docker image
-export PYTHONPATH=.
+docker-compose exec -e PYTHONPATH=. web bash  # Connect to the docker image
 # Copy an author (JUST the author; no works)	
 ./scripts/copydocs.py /authors/OL1385865A	
 # Outputs:	
