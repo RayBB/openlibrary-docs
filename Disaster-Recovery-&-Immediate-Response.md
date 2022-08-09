@@ -22,6 +22,16 @@ ssh -A ol-solr1
 docker restart solr_builder_solr_1 solr_builder_haproxy_1
 ```
 
+## ol-dev1 out of storage
+
+Symptom: `sudo df -h` shows a bunch of `100%` or `99%`. Testing deploys might fail on occasion.
+
+Containers and images can stick around on our dev server causing it to fill up. To free up space:
+
+1. Confirm with folks on slack, #team-abc, that there are not stopped containers that people care about. There shouldn't be. There is some risk of data loss if someone has made modification to the file system inside a now stopped container. That is why we confirm!
+2. Run `docker container prune`
+3. Run `docker images prune` . This will remove any images; all images should have `Dockerfiles` somewhere, so there's little risk of data loss. But it might be annoying because someone will have to rebuild a docker image they might care about and have to find the `Dockerfile`!
+
 ## Suspected DDOS (Denial of Service Attack)
 
 # Handling DDOS
