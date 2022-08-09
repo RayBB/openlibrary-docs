@@ -65,30 +65,6 @@ Before continuing, you may want to check our [Port-mortems](https://github.com/i
 - [Is OpenLibrary getting slammed with traffic, crawlers, or bad actors?](#Handling_DDOS)
 - [Is Search Overloading archive.org elastic search upstream?](#Overloaded_Search)
 
-# Rebuilding Js + Css
-
-# Hot-patching production web
-
-XXX Todo
-
-# Handling Power Outage / Server Reboot
-
-Most services should restart themselves
-
-**XXX** Add commands for (re)starting docker on ol-web[1,2] 
-
-Make sure solr-updater is up and run ol-solr-indexer.py to sync any skipped OL db -> OL solr records:
-
-```
-/olsystem/bin/olenv python /opt/openlibrary/openlibrary/scripts/ol-solr-indexer.py --config /olsystem/etc/openlibrary.yml --bookmark ol-solr-indexer.bookmark --backward --days 180
-```
-
-Restart OLBot from ol-home and then confirm it's working:
-
-```
-sudo -u openlibrary /olsystem/bin/olenv HOME=/home/openlibrary OPENLIBRARY_RCFILE=/olsystem/etc/olrc-importbot python scripts/manage-imports.py --config /olsystem/etc/openlibrary.yml import-all >> /tmp/importer.log
-```
-
 # Out of Space
 
 ## Cleanup Deploys
