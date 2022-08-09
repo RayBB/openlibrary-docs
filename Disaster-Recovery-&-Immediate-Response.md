@@ -22,16 +22,6 @@ ssh -A ol-solr1
 docker restart solr_builder_solr_1 solr_builder_haproxy_1
 ```
 
-## ol-dev1 out of storage
-
-Symptom: `sudo df -h` shows a bunch of `100%` or `99%`. Testing deploys might fail on occasion.
-
-Containers and images can stick around on our dev server causing it to fill up. To free up space:
-
-1. Confirm with folks on slack, #team-abc, that there are not stopped containers that people care about. There shouldn't be. There is some risk of data loss if someone has made modification to the file system inside a now stopped container. That is why we confirm!
-2. Run `docker container prune`
-3. Run `docker images prune` . This will remove any images; all images should have `Dockerfiles` somewhere, so there's little risk of data loss. But it might be annoying because someone will have to rebuild a docker image they might care about and have to find the `Dockerfile`!
-
 ## Suspected DDOS (Denial of Service Attack)
 
 # Handling DDOS
@@ -117,6 +107,16 @@ Docker logs can take up a ton of space. @cdrini mentions one solution is:
 sudo df -h - See the sizes of a bunch of things on the VM
 truncate -s 0 $(docker inspect --format='{{.LogPath}}' d12b518475e1)
 ```
+
+## ol-dev1 out of storage
+
+Symptom: `sudo df -h` shows a bunch of `100%` or `99%`. Testing deploys might fail on occasion.
+
+Containers and images can stick around on our dev server causing it to fill up. To free up space:
+
+1. Confirm with folks on slack, #team-abc, that there are not stopped containers that people care about. There shouldn't be. There is some risk of data loss if someone has made modification to the file system inside a now stopped container. That is why we confirm!
+2. Run `docker container prune`
+3. Run `docker images prune` . This will remove any images; all images should have `Dockerfiles` somewhere, so there's little risk of data loss. But it might be annoying because someone will have to rebuild a docker image they might care about and have to find the `Dockerfile`!
 
 ## upstart.log
 There is a possibility supervisor can get confused (perhaps related to permissions/`chown`), and instead of rotating logs, will start writing to `/var/log/openlibrary/upstart.log` until `/dev/vda1` (or wherever root / is mounted) runs out of space. The solution is to restart "supervisor" (not openlibrary via supervistorctl but supervisor itself) on the aflicted node (e.g. `ol-web4` in this example):
