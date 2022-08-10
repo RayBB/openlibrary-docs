@@ -22,7 +22,7 @@ On `ol-db1` investigate volume and patterns:
 
 Check nginx access logs for common vectoros on `ol-www1`
 - `sudo cat /var/log/nginx/access.log | grep "/people"`
-- `sudo cat /var/log/nginx/access.log | grep "/account/create"
+- `sudo cat /var/log/nginx/access.log | grep "/account/create"`
 
 Sam's magic sauce:
 ```
