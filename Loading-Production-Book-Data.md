@@ -36,4 +36,10 @@ docker-compose exec -e PYTHONPATH=. web bash  # Connect to the docker image
 #    [{'key': '/books/OL24966433M', 'revision': 1}]	
 ```	
 
+Copydocs also supports queries:
+
+```
+./scripts/copydocs.py --search 'author_key:OL18053A' --search-limit 100
+```
+
 Covers don't quite work correctly on the local environment. To test something with covers, change `coverstore_url` inside `conf/openlibrary.yml` to point to the production covers (covers.openlibrary.org). Avoid uploading when this is set.
