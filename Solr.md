@@ -1,4 +1,4 @@
-[Apache Solr](http://lucene.apache.org/solr/features.html) is used to power the search box, but is also used internally by the system and is intrinsic to the correct operation of the system. Some examples of places that it's used include:
+[Apache Solr](https://solr.apache.org/features.html) is used to power the search box, but is also used internally by the system and is intrinsic to the correct operation of the system. Some examples of places that it's used include:
 * Enumerating the list of works for an author
 * Enumerating the list of editions for a work
 * Autocomplete by author name when editing a work and selecting authors
@@ -7,7 +7,7 @@
 Proper operation of the Open Library Solr instance requires that it be updated when authors, works, and editions are edited or the search index will not correctly reflect the underlying database.
 
 ### Solr updater script
-[Solr updater script](https://github.com/internetarchive/openlibrary/blob/master/scripts/new-solr-updater.py)
+The [scripts/solr_updater.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/solr_updater.py) file listens for edits from infogami, and updates the solr index accordingly.
 
 - Forcing a restart if solr-updater stuck in restart loop:
 
@@ -53,12 +53,33 @@ sudo bash
 cat /var/log/tomcat6/catalina.2020-05-13.log | grep '^May' | cut -c1-24 | sed 's/:[0-9][0-9] //' | sort | uniq -c > tmp.txt
 ```
 
+## Solr development
+
 ### Query Solr directly on dev instance
-On host:
-http://0.0.0.0:18983/solr/select?wt=json&json.nl=arrarr&q=key:/authors/OL18319A
-Equivalent for Docker:
-http://192.168.100.100:8983/solr/select?wt=json&json.nl=arrarr&q=key:/authors/OL18319A
-where 192.168.100.100 is the IP address returned by `docker-machine ip` on OS X or Windows.
+Go to http://localhost:8983/ to view the solr admin dashboard. You can experiment with raw queries by selecting the "openlibrary" core in the dropdown in the sidebar, and then clicking on query in the sidebar.
+
+### Making changes to solr config
+
+If you are experimenting with making changes to core solr configuration, you will need to do the following to test your changes:
+
+```sh
+# Assume OL is running
+docker-compose up -d
+
+# Make whatever changes
+
+# Stop solr and remove its container and data
+docker-compose stop solr solr-updater
+docker volume rm openlibrary_solr-data openlibrary_solr-updater-data
+
+# Bring solr back up, and also run a full reindex -- now with your changes in place
+docker-compose up -d solr solr-updater
+docker-compose run --rm home bash -c 'make reindex-solr'
+```
+
+### Adding fields to solr
+
+See this video: https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4
 
 ## Creating a Solr Backup
 
