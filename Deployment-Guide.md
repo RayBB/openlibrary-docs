@@ -18,7 +18,7 @@ sudo usermod -a -G docker <your-username>
     - Grafana: https://wwwb-grafana0.us.archive.org/d/000000176/open-library-dev?orgId=1&refresh=1m
     - Haproxy: https://openlibrary.org/admin?stats
     - Sentry ol-web: https://sentry.archive.org/sentry/ol-web/
-    - Sentry ol-covers: https://sentry.archive.org/sentry/ol-covers/
+    - Sentry ol-covers: https://sentry.archive.org/organizations/ia-ux/issues/?project=10
     - Sentry ol-infobase: https://sentry.archive.org/sentry/ol-infobase/
 3. [ ] Confirm staging is working as expected: http://staging.openlibrary.org
 4. [ ] Warn slack channels `#openlibrary-g` and `#openlibrary` of deploy and momentary downtime
