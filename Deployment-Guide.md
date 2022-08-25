@@ -17,9 +17,10 @@ sudo usermod -a -G docker <your-username>
 2. [ ] Open up monitoring dashboards (We recommend adding these (along with this guide) to a bookmark folder; then you can click "Open all" when you're about to do a deploy!)
     - Grafana: https://wwwb-grafana0.us.archive.org/d/000000176/open-library-dev?orgId=1&refresh=1m
     - Haproxy: https://openlibrary.org/admin?stats
-    - Sentry ol-web: https://sentry.archive.org/sentry/ol-web/
+    - Sentry ol-web: https://sentry.archive.org/organizations/ia-ux/issues/?project=7
     - Sentry ol-covers: https://sentry.archive.org/organizations/ia-ux/issues/?project=10
-    - Sentry ol-infobase: https://sentry.archive.org/sentry/ol-infobase/
+    - Sentry ol-infobase: https://sentry.archive.org/organizations/ia-ux/issues/?project=9
+    - Sentry ol-cron-jobs: https://sentry.archive.org/organizations/ia-ux/issues/?project=12
 3. [ ] Confirm staging is working as expected: http://staging.openlibrary.org
 4. [ ] Warn slack channels `#openlibrary-g` and `#openlibrary` of deploy and momentary downtime
 5. [ ] Follow one-time set-up instructions found [here](#setup-stuff)
