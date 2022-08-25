@@ -80,7 +80,7 @@
 [Responding to DDOS](https://git.archive.org/mek/detect-abuse)  
 [Dealing with Spam](Anti-Spam-Tools)  
 [Generating Data Dumps](Generating-Data-Dumps)  
-[Solr](Solr)  
+[Solr Search Manual](Solr)  
 [Generating Sitemaps](Sitemap-Generation)  
 [Cron Jobs](Cron-Jobs)  
 [Testing & Staging environments](Testing-&-Staging-environments)
