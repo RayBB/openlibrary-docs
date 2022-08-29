@@ -70,19 +70,19 @@
 
 ---
 
-**Administration, Systems & Dev-ops**  
-[Services Status Dashboard](https://status.archivelab.org)
-[Monitoring](Monitoring)  
-[Production Architecture & Provisioning](Production-Service-Architecture)  
-[Deployment Guide](Deployment-Guide)  
+**First Responders Guides**  
+[Services Status Dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring)  
 [Disaster Recovery Guide](Disaster-Recovery-&-Immediate-Response)  
 [Disaster History Log](Disaster-History-Log)  
-[Responding to DDOS](https://git.archive.org/mek/detect-abuse)  
-[Dealing with Spam](Anti-Spam-Tools)  
-[Generating Data Dumps](Generating-Data-Dumps)  
+[Dealing with Spam](Anti-Spam-Tools) & [DDOS](https://git.archive.org/mek/detect-abuse)    
+
+**Administration, Systems & Dev-ops**  
+[Deployment Guide](Deployment-Guide)  
+[Production Architecture & Provisioning](Production-Service-Architecture)  
 [Solr Search Manual](Solr)  
-[Generating Sitemaps](Sitemap-Generation)  
 [Cron Jobs](Cron-Jobs)  
+[Generating Data Dumps](Generating-Data-Dumps)  
+[Generating Sitemaps](Sitemap-Generation)  
 [Testing & Staging environments](Testing-&-Staging-environments)
 
 ---
