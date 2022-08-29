@@ -2,11 +2,10 @@
 
 - [ ] Report outage on #ops and #openlibrary on Slack
 - [ ] Consult the [Troubleshooting](#Troubleshooting) section to identify likely suspects
-- [ ] Check the dashboards:
+- [ ] Check the [monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring):
     - [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail)
     - [HAProxy](https://openlibrary.org/admin?stats)
-    - https://status.archivelab.org/?admin=true - links to all the dashboards
-    - [stats dashboard](http://ol-home.us.archive.org:8088/dashboard/)
+    - https://status.archivelab.org/?admin=true - links to more org dashboards
 - [ ] If the baremetal machine is hanging, contact #ops on slack or [manually restart baremetal](https://gnt-webmgr.us.archive.org/)
 - [ ] If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
 - [ ] Create a new [postmortem](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Post-Mortem%2C+Priority%3A+0%2C+GJ%3A+Triage+Exception&template=post_mortem.md&title=) issue
