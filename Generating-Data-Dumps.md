@@ -9,21 +9,28 @@ Data dumps should be created on `ol-home0` within the `openlibrary_cron-jobs_1` 
 * That container uses `docker/ol-cron-start.sh` to submit the cron jobs. 
 * The jobs are defined in `olsystem/etc/cron.d/openlibrary.ol_home0`.
 
-As of 2021-10-13, data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary_cron-jobs_1` Docker container:
+Data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary_cron-jobs_1` Docker container:
 
-```
-tmux
-# ---
-COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml" \
-HOSTNAME="$HOSTNAME" \
-docker-compose run \
-    -u openlibrary \
-    -e "SCRIPTS=/openlibrary/scripts" \
-    cron-jobs \
-    bash
-# ---
-rm -rf /1/var/tmp/dumps/ol_* && su openlibrary -c "SCRIPTS=/openlibrary/scripts PSQL_PARAMS='***see cron file in olsystem***' TMPDIR='/1/var/tmp' /openlibrary/scripts/oldump.sh `date -d yesterday '+%Y-%m-%d'` --archive"
-```
+# Run an out-of-cycle Open Library Data Dump (Aug. 2022)
+1. Log into the host `ol-home0`
+2. `tmux`  # The data dumps are a long-running process and `tmux` enables reconnecting to a host that has been disconnected.
+2. `cd /opt/openlibrary`
+3. `docker ps`  # To ensure that `openlibrary_cron-jobs_1` is up and running
+4. `docker exec -it -uroot openlibrary_cron-jobs_1 bash`
+5. `crontab -l | less`  # to see the ol data dumps command
+6. `ls /1/var/tmp/dumps`  # to see if there are data files that should be deleted
+    1. We kept the raw database dump `data.txt.gz`
+    2. We `rm -r oldumpsort` because we wanted to rebuild that
+    3. We replaced the date logic with a date string
+    4. We removed `—overwrite` to skip some early steps like extracting `data.txt.gz` from postgres
+7. `cd /opt/openlibrary`  # just to be sure
+8. `PSQL_PARAMS=‘-h ol-db1 openlibrary’ TMPDIR=‘/1/var/tmp’ OL_CONFIG=‘/olsystem/etc/openlibrary.yml’ su openlibrary -c “/openlibrary/scripts/oldump.sh 2022-07-31 —archive”`
+9. Debug with `top` and also with `zcat /1/var/tmp/dumps_2022-07-31.txt.gz | head | less`
+
+# Examine the dump process logs
+1. Log into the host `ol-home0`
+2. `docker logs openlibrary_cron-jobs_1 2>&1 | grep openlibrary.dump | less`
+
 # Related Issues
 
 https://github.com/internetarchive/openlibrary/issues/5402 - cron is presently broken
