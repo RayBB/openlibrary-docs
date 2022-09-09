@@ -1,6 +1,7 @@
 # Responding to a Outage
 
 - [ ] Report outage on #ops and #openlibrary on Slack
+- [ ] Review previous [post mortem](https://github.com/internetarchive/openlibrary/issues?q=label%3A%22Type%3A+Post-Mortem%22) reports for insights and solutions to common issues 
 - [ ] Consult the [Troubleshooting](#Troubleshooting) section to identify likely suspects
 - [ ] Check the [monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring):
     - [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail)
