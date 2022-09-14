@@ -74,7 +74,7 @@
 [Services Status Dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring)  
 [Disaster Recovery Guide](Disaster-Recovery-&-Immediate-Response)  
 [Disaster History Log](Disaster-History-Log)  
-[Dealing with Spam](Anti-Spam-Tools) & [DDOS](https://git.archive.org/mek/detect-abuse)    
+[Dealing with Spam](Anti-Spam-Tools)    
 
 **Administration, Systems & Dev-ops**  
 [Deployment Guide](Deployment-Guide)  
