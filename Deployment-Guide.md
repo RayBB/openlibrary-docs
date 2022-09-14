@@ -64,6 +64,21 @@ Greetings deployer! You are one of the select few who has privileged access to I
 
 ## Recovering from a Failed Deployment
 
+### NPM Package-lock.json issues
+
+See: https://github.com/internetarchive/openlibrary/pull/6965#issue-1372080408
+
+* ssh'ing to `ol-home0` and cd'ing to `/opt/ol-mek`
+* `sudo git stash && sudo git checkout master && sudo git pull origin master` 
+* `sudo git checkout -b fix-package-lock`
+* `sudo rm package-lock.json`
+* `docker exec -it ol-mek_web_1 npm i`
+* `sudo git add package-lock.json && sudo git commit -m "fix package lock" && git push origin fix-package-lock`
+* opening && reviewing & merging a pull request for `fix-package-lock`
+* `ssh -A ol-home0` and `cd /opt/openlibrary` and `git pull origin master`
+* re-running build instructions from https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide#checklist-for-deployment
+
+
 ### Rolling Back
 
 To roll back to a previous deploy, run: `OLIMAGE="openlibrary/olbase:3f372be" /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web1`, replacing the SHA with the sha you want to roll back to (run `docker image ls` for options).
