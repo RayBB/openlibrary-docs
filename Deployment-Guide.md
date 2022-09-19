@@ -31,7 +31,7 @@ sudo usermod -a -G docker <your-username>
         # Pull olystem and openlibrary before continuing
         # so we have latest docker-compose, etc
         # NOTE: Ensure that the `master` branch is checked out first.
-        sudo git pull origin master
+        sudo git fetch origin master && sudo git reset --hard origin/master
 
         time /opt/openlibrary/scripts/deployment/deploy.sh  # 15min
         ./scripts/deployment/are_servers_in_sync.sh
