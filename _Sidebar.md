@@ -71,7 +71,7 @@
 ---
 
 **First Responders Guides**  
-[Services Status Dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring)  
+[Services Status & Monitoring Dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring)  
 [Disaster Recovery Guide](Disaster-Recovery-&-Immediate-Response)  
 [Disaster History Log](Disaster-History-Log)  
 [Dealing with Spam](Anti-Spam-Tools)    
