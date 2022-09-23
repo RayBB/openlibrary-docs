@@ -123,3 +123,16 @@ And then brought back up online with:
 
 Once you've built a release of an `olbase` image, you can use the following command to spin up a vanilla container for testing commands:
 `docker run -it --rm openlibrary/olbase:latest bash`. This is especially useful for testing whether deploys are working correctly and if commands (such as `npm ci`) succeed.
+
+### Deploying to testing.openlibrary.org
+
+Staff can deploy by using the **PR Deploy** bookmarklet (ask @cdrini).
+
+This can be done manually by looking at the instructions within `_dev-merged.txt` on `ol-dev1:/opt/openlibrary`. The first step is to run the dev_merged script via `sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged` and then down-up the container:
+
+```
+cd /opt/openlibrary
+sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
+docker-compose down
+COMPOSE_FILE="docker-compose.yml:docker-compose.staging.yml" HOSTNAME=$HOSTNAME docker-compose up --no-deps -d memcached web
+```
