@@ -25,7 +25,7 @@ netstat -n | /home/samuel/work/reveal-abuse/mktable
 sudo cat /var/log/nginx/access.log | cut -d ' ' -f 1 | sort | uniq -c  | sort -n | tail -n 10 | /home/samuel/work/reveal-abuse/reveal | /home/samuel/work/reveal-abuse/shownames 
 ```
 
-# Handling DDOS (Denial of Service Attack)
+## Handling DDOS (Denial of Service Attack)
 
 First, ssh over to `ol-www1` (which is the entry point for all traffic) and determine who the bad actor(s) are. Because we anonymize IPs, you'll first have to populate a map of anonymous IPs to IPs we can actually block:
 
