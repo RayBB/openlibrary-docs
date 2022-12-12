@@ -24,3 +24,28 @@ Sam's magic sauce:
 netstat -n | /home/samuel/work/reveal-abuse/mktable
 sudo cat /var/log/nginx/access.log | cut -d ' ' -f 1 | sort | uniq -c  | sort -n | tail -n 10 | /home/samuel/work/reveal-abuse/reveal | /home/samuel/work/reveal-abuse/shownames 
 ```
+
+# Handling DDOS (Denial of Service Attack)
+
+First, ssh over to `ol-www1` (which is the entry point for all traffic) and determine who the bad actor(s) are. Because we anonymize IPs, you'll first have to populate a map of anonymous IPs to IPs we can actually block:
+
+```
+ssh -A ol-www1
+netstat -n | /home/samuel/work/reveal-abuse/mktable  # XXX this should probably be added to `olsystem`, see: https://github.com/internetarchive/olsystem/issues/45
+```
+
+Then run:
+
+```
+sudo tail -n 5000 /var/log/nginx/access.log | cut -d ' ' -f 1 | sort | uniq -c  | sort -n | tail -n 10 | /home/samuel/work/reveal-abuse/reveal | /home/samuel/work/reveal-abuse/shownames
+```
+
+At this point, see [nginx.conf](https://github.com/internetarchive/openlibrary/blob/6216cda55295ed6477439af2791b20df3bdadd9d/docker/nginx.conf#L44-L45), you can add the IPs to /olsystem/etc/nginx/deny.conf or add classes of IPs or user-agents to `/etc/nginx/sites-available/openlibrary.conf`, e.g.:
+
+```
+    if ($http_user_agent ~* (Slurp|Yahoo|libwww-perl|Java)) {
+        return 403;
+    }
+```
+
+Or, you can block on a per-IP basis in `/opt/openlibrary/olsystem/etc/nginx/deny.conf`.
