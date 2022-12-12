@@ -45,9 +45,9 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
 
 ## Older History
 
-   * 2019-03-29 5:00pm PST OL requests for archive.org ES getting queued until stopped
+   * ### 2019-03-29 5:00pm PST OL requests for archive.org ES getting queued until stopped
       * https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery#overloaded-search
-   * 2017-11-09 10:00pm PST
+   * ### 2017-11-09 10:00pm PST
       * Situation: `ol-www1` was getting clobbered shortly after syncing it in prep for migration from Funston to Richmond (but this was a red herring). Spikes of traffic were forcing haproxy to 503 w/ haproxy status sQ
       * Tried:
          * Restarting nginx
@@ -60,10 +60,10 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
             * See also: https://git.archive.org/mek/detect-abuse
          * Blocking bad actors on `ol-www1` `nginx` in `/olsystem/etc/nginx/deny.conf`
          * Moving forward @jonah will help us implement haproxy sticktables to ban IPs for periods as use becomes abusive/disruptive
-   * 2017-03-17 2:30pm PDT
+   * ### 2017-03-17 2:30pm PDT
       * Situation: Packet-flapping on the baremetal (running nearly all of OL's services) took down Open Library services -- see: https://internetarchive.slack.com/archives/C06RP0F6E/p1492465473543927
       * Resolution: jonah reset ports switch side, host came back
-   * 2017-04-01 2:00pm PDT
+   * ### 2017-04-01 2:00pm PDT
       * Situation: ACS4 went down, Nagios alerts triggered, Open Library borrowing failed
       * Resolution:
          * Brenton restarted ACS4 via Ganeti (mek didn't have access)
@@ -77,7 +77,7 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
          * More people need access to `ganeti` and `ol-acs4`
       * Resolution(s):
          * Mek now has access to ACS + ganeti
-   * 2017-02-22 5:00am PST, 9:45am - 11:00am PST
+   * ### 2017-02-22 5:00am PST, 9:45am - 11:00am PST
       * Situation: Cover service was down
       * Tried:
          * Restarting cover store
@@ -85,7 +85,7 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
          * Looked at logs, noticed problem starting gunicorn on `ol-web3`
       * Resolution: https://internetarchive.slack.com/archives/openlibrary/p1487790396002096
       * Thanks: Sam
-   * 2017-02-13 6:00pm PST - 6:30pm PST
+   * ### 2017-02-13 6:00pm PST - 6:30pm PST
       * Situation: Scheduled Maintenance w/ Trevor
       * Problems: Servers which were restarted came back up w/ permission problems (/var/run/openlibrary missing)
       * Resolution:
@@ -94,7 +94,7 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
       * Questions:
          * Why is this happening? Is some startup process nuking /var/run/openlibrary? https://internetarchive.slack.com/archives/openlibrary/p1487113203001313
       * Thanks: Brenton
-   * 2017-02-10 ~5:00pm PST - 5:30pm PST
+   * ### 2017-02-10 ~5:00pm PST - 5:30pm PST
       * Situation: Deploying IA/OL XAuth bridge, deployment restart failed (`ol-web3`, `ol-web4`)
       * Thanks: Sam, Mark, Jim, Brenton
       * Problem: Deployment process was not robust against new pip dependencies (in this case LEPL for email validation)
@@ -102,10 +102,10 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
          * Changing symlinks must be done on all services (`ol-web3`, `ol-web4`, etc)
          * Do not reset history in git as our deploy process looks only at the most recent hash it knows about!
       * Resolution: we added blue-green deployment to our docs + [guide on adding dependencies](Deployment#satisfying-dependency-changes)
-   * 2016-12-23 11:50pm PST - 2016-12-24 6:30am PST
+   * ### 2016-12-23 11:50pm PST - 2016-12-24 6:30am PST
       * Situation: DNS problems [reported here](https://internetarchive.slack.com/archives/openlibrary/p1482593478000364), [debugged here](https://internetarchive.slack.com/archives/ops/p1482564582000350) and
       * Resolution: [solved here](https://internetarchive.slack.com/archives/openlibrary/p1482593478000364) -- we started documenting our deployment process
-   * 2016-12-22 12:30pm PST - 2016-12-22 13:20pm PST
+   * ### 2016-12-22 12:30pm PST - 2016-12-22 13:20pm PST
       * Situation: DNS problem, resolved itself, [recounted here](https://internetarchive.slack.com/archives/ops/p1482440491000312)
-   * 2016-12-02 6:35pm PST - 2016-04-02 7:20pm PST
+   * ### 2016-12-02 6:35pm PST - 2016-04-02 7:20pm PST
       * Situation: DNS problems, resolved itself, [recounted here](https://internetarchive.slack.com/archives/ops/p1480732524002014)
