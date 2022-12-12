@@ -27,6 +27,8 @@ sudo cat /var/log/nginx/access.log | cut -d ' ' -f 1 | sort | uniq -c  | sort -n
 
 ## Handling DDOS (Denial of Service Attack)
 
+See related outage events: https://github.com/internetarchive/openlibrary/wiki/Disaster-History-Log#2017-11-09-1000pm-pst
+
 First, ssh over to `ol-www1` (which is the entry point for all traffic) and determine who the bad actor(s) are. Because we anonymize IPs, you'll first have to populate a map of anonymous IPs to IPs we can actually block:
 
 ```
