@@ -48,6 +48,12 @@ Before continuing, you may want to check our [Port-mortems](https://github.com/i
 
 There are few servers which we expect to fill up. ol-db1/2 and ol-covers0/1 are candidates because their job is to store temporary or long term data. ol-home0 is another service which generates data dumps, aggregates partner data, and generates sitemaps. These three servers likely need a manual investigation when nagios reports their space is low.
 
+The following will prune unattached images which were created more than 1 week ago (168h):
+
+```
+docker image prune -a --filter "until=168h"
+```
+
 ## Docker images
 
 Even with this being the case, a very common cause of disk fill are out docker images which have not been pruned during our deploy process. These can be many GB over time. Run `docker image ls` for a listing of images registered in docker to see if any of them can be pruned or deleted.
