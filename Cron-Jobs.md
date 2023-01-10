@@ -93,6 +93,8 @@ scripts/manage-imports.py --config "$OL_CONFIG" import-all
 
 ### Monthly Data Dumps
 
+You may want to run the following in tmux or gnu screen to establish a persistent connection as dumps may take several days to generate:
+
 ```
 ssh -A ol-home0
 docker exec -it -uroot openlibrary_cron-jobs_1 bash
