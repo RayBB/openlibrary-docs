@@ -93,7 +93,11 @@ scripts/manage-imports.py --config "$OL_CONFIG" import-all
 
 ### Monthly Data Dumps
 
-
+```
+ssh -A ol-home0
+docker exec -it -uroot openlibrary_cron-jobs_1 bash
+PSQL_PARAMS='-h ol-db1 openlibrary' TMPDIR='/1/var/tmp' OL_CONFIG='/olsystem/etc/openlibrary.yml' su openlibrary -c "/openlibrary/scripts/oldump.sh `date -d 'yesterday' +\%Y-\%m-\%d` --archive --overwrite" > /proc/1/fd/1 2>/proc/1/fd/2
+```
 
 ### Archive.org Imports
 
