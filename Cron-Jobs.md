@@ -97,7 +97,11 @@ You may want to run the following in tmux or gnu screen to establish a persisten
 
 ```
 ssh -A ol-home0
+tmux  # This will allow you to reconnect if your terminal gets disconnected!!
 docker exec -it -uroot openlibrary_cron-jobs_1 bash
+```
+Once inside the Docker instance...
+```
 PSQL_PARAMS='-h ol-db1 openlibrary' TMPDIR='/1/var/tmp' OL_CONFIG='/olsystem/etc/openlibrary.yml' su openlibrary -c "/openlibrary/scripts/oldump.sh `date -d 'yesterday' +\%Y-\%m-\%d` --archive --overwrite" > /proc/1/fd/1 2>/proc/1/fd/2
 ```
 
