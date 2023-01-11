@@ -104,6 +104,11 @@ Once inside the Docker instance...
 ```
 PSQL_PARAMS='-h ol-db1 openlibrary' TMPDIR='/1/var/tmp' OL_CONFIG='/olsystem/etc/openlibrary.yml' su openlibrary -c "/openlibrary/scripts/oldump.sh `date -d 'yesterday' +\%Y-\%m-\%d` --archive --overwrite" > /proc/1/fd/1 2>/proc/1/fd/2
 ```
+OPTIONAL: To monitor progress in a second terminal tab:
+```
+ssh -A ol-home0
+docker logs -f --tail=100 openlibrary_cron-jobs_1 || grep dump
+```
 
 ### Archive.org Imports
 
