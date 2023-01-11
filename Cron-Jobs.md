@@ -108,7 +108,7 @@ OPTIONAL: To monitor progress in a second terminal tab:
 ```
 ssh -A ol-home0
 ps -ef  # To see if your job is running with yesterday's date
-docker logs -f --tail=500 openlibrary_cron-jobs_1 2>&1 || grep dump
+docker logs -f --tail=500 openlibrary_cron-jobs_1 2>&1 | grep dump
 ```
 
 ### Archive.org Imports
