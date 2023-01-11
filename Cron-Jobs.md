@@ -107,7 +107,7 @@ PSQL_PARAMS='-h ol-db1 openlibrary' TMPDIR='/1/var/tmp' OL_CONFIG='/olsystem/etc
 OPTIONAL: To monitor progress in a second terminal tab:
 ```
 ssh -A ol-home0
-docker logs -f --tail=100 openlibrary_cron-jobs_1 || grep dump
+docker logs -f --tail=500 openlibrary_cron-jobs_1 2>&1 || grep dump
 ```
 
 ### Archive.org Imports
