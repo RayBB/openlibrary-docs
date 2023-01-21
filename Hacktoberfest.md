@@ -16,9 +16,9 @@ Consider labeling some issues Hacktoberfest, as these are picked up by DigitalOc
 
 ## How do I get help?
 
-Gitter is the way to go! The Open Library community is here to help you out in any manner that they can. 
+[Gitter](https://gitter.im/theopenlibrary/Lobby) is the way to go! The Open Library community is here to help you in any manner that they can. 
 
-[Gitter Channel](https://gitter.im/theopenlibrary/Lobby)
+
 
 ## How do I find an appropriate task?
 
