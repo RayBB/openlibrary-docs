@@ -163,7 +163,7 @@ Color|Label|Description
 -|-|-
 ![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Duplicate** | This issue or pull request already exists (see comments for pointer to it). [managed]
 ![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Not Reproducible** | Closed because we cannot reproduce the issue. [managed]
-![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Not an Issue** | Questions and discussions resolved or moved to gitter/slack. [managed]
+![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Not an Issue** | Questions and discussions resolved or moved to Gitter or Slack. [managed]
 ![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Will Not Fix** | Closed because we have decided not to address this (e.g. out of scope). [managed]
 
 Some observations:
