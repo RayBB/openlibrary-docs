@@ -149,7 +149,7 @@ Deleting the last Edition of a Work will **NOT** remove the Work. It has to be c
 
 The raw POST data is parsed by [`parse_body()`](https://github.com/internetarchive/openlibrary/blob/db19d10e7dfc03307e48a7afdd1ae734dd514045/openlibrary/plugins/importapi/code.py#L49) which intends to accept:
 * XML (rdf | opds | MARCMXL)
-* JSON edition format (needs schema)
+* JSON edition format ([schema](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json))
 * MARC binary
 
 ### Import by archive.org reference
