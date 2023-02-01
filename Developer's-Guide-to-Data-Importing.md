@@ -147,6 +147,23 @@ data = {"authors": [{"name": "hu, yang"}], "isbn_13": ["9781099972591"], "langua
 r = ol.session.post(url, data=json.dumps(data))
 ```
 
+## Using Javascript
+
+If you are logged-in within the browser, you may use the following code to attempt an import:
+
+```
+var bookdata = {'title': 'Ikigai', 'authors': [{'name': 'Souen, Chiemi'}, {'name': 'Kaneshiro, Flor'}], 'publish_date': 'Aug 17, 2021', 'source_records': ['amazon:195302114X'], 'number_of_pages': 40, 'publishers': ['Brandylane Publishers, Inc.'], 'cover': 'https://m.media-amazon.com/images/I/610-Q5YXZGS._SL500_.jpg', 'isbn_10': ['195302114X'], 'isbn_13': ['9781953021144'], 'physical_format': 'hardcover', 'full_title': "Ikigai : Life's Purpose", 'subtitle': "Life's Purpose", 'notes': "Source title: Ikigai: Life's Purpose"}
+
+fetch("https://openlibrary.org/api/import?debug=true", {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(bookdata)
+}).then(response => response.json()) .then(response => console.log(JSON.stringify(response)))
+```
+
 ## MARC Records
 
 ### Bulk MARC Import
