@@ -2,7 +2,7 @@ Welcome! Open Library and its 2.5M readers are so grateful you're here!
 
 ## What is Open Library?
 
-Open Library (https://openlibrary.org) is a non-profit, open source, digital public library, hosted by the [Internet Archive](https://archive.org), which lends over 2 million ebooks each year to its 3M patrons. Open Library is made possible by volunteers, like you, from over 8 different countries (US, NL, NZ, IN, UK, DE, GR, CA). We believe everyone should have a say in their library. That a library should be not only for, but of the people. Together, let's build the World's library.
+Open Library (https://openlibrary.org) is a non-profit, open source, digital public library, hosted by the [Internet Archive](https://archive.org). Open Library is made possible by volunteers, like you, from over 8 different countries (US, NL, NZ, IN, UK, DE, GR, CA). We believe everyone should have a say in their library. Together, let's build the World's library.
 
 ## How we Communicate
 
@@ -10,7 +10,6 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - Public, anyone can join and ask questions!
 3. **[Weekly Community Call](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)** - Everyone is welcome to join our [Weekly Community call @ Tuesday 10:00am PT](https://zoom.us/j/369477551).
 4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - For active contributors, we have a by-invite slack channel
-5. **[Friday Lunch](https://twitter.com/internetarchive/status/596768668756774914)** - Internet Archive hosts a by-invite lunch each Friday @ 300 Funston, SF in the Inner Richmond. please contact mek@archive.org
 
 ### Team Leads Table
 
@@ -18,26 +17,12 @@ Have a question and not sure who to ask?
 
 See our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels.
 
-### Design & Product Team
-
-If you're joining the design and product team, you probably have a bunch of the following questions:
-
-Reference Materials:
-- [What is the current feature roadmap?](https://github.com/internetarchive/openlibrary/projects/28)
-- [Where can I find an ecosystem diagram?](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)
-- Where can I find [lending](https://openlibrary.org/stats/lending) or [page view](https://archive.org/stats/#openlibrary) analytics or stats for Open Library?
-
-Design Assets:
-- [Where can I find Open Library design mocks and wireframes?](https://www.dropbox.com/sh/aii0z9j8a4505f1/AABFExKzYJn692IDtQKpWD3Ia)
-
-## Quality Team
+## Data Team
 
 This team is for people who are passionate about improving the quality of Open Library's data. Engineering and admin / moderator roles are both welcome. Members of this group will receive either an Open Library Admin account or a [privileged Bot account](https://openlibrary.org/dev/docs/bots).
 
-What are the actions I can perform as an administrator / mod?
+## Client Libraries
 
-
-Are there tools?
 You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides convenient methods for downloading book, author, list, and subject data.
 
 ## Engineering & Ops Team
