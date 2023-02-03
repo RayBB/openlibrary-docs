@@ -16,6 +16,8 @@ Next the formatted, validated book_edition goes through the "Import Processor" c
 
 In the case of (1) and (3), a final step is performed called "Perform Import / Update" whose description is in load_data(). Here is a flowchart of what the internal import pipeline looks like for a record that has been submitted to a public API:
 
+### Import Pipeline Flowchart
+
 <img src="https://user-images.githubusercontent.com/978325/216481234-7c185d46-f369-47d9-bb4e-7474897388e0.png" width="75%" height="75%">
 
 ## Bulk Import Options
