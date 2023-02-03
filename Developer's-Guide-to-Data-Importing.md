@@ -4,6 +4,20 @@ For programmatically bulk importing new books and authors into Open Library.
 
 Watch [this video](https://archive.org/details/openlibrary-tour-2020/ol_imports_comprehensive.mp4) about how Open Library import pipeline works.
 
+## The Import Pipeline
+
+OpenLibrary.org offers several "Public Import API Endpoints" that can be used to submit book data for import, including one for MARC records, one for raw json book records (/api/import), and for directly importing against existing partner items (like archive.org) by ID (/api/import/ia).
+
+Outside of these public API endpoints, Open Library also maintains a bulk batch import system for enqueueing json book data in bulk from book sources like betterworldbooks, amazon, and other trusted book providers (like librivox and standardebooks). These bulk batch imports ultimately submit records (in a systematic and rate-limited way) to the "Public Import API Endpoints", e.g. /api/import.
+
+Once a record passes through our bulk batch import process and/or gets submitted to one of our "Public Import API Endpoints" (e.g. /api/import, see [code](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/importapi/code.py#L116)), the data is then parsed, augmented, and validated by the "Validator" in importapi/import_edition_builder.py.
+
+Next the formatted, validated book_edition goes through the "Import Processor" called as catalog.add_book.load(book_edition). The function has 3 paths. It tries to find an existing matching edition and its work. The options are (1) no edition/work is found and the edition is created, (2) a matched edition is found no new data is available, (3) a matched record is modified with new available data.
+
+In the case of (1) and (3), a final step is performed called "Perform Import / Update" whose description is in load_data(). Here is a flowchart of what the internal import pipeline looks like for a record that has been submitted to a public API:
+
+<img src="https://user-images.githubusercontent.com/978325/216481234-7c185d46-f369-47d9-bb4e-7474897388e0.png" width=50% height=50%>
+
 ## Bulk Import Options
 The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
 1. [Import by ISBN](#Import-by-ISBN)
@@ -11,6 +25,7 @@ The following resources are for developers doing bulk book record creation via o
 3. [Import by Archive.org Identifier](#Import-by-OCAID)
 4. [Import by JSON](#Importing-JSON)
 5. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
+6. [Pipeline Internals](#Pipeline-Internals)
 
 ## Production Automatic Import Pipeline
 
