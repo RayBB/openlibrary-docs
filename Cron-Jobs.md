@@ -92,6 +92,7 @@ scripts/manage-imports.py --config "$OL_CONFIG" import-all
 ```
 
 ### Monthly Data Dumps
+* https://github.com/internetarchive/openlibrary/wiki/Generating-Data-Dumps
 
 You may want to run the following in tmux or gnu screen to establish a persistent connection as dumps may take several days to generate:
 
