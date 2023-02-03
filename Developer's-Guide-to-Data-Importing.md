@@ -38,6 +38,7 @@ Open Library's production automatic import pipeline consists of two components:
 1. A Cron service with a collection of jobs which routinely pulls data from partner source and enqueues them in a database
 2. An ImportBot which polls this unified database of queued import requests and process the imports them into the catalog  
 
+**Note**: In the following chart, the [Infogami Container is detailed above in the main import flowchart](https://github.com/internetarchive/openlibrary/wiki/Developer's-Guide-to-Data-Importing#import-pipeline-flowchart) 
 ![viz-js com_](https://user-images.githubusercontent.com/978325/130883227-bce286f6-862a-419a-8e7d-6e214bfbe1b7.png)
 
 From `openlibrary_cron-jobs_1` on `ol-home0` enqueue a batch:
