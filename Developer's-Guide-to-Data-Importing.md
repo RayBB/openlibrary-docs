@@ -16,7 +16,7 @@ Next the formatted, validated book_edition goes through the "Import Processor" c
 
 In the case of (1) and (3), a final step is performed called "Perform Import / Update" whose description is in load_data(). Here is a flowchart of what the internal import pipeline looks like for a record that has been submitted to a public API:
 
-<img src="https://user-images.githubusercontent.com/978325/216481234-7c185d46-f369-47d9-bb4e-7474897388e0.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/978325/216481234-7c185d46-f369-47d9-bb4e-7474897388e0.png">
 
 ## Bulk Import Options
 The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
