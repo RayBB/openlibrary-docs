@@ -1,5 +1,7 @@
 [**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/organizations/5089442861154304/)
 
+[**See Open Library's GSoC 2023 Proposal**](https://docs.google.com/document/d/16g9r91bqxvv8Y_mr3LoN3qU0HaxHpArOfxbpvIRHT2g/edit#heading=h.4o6gb4pqo319)
+ 
 ***
 
 # Welcome
