@@ -78,7 +78,7 @@ git pull upstream master
 git switch -c 1234/fix/fix-the-thing
 ```
 
-(specifying `-c` creates a new branch, and `switch` switches it out).
+(specifying `-c` creates a new branch, and `switch` switches to it).
 
 3. Make changes/commit:
 
