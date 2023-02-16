@@ -10,7 +10,8 @@ Contents:
 
 ## Preliminary Steps
 **For Windows users only**
-**Note:** if you get permission issues while executing these commands please run git bash shell as an Administrator.
+
+Note: if you get permission issues while executing these commands please run git bash shell as an Administrator.
 ```sh
 # Configure Git to convert CRLF to LF line endings on commit
 git config --global core.autocrlf input
