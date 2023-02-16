@@ -1,32 +1,62 @@
-`Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes created with `git 2.22`.
+`Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes created with `git 2.38`.
 
 Contents:
-- [Setting Up](#setting-up)
+- [Preliminary Steps](#preliminary-steps)
+- [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
 - [Resolving Rebase Conflicts](#resolving-rebase-conflicts)
 
-## Setting Up
-1. Fork the Open Library repository using the GitHub UI by logging in to Github, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
+## Preliminary Steps
+**For Windows users only**
+**Note:** if you get permission issues while executing these commands please run git bash shell as an Administrator.
+```sh
+# Configure Git to convert CRLF to LF line endings on commit
+git config --global core.autocrlf input
+
+# Enable Symlinks
+git config core.symlinks true
+
+# Reset the repo (removes any changes you've made to files!)
+git reset --hard HEAD
+```
+
+## Forking and Cloning the Open Library Repository
+
+### Fork the Open Library repository
+
+Fork the Open Library repository using the GitHub UI by logging in to Github, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
 ![GitHub Fork](https://archive.org/download/screenshot20191211at11.12.56/fork.jpg)
 
-2. Clone your fork to your local machine:
+### Clone the forked repository on to your local computer
+
+This creates a local copy of your own fork of the Open Library repository, in a directory called *openlibrary*. Your fork on the GitHub servers is a remote called *origin*. By default, you are looking at the *master* branch.
+
+Make sure you `git clone` openlibrary using `ssh` instead of `https` as git submodules (e.g. `infogami` and `acs`) may not fetch correctly otherwise.
+
+You can modify an existing openlibrary repository that was inadvertently cloned with `https` by using `git remote rm origin` and then `git remote add origin git@github.com:USERNAME/openlibrary.git`. Then run `git submodule init; git submodule sync; git submodule update` to get rid of the issue.
 
 ```sh
 git clone git@github.com:USERNAME/openlibrary.git
 ```
 
-This creates a local copy of your own fork of the Open Library repository, in a directory called *openlibrary*. Your fork on the GitHub servers is a remote called *origin*. By default, you are looking at the *master* branch. 
+If you have not added your public SSH key to GitHub you may see:
+```
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+```
 
-3. Add 'upstream' repo to list of remotes
+To fix this, first [generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) if you have not already done so, and then [add the SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
+### Add 'upstream' repo to list of remotes
 
 ```sh
 cd openlibrary
 git remote add upstream https://github.com/internetarchive/openlibrary.git
 ```
 
-4. Verify the new remote named 'upstream'
+### Verify the new remote named 'upstream'
 
 ```sh
 git remote -v
@@ -37,17 +67,17 @@ git remote -v
 1. Make sure master is up-to-date:
 
 ```sh
-git checkout master
+git switch master
 git pull upstream master
 ```
 
 2. [Create a new branch for the feature or issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.
 
 ```sh
-git checkout -b 1234/fix/fix-the-thing
+git switch -c 1234/fix/fix-the-thing
 ```
 
-(specifying `-b` creates a new branch, and `checkout` checks it out).
+(specifying `-c` creates a new branch, and `switch` switches it out).
 
 3. Make changes/commit:
 
@@ -86,14 +116,14 @@ Pull requests often receive feedback; to make changes to your existing pull requ
 1. Make sure your branch is up-to-date with master
 
 ```
-git checkout master
+git switch master
 git pull upstream master
 ```
 
 2. Rebase your branch onto master
 
 ```
-git checkout 1234/fix/fix-the-thing
+git switch 1234/fix/fix-the-thing
 git rebase master
 ```
 
