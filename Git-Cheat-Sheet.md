@@ -1,33 +1,17 @@
-`Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes created with `git 2.38`.
+`Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes were created with `git 2.38`.
 
 Contents:
-- [Preliminary Steps](#preliminary-steps)
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
 - [Resolving Rebase Conflicts](#resolving-rebase-conflicts)
 
-## Preliminary Steps
-**For Windows users only**
-
-Note: if you get permission issues while executing these commands please run git bash shell as an Administrator.
-```sh
-# Configure Git to convert CRLF to LF line endings on commit
-git config --global core.autocrlf input
-
-# Enable Symlinks
-git config core.symlinks true
-
-# Reset the repo (removes any changes you've made to files!)
-git reset --hard HEAD
-```
-
 ## Forking and Cloning the Open Library Repository
 
 ### Fork the Open Library repository
 
-Fork the Open Library repository using the GitHub UI by logging in to Github, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
+Fork the Open Library repository using the GitHub UI by logging in to GitHub, going to [https://github.com/internetarchive/openlibrary](https://github.com/internetarchive/openlibrary) and clicking the Fork button in the upper right corner:
 ![GitHub Fork](https://archive.org/download/screenshot20191211at11.12.56/fork.jpg)
 
 ### Clone the forked repository on to your local computer
@@ -36,19 +20,55 @@ This creates a local copy of your own fork of the Open Library repository, in a 
 
 Make sure you `git clone` openlibrary using `ssh` instead of `https` as git submodules (e.g. `infogami` and `acs`) may not fetch correctly otherwise.
 
-You can modify an existing openlibrary repository that was inadvertently cloned with `https` by using `git remote rm origin` and then `git remote add origin git@github.com:USERNAME/openlibrary.git`. Then run `git submodule init; git submodule sync; git submodule update` to get rid of the issue.
-
 ```sh
 git clone git@github.com:USERNAME/openlibrary.git
 ```
 
+#### Permission denied while cloning
+
 If you have not added your public SSH key to GitHub you may see:
+
 ```
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 ```
 
 To fix this, first [generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) if you have not already done so, and then [add the SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
+#### Modifying a repository wrongly cloned with `https` (or one that is missing the infogami module)
+You can modify an existing openlibrary repository that was inadvertently cloned with `https` by running:
+```sh
+git remote rm origin
+git remote add origin git@github.com:USERNAME/openlibrary.git
+git submodule init; git submodule sync; git submodule update
+```
+
+#### Fix line endings, symlinks and git submodules (only for Windows users not using a Linux VM)
+
+Here, the project files need LF line endings because they are used in a Linux Docker container, even if run from Windows. Additionally, symlinks don't clone properly, and this creates issues for the git submodules, among other things.
+
+For more on git and line endings, see [Configuring Git to handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings).
+
+Note: if you get permission issues while executing these commands please run git the bash shell as an Administrator.
+```
+# Get in the project directory
+cd openlibrary
+
+# Configure Git to keep LF line endings on checkout even on Windows.
+git config core.autocrlf input
+
+# Enable symlinks
+git config core.symlinks true
+
+# Build submodules
+git submodule init; git submodule sync; git submodule update
+
+# Stage indexed files for removal so git reset updates them
+git rm --cached -r .  # Don't forget the "."
+
+# Reset the repo (removes any changes you've made to files and is likely to give an error if not administrator)
+git reset --hard
+```
 
 ### Add 'upstream' repo to list of remotes
 
@@ -60,8 +80,13 @@ git remote add upstream https://github.com/internetarchive/openlibrary.git
 ### Verify the new remote named 'upstream'
 
 ```sh
-git remote -v
+$ git remote -v
+origin  git@github.com:USERNAME/openlibrary.git (fetch)
+origin  git@github.com:USERNAME/openlibrary.git (push)
+upstream        https://github.com/internetarchive/openlibrary.git (fetch)
+upstream        https://github.com/internetarchive/openlibrary.git (push)
 ```
+Note that `origin` is `git@`. If it is not, see [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository).
 
 ## Creating a Pull Request
 
