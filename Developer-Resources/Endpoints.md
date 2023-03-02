@@ -413,3 +413,16 @@ An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes 
        `openlibrary/plugins/openlibrary/dev_instance.py:    path = "/is_loaned_out/.*"`
        `openlibrary/plugins/books/code.py:    path = r"/api/volumes/(brief|full)/(oclc|lccn|issn|isbn|htid|olid|recordnumber)/(.+)"`
        `openlibrary/plugins/books/code.py:    path = r"/api/volumes/(brief|full)/json/(.+)"`
+# Testing API Endpoints in Browser
+To send API requests directly from your local environment without a third-party app or plugin, simple run your API calls in the browser's console. E.g.
+```
+const data ={}
+await fetch('http://localhost:8080/people/openlibrary/lists.json', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+}).then(r => r.json())
+```
+This useful trick avoids the need to sync cookies in order to send requests via a third-party application.
