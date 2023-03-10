@@ -167,7 +167,7 @@ Examples:
 | --- | --- |
 | `<a title="$_('Add this book to your Want to Read shelf')">$_('Want to Read')</a>` | **Simple string i18n**: ~80% of i18n falls into this category. (Note that the title is translated as well since it's visible to the user in hover text.) |
 | `$_("Hi, %(user)s", user=username)!` | **Substitution**: For rendering variables inside the string. |
-| `$ungettext("One person waiting", "%(count)d people waiting", wlsize, count=wlsize)` | **Singular/Plural text**: For when you want to render things like "1 edition" vs. "2 edition**s**". \* |
+| `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` | **Singular/Plural text**: For when you want to render things like "1 person" vs. "2 people" or "1 edition" vs. "2 edition**s**". \* |
 | `$:_('Licensed under <a href="https://...">CC0</a>. Yippee!')` | **HTML i18n**: For when you want to include links in text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML.)\*\* |
 
 \* In the translation file, this would look like:
@@ -175,10 +175,10 @@ Examples:
 ```po
 #: borrow.html:114
 #, python-format
-msgid "There is one person waiting for this book."
-msgid_plural "There are %(count)s people waiting for this book."
-msgstr[0] "Une personne attend ce livre."
-msgstr[1] "%(count)s personnes attendent ce livre."
+msgid "There is %(count)d person waiting for this book."
+msgid_plural "There are %(count)d people waiting for this book."
+msgstr[0] "%(count)d personne attend ce livre."
+msgstr[1] "%(count)d personnes attendent ce livre."
 ```
 The top of the file declares the number of different plural forms for the language since this varies widely among languages. There is more information on plural forms support here: https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
 
@@ -207,6 +207,7 @@ DON'Ts:
 * Don't do pluralization or string concatenation in code or templates. This mandates ordering in ways that can't be translated. Give the translators completed sentences or phrases, with embedded replacements, to work with so they can create natural translations.
 * Don't use inline styling or links in text, if at all possible. e.g. <em>, <a href=foo>
 * Don't update the translated message catalogs. Because the merging process is inexact, it's better for the translators to handle this so that they can validate the results. Do update the message templates though (ie `messages.pot`)
+* Don't hard code in `1` for singular nouns (e.g. `1 edition`) because in some languages, `0 editions` is singular and translated as `0 edition`. Instead, substitute a variable, as you would with the plural. E.g. `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` and **not** `$ungettext("There is 1 person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)`
 
 ## Internationalization (i18n) - For translators
 
