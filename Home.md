@@ -13,31 +13,23 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 ### Team Leads Table
 
-Have a question and not sure who to ask?
+Have a question and not sure who to ask? See our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels.
 
-See our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels.
+Here are the main landing pages for each team:
 
-## Data Team
+| **Librarianship** | [https://openlibrary.org/librarians](Portal) |
+| **Communications** | [https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#](Portal) |
+| **Design** | [https://docs.google.com/document/d/1Ss9jcdx1EYRhyatAPhmwe9VU8TQZzC-plbFuunvXNKQ/edit#](Portal) |
+| **Bots** | [https://openlibrary.org/dev/docs/bots](Portal) |
 
-This team is for people who are passionate about improving the quality of Open Library's data. Engineering and admin / moderator roles are both welcome. Members of this group will receive either an Open Library Admin account or a [privileged Bot account](https://openlibrary.org/dev/docs/bots).
 
-## Client Libraries
+# APIs & Client Libraries
 
 You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides convenient methods for downloading book, author, list, and subject data.
-
-## Engineering & Ops Team
-
-Looking to get involved and contribute to the code which runs Open Library?
-
-First, get setup with the [Open Library Development Environment](https://github.com/internetarchive/openlibrary#installation)
-
-Next, browse through our list of [good first issues](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A"Good+First+Issue") to get started!
-
-[Are services running smoothly?](https://status.archivelab.org)
-
-## Research Team
 
 Are you a researcher or developer looking to use Open Library data or APIs in your research experiment?
 [Open Library's APIs and Data Dumps](https://openlibrary.org/developers/api) is a great place to start!
 
 You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides convenient methods for downloading book, author, list, and subject data.
+
+Notice an API not working? [Check to ensure our services are running smoothly](https://status.archivelab.org)
