@@ -20,10 +20,10 @@ Here are the main landing pages for each team:
 | Team | Portal |
 |---|---|
 | **Engineering** | You are here! |
-| **Librarianship** | [https://openlibrary.org/librarians](Portal) |
-| **Communications** | [https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#](Portal) |
-| **Design** | [https://docs.google.com/document/d/1Ss9jcdx1EYRhyatAPhmwe9VU8TQZzC-plbFuunvXNKQ/edit#](Portal) |
-| **Bots** | [https://openlibrary.org/dev/docs/bots](Portal) |
+| **Librarianship** | [Portal](https://openlibrary.org/librarians] |
+| **Communications** | [Portal](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#) |
+| **Design** | [Portal](https://docs.google.com/document/d/1Ss9jcdx1EYRhyatAPhmwe9VU8TQZzC-plbFuunvXNKQ/edit#) |
+| **Bots** | [Portal](https://openlibrary.org/dev/docs/bots) |
 
 # APIs & Client Libraries
 
