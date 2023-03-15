@@ -77,7 +77,19 @@ When provisioning a new memcached server, remember to update/edit `/etc/memcache
 
 ## Performing Upgrades
 
-This is in response to https://github.com/internetarchive/openlibrary/issues/7667. When performing upgrades on production servers, follow a similar process to https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#responding-to-a-outage re: 
-- [ ] notifying the #openlibrary channel and ensuring other staff are available prior to performing deploy (try to get a 👍 from other staff to confirm)
+This is in response to https://github.com/internetarchive/openlibrary/issues/7667. When performing upgrades on production servers, follow a similar process to https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#responding-to-a-outage re:
+- [ ] create a new tracking issue on GitHub to keep notes and track progress.
+- [ ] notifying the #openlibrary channel and ensuring other staff are available prior to perform a deploy (try to get a 👍 from other staff to confirm)
 - [ ] provide evidence in our announcement that a previous test succeeded (if possible) on a non-critical-path machine (dev1, web1, web2, solr1, solr0, ol-covers, ol-home0, ol-www0] -- in this order)
-- [ ] In advance of upgrade, suggest a path for reversion (e.g. have a strategy to roll-back if possible)
+- [ ] In advance of the upgrade, suggest a path for reversion (e.g. have a strategy to roll-back if possible)
+
+Order of upgrades -- Wait for each one fully reboot and ensure that it works as expected (take good notes!):
+- ol-dev 
+- ol-web1
+- ol-web2
+- ol-solr1
+- ol-solr2
+- ol-covers
+- ol-home
+- ol-www0
+See: https://github.com/internetarchive/openlibrary/pull/7626#discussion_r1133252975
