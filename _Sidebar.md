@@ -78,7 +78,7 @@
 
 **Administration, Systems & Dev-ops**  
 [Deployment Guide](Deployment-Guide)  
-[Production Architecture & Provisioning](Production-Service-Architecture)  
+[Production Architecture, Provisioning, & Upgrades](Production-Service-Architecture)  
 [Solr Search Manual](Solr)  
 [Cron Jobs](Cron-Jobs)  
 [Generating Data Dumps](Generating-Data-Dumps)  
