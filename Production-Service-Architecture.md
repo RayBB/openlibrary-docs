@@ -74,3 +74,10 @@ When provisioning a new memcached server, remember to update/edit `/etc/memcache
 * [x] ~ol-mem5~ --> ol-mem0 in [internetarchive/olsystem#138](https://github.com/internetarchive/olsystem/pull/138)
 * [x] ~ol-mem4~ --> ol-mem1 in [internetarchive/olsystem#144](https://github.com/internetarchive/olsystem/pull/144) (06 Dec 2021)
 * [x] ~ol-mem3~ --> ol-mem2 in [internetarchive/olsystem#145](https://github.com/internetarchive/olsystem/pull/145) (?? Dec 2021)
+
+## Performing Upgrades
+
+This is in response to https://github.com/internetarchive/openlibrary/issues/7667. When performing upgrades on production servers, follow a similar process to https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#responding-to-a-outage re: 
+- [ ] notifying the #openlibrary channel and ensuring other staff are available prior to performing deploy (try to get a 👍 from other staff to confirm)
+- [ ] provide evidence in our announcement that a previous test succeeded (if possible) on a non-critical-path machine
+- [ ] In advance of upgrade, suggest a path for reversion (e.g. have a strategy to roll-back if possible)
