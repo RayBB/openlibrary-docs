@@ -1,6 +1,6 @@
 # Responding to a Outage
 
-- [ ] Report outage on #ops and #openlibrary on Slack
+- [ ] Report outage on #openlibrary and #ops on Slack
 - [ ] :exclamation: Review previous [post mortem](https://github.com/internetarchive/openlibrary/issues?q=label%3A%22Type%3A+Post-Mortem%22) reports for insights and solutions to common issues 
 - [ ] Consult the [Troubleshooting](#Troubleshooting) section to identify likely suspects
 - [ ] Check the [monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring):
