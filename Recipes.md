@@ -6,5 +6,5 @@ import web; import infogami; from openlibrary.config import load_config; load_co
 
 ## Examine the affiliate queue
 1. Log into the host `ol-home0`
-2. `docker exec -it openlibrary_affiliate-server_1 bash`
+2. `docker exec -it openlibrary-affiliate-server-1 bash`
 3. `curl localhost:31337/status`
