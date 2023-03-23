@@ -127,7 +127,7 @@ git push origin HEAD
 5. Test your changes:
 
 ```sh
-docker-compose exec web make test
+docker compose exec web make test
 ```
 
 6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.
