@@ -4,7 +4,7 @@
 
 From the root of your local openlibrary project, you can run the JavaScript and Python unit tests in a Docker container with the following command:
 
-    docker-compose run web make test 
+    docker compose run web make test 
 
 General Docker instructions are to be found in the repo at https://github.com/internetarchive/openlibrary/tree/master/docker and repo testing instructions are in the main README: https://github.com/internetarchive/openlibrary/blob/master/Readme.md#running-tests
 
@@ -96,7 +96,7 @@ cd tests/integration
 
 ***
 
-**Question:** What should I do if I come across a bundle-size error (like the one below) while running `docker-compose exec web make test` to test? 
+**Question:** What should I do if I come across a bundle-size error (like the one below) while running `docker compose exec web make test` to test? 
 ```
  FAIL static/build/page-plain.css: 18.81KB > maxSize 18.8KB (gzip)
 ```
