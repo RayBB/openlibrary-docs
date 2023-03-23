@@ -26,19 +26,19 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 During local development, after making edits to CSS or JS, one must re-compile the build/static assets. There three ways to do this.
 
 #### One-off build of JS, CSS, and Vue components
-- `docker-compose run --rm home npm run build-assets`
+- `docker compose run --rm home npm run build-assets`
 
 #### One-off build each time a change is made
-- JS: `docker-compose run --rm home make js`
-- CSS: `docker-compose run --rm home make css`
+- JS: `docker compose run --rm home make js`
+- CSS: `docker compose run --rm home make css`
 
 #### Use a watch script to monitor for changes and build as necessary
-- JS `docker-compose run --rm home npm run-script watch`
-- CSS `docker-compose run --rm home npm run-script watch-css`
+- JS `docker compose run --rm home npm run-script watch`
+- CSS `docker compose run --rm home npm run-script watch-css`
 
 **Note**:
 - You might also need to restart the webserver and/or clear browser caches to see the changes.
-- If you want to view the generated files you will need to attach to the container (`docker-compose exec web bash`) to examine the files in `./static` the Docker volume, rather than in your local directory.
+- If you want to view the generated files you will need to attach to the container (`docker compose exec web bash`) to examine the files in `./static` the Docker volume, rather than in your local directory.
 
 ### Working with CSS
 
@@ -82,7 +82,7 @@ If you make any changes to any of the JavaScript files, see [Building CSS and JS
 
 While running the oldev Docker container, gunicorn is configured to auto-reload modified Python files or web templates upon file save.
 
-**Note**: the home page (`openlibrary\templates\home`) is cached and each change will take time to apply unless you run `docker-compose restart memcached`, which restarts the `memecached` container and renders the change directly. 
+**Note**: the home page (`openlibrary\templates\home`) is cached and each change will take time to apply unless you run `docker compose restart memcached`, which restarts the `memecached` container and renders the change directly. 
 
 Open Library uses templetor syntax in our HTML. See its documentation first: http://webpy.org/docs/0.3/templetor
 
