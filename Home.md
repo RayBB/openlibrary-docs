@@ -27,8 +27,6 @@ Here are the main landing pages for each team:
 
 # APIs & Client Libraries
 
-You might also consider trying the [openlibrary-client](https://github.com/internetarchive/openlibrary-client) python tool which provides convenient methods for downloading book, author, list, and subject data.
-
 Are you a researcher or developer looking to use Open Library data or APIs in your research experiment?
 [Open Library's APIs and Data Dumps](https://openlibrary.org/developers/api) is a great place to start!
 
