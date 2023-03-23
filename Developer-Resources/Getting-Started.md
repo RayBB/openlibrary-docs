@@ -35,7 +35,7 @@ We use Docker at Open Library. These are some of the basic commands, refer [here
 Starts all the Open Library services:
 
 ```bash
-$ docker-compose up
+$ docker compose up
 ```
 
 Start a specific service: 
@@ -43,13 +43,13 @@ Start a specific service:
 The following command starts the `solr` service in the detached mode (in the background)
 
 ```bash
-$ docker-compose up --no-deps -d solr
+$ docker compose up --no-deps -d solr
 ```
 
 Logs of the services can be found:
 
 ```bash
-$ docker-compose logs web  # replace "web" with any other service name to see that particular service's log
+$ docker compose logs web  # replace "web" with any other service name to see that particular service's log
 ```
 
 ### shell
@@ -57,7 +57,7 @@ $ docker-compose logs web  # replace "web" with any other service name to see th
 Start a bash shell inside the container:
 
 ```bash
-$ docker-compose exec web bash  # replace "web" with any other service name
+$ docker compose exec web bash  # replace "web" with any other service name
 ```
 
 ### test
@@ -65,7 +65,7 @@ $ docker-compose exec web bash  # replace "web" with any other service name
 Runs all the tests
 
 ```bash
-$ docker-compose run --rm home make test
+$ docker compose run --rm home make test
 ```
 
 ## Using the local Open Library Website
@@ -153,7 +153,7 @@ This section moved [here](Frontend-Guide).
 - Infobase queries get cached in memcache. In the dev instance, there is a single-node memcache instance that you can test by connecting to it:
 
 ```python
-$ docker-compose run --rm home python
+$ docker compose run --rm home python
 Python 3.10.5 (main, Jun 23 2022, 17:14:57)
 [Clang 13.1.6 (clang-1316.0.21.2.5)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
@@ -300,12 +300,12 @@ This will look at the current database schema, identify its version, and upgrade
 
 - Once you have generated the keys, add them to your local `conf/openlibrary.yml` file by filling in the public and private keys under the `plugin_recaptcha` section.
 
-- From within the Docker container, restart the Open Library service via `sudo systemctl restart ol-web`. You can simply run `docker-compose restart` as well for the same.
+- From within the Docker container, restart the Open Library service via `sudo systemctl restart ol-web`. You can simply run `docker compose restart` as well for the same.
 
 ### Caching
 The home page is cached by default. To clear the cache of any page in cache run the following command:
 ```
-docker-compose restart memcached
+docker compose restart memcached
 ```
 
 ## FAQs
