@@ -1,6 +1,6 @@
 ## UPDATES
 - 2019: `ol-mem[0-2]` trusty VMs have been reprovisioned as `ol-mem[3-5]` following the [Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Provisioning-Guide)
-- Dec. 2020: Migration to Docker-based deployments based on docker-compose
+- Dec. 2020: Migration to Docker-based deployments based on docker compose
 - Jan. 2021: Upgrade to Infogami master and drop `docker-compose.infogami-local.yml`
 - Oct./Nov. 2021: Decomission ol-mem{3,4,5} on Ubuntu Xenial in favor of ol-mem{0,1,2} on Ubuntu Focal
 
@@ -14,7 +14,7 @@
 
 Once you have set `$COMPOSE_FILE`, you can:
 ```
-docker-compose down && PYENV_VERSION=3.8.6 docker-compose up -d && docker-compose logs -f --tail=10
+docker compose down && PYENV_VERSION=3.8.6 docker compose up -d && docker compose logs -f --tail=10
 ```
 
 For more details see: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md
