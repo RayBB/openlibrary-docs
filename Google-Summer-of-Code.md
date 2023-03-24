@@ -61,15 +61,15 @@ The opportunity you mention should be directly related to the "solution" you ref
 
 > Today, Open Library is limited to the books Internet Archive decides should be acquired and made available through their library program. But there’s an opportunity to democratize Open Library’s bookshelves and extend this power to patrons so every reader in the world may be empowered to Sponsor books of their choosing.
 
-4) Why now? Why is this opportunity possible now (and wasn’t possible before?)
+3) Why now? Why is this opportunity possible now (and wasn’t possible before?)
 
 > Last year, Open Library added a Want to Read button to their website enabling patrons to tell us which books we are missing from the library. To our surprise, over 400k unique patrons clicked this button since we added it, teaching us that patrons are eager to tell us which books they want. I believe some percentage of these patrons may also be willing to make a monetary donation to sponsor the accessioning of these desirable books.
 
-5) What does the solution look like?
+4) What does the solution look like?
 
 > For GSoC, we’d like to test this hypothesis by adding a `Sponsor this Book` button that will show up on the 23M remaining books which Open Library knows about but have not yet been obtained.
 
-6) What does success of your solution look like? What is the potential impact, who will benefit?
+5) What does success of your solution look like? What is the potential impact, who will benefit?
 
 > Success means establishing a new distribution channel to receive donations, promoting long-term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
 
