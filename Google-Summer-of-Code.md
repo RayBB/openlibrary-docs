@@ -51,11 +51,13 @@ Depending on what you specifically valuable about Open Library, here is an examp
 ## What Does a Good Proposal Look Like?
 A good summary addresses the following 6 questions (replace `Open Library` with whatever project you're applying for): 
 
-1) What is Open Library, what is its importance, and how do you personally measure its impact?
+1) What is Open Library, what is its importance to you, and how do you personally measure its impact?
 
-> Open Library is a non-profit website run by Internet Archive which helps millions of patrons access digital library books for free. Not every library is equal. Some cities don’t have libraries at all. Open Library is an opportunity to provide equal opportunity to readers all over the globe.
+> Open Library is a non-profit website run by Internet Archive which helps millions of patrons access digital library books for free. Not every library is equal. Some cities don’t have libraries at all. Open Library is an opportunity to provide equal opportunity to readers all over the globe. To me, success means extending the reach of Open Library so more people may access books who are currently without sufficient local libraries.
 
-2) What Opportunity exists for Open Library and how does it related to your impact metric?
+2) What **opportunity** exists for Open Library and how does it related to your impact metric?
+
+The opportunity you mention should be directly related to the "solution" you reference in #5.
 
 > Today, Open Library is limited to the books Internet Archive decides should be acquired and made available through their library program. But there’s an opportunity to democratize Open Library’s bookshelves and extend this power to patrons so every reader in the world may be empowered to Sponsor books of their choosing.
 
