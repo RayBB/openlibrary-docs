@@ -60,7 +60,15 @@ sudo usermod -a -G docker <your-username>
 
 ## Introduction
 
-Greetings deployer! You are one of the select few who has privileged access to Internet Archive infrastructure and is tasked with the important responsibility of deploying the Open Library website. Deploys typically occur on Thursday, after the candidate code has had a few days to be tested on staging (https://staging.openlibrary.org). The following are instructions that we hope will ease your journey towards a successful deployment of the Open Library system. For more information on the system architecture, please refer to the [Production Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture) 
+Greetings deployer! You are one of the select few who has privileged access to Internet Archive infrastructure and is tasked with the important responsibility of deploying the Open Library website. Deploys typically occur on Thursday, after the candidate code has had a few days to be tested on staging (https://staging.openlibrary.org). The following are instructions that we hope will ease your journey towards a successful deployment of the Open Library system. For more information on the system architecture, please refer to the [Production Provisioning Guide](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture).
+
+### A note on `docker-compose` and `docker compose`
+
+As of early 2023, following the installation instructions on Docker's website will install either Docker Desktop, which includes Docker Compose v2, or `docker-ce` and `docker-compose-plugin` (Linux only), both of which obviate the need to install `docker-compose` v1 separately.
+
+Further, Compose V1 will [no longer be supported by the end of June 2023](https://docs.docker.com/compose/compose-v2/) and will be removed from Docker Desktop. These directions are written for Compose V2, hence the use of `docker compose` rather than `docker-compose`. `docker compose` is [meant to be a drop-in replacement](https://docs.docker.com/compose/compose-v2/#differences-between-compose-v1-and-compose-v2) for `docker-compose`.
+
+To see an updated document, please review [Docker Instructions](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md).
 
 ## Recovering from a Failed Deployment
 
@@ -114,7 +122,7 @@ On ol-home0, a live, breaking change could be made to certain services, e.g. `af
 ```
 docker stop openlibrary_affiliate-server_1
 docker rm -f openlibrary_affiliate-server_1
-COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml" HOSTNAME=$HOSTNAME docker-compose up -d affiliate-server
+COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml" HOSTNAME=$HOSTNAME docker compose up -d affiliate-server
 ```
 
 ## Deployment Development
@@ -133,6 +141,6 @@ This can be done manually by looking at the instructions within `_dev-merged.txt
 ```
 cd /opt/openlibrary
 sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
-docker-compose down
-COMPOSE_FILE="docker-compose.yml:docker-compose.staging.yml" HOSTNAME=$HOSTNAME docker-compose up --no-deps -d memcached web
+docker compose down
+COMPOSE_FILE="docker-compose.yml:docker-compose.staging.yml" HOSTNAME=$HOSTNAME docker compose up --no-deps -d memcached web
 ```
