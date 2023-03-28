@@ -2,14 +2,6 @@
 
 The following will set the correct ENV variables (`HOSTNAME` & `COMPOSE_FILE`), put you in the right path (i.e. `/opt/openlibrary`), remove the existing `openlibrary_cron-jobs_1 container`, rebuild a fresh container.
 
-### A note on `docker-compose` and `docker compose`
-
-As of early 2023, following the installation instructions on Docker's website will install either Docker Desktop, which includes Docker Compose v2, or `docker-ce` and `docker-compose-plugin` (Linux only), both of which obviate the need to install `docker-compose` v1 separately.
-
-Further, Compose V1 will [no longer be supported by the end of June 2023](https://docs.docker.com/compose/compose-v2/) and will be removed from Docker Desktop. These directions are written for Compose V2, hence the use of `docker compose` rather than `docker-compose`. `docker compose` is [meant to be a drop-in replacement](https://docs.docker.com/compose/compose-v2/#differences-between-compose-v1-and-compose-v2) for `docker-compose`.
-
-To see an updated document, please review [Docker Instructions](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md)
-
 ```bash:
 $ cd /opt/openlibrary
 $ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml";sudo docker rm -f openlibrary_cron-jobs_1;docker compose --profile ol-home0 up -d --no-deps cron-jobs
