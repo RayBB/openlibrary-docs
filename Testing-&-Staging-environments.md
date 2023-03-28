@@ -35,6 +35,13 @@ sudo vim _dev-merged.txt
 # Find your PR by its number, and then remove the line.
 # Then trigger another PR deploy.
 ```
+### A note on `docker-compose` and `docker compose`
+
+As of early 2023, following the installation instructions on Docker's website will install either Docker Desktop, which includes Docker Compose v2, or `docker-ce` and `docker-compose-plugin` (Linux only), both of which obviate the need to install `docker-compose` v1 separately.
+
+Further, Compose V1 will [no longer be supported by the end of June 2023](https://docs.docker.com/compose/compose-v2/) and will be removed from Docker Desktop. These directions are written for Compose V2, hence the use of `docker compose` rather than `docker-compose`. `docker compose` is [meant to be a drop-in replacement](https://docs.docker.com/compose/compose-v2/#differences-between-compose-v1-and-compose-v2) for `docker-compose`.
+
+To see an updated document, please review [Docker Instructions](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md)
 
 ### Manually deploying to `testing.openlibrary.org`
 
@@ -49,8 +56,8 @@ sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
 # restart service
 export COMPOSE_FILE='docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml'
-docker-compose down
-docker-compose up -d web memcached
+docker compose down
+docker compose up -d web memcached
 
 # Run any build steps that need re-running e.g. make js css, etc.
 ```
