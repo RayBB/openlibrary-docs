@@ -38,10 +38,10 @@ sudo usermod -a -G docker <your-username>
         # Ensure all the git repos are in sync across all servers
 
         # Restart things (check the site and sentry after each)
+        /opt/openlibrary/scripts/deployment/restart_servers.sh ol-www0
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web1 ol-covers0
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0 && docker restart openlibrary_infobase_nginx_1
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web2
-        /opt/openlibrary/scripts/deployment/restart_servers.sh ol-www0
         ````
 - [ ] Notify slack of deploy completion
 
