@@ -36,24 +36,11 @@ sudo usermod -a -G docker <your-username>
         time /opt/openlibrary/scripts/deployment/deploy.sh  # 15min
         ./scripts/deployment/are_servers_in_sync.sh
         # Ensure all the git repos are in sync across all servers
-        
-        # Deploy the static files to ol-www1 ; this will not be needed once it's using docker
-        CUR_SHA=$(sudo git rev-parse HEAD | head -c7)        
-        STATIC_DIR=/tmp/ol-static-$CUR_SHA
-        docker cp $(docker create --rm openlibrary/olbase:latest):/openlibrary/static $STATIC_DIR
-        rsync -rvz $STATIC_DIR/ ol-www1:$STATIC_DIR
-        ssh -A ol-www1 "
-          sudo rm -r /opt/openlibrary/openlibrary/static-backup || true;
-          sudo chown -R openlibrary:openlibrary $STATIC_DIR;
-          sudo mv /opt/openlibrary/openlibrary/{static,static-backup};
-          sudo mv $STATIC_DIR /opt/openlibrary/openlibrary/static;
-        "
 
         # Restart things (check the site and sentry after each)
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web1 ol-covers0
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-home0 && docker restart openlibrary_infobase_nginx_1
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-web2
-        # Not currently production facing
         /opt/openlibrary/scripts/deployment/restart_servers.sh ol-www0
         ````
 - [ ] Notify slack of deploy completion
