@@ -92,13 +92,16 @@ Each denormalized Work dump record/row is a JSON document with the following fie
 - ia – IA metadata for all the ia items referenced in the editions as a list
 - duplicates – dictionary of duplicates (key -> it’s duplicates) of work and edition docs mentioned above
 
+```
     you@ol-home:/1/var/tmp$ source /opt/openlibrary/venv/bin/activate # Activate virtual environment
     (venv)you@ol-home:/1/var/tmp$ python /opt/openlibrary/openlibrary/scripts/2011/09/generate_deworks.py ol_dump_2015-03-11.txt.gz ia_metadata_dump_2015-03-11.txt.gz | gzip -c > ol_dump_deworks_2015-01-11.txt.gz
+```
 
 ## Verify Dumps
 
     you@ol-home:/1/var/tmp$ source /opt/openlibrary/venv/bin/activate # Activate virtual environment
     (venv)you@ol-home:/1/var/tmp$ ls -lh
+
     ia_metadata_dump_2015-03-11.txt.gz  ol_dump_2015-03-11.txt.gz
     ol_dump_redirects_2015-03-11.txt.gz ol_dump_authors_2015-03-11.txt.gz
     ol_dump_deworks_2015-01-11.txt.gz   ol_dump_editions_2015-03-11.txt.gz
