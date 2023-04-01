@@ -30,6 +30,7 @@ Data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` withi
 # Examine the dump process logs
 1. Log into the host `ol-home0`
 2. `docker logs openlibrary_cron-jobs_1 2>&1 | grep openlibrary.dump | less`
+    * Or to follow the logs during the process: `docker logs openlibrary_cron-jobs_1 --follow`
 
 # Related Issues
 
@@ -97,7 +98,7 @@ Each denormalized Work dump record/row is a JSON document with the following fie
 ## Verify Dumps
 
     you@ol-home:/1/var/tmp$ source /opt/openlibrary/venv/bin/activate # Activate virtual environment
-    (venv)you@ol-home:/1/var/tmp$ ls
+    (venv)you@ol-home:/1/var/tmp$ ls -lh
     ia_metadata_dump_2015-03-11.txt.gz  ol_dump_2015-03-11.txt.gz
     ol_dump_redirects_2015-03-11.txt.gz ol_dump_authors_2015-03-11.txt.gz
     ol_dump_deworks_2015-01-11.txt.gz   ol_dump_editions_2015-03-11.txt.gz
