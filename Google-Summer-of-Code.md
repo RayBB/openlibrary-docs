@@ -73,6 +73,42 @@ The opportunity you mention should be directly related to the "solution" you ref
 
 > Success means establishing a new distribution channel to receive donations, promoting long-term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
 
+## Mock Proposal
+
+The following mock proposal is effective because it:
+* Demonstrates the value of Open Library and the problem it helps solve
+* Defines a very specific, focused problem and justifies its value in measurable terms
+* Identifies open questions, risks, and concerns a mentor may have
+* Proposes a detailed & feasible step by step plan, with justification behind design decisions, and directly address the risks & questions.
+* Is specific enough that this can be handed to someone else and they'd be able to make progress towards the desired outcome
+* Engineering knowledge is demonstrated about the codebase
+* Product & design knowledge is demonstrated about the critical pieces required to produce a working product/prototype as well as original ideas
+* Shows the mentor how they will know if the plan is successful
+
+### Open Library's Value & a Missed Opportunity
+
+Open Library is an important platform because it helps underserved learners read library books online for free online. Most municipalities don't have as well funded libraries as NYPL and BPL and so the availability of digital reading options is a critical consideration. However, the library is currently missing an opportunity because hundreds of high quality born-digital educational web books (for instance, [this book on the Rust programming language](https://github.com/rust-lang/book) published on github) are not indexed in the catalog. This book has 12k :star: and there are many books like it, signifying there's a large audience (likely tens of thousands of patrons) interested in the subject matter.
+
+### Challenges & Risks
+
+As a reviewer, you may be wondering: How do we find or submit good web books? How do we evaluate the quality of a web book? Who will be allowed to submit web books and is there a review process? What technologies or processes are needed to make such an initiative possible? And is there a way we can build such a system so that the benefits will outweigh the risks and the time investment? Finally, what will the experience be like to search for and read web_books from Open Library? After talking to members of staff about their questions, I've also included any policy considerations which may need to be addressed when linking to external websites from Open Library?
+
+### Proposal
+In this proposal, I will address some of the above concerns, make a case for why this feature is paramount for us to work on, and recommend a clear and specific path forward which will address these questions, reduce uncertainty & risk, and promote confidence in a solution that will be both feasible, low-costs, and effective:
+
+1. The /addbook page will be updated so any patron can submit the URL of a web book, along with some basic metadata to help reviewers assess the quality of the submission.
+2. A privileged librarian will go to a new page called /review where (similar to the /merges UI) a librarian can evaluate the book's quality. Here is figma link to how this /review page might look:
+design showing a table where the fields are: (ol_edition_key, web_book_url, reviewer=None, status="approved")
+3. In order to ensure only high quality of books are approved, there will be a standard checklist guide written that librarians can use to see if the web book meets all the criteria. This guide will be one of the deliverables.
+4. Today, Open Library book pages have a read or borrow button when a readable edition is available in the library. I propose we make this button more flexible to include web_books as an option and possibly convert it into a dropdown button (see img) because this will allow us to offer many different options, such as external links to the web_book
+5. Finally, we would make sure that when a web_book is approved by a librarian, it will enter the solr search engine so that patrons can facet/search by web_books specifically or see when a web_book happens to be available in the catalog. For this I will refer to the [video tutorial on adding fields to solr](https://archive.org/details/openlibrary-tour-2020/2021-10-26-OpenLibrary-Community-Celebration.mp4) and make the necessary changes to the main backend [search code](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py) and the [search UI template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html) to make these changes.
+
+### Evaluating Success
+We can evaluate success in several ways:
+* how many times a patron clicks submits a web book
+* how many times a librarian approves a submitted web_book
+* how many times a web_book button has been clicked by a patron
+
 # History
 - [Google Summer of Code 2019](Google-Summer-of-Code-2019)
 - [Google Summer of Code 2018](Google-Summer-of-Code-2018)
