@@ -6,6 +6,7 @@
 [Weekly Community Calls](https://docs.google.com/document/d/1LEbzsLZ1F9_YIQOoZzO7GoZnG1z-rudhZ9HNtsameTc)  
 [Google Summer of Code](Google-Summer-of-Code)  
 [Hacktoberfest (October)](Hacktoberfest)  
+[Fellowship Program](Fellowships)  
 
 ---
 
