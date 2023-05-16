@@ -8,4 +8,4 @@ Occasionally, funding for fellowships is made possible through Google Summer of 
 
 ## Expressing Interest
 
-If you’re interested in contributing as an Open Library Fellow and receiving mentorship, you can apply using this form or email openlibrary@archive.org for more information.
+If you’re interested in contributing as an Open Library Fellow and receiving mentorship, you can [apply using this form](https://docs.google.com/forms/d/1mVTLDfDd0RM7c7ZaX6qyuTW3A3tZ4BafuzxvkYf2NDE/edit) or email openlibrary@archive.org for more information.
