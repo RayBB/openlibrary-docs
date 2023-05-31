@@ -15,7 +15,8 @@ ol-home0% sudo vi /opt/olsystem/etc/cron.d/openlibrary.ol_home0  # Make desired 
 ol-home0% docker exec -it openlibrary-cron-jobs-1 bash
 root@ol-home0:/openlibrary# service cron status  # --> cron is running.
 root@ol-home0:/openlibrary# crontab -l  # This should be the old cron jobs
-root@ol-home0:/openlibrary# service cron restart  # This might kick you out of the Docker container.  If so, log back in...
+root@ol-home0:/openlibrary# service cron restart  # This might kick you out of the Docker container.
+# If so, log back in...
 ol-home0% docker exec -it openlibrary-cron-jobs-1 bash
 root@ol-home0:/openlibrary# crontab -l  # Make sure that this is the new cron jobs
 ```
