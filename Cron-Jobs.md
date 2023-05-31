@@ -9,7 +9,7 @@ $ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="docker-compose.yml:docker-compo
 
 ## Modify the Cron Jobs on ol-home0
 
-The following will allow allow the addition, modification, or deletion of cron jobs without creating a new cron-jobs container:
+The following will allow the addition, modification, or deletion of cron jobs WITHOUT creating a new cron-jobs container:
 ```bash
 ol-home0% sudo vi /opt/olsystem/etc/cron.d/openlibrary.ol_home0  # Make desired changes
 ol-home0% docker exec -it openlibrary-cron-jobs-1 bash
