@@ -7,6 +7,19 @@ $ cd /opt/openlibrary
 $ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml";sudo docker rm -f openlibrary_cron-jobs_1;docker compose --profile ol-home0 up -d --no-deps cron-jobs
 ```
 
+## Modify the Cron Jobs on ol-home0
+
+The following will allow allow the addition, modification, or deletion of cron jobs without creating a new cron-jobs container:
+```bash
+ol-home0% sudo vi /opt/olsystem/etc/cron.d/openlibrary.ol_home0  # Make desired changes
+ol-home0% docker exec -it openlibrary-cron-jobs-1 bash
+root@ol-home0:/openlibrary# service cron status  # --> cron is running.
+root@ol-home0:/openlibrary# crontab -l  # This should be the old cron jobs
+root@ol-home0:/openlibrary# service cron restart  # This might kick you out of the Docker container.  If so, log back in...
+ol-home0% docker exec -it openlibrary-cron-jobs-1 bash
+root@ol-home0:/openlibrary# crontab -l  # Make sure that this is the new cron jobs
+```
+
 ## Connecting to Cron Docker
 
 You may then enter the container with a bash session by running:
