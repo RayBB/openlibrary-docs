@@ -4,19 +4,19 @@ Data dumps are introduced at https://openlibrary.org/developers/dumps
 
 Successful data dumps are transferred to https://archive.org/details/ol_exports?sort=-publicdate
 
-Data dumps should be created on `ol-home0` within the `openlibrary_cron-jobs_1` Docker container.
+Data dumps should be created on `ol-home0` within the `openlibrary-cron-jobs-1` Docker container.
 * `docker-compose.production.yml` defines `cron-jobs` Docker container.
 * That container uses `docker/ol-cron-start.sh` to submit the cron jobs. 
 * The jobs are defined in `olsystem/etc/cron.d/openlibrary.ol_home0`.
 
-Data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary_cron-jobs_1` Docker container:
+Data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` within the `openlibrary-cron-jobs-1` Docker container:
 
 # Run an out-of-cycle Open Library Data Dump (Aug. 2022)
 1. Log into the host `ol-home0`
 2. `tmux`  # The data dumps are a long-running process and `tmux` enables reconnecting to a host that has been disconnected.
 2. `cd /opt/openlibrary`
-3. `docker ps`  # To ensure that `openlibrary_cron-jobs_1` is up and running
-4. `docker exec -it -uroot openlibrary_cron-jobs_1 bash`
+3. `docker ps`  # To ensure that `openlibrary-cron-jobs-1` is up and running
+4. `docker exec -it -uroot openlibrary-cron-jobs-1 bash`
 5. `crontab -l | less`  # to see the ol data dumps command
 6. `ls /1/var/tmp/dumps`  # to see if there are data files that should be deleted
     1. We kept the raw database dump `data.txt.gz`
@@ -29,8 +29,8 @@ Data dumps (e.g. ol_dump.txt.gz) may be manually regenerated on `ol-home0` withi
 
 # Examine the dump process logs
 1. Log into the host `ol-home0`
-2. `docker logs openlibrary_cron-jobs_1 2>&1 | grep openlibrary.dump | less`
-    * Or to follow the logs during the process: `docker logs openlibrary_cron-jobs_1 --follow`
+2. `docker logs openlibrary-cron-jobs-1 2>&1 | grep openlibrary.dump | less`
+    * Or to follow the logs during the process: `docker logs openlibrary-cron-jobs-1 --follow`
 
 # Related Issues
 
