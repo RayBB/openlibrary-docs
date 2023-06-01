@@ -1,10 +1,10 @@
 ## Updating Cron Jobs on ol-home0
 
-The following will set the correct ENV variables (`HOSTNAME` & `COMPOSE_FILE`), put you in the right path (i.e. `/opt/openlibrary`), remove the existing `openlibrary_cron-jobs_1 container`, rebuild a fresh container.
+The following will set the correct ENV variables (`HOSTNAME` & `COMPOSE_FILE`), put you in the right path (i.e. `/opt/openlibrary`), remove the existing `openlibrary-cron-jobs-1 container`, rebuild a fresh container.
 
 ```bash:
 $ cd /opt/openlibrary
-$ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml";sudo docker rm -f openlibrary_cron-jobs_1;docker compose --profile ol-home0 up -d --no-deps cron-jobs
+$ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml";sudo docker rm -f openlibrary-cron-jobs-1;docker compose --profile ol-home0 up -d --no-deps cron-jobs
 ```
 
 ## Temporarily modify the Cron Jobs on ol-home0
@@ -26,7 +26,7 @@ After testing, please make a pull request on olsystem to make these change perma
 You may then enter the container with a bash session by running:
 
 ```bash:
-$ sudo docker exec -it -uroot openlibrary_cron-jobs_1 bash
+$ sudo docker exec -it -uroot openlibrary-cron-jobs-1 bash
 ```
 
 ## Verifying Crons Running on ol-home0 Docker
@@ -42,7 +42,7 @@ $ tail /var/log/cron.log
 ## Running Cron Jobs on ol-home0
 
 First, shell into the docker container for cron jobs:
-```sudo docker exec -it -uroot openlibrary_cron-jobs_1 bash```
+```sudo docker exec -it -uroot openlibrary-cron-jobs-1 bash```
 
 ### Homepage Stats
 
@@ -101,7 +101,7 @@ DEBUG    : stats.py    :  40 :  Postgres Database : coverstore
 ### Running Import Bot Daemon
 
 ```
-ol-home0:~$ docker exec -it openlibrary_importbot_1 bash
+ol-home0:~$ docker exec -it openlibrary-importbot-1 bash
 scripts/manage-imports.py --config "$OL_CONFIG" import-all
 ```
 
@@ -113,7 +113,7 @@ You may want to run the following in tmux or gnu screen to establish a persisten
 ```
 ssh -A ol-home0
 tmux  # This will allow you to reconnect if your terminal gets disconnected!!
-docker exec -it -uroot openlibrary_cron-jobs_1 bash
+docker exec -it -uroot openlibrary-cron-jobs-1 bash
 ```
 Once inside the Docker instance...
 ```
@@ -123,7 +123,7 @@ OPTIONAL: To monitor progress in a second terminal tab:
 ```
 ssh -A ol-home0
 ps -ef  # To see if your job is running with yesterday's date
-docker logs -f --tail=500 openlibrary_cron-jobs_1 2>&1 | grep dump
+docker logs -f --tail=500 openlibrary-cron-jobs-1 2>&1 | grep dump
 ```
 
 ### Archive.org Imports
