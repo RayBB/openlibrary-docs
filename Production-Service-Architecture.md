@@ -22,20 +22,27 @@ For more details see: https://github.com/internetarchive/openlibrary/blob/master
 The remainder of this document will focus on production deployments.
  
 ## Current Production Architecture
-Today, our production service architecture consists of the following Docker containers:
-1. affiliate-server
-2. covers
-3. covers_nginx
-4. cron (in progress)
-5. db
-6. home
-7. importbot (in progress)
-8. infobase
-9. infobase_nginx
-10. memcached
-11. solr
-12. solr-updater
-13. web
+Today, our production service architecture consists of the following hosts and Docker containers:
+
+hostname | Docker image | long name | notes
+--- | --- | --- | ---
+ol-covers0 | covers | openlibrary-covers-1 & 2| |
+ol-covers0 | covers_nginx | openlibrary-covers_nginx-1 | |
+ol-db1 & 2 | None | postgres Bare-metal -- no Docker |
+ol-home0 | affiliate-server | openlibrary-affiliate-server-1 | |
+ol-home0 | cron-jobs | openlibrary-cron-jobs-1 | |
+ol-home0 | importbot | openlibrary-importbot-1 | |
+ol-home0 | infobase | openlibrary-infobase-1 | |
+ol-home0 | infobase_nginx | openlibrary-infobase_nginx-1 | |
+ol-home0 | solr-next-updater | openlibrary-solr-next-updater-1 | |
+ol-home0 | solr-updater | openlibrary-solr-updater-1 | |
+ol-home0 | web_haproxy | openlibrary-web_haproxy-1 | |
+ol-home0 | web_nginx | openlibrary-web_nginx-1 | |
+ol-mem0, 1, 2 | None | memcached bare metal -- no Docker | |
+ol-solr0 | solr | openlibrary_solr_1 | |
+ol-solr0 | solr_haproxy | openlibrary_solr_haproxy_1 | |
+ol-solr0 | solr_restarter | openlibrary_solr_restarter_1 | |
+ol-web1 & 2 | web | openlibrary-web-1 | |
 
 ![Open Library Production Architecture](https://archive.org/download/openlibrary-documentation/openlibrary-production-architecture.png)
 
