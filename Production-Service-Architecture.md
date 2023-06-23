@@ -28,7 +28,7 @@ hostname | Docker image | long name | notes
 --- | --- | --- | ---
 ol-covers0 | covers | openlibrary-covers-1 & 2| |
 ol-covers0 | covers_nginx | openlibrary-covers_nginx-1 | |
-ol-db1 & 2 | None | postgres Bare-metal -- no Docker |
+ol-db1 & 2 | None | postgres on bare-metal -- no Docker |
 ol-home0 | affiliate-server | openlibrary-affiliate-server-1 | |
 ol-home0 | cron-jobs | openlibrary-cron-jobs-1 | |
 ol-home0 | importbot | openlibrary-importbot-1 | |
@@ -38,7 +38,7 @@ ol-home0 | solr-next-updater | openlibrary-solr-next-updater-1 | |
 ol-home0 | solr-updater | openlibrary-solr-updater-1 | |
 ol-home0 | web_haproxy | openlibrary-web_haproxy-1 | |
 ol-home0 | web_nginx | openlibrary-web_nginx-1 | |
-ol-mem0, 1, 2 | None | memcached bare metal -- no Docker | |
+ol-mem0, 1, 2 | None | memcached on bare metal -- no Docker | |
 ol-solr0 | solr | openlibrary_solr_1 | |
 ol-solr0 | solr_haproxy | openlibrary_solr_haproxy_1 | |
 ol-solr0 | solr_restarter | openlibrary_solr_restarter_1 | |
