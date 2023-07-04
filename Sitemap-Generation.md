@@ -50,10 +50,10 @@ You can do this using rsync:
 ```bash
 #!/bin/bash
 
+SITEINDEX="/1/var/lib/openlibrary/sitemaps/sitemaps/siteindex.xml.gz"
 SERVERS="ol-covers0 ol-www0"
 for SERVER in $SERVERS; do
-    echo "Sitemaps on ${SERVER}..."
-    LAST_UPDATED=$(ssh $SERVER ls -l --time-style=long-iso /1/var/lib/openlibrary/sitemaps/sitemaps/siteindex.xml.gz | cut -d' ' -f6)
+    LAST_UPDATED=$(ssh $SERVER ls -l --time-style=long-iso $SITEINDEX | cut -d' ' -f6)
     echo "Sitemaps on $SERVER were last updated on ${LAST_UPDATED}."
 done
 echo "Ensure that the file dates on servers ($SERVERS) are the first day of the current month."
