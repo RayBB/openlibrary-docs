@@ -7,7 +7,7 @@ http://gio.blog.archive.org/2015/02/04/ol-how-to-generate-the-sitemaps/
 Sitemaps are generated on `ol-home` using the latest data dump `ol_dump.txt.gz` as the source file. See [Generating Data Dumps](Generating-Data-Dumps) for more on generating `ol_dump`
 
 The last dump is available at: http://openlibrary.org/data/ol_dump_works_latest.txt.gz
-for more details you can see https://openlibrary.org/developers/dumps.
+for more details, you can see https://openlibrary.org/developers/dumps.
 
 ## Generating Sitemaps
 
@@ -45,3 +45,17 @@ You can do this using rsync:
     Last-Modified: Wed, 04 Feb 2015 12:48:06 GMT
     Connection: keep-alive
     Accept-Ranges: bytes
+
+## Verify Sitemaps have been copied to appropriate hosts
+```bash
+#!/bin/bash
+
+SERVERS="ol-covers0 ol-www0"
+for SERVER in $SERVERS; do
+    echo "Sitemaps on ${SERVER}..."
+    LAST_UPDATED=$(ssh $SERVER ls -l --time-style=long-iso /1/var/lib/openlibrary/sitemaps/sitemaps/siteindex.xml.gz | cut -d' ' -f6)
+    echo "Sitemaps on $SERVER were last updated on ${LAST_UPDATED}."
+done
+echo "Ensure that the file dates on servers ($SERVERS) are the first day of the current month."
+```
+
