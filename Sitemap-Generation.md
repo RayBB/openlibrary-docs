@@ -58,4 +58,8 @@ for SERVER in $SERVERS; do
 done
 echo "Ensure that the file dates on servers ($SERVERS) are the first day of the current month."
 ```
-
+```
+Sitemaps on ol-covers0 were last updated on 2023-07-01.
+Sitemaps on ol-www0 were last updated on 2023-07-01.
+Ensure that the file dates on servers (ol-covers0 ol-www0) are the first day of the current month.
+```
