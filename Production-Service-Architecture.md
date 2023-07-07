@@ -37,9 +37,9 @@ ol-home0 | infobase_nginx | openlibrary-infobase_nginx-1 | underscore |
 ol-home0 | solr-next-updater | openlibrary-solr-next-updater-1 | |
 ol-home0 | solr-updater | openlibrary-solr-updater-1 | |
 ol-mem0, 1, 2 | None | memcached on bare metal -- no Docker | |
-ol-solr0 | solr | openlibrary_solr_1 | underscore |
-ol-solr0 | solr_haproxy | openlibrary_solr_haproxy_1 | underscore |
-ol-solr0 | solr_restarter | openlibrary_solr_restarter_1 | underscore |
+ol-solr0 & 1 | solr | openlibrary_solr_1 | underscore |
+ol-solr0 & 1 | solr_haproxy | openlibrary_solr_haproxy_1 | underscore |
+ol-solr0 & 1 | solr_restarter | openlibrary_solr_restarter_1 | underscore |
 ol-web1 & 2 | web | openlibrary-web-1 | |
 ol-www0 | web_haproxy | openlibrary-web_haproxy-1 | underscore |
 ol-www0 | **web_nginx** | openlibrary-web_nginx-1 | underscore |
