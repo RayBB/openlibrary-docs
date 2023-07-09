@@ -22,7 +22,7 @@ For more details see: https://github.com/internetarchive/openlibrary/blob/master
 The remainder of this document will focus on production deployments.
  
 ## Current Production Architecture
-Today, our production service architecture consists of the following hosts and Docker containers:
+Today, our production service architecture consists of the following hosts and Docker containers[:](https://github.com/internetarchive/olsystem/wiki/Open-Library-hosts)
 
 hostname | Docker image | long name | notes
 --- | --- | --- | ---
