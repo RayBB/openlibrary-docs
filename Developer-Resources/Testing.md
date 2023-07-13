@@ -4,7 +4,11 @@
 
 From the root of your local openlibrary project, you can run the JavaScript and Python unit tests in a Docker container with the following command:
 
-    docker compose run web make test 
+    docker compose run web make test
+
+To run the pytests in one or more files, you can use:
+
+    docker compose run web pytest openlibrary/plugins/importapi/tests/test_import_validator.py
 
 General Docker instructions are to be found in the repo at https://github.com/internetarchive/openlibrary/tree/master/docker and repo testing instructions are in the main README: https://github.com/internetarchive/openlibrary/blob/master/Readme.md#running-tests
 
