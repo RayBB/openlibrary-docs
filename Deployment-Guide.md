@@ -15,7 +15,7 @@ sudo usermod -a -G docker <your-username>
 
 1. [ ] Check merged PRs to get an idea of potential risks (update dates): https://github.com/internetarchive/openlibrary/pulls?q=is%3Apr%20is%3Amerged%20merged%3A2021-04-28T23%3A39%3A46Z..2021-05-06T19%3A05%3A48Z%20sort%3Aupdated-asc
 2. [ ] Open up monitoring dashboards (We recommend adding these (along with this guide) to a bookmark folder; then you can click "Open all" when you're about to do a deploy!)
-    - Grafana: https://wwwb-grafana0.us.archive.org/d/000000176/open-library-dev?orgId=1&refresh=1m
+    - Grafana: https://wwwb-grafana.us.archive.org/d/000000176/open-library-dev?orgId=1&refresh=1m
     - Haproxy: https://openlibrary.org/admin?stats
     - Sentry ol-web: https://sentry.archive.org/organizations/ia-ux/issues/?project=7
     - Sentry ol-covers: https://sentry.archive.org/organizations/ia-ux/issues/?project=10
