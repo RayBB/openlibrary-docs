@@ -51,35 +51,24 @@ hardware hostname | container name | docker hostname
 ol-covers0 | openlibrary-covers-1 | docker-ol-covers0-covers-1
 ol-covers0 | openlibrary-covers-2 | docker-ol-covers0-covers-2
 ol-covers0 | openlibrary-covers_nginx-1 | docker-ol-covers0-covers_nginx-1
-
-**ol-home0% docker ps**
-* openlibrary-affiliate-server-1
-* openlibrary-cron-jobs-1
-* openlibrary-importbot-1
-* openlibrary-infobase_nginx-1
-* openlibrary-infobase-1
-* openlibrary-solr-next-updater-1
-* openlibrary-solr-updater-1
-
-**ol-solr0 ~ % docker ps**
-* openlibrary_solr_1
-* openlibrary_solr_haproxy_1
-* openlibrary_solr_restarter_1
-
-**ol-solr1% docker ps**
-* jenkins
-* solr_builder-haproxy-1
-* solr_builder-solr_prod-1
-
-**ol-web1% docker ps**
-* openlibrary-web-1
-
-**ol-web2% docker ps**
-* openlibrary-web-1
-
-**ol-www0% docker ps**
-* openlibrary-web_nginx-1
-* openlibrary-web_haproxy-1
+% docker ps**
+ol-home0 | openlibrary-affiliate-server-1 | docker-ol-home0-
+ol-home0 | openlibrary-cron-jobs-1 | docker-ol-home0-cron-jobs-1
+ol-home0 | openlibrary-importbot-1 | docker-ol-home0-importbot-1
+ol-home0 | openlibrary-infobase-1 | docker-ol-home0-infobase-1
+ol-home0 | openlibrary-infobase_nginx-1 | docker-ol-home0-infobase_nginx-1
+ol-home0 | openlibrary-solr-next-updater-1 | docker-ol-home0-solr-next-updater-1
+ol-home0 | openlibrary-solr-updater-1 | docker-ol-home0-solr-updater-1
+ol-solr0 | openlibrary_solr_1 | docker-ol-solr0-solr_1
+ol-solr0 | openlibrary_solr_haproxy_1 | docker-ol-solr0-solr_haproxy_1
+ol-solr0 | openlibrary_solr_restarter_1 | docker-ol-solr0-solr_restarter_1
+ol-solr1 | jenkins | docker-ol-solr1-jenkins
+ol-solr1 | openlibrary_solr_haproxy_1 | docker-ol-solr1-solr_haproxy_1
+ol-solr1 | solr_builder-solr_prod-1 | docker-ol-solr1-solr_prod-1
+ol-web1 | openlibrary-web-1 | docker-ol-web1-web-1
+ol-web2 | openlibrary-web-2 | docker-ol-web2-web-1
+ol-www0 | openlibrary-web_haproxy-1 | docker-ol-www0--web_haproxy-1
+ol-www0 | openlibrary-web_nginx-1 | docker-ol-www0--web_nginx-1
 
 ![Open Library Production Architecture](https://archive.org/download/openlibrary-documentation/openlibrary-production-architecture.png)
 
