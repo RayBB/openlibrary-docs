@@ -45,7 +45,7 @@ ol-web1 & 2 | web | openlibrary-web-1 | |
 ol-www0 | web_haproxy | openlibrary-web_haproxy-1 | underscore |
 ol-www0 | **web_nginx** | openlibrary-web_nginx-1 | underscore |
 
-**ol-covers0% docker ps**
+### Docker hostnames
 hardware hostname | container name | docker hostname
 --- | --- | --- 
 ol-covers0 | openlibrary-covers-1 | docker-ol-covers0-covers-1
