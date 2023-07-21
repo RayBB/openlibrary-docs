@@ -46,9 +46,11 @@ ol-www0 | web_haproxy | openlibrary-web_haproxy-1 | underscore |
 ol-www0 | **web_nginx** | openlibrary-web_nginx-1 | underscore |
 
 **ol-covers0% docker ps**
-* openlibrary-covers-1
-* openlibrary-covers-2
-* openlibrary-covers_nginx-1
+hardware hostname | container name | docker hostname
+--- | --- | --- 
+ol-covers0 | openlibrary-covers-1 | docker-ol-covers0-covers-1
+ol-covers0 | openlibrary-covers-2 | docker-ol-covers0-covers-2
+ol-covers0 | openlibrary-covers_nginx-1 | docker-ol-covers0-covers_nginx-1
 
 **ol-home0% docker ps**
 * openlibrary-affiliate-server-1
