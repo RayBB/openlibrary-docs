@@ -51,7 +51,6 @@ hardware hostname | container name | docker hostname
 ol-covers0 | openlibrary-covers-1 | docker-ol-covers0-covers-1
 ol-covers0 | openlibrary-covers-2 | docker-ol-covers0-covers-2
 ol-covers0 | openlibrary-covers_nginx-1 | docker-ol-covers0-covers_nginx-1
-% docker ps**
 ol-home0 | openlibrary-affiliate-server-1 | docker-ol-home0-
 ol-home0 | openlibrary-cron-jobs-1 | docker-ol-home0-cron-jobs-1
 ol-home0 | openlibrary-importbot-1 | docker-ol-home0-importbot-1
