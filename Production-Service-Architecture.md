@@ -45,6 +45,40 @@ ol-web1 & 2 | web | openlibrary-web-1 | |
 ol-www0 | web_haproxy | openlibrary-web_haproxy-1 | underscore |
 ol-www0 | **web_nginx** | openlibrary-web_nginx-1 | underscore |
 
+**ol-covers0% docker ps**
+openlibrary-covers-1
+openlibrary-covers-2
+openlibrary-covers_nginx-1
+
+**ol-home0% docker ps**
+openlibrary-affiliate-server-1
+openlibrary-cron-jobs-1
+openlibrary-importbot-1
+openlibrary-infobase_nginx-1
+openlibrary-infobase-1
+openlibrary-solr-next-updater-1
+openlibrary-solr-updater-1
+
+**ol-solr0 ~ % docker ps**
+openlibrary_solr_1
+openlibrary_solr_haproxy_1
+openlibrary_solr_restarter_1
+
+**ol-solr1% docker ps**
+jenkins
+solr_builder-haproxy-1
+solr_builder-solr_prod-1
+
+**ol-web1% docker ps**
+openlibrary-web-1
+
+**ol-web2% docker ps**
+openlibrary-web-1
+
+**ol-www0% docker ps**
+openlibrary-web_nginx-1
+openlibrary-web_haproxy-1
+
 ![Open Library Production Architecture](https://archive.org/download/openlibrary-documentation/openlibrary-production-architecture.png)
 
 ## Current Provisioning Setup
