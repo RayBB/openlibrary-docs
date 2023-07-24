@@ -4,7 +4,7 @@ The following will set the correct ENV variables (`HOSTNAME` & `COMPOSE_FILE`), 
 
 ```bash:
 $ cd /opt/openlibrary
-$ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml";sudo docker rm -f openlibrary-cron-jobs-1;docker compose --profile ol-home0 up -d --no-deps cron-jobs
+$ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="compose.yaml:compose.production.yaml";sudo docker rm -f openlibrary-cron-jobs-1;docker compose --profile ol-home0 up -d --no-deps cron-jobs
 ```
 
 ## Temporarily modify the Cron Jobs on ol-home0
