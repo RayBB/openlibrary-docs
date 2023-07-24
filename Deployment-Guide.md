@@ -29,7 +29,7 @@ sudo usermod -a -G docker <your-username>
         ```sh
         cd /opt/openlibrary
         # Pull olystem and openlibrary before continuing
-        # so we have latest docker-compose, etc
+        # so we have latest docker compose, etc
         # NOTE: Ensure that the `master` branch is checked out first.
         sudo git fetch origin master && sudo git reset --hard origin/master
 
@@ -103,7 +103,7 @@ On ol-home0, a live, breaking change could be made to certain services, e.g. `af
 ```
 docker stop openlibrary_affiliate-server_1
 docker rm -f openlibrary_affiliate-server_1
-COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml" HOSTNAME=$HOSTNAME docker compose up -d affiliate-server
+COMPOSE_FILE="compose.yaml:compose.production.yaml" HOSTNAME=$HOSTNAME docker compose up -d affiliate-server
 ```
 
 ## Deployment Development
@@ -123,5 +123,5 @@ This can be done manually by looking at the instructions within `_dev-merged.txt
 cd /opt/openlibrary
 sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 docker compose down
-COMPOSE_FILE="docker-compose.yml:docker-compose.staging.yml" HOSTNAME=$HOSTNAME docker compose up --no-deps -d memcached web
+COMPOSE_FILE="compose.yaml:compose.staging.yaml" HOSTNAME=$HOSTNAME docker compose up --no-deps -d memcached web
 ```
