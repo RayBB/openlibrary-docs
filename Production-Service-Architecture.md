@@ -6,11 +6,11 @@
 
 ## Three ways to deploy:
 1. localhost for Developers -- http://localhost:8080/status
-    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.override.yml"`
+    * `export COMPOSE_FILE="compose.yaml:compose.override.yaml"`
 2. dev or staging servers -- ol-dev01 is http://staging.openlibrary.org/status
-    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.staging.yml"`
+    * `export COMPOSE_FILE="compose.yaml:compose.staging.yaml"`
 3. production on multiple servers -- ol-web1 and ol-web2 are http://openlibrary.org/status
-    * `export COMPOSE_FILE="docker-compose.yml:docker-compose.production.yml"`
+    * `export COMPOSE_FILE="compose.yaml:compose.production.yaml"`
 
 Once you have set `$COMPOSE_FILE`, you can:
 ```
@@ -75,7 +75,7 @@ ol-www0 | openlibrary-web_nginx-1 | docker-ol-www0--web_nginx-1
 Our current production setup process (as of 2021) for provisioning these Docker containers is **manual** and relies on a lot of manually rsync-ing images around, as well as a separate repository called `olsystem` which contains the production configs, cron jobs, and infrastructure required to run the official openlibrary.org service.
 
 Our Docker containers are more-or-less provisioned identically:
-- The `docker-compose*.yml` files at openlibrary`s root directory contains the Docker configuration data for each container
+- The `compose*.yaml` files at openlibrary's root directory contains the Docker configuration data for each container
 - These containers may mount external volumes such as `olsystem`, `petabox`, and `1` to access config and shared data.
 - `/opt/openlibrary` contains the business logic for the Open Library project:
 ```
