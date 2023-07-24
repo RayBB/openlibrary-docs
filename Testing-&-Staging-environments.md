@@ -48,7 +48,7 @@ sudo vim /opt/openlibrary/_dev-merged.txt
 sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 
 # restart service
-export COMPOSE_FILE='docker-compose.yml:docker-compose.infogami-local.yml:docker-compose.staging.yml'
+export COMPOSE_FILE='compose.yaml:compose.infogami-local.yaml:compose.staging.yaml'
 docker compose down
 docker compose up -d web memcached
 
