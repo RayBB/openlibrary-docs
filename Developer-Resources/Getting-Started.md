@@ -1,6 +1,7 @@
 # Quick Start for Open Library's developers
 
-| **WARNING: This documentation is _very_ out of date and needs to be re-written. Most of it is wrong, but some of it is right.
+| **WARNING: This documentation is _very_ out of date and needs to be re-written. Most of it is wrong, but some of it is right. |
+| -- |
 
 If you're getting started, you likely want to take a look at our [Contributor's Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) or our [Installation Manual]( https://github.com/internetarchive/openlibrary/tree/master/docker#readme) |
 | -- |
