@@ -130,7 +130,9 @@ Add conf/openlibrary.yaml to .git/info/exclude so that any changes to the conf f
 
 **Book covers**
 
-By default, these might be triggering 404s. Point coverstore_url to https://covers.openlibrary.org/
+By default, uploading book covers will work in the local development environment, but some of the existing books might 404 for their covers. This is expected, since now actual images are included in the test database.
+
+If you use copydocs (see below) to import books, these imported books will also 404 on their covers. For these, you can change `coverstore_public_url` in `conf/openlibrary.yml` to https://covers.openlibrary.org/ . This will change the web page to fetch covers from production instead of your local environment.
 
 Be sure to restart your dev instance after any configuration changes.
 
