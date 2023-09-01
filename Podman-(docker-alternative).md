@@ -32,3 +32,5 @@ Error: building at STEP "RUN npm install yorkie --verbose": while running runtim
 ```
 
 Current plan is to try upgrading nodejs and see if that helps at all. Maybe it's running out of memory.
+
+PS: some of these complications may be due to me running on m1 mac / arm64.
