@@ -31,9 +31,16 @@ Add your idea here.
 
 
 # FAQs
-What is Wikidata?
+**What is Wikidata?**
 
 It is similar to wikipedia in that it is crowdsourced but it provides structured and easy to query data about things. More in [this video](https://www.youtube.com/watch?v=m_9_23jXPoE) or [here](https://www.wikidata.org/wiki/Wikidata:Introduction).
 
-Why do we want to use wikidata?
+**Why do we want to use wikidata?**
+
 It give us access to rich structured data (such as biographical info, awards, and much more) to enhance the patron's experience.
+
+**What about bulk importing data?**
+
+1. We are starting with live imports because we'll want a way to refresh the data frequently anyway.
+2. We'll evaluate if we need a bulk import for authors that have wikidata IDs.
+3. As far as importing wikidata entities that have OLID (but that OL doesn't have the wikidata ID set) we will have to be thoughtful about how we do that since there could be disambiguation issues. 
