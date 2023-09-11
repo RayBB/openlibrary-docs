@@ -1,6 +1,6 @@
-# Hooking up a Javascript file to an HTML template
+**Hooking up a Javascript file to an HTML template**
 
-Guide by Jaye R.
+A guide by Jaye R.
 
 In this tutorial, I'll walk you through how to hook up a Javascript file to an HTML template in the Open Library code base. I will use my experience working on the 'Meet the Team' page on Open Library as an example.
 
