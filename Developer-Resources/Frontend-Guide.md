@@ -52,6 +52,8 @@ We are transitioning towards using [BEM notation](http://getbem.com/) for CSS cl
 
 ### Working with JavaScript
 
+For developers seeking a tutorial on linking html templates to javascript files, see: https://github.com/internetarchive/openlibrary/wiki/Hooking%E2%80%90up-Templates-to-Javascript-Files
+
 Open Library uses jQuery. Except `jquery` and `jquery-ui`, other third-party JavaScript libraries are combined and included as `vendor.js`. All the custom JavaScripts are combined and includes as `all.js`.
 
 Most of the heavy application lifting is done by a file in `openlibrary/openlibrary/plugins/openlibrary/js/ol.js`
