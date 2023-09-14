@@ -3,23 +3,6 @@
 - Dec. 2020: Migration to Docker-based deployments based on docker compose
 - Jan. 2021: Upgrade to Infogami master and drop `docker-compose.infogami-local.yml`
 - Oct./Nov. 2021: Decomission ol-mem{3,4,5} on Ubuntu Xenial in favor of ol-mem{0,1,2} on Ubuntu Focal
-
-## Three ways to deploy:
-1. localhost for Developers -- http://localhost:8080/status
-    * `export COMPOSE_FILE="compose.yaml:compose.override.yaml"`
-2. dev or staging servers -- ol-dev01 is http://staging.openlibrary.org/status
-    * `export COMPOSE_FILE="compose.yaml:compose.staging.yaml"`
-3. production on multiple servers -- ol-web1 and ol-web2 are http://openlibrary.org/status
-    * `export COMPOSE_FILE="compose.yaml:compose.production.yaml"`
-
-Once you have set `$COMPOSE_FILE`, you can:
-```
-docker compose down && PYENV_VERSION=3.8.6 docker compose up -d && docker compose logs -f --tail=10
-```
-
-For more details see: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md
-
-The remainder of this document will focus on production deployments.
  
 ## Current Production Architecture
 Today, our production service architecture consists of the following hosts and Docker containers[:](https://github.com/internetarchive/olsystem/wiki/Open-Library-hosts)
