@@ -3,7 +3,22 @@
 - Dec. 2020: Migration to Docker-based deployments based on docker compose
 - Jan. 2021: Upgrade to Infogami master and drop `docker-compose.infogami-local.yml`
 - Oct./Nov. 2021: Decomission ol-mem{3,4,5} on Ubuntu Xenial in favor of ol-mem{0,1,2} on Ubuntu Focal
- 
+
+## Server Types
+
+@cclauss, please update this section w/ instructions + commands on how to provision each of the following. We likely need to take into consideration `ferm`, `docker` install, services like haproxy + nginx + memcache, hb.conf (ips allow list for ol-db), & importantly olsystem updates, updating dns.
+
+* ol-mem
+* ol-web
+* ol-solr
+* ol-covers
+* ol-home
+* ol-www
+* ol-dev
+* ol-db
+
+For ol-web, ol-home, ol-www, and ol-solr, we run something roughly equivalent to this [setup](https://github.com/internetarchive/openlibrary/pull/3938/files#diff-3b30bef8970e22874431ef6aa3d67073bddc40ba78dc7e5a6c86e549a15b5706) script
+
 ## Current Production Architecture
 Today, our production service architecture consists of the following hosts and Docker containers[:](https://github.com/internetarchive/olsystem/wiki/Open-Library-hosts)
 
