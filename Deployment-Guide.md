@@ -125,3 +125,24 @@ sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
 docker compose down
 COMPOSE_FILE="compose.yaml:compose.staging.yaml" HOSTNAME=$HOSTNAME docker compose up --no-deps -d memcached web
 ```
+
+
+## Legacy Deployment for Various Environments
+
+This may be outdated!
+
+1. localhost for Developers -- http://localhost:8080/status
+    * `export COMPOSE_FILE="compose.yaml:compose.override.yaml"`
+2. dev or staging servers -- ol-dev01 is http://staging.openlibrary.org/status
+    * `export COMPOSE_FILE="compose.yaml:compose.staging.yaml"`
+3. production on multiple servers -- ol-web1 and ol-web2 are http://openlibrary.org/status
+    * `export COMPOSE_FILE="compose.yaml:compose.production.yaml"`
+
+Once you have set `$COMPOSE_FILE`, you can:
+```
+docker compose down && PYENV_VERSION=3.8.6 docker compose up -d && docker compose logs -f --tail=10
+```
+
+For more details see: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md
+
+The remainder of this document will focus on production deployments.
