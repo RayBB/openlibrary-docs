@@ -27,7 +27,7 @@ Highlighting which mangled titles are associated with actual item scans for prio
 
 The impact of these mangled titles is that the mangled authors/works/editions will be invisible to any matching algorithm (unless they can be matched by strong ids such as ISBN or LCCN -- EXPLORE FURTHER)
 
-The consequence is that future dupes will not be matched and the un-mangled version will just be added as if it were a totally new record. That suggests that by now most of these mangled items will have been reimported correctly.
+The consequence is that future dupes will not be matched and the un-mangled version will just be added as if it were a totally new record. That suggests that by now many of these mangled items will have been reimported correctly.
 
 ### Example:
 
