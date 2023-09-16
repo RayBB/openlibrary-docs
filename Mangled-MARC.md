@@ -20,6 +20,11 @@ I _think_ the MARC mangling in this way is reversible because the mangling is no
 The other issue first reported is of diacritic characters being dropped leaving a space, e.g. https://openlibrary.org/authors/OL4459814A/Heinrich_Schro_der
 `Heinrich Schro der` for Heinrich Schröder.  This example does not have an archive.org scan, and does not appear to have a duplicate work or edition. It's unclear whether the author is duplicated or not since there isn't enough disambiguating info (i.e. dates or ids). 
 
+    zgrep "[0-9]\s2008" ol_dump_authors_2023-08-31.txt.gz | egrep "[a-z] [a-z]" | grep -v "\\\u" | grep "[a-z] [a-z]"
+
+exclude things like von / de , only search in name fields (bios give false matches)
+
+
 Highlighting which mangled titles are associated with actual item scans for priority might be a good idea. Presumably mangled strings reducing the discoverability of viewable items has more of a cost that mangled strings affecting viewing of just the metadata record.
 
 
