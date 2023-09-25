@@ -14,15 +14,32 @@ Candidates (active students) apply by submitting an application to one or more p
 
 Internet Archive has participated in Google Summer of Code for 3+ years. Open Library has participated twice (2018, 2020). In 2019, the Internet Archive did not receive enough slots for Open Library to participate and so we designed and ran our own Internet Archive Summer of Code (IASoC) internship. 
 
+- [Google Summer of Code 2019](Google-Summer-of-Code-2019)
+- [Google Summer of Code 2018](Google-Summer-of-Code-2018)
+
 ## Your chances
 
-Typically, hundreds of candidates email us to inquire about GSoC. 15 or so set up the Open Library code base, join the community slack channel, and make contributions to the project. Around 25 submit applications. So if you're very dedicated and invest time meeting mentors and working with them to understand the codebase and the project's needs and problems, you're chances could be ~1/25!
+Typically, hundreds of candidates email us to inquire about GSoC. 25 or so set up the Open Library code base, join the community slack channel, make contributions to the project, and submit applications. So if you're very dedicated and invest time meeting mentors and working with them to understand the codebase and the project's needs and problems, you're chances could be ~1/25!
+
+# Drafting a Fellowship Proposal
 
 ## Sample
 
 You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
 
-# Minimum Requirements
+## Example Proposal Concept
+
+The following mock proposal is effective because it:
+* Demonstrates the value of Open Library and the problem it helps solve
+* Defines a very specific, focused problem and justifies its value in measurable terms
+* Identifies open questions, risks, and concerns a mentor may have
+* Proposes a detailed & feasible step by step plan, with justification behind design decisions, and directly address the risks & questions.
+* Is specific enough that this can be handed to someone else and they'd be able to make progress towards the desired outcome
+* Engineering knowledge is demonstrated about the codebase
+* Product & design knowledge is demonstrated about the critical pieces required to produce a working product/prototype as well as original ideas
+* Shows the mentor how they will know if the plan is successful
+
+## Requirements
 
 Your proposal should be **focused**, **thematic**, **realistic**, and **metric-driven**:
 
@@ -35,14 +52,14 @@ e.g.
 - Here are the risks (what could go wrong)
 - Here are my open questions (for mentors)
 
-# General Advice
+## General Advice
 
 1. Your application **should not** just be a collection of issues. Group issues into logical themes. For instance, "my theme for phase one of my roadmap is making Open Library more accessible to people in non-US countries".
 2. Ask lots of questions -- some of your ideas may be easy in principle, but hard because Open Library's code base can be difficult to work with, an issue may take longer than expected! Ask mentors how long they think an issue will take, it's one of the most important pieces of value they can offer.
 3. Consider creating Open Library issues proposing features you'd like to include in your application. Get feedback from the community and see whether it's something they also value and will support.
 4. Have an idea of what success means / looks like from the very beginning. How will you know if you've won? Brewster suggests one strategy is, "start with the aspirational blog post and work backwards".
 
-# Thoughtfully Choose a Meaningful Theme
+## Choosing a Meaningful Theme
 
 Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
 
@@ -73,17 +90,7 @@ The opportunity you mention should be directly related to the "solution" you ref
 
 > Success means establishing a new distribution channel to receive donations, promoting long-term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
 
-## Mock Proposal
 
-The following mock proposal is effective because it:
-* Demonstrates the value of Open Library and the problem it helps solve
-* Defines a very specific, focused problem and justifies its value in measurable terms
-* Identifies open questions, risks, and concerns a mentor may have
-* Proposes a detailed & feasible step by step plan, with justification behind design decisions, and directly address the risks & questions.
-* Is specific enough that this can be handed to someone else and they'd be able to make progress towards the desired outcome
-* Engineering knowledge is demonstrated about the codebase
-* Product & design knowledge is demonstrated about the critical pieces required to produce a working product/prototype as well as original ideas
-* Shows the mentor how they will know if the plan is successful
 
 ### Open Library's Value & a Missed Opportunity
 
@@ -104,11 +111,8 @@ design showing a table where the fields are: (ol_edition_key, web_book_url, revi
 5. Finally, we would make sure that when a web_book is approved by a librarian, it will enter the solr search engine so that patrons can facet/search by web_books specifically or see when a web_book happens to be available in the catalog. For this I will refer to the [video tutorial on adding fields to solr](https://archive.org/details/openlibrary-tour-2020/2021-10-26-OpenLibrary-Community-Celebration.mp4) and make the necessary changes to the main backend [search code](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py) and the [search UI template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html) to make these changes.
 
 ### Evaluating Success
-We can evaluate success in several ways:
+
+One might evaluate success in any number of ways. Here are some ideas, though careful as you'll want to justify and create a case for why these evaluation metrics are the right ones (either categorically and/or with respect to your specific proposal):
 * how many times a patron clicks submits a web book
 * how many times a librarian approves a submitted web_book
 * how many times a web_book button has been clicked by a patron
-
-# History
-- [Google Summer of Code 2019](Google-Summer-of-Code-2019)
-- [Google Summer of Code 2018](Google-Summer-of-Code-2018)
