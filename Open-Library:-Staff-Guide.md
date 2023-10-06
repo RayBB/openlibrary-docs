@@ -1,6 +1,6 @@
 Open Library is run by a very small team of staff and lots of volunteers. Here is an owner's manual to help those maintaining the project.
 
-Your main entry point into the project is the [Main Program Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3). This links to most our most important documents over time.[Here is an executive summary](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye) of what I do to run Open Library and how we [manage the project](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management).
+Your main entry point into the project is the [Main Program Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3). This links to most our most important documents over time. [Here is an executive summary](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye) of what I do to run Open Library and how we [manage the project](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management).
 
 ## Main Activities
 
