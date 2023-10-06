@@ -7,11 +7,23 @@ Your main entry point into the project is the [Main Program Index](https://docs.
 | Guide | Description |
 |-------|-------------|
 | [Deploys](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide) | Deploying code to the website |
-| [Postmortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22) | When we encounter an operational problem we open a new post-mortem issue and follow the template. This results in a searchable archive of problems, troubleshooting guide, and fixes for the future. |
+| [Emergency Response](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response) & [Postmortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22) | When we encounter an operational problem we open a new post-mortem issue and follow the template. This results in a searchable archive of problems, troubleshooting guide, and fixes for the future. |
+| [Spam](https://github.com/internetarchive/openlibrary/wiki/Anti-Spam-Tools) | Strategies for dealing with spam within a system that anonymizes patron IPs by default. |
 | [Provisioning](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture) | Occasionally, a server will need to be rebuilt or upgraded. This guide explains how to approach this process and offers notes on the state of our different services. |
 | [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) | Describes our various meetings, when and how we do planning, and how we use tools/platforms like github. | 
 | [Search Engine Re-indexing](https://github.com/internetarchive/openlibrary/wiki/Solr) | We presently manually kick off ~monthly solr re-indexes and alternate between two blue-green servers to ensure uptime as we rebuild. @cdrini is the domain expert. I believe we may still benefit from a [tutorial doc, see #8390](https://github.com/internetarchive/openlibrary/issues/8390) |
 | [Cover Archival](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/coverstore/README.md) | This process is not yet hands-free. There is a [recipe](https://github.com/internetarchive/openlibrary/issues/8278#issue-1888611543) for how we can run this in the meantime. |
+
+## Error Reporting & Analytics
+
+See our [Monitoring Bible](https://github.com/internetarchive/openlibrary/wiki/Monitoring) for a complete list of useful services
+
+| Service | Description |
+|-------|-------------|
+| [Sentry](https://sentry.archive.org/organizations/ia-ux/issues/46145/?project=7&query=lending&referrer=issue-stream&statsPeriod=14d) | We use sentry to investigate errors & performance  |
+| [Grafana](https://grafana.us.archive.org/d/000000176/open-library-dev) | We use grafana to see real-time analytics about site performance and service health |
+| [Nagios](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) | We use Nagios to set alerts and monitor when services hit critical errors or thresholds which may require intervention |
+| [Plausible](https://plausible.prod.archive.org/openlibrary.org) | Our alternative for google analytics |
 
 ## Services
 
