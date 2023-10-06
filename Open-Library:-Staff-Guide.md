@@ -11,14 +11,14 @@ Your main entry point into the project is the [Main Program Index](https://docs.
 | [Provisioning](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture) | Occasionally, a server will need to be rebuilt or upgraded. This guide explains how to approach this process and offers notes on the state of our different services. |
 | [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) | Describes our various meetings, when and how we do planning, and how we use tools/platforms like github. | 
 | [Search Engine Re-indexing](https://github.com/internetarchive/openlibrary/wiki/Solr) | We presently manually kick off ~monthly solr re-indexes and alternate between two blue-green servers to ensure uptime as we rebuild. @cdrini is the domain expert. I believe we may still benefit from a [tutorial doc, see #8390](https://github.com/internetarchive/openlibrary/issues/8390) |
+| [Cover Archival](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/coverstore/README.md) | This process is not yet hands-free. There is a [recipe](https://github.com/internetarchive/openlibrary/issues/8278#issue-1888611543) for how we can run this in the meantime. |
 
 ## Services
 
 Open Library depends on lots of services and tasks that run regularly and may require staff intervention.
 
-* [Cover archival](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/coverstore/README.md)
-* [ImportBot](https://github.com/internetarchive/openlibrary/wiki/Developer's-Guide-to-Data-Importing#production-automatic-import-pipeline) and [Archive.org ↔ OpenLibrary.org Sync](https://github.com/internetarchive/openlibrary/wiki/archive.org-%E2%86%94-Open-Library-synchronisation)
-* Monthly [Data Dump](https://github.com/internetarchive/openlibrary/wiki/Generating-Data-Dumps) & [Sitemap](https://github.com/internetarchive/openlibrary/wiki/Sitemap-Generation) Generation -- see also [Cron Jobs Guide](Cron-Jobs) 
+* Monthly [Data Dump](https://github.com/internetarchive/openlibrary/wiki/Generating-Data-Dumps) & [Sitemap](https://github.com/internetarchive/openlibrary/wiki/Sitemap-Generation) Generation and [ImportBot](https://github.com/internetarchive/openlibrary/wiki/Developer's-Guide-to-Data-Importing#production-automatic-import-pipeline) and [Archive.org ↔ OpenLibrary.org Sync](https://github.com/internetarchive/openlibrary/wiki/archive.org-%E2%86%94-Open-Library-synchronisation) should run automatically each month or as a daemon, as outlined in our [Cron Jobs Guide](Cron-Jobs) 
+* The [BookWorm / Affiliate Server](https://github.com/internetarchive/openlibrary/blob/master/scripts/affiliate_server.py) fetches book data on the fly from vendors and imports some missing data for books on-the-fly. It has [several issues](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+label%3A%22Theme%3A+Affiliate+API%22) which need to be addressed 
 
 ## Team Structure & Communication
 
