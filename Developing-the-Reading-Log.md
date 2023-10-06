@@ -1,5 +1,7 @@
 Working with Reading Log: A mini-tutorial.
 
+See also: https://github.com/internetarchive/openlibrary/pull/8375#issuecomment-1749963570
+
 ## Overview
 
 The html template for the reading log code is here:
