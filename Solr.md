@@ -169,9 +169,11 @@ To get all this information, the solr document needs information from the follow
 - Data about all the records which have been marked as redirect to any of the above records
 - IA metadata for each edition having a scan
 
-When updating multiple records at once, getting these individually might be too inefficient. So, some efforts have gone into it to make the process faster by making requests in batches whenever possible and directly take to the database to avoid middle layer overheads.
+Getting these individually is inefficient. Some efforts have been made to speed this up by:
+1. batching requests
+2. talking directly to the database (to avoid middle layer overhead)
 
-The flow will be similar for author records as well.
+Author records have a similar flow.
 
 ## Analyzing Queries
 
