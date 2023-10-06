@@ -11,7 +11,7 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 ## Team Pages
 
-Here are the main pages for each team that works on Open Library:
+Here are the main pages for each team that works on Open Library. Have a question and not sure who to ask? Please refer to our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels and our [Team Directory](https://openlibrary.org/about/team).
 
 | Team Portals |
 |---|
@@ -19,8 +19,6 @@ Here are the main pages for each team that works on Open Library:
 | [**Librarianship**](https://openlibrary.org/librarians) |
 | [**Communications**](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#) |
 | [**Design**](https://docs.google.com/document/d/1Ss9jcdx1EYRhyatAPhmwe9VU8TQZzC-plbFuunvXNKQ/edit#) |
-
-Have a question and not sure who to ask? Please refer to our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels and our [Team Directory](https://openlibrary.org/about/team).
 
 ## How we Communicate
 
