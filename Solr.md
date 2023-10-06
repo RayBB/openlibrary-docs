@@ -121,7 +121,7 @@ Open Library uses Apache Solr for providing search functionality to the website.
 Whenever a record is updated on Open Library, the corresponding entry in the search engine must be updated to get up-to-date results. Open Library has two different ways to update the search index:
 
 ### 1. The Manual Way
-The openlibrary/solr module provides a script called `update_work.py` for updating solr. Even though the script name is indicating only work, it can be used for updating even edition and author documents in solr.
+The openlibrary/solr module has the [update_work.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/solr/update_work.py) script for updating solr. Even though the script name is indicating only work, it can be used for updating even edition and author documents in solr.
 
 To update a one or more entries manually:
 WARNING: be sure to use the right openlibrary.yml file…
@@ -139,15 +139,15 @@ python openlibrary/update_work.py --config openlibrary.yml --nocommit /books/OL1
 ```
 
 ### 2. The Solr Updater
-There is a script `scripts/solr_updater.py`, which is run as a daemon process, listens to the edits happening to the database and updates the corresponding documents in Solr.
+[scripts/solr_updater.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/solr_updater.py), is run as a daemon process. It listens for edits to the database and updates the corresponding documents in Solr.
 
-Infobase, the system that handles the all the modifications to the system, maintains a log of all changes. It writes a JSON entry to a log file whenever something is modified in the database. It also provides an API to request these log entries.
+Infobase, the system that handles the all the modifications to the system, maintains a log of all changes. Each modification is written to a log as a JSON entry. It also provides an API to access the log entries.
 
-The solr updater script uses this to get new modifications made after what it has last seen. It uses those entries to find which documents should be updated in the search engine.
+The solr updater script uses this API to retrieve modifications update the corresponding documents in solr (the search engine).
 
-While this looks like a fair approach, the solr updater script can fail at a bad record or fail at an unexpected data. When this happen the solr updater dies and starts from the same point when it comes up and thus gets into an infinite loop.
+While this looks like a fair approach, the solr updater script can fail due to a bad record or unexpected data. When this happen, the solr updater dies and resumes from the same point. As such, it can get stuck in an infinite loop.
 
-The current position of the log file consumed by the solr updated is maintained in a state file. The state file will be at /var/run/openlibrary/solr-update.offset, or any other path specified as argument to the solr updater script.
+The current position of the log file consumed by the solr updated is maintained in a state file. The state file will be at /var/run/openlibrary/solr-update.offset, or another path passed to the solr updater script.
 
 ## The Updating Process
 
