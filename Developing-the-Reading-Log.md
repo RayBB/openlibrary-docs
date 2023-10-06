@@ -1,5 +1,7 @@
 This is a tutorial on contributing to the "My Books" experience and developing the Reading Log.
 
+![image](https://github.com/internetarchive/openlibrary/assets/978325/1bd5c677-d4b8-4f53-b8b6-2b51291ac72e)(https://archive.org/details/openlibrary-tour-2020/openlibrary-mybooks-primer.mp4)
+
 ## The Patron's Experience
 
 When a patron clicks on their `My Book` main navigation button, they're brought to the url `/account/books` and shown `My Books` overview that provides a summary of their loans, lists, reading log, and more:
