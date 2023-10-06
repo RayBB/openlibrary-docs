@@ -9,6 +9,7 @@ Some of these endpoints may only be available to staff
   * ol-covers: https://sentry.archive.org/organizations/ia-ux/issues/?project=10
   * ol-infobase: https://sentry.archive.org/organizations/ia-ux/issues/?project=9
   * ol-cron-jobs: https://sentry.archive.org/organizations/ia-ux/issues/?project=12
+* [Plausible, GA-style Analytics](https://plausible.prod.archive.org/openlibrary.org)
 * [Internal Books Lending Dashboards](https://archive.org/book/lending_dashboard.php#Overview)
 * [Sorry! 500 Responses](https://analytics1.archive.org/stats/sorry.php)
 * [Page Views](https://archive.org/stats#openlibrary)
