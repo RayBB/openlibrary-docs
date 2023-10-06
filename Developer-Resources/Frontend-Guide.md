@@ -35,6 +35,7 @@ During local development, after making edits to CSS or JS, one must re-compile t
 #### Use a watch script to monitor for changes and build as necessary
 - JS `docker compose run --rm home npm run-script watch`
 - CSS `docker compose run --rm home npm run-script watch-css`
+- Vue `docker-compose run --rm home npx vue-cli-service build --watch --no-clean --mode production --dest static/build/components/production --target wc --name ol-CoversNew openlibrary/components/CoversNew.vue`. Replace **CoversNew** with your component.
 
 **Note**:
 - You might also need to restart the webserver and/or clear browser caches to see the changes.
