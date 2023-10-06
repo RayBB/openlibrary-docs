@@ -57,6 +57,8 @@ cat /var/log/tomcat6/catalina.2020-05-13.log | grep '^May' | cut -c1-24 | sed 's
 ### Query Solr directly on dev instance
 Go to http://localhost:8983/ to view the solr admin dashboard. You can experiment with raw queries by selecting the "openlibrary" core in the dropdown in the sidebar, and then clicking on query in the sidebar.
 
+http://localhost:8080/search.json?q=OL54120W to see what is in solr now for any query.
+
 ### Making changes to solr config
 
 If you are experimenting with making changes to core solr configuration, you will need to do the following to test your changes using the bash script instructions below. 
