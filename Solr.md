@@ -61,14 +61,6 @@ Go to http://localhost:8983/ to view the solr admin dashboard. You can experimen
 
 If you are experimenting with making changes to core solr configuration, you will need to do the following to test your changes using the bash script instructions below. 
 
-**A command update:** A note on `docker-compose` and `docker compose`
-
-As of early 2023, following the installation instructions on Docker's website will install either Docker Desktop, which includes Docker Compose v2, or `docker-ce` and `docker-compose-plugin` (Linux only), both of which obviate the need to install `docker-compose` v1 separately.
-
-Further, Compose V1 will [no longer be supported by the end of June 2023](https://docs.docker.com/compose/compose-v2/) and will be removed from Docker Desktop. These directions are written for Compose V2, hence the use of `docker compose` rather than `docker-compose`. `docker compose` is [meant to be a drop-in replacement](https://docs.docker.com/compose/compose-v2/#differences-between-compose-v1-and-compose-v2) for `docker-compose`.
-
-To see an updated document, please review [Docker Instructions](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md)
-
 ```sh
 # Assume OL is running
 docker compose up -d
@@ -83,6 +75,8 @@ docker volume rm openlibrary_solr-data openlibrary_solr-updater-data
 docker compose up -d solr solr-updater
 docker compose run --rm home bash -c 'make reindex-solr'
 ```
+
+See also: [Docker Instructions](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md)
 
 ### Adding fields to solr
 
