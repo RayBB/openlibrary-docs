@@ -17,7 +17,7 @@ Your main entry point into the project is the [Main Program Index](https://docs.
 Open Library depends on lots of services and tasks that run regularly and may require staff intervention.
 
 * [Cover archival](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/coverstore/README.md)
-* ImportBot and [Archive.org ↔ OpenLibrary.org Sync](https://github.com/internetarchive/openlibrary/wiki/archive.org-%E2%86%94-Open-Library-synchronisation)
+* [ImportBot](https://github.com/internetarchive/openlibrary/wiki/Developer's-Guide-to-Data-Importing#production-automatic-import-pipeline) and [Archive.org ↔ OpenLibrary.org Sync](https://github.com/internetarchive/openlibrary/wiki/archive.org-%E2%86%94-Open-Library-synchronisation)
 * Monthly [Data Dump](https://github.com/internetarchive/openlibrary/wiki/Generating-Data-Dumps) & [Sitemap](https://github.com/internetarchive/openlibrary/wiki/Sitemap-Generation) Generation -- see also [Cron Jobs Guide](Cron-Jobs) 
 
 ## Team Structure & Communication
