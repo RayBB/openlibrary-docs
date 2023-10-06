@@ -145,7 +145,7 @@ python openlibrary/update_work.py --config openlibrary.yml --nocommit /books/OL1
 ```
 
 ### 2. The Solr Updater
-There is a script `scripts/new_solr_updater.py`, which is run as a daemon process, listens to the edits happening to the database and updates the corresponding documents in Solr.
+There is a script `scripts/solr_updater.py`, which is run as a daemon process, listens to the edits happening to the database and updates the corresponding documents in Solr.
 
 Infobase, the system that handles the all the modifications to the system, maintains a log of all changes. It writes a JSON entry to a log file whenever something is modified in the database. It also provides an API to request these log entries.
 
