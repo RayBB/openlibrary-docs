@@ -78,11 +78,35 @@ docker compose run --rm home bash -c 'make reindex-solr'
 
 See also: [Docker Instructions](https://github.com/internetarchive/openlibrary/blob/master/docker/README.md)
 
-### Adding fields to solr
+### Adding a Field to Solr
+
+#### 1. Edit the Managed Schema
+The [managed-schema.xml](https://github.com/internetarchive/openlibrary/blob/master/conf/solr/conf/managed-schema.xml) needs to be updated to include the new field. For example, we can add a field named "record quality score."
+Add a new field definition for "record quality score" with the desired data type (in this case, "pint" for integer).
+
+For example: `<field name="record_quality_score" type="pint"/>`
+
+#### 2. Modify the Python Code
+The Python code responsible for indexing data into Solr needs to be updated to populate the "record_quality_score" field. This code is in [update_work.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/solr/update_work.py).
+
+For example:
+`add('record_quality_score', compute_record_quality(work, editions))`
+
+Note: You likely should implement `compute_record_quality` in another file.
+
+#### 3. Reindex Data
+Once you have made the code changes, perform a full reindex to incorporate the new field.
+
+#### Additional Considerations
+- If you need to cross-reference data from external sources like archive.org or Wikidata, additional data retrieval steps may be required.
+- Keep in mind that the order of fields in your Solr schema can affect search results. Be aware of the field ordering if it's relevant to your change.
 
 See this video (https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4):
 
 <a href="https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4"><img width="641" alt="Screenshot 2023-10-06 at 9 44 45 AM" src="https://github.com/internetarchive/openlibrary/assets/978325/75f8dbfd-45f8-4ada-8d69-f3aea8d54f84"></a>
+
+#### Video Summary
+
 
 ## Creating a Solr Backup
 
