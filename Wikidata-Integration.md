@@ -27,7 +27,9 @@ V0, which is in progress via [#8236](https://github.com/internetarchive/openlibr
 * Incorporate wikidata notable works list into author merge tool
 
 ## Books( Works/Editions)
-Add your idea here.
+* Import book series from Wikidata like [A Song of Fire and Ice](https://www.wikidata.org/wiki/Q45875)
+  * Or at the least we can show the next / previous book in a series based on wikidata
+* Import from Wikidata awards like [NPR Top 100 Science Fiction and Fantasy Books (Q20899118)](https://tools.wmflabs.org/reasonator/?q=Q20899118&lang=en)
 
 
 # FAQs
@@ -44,3 +46,6 @@ It give us access to rich structured data (such as biographical info, awards, an
 1. We are starting with live imports because we'll want a way to refresh the data frequently anyway.
 2. We'll evaluate if we need a bulk import for authors that have wikidata IDs.
 3. As far as importing wikidata entities that have OLID (but that OL doesn't have the wikidata ID set) we will have to be thoughtful about how we do that since there could be disambiguation issues. 
+
+# Related Issues
+- [710](https://github.com/internetarchive/openlibrary/issues/710) - some early ideas on this integration
