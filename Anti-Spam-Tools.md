@@ -57,3 +57,7 @@ At this point, see [nginx.conf](https://github.com/internetarchive/openlibrary/b
 ```
 
 Or, you can block on a per-IP basis in `/opt/openlibrary/olsystem/etc/nginx/deny.conf`.
+
+## Step-by-step DDOS Case Study
+
+In 2023, we hit a case where a set of IPs was rapidly accessing our Books pages on Open Library. We did not have access to Sam's scripts for de-anonymizing IPs to detect abuse. This was the process for resolving the DDOS: https://github.com/internetarchive/openlibrary/issues/8319#issuecomment-1741323936
