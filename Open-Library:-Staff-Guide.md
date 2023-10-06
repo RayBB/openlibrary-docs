@@ -44,13 +44,14 @@ On Fridays, there is an Open Library design call which takes place in the [same 
 
 ## Guides for other Team Leads & Volunteers
 
-This section needs to be [DRY'ed](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) up because there's our...
-1. [Public Team Page](https://openlibrary.org/about/team)
-2. [Lead Labels on Github](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) 
-3. Outdated [Web of Commitments](https://docs.google.com/spreadsheets/d/1naTQgj_oLrJBUiqQNpa738Z2bQ4IqCCKs7KU1j8Pq4U/edit#gid=0)
-
 | Role | Lead |
 |------|------|
 | [Program Lead](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit) | @mekarpeles |
 | [Lead Community Librarian](https://github.com/internetarchive/openlibrary/wiki/Lead:-Community-Librarian) | @seabelis |
 | [Communications Lead](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#heading=h.mlb9ylj7whus) | Nick Norman | 
+
+This section needs to be [DRY'ed](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) up because there's our...
+1. [Public Team Page](https://openlibrary.org/about/team)
+2. [Lead Labels on Github](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) 
+3. Outdated [Web of Commitments](https://docs.google.com/spreadsheets/d/1naTQgj_oLrJBUiqQNpa738Z2bQ4IqCCKs7KU1j8Pq4U/edit#gid=0)
+
