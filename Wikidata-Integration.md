@@ -26,10 +26,12 @@ V0, which is in progress via [#8236](https://github.com/internetarchive/openlibr
 * Warn users if OL ID in wikidata doesn't match the current author
 * Incorporate wikidata notable works list into author merge tool
 
-## Books( Works/Editions)
+## Books (Works/Editions)
 * Import book series from Wikidata like [A Song of Fire and Ice](https://www.wikidata.org/wiki/Q45875)
   * Or at the least we can show the next / previous book in a series based on wikidata
 * Import from Wikidata awards like [NPR Top 100 Science Fiction and Fantasy Books (Q20899118)](https://tools.wmflabs.org/reasonator/?q=Q20899118&lang=en)
+  * Photos/info about awards
+* Import places associated with works/editions
 
 
 # FAQs
