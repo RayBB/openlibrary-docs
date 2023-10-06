@@ -105,9 +105,6 @@ See this video (https://archive.org/details/openlibrary-tour-2020/2022-01-10-ope
 
 <a href="https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4"><img width="641" alt="Screenshot 2023-10-06 at 9 44 45 AM" src="https://github.com/internetarchive/openlibrary/assets/978325/75f8dbfd-45f8-4ada-8d69-f3aea8d54f84"></a>
 
-#### Video Summary
-
-
 ## Creating a Solr Backup
 
 Creates a `.tar.gz` file of the Solr index.
