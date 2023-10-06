@@ -67,9 +67,11 @@
 [Guide to Identifiers](Guide-to-Identifiers)  
 [Merging Records](https://openlibrary.org/about/lib)  
 [Orphaned Editions Planning](Orphaned-Editions-Planning)  
+
+**Imports**
+[Importing Book Records](Developer's-Guide-to-Data-Importing)  
 [Overview of Data Sources](Data-Source-Overview)  
 [Writing Bots](Writing-Bots)  
-[Importing Book Records](Developer's-Guide-to-Data-Importing)  
 
 ---
 
