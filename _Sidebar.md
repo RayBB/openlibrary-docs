@@ -81,7 +81,7 @@
 [Disaster History Log](Disaster-History-Log)  
 [Dealing with Spam](Anti-Spam-Tools)    
 
-**Administration, Systems & Dev-ops**  
+**[Staff](https://github.com/internetarchive/openlibrary/wiki/Open-Library:-Staff-Guide): Administration, Systems & Dev-ops**  
 [Deployment Guide](Deployment-Guide)  
 [Production Architecture, Provisioning, & Upgrades](Production-Service-Architecture)  
 [Solr Search Manual](Solr)  
