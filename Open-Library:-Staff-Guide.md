@@ -10,6 +10,7 @@ Your main entry point into the project is the [Main Program Index](https://docs.
 | [Postmortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22) | When we encounter an operational problem we open a new post-mortem issue and follow the template. This results in a searchable archive of problems, troubleshooting guide, and fixes for the future. |
 | [Provisioning](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture) | Occasionally, a server will need to be rebuilt or upgraded. This guide explains how to approach this process and offers notes on the state of our different services. |
 | [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) | Describes our various meetings, when and how we do planning, and how we use tools/platforms like github. | 
+| [Search Engine Re-indexing](https://github.com/internetarchive/openlibrary/wiki/Solr) | We presently manually kick off ~monthly solr re-indexes and alternate between two blue-green servers to ensure uptime as we rebuild. @cdrini is the domain expert. I believe we may still benefit from a [tutorial doc, see #8390](https://github.com/internetarchive/openlibrary/issues/8390) |
 
 ## Services
 
