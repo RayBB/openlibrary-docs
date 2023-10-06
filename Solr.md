@@ -86,7 +86,8 @@ docker compose run --rm home bash -c 'make reindex-solr'
 
 ### Adding fields to solr
 
-See this video (https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4): 
+See this video (https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4):
+
 <a href="https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4"><img width="641" alt="Screenshot 2023-10-06 at 9 44 45 AM" src="https://github.com/internetarchive/openlibrary/assets/978325/75f8dbfd-45f8-4ada-8d69-f3aea8d54f84"></a>
 
 ## Creating a Solr Backup
