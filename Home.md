@@ -4,26 +4,30 @@ Welcome! Open Library and its community of [millions](https://openlibrary.org/st
 
 Open Library (https://openlibrary.org) is a non-profit, open source, digital public library, hosted by the [Internet Archive](https://archive.org). Open Library is made possible by volunteers, like you, from over 8 different countries (US, NL, NZ, IN, UK, DE, GR, CA). We believe everyone should have a say in their library. Together, let's build the World's library.
 
+## Top Level Documents
+
+* [Program Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3)
+* [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/edit#heading=h.am6gd9f6wryr)
+
+## Team Pages
+
+Here are the main pages for each team that works on Open Library:
+
+| Team Portals |
+|---|
+| [**Engineering**](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) |
+| [**Librarianship**](https://openlibrary.org/librarians) |
+| [**Communications**](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#) |
+| [**Design**](https://docs.google.com/document/d/1Ss9jcdx1EYRhyatAPhmwe9VU8TQZzC-plbFuunvXNKQ/edit#) |
+
+Have a question and not sure who to ask? Please refer to our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels and our [Team Directory](https://openlibrary.org/about/team).
+
 ## How we Communicate
 
 1. **[Github Issues](https://github.com/internetarchive/openlibrary/issues)** - We try to respond to issues within 24h!
 2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - Public, anyone can join and ask questions!
 3. **[Weekly Community Call](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)** - Everyone is welcome to join our [Weekly Community call @ Tuesday 9:00am PT](https://zoom.us/j/369477551).
 4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - For active contributors, we have a by-invite slack channel
-
-### Team Leads Table
-
-Have a question and not sure who to ask? See our [current Team Leads](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) labels.
-
-Here are the main landing pages for each team:
-
-| Team | Portal |
-|---|---|
-| **Engineering** | You are here! |
-| **Librarianship** | [Portal](https://openlibrary.org/librarians) |
-| **Communications** | [Portal](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#) |
-| **Design** | [Portal](https://docs.google.com/document/d/1Ss9jcdx1EYRhyatAPhmwe9VU8TQZzC-plbFuunvXNKQ/edit#) |
-| **Bots** | [Portal](https://openlibrary.org/dev/docs/bots) |
 
 # APIs & Client Libraries
 
