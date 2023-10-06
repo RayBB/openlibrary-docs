@@ -53,4 +53,4 @@ This section needs to be [DRY'ed](https://en.wikipedia.org/wiki/Don%27t_repeat_y
 |------|------|
 | [Program Lead](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit) | @mekarpeles |
 | [Lead Community Librarian](https://github.com/internetarchive/openlibrary/wiki/Lead:-Community-Librarian) | @seabelis |
-| [Communications Lead] | Nick Norman | 
+| [Communications Lead](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#heading=h.mlb9ylj7whus) | Nick Norman | 
