@@ -49,7 +49,7 @@ The Lead is responsible for:
 * Assigning members of the community to an issue and committing to give them mentorship
 * Helping conduct code reviews
 
-See the [Team Leads Table](https://github.com/internetarchive/openlibrary/wiki#team-leads-table) to get an idea of who to tag.
+See the [Team Leads Labels](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) to get an idea of who to tag.
 
 ## Triage
 
