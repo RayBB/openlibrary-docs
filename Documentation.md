@@ -13,7 +13,7 @@ Our documentation is scattered but generally if you want to search for something
 - Open Library GitHub search [issues](https://github.com/search?q=repo%3Ainternetarchive%2Fopenlibrary+solr&type=issues), [PRs](https://github.com/search?q=repo%3Ainternetarchive%2Fopenlibrary+solr&type=pullrequests), [commits](https://github.com/search?q=repo%3Ainternetarchive%2Fopenlibrary+solr&type=commits), etc
   - The advanced UI as linked above or the general like [this](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+solr)
 - OpenLibrary GitHub Wiki, [example](https://github.com/search?q=repo%3Ainternetarchive%2Fopenlibrary+solr&type=wikis)
-  - You can also close this repo for local search:
+  - You can also clone this repo for local search:
     - `git clone https://github.com/internetarchive/openlibrary.wiki.git`
 - Internet Archive's GitHub org (spanning repos), [example](https://github.com/search?q=org%3Ainternetarchive%20solr&type=code) similar to above including:
   - [open-library-client](https://github.com/internetarchive/openlibrary-client), [openlibrary-bots](https://github.com/internetarchive/openlibrary-bots), [openlibrary-librarians](https://github.com/internetarchive/openlibrary-librarians)
