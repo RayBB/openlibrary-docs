@@ -25,6 +25,8 @@ Lets look at some example to search for "solr":
 - OpenLibrary.org pages, which doesn't have an easy way to search but you can use Google filters like [this](https://www.google.com/search?q=solr+site%3Aopenlibrary.org)
 - blog.openlibrary.org - for announcements and such, [example](https://www.google.com/search?q=solr+site%253Ablog.openlibrary.org)
 - Some things may be buried in Internet Archive videos, which, I'm not sure how to search
+- Slack - has lots of historical info
+- Gitter - Not sure how far back search goes
 
 #### Where to Contribute New Content
 
