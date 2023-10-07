@@ -1,14 +1,15 @@
-Open Library hosts a Weekly Community Call every Tuesday @ 10:00am PT https://zoom.us/j/369477551
+Open Library hosts a weekly [Community Call](https://github.com/internetarchive/openlibrary/wiki/Community-Call).
+This document tracks of the minutes/notes.
 
-2022 Community notes for Q1: https://docs.google.com/document/d/1LEbzsLZ1F9_YIQOoZzO7GoZnG1z-rudhZ9HNtsameTc/edit#
+See also: [Important Open Library Documents](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)
+# Meeting Minutes by Year
 
-***
-
-**Update (2019-02-26):** Starting on 2019-02, our notes have moved to [this Google Doc](https://docs.google.com/document/d/16eAABOSLrmCbOkRbwVXzis2x4dz2gEQWJsXK-crDCqg/edit#)
-
-**Update (2020-11-20):** Notes for 2020 are at [this Google Doc](https://docs.google.com/document/d/1FEG-bdOTsi8Q3IHgFboL_LZImN18Q4wsWWWtlV8RgKk/edit#heading=h.5e4zdvk7337x)
-
-**Update (2021-01-09):** Notes for 2021 are at [this Google Doc](https://docs.google.com/document/d/1YXh4SvaY9kyI-IIYnVQPDQIeDHoDcvvqvyHfkkTfPX8)
+- [2023](https://docs.google.com/document/d/1joLJzuY3YM1g6nZZSaqqM35DC_CVLbiOG9vhj21UKmw/)
+- [2022](https://docs.google.com/document/d/1LEbzsLZ1F9_YIQOoZzO7GoZnG1z-rudhZ9HNtsameTc/)
+- [2021](https://docs.google.com/document/d/1YXh4SvaY9kyI-IIYnVQPDQIeDHoDcvvqvyHfkkTfPX8/)
+- [2020](https://docs.google.com/document/d/1FEG-bdOTsi8Q3IHgFboL_LZImN18Q4wsWWWtlV8RgKk/)
+- [2019](https://docs.google.com/document/d/16eAABOSLrmCbOkRbwVXzis2x4dz2gEQWJsXK-crDCqg/)
+- 2018-2017 - See below
 
 ***
 
