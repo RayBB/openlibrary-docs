@@ -6,10 +6,10 @@ If a translator has translated and created a translation page (for example: `sub
 
 1. Create the .en version of the page: https://openlibrary.org/librarians.en.yml?m=edit
     - Copy the contents of the un-suffixed page ( https://openlibrary.org/librarians.yml?m=edit ) over
-    - update the `key` field to have the `.en` suffix
+    - Update the `key` field to have the `.en` suffix
 3. Edit the un-suffixed page (https://openlibrary.org/librarians.yml?m=edit)
-    - remove its `body`
-    - change its `type` to `/type/i18n_page`
+    - Remove its `body`
+    - Change its `type` to `/type/i18n_page`
 4. Test:
     - https://openlibrary.org/librarians shows English (or whatever your locale is) text
     - https://openlibrary.org/librarians?lang=es Shows Spanish text
