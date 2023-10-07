@@ -1,12 +1,11 @@
+# Internationalization (i18n) Page Conversion Guide
 Internationalization (i18n) pages are specialized pages within the Infogami platform that enable users to contribute translations. This guide outlines the process of converting a standard page into an i18n page, using the example of converting https://openlibrary.org/librarians to its English (`en`) i18n version.
 
-Overview
---------
+## Overview
 
 I18n pages allow for the translation of content to various languages, enabling users to access localized versions of a webpage based on their locale preferences. For instance, when a user accesses https://openlibrary.org/subjects , they are redirected to https://openlibrary.org/subjects.en or https://openlibrary.org/subjects.es, depending on their selected language.
 
-Converting a Page to an I18n Page
----------------------------------
+## Converting a Page to an I18n Page
 
 Follow these steps to convert a standard page into an i18n page. In this example, we'll use https://openlibrary.org/librarians as the source page to be converted into its English (`en`) i18n version.
 
