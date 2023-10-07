@@ -89,6 +89,4 @@ We always have someone who is the current "bug triage" owner. They are on the ho
 
 ## Closing Issues
 
-Closing issues is the most important "maintenance" to be done on the issues list.  When you close an issue, use one of the managed labels (e.g. "Close: Not reproducible") to mark the reason.
-
----
+Closing issues is the most important "maintenance" to be done on the issues list.
