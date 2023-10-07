@@ -6,8 +6,9 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 
 ## Top Level Documents
 
-* [Program Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3)
-* [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/edit#heading=h.am6gd9f6wryr)
+* [Program Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)
+* [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)
+* [Where to look for Documents](https://github.com/internetarchive/openlibrary/wiki/Documentation)
 
 ## Team Pages
 
