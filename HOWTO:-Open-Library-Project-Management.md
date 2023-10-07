@@ -1,6 +1,6 @@
 [A 2022 Video of why we plan and how](https://archive.org/details/mek-open-library-planning)
 
-## Overview of Meetings
+# Overview of Meetings
 
 ## Weekly Calls
 
