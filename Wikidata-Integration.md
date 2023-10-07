@@ -33,6 +33,10 @@ V0, which is in progress via [#8236](https://github.com/internetarchive/openlibr
   * Photos/info about awards
 * Import places associated with works/editions
 
+## Misc
+* Detect identifiers (Author/Work/Edition) from URL pasted to ID text field based on [URL Match Pattern](https://www.wikidata.org/wiki/Property:P8966)
+  * Author Identifiers would be a good first candidate since it's already written in Vue
+
 
 # FAQs
 **What is Wikidata?**
