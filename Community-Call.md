@@ -47,6 +47,24 @@ A member of the community will take on each of these roles, which are rotated re
 - Facilitator: Guides the flow of the call.
 - Notetaker: Records the meeting minutes.
 
+## Community Call Norms
+
+We want everyone to feel comfortable and included during our Community Calls. Here are a few norms we follow to make that happen:
+
+- You don't have to have your camera on, but we'd love to see your smiling face if you're comfortable with it!
+- Please keep yourself muted when you're not talking to minimize background noise.
+- You may speak up during the meeting. We also encourage the use of [raised hands](https://support.zoom.us/hc/en-us/articles/205566129-Raising-your-hand-in-webinars-and-meetings) and [emoji reactions](https://support.zoom.us/hc/en-us/articles/115001286183-Using-non-verbal-feedback-and-meeting-reactions-). However, be mindful that if someone is sharing their screen they may not be able to see it.
+
+We hope these norms help create a welcoming and productive environment for everyone. Thank you for being a part of our community!
+
+## Recording Policy
+
+We generally do not record our Community Calls. However, if we want to record something like a demo, we will give you a heads up beforehand.
+
+## Accessibility
+
+We use Zoom's automated captions (live transcription) for our community calls. You can read more about it in [Zoom's documentation](https://support.zoom.us/hc/en-us/articles/4403492514829-Viewing-captions-in-a-meeting-or-webinar). If you have any trouble with it, please let us know.
+
 ## FAQs
 
 ### What if I can't attend a call?
