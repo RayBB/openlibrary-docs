@@ -22,10 +22,10 @@ Here are the main pages for each team that works on Open Library. Have a questio
 
 ## How we Communicate
 
-1. **[Github Issues](https://github.com/internetarchive/openlibrary/issues)** - We try to respond to issues within 24h!
-2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - Public, anyone can join and ask questions!
-3. **[Weekly Community Call](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)** - Everyone is welcome to join our [Weekly Community call @ Tuesday 9:00am PT](https://zoom.us/j/369477551).
-4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - For active contributors, we have a by-invite slack channel
+1. **[Github Issues](https://github.com/internetarchive/openlibrary/issues)** - We try to respond to issues within 24h
+2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - Public, anyone can join and ask questions
+3. **[Weekly Community Call](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)** - Everyone is welcome to join our [Weekly Community call @ Tuesday 9:00am PT](https://zoom.us/j/369477551)
+4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - For active contributors, we have a by-invite Slack channel
 
 # APIs & Client Libraries
 
