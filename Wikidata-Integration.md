@@ -34,7 +34,7 @@ V0, which is in progress via [#8236](https://github.com/internetarchive/openlibr
 * Import places associated with works/editions
 
 ## Misc
-* Detect identifiers (Author/Work/Edition) from URL pasted to ID text field based on [URL Match Pattern](https://www.wikidata.org/wiki/Property:P8966)
+* Detect identifiers (Author/Work/Edition) from URL pasted to ID text field based on [URL Match Pattern](https://www.wikidata.org/wiki/Property:P8966) - [#866](https://github.com/internetarchive/openlibrary/issues/866)
   * Author Identifiers would be a good first candidate since it's already written in Vue
 
 
