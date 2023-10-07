@@ -97,7 +97,10 @@ For example:
 
 Note: You likely should implement `compute_record_quality` in another file.
 
-#### 3. Reindex Data
+#### 3. Generate Types
+`PYTHONPATH=$(PWD) python3 openlibrary/solr/types_generator.py` - run this and copy the output to `solr_types.py` to add the new field.
+
+#### 4. Reindex Data
 Once you have made the code changes, perform a full reindex to incorporate the new field.
 
 #### Additional Considerations
