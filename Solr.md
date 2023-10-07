@@ -71,6 +71,7 @@ docker compose up -d
 
 # Stop solr and remove its container and data
 docker compose stop solr solr-updater
+docker container rm openlibrary-solr-1 openlibrary-solr-updater-1
 docker volume rm openlibrary_solr-data openlibrary_solr-updater-data
 
 # Bring solr back up, and also run a full reindex -- now with your changes in place
