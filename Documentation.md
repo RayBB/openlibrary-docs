@@ -1,8 +1,10 @@
-@RayBB is the documentation lead.
+## Open Library Documentation Guide
 
-Searching for something?
+### Documentation Lead: @RayBB
 
-Here's your guide to finding it.
+Welcome to the Open Library documentation guide. Whether you're searching for information related to Solr or wondering where to contribute new content, this document provides a comprehensive overview of our documentation sources and guidelines.
+
+#### Search for Solr Documentation
 
 Our documentation is scattered but generally if you want to search for something like "solr" there are few places:
 - Open Library GitHub Repo (checked in files)
@@ -21,7 +23,8 @@ Our documentation is scattered but generally if you want to search for something
 - blog.openlibrary.org - for announcements and such, [example](https://www.google.com/search?q=solr+site%253Ablog.openlibrary.org)
 - Some things may be buried in Internet Archive videos, which, I'm not sure how to search
 
-Where should I put new stuff?
+#### Where to Contribute New Content
+
 - Is it closely related to code? In the repo
 - Is it focused on readers of Open Library? openlibrary.org
 - Is it related to onboarding, how things work, etc? Put it in the GitHub Wiki
