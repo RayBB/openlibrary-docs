@@ -4,9 +4,12 @@
 
 Welcome to the Open Library documentation guide. Whether you're searching for information related to Solr or wondering where to contribute new content, this document provides a comprehensive overview of our documentation sources and guidelines.
 
-#### Search for Solr Documentation
+#### Search for Documentation
 
-Our documentation is scattered but generally if you want to search for something like "solr" there are few places:
+When looking for information within Open Library's documentation, you have several options.
+
+Lets look at some example to search for "solr":
+
 - Open Library GitHub Repo (checked in files)
   - Full text search in your IDE or use [GitHub UI](https://github.com/search?q=solr+repo%3Ainternetarchive%2Fopenlibrary&type=code)
   - Can filter for `*.md` files
