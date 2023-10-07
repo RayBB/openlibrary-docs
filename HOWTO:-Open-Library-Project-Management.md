@@ -2,10 +2,10 @@
 
 ## Overview of Meetings
 
-The Open Library team has several weekly calls:
+## Weekly Calls
 
-- The internal ABC (Archive Book Catalog) Team call (1h, Monday @ 12pm PT) [2021](https://docs.google.com/document/d/146GDpF6RjTIYFksve8ic4og0xZVauSVHXQERxpLZtPI/edit)
-- The public Open Library Community Call (1h, Tuesday @ 10am PT) [2021](https://tinyurl.com/openlibrary-call-2021), [2020](https://tinyurl.com/openlibrary-call-2020), [more](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)
+- The internal staff ABC (Archive Book Catalog) Team call (1h, Monday @ 12pm PT) [2021](https://docs.google.com/document/d/146GDpF6RjTIYFksve8ic4og0xZVauSVHXQERxpLZtPI/)
+- The public Open Library [Community Call](https://github.com/internetarchive/openlibrary/wiki/Community-Call)
 - M/W engineering standups at 11am (20min)
 - Weekly 1:1's (45min)
 
@@ -25,10 +25,6 @@ Each week (presently on Monday [2021]) the internal team has an ABC (Archive Boo
 ## Quarterly Review
 
 Every three months (before the end of the quarter) we use our ABC weekly staff meeting to review our yearly planning document. This includes evaluating our progress, blockers or circumstances which may merit a change of prioritization, and communication of changes to stakeholders.
-
-## Weekly Planning
-
-The [staff ABC call](https://docs.google.com/document/d/146GDpF6RjTIYFksve8ic4og0xZVauSVHXQERxpLZtPI/edit#heading=h.7n8f6liomx2q), the [Open Library Community Call](https://www.google.com/url?q=https://tinyurl.com/openlibrary-call-2021&sa=D&source=editors&ust=1631148982172000&usg=AOvVaw2lUBYeP96ottteiWjBQLnc), Internet Archive Product Team engineering standups, and 1:1s collectively constitute our weekly planning.
 
 ## Project-based Planning
 

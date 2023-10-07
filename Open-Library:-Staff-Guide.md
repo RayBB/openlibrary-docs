@@ -38,7 +38,7 @@ Most communication occurs on slack. The Open Library team is a branch of the **P
 
 As explained in our [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) guide, Open Library **staff** meets at the beginning of the week to get in sync. We have a [template](https://docs.google.com/document/d/1sjcXxqLvchsf7v1B190q1YoJx3fDuikemUBp_aHG7Ls/edit) for how to run our meeting and the call leader tends to rotate. A new document is created for each year and the old one is added to the [Main Program Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3).  
 
-On Tuesdays we have a public [Open Library community call](https://docs.google.com/document/d/1joLJzuY3YM1g6nZZSaqqM35DC_CVLbiOG9vhj21UKmw/edit). It follows similar principles to the ABC staff call, the call similarly rotates call leaders and notetakers, and the notes document similarly gets rotated yearly.
+On Tuesdays we have a public Open Library [community call](https://github.com/internetarchive/openlibrary/wiki/Community-Call). It follows similar principles to the ABC staff call, the call similarly rotates call leaders and notetakers, and the notes document similarly gets rotated yearly.
 
 On Fridays, there is an Open Library design call which takes place in the [same document](https://docs.google.com/document/d/1joLJzuY3YM1g6nZZSaqqM35DC_CVLbiOG9vhj21UKmw/edit) as the community call, in the interest of keeping things in one place and searchable. In the future, it could be good if design had its own document
 

@@ -87,4 +87,4 @@ If you're new to our community, don't forget to fill out the [volunteer form](ht
 ## Additional Links
 
 - [Open Library Index of Important Document](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit)
-- [Past Open Library Community Call Minutes](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)
+- [All Past Open Library Community Call Notes Minutes](https://github.com/internetarchive/openlibrary/wiki/Open-Library-Community-Call-Minutes)
