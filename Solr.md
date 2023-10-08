@@ -6,6 +6,10 @@
 
 Proper operation of the Open Library Solr instance requires that it be updated when authors, works, and editions are edited or the search index will not correctly reflect the underlying database.
 
+### Resources
+* [Apache Solr Subject on Open Library](https://openlibrary.org/subjects/apache_solr)
+* [Awesome Solr GitHub Resources](https://github.com/Anant/awesome-solr)
+
 ### Solr updater script
 The [scripts/solr_updater.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/solr_updater.py) file listens for edits from infogami, and updates the solr index accordingly.
 
