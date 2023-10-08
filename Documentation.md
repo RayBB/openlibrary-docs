@@ -18,6 +18,7 @@ Lets look at some example to search for "solr":
 - OpenLibrary GitHub Wiki, [example](https://github.com/search?q=repo%3Ainternetarchive%2Fopenlibrary+solr&type=wikis)
   - You can also clone this repo for local search:
     - `git clone https://github.com/internetarchive/openlibrary.wiki.git`
+  - Unfortunately, since this wiki is publicly editable it is no indexed by search engines. See more [here](https://github.com/orgs/community/discussions/4992#discussioncomment-3563126).
 - Internet Archive's GitHub org (spanning repos), [example](https://github.com/search?q=org%3Ainternetarchive%20solr&type=code) similar to above including:
   - [open-library-client](https://github.com/internetarchive/openlibrary-client), [openlibrary-bots](https://github.com/internetarchive/openlibrary-bots), [openlibrary-librarians](https://github.com/internetarchive/openlibrary-librarians)
 - Google Docs (especially [Community Call](https://github.com/internetarchive/openlibrary/wiki/Community-Call) notes)
