@@ -7,16 +7,6 @@
 
 ---
 
-**How to Participate**  
-[Join our Weekly Community Calls](Community-Call)  
-[Apply to volunteer](https://openlibrary.org/volunteer)  
-[Apply for Google Summer of Code](Google-Summer-of-Code)  
-[Apply for Fellowship](Fellowships) 
-[Participate in Hacktoberfest (October)](Hacktoberfest)  
-
-**Legacy**  
-[Old Getting Started](Getting-Started)  
-
 **Developer Resources**   
 1. [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 2. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
@@ -26,15 +16,25 @@
 6. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 7. [Solr Search Manual](Solr)  
 
-**Common Tasks**
-[Logging in Locally](Getting-Started#logging-in)  
-[Importing Production Book Data Locally](Loading-Production-Book-Data)  
+**How to Participate**  
+[Join our Weekly Community Calls](Community-Call)  
+[Apply to volunteer](https://openlibrary.org/volunteer)  
+[Apply for Google Summer of Code](Google-Summer-of-Code)  
+[Apply for Fellowship](Fellowships) 
+[Participate in Hacktoberfest (October)](Hacktoberfest)  
 
 **Developer Tutorials**  
 [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
 [Adding fields to Solr search engine](https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4)  
 [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
+
+**Common Tasks**
+[Logging in Locally](Getting-Started#logging-in)  
+[Importing Production Book Data Locally](Loading-Production-Book-Data)  
+
+**Legacy**  
+[Old Getting Started](Getting-Started) 
 
 ---
 
