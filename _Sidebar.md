@@ -7,7 +7,7 @@
 
 ---
 
-**How to Participate**
+**How to Participate**. 
 [Join our Weekly Community Calls](Community-Call)  
 [Apply to volunteer](https://openlibrary.org/volunteer)  
 [Apply for Google Summer of Code](Google-Summer-of-Code)  
