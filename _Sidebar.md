@@ -19,6 +19,7 @@
 
 **Developer Resources**   
 [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
+[Recipe Books](Recipes)  
 [Testing Your Code](Testing)   
 [Enabling Debugging](Debugging)  
 [Using Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
