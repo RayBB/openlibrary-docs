@@ -23,10 +23,6 @@
 [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 
-**Common Tasks**  
-[Logging in Locally](Getting-Started#logging-in)  
-[Importing Production Book Data Locally](Loading-Production-Book-Data)  
-
 **Legacy**  
 [Old Getting Started](Getting-Started) 
 
