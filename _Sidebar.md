@@ -10,12 +10,12 @@
 7. [Solr Search Manual](Solr)  
 
 **Ways to Participate**  
-[Ask Questions](https://gitter.im/theopenlibrary/Lobby)  
-[Join our Weekly Community Calls](Community-Call)  
-[Apply to volunteer](https://openlibrary.org/volunteer)  
-[Apply for Google Summer of Code](Google-Summer-of-Code)  
-[Apply for Fellowship](Fellowships) 
-[Participate in Hacktoberfest (October)](Hacktoberfest)  
+* [Ask Questions](https://gitter.im/theopenlibrary/Lobby)  
+* [Join our Weekly Community Calls](Community-Call)  
+* [Apply to volunteer](https://openlibrary.org/volunteer)  
+* [Apply for Google Summer of Code](Google-Summer-of-Code)  
+* [Apply for Fellowship](Fellowships) 
+* [Participate in Hacktoberfest (October)](Hacktoberfest)  
 
 **Developer Tutorials**  
 [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
