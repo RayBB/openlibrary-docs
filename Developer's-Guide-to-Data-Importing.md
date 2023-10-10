@@ -315,3 +315,29 @@ See code: https://github.com/internetarchive/openlibrary/blob/master/openlibrary
 * There is a thing called the ImportBot daemon. It runs 24/7 checking the ImportQueue for new batches of ~1,000 records. These batches can include ia or any number of partner records.
 * There's also a cron job (i.e. a timed linux job) which runs IA Imports once a day. This cron job calls the code above (i.e. get_candidate_ocaids) to fetch archive.org IDs (i.e. ocaids) and submits them to the ImportQueueto be processed by [1]
 
+## Overview of Known Data Sources
+
+*Penguin Books*
+https://developer.penguinrandomhouse.com/docs/read/enhanced_prh_api
+
+*Google Books*
+https://developers.google.com/books/docs/v1/getting_started
+
+*OCLC Worldcat Book Lookup*
+https://platform.worldcat.org/api-explorer/apis/Classify/ClassificationResource/Search
+
+*Simon and Schuster*
+http://www.simonandschuster.biz/c/biz-seasonal-catalogs
+https://catalog.simonandschuster.com/?cid=16322
+
+*Library of Congress*
+25M MARCs
+https://www.loc.gov/cds/products/MDSConnect-books_all.html
+
+*Hathi Trust*
+16.8M volumes, 8M book titles, 38% public domain
+https://www.hathitrust.org/bib_api
+
+*Wikidata*
+lookup any identifier (author, subject, language,...) and find other identifiers for the same entity
+https://www.wikidata.org/
