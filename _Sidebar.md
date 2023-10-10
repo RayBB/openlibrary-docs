@@ -1,6 +1,6 @@
 **[Wiki Home](Home)**  
 
-[Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)   
+[Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)   
 [Ask Questions](https://gitter.im/theopenlibrary/Lobby)  
 
 ---
