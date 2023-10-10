@@ -8,7 +8,7 @@
 3. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 4. [Feature Flagging](Feature-Flagging)  
 5. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
-6. [Solr Search Manual](Solr)  
+6. [Solr Search Engine Manual](Solr)  
 
 **Developer Walkthroughs**  
 * [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
