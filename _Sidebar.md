@@ -18,7 +18,7 @@
 
 ---
 
-**[Design Resources](Design)**  
+**[Design Resources](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit#heading=h.b20z3avugr8c)**  
 [Design & Ecosystem Diagram](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)  
 [Logos](https://drive.google.com/file/d/1GlUpiaobyL6dbxu8Ok_i_R87aalpzH_z/view)  
 [Wireframes](Design)  
