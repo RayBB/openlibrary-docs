@@ -35,20 +35,17 @@
 
 ---
 
-**Internationalization (i18n)**  
-[Contributing Translations](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
-[Making HTML Translatable](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-programmers)  
-[i18n Pages](https://github.com/internetarchive/openlibrary/wiki/i18n-Pages)  
-
-
----
-
 **[Librarian Resources](https://openlibrary.org/about/lib)**  
 [Creating Community Lists](Creating-Community-Lists)  
 [Library Metadata Standards](Library-Metadata-Standards)  
 [Guide to Identifiers](Guide-to-Identifiers)  
 [Merging Records](https://openlibrary.org/about/lib)  
 [Orphaned Editions Planning](Orphaned-Editions-Planning)  
+
+**Internationalization (i18n)**  
+[Contributing Translations](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
+[Making HTML Translatable](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-programmers)  
+[i18n Pages](https://github.com/internetarchive/openlibrary/wiki/i18n-Pages)  
 
 **Imports**  
 [Importing Book Records](Developer's-Guide-to-Data-Importing)  
