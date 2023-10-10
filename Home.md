@@ -10,13 +10,6 @@ Open Library (https://openlibrary.org) is a non-profit, open source, digital pub
 * If you'd like an invite to join our community, indicate your interest using [this form](https://openlibrary.org/volunteer)
 * If you'd like to attend our weekly community calls, they're [Tuesdays @ 9am PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call) 
 
-## How we Communicate
-
-1. **[Github Issues](https://github.com/internetarchive/openlibrary/issues)** - We try to respond to issues within 24h
-2. **[Gitter](https://gitter.im/theopenlibrary/Lobby)** - Public, anyone can join and ask questions
-3. **[Weekly Community Call](https://github.com/internetarchive/openlibrary/wiki/Community-Call)** - Everyone is welcome to join!
-4. **[Slack](https://github.com/internetarchive/openlibrary/issues/686)** - For active contributors, we have a by-invite Slack channel
-
 ## Getting Started
 
 The best way to begin is to follow Open Library's [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) for developers. This guide explains [how to set up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers), [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet), and how to [find good first issues](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22) to work on.  
