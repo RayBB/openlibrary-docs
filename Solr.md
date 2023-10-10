@@ -6,6 +6,9 @@
 
 Proper operation of the Open Library Solr instance requires that it be updated when authors, works, and editions are edited or the search index will not correctly reflect the underlying database.
 
+If you're looking to re-index solr, go here:
+https://github.com/internetarchive/openlibrary/tree/master/scripts/solr_builder#solr-reindex-from-ol-dump
+
 ### Resources
 * [Apache Solr Subject on Open Library](https://openlibrary.org/subjects/apache_solr)
 * [Awesome Solr GitHub Resources](https://github.com/Anant/awesome-solr)
