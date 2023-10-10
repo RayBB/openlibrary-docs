@@ -13,6 +13,7 @@ Your main entry point into the project is the [Main Program Index](https://docs.
 | [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) | Describes our various meetings, when and how we do planning, and how we use tools/platforms like github. | 
 | [Search Engine Re-indexing](https://github.com/internetarchive/openlibrary/wiki/Solr) | We presently manually kick off ~monthly solr re-indexes and alternate between two blue-green servers to ensure uptime as we rebuild. @cdrini is the domain expert. I believe we may still benefit from a [tutorial doc, see #8390](https://github.com/internetarchive/openlibrary/issues/8390) |
 | [Cover Archival](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/coverstore/README.md) | This process is not yet hands-free. There is a [recipe](https://github.com/internetarchive/openlibrary/issues/8278#issue-1888611543) for how we can run this in the meantime. |
+| [Coordinating Volunteers](https://docs.google.com/forms/u/1/d/1wyyE3eVpMIN6QG2CMMAbmoeGcHKB8Q7HmZKFb9sg5Ow/edit) | We have a [volunteer form](https://openlibrary.org/volunteer) where contributors submit requests to collaborate. |
 
 ## Error Reporting & Analytics
 
