@@ -17,9 +17,9 @@
 * [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 
 **Imports**  
-[Importing Book Records](Developer's-Guide-to-Data-Importing)  
-[Overview of Data Sources](Data-Source-Overview)  
-[Writing Bots](Writing-Bots) 
+* [Importing Book Records](Developer's-Guide-to-Data-Importing)  
+* [Overview of Data Sources](Data-Source-Overview)  
+* [Writing Bots](Writing-Bots) 
 
 ---
 
