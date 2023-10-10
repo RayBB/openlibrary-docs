@@ -18,15 +18,13 @@
 [Old Getting Started](Getting-Started)  
 
 **Developer Resources**   
-[Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
-[Recipe Books](Recipes)  
-[Testing Your Code](Testing)   
-[Enabling Debugging](Debugging)  
-[Using Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
-[Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
-[Enabling Features](Feature-Flagging)  
-[Understanding The Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
-[Infogami](https://openlibrary.org/dev/docs/infogami)  
+1. [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
+2. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
+3. [Testing Your Code](Testing) & [Enabling Debugging](Debugging)  
+4. [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
+5. [Feature Flagging](Feature-Flagging)  
+6. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
+7. [Solr Search Manual](Solr)  
 
 **Common Tasks**
 [Logging in Locally](Getting-Started#logging-in)  
@@ -78,7 +76,6 @@
 **[Staff](https://github.com/internetarchive/openlibrary/wiki/Open-Library:-Staff-Guide): Administration, Systems & Dev-ops**  
 [Deployment Guide](Deployment-Guide)  
 [Production Architecture, Provisioning, & Upgrades](Production-Service-Architecture)  
-[Solr Search Manual](Solr)  
 [Cron Jobs](Cron-Jobs)  
 [Generating Data Dumps](Generating-Data-Dumps)  
 [Generating Sitemaps](Sitemap-Generation)  
@@ -89,8 +86,6 @@
 [HOWTO: Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)  
 [Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
 [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
-
----
 
 **Leads Corner**  
 [Lead: Community Librarian](https://github.com/internetarchive/openlibrary/wiki/Lead:-Community-Librarian)  
