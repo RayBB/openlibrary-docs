@@ -1,19 +1,16 @@
 **[Wiki Home](Home)**  
 
-[Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)   
-[Ask Questions](https://gitter.im/theopenlibrary/Lobby)  
-
----
-
 **Developer Resources**   
-1. [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
-2. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
-3. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
+1. [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
+2. [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
+3. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
+4. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 5. [Feature Flagging](Feature-Flagging)  
 6. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 7. [Solr Search Manual](Solr)  
 
-**How to Participate**  
+**Ways to Participate**  
+[Ask Questions](https://gitter.im/theopenlibrary/Lobby)  
 [Join our Weekly Community Calls](Community-Call)  
 [Apply to volunteer](https://openlibrary.org/volunteer)  
 [Apply for Google Summer of Code](Google-Summer-of-Code)  
