@@ -1,4 +1,4 @@
-**[Wiki Home](Home)**  
+**[← Back Home](Home)**  
 
 **Developer Resources**  
 1. [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
