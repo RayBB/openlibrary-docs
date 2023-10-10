@@ -1,7 +1,8 @@
-This portal contains resources for software developers who have completed Open Library's [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) which explains how to:
-* [set up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers), [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)
-* [find good first issues](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22) and
-* [submit good pull requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests).
+This portal contains resources for software developers who have completed Open Library's [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) which explains how we:
+* [Set up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)
+* [Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)
+* [Find good first issues](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22) and
+* [Submit good pull requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests).
 
 ## Getting Involved
 
