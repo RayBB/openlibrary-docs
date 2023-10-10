@@ -4,7 +4,7 @@
 
 **Developer Resources**  
 1. [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
-2. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
+2. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) & [i18n](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-programmers)  
 3. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 4. [Feature Flagging](Feature-Flagging)  
 5. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
@@ -16,31 +16,18 @@
 * [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 * [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 
----
-
-**[Design Resources](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit#heading=h.b20z3avugr8c)**  
-[Design & Ecosystem Diagram](https://docs.google.com/document/d/1RUsUnIJM78gTr5ycewUJNwYHERBQdg_Tv-X-OZpwtRY)  
-[Logos](https://drive.google.com/file/d/1GlUpiaobyL6dbxu8Ok_i_R87aalpzH_z/view)  
-[Wireframes](Design)  
-
----
-
-**[Librarian Resources](https://openlibrary.org/about/lib)**  
-[Creating Community Lists](Creating-Community-Lists)  
-[Library Metadata Standards](Library-Metadata-Standards)  
-[Guide to Identifiers](Guide-to-Identifiers)  
-[Merging Records](https://openlibrary.org/about/lib)  
-[Orphaned Editions Planning](Orphaned-Editions-Planning)  
-
-**Internationalization (i18n)**  
-[Contributing Translations](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)  
-[Making HTML Translatable](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-programmers)  
-[i18n Pages](https://github.com/internetarchive/openlibrary/wiki/i18n-Pages)  
-
 **Imports**  
 [Importing Book Records](Developer's-Guide-to-Data-Importing)  
 [Overview of Data Sources](Data-Source-Overview)  
-[Writing Bots](Writing-Bots)  
+[Writing Bots](Writing-Bots) 
+
+---
+
+**Other Portals**
+* [Design](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit#heading=h.b20z3avugr8c)  
+* [Librarianship](https://openlibrary.org/librarians)
+* [Internationalization (i18n)](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)
+* [Communications](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#heading=h.d4bcs4fzim9e)   
 
 ---
 
