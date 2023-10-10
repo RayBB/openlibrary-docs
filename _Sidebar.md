@@ -1,5 +1,4 @@
 **[← Back Home](Home)**  
-[Help & Support](https://gitter.im/theopenlibrary/Lobby)  
 
 **Developer Resources**  
 1. [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
@@ -8,6 +7,8 @@
 4. [Feature Flagging](Feature-Flagging)  
 5. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 6. [Solr Search Manual](Solr)  
+
+[Need Help & Support?](https://gitter.im/theopenlibrary/Lobby)  
 
 **Developer Tutorials**  
 [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
