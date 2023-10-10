@@ -1,15 +1,18 @@
 Welcome to the Front-End Guide for Open Library, a primer for making front-end changes to the openlibrary.org website.
 
+
+- [Design Pattern Library](Design-Pattern-Library) (outdated)  
 - [File Organization Overview](#File-Organization-Overview)
 - [CSS, JS, & HTML](#css-js-and-html)
   - [Building CSS & JS](#building-css-and-js)
   - [Working with CSS](#working-with-css)
   - [Working with Javascript](#working-with-javascript)
   - [Working with HTML Templates](#working-with-html)
-- [HOWTO: Routing & Templates](#routing-and-templates)
-- [HOWTO: URL Routing](#url-routing)
-- [HOWTO: The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
-- [HOWTO: Infogami Types](#infogami-types)
+- [Overview of HTTP Endpoints](Endpoints)  
+- [Routing & Templates](#routing-and-templates)
+- [URL Routing](#url-routing)
+- [The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
+- [Infogami Types](#infogami-types)
 
 ## File Organization Overview
 
