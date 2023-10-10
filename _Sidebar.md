@@ -2,13 +2,12 @@
 
 **Developer Resources**  
 1. [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
-2. [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
-3. [Ask a Question](https://gitter.im/theopenlibrary/Lobby), [join community](https://openlibrary.org/volunteer), [explore opportunities](https://openlibrary.org/volunteer#opportunities)  
-4. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
-5. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
-6. [Feature Flagging](Feature-Flagging)  
-7. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
-8. [Solr Search Manual](Solr)  
+2. [Help & Support](https://gitter.im/theopenlibrary/Lobby)
+3. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
+4. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
+5. [Feature Flagging](Feature-Flagging)  
+6. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
+7. [Solr Search Manual](Solr)  
 
 **Developer Tutorials**  
 [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
