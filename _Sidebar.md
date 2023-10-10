@@ -23,9 +23,6 @@
 [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 
-**Legacy**  
-[Old Getting Started](Getting-Started) 
-
 ---
 
 **[Design Resources](Design)**  
@@ -84,3 +81,6 @@
 [Orphaned Editions Planning](Orphaned-Editions-Planning)  
 [Canonical Books Page](Canonical-Books-Page)  
 [IA↔OL ID Sync](archive.org-↔-Open-Library-synchronisation)  
+
+**Legacy**  
+[Old Getting Started](Getting-Started)  
