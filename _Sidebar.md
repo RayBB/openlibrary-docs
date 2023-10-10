@@ -63,6 +63,7 @@
 [HOWTO: Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)  
 [Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
 [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
+[Code Reviewer Guidelines](https://github.com/internetarchive/openlibrary/wiki/Code-Reviewer-Guidelines)
 
 **Leads Corner**  
 [Lead: Community Librarian](https://github.com/internetarchive/openlibrary/wiki/Lead:-Community-Librarian)  
