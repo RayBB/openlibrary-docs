@@ -1,6 +1,6 @@
 **[Wiki Home](Home)**  
 
-**Developer Resources**   
+**Developer Resources**  
 1. [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
 2. [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 3. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
