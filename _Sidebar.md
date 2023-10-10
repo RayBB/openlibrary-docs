@@ -1,42 +1,34 @@
-**[Home](Home)**
----
-[Ask Question on Gitter](https://gitter.im/theopenlibrary/Lobby)  
-[Weekly Community Calls](Community-Call)  
-[Request Slack Invite](https://openlibrary.org/volunteer)  
-[Google Summer of Code](Google-Summer-of-Code)  
-[Hacktoberfest (October)](Hacktoberfest)  
-[Fellowship Program](Fellowships)  
-
+[Wiki Home](Home)  
+[Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)   
+[Ask Questions](https://gitter.im/theopenlibrary/Lobby)  
 
 ---
 
-**Project Management**  
-[Yearly Roadmaps](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3)  
-[HOWTO: Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)  
-[Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
-[GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
+**How to Participate**
 
-**Developer Resources**  
-[Getting Started](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
-[Running a Developer Environment](Getting-Started)  
+[Join our Weekly Community Calls](Community-Call)  
+[Apply to volunteer](https://openlibrary.org/volunteer)  
+[Apply for Google Summer of Code](Google-Summer-of-Code)  
+[Apply for Fellowship](Fellowships) 
+[Participate in Hacktoberfest (October)](Hacktoberfest)  
+
+**Legacy**
+[Old Getting Started](Getting-Started)  
+
+**Developer Resources**   
+
+[Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
+[Testing Your Code](Testing)   
+[Enabling Debugging](Debugging)  
+[Using Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
+[Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
+[Enabling Features](Feature-Flagging)  
+[Understanding The Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
+[Infogami](https://openlibrary.org/dev/docs/infogami)  
+
+**Common Tasks**
 [Logging in Locally](Getting-Started#logging-in)  
 [Importing Production Book Data Locally](Loading-Production-Book-Data)  
-[Enabling Debugging](Debugging)  
-[Testing Your Code](Testing)  
-[How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
-[Other Frequent Developer Tasks](Getting-Started)  
-
-**Front-End**  
-[Front-end Guide](Frontend-Guide)  
-[Building JS & CSS](Frontend-Guide#building-css-and-js)  
-[Routing & Templates](Frontend-Guide#routing-and-templates)  
-[Design Pattern Library](Design-Pattern-Library)  
-[Overview of HTTP Endpoints](Endpoints)  
-
-**Back-End**  
-[Enabling Features](Feature-Flagging)  
-[Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
-[Understanding The Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 
 **Developer Tutorials**  
 [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
@@ -89,6 +81,12 @@
 [Generating Data Dumps](Generating-Data-Dumps)  
 [Generating Sitemaps](Sitemap-Generation)  
 [Testing & Staging environments](Testing-&-Staging-environments)
+
+**Project Management**  
+[Yearly Roadmaps](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3)  
+[HOWTO: Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)  
+[Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues)  
+[GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues)  
 
 ---
 
