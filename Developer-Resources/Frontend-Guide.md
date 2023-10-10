@@ -1,7 +1,5 @@
 Welcome to the Front-End Guide for Open Library, a primer for making front-end changes to the openlibrary.org website.
-
-
-- [Design Pattern Library](Design-Pattern-Library) (outdated)  
+ 
 - [File Organization Overview](#File-Organization-Overview)
 - [CSS, JS, & HTML](#css-js-and-html)
   - [Building CSS & JS](#building-css-and-js)
@@ -13,6 +11,7 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 - [URL Routing](#url-routing)
 - [The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
 - [Infogami Types](#infogami-types)
+- [Design Pattern Library](Design-Pattern-Library) (outdated) 
 
 ## File Organization Overview
 
