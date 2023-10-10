@@ -10,8 +10,7 @@
 **Developer Resources**   
 1. [How We Use Git: Cheat Sheet](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 2. [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
-3. [Testing Your Code](Testing) & [Enabling Debugging](Debugging)  
-4. [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
+3. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 5. [Feature Flagging](Feature-Flagging)  
 6. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 7. [Solr Search Manual](Solr)  
