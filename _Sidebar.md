@@ -8,18 +8,16 @@
 ---
 
 **How to Participate**
-
 [Join our Weekly Community Calls](Community-Call)  
 [Apply to volunteer](https://openlibrary.org/volunteer)  
 [Apply for Google Summer of Code](Google-Summer-of-Code)  
 [Apply for Fellowship](Fellowships) 
 [Participate in Hacktoberfest (October)](Hacktoberfest)  
 
-**Legacy**
+**Legacy**  
 [Old Getting Started](Getting-Started)  
 
 **Developer Resources**   
-
 [Front-end Guide: Templates, JS, & CSS](Frontend-Guide)  
 [Testing Your Code](Testing)   
 [Enabling Debugging](Debugging)  
