@@ -1,5 +1,7 @@
 # Post-Mortems
 
+This is a legacy document. In 2022, we migrated our process to use [Postmortem Issues](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22) on github.
+
 ## How-To
 
 When someone goes wrong/unplanned on openlibrary.org, it’s recommended to open a new issue of Type: Post-Mortem (using the issue template -- which should automatically set [Type: Post-Mortem](https://github.com/internetarchive/openlibrary/issues?utf8=%E2%9C%93&q=label%3A%22Type%3A+Post-Mortem%22+) and Priority: 0 and to make sure yourself or someone else is the assignee as the designated notetaker and/or person responsible leading effort.  Please also specify an Affects: label to help others search and/or get up to speed.
