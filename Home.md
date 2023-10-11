@@ -1,4 +1,4 @@
-This portal contains resources for **software developers** who have completed Open Library's [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md) which explains **how** we:
+This portal contains resources for **software developers** who have completed Open Library's [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md), which explains **how** we:
 * [Set up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)
 * [Use `git` in Open Library](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)
 * [Find good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22) and
