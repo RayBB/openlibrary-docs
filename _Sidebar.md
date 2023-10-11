@@ -9,17 +9,14 @@
 4. [Feature Flagging](Feature-Flagging)  
 5. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 6. [Solr Search Engine Manual](Solr)  
+7. [Importing Book Records](Developer's-Guide-to-Data-Importing)  
+8. [Writing Bots](Writing-Bots) 
 
 **Developer Walkthroughs**  
 * [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
 * [Adding fields to Solr search engine](https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4)  
 * [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 * [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
-
-**Imports**  
-* [Importing Book Records](Developer's-Guide-to-Data-Importing)  
-* [Overview of Data Sources](Data-Source-Overview)  
-* [Writing Bots](Writing-Bots) 
 
 ---
 
