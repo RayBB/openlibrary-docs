@@ -146,3 +146,62 @@ docker compose down && PYENV_VERSION=3.8.6 docker compose up -d && docker compos
 For more details see: https://github.com/internetarchive/openlibrary/blob/master/docker/README.md
 
 The remainder of this document will focus on production deployments.
+
+## Testing & Staging PR Deploys
+
+### Handling a conflicting PR
+Sometimes, you will try to put a PR on testing, but it will conflict with another PR there, and be unable to be deployed.
+
+To determine what PR is conflicting, find the block for your PR in the Jenkins dashboard for the PR Deploy:
+
+1. Select the "ol-dev1-deploy (internal)" step
+2. Select the "Build dev-merged" step
+3. Expand the `git checkout` block
+
+![f](https://github.com/internetarchive/openlibrary/wiki/images/Screenshot%202021-09-28%20123145.jpg)
+
+4. Find your PR (`ctrl-f` for the PR number, or for `CONFLICT`)
+
+```
+origin pull/5644/head  
+From https://github.com/internetarchive/openlibrary
+ * branch                refs/pull/5644/head -> FETCH_HEAD
+
+Removing openlibrary/templates/account/borrow.html
+Auto-merging openlibrary/plugins/upstream/code.py
+Auto-merging openlibrary/plugins/upstream/account.py
+CONFLICT (content): Merge conflict in openlibrary/plugins/upstream/account.py
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+4. Note the conflicting file, and `ctrl-f` for it to see which PR it came from.
+5. If it is reasonable to do so, remove the PR from testing and trigger a new PR deploy.
+
+### Removing a PR from `testing.openlibrary.org`
+
+```sh
+ssh -A ol-dev1
+cd /opt/openlibrary
+sudo vim _dev-merged.txt
+# Find your PR by its number, and then remove the line.
+# Then trigger another PR deploy.
+```
+
+### Manually deploying to `testing.openlibrary.org`
+
+```sh
+cd /opt/openlibrary
+
+# add PR number + comment with name
+sudo vim /opt/openlibrary/_dev-merged.txt
+
+# Pull down all branches
+sudo ./scripts/make-integration-branch.sh _dev-merged.txt dev-merged
+
+# restart service
+export COMPOSE_FILE='compose.yaml:compose.infogami-local.yaml:compose.staging.yaml'
+docker compose down
+docker compose up -d web memcached
+
+# Run any build steps that need re-running e.g. make js css, etc.
+```
