@@ -7,13 +7,21 @@ Your main entry point into the project is the [Main Program Index](https://docs.
 | Guide | Description |
 |-------|-------------|
 | [Deploys](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide) | Deploying code to the production website and testing environments |
-| [Emergency Response](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response) & [Postmortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22) | When we encounter an operational problem, our first step is to open a new post-mortem issue and follow the template as a way to take notes and document our process. This helps us systematize diagnostics to arrive at resolution quickly and also results in a searchable archive of problems, troubleshooting guide, and fixes for the future. |
+| [Emergency Response](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response), & [Postmortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22) | When we encounter an operational problem, our first step is to open a new post-mortem issue and follow the template as a way to take notes and document our process. This helps us systematize diagnostics to arrive at resolution quickly and also results in a searchable archive of problems, troubleshooting guide, and fixes for the future. See also our legacy [disaster History Log](Disaster-History-Log). |
 | [Spam](https://github.com/internetarchive/openlibrary/wiki/Anti-Spam-Tools) | Strategies for dealing with spam within a system that anonymizes patron IPs by default. |
 | [Provisioning](https://github.com/internetarchive/openlibrary/wiki/Production-Service-Architecture) | Occasionally, a server will need to be rebuilt or upgraded. This guide explains how to approach the provisioning process and offers notes on the state of our different services. |
-| [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) | Describes our various meetings, when and how we do planning, and how we use tools/platforms like github. | 
 | [Search Engine Re-indexing](https://github.com/internetarchive/openlibrary/wiki/Solr) | We presently manually kick off ~monthly solr re-indexes and alternate between two blue-green servers to ensure uptime as we rebuild. @cdrini is the domain expert. I believe we may still benefit from a [tutorial doc, see #8390](https://github.com/internetarchive/openlibrary/issues/8390) |
 | [Cover Archival](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/coverstore/README.md) | This process is not yet hands-free. There is a [recipe](https://github.com/internetarchive/openlibrary/issues/8278#issue-1888611543) for how we can run this in the meantime. |
 | [Coordinating Volunteers](https://docs.google.com/forms/u/1/d/1wyyE3eVpMIN6QG2CMMAbmoeGcHKB8Q7HmZKFb9sg5Ow/edit) | We have a [volunteer form](https://openlibrary.org/volunteer) where contributors submit requests to collaborate. |
+
+## Project Management
+
+| Guide | Description |
+|-------|-------------|
+| [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) | Describes our various meetings, when and how we do yearly roadmapping and monthly milestone planning, and how we use tools/platforms like github. | 
+| [GitHub Issues](https://github.com/internetarchive/openlibrary/wiki/Interacting-with-GitHub-Issues) & [Managed Labels](https://github.com/internetarchive/openlibrary/wiki/Using-Managed-Labels-to-Track-Issues) | How staff manages issues and labels on Open Library | 
+| [Code Reviewer Guidelines](https://github.com/internetarchive/openlibrary/wiki/Code-Reviewer-Guidelines) | Code Review Guidelines | 
+
 
 ## Error Reporting & Analytics
 
