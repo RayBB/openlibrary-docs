@@ -3,7 +3,7 @@
 [Need Help & Support?](https://gitter.im/theopenlibrary/Lobby)  
 
 **Developer Resources**  
-1. [Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
+1. ⭐ **[Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)** 
 2. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) & [i18n](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-programmers)  
 3. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 4. [Feature Flagging](Feature-Flagging)  
