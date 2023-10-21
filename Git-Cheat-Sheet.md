@@ -1,6 +1,5 @@
-`Git` adds/changes its feature-set regularly, so make sure to keep it up-to-date! These notes were created with `git 2.38`.
+# Table of Contents
 
-Contents:
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
@@ -234,4 +233,3 @@ If the conflicts look too much, and you want to abandon the rebase and go back t
 
 ## References
 - Getting Started flow roughly based on https://gist.github.com/Chaser324/ce0505fbed06b947d962
-- Note: This document replaces the version in the [Open Library Archives](https://openlibrary.org/dev/docs/committing?v=15)
