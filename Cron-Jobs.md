@@ -11,14 +11,8 @@ $ export HOSTNAME=$HOSTNAME;export COMPOSE_FILE="compose.yaml:compose.production
 
 The following will allow the temporary addition, modification, or deletion of cron jobs WITHOUT creating a new cron-jobs container:
 ```bash
-ol-home0% sudo vi /opt/olsystem/etc/cron.d/openlibrary.ol_home0  # Make desired changes
-ol-home0% docker exec -it openlibrary-cron-jobs-1 bash
-root@ol-home0:/openlibrary# service cron status  # --> cron is running.
-root@ol-home0:/openlibrary# crontab -l  # This should be the old cron jobs
-root@ol-home0:/openlibrary# service cron restart  # This might kick you out of the Docker container.
-# If so, log back in...
-ol-home0% docker exec -it openlibrary-cron-jobs-1 bash
-root@ol-home0:/openlibrary# crontab -l  # Make sure that this is the new cron jobs
+$ sudo vim /opt/olsystem/etc/cron.d/openlibrary.ol_home0  # Make desired changes
+$ docker restart openlibrary-cron-jobs-1
 ```
 After testing, please make a pull request on olsystem to make these change permanent.  If this is not done then the old changes will return when a new Docker `cron-jobs` container is run.
 ## Connecting to Cron Docker
