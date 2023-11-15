@@ -108,7 +108,7 @@ See [Storybook instance](http://internetarchive.github.io/openlibrary/?path=/sto
 
 ![screen shot 2018-09-28 at 2 48 08 pm](https://user-images.githubusercontent.com/148752/46235083-8826f800-c32d-11e8-90e8-3bba12ed484d.png)
 
-Extremely similar to the [Book](#book) compoonent.
+Extremely similar to the [Book](#book) component.
 Seen on https://openlibrary.org/subjects/science
 
 Makes use of [buttonCta](#buttonCta)
