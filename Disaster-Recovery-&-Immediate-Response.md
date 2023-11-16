@@ -13,6 +13,10 @@
 
 # Common Issues
 
+* [Handling Abuse & DDOS (Denial of Service Attack)](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
+* [Solr Search Issues]()
+
+
 ## Handling Abuse & DDOS (Denial of Service Attack)
 
 See related outage events: https://github.com/internetarchive/openlibrary/wiki/Disaster-History-Log#2017-11-09-1000pm-pst
