@@ -1,3 +1,5 @@
+This document is quickly becoming deprecated, please instead view the [DDOS section of our Disaster Recovery & First Responder's Guide](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
+
 The following was originally published by Giovanni Damiola @gdamdam via http://gio.blog.archive.org/2016/03/10/ol-anti-spam-tools. Gio writes:
 
 Tools:
