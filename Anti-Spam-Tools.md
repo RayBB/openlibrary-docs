@@ -29,6 +29,41 @@ sudo cat /var/log/nginx/access.log | cut -d ' ' -f 1 | sort | uniq -c  | sort -n
 
 See related outage events: https://github.com/internetarchive/openlibrary/wiki/Disaster-History-Log#2017-11-09-1000pm-pst
 
+In 2023, we hit a case where a set of IPs was rapidly accessing our Books pages on Open Library. We did not have access to Sam's scripts for de-anonymizing IPs to detect abuse. This was the process for resolving the DDOS: https://github.com/internetarchive/openlibrary/issues/8319#issuecomment-1741323936
+
+1. `ssh -A ol-www0`
+2. edit `/opt/openlibrary/docker/nginx.conf` to add `($remote_addr)` to the **end** (must be end) of `log_format` in `nginx.conf` to de-anonymize IPs:
+
+```
+log_format iacombined '$remote_addr_ipscrub $host $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_time IP:$remote_addr';
+```
+
+3. `docker restart openlibrary-web_nginx-1`
+4. Identify high-volume IPs
+
+```
+sudo cat /1/var/log/nginx/access.log | grep "IP:" | awk -F 'IP:' '{print $2}' | sort | uniq -c | sort -rn | head -n 100
+``` 
+
+5. Use your discretion to check any given IP to see whether the pattern looks abusive / spammy -- e.g. Internet Archive makes many requests to /api/books.json and still we don't want to ban it. e.g.
+
+```
+sudo cat /1/var/log/nginx/access.log | grep "IP:XXX.XXX.XXX.XXX"  # check one IP XXX.XXX.XXX.XXX at a time
+sudo cat /1/var/log/nginx/access.log | grep "IP:" | awk -F 'IP:' '{print $2}' | sort | uniq -c | sort -rn | head -n 100 | awk '{print $2}' | sudo xargs -I{} grep {} /1/var/log/nginx/access.log # skim all requests by top 100 requesting IPs
+```
+
+6. Add the `deny` rules for individual abusing IPs to /opt/olsystem/etc/deny.conf or update the rules in `/opt/openlibrary/docker/web_nginx.conf` to deny IPs or user-agents in specific cases. Because `deny.conf` is in olsystem, which is volumed mounted, **and** `/opt/openlibrary` is also volume mounted on `ol-www0`, simply restarting docker after changes are made should apply your changes.
+
+7. Undo temporary IP de-anonymization by removing the trailing `IP:$remote_addr'` segment of `/opt/openlibrary/docker/nginx.conf` in the `log_format` rule:
+
+```
+log_format iacombined '$remote_addr_ipscrub $host $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_time;
+```
+
+8. And then restart everything one last time: `docker restart openlibrary-web_nginx-1`
+
+## Using Sam's Legacy Tools
+ 
 First, ssh over to `ol-www0` (which is the entry point for all traffic) and determine who the bad actor(s) are. Because we anonymize IPs, you'll first have to populate a map of anonymous IPs to IPs we can actually block:
 
 ```
@@ -58,6 +93,3 @@ At this point, see [nginx.conf](https://github.com/internetarchive/openlibrary/b
 
 Or, you can block on a per-IP basis in `/opt/openlibrary/olsystem/etc/nginx/deny.conf`.
 
-## Step-by-step DDOS Case Study
-
-In 2023, we hit a case where a set of IPs was rapidly accessing our Books pages on Open Library. We did not have access to Sam's scripts for de-anonymizing IPs to detect abuse. This was the process for resolving the DDOS: https://github.com/internetarchive/openlibrary/issues/8319#issuecomment-1741323936
