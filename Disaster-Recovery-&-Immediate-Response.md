@@ -1,21 +1,26 @@
 # Responding to a Outage
 
-- [ ] Report outage on #openlibrary and #ops on Slack
-- [ ] :exclamation: Review previous [post mortem](https://github.com/internetarchive/openlibrary/issues?q=label%3A%22Type%3A+Post-Mortem%22) reports for insights and solutions to common issues 
-- [ ] Consult the [Troubleshooting](#Troubleshooting) section to identify likely suspects
-- [ ] Check the [monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring):
+- [ ] 1. Report outage on #openlibrary and #ops on Slack
+- [ ] 2. :exclamation: Review previous [post mortem](https://github.com/internetarchive/openlibrary/issues?q=label%3A%22Type%3A+Post-Mortem%22) reports for insights and solutions to common issues 
+- [ ] 3. Consult the [Troubleshooting](#Troubleshooting) section to identify likely suspects
+- [ ] 4. Check the [monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring):
     - [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail)
     - [HAProxy](https://openlibrary.org/admin?stats)
     - https://status.archivelab.org/?admin=true - links to more org dashboards
-- [ ] If the baremetal machine is hanging, contact #ops on slack or [manually restart baremetal](https://gnt-webmgr.us.archive.org/)
-- [ ] If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
-- [ ] Create a new [postmortem](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Post-Mortem%2C+Priority%3A+0%2C+GJ%3A+Triage+Exception&template=post_mortem.md&title=) issue
+- [ ] 5. If the baremetal machine is hanging, contact #ops on slack or [manually restart baremetal](https://gnt-webmgr.us.archive.org/)
+- [ ] 6. If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
+- [ ] 7. Create a new [postmortem](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Post-Mortem%2C+Priority%3A+0%2C+GJ%3A+Triage+Exception&template=post_mortem.md&title=) issue
 
 # Common Issues
 
 * [Handling Abuse & DDOS (Denial of Service Attack)](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
 * [Solr Search Issues]()
 
+## Spam
+
+1. There is an admin dashboard for blocking certain terms from appearing on Open Library: https://openlibrary.org/admin/spamword
+2. You can also block & revert changes per specific accounts via https://openlibrary.org/admin/people
+  * If the edit to a page contains any of the spam words or email of the user is from the blacklisted domains, the edit won’t be accepted. New registrations with emails from those domains are also not accepted.
 
 ## Handling Abuse & DDOS (Denial of Service Attack)
 
