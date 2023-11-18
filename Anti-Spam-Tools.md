@@ -1,13 +1,6 @@
-This document is quickly becoming deprecated, please instead view the [DDOS section of our Disaster Recovery & First Responder's Guide](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
+**This document is quickly becoming deprecated**, please instead view the [DDOS section of our Disaster Recovery & First Responder's Guide](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
 
 The following was originally published by Giovanni Damiola @gdamdam via http://gio.blog.archive.org/2016/03/10/ol-anti-spam-tools. Gio writes:
-
-## Tools
-* Added “block and revert all edits” button to admin profile page
-* Added /admin/spamwords page to mark some words as spam https://openlibrary.org/admin/spamwords
-* Also a way to blacklist a domain from /admin/spamwords.
-* If the edit to a page contains any of the spam words or email of the user is from the blacklisted domains, the edit won’t be accepted. New registrations with emails from those domains are also not accepted.
-* Sam's [DDOS](https://git.archive.org/mek/detect-abuse) tools
 
 ## Measures taken
 
