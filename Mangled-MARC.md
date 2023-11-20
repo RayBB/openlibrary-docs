@@ -5,7 +5,7 @@ Current query: https://openlibrary.org/search?q=title_suggest%3A%C2%A9+AND+ia%3A
 | mangled | correction | source |
 |---------|------------|--------|
 | `©♭`    | `é` (e-acute)   |
-| `©`     | `à` (a-grave)   | https://openlibrary.org/works/OL17679814W/Trait%C2%A9%E2%99%AD_%C2%A9%E2%99%ADl%C2%A9%E2%99%ADmentaire_d%27anatomie?edition=key%3A/books/OL26283189M |
+| `©`     | `à` (a-grave) OR `É`  | https://openlibrary.org/works/OL17679814W/Trait%C2%A9%E2%99%AD_%C2%A9%E2%99%ADl%C2%A9%E2%99%ADmentaire_d%27anatomie?edition=key%3A/books/OL26283189M  and https://openlibrary.org/works/OL36423630W/D%C2%A9%E2%99%ADmonstrations_%C2%A9%E2%99%ADl%C2%A9%E2%99%ADmentaires_de_botanique_%C2%A9_l%27usage_de_l%27%C2%A9cole_Royale_V%C2%A9%E2%99%ADt%C2%A9%E2%99%ADrinaire?edition=key%3A/books/OL49214802M|
 | `©·`    | `è` (e-grave) ??!  | 
 | `©Ł`    | combining grave |
 | `©Ø`    | combing acute   |
