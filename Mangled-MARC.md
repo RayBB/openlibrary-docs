@@ -1,5 +1,7 @@
 Current query: https://openlibrary.org/search?q=title_suggest%3A%C2%A9+AND+ia%3A*&mode=everything
 
+It's been a while since I've looked at this, but the mangling _is_ lossy, and while it looks like the text can be easily repaired in the most common cases, it falls down when trying to fix everything properly. The correct fix will be to re-extract the strings from the MARC source, or compare against the original archive.org record since many (but not all) records are correct now.
+
 ## Conversions
 
 | mangled | correction | source |
