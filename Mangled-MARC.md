@@ -1,4 +1,19 @@
+Current query: https://openlibrary.org/search?q=title_suggest%3A%C2%A9+AND+ia%3A*&mode=everything
 
+## Conversions
+
+| mangled | correction | source |
+|---------|------------|--------|
+| `©♭`    | `é` (e-acute)   |
+| `©·`    | `è` (e-grave) ??!  | 
+| `©Ł`    | combining grave |
+| `©Ø`    | combing acute   |
+| `©ʻ`    | combining cedilla | https://openlibrary.org/works/OL738281W/Trait%C2%A9%C3%98es_de_l%C2%A9%C3%98egislation_civile_et_p%C2%A9%C3%98enale?edition=key%3A/books/OL7074539M |
+| `©·`    | combining umlaut ??! |
+| `©ø`    | combining under-dot  | https://openlibrary.org/works/OL253565W?edition=key%3A/books/OL7178238M |
+| `©Æ`    | combining bar ??     | https://openlibrary.org/works/OL253565W?edition=key%3A/books/OL7178238M |
+| `Ã©`    |                 | https://openlibrary.org/works/OL24875145W/Trait%C3%83%C2%A9_d%27hygi%C3%83%C2%A8ne_publique_et_priv%C3%83%C2%A9e?edition=key%3A/books/OL33065425M |
+| `Ã¨`    |   | https://openlibrary.org/works/OL24875145W/Trait%C3%83%C2%A9_d%27hygi%C3%83%C2%A8ne_publique_et_priv%C3%83%C2%A9e?edition=key%3A/books/OL33065425M |
 ## Scale
 
 Mangled `©♭` represents `é` (e-acute), there are other variations but e-acute is the most common form of this problem.
