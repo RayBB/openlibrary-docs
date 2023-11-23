@@ -1,4 +1,4 @@
-**[← Back Home](Hme)**  
+**[← Back Home](Home)**  
 
 [Need Help & Support?](https://gitter.im/theopenlibrary/Lobby)  
 
