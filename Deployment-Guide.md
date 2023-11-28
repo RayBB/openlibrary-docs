@@ -205,3 +205,10 @@ docker compose up -d web memcached
 
 # Run any build steps that need re-running e.g. make js css, etc.
 ```
+
+### Rebuilding Dev Instances
+
+For e.g. `ol-dev1:/opt/ol-mek` staff dev instances, use the following command (with the right ports) to rebuild.
+```
+sudo WEB_PORT=1337 COMPOSE_FILE="compose.yml:compose.staging.yml" docker compose build web
+```
