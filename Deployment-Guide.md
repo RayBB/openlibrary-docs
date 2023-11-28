@@ -1,3 +1,5 @@
+See also [scratchpad](github.com/internetarchive/openlibrary/wiki/Deployment-Scratchpad).
+
 ## Setup
 
 In order to conduct deploys, the following one-time setup steps must be performed:
