@@ -210,5 +210,5 @@ docker compose up -d web memcached
 
 For e.g. `ol-dev1:/opt/ol-mek` staff dev instances, use the following command (with the right ports) to rebuild.
 ```
-sudo WEB_PORT=1337 COMPOSE_FILE="compose.yml:compose.staging.yml" docker compose build web
+sudo WEB_PORT=1337 COMPOSE_FILE="compose.yaml:compose.staging.yaml" docker compose build web
 ```
