@@ -21,9 +21,13 @@ Proper operation of the Open Library Solr instance requires that it be updated w
 If you're looking to re-index solr, go here:
 https://github.com/internetarchive/openlibrary/tree/master/scripts/solr_builder#solr-reindex-from-ol-dump
 
-### Resources
+### Developer Resources
 * [Apache Solr Subject on Open Library](https://openlibrary.org/subjects/apache_solr)
 * [Awesome Solr GitHub Resources](https://github.com/Anant/awesome-solr)
+
+### Improving Search Accuracy
+
+To make a change to the solr search results algorithm, this likely entails adjusting the [boosting parameters](https://github.com/internetarchive/openlibrary/blob/dc49fddb78a3cb25138922790ddd6a5dd2b5741c/openlibrary/plugins/worksearch/schemes/works.py#L439-L448), updating the QA spreadsheet, and using the [Side-by-side comparison (codepen)](https://codepen.io/cdrini/full/wvJqzaK) to evaluate the results.
 
 ### Solr updater script
 The [scripts/solr_updater.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/solr_updater.py) file listens for edits from infogami, and updates the solr index accordingly.
