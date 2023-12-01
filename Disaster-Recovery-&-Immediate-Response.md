@@ -13,8 +13,8 @@
 
 # Common Issues
 
-* [Handling Abuse & DDOS (Denial of Service Attack)](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
-* [Solr Search Issues]()
+1. Is [CPU load high on web nodes](https://grafana.us.archive.org/d/b7a222a0-d4fe-49a4-a5c4-b071ce756fda/ol-cluster-load?orgId=1&refresh=1m) and/or is there a [spike in # of transactions](https://sentry.archive.org/organizations/ia-ux/alerts/rules/details/23/)?
+    * [Handling Abuse & DDOS (Denial of Service Attack)](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
 
 ## Spam
 
@@ -49,15 +49,27 @@ sudo cat /1/var/log/nginx/access.log | grep "IP:XXX.XXX.XXX.XXX"  # check one IP
 sudo cat /1/var/log/nginx/access.log | grep "IP:" | awk -F 'IP:' '{print $2}' | sort | uniq -c | sort -rn | head -n 100 | awk '{print $2}' | sudo xargs -I{} grep {} /1/var/log/nginx/access.log # skim all requests by top 100 requesting IPs
 ```
 
-6. Add the `deny` rules for individual abusing IPs to /opt/olsystem/etc/deny.conf or update the rules in `/opt/openlibrary/docker/web_nginx.conf` to deny IPs or user-agents in specific cases. Because `deny.conf` is in olsystem, which is volumed mounted, **and** `/opt/openlibrary` is also volume mounted on `ol-www0`, simply restarting docker after changes are made should apply your changes.
+6. Add the `deny` rules for individual abusing IPs to /opt/olsystem/etc/deny.conf or update the rules in `/opt/openlibrary/docker/web_nginx.conf` to deny IPs or user-agents in specific cases. Because `/opt/olsystem/etc/nginx/deny.conf` is in olsystem, which is volumed mounted, **and** `/opt/openlibrary` is also volume mounted on `ol-www0`, simply restarting docker or exec'ing in and reloading nginx after changes are made should apply your changes.
 
-7. Undo temporary IP de-anonymization by removing the trailing `IP:$remote_addr'` segment of `/opt/openlibrary/docker/nginx.conf` in the `log_format` rule:
+```
+sudo docker exec -it -uroot openlibrary-web_nginx-1 bash
+```
+
+7. Confirm offending IPs appear to be blocked back on ol-www1, e.g. look for 403's:
+
+```
+sudo tail -f /1/var/log/nginx/access.log | grep "IP:XXX.XXX.XXX"
+
+YYY.YYY.YYY.YYY openlibrary.org - [01/Dec/2023:20:14:45 +0000] "GET /authors/OL7283999A/Petala_Parreira?sort=random_1701448397.338931&mode=everything HTTP/2.0" 403 185 "-" "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.123 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" 0.000 IP:XXX.XXX.XXX.XXX
+```
+
+8. Undo temporary IP de-anonymization by removing the trailing `IP:$remote_addr'` segment of `/opt/openlibrary/docker/nginx.conf` in the `log_format` rule:
 
 ```
 log_format iacombined '$remote_addr_ipscrub $host $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_time;
 ```
 
-8. And then restart everything one last time: `docker restart openlibrary-web_nginx-1`
+9. And then restart everything one last time: `docker restart openlibrary-web_nginx-1`
 
 ## Solr Search Issues
 
