@@ -11,11 +11,14 @@
 - [ ] 6. If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
 - [ ] 7. Create a new [postmortem](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Post-Mortem%2C+Priority%3A+0%2C+GJ%3A+Triage+Exception&template=post_mortem.md&title=) issue
 
-# Common Issues
+# Diagnostic's Guide
+
+Before continuing, you may want to check our [Port-mortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22+) to see if this is a known / already solved problem.
 
 1. Is [CPU load high on web nodes](https://grafana.us.archive.org/d/b7a222a0-d4fe-49a4-a5c4-b071ce756fda/ol-cluster-load?orgId=1&refresh=1m) and/or is there a [spike in # of transactions](https://sentry.archive.org/organizations/ia-ux/alerts/rules/details/23/)?
     * [Handling Abuse & DDOS (Denial of Service Attack)](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
-
+2. Are `ol-mem*` slow to ssh into? We may want to `/etc/init.d/memcached restart` or even [manually restart bare-metal](https://gnt-webmgr.us.archive.org/cluster/cluster1#virtual_machines) if ssh hangs for more than 3 minutes
+3. Does [homepage cache](#Homepage_Errors) look weird?
 ## Spam
 
 1. There is an admin dashboard for blocking certain terms from appearing on Open Library: https://openlibrary.org/admin/spamword
@@ -80,21 +83,6 @@ ssh -A ol-solr1
 docker restart solr_builder_solr_1 solr_builder_haproxy_1
 ```
 
-# Troubleshooting
-
-Before continuing, you may want to check our [Port-mortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22+) to see if this is a known / already solved problem.
-
-1. If solr-updater or import-bot or deploy issue, or infobase (API), check `ol-home`
-2. If lending information e.g. books appear as available on OL when they are waitlisted on IA, this is a freak incident w/ memcached and we'll need to ssh into each memcached (ol-mem*) and `sudo service memcached restart`
-3. If there's an issue with ssl termination, static assets, connecting to the website, check `ol-www1` (which is where all traffic enters and goes into haproxy -- which also lives on this machine). Another case is abuse, which is documented in the troubleshooting guide (usually haproxy limits or banning via nginx `/opt/openlibrary/olsystem/etc/nginx/deny.conf`
-4. If there's a database problem, sorry (`ol-db0` primary, `ol-db1` replication, `ol-backup1`)
-5. If we're seeing `ol-web1` and `ol-web2` offline, it may be network, upstream, DNS, or a breaking dependency, CHECK [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) + alert #ops + #openlibrary. Check the logs in `/var/log/openlibrary/` (esp. `upstart.log`)
-7. If you notice a disk filling up rapidly or almost out of space... CREATE A BASILISK FILE (an empty 2GB placeholder `dd`'d file that we can delete and have the ability to `ls`, etc)
-8. Look at the troubleshooting guide history
-
-- [Is the server having trouble after rebooting?](#Handling_Server_Reboot)
-- [Is OpenLibrary getting slammed with traffic, crawlers, or bad actors?](#Handling_DDOS)
-- [Is Search Overloading archive.org elastic search upstream?](#Overloaded_Search)
 
 # Out of Space
 
@@ -156,3 +144,15 @@ Sometimes an error occurs while compiling the homepage and an empty body is cach
 https://github.com/internetarchive/openlibrary/issues/6646
 
 *Solution:* You can use this the url to hit to clear the homepage memcache entry: https://openlibrary.org/admin/inspect/memcache?keys=home.homepage.en.pd-&action=delete . Note the .pd . Remove that if you want to clear the cache for non printdisabled users.
+
+## Notes
+* If solr-updater or import-bot or deploy issue, or infobase (API), check `ol-home`
+* If lending information e.g. books appear as available on OL when they are waitlisted on IA, this is a freak incident w/ memcached and we'll need to ssh into each memcached (ol-mem*) and `sudo service memcached restart`
+* If there's an issue with ssl termination, static assets, connecting to the website, check `ol-www1` (which is where all traffic enters and goes into haproxy -- which also lives on this machine). Another case is abuse, which is documented in the troubleshooting guide (usually haproxy limits or banning via nginx `/opt/openlibrary/olsystem/etc/nginx/deny.conf`
+* If there's a database problem, sorry (`ol-db0` primary, `ol-db1` replication, `ol-backup1`)
+* If we're seeing `ol-web1` and `ol-web2` offline, it may be network, upstream, DNS, or a breaking dependency, CHECK [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) + alert #ops + #openlibrary. Check the logs in `/var/log/openlibrary/` (esp. `upstart.log`)
+* If you notice a disk filling up rapidly or almost out of space... CREATE A BASILISK FILE (an empty 2GB placeholder `dd`'d file that we can delete and have the ability to `ls`, etc)
+
+- [Is the server having trouble after rebooting?](#Handling_Server_Reboot)
+- [Is OpenLibrary getting slammed with traffic, crawlers, or bad actors?](#Handling_DDOS)
+- [Is Search Overloading archive.org elastic search upstream?](#Overloaded_Search)
