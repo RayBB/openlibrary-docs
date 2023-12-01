@@ -1,5 +1,15 @@
 ## Solr Search Developer's Guide
 
+### Table of Contents
+
+* [Public **Book Search API** Documentation](https://openlibrary.org/dev/docs/api/search)
+* [Search Tuning QA Spreadsheet](https://docs.google.com/spreadsheets/d/1BN5I7-OkTPaoTr2Es6jQ4O9ICWFmH0q9CP6kEgolCgg/edit#gid=1006480604) & [Side-by-side comparison](https://codepen.io/cdrini/full/wvJqzaK) (codepen)
+* [Parameter Boosting](https://github.com/internetarchive/openlibrary/blob/dc49fddb78a3cb25138922790ddd6a5dd2b5741c/openlibrary/plugins/worksearch/schemes/works.py#L439-L448)
+* [Re-indexing Solr Guide](https://github.com/internetarchive/openlibrary/tree/master/scripts/solr_builder#readme) (solr-builder)
+* [Smarter Search Blog Post](https://blog.openlibrary.org/2022/12/21/search-is-getting-smarter-on-open-library/) (2022)
+
+### Solr on Open Library
+
 [Apache Solr](https://solr.apache.org/features.html) is used to power the search box, but is also used internally by the system and is intrinsic to the correct operation of the system. Some examples of places that it's used include:
 * Enumerating the list of works for an author
 * Enumerating the list of editions for a work
