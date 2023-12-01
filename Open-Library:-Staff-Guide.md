@@ -30,12 +30,12 @@ See our [Monitoring Bible](https://github.com/internetarchive/openlibrary/wiki/M
 | Service | Description |
 |-------|-------------|
 | [Sentry](https://sentry.archive.org/organizations/ia-ux/issues/46145/?project=7&query=lending&referrer=issue-stream&statsPeriod=14d) | We use sentry to investigate errors & performance  |
-| [Grafana](https://grafana.us.archive.org/d/000000176/open-library-dev) | We use grafana to see real-time analytics about site performance and service health |
+| [Grafana: Main Performance Dashboard](https://grafana.us.archive.org/d/000000176/open-library-dev) | We use grafana to see real-time analytics about site performance and service health |
 | [Nagios](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail) | We use Nagios to set alerts and monitor when services hit critical errors or thresholds which may require intervention |
 | [Plausible](https://plausible.prod.archive.org/openlibrary.org) | Our alternative for google analytics |
 | [Production Load](https://grafana.us.archive.org/d/b7a222a0-d4fe-49a4-a5c4-b071ce756fda/ol-cluster-load?orgId=1&refresh=1m) | CPU load across services|
-| [Performance Dashboard](https://grafana.us.archive.org/d/000000176/open-library-dev?orgId=1&refresh=1m) | Internal errors, load time, # emails |
- 
+| [Sentry: Performance & Transaction Volume](https://sentry.archive.org/organizations/ia-ux/alerts/rules/details/23/) | Internal errors, load time, # emails |
+| [ 
 ## Services
 
 Open Library depends on lots of services and tasks that run regularly and may require staff intervention.
