@@ -1,3 +1,5 @@
+## Solr Search Developer's Guide
+
 [Apache Solr](https://solr.apache.org/features.html) is used to power the search box, but is also used internally by the system and is intrinsic to the correct operation of the system. Some examples of places that it's used include:
 * Enumerating the list of works for an author
 * Enumerating the list of editions for a work
