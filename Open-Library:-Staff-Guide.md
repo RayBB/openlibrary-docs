@@ -35,7 +35,7 @@ See our [Monitoring Bible](https://github.com/internetarchive/openlibrary/wiki/M
 | [Plausible](https://plausible.prod.archive.org/openlibrary.org) | Our alternative for google analytics |
 | [Production Load](https://grafana.us.archive.org/d/b7a222a0-d4fe-49a4-a5c4-b071ce756fda/ol-cluster-load?orgId=1&refresh=1m) | CPU load across services|
 | [Sentry: Performance & Transaction Volume](https://sentry.archive.org/organizations/ia-ux/alerts/rules/details/23/) | Internal errors, load time, # emails |
-| [ 
+
 ## Services
 
 Open Library depends on lots of services and tasks that run regularly and may require staff intervention.
