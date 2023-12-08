@@ -1,8 +1,14 @@
 Cache is a way of taking expensive values we've computed and storing them in resident memory for a period of time. A good example is "top books this week" -- such a query likely won't change much if we re-run it multiple times a second, whereas doing so may have a significant (even untenable) consequence on CPU or the database. Therefore, we `cache` the computed value for some period of time (e.g. 1 hour).
 
-## How to cache
+## How to use cache
+
+See `plugins/openlibrary/home.py`
 
 ## How to test cache
+
+First, go into the `web` docker container where you have access to python and openlibrary:
+
+`docker exec -it openlibrary-web-1 python` (someone check this command is current)
 
 ```
 import time
