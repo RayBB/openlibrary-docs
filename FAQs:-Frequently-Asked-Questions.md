@@ -42,4 +42,3 @@
 ## Internationalization (i18n) & Translations
 
 - [How do I contribute a language translation to Open Library?](https://github.com/internetarchive/openlibrary/wiki/Internationalization-Contributor's-Guide-(i18n))
-- 
