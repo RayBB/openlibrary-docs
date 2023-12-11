@@ -18,6 +18,10 @@
 - [How do I manually test whether a python function I've written works as expected?](https://github.com/internetarchive/openlibrary/wiki/Recipes#magic-incantation-accessing-webctx)
 - How do I write tests?
 
+## Understanding the Application
+
+- [How does routing work on Open Library?](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#the-lifecycle-of-a-network-request)
+
 ## Understanding the Codebase
 
 - Where do I find data models, template files (views), and routers (controllers)? 
