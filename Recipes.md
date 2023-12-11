@@ -10,7 +10,8 @@ Next, use the following incantation to load Open Library and launch a minimal he
 import web
 import infogami
 from openlibrary.config import load_config
-load_config('/olsystem/etc/openlibrary.yml')
+# load_config('/olsystem/etc/openlibrary.yml') # if production
+load_config('config/openlibrary.yml') # if local
 infogami._setup()
 from infogami import config
 ```
