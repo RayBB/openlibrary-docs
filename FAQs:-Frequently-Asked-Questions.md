@@ -24,7 +24,8 @@
 
 ### Understanding the Codebase
 
-- Where do I find data models, template files (views), and routers (controllers)? 
+- [Where do I find data models, template files (views), and routers (controllers)](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#file-organization-overview)? 
+- [How are controllers/routers organized?(https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins#understanding-directories)
 - [Where can I see an overview of what routes exist and what they do?](https://github.com/internetarchive/openlibrary/wiki/Endpoints#list-of-all-routes)
 
 ### Understanding the Tech
