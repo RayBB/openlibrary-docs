@@ -5,6 +5,7 @@
 - How do I find, claim, and work on a [good first issue](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Issue%22+)?
   - [What git conventions does the project follow?](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)
   - [How do I submit a good pull request?](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet#creating-a-pull-request)
+- [How can I debug when things go wrong?](https://github.com/internetarchive/openlibrary/wiki/Debugging-and-Performance-Profiling)
 - [How do I import production book & author data into my local environment?](https://github.com/internetarchive/openlibrary/wiki/Loading-Production-Book-Data)
 - [How can I login as a user in my local environment?](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin)
 - [How do I add a new route to Open Library? (tutorial)](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/README.md#tutorial-implementing-a-new-route)
@@ -14,9 +15,8 @@
 
 ## Debugging & Testing
 
-- How can I debug when things go wrong?
 - [How do I manually test whether a python function I've written works as expected?](https://github.com/internetarchive/openlibrary/wiki/Recipes#magic-incantation-accessing-webctx)
-- How do I write tests?
+- How do I write [tests](https://github.com/internetarchive/openlibrary/wiki/Testing)?
 
 ## [Understanding the Application](https://archive.org/details/openlibrary-tour-2020/technical_overview.mp4)
 
