@@ -1,5 +1,3 @@
-FAQs
-
 ## Getting Started
 
 - How do I set up the Open Library app locally?
