@@ -53,6 +53,10 @@ If you make changes to any CSS, see [Building CSS and JS](#building-css-and-js) 
 
 We are transitioning towards using [BEM notation](http://getbem.com/) for CSS classes. Please bear this in mind when contributing to our codebase and providing new classes or modifying existing classes. This simplifies our CSS and makes it easier to manage.
 
+#### Finding a css file
+
+Use the browser's inspector developer tools to find the CSS class name and then use `git grep` to find the file. Note that for some elements like `cta-btn--available` it may be easier to search for a subpart of the class, like `--available` as many of our css documents have nested styles and define partial rules like `&--available`. 
+
 ### Working with HTML
 
 While running the oldev Docker container, gunicorn is configured to auto-reload modified Python files or web templates upon file save.
