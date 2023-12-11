@@ -4,6 +4,8 @@ This portal contains resources for **software developers** who have completed Op
 * [Find good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22) and
 * [Submit good Pull Requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)
 
+Please also refer to our [developer FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions). 
+
 ## Getting Involved
 
 * If you have a 1-off question, ask on [gitter](https://gitter.im/theopenlibrary/Lobby)
