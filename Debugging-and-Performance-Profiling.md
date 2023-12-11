@@ -1,3 +1,21 @@
+# Debugging & Traceback
+
+Are you seeing an error on an Open Library page?
+
+The **first** thing you should do is check the applications streaming error logs:
+```
+docker compose logs --tail=10 -f web
+```
+
+Next, you can add `?debug=true` to the problematic url in order to reveal the stack trace or profile data.
+
+This trick is especially useful when you see a nebulous error like:
+```
+"Sorry. There seems to be a problem with what you were just looking at. We've noted the error 2019-02-05/193353339339 and will look into it as soon as possible. Head for home?"
+```
+
+If the request is a POST, use the browser to inspect the HTML form element and add `?debug=true` to the `action` url. If/when the request fails, you should see a useful stack trace.
+
 # Using a Debugger
 BETA: See https://github.com/internetarchive/openlibrary/pull/2097
 
@@ -14,17 +32,6 @@ To use:
 6. Go to the debug panel (Ctrl+Shift+D) in VS Code, and click "Python: Attach"
 7. Debug!
 
-# Debugging a Server Error
-
-**Question:** What should I do when I come across an internal error (like the one below) while running Open Library locally on Docker? 
-```
-"Sorry. There seems to be a problem with what you were just looking at. We've noted the error 2019-02-05/193353339339 and will look into it as soon as possible. Head for home?"
-```
-**Answer:** When you hit an error, if you add `?debug=true` to the url (if it's a GET), or (if it's a POST) inspect the form element and add `?debug=true` to the action url, you should see a useful stack trace.
-
-## Debugging & Traceback
-
-Are you seeing an error on a page? Add `?debug=true` to the url in order to reveal the stack trace
 
 ## Performance Profiling
 
