@@ -4,7 +4,7 @@
 
 **Developer Resources**  
 1. ⭐ **[Getting Started Guide](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)** & [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions)
-2. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) & [i18n](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-programmers)  
+2. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) & [i18n](https://github.com/internetarchive/openlibrary/wiki/Internationalization-Contributor's-Guide-(i18n))  
 3. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 4. [Feature Flagging](Feature-Flagging)  
 5. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
