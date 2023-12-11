@@ -1,5 +1,3 @@
-# Debugging & Traceback
-
 Are you seeing an error on an Open Library page?
 
 The **first** thing you should do is check the applications streaming error logs:
