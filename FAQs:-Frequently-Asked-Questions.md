@@ -10,7 +10,7 @@
 - [How do I add a new route to Open Library? (tutorial)](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/README.md#tutorial-implementing-a-new-route)
 - [How do I add new Javascript functionality to a template?](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#adding-new-javascript-files-to-html-templates)
 - How do I find the right [CSS file](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#working-with-css) to add style rules?
-- How do I rebuild css & js assets after I make changes?
+- [How do I rebuild css & js assets after I make changes?](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#building-css-and-js)
 
 ## Debugging & Testing
 
