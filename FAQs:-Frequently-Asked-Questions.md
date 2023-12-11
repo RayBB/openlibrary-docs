@@ -18,14 +18,14 @@
 - [How do I manually test whether a python function I've written works as expected?](https://github.com/internetarchive/openlibrary/wiki/Recipes#magic-incantation-accessing-webctx)
 - How do I write tests?
 
-## Understanding the Technologies & Codebase
-
-- How does an infogami + webpy application work (overview)?
-
 ## Understanding the Codebase
 
 - Where do I find data models, template files (views), and routers (controllers)? 
-- Where can I see an overview of what routes exist and what they do?
+- [Where can I see an overview of what routes exist and what they do?](https://github.com/internetarchive/openlibrary/wiki/Endpoints#list-of-all-routes)
+
+## Understanding the Tech
+
+- How does an infogami + webpy application work (overview)?
 
 ## Librarian Resources
 
