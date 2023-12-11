@@ -5,7 +5,7 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
   - [Building CSS & JS](#building-css-and-js)
   - [Working with CSS](#working-with-css)
   - [Working with HTML Templates](#working-with-html)
-- [Working with Javascript](Javascript)
+- [Working with Javascript](Working With Javascript)
 - [Overview of HTTP Endpoints](Endpoints)  
 - [Routing & Templates](#routing-and-templates)
 - [URL Routing](#url-routing)
