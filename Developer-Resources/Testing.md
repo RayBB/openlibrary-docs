@@ -3,7 +3,6 @@
 XXX This page needs updating 
 
 ## Running Automated Tests
-
 From the root of your local openlibrary project, you can run the JavaScript and Python unit tests in a Docker container with the following command:
 
     docker compose run web make test
@@ -22,6 +21,22 @@ source /opt/openlibrary/venv/bin/activate
 cd /opt/openlibrary/openlibrary
 sudo make test
 ```
+
+## Linting
+The CI server will lint JavaScript and Python, but one can pre-lint files locally to avoid repeated re-submits to the CI server. To lint only JS, one can run:
+- `docker compose exec web npm run lint`.
+
+To lint everything the CI server checks (JavaScript, `mypy`, running `black`, `ruff`, etc., and do so automatically at the time of commit, one can use `pre-commit`.
+
+*Note:* this will install a `git` commit hook that will run prior to every commit. As there are times where one may simply wish to commit code, even if it will fail the linting, **one can override commit hooks with `git commit -n`**. For more on `pre-commit`, see https://pre-commit.com/.
+
+To enable `pre-commit`:
+1. `pip install pre-commit` or `brew install pre-commit`; and
+2. `pre-commit install`
+
+Henceforth, `pre-commit` will lint your code with every commit (unless you commit with `git commit -n` to disable running the hooks). To manually run `pre-commit`, you can execute `pre-commit run --all-files`.
+
+To remove `pre-commit`, run `pre-commit uninstall`.
 
 # Integration Tests
 
