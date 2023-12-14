@@ -39,17 +39,15 @@ Read further about Infogami and type on :
 
 Open Library has a number of additional tables that are used to support a variety of features.  The DDL for these tables can be found [here](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/schema.sql).
 
-![Screenshot from 2023-12-11 15-06-45](https://github.com/internetarchive/openlibrary/assets/28732543/c7d93bc9-936d-43eb-a31f-f57e2cb151c5)
+![Screenshot from 2023-12-14 11-19-48](https://github.com/internetarchive/openlibrary/assets/28732543/9542a554-8d6c-4d78-ad7d-c41845ec9af8)
 
 ## `bookshelves` and `bookshelves_books`
 
-![reading-log](https://github.com/internetarchive/openlibrary/assets/28732543/f4d089cf-eed9-4c59-a8ac-e7cc71d09948)
+![Screenshot from 2023-12-14 11-20-02](https://github.com/internetarchive/openlibrary/assets/28732543/2c9f654a-d926-4faf-9db0-499fcc0bf6ae)
 
 These tables are used to store the books that patrons have on their "Want to Read", "Currently Reading", and "Already Read" reading log shelves.  The `bookshelves_books` table holds most of this data, with `bookshelves` acting as a look-up table for shelf names.
 
 [`bookshelves.py`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/bookshelves.py) provides functions which interact with the reading log tables.
-
-**Note:** The `bookshelves_votes` table currently exists in our schema, but is not used by Open Library.
 
 ## `yearly_reading_goals`
 
