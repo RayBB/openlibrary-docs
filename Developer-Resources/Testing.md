@@ -23,18 +23,41 @@ sudo make test
 ```
 
 ## Linting
-The CI server will lint JavaScript and Python, but one can pre-lint files locally to avoid repeated re-submits to the CI server. To lint only JS, one can run:
+The Continuous Integration (CI) server will [lint](https://en.wikipedia.org/wiki/Lint_(software)) (i.e. statically analyze code for bugs and stylistic bugs) the code in each Pull Request (PR) and attempt to fix any errors it finds. However, for errors that require human intervention, you may see something similar to the following:
+
+![image](https://github.com/internetarchive/openlibrary/assets/26524678/20fec6e1-20eb-4a40-9744-83762e25777a)
+
+Although you can simply look at the details, change your code and resubmit to see if everything passes, you can also pre-lint Python and JavaScript files locally to avoid repeated re-submits to the CI server.
+
+### Lint JavaScript in Docker
+To lint only JS, one can run:
 - `docker compose exec web npm run lint`.
 
-To lint everything the CI server checks (JavaScript, `mypy`, running `black`, `ruff`, etc., and do so automatically at the time of commit, one can use `pre-commit`.
+### Lint everything with `pre-commit` from your shell outside of Docker
+To lint everything the CI server checks (JavaScript, `mypy`, `black`, `ruff`, etc.), and to do so automatically at the time of commit, one can run, in the local environment, outside of Docker, a Python program named `pre-commit`. This will use `git`'s [hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run Open Library-specific linting checks when committing code in `git`. Because `pre-commit` integrates with `git`, that means it runs outside of Docker, and needs to be available to `git` in your current environment.
+
+Prerequisites:
+- the version of your current Python interpreter must match the version of Python specified in the `default_language_version` section of [`.pre-commit-config.yaml`](https://github.com/internetarchive/openlibrary/blob/master/.pre-commit-config.yaml).
+
+Although a complete discussion of managing Python's versions and Python's virtual environments is outside the scope of this discussion, it is likely worth creating a virtual environment for each Python project on which you work. See Python's own documentation about [`venv`](https://docs.python.org/3/library/venv.html) for one such approach to managing virtual environments. Additionally, if your `python3 --version` doesn't match the version specified in `.pre-commit-config.yaml`, consider [`pyenv`](https://github.com/pyenv/pyenv) on Linux, macOS, or Windows Subsystem for Linux, or [`pyenv-win`](https://github.com/pyenv-win/pyenv-win) on Windows outside of the Windows Subsystem for Linux.
 
 *Note:* this will install a `git` commit hook that will run prior to every commit. As there are times where one may simply wish to commit code, even if it will fail the linting, **one can override commit hooks with `git commit -n`**. For more on `pre-commit`, see https://pre-commit.com/.
 
-To enable `pre-commit`:
+To enable `pre-commit`, run the following in your local shell outside of Docker:
 1. `pip install pre-commit` or `brew install pre-commit`; and
 2. `pre-commit install`
 
-Henceforth, `pre-commit` will lint your code with every commit (unless you commit with `git commit -n` to disable running the hooks). To manually run `pre-commit`, you can execute `pre-commit run --all-files`.
+Henceforth, `pre-commit` will lint your code with every `git commit` (unless you commit with `git commit -n` to disable running the hooks). To manually run `pre-commit`, you can execute `pre-commit run --all-files`.
+
+If you see an error similar to either of the following, please ensure you the version of you Python interpreter matches the version specified in `.pre-commit-config.yaml`:
+```
+An unexpected error has occurred: CalledProcessError: command: ('/home/scott/.pyenv/versions/3.9/bin/python3.9', '-mvirtualenv', '/home/scott/.cache/pre-commit/repolh5wc3hy/py_env-python3.11', '-p', 'python3.11')
+return code: 1
+stdout:
+    RuntimeError: failed to find interpreter for Builtin discover of python_spec='python3.11'
+stderr: (none)
+Check the log at /home/scott/.cache/pre-commit/pre-commit.log
+```
 
 To remove `pre-commit`, run `pre-commit uninstall`.
 
