@@ -26,7 +26,7 @@
 * [Librarianship](https://openlibrary.org/librarians)
 * [Internationalization (i18n)](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)
 * [Communications](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#heading=h.d4bcs4fzim9e)   
-* [Staff](https://github.com/internetarchive/openlibrary/wiki/Open-Library:-Staff-Guide)
+* [Staff](https://github.com/internetarchive/olsystem/wiki)
 
 ---
 
