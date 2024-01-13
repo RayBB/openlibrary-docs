@@ -88,3 +88,17 @@ Patrons can submit a star rating for a work.  The `ratings` table holds these st
 ![merge_queue](https://github.com/internetarchive/openlibrary/assets/28732543/9dc1c072-176d-4f54-96b4-3b2ea582a744)
 
 This table holds librarian requests, which in turn are used to populate the librarian request table at https://openlibrary.org/merges.  Code which interacts directly with thus table can be found in [`edits.py`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/edits.py).
+
+## Understanding web.ctx.site
+
+web.py (the python micro-web framework we use, similar to flask) maintains a ctx variable which maintains the context of the system during/across a request. Web.py also has a web.db connection to our postgres database.
+
+infogami sits on top of web.py -- it's like a battery pack. One piece of infogami is called infobase which behaves like an ORM (db wrapper) to allow us to define arbitrary data types like works, editions, authors, etc.
+
+At the simplest level, Infobase works by relying on 2 tables: things and data.
+
+things gives every object in our system and ID, a type, and a reference to its data in the data table.
+
+data is just a massive catalog of json data that can be references by querying and joining things
+
+infogami injects a utility called site into web.py's ctx (https://webpy.org/cookbook/ctx) variable (ctx maintains information and connections specific to the current client). The site utility handles all the joins for you so you can request and key from the things table, fetch all its corresponding data, and also leverage and models and functions we have defined for that thing's type.
