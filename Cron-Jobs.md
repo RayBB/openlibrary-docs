@@ -42,6 +42,14 @@ First, shell into the docker container for cron jobs:
 
 See [documentation](https://github.com/internetarchive/openlibrary/blob/a014cedcbfe8b06e5be076983ae5de9ff1ce9279/scripts/update_stale_work_references.py#L14-L21) re: parameters for `resolve_redirects_bulk`.
 
+Test cron with:
+```
+ssh -A ol-home0
+docker exec -it -uopenlibrary openlibrary-cron-jobs-1 bash
+PYTHONPATH=. python /openlibrary/scripts/update_stale_work_references.py /olsystem/etc/openlibrary.yml
+```
+
+Test manually with:
 ```
 import web
 import infogami
