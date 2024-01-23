@@ -38,6 +38,21 @@ $ tail /var/log/cron.log
 First, shell into the docker container for cron jobs:
 ```sudo docker exec -it -uroot openlibrary-cron-jobs-1 bash```
 
+### Resolving Redirects
+
+See [documentation](https://github.com/internetarchive/openlibrary/blob/a014cedcbfe8b06e5be076983ae5de9ff1ce9279/scripts/update_stale_work_references.py#L14-L21) re: parameters for `resolve_redirects_bulk`.
+
+```
+import web
+import infogami
+from openlibrary.config import load_config
+load_config('/olsystem/etc/openlibrary.yml')
+infogami._setup()
+from infogami import config
+from openlibrary.core.models import Work
+Work.resolve_redirects_bulk(batch_size=1, pages=1, test=True)
+```
+
 ### Homepage Stats
 
 Run:
