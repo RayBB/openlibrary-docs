@@ -42,6 +42,7 @@ During local development, after making edits to CSS or JS, one must re-compile t
 **Note**:
 - You might also need to restart the webserver and/or clear browser caches to see the changes.
 - If you want to view the generated files you will need to attach to the container (`docker compose exec web bash`) to examine the files in `./static` the Docker volume, rather than in your local directory.
+- If you are using an Intel-based Mac and get an error building JavaScript, specifically `make: *** [Makefile:24: js] Error 139`, consider downgrading Docker Desktop to [Docker 4.18.0](https://docs.docker.com/desktop/release-notes/#4180). See https://github.com/docker/for-mac/issues/6824 for more.
 
 ### Working with CSS
 
