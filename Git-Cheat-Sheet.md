@@ -128,6 +128,10 @@ git push origin HEAD
 ```sh
 docker compose exec web make test
 ```
+| Info |
+| --- |
+| When the PR is submitted, the Continuous Integration (CI) server will [lint](https://en.wikipedia.org/wiki/Lint_(software)) (i.e. statically analyze code for bugs and stylistic bugs) the code and attempt to fix any errors it finds. If the errors require human intervention, the checks may fail. 
+| If the checks fail, you can simply change the code and resubmit, but to prevent repeated resubmits you can optionally pre-lint the code before submitting by using `docker compose exec web npm run lint` to do a one-off JS lint or by setting up `pre-commit` to run all the checks with each commit. See [Linting](https://github.com/internetarchive/openlibrary/wiki/Testing#linting).|
 
 6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.
 ![GitHub pull request](https://archive.org/download/screenshot20191211at11.12.56/pull-request.png)
