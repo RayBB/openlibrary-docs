@@ -48,7 +48,7 @@ Here, the project files need LF line endings because they are used in a Linux Do
 
 For more on git and line endings, see [Configuring Git to handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings).
 
-Note: if you get permission issues while executing these commands please run git the bash shell as an Administrator.
+**Note: if you get permission issues while executing these commands please run git the bash shell as an Administrator.**
 ```
 # Get in the project directory
 cd openlibrary
@@ -66,7 +66,7 @@ git submodule init; git submodule sync; git submodule update
 git rm --cached -r .  # Don't forget the "."
 
 # Reset the repo (removes any changes you've made to files and is likely to give an error if not administrator)
-git reset --hard
+git reset --hard      # You will almost certainly need to use git-bash as administrator for this.
 ```
 
 ### Add 'upstream' repo to list of remotes
