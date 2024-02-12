@@ -25,7 +25,7 @@
 **Other Portals**
 * [Design](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit#heading=h.b20z3avugr8c)  
 * [Librarianship](https://openlibrary.org/librarians)
-* [Internationalization (i18n)](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/i18n)
+* [Internationalization (i18n)](https://github.com/internetarchive/openlibrary/wiki/Internationalization-Contributor's-Guide-(i18n))
 * [Communications](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#heading=h.d4bcs4fzim9e)   
 * [Staff](https://github.com/internetarchive/olsystem/wiki) (internal)  
 
