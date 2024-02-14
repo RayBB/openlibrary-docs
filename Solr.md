@@ -1,19 +1,19 @@
-## Solr Search Developer's Guide
+## Open Library Solr/Search Tech Guide
 
 ### Table of Contents
 
 * [Public **Book Search API** Documentation](https://openlibrary.org/dev/docs/api/search)
 * [Tuning & Improving Search Accuracy](Solr#improving-search-accuracy)
-    * [Search Tuning QA Spreadsheet](https://docs.google.com/spreadsheets/d/1BN5I7-OkTPaoTr2Es6jQ4O9ICWFmH0q9CP6kEgolCgg/edit#gid=1006480604) & [Side-by-side comparison](https://codepen.io/cdrini/full/wvJqzaK) (codepen)
+    * [Search Tuning Evaluation Spreadsheet](https://docs.google.com/spreadsheets/d/1BN5I7-OkTPaoTr2Es6jQ4O9ICWFmH0q9CP6kEgolCgg/edit#gid=1006480604) & [Side-by-side comparison](https://codepen.io/cdrini/full/wvJqzaK) (codepen)
     * [Parameter Boosting](https://github.com/internetarchive/openlibrary/blob/dc49fddb78a3cb25138922790ddd6a5dd2b5741c/openlibrary/plugins/worksearch/schemes/works.py#L439-L448)
 * [Re-indexing Solr Guide](https://github.com/internetarchive/openlibrary/tree/master/scripts/solr_builder#readme) (solr-builder)
 * [Smarter Search Blog Post](https://blog.openlibrary.org/2022/12/21/search-is-getting-smarter-on-open-library/) (2022)
 
 ### Solr on Open Library
 
-[Apache Solr](https://solr.apache.org/features.html) is used to power the search box, but is also used internally by the system and is intrinsic to the correct operation of the system. Some examples of places that it's used include:
+[Apache Solr](https://solr.apache.org/) is used to power the search box, but is also used internally by the system and is intrinsic to the correct operation of the system. Some examples of places that it's used include:
+* Searching and search results!
 * Enumerating the list of works for an author
-* Enumerating the list of editions for a work
 * Autocomplete by author name when editing a work and selecting authors
 * Various "top" things like the top items to list in a carousel, an author's top work or subjects, etc.
 
@@ -22,15 +22,34 @@ Proper operation of the Open Library Solr instance requires that it be updated w
 If you're looking to re-index solr, go here:
 https://github.com/internetarchive/openlibrary/tree/master/scripts/solr_builder#solr-reindex-from-ol-dump
 
-### Developer Resources
-* [Apache Solr Subject on Open Library](https://openlibrary.org/subjects/apache_solr)
-* [Awesome Solr GitHub Resources](https://github.com/Anant/awesome-solr)
-
 ### Improving Search Accuracy
 
-To make a change to the solr search results algorithm, this likely entails adjusting the [boosting parameters](https://github.com/internetarchive/openlibrary/blob/dc49fddb78a3cb25138922790ddd6a5dd2b5741c/openlibrary/plugins/worksearch/schemes/works.py#L439-L448), updating the QA spreadsheet, and using the [Side-by-side comparison (codepen)](https://codepen.io/cdrini/full/wvJqzaK) to evaluate the results.
+To make a change to the solr search results algorithm, this likely entails adjusting the [boosting parameters](https://github.com/internetarchive/openlibrary/blob/dc49fddb78a3cb25138922790ddd6a5dd2b5741c/openlibrary/plugins/worksearch/schemes/works.py#L439-L448), updating the [evaluation spreadsheet](https://docs.google.com/spreadsheets/d/1BN5I7-OkTPaoTr2Es6jQ4O9ICWFmH0q9CP6kEgolCgg/edit#gid=1006480604), and using the [Side-by-side comparison (codepen)](https://codepen.io/cdrini/full/wvJqzaK) to evaluate the results.
 
-### Solr updater script
+### Expected behavior and timings
+
+Changes to the Solr index are visible on the live Open Library site in no more than about 1 minute. The updater script looks for document changes in the Infobase logs at `http://localhost:7000/openlibrary.org/log` logic to update Solr accordingly.
+
+The updater script checks for updates every [5 seconds](https://github.com/internetarchive/openlibrary/blob/0748d2ab0db7966fd82b0a84572edac293e08d24/scripts/new-solr-updater.py#L268) and sends an update to Solr every [100 updates, or 60 seconds](https://github.com/internetarchive/openlibrary/blob/0748d2ab0db7966fd82b0a84572edac293e08d24/scripts/new-solr-updater.py#L198) whichever occurs first.
+
+Here's a useful command for checking how far behind solr-updater is:
+
+```sh
+curl "ol-home0:7000/openlibrary.org/log/$(docker exec openlibrary-solr-updater-1 cat /solr-updater-data/solr-update.offset)?limit=1"
+```
+
+### Troubleshooting
+
+#### Admin force Solr update endpoint
+
+https://openlibrary.org/admin/solr
+
+Check the current value of the key populated by this endpoint that the updater script checks:
+https://openlibrary.org/admin/inspect/store?key=solr-force-update
+
+**NOTE:** this key is currently overwritten each time the form is submitted, so it is possible the updater script won't get the values if there are sequential POSTs.
+
+#### Solr updater script stuck in an infinite loop
 The [scripts/solr_updater.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/solr_updater.py) file listens for edits from infogami, and updates the solr index accordingly.
 
 - Forcing a restart if solr-updater stuck in restart loop:
@@ -41,41 +60,6 @@ docker run --rm -it -v openlibrary_solr-updater-data:/solr-updater-data openlibr
 docker run --rm -it -v openlibrary_solr-updater-data:/solr-updater-data openlibrary/olbase:latest bash -c 'echo "2022-06-06:0" > /solr-updater-data/solr-update.offset'
 ```
 
-### Expected behavior and timings
-
-Changes to the Solr index are _supposed_ to be visible on the live Open Library site in no more than [about 15 minutes](https://github.com/internetarchive/openlibrary/blob/c4d877ee6410df6f70ab45718baebe52fdf366ba/openlibrary/templates/admin/solr.html#L21), but the latency depends on how far the Solr updater is behind in processing the database update queue.
-
-The updater script looks for document changes in the Infobase logs at `http://<internal-infobase-url>/openlibrary.org/log` and has _(possibly incomplete)_ logic to update Solr accordingly.
-
-The updater script checks for updates every [5 seconds](https://github.com/internetarchive/openlibrary/blob/0748d2ab0db7966fd82b0a84572edac293e08d24/scripts/new-solr-updater.py#L268) and sends an update + commit to Solr every [100 updates, or 60 seconds](https://github.com/internetarchive/openlibrary/blob/0748d2ab0db7966fd82b0a84572edac293e08d24/scripts/new-solr-updater.py#L198) whichever occurs first.
-
-Here's a useful solr command for checking how far behind solr-updater is:
-
-```sh
-curl "ol-home:7000/openlibrary.org/log/$(docker exec openlibrary_solr-next-updater_1 cat /solr-updater-data/solr-update.offset)?limit=1"
-```
-
-### Admin force Solr update endpoint
-
-https://openlibrary.org/admin/solr
-
-Check the current value of the key populated by this endpoint that the updater script checks:
-https://openlibrary.org/admin/inspect/store?key=solr-force-update
-
-**NOTE:** this key is currently overwritten each time the form is submitted, so it is possible the updater script won't get the values if there are sequential POSTs.
-
-### Log locations:
-
-* Solr updater script log: `/var/log/upstart/ol-solr-updater.log`
-* Solr itself: `/var/log/tomcat6/catalina.out`
-
-Here's a useful command for counting log output:
-
-```sh
-ssh -A ol-solr2
-sudo bash
-cat /var/log/tomcat6/catalina.2020-05-13.log | grep '^May' | cut -c1-24 | sed 's/:[0-9][0-9] //' | sort | uniq -c > tmp.txt
-```
 ## Solr development
 
 ### Query Solr directly on dev instance
