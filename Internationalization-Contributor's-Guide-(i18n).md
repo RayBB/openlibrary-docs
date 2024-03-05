@@ -57,6 +57,8 @@ If changes have been made to the `.pot` file, to reflect those changes to a give
 docker compose run --rm -uroot home ./scripts/i18n-messages update [CODE]
 ```
 
+If you don't have a Docker set-up, you can also use [Poedit](https://poedit.net/) to merge PO and POT via 'Catalog -> Update from POT file' and use it to review and translate changed and missing strings.
+
 See our [i18n guideline in the wiki](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#internationalization-i18n---for-translators) for important and useful tips.
 
 If you are updating an existing translation, run `scripts/i18n-messages update` to merge the new msgids from the `i18n/messages.pot` message templates into your `i18n/<lang>/messages.po` message catalog. Review all `fuzzy` matches and either remove the `fuzzy` keyword, if a correct match, or update and remove the `fuzzy` keyword. Make sure it's an exact match before removing the `fuzzy` label. Sometimes there are minor, but important changes like datatype changes, e.g. `%(count)s` to `%(count)d`. Also review all entries with an empty `msgstr` and add correct translations for them. 
