@@ -2,6 +2,8 @@ The Internet Archive’s Open Library Fellowship is a flexible, self-designed in
 
 Most fellowship programs last one or more months and are flexible, according to the preferences of contributors and availability of mentors. We typically choose fellows based on their exemplary and active participation, conduct, and performance within the Open Library community. The Open Library staff typically only accepts 1 or 2 fellows at a time to ensure participants receive plenty of support and mentor time. 
 
+[List of Fellowship Opportunities](https://github.com/orgs/internetarchive/projects/9/views/1)
+
 ## Funding Opportunities
 
 Occasionally, funding for fellowships is made possible through Google Summer of Code or Internet Archive Summer of Code & Design. 
