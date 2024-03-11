@@ -180,6 +180,55 @@ DON'Ts:
 * Don't update the translated message catalogs. Because the merging process is inexact, it's better for the translators to handle this so that they can validate the results. Do update the message templates though (ie `messages.pot`)
 * Don't hard code in `1` for singular nouns (e.g. `1 edition`) because in some languages, `0 editions` is singular and translated as `0 edition`. Instead, substitute a variable, as you would with the plural. E.g. `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` and **not** `$ungettext("There is 1 person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)`
 
+## Using Localized Strings in Javascript Code
+
+Unlike our Python code and HTML templates, there is currently no way to extract strings from our Javascript code for localization.  To bypass this limitation, we have been including localized strings in a `data-i18n` attribute.
+
+As an example, the following code will display the localized `Hello World` message in the `.greeting-example` span when the `greeting.html` template is rendered on a page.
+
+In the `greeting.html` template, we first create a `dict` that will contain all of the localized UI strings that will be used by the client-side code.  In this case, we only have a single string.
+This `dict` is then added to the root element of the template in a `data-i18n` attribute.  The `json_encode` call simply converts a Python `dict` to a JSON string.
+
+`/openlibrary/templates/greeting.html`:
+```
+$def with ()
+
+$ i18n_strings = {
+$   'greeting': _('Hello World')
+$ }
+
+<span class="greeting-example" data-i18n="$json_encode(i18n_strings)"></span>
+```
+
+In the main `index.js` file, we add code that initializes the `.greeting-example` element if it
+exists on the page.
+
+`js/index.js`:
+```
+const greetingElement = document.querySelector('.greeting-example')
+if (greetingElement) {
+    import('greeting')
+        .then((module) => module.initGreeting(greetingElement))
+}
+```
+
+In `initGreeting`, we parse the value of `data-i18n` and set the `textContent` of the greeting
+span to the localized "Hello World" string.
+
+`js/greeting.js`:
+```
+/**
+ * Sets text content of the given element to the localized greeting.
+ *
+ * @param {HTMLElement} greetingElement
+ */
+export function initGreeting(greetingElement) {
+    const i18nStrings = JSON.parse(greetingElement.dataset.i18n)
+    greetingElement.textContent = i18nStrings.greeting
+}
+```
+
+
 # Internationalization (i18n) Page Conversion Guide
 Internationalization (i18n) pages are specialized pages within the Infogami platform that enable users to contribute translations. This guide outlines the process of converting a standard page into an i18n page, using the example of converting https://openlibrary.org/librarians to its English (`en`) i18n version.
 
