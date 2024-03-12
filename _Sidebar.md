@@ -15,7 +15,6 @@
 
 **Developer Walkthroughs**  
 * [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
-* [Adding fields to Solr search engine](https://archive.org/details/openlibrary-tour-2020/2022-01-10-openlibrary-adding-fields-to-solr-search-engine.mp4)  
 * [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 * [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 * [Using cache](https://github.com/internetarchive/openlibrary/wiki/Using-Cache)
