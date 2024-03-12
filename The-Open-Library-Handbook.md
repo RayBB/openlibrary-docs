@@ -16,7 +16,7 @@ As of 2024, the Open Library program is directed by Mek Karpeles and staffed by 
   * [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
   * [Search Engine](https://github.com/internetarchive/openlibrary/wiki/Solr)
   * [Front-end](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide)
-  * [Imports](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit0
+  * [Imports](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit0)
 5. Teams
   * [Design](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit)
   * [Librarianship](https://openlibrary.org/librarians)
@@ -24,7 +24,6 @@ As of 2024, the Open Library program is directed by Mek Karpeles and staffed by 
 6. [Internationalization](https://github.com/internetarchive/openlibrary/wiki/Internationalization-Contributor's-Guide-(i18n)) and [Accessibility]()
 6. [Responsibilities Matrix](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye)
   * [Deployments](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide)
-7. Sustainability
 
 # About Open Library
 
