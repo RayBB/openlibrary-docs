@@ -37,7 +37,7 @@ Next, we have to initialize the site on the server's end, to be able to properly
 
 At this point, the account should be activated. However, we're not quite finished. In order to login, we have to edit how the program spoofs the information that would normally be returned by the internet archive. 
 
-##Step 3: Logging in
+## Step 3: Logging in
 In openlibrary.plugins.upstream.account.py, there should be a class called 'xauth'. 
 
 ![image](https://github.com/internetarchive/openlibrary/assets/131627264/439fe897-1a09-4914-b2fd-59f5ab9fd95f)
