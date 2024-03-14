@@ -40,7 +40,7 @@ At this point, the account should be activated. However, we're not quite finishe
 ##Step 3: Logging in
 In openlibrary.plugins.upstream.account.py, there should be a class called 'xauth'. 
 
-![image](https://github.com/internetarchive/openlibrary/assets/131627264/c716ca21-b125-4599-9993-c806ce903fdd)
+![image](https://github.com/internetarchive/openlibrary/assets/131627264/439fe897-1a09-4914-b2fd-59f5ab9fd95f)
 
 In order to log-in to an account,  result["email"] on line 120 (on this image), must be set to the account of the email that you are logging into. 
 
