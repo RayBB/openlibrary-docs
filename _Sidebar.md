@@ -18,7 +18,7 @@
 * [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 * [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 * [Using cache](https://github.com/internetarchive/openlibrary/wiki/Using-Cache)
-
+* [Creating and Logging into New Users](https://github.com/internetarchive/openlibrary/wiki/Creating-and-Logging-in-as-a-new-user-on-your-local-client.)
 ---
 
 **Other Portals**
