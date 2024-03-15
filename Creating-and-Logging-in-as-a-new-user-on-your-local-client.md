@@ -54,6 +54,6 @@ In `openlibrary.plugins.upstream.account.py`, there should be a class called `xa
 
 ![image](https://github.com/internetarchive/openlibrary/assets/131627264/439fe897-1a09-4914-b2fd-59f5ab9fd95f)
 
-In order to log-in to an account,  result['email'] on line 120 (on this image), must be set to the account of the email that you are logging into. 
+In order to log-in to an account,  result['itemname'] on line 121 (on this image), must be set to the account's username that you are trying to log into.
 
-Once this is set, you should be able to log into that account with the proper email on your typical log-in screen. Remember; in order to access your admin account, you'll have to change the email in 'xauth' back to `openlibrary@example.org`.
+Once this is set, you should be able to log into that account with the same email on your typical log-in screen. Remember; in order to access your admin account again, you'll have to change the item name back to `@openlibrary`.
