@@ -6,9 +6,9 @@
 
 # Welcome
 
-Google Summer of Code (GSoC) is a global program (paid mentorship program) focused on bringing more student developers into open source software development. Students work with an open source organization on a 3 month programming project during their break from school. You can read more [on Google's GSoC website](https://summerofcode.withgoogle.com). The program is run by Google, which selects aligns organizations to mentor students on projects.
+Google Summer of Code (GSoC) is a global program (paid mentorship program) focused on bringing more developers into open source software development. Contributors with an open source organization on a 3 month programming project during their break from school. You can read more [on Google's GSoC website](https://summerofcode.withgoogle.com). The program is run by Google, which selects aligns organizations to mentor contributors on projects.
 
-Candidates (active students) apply by submitting an application to one or more participating/mentoring organization. Open Library GSoC projects may span everything from writing bots to imports or organize books, to new crowd-source programs which allow patrons to fund and sponsor books they love for the library.
+Candidates [see eligibility requirements](https://buildyourfuture.withgoogle.com/programs/summer-of-code) apply by submitting an application to one or more participating/mentoring organization. Open Library GSoC projects may span everything from writing bots to imports or organize books, to new crowd-source programs which allow patrons to fund and sponsor books they love for the library.
 
 ## History
 
