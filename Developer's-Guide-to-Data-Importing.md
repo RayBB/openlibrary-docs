@@ -152,24 +152,44 @@ Assuming you have API write access, you can use ImportBot's [`import_ocaids`](ht
 
 ## Importing JSON
 
-Sufficiently privileged patrons can POST JSON following the https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json scheme to https://openlibrary.org/api/import
+Sufficiently privileged patrons can POST JSON to production at https://openlibrary.org/api/import by following the [relevant schema](https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json). All developers can also POST the same JSON to their local development server at http://localhost:8080/api/import.
 
-e.g.
-```
-from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.util.retry import Retry
+### Production Versus Development imports
+As mentioned above, one can generally switch between importing to production and development by changing the URL from https://openlibrary.org/api/import to http://localhost:8080/api/import, but watch out for different usernames, passwords, sessions, etc.
+
+### Using [openlibrary-client](https://github.com/internetarchive/openlibrary-client):
+```python
+import json
 from olclient import OpenLibrary
-ol = OpenLibrary() # Requires auth
+ol = OpenLibrary() # Requires auth: see https://github.com/internetarchive/openlibrary-client/blob/master/README.md
 url = 'https://openlibrary.org/api/import'
-data = {"authors": [{"name": "hu, yang"}], "isbn_13": ["9781099972591"], "languages": ["eng"], "number_of_pages": "150", "publish_date": "2019", "publishers": ["Independently Published"], "source_records": ["bwb:9781099972591"], "title": "Easy Learning Design Patterns Javascript : Build Better Coding and Design Patterns", "weight": "0.395"} # See: https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json
+data = {"authors": [{"name": "hu, yang"}], "isbn_13": ["9781099972591"], "languages": ["eng"], "number_of_pages": "150", "publish_date": "2019", "publishers": ["Some Publisher"], "source_records": ["bwb:9781099972591"], "title": "Easy Learning Design Patterns Javascript : Build Better Coding and Design Patterns", "weight": "0.395"} # See: https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json
 r = ol.session.post(url, data=json.dumps(data))
 ```
 
-## Using Javascript
+### Using `curl` (local development example):
+First, login to the local development environment at http://localhost:8080 and grab a session cookie from your web browser's storage. In Firefox this is F12 -> Storage -> Cookies (on the left) -> http://localhost:8080 -> the `session` key in the `name` column (e.g. `/people/openlibrary,2024-03-20T03:29:32,faf39$5a657abb15a5c469936ec86f420f7b39`)
+
+Then in your shell:
+```sh
+❯ export OL_COOKIE='session=<your session, as found above>'
+❯ curl -X POST http://localhost:8080/api/import -H "Content-Type: application/json" -H "Cookie: $OL_COOKIE" -d '{
+    "title": "Super Great Book",
+    "authors": [{"name": "Author McAuthor", "birth_date": "1806", "death_date": "1871"}],
+    "isbn_10": ["1234567890"],
+    "publishers": ["Burgess and Hill"],
+    "source_records": ["amazon:123456790"],
+    "subjects": ["Trees", "Peaches"],
+    "description": "A book with a description",
+    "publish_date": "1829"
+}'
+{"authors": [{"key": "/authors/OL15A", "name": "Author McAuthor", "status": "created"}], "success": true, "edition": {"key": "/books/OL19M", "status": "created"}, "work": {"key": "/works/OL9W", "status": "created"}}
+```
+### Using Javascript
 
 If you are logged-in within the browser, you may use the following code to attempt an import:
 
-```
+```javascript
 var bookdata = {'title': 'Ikigai', 'authors': [{'name': 'Souen, Chiemi'}, {'name': 'Kaneshiro, Flor'}], 'publish_date': 'Aug 17, 2021', 'source_records': ['amazon:195302114X'], 'number_of_pages': 40, 'publishers': ['Brandylane Publishers, Inc.'], 'cover': 'https://m.media-amazon.com/images/I/610-Q5YXZGS._SL500_.jpg', 'isbn_10': ['195302114X'], 'isbn_13': ['9781953021144'], 'physical_format': 'hardcover', 'full_title': "Ikigai : Life's Purpose", 'subtitle': "Life's Purpose", 'notes': "Source title: Ikigai: Life's Purpose"}
 
 fetch("https://openlibrary.org/api/import?debug=true", {
@@ -180,6 +200,29 @@ fetch("https://openlibrary.org/api/import?debug=true", {
     },
     body: JSON.stringify(bookdata)
 }).then(response => response.json()) .then(response => console.log(JSON.stringify(response)))
+```
+
+### Special Authentication for `openlibrary-client` and Local Development
+#### Using [openlibrary-client](https://github.com/internetarchive/openlibrary-client):
+```python
+import json
+from collections import namedtuple
+Credentials = namedtuple("Credentials", ["username", "password"])
+credentials = Credentials("openlibrary@example.com", "admin123")
+ol = OpenLibrary(base_url="http://localhost:8080", credentials=credentials)
+url = "http://localhost:8080/api/import"
+data = {
+    "title": "Beyond The Hundredth Meridian: John Wesley Powell And The Second Opening Of The West",
+    "authors": [{"name": "Wallace Stegner"}],
+    "isbn_13": ["9780803291287"],
+    "languages": ["eng"],
+    "publishers": ["University of Nebraska Press"],
+    "publish_date": "1954",
+    "source_records": ["amazon:B0016VINB0"],
+}
+r = ol.session.post(url, data=json.dumps(data))
+r.text
+'{"authors": [{"key": "/authors/OL14A", "name": "Wallace Stegner", "status": "created"}], "success": true, "edition": {"key": "/books/OL18M", "status": "created"}, "work": {"key": "/works/OL8W", "status": "created"}}'
 ```
 
 ## MARC Records
