@@ -99,9 +99,13 @@ There are multiple paths by which data can be imported into Open Library.
 
 ## Import by ISBN
 
-If you know the isbn of a book, you can import it using the `https://openlibrary.org/isbn/:isbn` API.
+### Individual ISBNs
+If you know the ISBN of a book, you may be able to import it using the `https://openlibrary.org/isbn/:isbn:` API. This API walks through three steps:
+1. First, the Open Library database is searched for the ISBN in question, and if a match is found, that matched edition is returned;
+2. If no matching edition is found, the `import_item` table will be checked for `staged` entries that match, an import will be attempted based on that match, and a new edition if any will be returned;
+3. Finally, if no matches have been found yet, BookWorm (the "affiliate-server") will be queried for matches; if a match is found, the associated metadata is `staged` for import at a later date. At this step the server will simply reply that the page, `/isbn/<some isbn>`, does not exist. If `high_priority=true` is passed with the query to `/isbn` (e.g. (`/isbn/1234567890?high_priority=true`), then an import will be attempted and the resulting edition returned, if any.
 
-### Submitting ISBNs in Bulk
+### Submitting ISBNs in Bulk (not currently an option)
 
 Ultimately, we'd like to create an ongoing ISBN import pipeline which discovers book isbns as they are published and imports their metadata into openlibrary.org. This requires 3 steps:
 
