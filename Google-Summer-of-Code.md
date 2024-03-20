@@ -1,4 +1,4 @@
-[**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/organizations/5089442861154304/)
+[**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/programs/2024/organizations/internet-archive)
 
 [**See Open Library's GSoC 2024 Proposal**](https://docs.google.com/document/d/1Wh3tAxS4T9eKLa5x8iILft964v8zriaq-hKcu300Lg4/edit#heading=h.mn497pr3rien)
  
