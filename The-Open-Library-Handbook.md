@@ -31,6 +31,8 @@ You can read more about the vision and mission of the Open Library [here](https:
 
 ## Frequently Asked Questions
 
+Don't see what you're looking for? Check [questions asked by contributors on Github](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+cache+label%3A%22Type%3A+Question%22+) or [submit your own question](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Question%2C+Needs%3A+Triage%2C+Needs%3A+Lead%2C+Needs%3A+Community+Discussion&projects=&template=question_template.md&title=)
+
 - [How do I set up the Open Library app locally?](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)
   - What process should I follow if I encounter a problem when building with docker?
 - How do I find, claim, and work on a [good first issue](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+First+Issue%22+)?
