@@ -2,7 +2,7 @@ For programmatically bulk importing new books and authors into Open Library.
 
 ## Start here
 
-Watch [this video](https://archive.org/details/openlibrary-tour-2020/ol_imports_comprehensive.mp4) about how Open Library import pipeline works.
+Watch [this video](https://archive.org/details/openlibrary-tour-2020/ol_imports_comprehensive.mp4) about how Open Library import pipeline works. Staff should see [these import notes](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit).
 
 ## The Import Pipeline
 
