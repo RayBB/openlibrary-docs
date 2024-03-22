@@ -11,7 +11,7 @@
 6. [Solr Search Engine Manual](Solr)  
 7. [Importing Book Records](Developer's-Guide-to-Data-Importing)  
 8. [Writing Bots](Writing-Bots) 
-9. [Google Summer of Code](Google-Summer-of-Code) and [Fellowships](Fellowships)  
+9. [Google Summer of Code](Google-Summer-of-Code) and [Fellowships](The-Open-Library-Handbook#fellowships)  
 
 **Developer Walkthroughs**  
 * [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
