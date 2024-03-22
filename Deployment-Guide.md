@@ -1,1 +1,1 @@
-This page has moved internally to https://github.com/internetarchive/olsystem/wiki/Deployment
+This page has moved internally to https://github.com/internetarchive/olsystem/wiki/Deployments
