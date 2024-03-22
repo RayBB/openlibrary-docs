@@ -26,7 +26,7 @@
 4. [Solr Search Engine Manual](Solr)  
 5. [Imports](Developer's-Guide-to-Data-Importing)  
 6. [Writing Bots](Writing-Bots)  
-7. [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions), [Code Recipes](Recipes), & [More Documentation](More_Documentation)  
+7. [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions), [Code Recipes](Recipes), & [More Documentation](Documentation)  
 
 **Developer Guides**  
 * [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
