@@ -8,7 +8,7 @@
 3. [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)  
 4. [Responsibilities Matrix](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye)  
 
-[**Getting Started & Contributing**]((https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
+[**Getting Started & Contributing**](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
 1. [Setting up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)  
 2. [Using `git` in Open Library](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 3. [Finding good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22)  
