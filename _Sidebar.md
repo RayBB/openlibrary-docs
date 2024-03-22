@@ -1,3 +1,5 @@
+# Table of Contents
+
 [**About Open Library**](#about-open-library)  
 1. [Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)    
 2. [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)  
