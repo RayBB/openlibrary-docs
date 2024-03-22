@@ -10,6 +10,7 @@ As of 2024, the Open Library program is directed by Mek Karpeles and staffed by 
 
 1. [About Open Library](#About_Open_Library)
 2. [Contributing](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
+  * [Fellowship Opportunities](#Fellowships)
 3. [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)
 4. Codebase & Architecture
   * [Infogami](https://openlibrary.org/dev/docs/infogami)
@@ -46,51 +47,18 @@ Don't see what you're looking for? Check [questions asked by contributors on Git
 - How do I find the right [CSS file](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#working-with-css) to add style rules?
 - [How do I rebuild css & js assets after I make changes?](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#building-css-and-js)
 
+# Fellowships
 
-# Open Library Community Calls
+The Internet Archive’s Open Library Fellowship is a flexible, self-designed independent study which pairs volunteers with mentors to lead development of a high impact feature for OpenLibrary.org.
 
-Welcome to the Open Library Community Call! We're thrilled to have you join our community. Whether you're a long-time member or brand new, we encourage everyone to participate in these calls to discuss the evolution of OpenLibrary.org.
+Most fellowship programs last one or more months and are flexible, according to the preferences of contributors and availability of mentors. We typically choose fellows based on their exemplary and active participation, conduct, and performance within the Open Library community. The Open Library staff typically only accepts 1 or 2 fellows at a time to ensure participants receive plenty of support and mentor time. 
 
-If you haven't already **please fill out the appropriate form on the [Volunteers Page](https://openlibrary.org/volunteer).**
+[List of Fellowship Opportunities](https://github.com/orgs/internetarchive/projects/9/views/1)
 
-## Important Links
+## Funding Opportunities
 
-- [Zoom Meeting](https://zoom.us/j/369477551) for Community Call
-- [2024 Community Calls Meeting Notes](https://docs.google.com/document/d/11jMuWxaGClzK29VCK-ZhxFfk2737c3VynI-LJiraCJo/edit)
+Occasionally, funding for fellowships is made possible through Google Summer of Code or Internet Archive Summer of Code & Design. 
 
-## Agenda
+## Expressing Interest
 
-Our calls typically follow this agenda:
-
-1. Welcome
-    - Intros for new people
-    - Shoutouts and wins in the community
-2.  Review unresolved action items
-3.  Weekly Updates
-    - Share what you did last week
-    - What you plan to do this week (or ask for ideas)
-    - Blockers (such as waiting for code review)
-    - Leads can make sure a feature is one that the community agrees on
-4.  Open Mic: A time for any additional topics, questions, or discussions like:
-    - Does it make sense to use this beta library?
-    - Where in the codebase does this happen?
-    - Feedback on new team page
-
-If there's a longer topic you'd like to discuss during the Community Call, please add it to the Agenda under "Open-Mic Topics."
-
-## Types of Calls
-
-| Type of Call        | Schedule                                                                             | Description                                         |
-| ------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| Community Call      | Every Tuesday at [9 AM Pacific](https://time.is/compare/0900_in_San_Francisco)       | All community members are welcome to participate.   |
-| Design Call         | Every Friday at [9 AM Pacific](https://time.is/compare/0900_in_San_Francisco)        | For those interested in design-related discussions. |
-| Communications Call | Monthly, Thursdays at [10 AM Pacific](https://time.is/compare/1000_in_San_Francisco) | Geared towards the communications team.             |
-
-Note: Design and Communications calls usually have different Zoom links.
-
-## Roles and Responsibilities
-A member of the community will take on each of these roles, which are rotated regularly.
-
-- Document Secretary: Responsible for updating the weekly chart, copying the minutes template, and sending reminders about the Community Call.
-- Facilitator: Guides the flow of the call.
-- Notetaker: Records the meeting minutes.
+If you’re interested in contributing as an Open Library Fellow and receiving mentorship, you can [apply using this form](https://docs.google.com/forms/d/1mVTLDfDd0RM7c7ZaX6qyuTW3A3tZ4BafuzxvkYf2NDE/edit) or email openlibrary@archive.org for more information.
