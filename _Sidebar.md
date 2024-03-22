@@ -1,4 +1,4 @@
-# Table of Contents
+**Table of Contents**
 
 [**About Open Library**](#about-open-library)  
 1. [Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)    
