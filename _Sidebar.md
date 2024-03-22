@@ -1,11 +1,10 @@
 **[← Back Home](Home)**  
 
 [**About Open Library**](#about-open-library)  
-1. [Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)  
-2. [The Team](#meet-the-team)  
-3. [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)  
-4. [Responsibilities Matrix](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye)  
-5. [HOWTO: Project Management](#project-management)  
+1. [Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)    
+2. [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)  
+3. [Responsibilities Matrix](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye)  
+4. [HOWTO: Project Management](#project-management)  
 
 [**Getting Started & Contributing**](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
 1. [Setting up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)  
