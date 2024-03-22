@@ -1,42 +1,6 @@
-Welcome to the Open Library Handbook.
+Welcome to the Open Library Handbook!
 
 For a top-level executive summary of the Open Library project, please see the [Main Open Library Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3). This document contains a year-by-year breakdown of board reports, roadmaps, community call documents, a project index, and top-level team documents spanning engineering, design, communications, and more.
-
-# Table of Contents
-
-1. [About Open Library](#About_Open_Library)
-  * [Meet the Team](#Meet_The_Team)
-  * [Program Main Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)
-  * [Projects Directory](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)
-  * [Where to look for Documents](https://github.com/internetarchive/openlibrary/wiki/Documentation)
-2. [Getting Started & Contributing](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)
-  * [Set up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)
-  * [Use `git` in Open Library](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)
-  * [Find good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22) and
-  * [Submit good Pull Requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)
-  * [Gitter Chat](https://gitter.im/theopenlibrary/Lobby)
-  * [Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
-  * [Join the Community Slack](https://openlibrary.org/volunteer)
-  * [Attend Weekly Community Calls @ 9a PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call)  
-3. [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)
-4. Codebase & Architecture
-  * [Infogami](https://openlibrary.org/dev/docs/infogami)
-  * [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
-  * [Search Engine](https://github.com/internetarchive/openlibrary/wiki/Solr)
-  * [Front-end](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide)
-  * [Imports](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit)
-  * [Recipes](Recipes)
-5. Accessibility
-  * [Internationalization](#Internationalization)
-6. [APIs & Client Libraries](https://openlibrary.org/developers/api)
-  * [Official Python openlibrary-client](https://github.com/internetarchive/openlibrary-client)
-7. Teams
-  * [Design](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit)
-  * [Librarianship](https://openlibrary.org/librarians)
-  * [Communications](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit)
-6. [Internationalization](https://github.com/internetarchive/openlibrary/wiki/Internationalization-Contributor's-Guide-(i18n)) and [Accessibility]()
-6. [Responsibilities Matrix](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye)
-  * [Deployments](https://github.com/internetarchive/openlibrary/wiki/Deployment-Guide)
 
 # About Open Library
 
@@ -48,11 +12,49 @@ As of 2024, the Open Library program is directed by Mek Karpeles and staffed by 
 
 # [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)
 
-NOTE: The following should be merged with the [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management) guide.
+[A 2022 Video of why we plan and how](https://archive.org/details/mek-open-library-planning)
+
+## Overview of Meetings
+
+### Weekly Calls
+
+- The internal staff ABC (Archive Book Catalog) Team call (1h, Monday @ 12pm PT) [2021](https://docs.google.com/document/d/146GDpF6RjTIYFksve8ic4og0xZVauSVHXQERxpLZtPI/)
+- The public Open Library [Community Call](https://github.com/internetarchive/openlibrary/wiki/Community-Call)
+- M/W engineering standups at 11am (20min)
+- Weekly 1:1's (45min)
+
+### Yearly Planning
+
+Open Library does planning on a yearly cadence and involved the community in its planning process. These yearly plans are distilled into executive summaries which are then vetted by the community and ultimately presented for management and the board for approval.
+
+In November/December, the Open Library community works on its yearly Planning Document.
+* [2021](https://docs.google.com/document/d/1U2zolE0q_H4ydO4ss4RvD9Tv-DJpNMs4T9k8Qxef20A/edit#heading=h.exy6eztn4j46), [2020](https://docs.google.com/document/d/1gP5q0W3S2Fj5GMJMzi064CEy1zWzyl8Lzjgws-7lpt4/edit), [2019](https://docs.google.com/document/d/16rxDNLnVBbkrgzUNd2YVFheB4UtAe63Y-dX_5MHSrY8/edit), [2018](https://docs.google.com/document/d/1VEoc0fMOPwrt_YKplaGO5_Q5MRye0xQtGTsTPuDrtcc/edit), [2017](https://docs.google.com/document/d/1aE_0uQuCa_pHNxY_rcbpMRaNI6Nrf9KLTgGcYoQBgfI/edit), and the rest [https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/](here).
+
+This gets turned into a yearly Executive Priorities Roadmap which gets submitted to the board
+
+### Monthly Milestone Planning
+
+Each week (presently on Monday [2021]) the internal team has an ABC (Archive Book Catalog) call. On the last week of each month, during our weekly staff ABC calls, Open Library staff meets to plan the upcoming monthly [Milestone](https://github.com/internetarchive/openlibrary/milestones). This process is informed by (a) the yearly Roadmap, (b) comments from stakeholders -- including management, community members, and partners -- and (c) high priority items on our issue tracker. During the milestone planning call, we calculate a summary/snapshot of how we performed, we renamed the current milestone to `Sprint YYYY-MM` and then close/archive it, and move all its remaining items to the rolling [Next Proposed Milestone](https://github.com/internetarchive/openlibrary/milestone/33). We then create a new empty Milestone called "Active Milestone" for the upcoming sprint and go through [Next Proposed](https://github.com/internetarchive/openlibrary/milestone/33) to source issues. Each issue on the milestone must have an assignee and it must be clear to all parties what is expected/necessary in order for the issue to be resolved.
+
+### Quarterly Review
+
+Every three months (before the end of the quarter) we use our ABC weekly staff meeting to review our yearly planning document. This includes evaluating our progress, blockers or circumstances which may merit a change of prioritization, and communication of changes to stakeholders.
+
+### Project-based Planning
+
+When we have large/epic projects spanning multiple issues or individuals, we typically use a google doc to flesh out the initial idea, as well as a placeholder github issue with the `epic` label. The [Book Sponsorship Program](https://docs.google.com/document/d/1Ym9RRNB5_k7I7z6ZehKKn0TISYgF1yofE-rtw6NtMWM/edit#heading=h.re0jke5xmq3c), our [Migration to Python 3](https://docs.google.com/document/d/1VoSiTzsO3r2Qlhs5OoRFfbZR_u1ft8uR-72g_Mz175Y/edit), the [Canonical Books Page Re-Design](https://docs.google.com/document/d/1DDb2VX-otD5jPMbF_6ccI_wv8nrWMpNAWSBc4kXud2k/edit), and [Community Book Tags Project](https://docs.google.com/document/d/13Qrxfnd7BbSoMyRIAMM1wekr78sOVbaZpaOfH03tHe0/edit#) are four such examples. Once the proposal outline has been reviewed with stakeholders, we update the placeholder Epic issue to include sub-issues which may be added to upcoming milestones, as deemed appropriate. Each project of this size is assigned a team [Lead](https://github.com/internetarchive/openlibrary/wiki/Responsibilities-of-Leads) who is responsible for overseeing its progress and coordinating with contributors. [Leads](https://github.com/internetarchive/openlibrary/wiki/Responsibilities-of-Leads) are invited to use whatever project management works best for their style, though a popular approach is getting permission to registering a new [Project Board](https://github.com/internetarchive/openlibrary/projects).
+
+### Long Term Vision (5y)
+
+In 2018, Mek, Drini Cami, and Charles Horn, went through the process of high-level, long-term strategic planning. Some internal documents are available, as well as copious internal notes. We also have years of notes from previous members of the Open Library team. At this point, they have not been compiled into a single publicly available 5-year proposal. 
+
+As it evolves, our [5-10yr vision will be documented here](https://docs.google.com/document/d/1q_jAcdEc705H3gsZv_Yt_08c8YFmefdSvMbiljc2O8g/edit#)
+
+## Using Github
 
 We drive most of our work on the Open Library project off [GitHub Issues](https://github.com/internetarchive/openlibrary/issues) in the InternetArchive/OpenLibrary [GitHub repo](https://github.com/internetarchive/openlibrary).
 
-## Milestones
+### Milestones
 
 Much of our work is done by volunteers. So we plan very lightly, by year and by quarter, given the resources we have available. As new volunteers join, plans may change to accommodate their skills and interests.
 
@@ -60,7 +62,7 @@ Things we'd like to get done during a given year get the milestone for that year
 
 Milestones are closed when their deadline arrives. Issues associated with that milestone that are not done get rescheduled (the milestone is changed) or [backlogged](#state) (labeled `State: Backlogged`).
 
-## Assignee
+### Assignee
 
 The assignee of an issue is the person responsible for its completion.
 
@@ -72,7 +74,7 @@ If multiple folks are working together to solve a problem, use @mentions in the 
 
 Any open bug that is unowned is in need of triage.
 
-## Labeling Issues
+### Labeling Issues
 
 We reserve a set of labels for use with Github issues, to assist with issue handling and project management for OpenLibrary.
 
@@ -179,8 +181,7 @@ Epics and subtasks are used when we want to separate out the ownership, comment 
 
 Note that `Bug`, `Feature`, `Question`, `Refactor`, `Subtask` are mutually exclusive.  Every issue (post-triage) should have one of these.  If an issue is labeled `Epic`, it probably also should have a `Feature` or `Refactor` label.
 
-
-#### State:
+#### State
 
 Use these labels to distinguish between issues that we're actively working on, those that we plan to work on, and those that seem to be good ideas that we'll consider when we have the additional time and resources required.
 
@@ -199,7 +200,7 @@ If an issue is "State: Scheduled", it must have a milestone that indicates by wh
 
 If an issue is `Priority 0` or `Priority 1`, and the state is not `Work In Progress`, something is wrong, and alarms should sound.
 
-#### Needs:
+#### Needs
 
 These labels indicate that an issue or pull request is stuck because the owner needs someone to respond - they'll add comments to the issue saying what exactly they need. 
 
@@ -222,7 +223,7 @@ If you are the owner of an issue and add this label, always add a comment that i
 
 Remember to remove this label once the need is met and the issue is unstuck.
 
-#### Close:
+#### Close
 
 Issues typically lead to pull requests to modify the repo in order to resolve the bug.  
 It is considered good form, immediately prior to closing a bug, to add a label indicating if it was closed for any of the following reasons.
@@ -285,7 +286,7 @@ Color|Label|Description
 
 It is preferred that an issue only have one `Affects:` label, but we're not religious about it. If you notice that an issue affects multiple areas in the above list, you may want to split it into multiple issues, one per area.  If it makes sense to resolve them independently, that's enough.  If they all need to be resolved in a coordinated fashion, create an `Type: Epic` issue which can remain open until all the subissues are closed.
 
-#### Module:
+#### Module
 
 These labels identify the specific module or service that the issue relates to. Often this corresponds to a particular directory or file or interface or class present in the repo hierarchy. This list is expected to grow.
 
@@ -324,7 +325,7 @@ For example, Charles Horn creates his own labels with prefix `CH: ` and color #1
 
 Labels that are grey and/or start with a tilde `~` are *deprecated*.  They typically are not used much, and shouldn't be added to issues going forward.
 
-### Finding Issues by Label
+#### Finding Issues by Label
 
 - The default [issues page](/internetarchive/openlibrary/issues) presents several search fields.  There is one at the very top, for searching the repository or all of github. There is another one under the `issues` tab that searches through the issues.  To the right of the issues filter is the labels button, which gives you a "labels list" to browse and drill down to issues.  <img width="600" alt="Issues Page Snippet" src="https://user-images.githubusercontent.com/6502462/57257705-7bece100-705a-11e9-8272-3879419dedd3.png">
 
