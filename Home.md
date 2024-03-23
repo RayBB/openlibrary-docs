@@ -34,7 +34,7 @@ As of 2024, the Open Library program is directed by Mek Karpeles and staffed by 
 Open Library does planning on a yearly cadence and involved the community in its planning process. These yearly plans are distilled into executive summaries which are then vetted by the community and ultimately presented for management and the board for approval.
 
 In November/December, the Open Library community works on its yearly Planning Document.
-* [2021](https://docs.google.com/document/d/1U2zolE0q_H4ydO4ss4RvD9Tv-DJpNMs4T9k8Qxef20A/edit#heading=h.exy6eztn4j46), [2020](https://docs.google.com/document/d/1gP5q0W3S2Fj5GMJMzi064CEy1zWzyl8Lzjgws-7lpt4/edit), [2019](https://docs.google.com/document/d/16rxDNLnVBbkrgzUNd2YVFheB4UtAe63Y-dX_5MHSrY8/edit), [2018](https://docs.google.com/document/d/1VEoc0fMOPwrt_YKplaGO5_Q5MRye0xQtGTsTPuDrtcc/edit), [2017](https://docs.google.com/document/d/1aE_0uQuCa_pHNxY_rcbpMRaNI6Nrf9KLTgGcYoQBgfI/edit), and the rest [https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/](here).
+* [2021](https://docs.google.com/document/d/1U2zolE0q_H4ydO4ss4RvD9Tv-DJpNMs4T9k8Qxef20A/edit#heading=h.exy6eztn4j46), [2020](https://docs.google.com/document/d/1gP5q0W3S2Fj5GMJMzi064CEy1zWzyl8Lzjgws-7lpt4/edit), [2019](https://docs.google.com/document/d/16rxDNLnVBbkrgzUNd2YVFheB4UtAe63Y-dX_5MHSrY8/edit), [2018](https://docs.google.com/document/d/1VEoc0fMOPwrt_YKplaGO5_Q5MRye0xQtGTsTPuDrtcc/edit), [2017](https://docs.google.com/document/d/1aE_0uQuCa_pHNxY_rcbpMRaNI6Nrf9KLTgGcYoQBgfI/edit), and the rest [here](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs).
 
 This gets turned into a yearly Executive Priorities Roadmap which gets submitted to the board
 
