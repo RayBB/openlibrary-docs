@@ -1,19 +1,14 @@
-[**About Open Library**](#about-open-library)  
-1. [Directory of Projects](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)  
-2. [Important Documents by Year](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)    
-3. [Responsibilities Matrix](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye)  
-4. [Project Management Overview](#project-management)  
-
 [**Getting Started & Contributing**](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md)  
-1. [Setting up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)  
-2. [Using `git` in Open Library](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
-3. [Finding good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22)  
-4. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
-5. [Submitting good Pull Requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)  
-6. [Asking Questions on Gitter Chat](https://gitter.im/theopenlibrary/Lobby)  
-7. [Joining the Community Slack](https://openlibrary.org/volunteer)  
-8. [Attending Weekly Community Calls @ 9a PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call) 
-9. Applying to [Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
+1. [About Open Library](#about-open-library)  
+2. [Setting up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)  
+3. [Using `git` in Open Library](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
+4. [Finding good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22)  
+5. [Testing Your Code](Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
+6. [Submitting good Pull Requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)  
+7. [Asking Questions on Gitter Chat](https://gitter.im/theopenlibrary/Lobby)  
+8. [Joining the Community Slack](https://openlibrary.org/volunteer)  
+9. [Attending Weekly Community Calls @ 9a PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call) 
+10. Applying to [Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
 
 **Developer Resources**  
 1. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) 
@@ -36,6 +31,11 @@
   * [Official Python openlibrary-client](https://github.com/internetarchive/openlibrary-client)  
 
 ---
+
+[**Project Management**](#project-management)
+1. [Directory of Projects](https://docs.google.com/document/d/1Kliq7Hs8qpTCtAAp7LKSS8ULenX7l5hQADdo3Y6O8Is/)  
+2. [Important Documents by Year](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)    
+3. [Responsibilities Matrix](https://docs.google.com/document/d/1frjwLxsa3J_ZyU8p0glUwLI_K8OL6yF9xRkyylbwktw/edit#heading=h.ff2pas7bc7ye)   
 
 **Other Portals**
 * [Design](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit#heading=h.b20z3avugr8c)  
