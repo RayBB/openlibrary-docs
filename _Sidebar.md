@@ -8,7 +8,7 @@
 7. [Asking Questions on Gitter Chat](https://gitter.im/theopenlibrary/Lobby)  
 8. [Joining the Community Slack](https://openlibrary.org/volunteer)  
 9. [Attending Weekly Community Calls @ 9a PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call) 
-10. Applying to [Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
+10. [Applying to Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
 
 **Developer Resources**  
 1. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) 
