@@ -61,21 +61,6 @@ Check the log at /home/scott/.cache/pre-commit/pre-commit.log
 
 To remove `pre-commit`, run `pre-commit uninstall`.
 
-# Integration Tests
-
-Integration tests use the Splinter webdriver with Google Chrome. For instructions on installation requirements and running integration tests, [see Integration Tests README](/internetarchive/openlibrary/blob/master/tests/integration/README.md). Integration tests are **not** run automatically and they require a non-headless machine (i.e. a web browser is currently required). You can do this on your local machine (not in Docker) within your tmp directory:
-
-```
-cd /tmp
-virtualenv venv
-source venv/bin/activate
-git clone git@github.com:internetarchive/openlibrary.git
-cd openlibrary/
-pip install -r requirements.txt
-cd tests/integration
-./tmp/venv/bin/pytest
-```
-
 # Testing Critical Paths
 
 ## Main Components / Actions
