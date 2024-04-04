@@ -514,7 +514,7 @@ The two primary i18n message functions are:
 **Note**: 
 * There's no need to do nested `i18n`, i.e. the `title` in `$:_('Click <a href="$link" title="External Link">Here</a>')` would already be translated with the rest of the string.
 * There's no need to translate most organization names and acronyms (i.e. WorldCat, PDF, DAISY) when they're not used in the context of a larger sentence, as translated versions could cause some confusion
-* You may run across some untranslated HTML in the JavaScript text files -- this is fine, and should be left as is
+* You may run across some untranslated HTML in the JavaScript test files; this is fine, and should be left as is
 
 \*
 You should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML).
