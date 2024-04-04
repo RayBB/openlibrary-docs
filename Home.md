@@ -513,7 +513,13 @@ Any text that will be visible to the user should be internationalized. The basic
 * You may run across some untranslated HTML in the JavaScript text files -- this is fine, and should be left as is
 
 ### For Python files:
-* Follow the HTML instructions above, but omit the `$`
+* Follow the HTML instructions above, but omit the `$`. E.g. 
+
+```python
+from openlibrary.i18n import gettext as _, ungettext
+
+_('My translated string!')
+```
 
 ### For JavaScript files:
 * See [JavaScript instructions](https://github.com/internetarchive/openlibrary/wiki#using-localized-strings-in-javascript-code)
