@@ -494,9 +494,13 @@ https://gist.github.com/cdrini/615d75653e1e47115930fa394e83ab17
 
 Any text that will be visible to the user should be internationalized. The basics of web.py's `templetor` I18N support is described [here]( http://webpy.org/cookbook/i18n_support_in_template_file).
 
+The two primary i18n message functions are:
+* `gettext()` which is bound to '_' as a convenience since it's commonly used 
+* `ngettext()` (or `ungettext()` as we've historically used) which currently needs to be spelled out, but is commonly bound to `N_`, so that's a convention we may adopt.
+
 ### Internationalization Cheat Sheet
 
-### For HTML files:
+### HTML Files
 | Text Type | Example Text | Example Syntax | Notes |
 | --- | --- | --- | --- |
 | Plain inner HTML | `<p>About this book: </p>` | `<p>$_("About this book: ")</p>` | Wrap it in `$_(" ")` |
@@ -504,41 +508,28 @@ Any text that will be visible to the user should be internationalized. The basic
 | `value` attributes | `<button value="Submit" />` or `<input value="Enter your name"` | `<button value="$_('Submit')" />` & `<input value="$_('Enter your name...')"` | **Note:** You only need to use the `i18n` syntax if the `value` is being used to set visible placeholder text -- `value`s like this one can be left as is: `<button value="add">$_("Add")</button>` |
 | Text that contains `'` or `"` | `title="That's strange!"` or `<p>Click "Add"</p>` | `title="$_('That\'s strange!')"` or `<p>$_("Click \"Add\"")</p>` | If there's a conflict between the outer and inner quotes, i.e. `'` or `""` inside `"$_(' ')"` or `""` inside `$_(" ")`, escape the inner quote/apostrophe with a `\` |
 | Text that contains a variable | `title="Photo of $author_name"` | `title="$_('Photo of %(author)s', author=author_name)` | Wrap a stand-in for the variable in `%( )s` if the variable is a string, or `%( )d` if the variable is a number, and then assign your stand-in to the initial variable; **Note**: It's important to use a meaningful stand-in name here, like "count" or "author" to give translators context |
-| Text that contains nested HTML tags | `<p>Would you like to <strong>return</strong>?</p>` | `<p>$:_('Would you like to <strong>return</strong>?')</p>` | Wrap each full sentence and punctuation in `$:_(' ')` -- note the `:` and single quotes |
-| Text that contains a plural | `("There is one person waiting for this book.", "There are {wlsize} people waiting for this book.")` | `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` | Write out `ungettext` instead of the traditional `_` and sub in the variable (see variable instructions) | 
+| Text that contains nested HTML tags | `<p>Would you like to <strong>return</strong>?</p>` | `<p>$:_('Would you like to <strong>return</strong>?')</p>` | Wrap each full sentence and punctuation in `$:_(' ')` -- note the `:` and single quotes* |
+| Text that contains a plural | `("There is one person waiting for this book.", "There are {wlsize} people waiting for this book.")` | `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` | Write out `ungettext` instead of the traditional `_` and sub in the variable (see variable instructions)** | 
 
 **Note**: 
 * There's no need to do nested `i18n`, i.e. the `title` in `$:_('Click <a href="$link" title="External Link">Here</a>')` would already be translated with the rest of the string.
 * There's no need to translate most organization names and acronyms (i.e. WorldCat, PDF, DAISY) when they're not used in the context of a larger sentence, as translated versions could cause some confusion
 * You may run across some untranslated HTML in the JavaScript text files -- this is fine, and should be left as is
 
-### For Python files:
-* Follow the HTML instructions above, but omit the `$`. E.g. 
+\*
+You should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML).
 
-```python
-from openlibrary.i18n import gettext as _, ungettext
+These sentences however _can_ be represented without i18n-ing the HTML by using python template strings:
 
-_('My translated string!')
+```html
+$def cc0_link():
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="$_('This link to Creative Commons will open in a new window')">$_('CC0')</a>
+
+$:(_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % str(cc0_link()).strip())
 ```
+In this way, only the text is presented to the translators.
 
-### For JavaScript files:
-* See [JavaScript instructions](https://github.com/internetarchive/openlibrary/wiki#using-localized-strings-in-javascript-code)
-
-### More on the syntax and internationalization best practices
-The two primary i18n message functions are:
-* `gettext()` which is bound to '_' as a convenience since it's commonly used 
-* `ngettext()` (or `ungettext()` as we've historically used) which currently needs to be spelled out, but is commonly bound to `N_`, so that's a convention we may adopt.
-
-More Examples:
-
-| Template | Description |
-| --- | --- |
-| `<a title="$_('Add this book to your Want to Read shelf')">$_('Want to Read')</a>` | **Simple string i18n**: ~80% of i18n falls into this category. (Note that the title is translated as well since it's visible to the user in hover text.) |
-| `$_("Hi, %(user)s", user=username)!` | **Substitution**: For rendering variables inside the string. |
-| `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` | **Singular/Plural text**: For when you want to render things like "1 person" vs. "2 people" or "1 edition" vs. "2 edition**s**". \* |
-| `$:_('Licensed under <a href="https://...">CC0</a>. Yippee!')` | **HTML i18n**: For when you want to include links in text; you should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML.)\*\* |
-
-\* In the translation file, this would look like:
+\*\* In the translation file, this would look like:
 
 ```po
 #: borrow.html:114
@@ -550,15 +541,19 @@ msgstr[1] "%(count)d personnes attendent ce livre."
 ```
 The top of the file declares the number of different plural forms for the language since this varies widely among languages. There is more information on plural forms support here: https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
 
-\*\* This sentence however _can_ be represented without i18n-ing the HTML by using python template strings:
+### Python Files
+* Follow the HTML instructions above, but omit the `$`. E.g. 
 
-```html
-$def cc0_link():
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" title="$_('This link to Creative Commons will open in a new window')">$_('CC0')</a>
+```python
+from openlibrary.i18n import gettext as _, ungettext
 
-$:(_('By saving a change to this wiki, you agree that your contribution is given freely to the world under %s. Yippee!') % str(cc0_link()).strip())
+_('My translated string!')
 ```
-In this way, only the text is presented to the translators.
+
+### JavaScript Files
+* See [JavaScript instructions](https://github.com/internetarchive/openlibrary/wiki#using-localized-strings-in-javascript-code)
+
+### Best Practices
 
 Must DOs:
 * Internationalize all user visible strings, including HTML `title` and `alt` which are used 
