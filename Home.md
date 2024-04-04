@@ -492,13 +492,38 @@ https://gist.github.com/cdrini/615d75653e1e47115930fa394e83ab17
 
 ## Internationalization (i18n) Developer's Guide
 
-Any text that will be visible to the user should be internationalized. The basics of web.py's `templator` I18N support is described here: http://webpy.org/cookbook/i18n_support_in_template_file
+Any text that will be visible to the user should be internationalized. The basics of web.py's `templetor` I18N support is described [here]( http://webpy.org/cookbook/i18n_support_in_template_file).
 
+### Internationalization Cheat Sheet
+
+### For HTML files:
+| Text Type | Example Text | Example Syntax | Notes |
+| --- | --- | --- | --- |
+| Plain inner HTML | `<p>About this book: </p>` | `<p>$_("About this book: ")</p>` | Wrap it in `$_(" ")` |
+| `title` or `alt` attributes | `<button title="Submit" alt="Submit button">` | `<button title="$_('Submit')" alt="$_('Submit button')">` | Wrap it in `$_(' ')` - note the use of single quotes |
+| `value` attributes | `<button value="Submit" />` or `<input value="Enter your name"` | `<button value="$_('Submit')" />` & `<input value="$_('Enter your name...')"` | **Note:** You only need to use the `i18n` syntax if the `value` is being used to set visible placeholder text -- `value`s like this one can be left as is: `<button value="add">$_("Add")</button>` |
+| Text that contains `'` or `"` | `title="That's strange!"` or `<p>Click "Add"</p>` | `title="$_('That\'s strange!')"` or `<p>$_("Click \"Add\"")</p>` | If there's a conflict between the outer and inner quotes, i.e. `'` or `""` inside `"$_(' ')"` or `""` inside `$_(" ")`, escape the inner quote/apostrophe with a `\` |
+| Text that contains a variable | `title="Photo of $author_name"` | `title="$_('Photo of %(author)s', author=author_name)` | Wrap a stand-in for the variable in `%( )s` if the variable is a string, or `%( )d` if the variable is a number, and then assign your stand-in to the initial variable; **Note**: It's important to use a meaningful stand-in name here, like "count" or "author" to give translators context |
+| Text that contains nested HTML tags | `<p>Would you like to <strong>return</strong>?</p>` | `<p>$:_('Would you like to <strong>return</strong>?')</p>` | Wrap each full sentence and punctuation in `$:_(' ')` -- note the `:` and single quotes |
+| Text that contains a plural | `("There is one person waiting for this book.", "There are {wlsize} people waiting for this book.")` | `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` | Write out `ungettext` instead of the traditional `_` and sub in the variable (see variable instructions) | 
+
+**Note**: 
+* There's no need to do nested `i18n`, i.e. the `title` in `$:_('Click <a href="$link" title="External Link">Here</a>')` would already be translated with the rest of the string.
+* There's no need to translate most organization names and acronyms (i.e. WorldCat, PDF, DAISY) when they're not used in the context of a larger sentence, as translated versions could cause some confusion
+* You may run across some untranslated HTML in the JavaScript text files -- this is fine, and should be left as is
+
+### For Python files:
+* Follow the HTML instructions above, but omit the `$`
+
+### For JavaScript files:
+* See [JavaScript instructions](https://github.com/internetarchive/openlibrary/wiki#using-localized-strings-in-javascript-code)
+
+### More on the syntax and internationalization best practices
 The two primary i18n message functions are:
 * `gettext()` which is bound to '_' as a convenience since it's commonly used 
 * `ngettext()` (or `ungettext()` as we've historically used) which currently needs to be spelled out, but is commonly bound to `N_`, so that's a convention we may adopt.
 
-Examples:
+More Examples:
 
 | Template | Description |
 | --- | --- |
