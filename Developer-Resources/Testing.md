@@ -5,11 +5,11 @@ XXX This page needs updating
 ## Running Automated Tests
 From the root of your local openlibrary project, you can run the JavaScript and Python unit tests in a Docker container with the following command:
 
-    docker compose run web make test
+    docker compose run --rm home make test
 
 To run the pytests in one or more files, you can use:
 
-    docker compose run web pytest openlibrary/plugins/importapi/tests/test_import_validator.py
+    docker compose run --rm home pytest openlibrary/plugins/importapi/tests/test_import_validator.py
 
 General Docker instructions are to be found in the repo at https://github.com/internetarchive/openlibrary/tree/master/docker and repo testing instructions are in the main README: https://github.com/internetarchive/openlibrary/blob/master/Readme.md#running-tests
 
@@ -31,7 +31,7 @@ Although you can simply look at the details, change your code and resubmit to se
 
 ### Lint JavaScript in Docker
 To lint only JS, one can run:
-- `docker compose exec web npm run lint`.
+- `docker compose run --rm home npm run lint`.
 
 ### Lint everything with `pre-commit` from your shell outside of Docker
 To lint everything the CI server checks (JavaScript, `mypy`, `black`, `ruff`, etc.), and to do so automatically at the time of commit, one can run, in the local environment, outside of Docker, a Python program named `pre-commit`. This will use `git`'s [hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run Open Library-specific linting checks when committing code in `git`. Because `pre-commit` integrates with `git`, that means it runs outside of Docker, and needs to be available to `git` in your current environment.
@@ -125,7 +125,7 @@ To remove `pre-commit`, run `pre-commit uninstall`.
 
 ***
 
-**Question:** What should I do if I come across a bundle-size error (like the one below) while running `docker compose exec web make test` to test? 
+**Question:** What should I do if I come across a bundle-size error (like the one below) while running `docker compose run --rm home make test` to test? 
 ```
  FAIL static/build/page-plain.css: 18.81KB > maxSize 18.8KB (gzip)
 ```
