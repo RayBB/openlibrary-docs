@@ -295,7 +295,7 @@ As mentioned above, one can generally switch between importing to production and
 If you are logged-in within the browser, you may use the following code to attempt an import:
 
 ```javascript
-var bookdata = {'title': 'Ikigai', 'authors': [{'name': 'Souen, Chiemi'}, {'name': 'Kaneshiro, Flor'}], 'publish_date': 'Aug 17, 2021', 'source_records': ['amazon:195302114X'], 'number_of_pages': 40, 'publishers': ['Brandylane Publishers, Inc.'], 'cover': 'https://m.media-amazon.com/images/I/610-Q5YXZGS._SL500_.jpg', 'isbn_10': ['195302114X'], 'isbn_13': ['9781953021144'], 'physical_format': 'hardcover', 'full_title': "Ikigai : Life's Purpose", 'subtitle': "Life's Purpose", 'notes': "Source title: Ikigai: Life's Purpose"}
+var bookdata = {'title': 'Ikigai', 'authors': [{'name': 'Souen, Chiemi'}, {'name': 'Kaneshiro, Flor'}], 'publish_date': '2021', 'source_records': ['amazon:195302114X'], 'number_of_pages': 40, 'publishers': ['Brandylane Publishers, Inc.'], 'isbn_10': ['195302114X'], 'isbn_13': ['9781953021144']}
 
 fetch("https://openlibrary.org/api/import?debug=true", {
     method: 'POST',
@@ -307,8 +307,32 @@ fetch("https://openlibrary.org/api/import?debug=true", {
 }).then(response => response.json()) .then(response => console.log(JSON.stringify(response)))
 ```
 
+#### Python import using `requests`:
+Note: this requires you to have an existing `requests.session` to use. See [API Authentication](#Python-and-requests) details.
+
+This is almost identical to POSTing with `openlibrary-client`, except `session` is not a method on `olclient`.
+
+For more about the schema, see https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json
+```python
+import json
+import_url = "http://localhost:8080/api/import"
+import_data = {
+    "title": "Beyond The Hundredth Meridian: John Wesley Powell And The Second Opening Of The West",
+    "authors": [{"name": "Wallace Stegner"}],
+    "isbn_13": ["9780803291287"],
+    "languages": ["eng"],
+    "publishers": ["University of Nebraska Press"],
+    "publish_date": "1954",
+    "source_records": ["amazon:B0016VINB0"],
+}
+r = session.post(import_url, data=json.dumps(data))
+r.text  # Verify import
+```
+
 ### Using [openlibrary-client](https://github.com/internetarchive/openlibrary-client):
 Note: this assumes you already have an authenticated session with `olclient`. See [API Authentication](#openlibrary-client) for details.
+
+This is almost identical to POSTing with `requests`, except here the `session` is a method of `olclient`.
 
 For more about the schema, see https://github.com/internetarchive/openlibrary-client/blob/master/olclient/schemata/import.schema.json
 ```python
