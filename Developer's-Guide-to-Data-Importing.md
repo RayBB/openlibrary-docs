@@ -109,6 +109,8 @@ The API examples below assume you have followed the directions in this section t
 
 If you're planning on using your browser's developer console or a bookmarklet to write import logic in javascript, authentication can be achieved by manually logging in to the website (e.g. openlibrary.org/account/login on production). This also works with localhost, testing, etc). If you open the developer tools console (by pressing `F12` on the keyboard) then, after logging in to the Open Library website, your JavaScript environment should be successfully setup and will use the session from the cookie in your browser.
 
+Once you're browser is authenticated, proceed to the [JavaScript example: importing books from JSON](Developer's-Guide-to-Data-Importing#using-javascript)
+
 ## Python and `requests`
 
 The only difference between production and development is the URL of the host: https://openlibrary.org for production, and http://localhost:8080 for development.
