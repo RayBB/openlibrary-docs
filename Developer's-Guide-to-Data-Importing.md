@@ -220,7 +220,7 @@ See #3 on [Import Code-Paths](#Import-Code-Paths) above.
 
 ### Direct Import by OCAID
 
-If you are sufficiently privileged, you can import an Archive.org id into Open Library using the https://openlibrary.org/api/import/ia endpoint (which will require authentication). This endpoint works both on production and in the local development environment, with the development endpoint being located at http://localhost:8080/api/import/ia.
+If you are sufficiently privileged, you can import an Archive.org id into Open Library using the https://openlibrary.org/api/import/ia endpoint (which will require [authentication](Developer's-Guide-to-Data-Importing#api-authentication-for-imports)). This endpoint works both on production and in the local development environment, with the development endpoint being located at http://localhost:8080/api/import/ia.
 
 The code for this endpoint is found within the `ia_importapi` class within [`openlibrary/plugins/importapi/code.py`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/importapi/code.py).
 
@@ -229,7 +229,8 @@ By default, the only required argument is `identifier`, which specifies the `oca
 - `force_import`: force the record to import. Defaults to false.
 
 #### JavaScript import using `fetch`
-For this to work, you will need to be logged into the relevant account on production/development via the web browser in which you're running the JavaScript.
+
+Once you have [authenticated](Developer's-Guide-to-Data-Importing#api-authentication-for-imports) and logged into the relevant account on production/development via the web browser in which you're running the JavaScript, you can import an ocaid using the following recipe:
 
 Note: for a production import, simply change the URL to `https://openlibrary.org/api/import/ia`.
 
