@@ -15,8 +15,9 @@
 3. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 4. [Solr Search Engine Manual](Solr)  
 5. [Imports](Developer's-Guide-to-Data-Importing)  
-6. [Writing Bots](Writing-Bots)  
-7. [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions), [Code Recipes](Recipes), & [More Documentation](Documentation)  
+6. [BookWorm / Affiliate Server ](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit#heading=h.xmcr55qgzsig)  
+7. [Writing Bots](Writing-Bots)  
+8. [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions), [Code Recipes](Recipes), & [More Documentation](Documentation)  
 
 **Developer Guides**  
 * [Developing the My Books & Reading Log](Developing-The-Reading-Log)  
