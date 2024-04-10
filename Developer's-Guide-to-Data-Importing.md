@@ -95,17 +95,22 @@ There are multiple paths by which data can be imported into Open Library.
 4. Through our privileged ImportBot [scripts/manage_imports.py](https://github.com/internetarchive/openlibrary/blob/master/scripts/manage-imports.py)  which POSTs to the IA import API via `Openlibrary.import_ocaid()` from [openlibrary/api.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py) 
 3. Through bulk import API [openlibrary/api.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/api.py) -- this should be considered deprecated
 
-# API Authentication
-The manner of authentication depends:
-1. on what tool you're using (e.g. `curl`, `JavaScript`, `python`, etc.); and
-2. whether you're authenticating against production or the local development environment.
+# API Authentication for Imports
+
+If you're trying to write a script which uses the import API endpoints on Open Library to import book data, your script will need to first perform authentication.
+
+The manner of your app's authentication depends:
+1. on what mechanism you're using (e.g. `curl`, `JavaScript`, `python`, etc.); and
+2. whether you're importing into the production or the local development environment.
 
 The API examples below assume you have followed the directions in this section to do whatever steps are necessary for authentication.
 
 ## JavaScript
-Log in to production or the local development environment, then open the developer tools console by pressing `F12` on the keyboard. That's it for the JavaScript setup. It will use your session cookie from the browser.
+
+If you're planning on using your browser's developer console or a bookmarklet to write import logic in javascript, authentication can be achieved by manually logging in to the website (e.g. openlibrary.org/account/login on production). This also works with localhost, testing, etc). If you open the developer tools console (by pressing `F12` on the keyboard) then, after logging in to the Open Library website, your JavaScript environment should be successfully setup and will use the session from the cookie in your browser.
 
 ## Python and `requests`
+
 The only difference between production and development is the URL of the host: https://openlibrary.org for production, and http://localhost:8080 for development.
 
 Using `requests.session`, it's possible to authenticate once, save the cookie, and use the same session object for multiple requests.
