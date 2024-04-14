@@ -29,3 +29,7 @@ features:
     details: Improve the catalogue
     link: "4. Librarians/Creating-Community-Lists.html"
 ---
+
+These are the (beta) docs for contributing to Open Library on the technical side of things.
+
+Click on one of the roles above to start your adventure!

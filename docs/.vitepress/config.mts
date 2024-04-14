@@ -18,6 +18,7 @@ export default defineConfig({
     sidebar: generateSidebar({
       scanStartPath: "./docs",
       collapsed: true,
+      useFolderLinkFromIndexFile: true,
     }),
     socialLinks: [
       { icon: "github", link: "https://github.com/internetarchive/openlibrary" },
