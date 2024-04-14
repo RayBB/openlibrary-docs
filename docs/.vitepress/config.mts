@@ -1,0 +1,25 @@
+import { defineConfig } from "vitepress";
+import { generateSidebar } from "vitepress-sidebar";
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  title: "Beta Open Library Docs",
+  description: "One web page for every book ever published",
+  ignoreDeadLinks: true, // TODO: Fix links!
+  themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    nav: [{ text: "Home", link: "/" }],
+
+    search: {
+      provider: "local",
+    },
+
+    sidebar: generateSidebar({
+      scanStartPath: "./docs",
+      collapsed: true,
+    }),
+    socialLinks: [
+      { icon: "github", link: "https://github.com/internetarchive/openlibrary" },
+    ],
+  },
+});
