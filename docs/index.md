@@ -7,10 +7,10 @@ hero:
   # text: "A VitePress Site"
   tagline: "Contribute to our mission: One web page for every book ever published."
   image: https://openlibrary.org/static/images/openlibrary-logo-tighter.svg
-  # actions:
-  #   - theme: brand
-  #     text: Markdown Examples
-  #     link: /markdown-examples
+  actions:
+    - theme: brand
+      text: Developers
+      link: "2. Developers/1_Start-Here"
   #   - theme: alt
   #     text: API Examples
   #     link: /api-examples
