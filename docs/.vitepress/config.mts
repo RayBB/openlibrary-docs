@@ -5,6 +5,7 @@ import { generateSidebar } from "vitepress-sidebar";
 export default defineConfig({
   title: "Beta Open Library Docs",
   description: "One web page for every book ever published",
+  base: process.env.NODE_ENV === 'production' ? '/openlibrary-docs/' : '',
   ignoreDeadLinks: true, // TODO: Fix links!
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
