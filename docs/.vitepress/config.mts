@@ -1,8 +1,9 @@
 import { defineConfig } from "vitepress";
 import { generateSidebar } from "vitepress-sidebar";
+import { withPwa } from '@vite-pwa/vitepress'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withPwa(defineConfig({
   title: "Beta Open Library Docs",
   description: "One web page for every book ever published",
   base: process.env.NODE_ENV === 'production' ? '/openlibrary-docs/' : '',
@@ -24,4 +25,4 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/internetarchive/openlibrary" },
     ],
   },
-});
+}));

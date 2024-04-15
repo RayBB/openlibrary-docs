@@ -31,7 +31,7 @@ This welcome section is intended for new contributors.
 
 A quick public tour of Open Library to get you familiar with the service and its offerings (10min)
 
-<video controls preload="metadata">
+<video controls preload="metadata" width="100%">
 
   <source src="https://archive.org/download/openlibrary-tour-2020/openlibrary.ogv" type="video/ogg" />
   <source src="https://archive.org/download/openlibrary-tour-2020/openlibrary.mp4" type="video/mp4" />
