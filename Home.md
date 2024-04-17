@@ -596,7 +596,7 @@ In the main `index.js` file, we add code that initializes the `.greeting-example
 exists on the page.
 
 `js/index.js`:
-```
+```js
 const greetingElement = document.querySelector('.greeting-example')
 if (greetingElement) {
     import('greeting')
@@ -608,7 +608,7 @@ In `initGreeting`, we parse the value of `data-i18n` and set the `textContent` o
 span to the localized "Hello World" string.
 
 `js/greeting.js`:
-```
+```js
 /**
  * Sets text content of the given element to the localized greeting.
  *
@@ -665,7 +665,8 @@ First, you need to exec into the docker container and launch python:
 `docker compose exec -it web python` 
 
 Next, use the following incantation to load Open Library and launch a minimal headless app:
-```
+
+```py
 import web
 import infogami
 from openlibrary.config import load_config
@@ -677,14 +678,14 @@ from infogami import config
 
 ## Get the logged in patron
 
-```
+```py
 from openlibrary import accounts
 logged_in_user = accounts.get_current_user()
 ```
 
 ## Fetch a patron's S3 keys
 
-```
+```py
 from openlibrary import accounts
 from openlibrary.accounts.model import OpenLibraryAccount
 
@@ -696,7 +697,7 @@ s3_keys = web.ctx.site.store.get(account._key).get('s3_keys')
 
 ## Testing the affiliate API
 
-```
+```py
 import web
 import infogami
 from openlibrary.config import load_config
@@ -716,7 +717,7 @@ book = web.amazon_api.get_products(["1666568287"], serialize=True)
 Or to monitor repeatedly during debugging:
 
 % `cat > ~/affiliate_status.sh`
-```
+```sh
 #!/bin/bash
 
 while true
