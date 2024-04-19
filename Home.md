@@ -492,18 +492,17 @@ https://gist.github.com/cdrini/615d75653e1e47115930fa394e83ab17
 
 ## Internationalization (i18n) Developer's Guide
 
-Any text that will be visible to the user should be internationalized. The basics of web.py's `templetor` I18N support is described [here]( http://webpy.org/cookbook/i18n_support_in_template_file).
+Any text that will be visible to the user should be internationalized. The basics of web.py's `templetor` i18n support is described [here]( http://webpy.org/cookbook/i18n_support_in_template_file).
 
 The two primary i18n message functions are:
 * `gettext()` which is bound to '_' as a convenience since it's commonly used 
 * `ngettext()` (or `ungettext()` as we've historically used) which currently needs to be spelled out, but is commonly bound to `N_`, so that's a convention we may adopt.
 
-### Internationalization Cheat Sheet
+## HTML Files
 
-### HTML Files
 | Text Type | Example Text | Example Syntax | Notes |
 | --- | --- | --- | --- |
-| Plain inner HTML | `<p>About this book: </p>` | `<p>$_("About this book: ")</p>` | Wrap it in `$_(" ")` |
+| Plain inner HTML | `<p>About this book:</p>` | `<p>$_("About this book:")</p>` | Wrap it in `$_(" ")` |
 | `title` or `alt` attributes | `<button title="Submit" alt="Submit button">` | `<button title="$_('Submit')" alt="$_('Submit button')">` | Wrap it in `$_(' ')` - note the use of single quotes |
 | `value` attributes | `<button value="Submit" />` or `<input value="Enter your name"` | `<button value="$_('Submit')" />` & `<input value="$_('Enter your name...')"` | **Note:** You only need to use the `i18n` syntax if the `value` is being used to set visible placeholder text -- `value`s like this one can be left as is: `<button value="add">$_("Add")</button>` |
 | Text that contains `'` or `"` | `title="That's strange!"` or `<p>Click "Add"</p>` | `title="$_('That\'s strange!')"` or `<p>$_("Click \"Add\"")</p>` | If there's a conflict between the outer and inner quotes, i.e. `'` or `""` inside `"$_(' ')"` or `""` inside `$_(" ")`, escape the inner quote/apostrophe with a `\` |
@@ -511,13 +510,21 @@ The two primary i18n message functions are:
 | Text that contains nested HTML tags | `<p>Would you like to <strong>return</strong>?</p>` | `<p>$:_('Would you like to <strong>return</strong>?')</p>` | Wrap each full sentence and punctuation in `$:_(' ')` -- note the `:` and single quotes* |
 | Text that contains a plural | `("There is one person waiting for this book.", "There are {wlsize} people waiting for this book.")` | `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` | Write out `ungettext` instead of the traditional `_` and sub in the variable (see variable instructions)** | 
 
+Everything enclosed within any version of the `$_(' ')` syntax will be extracted into messages.pot file. Review the [messages.pot](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/i18n/messages.pot) file to get an idea of what the extracted messages look like. 
+
+When syntaxing messages that are split up by nested HTML tags, consider if the message can be translated in chunks, or if the meaning of the chunks depends on the sentence as a whole. If it can be broken into chunks, it will save the translators the effort (and potential risk) of copy & pasting HTML. However, translation accuracy is the priority.
+
 **Note**: 
 * There's no need to do nested `i18n`, i.e. the `title` in `$:_('Click <a href="$link" title="External Link">Here</a>')` would already be translated with the rest of the string.
-* There's no need to translate most organization names and acronyms (i.e. WorldCat, PDF, DAISY) when they're not used in the context of a larger sentence, as translated versions could cause some confusion
-* You may run across some untranslated HTML in the JavaScript test files; this is fine, and should be left as is
+* Be sure to include punctuation marks inside parentheses, i.e. the `.` at the end of `>$:_(' Please read our <a href="/help/faq">FAQ</a>.')`
+* Exclude HTML syntax where possible to avoid unnecessary copy and pasting for translators, i.e. you can leave out the `&nbsp;` here like so: `&nbsp;&nbsp;$_("Add some subjects")`
+* _But_ if you include an HTML closing tag, be sure to include the opening tag as well, i.e. `$:_('<strong>Download the DAISY.zip</strong>.)`
+* While working, avoid moving extra spaces to the beginning or end `<a></a>` tags, which will cause weird links that look like[ this](https://github.com/internetarchive/openlibrary/wiki#internationalization)
+* You may run across some untranslated HTML in the JavaScript test files; this is fine, and should be left as is 
 
-\*
-You should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages. (Note the `:` before the `_`! That's what makes it render raw HTML).
+---
+
+\* You should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages.
 
 These sentences however _can_ be represented without i18n-ing the HTML by using python template strings:
 
@@ -539,9 +546,11 @@ msgid_plural "There are %(count)d people waiting for this book."
 msgstr[0] "%(count)d personne attend ce livre."
 msgstr[1] "%(count)d personnes attendent ce livre."
 ```
-The top of the file declares the number of different plural forms for the language since this varies widely among languages. There is more information on plural forms support here: https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
+The top of the file declares the number of different plural forms for the language since this varies widely among languages. 
+There is more information on plural forms support [here](https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html).
 
-### Python Files
+## Python Files
+
 * Follow the HTML instructions above, but omit the `$`. E.g. 
 
 ```python
@@ -550,29 +559,35 @@ from openlibrary.i18n import gettext as _, ungettext
 _('My translated string!')
 ```
 
-### JavaScript Files
-* See [JavaScript instructions](https://github.com/internetarchive/openlibrary/wiki#using-localized-strings-in-javascript-code)
+**Note**: 
+When adding Python translations, you may encounter an `AttributeError` like `'ThreadedDict' object has no attribute 'lang'`.
+This can happen if translated text is at the top of the file rather than nested in a function, as the `gettext` function `_` requires the language context (`web.ctx.lang`) to be ready before it runs.
 
-### Best Practices
+A simple workaround for this problem is nesting the desired text inside a function, either directly where it will be used or as a helper function near the top of the file.
 
-Must DOs:
-* Internationalize all user visible strings, including HTML `title` and `alt` which are used 
-* Use consistent terminology and phrasing throughout the UI to reduce the amount of text which needs to be translated
-* Use meaningful mnemonic parameter names to help the translators understand the context. e.g. "%(editioncount)d editions"
-* Double check that the format string types match the types of parameters being passed. Mismatches will cause errors at runtime.
-* Be sure to escape embedded quotes and apostrophes, if necessary, after wrapping strings in single/double quotes. e.g. "_$('Mustn\'t forget to escape')"
-* Be sure to remove extra dollar signs ($) when wrapping expressions with $_()
-* Generate a message catalog template (messages.pot) when user visible strings are added or change
-* Make changes incrementally in small batches. Multiple preprocessors (templator + babel) can make error messages obscure, so it's easier to debug if you know what changed.
+For instance, a dict like this:
+```
+LOGIN_ERRORS = {
+  "invalid_email": _("The email address you entered is invalid"),
+  "account_blocked": _("This account has been blocked"),
+  "account_locked": _("This account has been locked"),
+  ...
+}
+```
+can be made translation-safe if nested in a function like so:
+```
+def get_login_error(error_key):
+    LOGIN_ERRORS = {
+        "invalid_email": _("The email address you entered is invalid"),
+        "account_blocked": _("This account has been blocked"),
+        "account_locked": _("This account has been locked"),
+        ...
+    }
 
-DON'Ts:
-* Don't display internal status / keyword values from the code directly to the user. These can't be internationalized.
-* Don't do pluralization or string concatenation in code or templates. This mandates ordering in ways that can't be translated. Give the translators completed sentences or phrases, with embedded replacements, to work with so they can create natural translations.
-* Don't use inline styling or links in text, if at all possible. e.g. <em>, <a href=foo>
-* Don't update the translated message catalogs. Because the merging process is inexact, it's better for the translators to handle this so that they can validate the results. Do update the message templates though (ie `messages.pot`)
-* Don't hard code in `1` for singular nouns (e.g. `1 edition`) because in some languages, `0 editions` is singular and translated as `0 edition`. Instead, substitute a variable, as you would with the plural. E.g. `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` and **not** `$ungettext("There is 1 person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)`
+    return LOGIN_ERRORS[error_key]
+```
 
-### Using Localized Strings in Javascript Code
+## JavaScript Files
 
 Unlike our Python code and HTML templates, there is currently no way to extract strings from our Javascript code for localization.  To bypass this limitation, we have been including localized strings in a `data-i18n` attribute.
 
@@ -620,6 +635,24 @@ export function initGreeting(greetingElement) {
 }
 ```
 
+## Best Practices
+
+**Must DOs**:
+* Internationalize all user visible strings, including HTML `title` and `alt` which are used 
+* Use consistent terminology and phrasing throughout the UI to reduce the amount of text which needs to be translated
+* Use meaningful mnemonic parameter names to help the translators understand the context. e.g. "%(editioncount)d editions"
+* Double check that the format string types match the types of parameters being passed. Mismatches will cause errors at runtime.
+* Be sure to escape embedded quotes and apostrophes, if necessary, after wrapping strings in single/double quotes. e.g. "_$('Mustn\'t forget to escape')"
+* Be sure to remove extra dollar signs ($) when wrapping expressions with $_()
+* Generate a message catalog template (messages.pot) when user visible strings are added or change
+* Make changes incrementally in small batches. Multiple preprocessors (templator + babel) can make error messages obscure, so it's easier to debug if you know what changed.
+
+**DON'Ts**:
+* Don't display internal status / keyword values from the code directly to the user. These can't be internationalized.
+* Don't do pluralization or string concatenation in code or templates. This mandates ordering in ways that can't be translated. Give the translators completed sentences or phrases, with embedded replacements, to work with so they can create natural translations.
+* Don't use inline styling or links in text, if at all possible. e.g. <em>, <a href=foo>
+* Don't update the translated message catalogs. Because the merging process is inexact, it's better for the translators to handle this so that they can validate the results. Do update the message templates though (ie `messages.pot`)
+* Don't hard code in `1` for singular nouns (e.g. `1 edition`) because in some languages, `0 editions` is singular and translated as `0 edition`. Instead, substitute a variable, as you would with the plural. E.g. `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` and **not** `$ungettext("There is 1 person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)`
 
 ## Internationalization (i18n) Page Conversion Guide
 Internationalization (i18n) pages are specialized pages within the Infogami platform that enable users to contribute translations. This guide outlines the process of converting a standard page into an i18n page, using the example of converting https://openlibrary.org/librarians to its English (`en`) i18n version.
