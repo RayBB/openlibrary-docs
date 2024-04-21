@@ -1,4 +1,6 @@
 # Frequently Asked Questions (FAQs)
+This file is a bit of a dumping ground for things that don't fit elsewhere now.
+
 ## Getting Started
 
 - [How do I set up the Open Library app locally?](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)
