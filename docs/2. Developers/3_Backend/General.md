@@ -1,4 +1,28 @@
 
+## Code Organization
+
+* openlibrary/core - core openlibrary functionality, imported and used by www
+* openlibrary/plugins - other models, controllers, and view helpers
+* openlibrary/views - views for rendering web pages
+* openlibrary/templates - all the templates used in the website
+* openlibrary/macros - macros are like templates, but can be called from wikitext
+
+## Architecture
+
+### The Backend
+
+OpenLibrary is developed on top of the Infogami wiki system, which is itself built on top of the web.py Python web framework and the Infobase database framework.
+
+- [Overview of Backend Web Technologies](https://openlibrary.org/about/tech)
+
+Once you've read the overview of OpenLibrary Backend technologies, it's highly encouraged you read the developer primer which explains how to use Infogami (and its database, Infobase).
+
+- [Infogami Developer Tutorial](https://openlibrary.org/dev/docs/infogami)
+
+If you want to dive into the source code for Infogami, see the [Infogami repo](https://github.com/internetarchive/infogami).
+
+
+
 <a name="backend-guide"></a>
 ## Backend Guide
 

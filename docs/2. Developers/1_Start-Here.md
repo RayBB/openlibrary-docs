@@ -13,6 +13,7 @@ If you don't have Docker, VSCode, and a dev environment checkout the [Environmen
   - `.less` - you'll have to run: `docker compose run --rm home make css`
   - `.js` - you'll have to run: `docker compose run --rm home make js`
 4. Write/run tests if needed
+  - `docker compose run --rm home make test`
 5. Open a PR
   - Please include a video of your change (or at least screenshots)
 6. Your PR will be reviewed/merged in about one week! 🎉
