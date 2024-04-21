@@ -18,6 +18,7 @@ If you don't have Docker, VSCode, and a dev environment checkout the [Environmen
 6. Your PR will be reviewed/merged in about one week! 🎉
 
 ## What's next?
+- [Import production data](/2.%20Developers/misc/Loading-Production-Book-Data.md)
 - Checkout the architecture of the app
 - Write a bot for us
 - Improve the docs
