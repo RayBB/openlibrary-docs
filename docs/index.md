@@ -27,7 +27,7 @@ features:
     link: "3. Designers/Design-Pattern-Library"
   - title: Translators
     details: Show us your language
-    link: "1. Everyone/Home.html#i18n-contributor-s-guide"
+    link: "1. Everyone/Internationalization"
 ---
 
 These are the (beta) docs for contributing to Open Library on the technical side of things.
