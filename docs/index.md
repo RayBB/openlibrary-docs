@@ -20,13 +20,13 @@ features:
     details: Write some code
     link: "2. Developers/1_Start-Here"
   - title: Designers
-    details: Make things pretty
+    details: Make things beautiful
     link: "3. Designers/Design-Pattern-Library"
   - title: Translators
     details: Show us your language
     link: "1. Everyone/Home.html#i18n-contributor-s-guide"
   - title: Librarians
-    details: Improve the catalogue
+    details: Improve the catalog
     link: "4. Librarians/Creating-Community-Lists.html"
 ---
 

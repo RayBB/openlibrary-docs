@@ -24,5 +24,9 @@ export default withPwa(defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/internetarchive/openlibrary" },
     ],
+
+    editLink: {
+      pattern: 'https://github.com/RayBB/openlibrary-docs/tree/main/docs/:path'
+    }
   },
 }));
