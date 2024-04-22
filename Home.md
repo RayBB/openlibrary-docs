@@ -14,7 +14,7 @@ In 2019, Open Library [launched](https://boingboing.net/2019/10/22/hathi-never-f
 
 # Meet the Team
 
-As of 2024, the Open Library program is directed by Mek Karpeles and staffed by Drini Cami, Jim Champ, and Scott Barnes, with significant support from Lisa Seaberg from [Ottawa IT Services](https://ottawa-it-support.com/). The project enjoys contributions from volunteers spanning more than 20 nations.
+As of 2024, the Open Library program is directed by Mek Karpeles and staffed by Drini Cami, Jim Champ, and Scott Barnes, with significant support from Lisa Seaberg from Patron Services. The project enjoys contributions from volunteers spanning more than 20 nations.
 
 # [Project Management](https://github.com/internetarchive/openlibrary/wiki/HOWTO:-Open-Library-Project-Management)
 
