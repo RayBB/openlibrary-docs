@@ -27,7 +27,7 @@ git clone git@github.com:USERNAME/openlibrary.git
 
 If you have not added your public SSH key to GitHub you may see:
 
-```
+```sh
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 ```
@@ -49,7 +49,8 @@ Here, the project files need LF line endings because they are used in a Linux Do
 For more on git and line endings, see [Configuring Git to handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings).
 
 **Note: if you get permission issues while executing these commands please run git the bash shell as an Administrator.**
-```
+
+```sh
 # Get in the project directory
 cd openlibrary
 
@@ -144,14 +145,14 @@ Pull requests often receive feedback; to make changes to your existing pull requ
 
 1. Make sure your branch is up-to-date with master
 
-```
+```sh
 git switch master
 git pull upstream master
 ```
 
 2. Rebase your branch onto master
 
-```
+```sh
 git switch 1234/fix/fix-the-thing
 git rebase master
 ```
@@ -168,7 +169,7 @@ git rebase master
 
 4. Push your changes up.
 
-```
+```sh
 git push origin HEAD
 ```
 
@@ -185,7 +186,7 @@ git push origin HEAD
 
 Sometimes you'll want to rearrange/reword/combine commits to keep the history neat. To do this, on your branch, run:
 
-```
+```sh
 git rebase -i master
 ```
 
