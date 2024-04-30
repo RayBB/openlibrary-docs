@@ -156,12 +156,11 @@ At most, one `Priority` label can be assigned to an issue.  If there is no `Prio
 Every issue on Open Library must be assigned a *[lead](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A)* label. A Lead is member of the community with domain expertise who has been appointed by staff to help manage a specific aspect of Open Library (such as search, design, javascript, i18n, etc). Anyone may apply to be considered for a specific lead position.
 
 The Lead is responsible for:
-* Defining and breaking down an issue to making sure it's actionable and labeled
-* Monitoring the issue for new comments and helpfully responding to questions and comments
-* Assigning an assignee for the issue
-* Raising relevant questions, issues, or concerns about designs and requirements to members of staff
-* Overseeing the code review process for PRs addressing the issue 
-* Assigning members of the community to an issue and committing to give them mentorship
+* Project Management: Defining and breaking down an issue to making sure it's actionable and labeled
+* Mentoring: Monitoring the issue for new comments and helpfully responding to questions and comments
+* Assignment: Assigning members of the community (or themselves) to an issue and committing to give them mentorship
+* Escalation: Raising relevant questions, issues, or concerns about designs and requirements to members of staff
+* Review: Overseeing the code review process for PRs addressing the issue 
 
 See the [Team Leads Labels](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) to get an idea of who to tag.
 
@@ -355,7 +354,7 @@ Leads have the challenging job of monitoring and keeping up with progress on the
 For each of the following, use the `labels` facet to add your label to see issues and PRs under your leadership:
 
 * [Issues which need to be triaged](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+label%3A%22Needs%3A+Triage%22+sort%3Aupdated-desc). Use the `labels` facet to add your label to see issues you need to triage.
-* [Issues which require some sort of action](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Breakdown%22%2C%22Needs%3A+Staff+Decision%22%2C%22Needs%3A+Investigation%22%2C%22Needs%3A+Detail%22%2C%22Needs%3A+Community+Discussion%22%2C%22Needs%3A+Staff+%2F+Internal%22) such as "needs breakdown" or "needs design". Use the `labels` facet to add your label to see issues you need to triage.
+* [Issues which require some sort of project management action](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Breakdown%22%2C%22Needs%3A+Staff+Decision%22%2C%22Needs%3A+Investigation%22%2C%22Needs%3A+Detail%22%2C%22Needs%3A+Community+Discussion%22%2C%22Needs%3A+Staff+%2F+Internal%22) such as "needs breakdown" or "needs design". Use the `labels` facet to add your label to see issues you need to triage.
 * [Issues that are waiting on the submitter](https://github.com/internetarchive/openlibrary/pulls?q=is%3Aopen+is%3Apr+draft%3Afalse+label%3A%22Needs%3A+Submitter+Input%22+sort%3Aupdated-desc). In the near future, we'll have a [bot](https://github.com/internetarchive/openlibrary/issues/9199) that automatically removed "Needs: Submitter Input" when the author pushes new updates for review.
 
 If you don't have merge permissions and a PR looks ready to go, please mark it is "Needs: Staff / Internal".
