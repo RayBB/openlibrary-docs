@@ -153,14 +153,15 @@ At most, one `Priority` label can be assigned to an issue.  If there is no `Prio
 
 #### Leads
 
-Most parts of the project have *leads*; issues in their area typically get assigned to them first (but can subsequently be handed off). The submitter of an issue is free to suggest an owner — indeed, developers occasionally create issues which they assign to themselves). 
-
-A Lead is someone who has been appointed by staff because of their experience to help manage a specific aspect of Open Library. Anyone may apply to be considered for a specific lead position (like i18n, js standards, etc).
+Every issue on Open Library must be assigned a *[lead](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A)* label. A Lead is member of the community with domain expertise who has been appointed by staff to help manage a specific aspect of Open Library (such as search, design, javascript, i18n, etc). Anyone may apply to be considered for a specific lead position.
 
 The Lead is responsible for:
-* Making sure a feature is one that the community agrees with (through community calls or tagging/asking staff)
+* Defining and breaking down an issue to making sure it's actionable and labeled
+* Monitoring the issue for new comments and helpfully responding to questions and comments
+* Assigning an assignee for the issue
+* Raising relevant questions, issues, or concerns about designs and requirements to members of staff
+* Overseeing the code review process for PRs addressing the issue 
 * Assigning members of the community to an issue and committing to give them mentorship
-* Helping conduct code reviews
 
 See the [Team Leads Labels](https://github.com/internetarchive/openlibrary/labels?q=Lead%3A) to get an idea of who to tag.
 
@@ -344,6 +345,20 @@ Labels that are grey and/or start with a tilde `~` are *deprecated*.  They typic
 - All the managed labels have `[managed]` in their description, so an easy way to browse just the managed labels is to search labels on that string. 
 
 - It is easy (and sometimes dangerous) to do batch updates of labels (or milestone, or assign, or close).  Just filter the issues to the ones you want to change, select the issues you want to label. When you select one or more issues, the pulldown menu changes from filter mode to update mode. Pull down the label menu, and you can select which labels you want to add or remove (it's a toggle). <br/><img width="600" alt="issues list in update mode" src="https://user-images.githubusercontent.com/6502462/57258627-439ad200-705d-11e9-8cca-adf8e45f44d0.png">
+
+### Project Management for Leads
+
+Leads have the challenging job of monitoring and keeping up with progress on their issues and pull requests. Staff has several bots that we hope can make the process easier.
+
+* Keeping up with new comments on issues. Every day, we run the [Issue New Comments Bot](https://github.com/internetarchive/openlibrary/blob/master/scripts/gh_scripts/issue_comment_bot.py) to be pinged about the issues for which we are the lead.
+
+For each of the following, use the `labels` facet to add your label to see issues and PRs under your leadership:
+
+* [Issues which need to be triaged](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+label%3A%22Needs%3A+Triage%22+sort%3Aupdated-desc). Use the `labels` facet to add your label to see issues you need to triage.
+* [Issues which require some sort of action](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Breakdown%22%2C%22Needs%3A+Staff+Decision%22%2C%22Needs%3A+Investigation%22%2C%22Needs%3A+Detail%22%2C%22Needs%3A+Community+Discussion%22%2C%22Needs%3A+Staff+%2F+Internal%22) such as "needs breakdown" or "needs design". Use the `labels` facet to add your label to see issues you need to triage.
+* [Issues that are waiting on the submitter](https://github.com/internetarchive/openlibrary/pulls?q=is%3Aopen+is%3Apr+draft%3Afalse+label%3A%22Needs%3A+Submitter+Input%22+sort%3Aupdated-desc). In the near future, we'll have a [bot](https://github.com/internetarchive/openlibrary/issues/9199) that automatically removed "Needs: Submitter Input" when the author pushes new updates for review.
+
+If you don't have merge permissions and a PR looks ready to go, please mark it is "Needs: Staff / Internal".
 
 # Frequently Asked Questions
 
