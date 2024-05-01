@@ -41,7 +41,7 @@ Prerequisites:
 
 Although a complete discussion of managing Python's versions and Python's virtual environments is outside the scope of this discussion, it is likely worth creating a virtual environment for each Python project on which you work. See Python's own documentation about [`venv`](https://docs.python.org/3/library/venv.html) for one such approach to managing virtual environments. Additionally, if your `python3 --version` doesn't match the version specified in `.pre-commit-config.yaml`, consider [`pyenv`](https://github.com/pyenv/pyenv) on Linux, macOS, or Windows Subsystem for Linux, or [`pyenv-win`](https://github.com/pyenv-win/pyenv-win) on Windows outside of the Windows Subsystem for Linux.
 
-*Note:* this will install a `git` commit hook that will run prior to every commit. As there are times where one may simply wish to commit code, even if it will fail the linting, **one can override commit hooks with `git commit -n`**. For more on `pre-commit`, see https://pre-commit.com/.
+*Note:* this will install a `git` commit hook that will run prior to every commit. As there are times where one may simply wish to commit code, even if it will fail the linting, **one can override commit hooks with `git commit --no-verify`**. For more on `pre-commit`, see https://pre-commit.com/.
 
 To enable `pre-commit`, run the following in your local shell outside of Docker:
 1. `pip install pre-commit` or `brew install pre-commit`; and
