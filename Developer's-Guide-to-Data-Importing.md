@@ -22,7 +22,7 @@ In the case of (1) and (3), a final step is performed called "Perform Import / U
 
 ## Bulk Import Options
 The following resources are for developers doing bulk book record creation via our APIs. If you are a librarian and you want to add a new book catalog entry, refer to the guide on [Importing a Book Record Manually](#Import-Manually).
-1. [Import by ISBN](#Import-by-ISBN)
+1. [Import by ISBN or ASIN](#Import-by-ISBN-or-ASIN)
 2. [Import by MARC](#MARC-Records)
 3. [Import by Archive.org Identifier](#Import-by-OCAID)
 4. [Import by JSON](#Importing-JSON)
@@ -170,11 +170,11 @@ Once this is done, call `curl` with `-b cookies.txt` to use the cookie.
 
 # Import APIs
 
-## Import by ISBN
+## Import by ISBN or ASIN
 
-### Individual ISBNs
-If you know the ISBN of a book, you may be able to import it using the `https://openlibrary.org/isbn/:isbn:` API. This API walks through three steps:
-1. First, the Open Library database is searched for the ISBN in question, and if a match is found, that matched edition is returned;
+### Individual ISBNs or ASINs
+If you know the ISBN or ASIN of a book, you may be able to import it using the `https://openlibrary.org/isbn/:identifier:` API. This API walks through three steps:
+1. First, the Open Library database is searched for the identifier in question, and if a match is found, that matched edition is returned;
 2. If no matching edition is found, the `import_item` table will be checked for `staged` entries that match, an import will be attempted based on that match, and a new edition if any will be returned;
 3. Finally, if no matches have been found yet, BookWorm (the "affiliate-server") will be queried for matches; if a match is found, the associated metadata is `staged` for import at a later date. At this step the server will simply reply that the page, `/isbn/<some isbn>`, does not exist. If `high_priority=true` is passed with the query to `/isbn` (e.g. (`/isbn/1234567890?high_priority=true`), then an import will be attempted and the resulting edition returned, if any.
 
