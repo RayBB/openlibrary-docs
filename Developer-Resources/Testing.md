@@ -47,7 +47,7 @@ To enable `pre-commit`, run the following in your local shell outside of Docker:
 1. `pip install pre-commit` or `brew install pre-commit`; and
 2. `pre-commit install`
 
-Henceforth, `pre-commit` will lint your code with every `git commit` (unless you commit with `git commit -n` to disable running the hooks). To manually run `pre-commit`, you can execute `pre-commit run --all-files`.
+Henceforth, `pre-commit` will lint your code with every `git commit` (unless you commit with `git commit --no-verify` to disable running the hooks). To manually run `pre-commit`, you can execute `pre-commit run --all-files`.
 
 If you see an error similar to either of the following, please ensure you the version of you Python interpreter matches the version specified in `.pre-commit-config.yaml`:
 ```
