@@ -2,6 +2,7 @@
 
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
 - [Creating a Pull Request](#creating-a-pull-request)
+- [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
 - [Resolving Rebase Conflicts](#resolving-rebase-conflicts)
