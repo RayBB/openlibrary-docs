@@ -145,7 +145,8 @@ Your code is now ready for review!
 ### Failing the `Generate POT` check
 If your commit involves adding removing or altering text that will be visible to the user and is [properly internationalized](https://github.com/internetarchive/openlibrary/wiki#internationalization-i18n-developers-guide), an update of the translation template file will be automatically bundled in with your changes via `pre-commit`.
 
-What this means:
+**What this means:**
+
 If you're [running `pre-commit` locally](https://github.com/internetarchive/openlibrary/wiki/Testing#lint-everything-with-pre-commit-from-your-shell-outside-of-docker):
 - Your code will "fail" a test called `Generate POT`, and give you the error message `Files were modified by this hook`, and add `messages.pot` changes to your git unstaged changes.
 - All you need to do to "pass" the test is add the `messages.pot` file to staging and redo your commit; the test should now all pass, and your changes will be immediately available to translators once your branch is merged. 
