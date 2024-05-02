@@ -95,6 +95,7 @@ Note that `origin` is `git@`. If it is not, see [Forking and Cloning the Open Li
 ```sh
 git switch master
 git pull upstream master
+git push origin master
 ```
 
 2. [Create a new branch for the feature or issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.
@@ -131,13 +132,27 @@ docker compose run --rm home make test
 ```
 | Info |
 | --- |
-| When the PR is submitted, the Continuous Integration (CI) server will [lint](https://en.wikipedia.org/wiki/Lint_(software)) (i.e. statically analyze code for bugs and stylistic bugs) the code and attempt to fix any errors it finds. If the errors require human intervention, the checks may fail. 
-| If the checks fail, you can simply change the code and resubmit, but to prevent repeated resubmits you can optionally pre-lint the code before submitting by using `docker compose run --rm home npm run lint` to do a one-off JS lint or by setting up `pre-commit` to run all the checks with each commit. See [Linting](https://github.com/internetarchive/openlibrary/wiki/Testing#linting).|
+| When the PR is submitted, the Continuous Integration (CI) server will [lint](https://en.wikipedia.org/wiki/Lint_(software)) (i.e. statically analyze code for bugs and stylistic bugs) the code and attempt to fix any errors it finds. If the errors require human intervention, the checks may fail. See [Linting](https://github.com/internetarchive/openlibrary/wiki/Testing#linting).
+| If the checks fail, you can simply change the code and resubmit, but to prevent repeated resubmits you can optionally pre-lint the code before submitting by using `docker compose run --rm home npm run lint` to do a one-off JS lint or by [setting up `pre-commit`](https://github.com/internetarchive/openlibrary/wiki/Testing#lint-everything-with-pre-commit-from-your-shell-outside-of-docker) to run all the checks with each commit. |
 
 6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.
 ![GitHub pull request](https://archive.org/download/screenshot20191211at11.12.56/pull-request.png)
 
 Your code is now ready for review!
+
+## Troubleshooting Your Pull Request
+### Failing the `Generate POT` check
+If your commit involves adding removing or altering text that will be visible to the user and is [properly internationalized](https://github.com/internetarchive/openlibrary/wiki#internationalization-i18n-developers-guide), an update of the translation template file will be automatically bundled in with your changes via `pre-commit`.
+
+What this means:
+If you're [running `pre-commit` locally](https://github.com/internetarchive/openlibrary/wiki/Testing#lint-everything-with-pre-commit-from-your-shell-outside-of-docker):
+- Your code will "fail" a test called `Generate POT`, and give you the error message `Files were modified by this hook`, and add `messages.pot` changes to your git unstaged changes.
+- All you need to do to "pass" the test is add the `messages.pot` file to staging and redo your commit; the test should now all pass, and your changes will be immediately available to translators once your branch is merged. 
+
+If you're not running `pre-commit` locally:
+- Your code will "fail" the `pre-commit` check run by the GitHub Continuous Integration (CI) server
+- The CI will then push a new commit to your remote branch that contains the necessary `messages.pot` updates and now passes the `pre-commit` check 
+- You don't need to do anything else after this, but if you want to make and push further changes to the PR, it would be wise to first run a `git pull origin HEAD` to pull in the new `messages.pot` changes and avoid conflicts in future pushes
 
 ## Making Updates to Your Pull Request
 
