@@ -6,6 +6,7 @@
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
 - [Resolving Rebase Conflicts](#resolving-rebase-conflicts)
+- [Pre-commit and the GitHub CI](#pre-commit-and-the-github-ci)
 
 ## Forking and Cloning the Open Library Repository
 
@@ -133,8 +134,8 @@ docker compose run --rm home make test
 ```
 | Info |
 | --- |
-| When the PR is submitted, the Continuous Integration (CI) server will [lint](https://en.wikipedia.org/wiki/Lint_(software)) (i.e. statically analyze code for bugs and stylistic bugs) the code and attempt to fix any errors it finds. If the errors require human intervention, the checks may fail. See [Linting](https://github.com/internetarchive/openlibrary/wiki/Testing#linting).
-| If the checks fail, you can simply change the code and resubmit, but to prevent repeated resubmits you can optionally pre-lint the code before submitting by using `docker compose run --rm home npm run lint` to do a one-off JS lint or by [setting up `pre-commit`](https://github.com/internetarchive/openlibrary/wiki/Testing#lint-everything-with-pre-commit-from-your-shell-outside-of-docker) to run all the checks with each commit. |
+| When the PR is submitted, the Continuous Integration (CI) server will [lint](https://en.wikipedia.org/wiki/Lint_(software)) (i.e. statically analyze code for bugs and stylistic bugs) the code and attempt to fix any errors it finds. If the errors require human intervention, the checks may fail. See [`pre-commit` and the Github CI](#pre-commit-and-the-github-ci).
+| If the checks fail, you can simply change the code and resubmit, but to prevent repeated resubmits you can optionally pre-lint the code before submitting by using `docker compose run --rm home npm run lint` to do a one-off JS lint or by [setting up `pre-commit`](#running-pre-commit-locally-recommended) to run all the checks with each commit. |
 
 6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.
 ![GitHub pull request](https://archive.org/download/screenshot20191211at11.12.56/pull-request.png)
@@ -143,11 +144,13 @@ Your code is now ready for review!
 
 ## Troubleshooting Your Pull Request
 ### Failing the `Generate POT` check
-If your commit involves adding, removing or altering text that will be visible to the user and is [properly internationalized](https://github.com/internetarchive/openlibrary/wiki#internationalization-i18n-developers-guide), an update of the translation template file will be automatically bundled in with your changes via `pre-commit`.
+If your commit involves adding, removing or altering text that will be visible to the user and is [properly internationalized](https://github.com/internetarchive/openlibrary/wiki#internationalization-i18n-developers-guide), an update of the translation template file will be automatically bundled in with your changes via `pre-commit`. 
+
+To learn more, see [Pre-commit and the GitHub CI](#pre-commit-and-the-github-ci).
 
 **What this means:**
 
-If you're [running `pre-commit` locally](https://github.com/internetarchive/openlibrary/wiki/Testing#lint-everything-with-pre-commit-from-your-shell-outside-of-docker):
+If you're running `pre-commit` locally:
 - Your code will "fail" a test called `Generate POT`, give you the error message `Files were modified by this hook`, and add `messages.pot` changes to your git unstaged changes.
 - All you need to do to "pass" the test is add the `messages.pot` file to staging and redo your commit; the `Generate POT` test should now pass, and your changes will be immediately available to translators once your branch is merged. 
 
@@ -252,6 +255,66 @@ Sometimes when you `rebase` your branch, you will get conflicts! This happens wh
 If it hits a conflict during the rebase, it will stop, and let you fix it. I find fixing conflicts in VS Code to work well. In VS Code, open up the Source Control panel (Ctrl-Shift-G). Conflicts will be shown in red at the top with a "C" next to them. Click on the file to find and resolve the conflicts. Once you've resolved them all, press the "+" button next to the file in the source control panel; this is the same as running `git add FILE`. Once you've resolved all the conflicts, run `git rebase --continue` to continue the rebase.
 
 If the conflicts look too much, and you want to abandon the rebase and go back to where your code was before, run `git rebase --abort`.
+
+## Pre-commit and the GitHub CI
+To automatically ensure that certain formatting practices are maintained throughout the codebase, and that any incoming pull requests pass a set of requisite JavaScript and Python checks, Open Library uses GitHub's Continuous Integration (CI) Server with a set of [`pre-commit` hooks](https://pre-commit.com/) to run a series of automated checks on incoming PRs.
+
+### The GitHub CI Server
+If you don't have `pre-commit` installed locally and your PR fails any one of the checks, there are two things that may happen when you push your changes:
+1. One of the checks initially fails, but then the `pre-commit` bot pushes a new commit for you that fixes the problem. If this is the case, you'll see a commit that looks like this:
+
+<img width="782" alt="Pre-commit bot updates" src="https://github.com/internetarchive/openlibrary/assets/140550988/444c8708-e598-4562-babb-58ae2c49d2d2">
+
+This means that the `pre-commit` bot auto-fixed the problem for you, which is very common in the case of simple formatting errors. In this case, you're all set, but if you plan on making any more changes to your branch, it's a good idea to pull in `pre-commit`'s changes with `git pull origin HEAD` to ensure you don't run into any conflicts.
+
+2. The check simply fails and you'll see something that looks like this:
+
+<img width="757" alt="Failing pre-commit check" src="https://github.com/internetarchive/openlibrary/assets/140550988/882f228a-a7dd-4385-81a6-a70895afe7b8">
+
+This means that the problem that the CI identified requires human intervention, which means you'll want to click "Details" to see what exactly tripped up the test, try to fix the problem locally, and push up a new solution with `git push origin HEAD`. If you're not sure what is causing the error or how to fix it, this is a great time to reach out to the issue's lead for guidance on how to proceed.
+
+### Running `pre-commit` Locally (Recommended)
+To test everything the CI server checks (JavaScript, `mypy`, `black`, `ruff`, etc.), and to do so automatically at the time of commit, one can run, in the local environment, outside of Docker, a Python program named `pre-commit`. This will use `git`'s [hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run Open Library-specific linting checks when committing code in `git`. Because `pre-commit` integrates with `git`, that means it runs outside of Docker, and needs to be available to `git` in your current environment.
+
+If you have `pre-commit` installed, the checks will run locally each time you add a commit to your branch. This way, you don't have to worry about re-pushing your changes every time you encounter a `pre-commit` error, which is especially nice in the case of simple formatting issues like trailing whitespace.
+
+If your commit fails any of the checks, there are two things that may happen:
+1. The check will initially fail and your staged changes will not be committed, but `pre-commit` will auto-add a new change that fixes the problem, in which case you'll see a new unstaged git change and something like this:
+
+<img width="564" alt="pre-commit modifying files" src="https://github.com/internetarchive/openlibrary/assets/140550988/e0f3a63d-bd66-4057-a640-a8d751407d15">
+
+All you need to do in this case is add the change to staging and commit again. The check should pass, and you should now be able to push your changes.
+
+2. The check will simply fail, your staged changes will not be committed, and you'll see an error message like this:
+<img width="561" alt="Failed mypy example" src="https://github.com/internetarchive/openlibrary/assets/140550988/bb5a6118-6e51-4710-9d6d-c1a542410b5e">
+
+This means that the problem requires human intervention, which means that you can fix the problem locally, using the error message info and/or guidance from the issue's lead, and then re-commit and push your changes as needed. 
+
+#### Installing `pre-commit`
+Prerequisites:
+- the version of your current Python interpreter must match the version of Python specified in the `default_language_version` section of [`.pre-commit-config.yaml`](https://github.com/internetarchive/openlibrary/blob/master/.pre-commit-config.yaml).
+
+Although a complete discussion of managing Python's versions and Python's virtual environments is outside the scope of this discussion, it is likely worth creating a virtual environment for each Python project on which you work. See Python's own documentation about [`venv`](https://docs.python.org/3/library/venv.html) for one such approach to managing virtual environments. Additionally, if your `python3 --version` doesn't match the version specified in `.pre-commit-config.yaml`, consider [`pyenv`](https://github.com/pyenv/pyenv) on Linux, macOS, or Windows Subsystem for Linux, or [`pyenv-win`](https://github.com/pyenv-win/pyenv-win) on Windows outside of the Windows Subsystem for Linux.
+
+*Note:* this will install a `git` commit hook that will run prior to every commit. As there are times where one may simply wish to commit code, even if it will fail the linting, **one can override commit hooks with `git commit --no-verify`**. For more on `pre-commit`, see https://pre-commit.com/.
+
+To enable `pre-commit`, run the following in your local shell outside of Docker:
+1. `pip install pre-commit` or `brew install pre-commit`; and
+2. `pre-commit install`
+
+Henceforth, `pre-commit` will lint your code with every `git commit` (unless you commit with `git commit --no-verify` to disable running the hooks). To manually run `pre-commit`, you can execute `pre-commit run --all-files`.
+
+If you see an error similar to either of the following, please ensure you the version of you Python interpreter matches the version specified in `.pre-commit-config.yaml`:
+```
+An unexpected error has occurred: CalledProcessError: command: ('/home/scott/.pyenv/versions/3.9/bin/python3.9', '-mvirtualenv', '/home/scott/.cache/pre-commit/repolh5wc3hy/py_env-python3.11', '-p', 'python3.11')
+return code: 1
+stdout:
+    RuntimeError: failed to find interpreter for Builtin discover of python_spec='python3.11'
+stderr: (none)
+Check the log at /home/scott/.cache/pre-commit/pre-commit.log
+```
+
+To remove `pre-commit`, run `pre-commit uninstall`.
 
 ## References
 - Getting Started flow roughly based on https://gist.github.com/Chaser324/ce0505fbed06b947d962
