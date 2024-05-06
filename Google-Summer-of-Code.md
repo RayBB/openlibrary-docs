@@ -116,3 +116,15 @@ One might evaluate success in any number of ways. Here are some ideas, though ca
 * how many times a patron clicks submits a web book
 * how many times a librarian approves a submitted web_book
 * how many times a web_book button has been clicked by a patron
+
+### For Staff & Mentors
+
+When evaluating GSoC candidates, we create a table and individually rank proposals on a scale of 1-5. We dark out our scores so that other mentors are not influenced by our scores while performing their own independent evaluations. When all staff have voted, we tally up the results and discuss the top candidates.
+
+While evaluating, staff considers aspects like whether the applicant:
+* Has demonstrated commitment to open source ethos & technologies
+* Has demonstrated capability to complete technical tasks mentioned in their proposal
+* Has produced a roadmap that is defensible, specific, focused, practical, and achievable
+* Has done work to perform research and produce aids such as schemas, mock ups and designs, or diagrams to demonstrate how their solution works and that their solution will work
+* Demonstrates understanding or sensitivity to real world limitations, risks, and costs of potential solutions (e.g. budget, compute needs, accuracy of models, potential bias of solutions, etc) 
+* Knows how to use their proposal well to answer staff's questions and respect our time -- does not include copious "filler" intro paragraphs or appeal to generic, indefensible, broad-sweeping solutions like "will solve using machine learning"
