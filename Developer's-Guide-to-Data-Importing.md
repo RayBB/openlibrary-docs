@@ -173,7 +173,7 @@ Once this is done, call `curl` with `-b cookies.txt` to use the cookie.
 ## Import by ISBN or ASIN
 
 ### Individual ISBNs or ASINs
-If you know the ISBN or ASIN of a book, you may be able to import it using the `https://openlibrary.org/isbn/:identifier:` API. Note: the ISBN must be convertible to ISBN 10 for this endpoint to work with an ISBN. This API walks through three steps:
+If you know the ISBN or [ASIN](https://en.wikipedia.org/wiki/Amazon_Standard_Identification_Number) of a book, you may be able to import it using the `https://openlibrary.org/isbn/:identifier:` API. Note: the ISBN must be convertible to ISBN 10 for this endpoint to work with an ISBN. This API walks through three steps:
 1. First, the Open Library database is searched for the identifier in question, and if a match is found, that matched edition is returned;
 2. If no matching edition is found, the `import_item` table will be checked for `staged` entries that match, an import will be attempted based on that match, and a new edition if any will be returned;
 3. Finally, if no matches have been found yet, BookWorm (the "affiliate-server") will be queried for matches; if a match is found, the associated metadata is `staged` for import at a later date. At this step the server will simply reply that the page, `/isbn/<some isbn>`, does not exist. If `high_priority=true` is passed with the query to `/isbn` (e.g. (`/isbn/1234567890?high_priority=true`), then an import will be attempted and the resulting edition returned, if any.
