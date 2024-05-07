@@ -10,6 +10,7 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 - [Routing & Templates](#routing-and-templates)
 - [URL Routing](#url-routing)
 - [The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
+- [Partials](#partials)
 - [Infogami Types](#infogami-types)
 - [Design Pattern Library](Design-Pattern-Library) (outdated) 
 
@@ -212,6 +213,27 @@ From here, a distinction is made between pages which are custom defined by us (w
 ## Adding a new Router
 
 To add a new Router to Open Library, refer to the tutorial in our [plugins README](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins/README.md).
+
+## Partials
+
+In some cases, we may want a page to load quickly with a minimal template and then fetch more components using javascript after the page finishes loading. For instance, on the books page, we try to fetch and show book prices in a sidebar, but this component can be slow to load, so instead of fetching this data on the backend and returning it along with the template, we augment the template with javascript instructions to load a Partial after the minimal book page is finished loading:
+
+<img width="244" alt="Screenshot 2024-05-07 at 11 44 58 AM" src="https://github.com/internetarchive/openlibrary/assets/978325/a2cab857-4650-40be-9173-7ccc3d4dfc79">
+
+A Partial is a targeted endpoint that returns only the minimal html required for rendering a specific, isolated component, such as a "related books carousel" or a "book price widget".
+
+In PR [#8824](https://github.com/internetarchive/openlibrary/pull/8824) you can see a complete example of where the "blocking" synchronous book price widget was removed from the Book Page and replaced with an asynchronous javascript call to a Partial that fetched book data after page load.
+
+First, we need to register a new Partial to return the right html for our component:
+https://github.com/jimchamp/openlibrary/blob/a220e5624caabe8f289151c9d347f48f2110069f/openlibrary/plugins/openlibrary/code.py#L1031-L1038
+
+Second, javascript is added to fetch the html for this component using the Partial endpoint:
+* 
+https://github.com/internetarchive/openlibrary/blob/37db01e97fafaeec1f36951050b06f836442ca71/openlibrary/plugins/openlibrary/js/affiliate-links.js#L54
+* https://github.com/jimchamp/openlibrary/blob/a220e5624caabe8f289151c9d347f48f2110069f/openlibrary/plugins/openlibrary/js/index.js#L536-L541
+
+Finally, we update the origin template so the logic for synchronously loading the component is removed and is replaced with the a html container that can be populated by the Partial using javascript:   
+* https://github.com/internetarchive/openlibrary/pull/8824/files#diff-93ec72c37de495b619f24641f2b9defc4ea1205bb5450bb6baa33498831721efL195-R195
 
 ## Infogami Types
 
