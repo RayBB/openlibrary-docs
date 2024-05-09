@@ -88,7 +88,7 @@ Most javascript files for the Open Library project live in openlibrary/openlibra
 
 Open Library uses jQuery and Vue. Some third-party JavaScript libraries are combined and included as `vendor.js`. 
 
-#### Adding New Javascript Files to HTML Templates
+#### Linking New Javascript Files to HTML Templates
 
 A guide by Jaye R.
 
@@ -164,6 +164,8 @@ This function will contain all of the Javascript the HTML template needs.
 
 And that's it! When you build the Javascript with `docker compose run --rm home make js`, or with the watch script `docker compose run --rm home npm run-script watch`,
 and reload the HTML template in the browser you should see "Hooked up" in the console.
+
+<hr>
 
 #### vendor.js and third party libraries
 
