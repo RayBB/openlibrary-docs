@@ -53,7 +53,7 @@ For more on git and line endings, see [Configuring Git to handle line endings](h
 **Note: if you get permission issues while executing these commands please run git the bash shell as an Administrator.**
 
 ```sh
-# Get in the project directory
+# Get in the project root directory
 cd openlibrary
 
 # Configure Git to keep LF line endings on checkout even on Windows.
