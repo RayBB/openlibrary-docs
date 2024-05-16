@@ -92,15 +92,15 @@ Note that `origin` is `git@`. If it is not, see [Forking and Cloning the Open Li
 
 ## Creating a Pull Request
 
-1. Make sure master is up-to-date:
+**1. Make sure master is up-to-date:**
 
 ```sh
 git switch master
-git pull upstream master
+git pull --ff-only upstream master
 git push origin master
 ```
 
-2. [Create a new branch for the feature or issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.
+**2. [Create a new branch for the feature or issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.**
 
 ```sh
 git switch -c 1234/fix/fix-the-thing
@@ -108,7 +108,7 @@ git switch -c 1234/fix/fix-the-thing
 
 (specifying `-c` creates a new branch, and `switch` switches to it).
 
-3. Make changes/commit:
+**3. Make changes/commit:**
 
 ```sh
 git add the-file.html
@@ -120,24 +120,23 @@ A commit message should answer three primary questions;
 * How does this commit address the issue?
 * What effects does this change have?
 
-4. Push the branch:
+**4. Push the branch:**
 
 ```sh
 git push origin HEAD
 ```
 (note HEAD refers to your current branch; so make sure you're on the right branch!)
 
-5. Test your changes:
+**5. Test your changes:**
 
 ```sh
 docker compose run --rm home make test
 ```
-| Info |
-| --- |
-| When the PR is submitted, the Continuous Integration (CI) server will [lint](https://en.wikipedia.org/wiki/Lint_(software)) (i.e. statically analyze code for bugs and stylistic bugs) the code and attempt to fix any errors it finds. If the errors require human intervention, the checks may fail. See [`pre-commit` and the Github CI](#pre-commit-and-the-github-ci).
-| If the checks fail, you can simply change the code and resubmit, but to prevent repeated resubmits you can optionally pre-lint the code before submitting by using `docker compose run --rm home npm run lint` to do a one-off JS lint or by [setting up `pre-commit`](#running-pre-commit-locally-recommended) to run all the checks with each commit. |
+When you submit your pull request, the [GitHub CI server](#pre-commit-and-the-github-ci) will automatically run a few more tests and formatting checks. 
 
-6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.
+If you'd like, you can run these checks before you submit by [installing `pre-commit` locally](#running-pre-commit-locally-recommended), or run a [one-off formatting check](https://github.com/internetarchive/openlibrary/wiki/Testing#linting). 
+
+**6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.**
 ![GitHub pull request](https://archive.org/download/screenshot20191211at11.12.56/pull-request.png)
 
 Your code is now ready for review!
