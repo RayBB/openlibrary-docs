@@ -31,9 +31,7 @@ Entry in a sample data table
 
 
 
-Read further about Infogami and type on :
-
-<https://openlibrary.org/dev/docs/infogami>
+Read further about Infogami and type on: https://openlibrary.org/dev/docs/infogami
 
 # Open Library Feature Tables
 

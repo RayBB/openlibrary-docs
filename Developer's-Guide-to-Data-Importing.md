@@ -205,7 +205,7 @@ For instance, let’s say we want to create a bot which discovers isbns from Ama
 #### Submitting ISBNs in Bulk
 Please do not run this list of isbns directly against our https://openlibrary.org/isbn/:isbn` API because it is highly rate-limited. Instead, @hornc is writing a [`modern-import-bot`](https://github.com/internetarchive/openlibrary-bots/tree/master/modern-import-bot) designed to take safely lists of isbns (from a specified archive.org item) and queue the isbns up to be safely imported into Open Library.
 
-As a result, once your bot has collected a list of isbns for a certain time period, the first step is to upload the isbns to its Archive.org item (which should have been created in step #1 and named according to the bot which generated the isbns -- e.g. https://archive.org/details/amazon-new-arrivals-isbns` within the https://archive.org/details/ol_data collection) as `<date>_<source>_isbns.csv` -- e.g. `2019-06-25_amazon_isbns.csv`
+As a result, once your bot has collected a list of isbns for a certain time period, the first step is to upload the isbns to its Archive.org item (which should have been created in step #1 and named according to the bot which generated the isbns -- e.g. https://archive.org/details/amazon-new-arrivals-isbns within the https://archive.org/details/ol_data collection) as `<date>_<source>_isbns.csv` -- e.g. `2019-06-25_amazon_isbns.csv`
 
 #### Updating ISBN Import
 In order for this entire process to work correctly and not produce bad data, we'll need to first make change to the isbn import endpoint to prevent duplication. For instance, to make sure only books (i.e. non-book items on amazon, like CDs) get imported and we avoid duplicating existing authors, works, and editions.
