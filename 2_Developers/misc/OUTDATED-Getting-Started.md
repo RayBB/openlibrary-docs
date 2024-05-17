@@ -14,7 +14,7 @@ If you're getting started, you likely want to take a look at our [Contributor's 
     - [Testing the site with different users](#creating-users)
     - [Lending & Borrowing](#lending-and-borrowing)
     - [Configuration](#configuration)
-- [Importing Test Data](/Loading-Production-Book-Data) (moved)
+- [Importing Test Data](/2_Developers/misc/Loading-Production-Book-Data) (moved)
 - [Frontend Developer's Guide](/2_Developers/2_Frontend/Frontend-Guide) (moved)
 - [Backend Developer's Guide](#backend-guide)
     - [Memcache](#memcache)
@@ -140,7 +140,7 @@ Be sure to restart your dev instance after any configuration changes.
 <a name="importing-test-data"></a>
 ## Importing Test Data
 
-This section moved [here](/Loading-Production-Book-Data).
+This section moved [here](/2_Developers/misc/Loading-Production-Book-Data).
 
 <a name="backend-guide"></a>
 ## Backend Guide
