@@ -183,7 +183,7 @@ to **DELETE** a memcached entry:
 
 - You can also find memcached items using the Internet Archive ID (import `memcache` instead of `olmemecache`):
 
-```pyshell
+```python
 >>> import yaml
 >>> import memcache
 >>> with open('openlibrary.yml') as in_file:
