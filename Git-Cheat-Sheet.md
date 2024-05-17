@@ -178,7 +178,13 @@ git switch master
 git pull --ff-only upstream master
 git push origin master
 ```
-**2. Test your changes:**
+**2. Rebase your branch onto master**
+
+```sh
+git switch 1234/fix/fix-the-thing
+git rebase master
+```
+**3. Test your changes:**
 
 ```sh
 docker compose run --rm home make test
@@ -187,7 +193,7 @@ When you submit your pull request, the [GitHub CI server](#pre-commit-and-the-gi
 
 If you'd like, you can run these checks before you submit by [installing `pre-commit` locally](#running-pre-commit-locally-recommended), or run a [one-off formatting check](https://github.com/internetarchive/openlibrary/wiki/Testing#linting). 
 
-**3. Click Compare & pull request**
+**4. Click Compare & pull request**
 Confirm the commits and files changed are only the changes you have made on your working branch / intend for the PR
 ![OL_Git_PR](https://github.com/internetarchive/openlibrary/assets/79802377/d58c3d92-e281-4775-9eab-084490887d11)
 
