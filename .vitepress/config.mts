@@ -19,7 +19,7 @@ export default withPwa(defineConfig({
       // scanStartPath: "./docs",
       collapsed: true,
       useFolderLinkFromIndexFile: true,
-      excludeFiles: ["_Footer.md", "_Sidebar.md"]
+      // excludeFiles: []
     }),
 
     socialLinks: [
@@ -28,10 +28,5 @@ export default withPwa(defineConfig({
         link: "https://github.com/internetarchive/openlibrary",
       },
     ],
-
-    editLink: {
-      pattern: 'https://github.com/internetarchive/openlibrary/wiki/:path'
-    }
-
   },
 }));
