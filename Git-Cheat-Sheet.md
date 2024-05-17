@@ -1,6 +1,7 @@
 # Table of Contents
 
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
+- [Working on Your Branch] (#working-on-your-branch)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
@@ -90,6 +91,69 @@ upstream        https://github.com/internetarchive/openlibrary.git (push)
 ```
 Note that `origin` is `git@`. If it is not, see [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository).
 
+## Working on Your Branch
+
+Before creating a new branch and **each time** before working on an existing branch, make sure your master branch is up-to-date with upstream master 
+```
+git switch master
+git pull upstream master
+git push origin master
+```
+Create a new branch for your issue :
+`git -c switch [issue number]/[fix/feature/hotfix]/[short issue description]`
+
+Or, if you are returning to work on a previously created branch, rebase with master:
+```
+git switch [my/pre-existing/branch]
+git rebase master
+```
+Confirm that everything is up-to-date by running: `git status` 
+The output should be: `Your branch is up to date with 'origin/[master or your-branch]'`
+
+Check the status of your master and working branch on GitHub:
+**Master**
+<img width="777" alt="OL_Git_UpdatedMaster" src="https://github.com/internetarchive/openlibrary/assets/79802377/1c47c7dd-d56e-4098-8924-8689bd91b8a1">
+
+**Your Branch**
+
+Now, at long last, you can begin to make changes to your branch. 
+When you are ready to commit your changes run:
+```
+git status [you'll see all the files you've made changes to]
+git add . [stage all the changed files]
+git commit -m '[Explanation of changes]'
+git push origin [my/branch]
+```
+
+## Out-of-Sync Branches
+
+Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts. Here are some commands to run for common out-of-sync situations:
+
+**Master is behind upstream master**
+```
+git switch master
+git pull upstream master
+git push origin master
+```
+**Master is behind and ahead of upstream master**
+```
+git reset --hard HEAD~(the number you are ahead by)
+git push -f origin master
+```
+**Working Branch is behind (it will always be ahead) of upstream master**
+![OL_Git_UnsyncedBranch](https://github.com/internetarchive/openlibrary/assets/79802377/2074f643-1bf0-45aa-ab10-cb68e9763e78)
+
+```
+git switch master
+git pull upstream master
+git push origin master
+git switch [my/branch]
+git rebase master
+git push origin [my/branch] (may have to use git push -f origin)
+```
+If rebasing your branch still fails or provokes merge conflicts, see Troubleshooting. 
+
+
 ## Creating a Pull Request
 
 **1. Make sure master is up-to-date:**
@@ -99,35 +163,7 @@ git switch master
 git pull --ff-only upstream master
 git push origin master
 ```
-
-**2. [Create a new branch for the feature or issue you plan to work on](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#development-practices) and check it out.**
-
-```sh
-git switch -c 1234/fix/fix-the-thing
-```
-
-(specifying `-c` creates a new branch, and `switch` switches to it).
-
-**3. Make changes/commit:**
-
-```sh
-git add the-file.html
-git commit
-```
-
-A commit message should answer three primary questions;
-* Why is this change necessary?
-* How does this commit address the issue?
-* What effects does this change have?
-
-**4. Push the branch:**
-
-```sh
-git push origin HEAD
-```
-(note HEAD refers to your current branch; so make sure you're on the right branch!)
-
-**5. Test your changes:**
+**2. Test your changes:**
 
 ```sh
 docker compose run --rm home make test
@@ -136,10 +172,13 @@ When you submit your pull request, the [GitHub CI server](#pre-commit-and-the-gi
 
 If you'd like, you can run these checks before you submit by [installing `pre-commit` locally](#running-pre-commit-locally-recommended), or run a [one-off formatting check](https://github.com/internetarchive/openlibrary/wiki/Testing#linting). 
 
-**6. Go to [https://github.com/internetarchive/openlibrary/pulls](https://github.com/internetarchive/openlibrary/pulls) and make new pull-request from branch in your forked repository and provide the information requested in the template.**
-![GitHub pull request](https://archive.org/download/screenshot20191211at11.12.56/pull-request.png)
+**3. On GitHub, click Compare & pull request to confirm the commits and files changed are only the changes you have made on your working branch / intend for the PR
+![OL_Git_PR](https://github.com/internetarchive/openlibrary/assets/79802377/d58c3d92-e281-4775-9eab-084490887d11)
 
-Your code is now ready for review!
+If everything looks right, create your PR based on provided template - your our code is now ready for review!
+If not, see [Troubleshooting](#troubleshooting)
+If you continue to make changes to an open PR, follow steps in [Working on Your Branch](#working-on-your-branch) to make sure your branch stays up to date.
+  
 
 ## Troubleshooting Your Pull Request
 ### Failing the `Generate POT` check
@@ -158,46 +197,6 @@ If you're not running `pre-commit` locally:
 - The CI will then push a new commit to your remote branch that contains the necessary `messages.pot` updates and now passes the `pre-commit` check 
 - You don't need to do anything else after this, but if you want to make and push further changes to the PR, it would be wise to first run a `git pull origin HEAD` to pull in the new `messages.pot` changes and avoid conflicts in future pushes
 
-## Making Updates to Your Pull Request
-
-Pull requests often receive feedback; to make changes to your existing pull requests:
-
-1. Make sure your branch is up-to-date with master
-
-```sh
-git switch master
-git pull upstream master
-```
-
-2. Rebase your branch onto master
-
-```sh
-git switch 1234/fix/fix-the-thing
-git rebase master
-```
-
-| Info |
-| --- |
-| Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. |
-
-| Info |
-| --- |
-| Sometimes there will be changes in the master branch to the same lines in your branch. This results in a conflict, because `git` can't decide which changes to use. See [Resolving rebase conflicts](#resolving-rebase-conflicts). |
-
-3. Make your edits and commit (same as steps 3 in [Creating a Pull Request](#creating-a-pull-request)).
-
-4. Push your changes up.
-
-```sh
-git push origin HEAD
-```
-
-**Note**: If the master rebase pulled in new changes, you will have to _force push_: `git push origin HEAD -f`.
-
-| Info |
-| --- |
-| Force pushing _replaces_ the commits on the remote branch with the commits on your local branch. Non-force pushing just adds new commits. Whenever you perform a rebase, you will have to force push to your branch. |
-| You should only force push if working on one of your own branches. If working on a branch which other people are also pushing to, force pushing is dangerous because it can override others' work. In that case, use `--force-with-lease`; this will force push _only_ if someone else hasn't made any changes to the branch. |
 
 ## Commit History Manipulation
 
