@@ -1,7 +1,7 @@
 # Table of Contents
 
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
-- [Working on Your Branch] (#working-on-your-branch)
+- [Working on Your Branch](#working-on-your-branch)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
@@ -109,11 +109,8 @@ git rebase master
 ```
 | Info |
 | --- |
-| Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. |
+| Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. Whenever you perform a rebase, you will have to force push to your branch.|
 
-| Info |
-| --- |
-| Sometimes there will be changes in the master branch to the same lines in your branch. This results in a conflict, because `git` can't decide which changes to use. See [Resolving rebase conflicts](#resolving-rebase-conflicts). |
 
 Confirm that everything is up-to-date by running: `git status`
 
@@ -132,7 +129,7 @@ When you are ready to commit your changes run:
 git status [you'll see all the files you've made changes to]
 git add . [stage all the changed files]
 git commit -m '[Explanation of changes]'
-git push origin [my/branch]
+git push origin [my/branch](or use <git push origin HEAD -f> if after rebase)
 ```
 
 ### Out-of-Sync Branches
@@ -140,14 +137,19 @@ git push origin [my/branch]
 Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts (See [Resolving rebase conflicts](#resolving-rebase-conflicts). Here are some commands to run for common out-of-sync situations:
 
 **Master is behind upstream master**
+![OL_Git_UnsyncedMaster](https://github.com/internetarchive/openlibrary/assets/79802377/80fe990e-72be-4eff-beb2-b4ad7f888378)
+
 ```
 git switch master
 git pull upstream master
 git push origin master
 ```
 **Master is behind and ahead of upstream master**
+![OL_Git_UnsyncedMaster2](https://github.com/internetarchive/openlibrary/assets/79802377/a28aa6f0-2136-4bad-8564-bea9b893c44d)
+
 ```
 git reset --hard HEAD~(the number you are ahead by)
+git pull upstream master
 git push -f origin master
 ```
 **Working Branch is behind (it will always be ahead) of upstream master**
