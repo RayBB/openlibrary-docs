@@ -134,7 +134,7 @@ git push origin [my/branch](or use <git push origin HEAD -f> if after rebase)
 
 ### Out-of-Sync Branches
 
-Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts (See [Resolving rebase conflicts](#resolving-rebase-conflicts). Here are some commands to run for common out-of-sync situations:
+Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts (See [Resolving rebase conflicts](#resolving-rebase-conflicts)). Here are some commands to run for common out-of-sync situations:
 
 **Master is behind upstream master**
 ![OL_Git_UnsyncedMaster](https://github.com/internetarchive/openlibrary/assets/79802377/80fe990e-72be-4eff-beb2-b4ad7f888378)
@@ -163,7 +163,7 @@ git switch [my/branch]
 git rebase master
 git push origin [my/branch] (if master rebase pulled in new changes, use git push -origin HEAD -f )
 ```
-If rebasing your branch still fails or provokes merge conflicts, see Troubleshooting. 
+If rebasing your branch still fails or provokes merge conflicts, see Troubleshooting(#troubleshooting-your-pull-request). 
 
 | What does force pushing do? |
 | --- |
@@ -195,7 +195,7 @@ If you'd like, you can run these checks before you submit by [installing `pre-co
 ![OL_Git_PR](https://github.com/internetarchive/openlibrary/assets/79802377/d58c3d92-e281-4775-9eab-084490887d11)
 
 If everything looks right, create your PR based on provided template - your our code is now ready for review!
-If not, see [Troubleshooting](#troubleshooting)
+If not, see [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 If you continue to make changes to an open PR, follow steps in [Working on Your Branch](#working-on-your-branch) to make sure your branch stays up to date.
   
 
