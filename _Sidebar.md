@@ -17,7 +17,7 @@
 5. [Imports](Developer's-Guide-to-Data-Importing)  
 6. [BookWorm / Affiliate Server ](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit#heading=h.xmcr55qgzsig)  
 7. [Writing Bots](Developer-Resources/Writing-Bots)  
-8. [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions) and [More Documentation](/5.%20Projects/Documentation)  
+8. [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions) and [More Documentation](5. Projects/Documentation)  
 
 **Developer Guides**  
 * [Developing the My Books & Reading Log](Developing-the-Reading-Log)  
