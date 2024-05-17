@@ -12,7 +12,7 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 - [The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
 - [Partials](#partials)
 - [Infogami Types](#infogami-types)
-- [Outdated Design Pattern Library](/Design-Pattern-Library)
+- [Outdated Design Pattern Library](/3_Designers_Design-Pattern-Library)
 
 ## File Organization Overview
 

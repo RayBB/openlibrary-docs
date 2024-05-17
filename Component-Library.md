@@ -1,4 +1,4 @@
-OpenLibrary does not have one of these yet, but we strive to do so, evolving the foundations laid in the [Design-Pattern-Library](Design-Pattern-Library)
+OpenLibrary does not have one of these yet, but we strive to do so, evolving the foundations laid in the [Design-Pattern-Library](3_Designers_Design-Pattern-Library)
 
 # What is a component?
 
