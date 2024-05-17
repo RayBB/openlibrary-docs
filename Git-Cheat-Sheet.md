@@ -107,7 +107,7 @@ Or, if you are returning to work on a previously created branch, rebase with mas
 git switch [my/pre-existing/branch]
 git rebase master
 ```
-| Info |
+| What does rebase do? |
 | --- |
 | Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. Whenever you perform a rebase, you will have to force push to your branch.|
 
@@ -165,10 +165,11 @@ git push origin [my/branch] (if master rebase pulled in new changes, use git pus
 ```
 If rebasing your branch still fails or provokes merge conflicts, see Troubleshooting. 
 
-| Info |
+| What does force pushing do? |
 | --- |
 | Force pushing _replaces_ the commits on the remote branch with the commits on your local branch. Non-force pushing just adds new commits. Whenever you perform a rebase, you will have to force push to your branch. |
-
+| Force push with care! |
+| --- |
 | You should only force push if working on one of your own branches. If working on a branch which other people are also pushing to, force pushing is dangerous because it can override others' work. In that case, use `--force-with-lease`; this will force push _only_ if someone else hasn't made any changes to the branch. |
 
 
