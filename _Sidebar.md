@@ -50,4 +50,3 @@
 [Old Getting Started](Developer-Resources/Getting-Started)  
 [Orphaned Editions Planning](5_Projects_Orphaned-Editions-Planning)  
 [Canonical Books Page](5_Projects_Canonical-Books-Page)  
-[IA↔OL ID Sync](archive.org-↔-Open-Library-synchronisation)  

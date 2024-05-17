@@ -91,8 +91,8 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
       * Situation: Scheduled Maintenance w/ Trevor
       * Problems: Servers which were restarted came back up w/ permission problems (/var/run/openlibrary missing)
       * Resolution:
-         * [we added server restart guide to deployment](Deployment-Scratchpad#handling-server-reboot)
-         * [we added docs for checking other services (e.g. solr-updater) which may go down](Deployment-Scratchpad#verify-deployment)
+         * we added server restart guide to deployment in Deployment-Scratchpad#handling-server-reboot
+         * we added docs for checking other services (e.g. solr-updater) which may go down in Deployment-Scratchpad#verify-deployment
       * Questions:
          * Why is this happening? Is some startup process nuking /var/run/openlibrary? https://internetarchive.slack.com/archives/openlibrary/p1487113203001313
       * Thanks: Brenton
@@ -103,7 +103,7 @@ $ sudo strace -tt -s 500 -p $pid_of_gunicorn
       * Learnings:
          * Changing symlinks must be done on all services (`ol-web3`, `ol-web4`, etc)
          * Do not reset history in git as our deploy process looks only at the most recent hash it knows about!
-      * Resolution: we added blue-green deployment to our docs + [guide on adding dependencies](Deployment-Scratchpad#satisfying-dependency-changes)
+      * Resolution: we added blue-green deployment to our docs + guide on adding dependencies in Deployment-Scratchpad#satisfying-dependency-changes
    * ### 2016-12-23 11:50pm PST - 2016-12-24 6:30am PST
       * Situation: DNS problems [reported here](https://internetarchive.slack.com/archives/openlibrary/p1482593478000364), [debugged here](https://internetarchive.slack.com/archives/ops/p1482564582000350) and
       * Resolution: [solved here](https://internetarchive.slack.com/archives/openlibrary/p1482593478000364) -- we started documenting our deployment process

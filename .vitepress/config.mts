@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Open Library Docs",
   description: "A new docs experience for Open Library",
   ignoreDeadLinks: 'localhostLinks',
+  srcExclude: ["_Sidebar.md"], // Ignore the sidebar so we don't get dead link reports
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
