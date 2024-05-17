@@ -91,7 +91,7 @@ upstream        https://github.com/internetarchive/openlibrary.git (push)
 ```
 Note that `origin` is `git@`. If it is not, see [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository).
 
-## Working on Your Branch
+### Working on Your Branch
 
 Before creating a new branch and **each time** before working on an existing branch, make sure your master branch is up-to-date with upstream master 
 ```
@@ -107,6 +107,14 @@ Or, if you are returning to work on a previously created branch, rebase with mas
 git switch [my/pre-existing/branch]
 git rebase master
 ```
+| Info |
+| --- |
+| Rebasing is the equivalent of "lifting" all the commits in your branch, and placing them on top of the latest master. It effectively changes the *base* of your branch/commits. |
+
+| Info |
+| --- |
+| Sometimes there will be changes in the master branch to the same lines in your branch. This results in a conflict, because `git` can't decide which changes to use. See [Resolving rebase conflicts](#resolving-rebase-conflicts). |
+
 Confirm that everything is up-to-date by running: `git status` 
 The output should be: `Your branch is up to date with 'origin/[master or your-branch]'`
 
@@ -115,6 +123,7 @@ Check the status of your master and working branch on GitHub:
 <img width="777" alt="OL_Git_UpdatedMaster" src="https://github.com/internetarchive/openlibrary/assets/79802377/1c47c7dd-d56e-4098-8924-8689bd91b8a1">
 
 **Your Branch**
+![OL_Git_UpdatedBranch](https://github.com/internetarchive/openlibrary/assets/79802377/8471ea05-0235-41b1-a127-bd80c75d0c3e)
 
 Now, at long last, you can begin to make changes to your branch. 
 When you are ready to commit your changes run:
@@ -149,9 +158,14 @@ git pull upstream master
 git push origin master
 git switch [my/branch]
 git rebase master
-git push origin [my/branch] (may have to use git push -f origin)
+git push origin [my/branch] (if master rebase pulled in new changes, use git push -origin HEAD -f )
 ```
 If rebasing your branch still fails or provokes merge conflicts, see Troubleshooting. 
+| Info |
+| --- |
+| Force pushing _replaces_ the commits on the remote branch with the commits on your local branch. Non-force pushing just adds new commits. Whenever you perform a rebase, you will have to force push to your branch. |
+
+| You should only force push if working on one of your own branches. If working on a branch which other people are also pushing to, force pushing is dangerous because it can override others' work. In that case, use `--force-with-lease`; this will force push _only_ if someone else hasn't made any changes to the branch. |
 
 
 ## Creating a Pull Request
