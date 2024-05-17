@@ -2,7 +2,8 @@
 
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
 - [Working on Your Branch](#working-on-your-branch)
-- [Creating a Pull Request](#creating-a-pull-request)
+- [Making Changes and Creating a Pull Request](#making-changes-and-creating-a-pull-request)
+- [Updating Your Pull Request](#updating-your-pull-request)
 - [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
 - [Resolving Rebase Conflicts](#resolving-rebase-conflicts)
@@ -116,7 +117,7 @@ git rebase master
 You can then confirm that everything is up to date by running `git status` and/or visiting your remote master branch at `github.com/your-username/openlibrary`, where you should see the following:
 <img width="777" alt="OL_Git_UpdatedMaster" src="https://github.com/internetarchive/openlibrary/assets/79802377/1c47c7dd-d56e-4098-8924-8689bd91b8a1">
 
-If everything looks good, you can continue following the steps in [Creating a Pull Request](#creating-a-pull-request) to commit, test and submit your changes.
+If everything looks good, you can continue following the steps in [Making Changes and Creating a Pull Request](#making-changes-and-creating-a-pull-request) to commit, test and submit your changes.
 
 If not, read on!
 
@@ -173,7 +174,7 @@ If so, be sure to **force push with care:** You should _only_ force push if work
 
 If none of the above solved the issue, you can consult a staff member or the issue's lead, and/or see [Troubleshooting your Pull Request](#troubleshooting-your-pull-request).
 
-## Creating a Pull Request
+## Making Changes and Creating a Pull Request
 **1. Make sure master is up-to-date:**
 ```sh
 git switch master
@@ -222,6 +223,8 @@ Confirm that the changes in `Files Changed` match the changes you have made on y
 If everything looks right, you can write out an explanation of your changes using the provided template and submit. Your code is now ready for review!
 
 **Reminder:** Any time you return to your branch to make changes, be sure to follow steps in [Working on Your Branch](#working-on-your-branch) to make sure your branch stays up to date.
+
+## Updating your Pull Request
 
 Pull requests often receive feedback; to make [requested changes](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests) to your existing pull request:
 
