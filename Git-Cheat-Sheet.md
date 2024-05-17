@@ -115,7 +115,6 @@ git rebase master
 Confirm that everything is up-to-date by running: `git status`
 
 Both master and new working branch should be up-to-date with upstream master on GitHub:
-**Master**
 <img width="777" alt="OL_Git_UpdatedMaster" src="https://github.com/internetarchive/openlibrary/assets/79802377/1c47c7dd-d56e-4098-8924-8689bd91b8a1">
 
 Now, at long last, you can begin to make changes to your branch. 
