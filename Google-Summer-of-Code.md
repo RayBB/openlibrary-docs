@@ -14,9 +14,6 @@ Candidates [see eligibility requirements](https://buildyourfuture.withgoogle.com
 
 Internet Archive has participated in Google Summer of Code for 3+ years. Open Library has participated twice (2018, 2020). In 2019, the Internet Archive did not receive enough slots for Open Library to participate and so we designed and ran our own Internet Archive Summer of Code (IASoC) internship. 
 
-- [Google Summer of Code 2019](Google-Summer-of-Code-2019)
-- [Google Summer of Code 2018](Google-Summer-of-Code-2018)
-
 ## Your chances
 
 Typically, hundreds of candidates email us to inquire about GSoC. 25 or so set up the Open Library code base, join the community slack channel, make contributions to the project, and submit applications. So if you're very dedicated and invest time meeting mentors and working with them to understand the codebase and the project's needs and problems, you're chances could be ~1/25!

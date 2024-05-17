@@ -1,4 +1,4 @@
-For legacy documentation, please check the [Open Library Archives](https://openlibrary.org/dev/docs/bots?v=12). Most Bot code now lives at [https://github.com/internetarchive/openlibrary-bots#openlibrary-bots](https://github.com/internetarchive/openlibrary-bots#openlibrary-bots)
+For legacy documentation, please check the [Open Library Archives](https://openlibrary.org/dev/docs/bots?v=12). Most Bot code now lives at https://github.com/internetarchive/openlibrary-bots
 
 # Introduction
 
@@ -47,7 +47,7 @@ Instead of making POSTs to API endpoints directly using a `bot account`, the Ope
 
 # `Bot account` Etiquette 
 
-If possible, `bot accounts` **should not** be used directly to make 1-off changes, e.g. from the command line. Changes instead should be coded into `bot scripts` (i.e. `bot`s) and checked in to the [openlibrary-bots](github.com/internetarchive/openlibrary-bots) repository. This way we can look back in time and see/figure out what exact changes were made (so we can debug if something goes wrong or if we have to modify or update and re-apply the logic).
+If possible, `bot accounts` **should not** be used directly to make 1-off changes, e.g. from the command line. Changes instead should be coded into `bot scripts` (i.e. `bot`s) and checked in to the [openlibrary-bots](https://github.com/internetarchive/openlibrary-bots) repository. This way we can look back in time and see/figure out what exact changes were made (so we can debug if something goes wrong or if we have to modify or update and re-apply the logic).
 
 # Example `Bot`s
 

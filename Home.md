@@ -333,7 +333,7 @@ Labels that are grey and/or start with a tilde `~` are *deprecated*.  They typic
 
 #### Finding Issues by Label
 
-- The default [issues page](/internetarchive/openlibrary/issues) presents several search fields.  There is one at the very top, for searching the repository or all of github. There is another one under the `issues` tab that searches through the issues.  To the right of the issues filter is the labels button, which gives you a "labels list" to browse and drill down to issues.  <img width="600" alt="Issues Page Snippet" src="https://user-images.githubusercontent.com/6502462/57257705-7bece100-705a-11e9-8272-3879419dedd3.png">
+- The default [issues page](https://github.com/internetarchive/openlibrary/issues) presents several search fields.  There is one at the very top, for searching the repository or all of github. There is another one under the `issues` tab that searches through the issues.  To the right of the issues filter is the labels button, which gives you a "labels list" to browse and drill down to issues.  <img width="600" alt="Issues Page Snippet" src="https://user-images.githubusercontent.com/6502462/57257705-7bece100-705a-11e9-8272-3879419dedd3.png">
 
 - You can type a label search term directly into the issues filter search field, you type `label:<labelname>` to include issues containing the label, and `-label:<labelname>` to exclude issues containing that label.  Because all the managed label names contain spaces and colons, you need to quote them if you are typing them directly into the issue search bar.  For example, `label:"affects: documentation"` (case doesn't matter).
 

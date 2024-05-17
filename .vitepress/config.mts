@@ -5,6 +5,7 @@ import { generateSidebar } from "vitepress-sidebar";
 export default defineConfig({
   title: "Open Library Docs",
   description: "A new docs experience for Open Library",
+  ignoreDeadLinks: 'localhostLinks',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],

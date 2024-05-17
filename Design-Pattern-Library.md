@@ -524,7 +524,7 @@ Seen on http://localhost:8080/people/openlibrary7774?m=edit
 
 ![screen shot 2018-11-09 at 4 30 43 pm](https://user-images.githubusercontent.com/148752/48294976-d6570d00-e43c-11e8-9653-18575fd04aab.png)
 
-When editing a profile page, and clicking the link button in the [wmd button bar](WmdButtonBar) this overlay shows. JavaScript is required.
+When editing a profile page, and clicking the link button in the wmd button bar this overlay shows. JavaScript is required.
 
 ### PageHeadingSearchBox
 A form within the page that allows searching the site.
