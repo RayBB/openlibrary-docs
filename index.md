@@ -11,16 +11,16 @@ hero:
 features:
   - title: Developers
     details: Write some code
-    link: "2. Developers/1_Start-Here"
+    link: "2_Developers/1_Start-Here"
   - title: Everyone
     details: Learn how to contribute to the project
-    link: "1. Everyone/"
+    link: "1_Everyone/"
   - title: Designers
     details: Make things beautiful
-    link: "3. Designers/Design-Pattern-Library"
+    link: "3_Designers/Design-Pattern-Library"
   - title: Translators
     details: Show us your language
-    link: "1. Everyone/Internationalization"
+    link: "1_Everyone/Internationalization"
 ---
 
 These are the (beta) docs for contributing to Open Library on the technical side of things.

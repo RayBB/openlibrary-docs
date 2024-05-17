@@ -19,6 +19,7 @@ export default withPwa(defineConfig({
       // scanStartPath: "./docs",
       collapsed: true,
       useFolderLinkFromIndexFile: true,
+      excludeFiles: ["_Footer.md", "_Sidebar.md"]
     }),
 
     socialLinks: [
