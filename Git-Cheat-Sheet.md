@@ -96,7 +96,7 @@ Note that `origin` is `git@`. If it is not, see [Forking and Cloning the Open Li
 Before creating a new branch and **each time** before working on an existing branch, make sure your master branch is up-to-date with upstream master 
 ```
 git switch master
-git pull upstream master
+git git pull --ff-only upstream master
 git push origin master
 ```
 Create a new branch for your issue :
