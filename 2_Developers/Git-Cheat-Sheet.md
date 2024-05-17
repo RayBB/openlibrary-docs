@@ -259,7 +259,7 @@ To learn more, see [Working on Your Branch](#working-on-your-branch).
   
 ## Troubleshooting Your Pull Request
 ### Failing the `Generate POT` check
-If your commit involves adding, removing or altering text that will be visible to the user and is [properly internationalized](https://github.com/internetarchive/openlibrary/wiki#internationalization-i18n-developers-guide), an update of the translation template file will be automatically bundled in with your changes via `pre-commit`. 
+If your commit involves adding, removing or altering text that will be visible to the user and is properly internationalized, an update of the translation template file will be automatically bundled in with your changes via `pre-commit`. 
 
 To learn more, see [Pre-commit and the GitHub CI](#pre-commit-and-the-github-ci).
 

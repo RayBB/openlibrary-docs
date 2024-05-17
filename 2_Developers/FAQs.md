@@ -41,7 +41,3 @@
 ## Design
 
 - Where do I find Open Library's design system?
-
-## Internationalization (i18n) & Translations
-
-- [How do I contribute a language translation to Open Library?](<https://github.com/internetarchive/openlibrary/wiki/Internationalization-Contributor's-Guide-(i18n)>)

@@ -11,7 +11,7 @@
 
 **Developer Resources**  
 1. [Front-end Guide: JS, CSS, HTML](Developer-Resources/Frontend-Guide) 
-2. [Internationalization](#Internationalization)  
+2. [Internationalization](Internationalization)  
 3. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 4. [Solr Search Engine Manual](Solr)  
 5. [Imports](Developer's-Guide-to-Data-Importing)  
@@ -40,7 +40,6 @@
 **Other Portals**
 * [Design](https://docs.google.com/document/d/1KLy6XRvwHaXrvHlZ-Ol_kFoIdn9eRMGuWeSYvWox1Qw/edit#heading=h.b20z3avugr8c)  
 * [Librarianship](https://openlibrary.org/librarians)
-* [Internationalization (i18n)](https://github.com/internetarchive/openlibrary/wiki/Internationalization-Contributor's-Guide-(i18n))
 * [Communications](https://docs.google.com/document/d/14FS1A0fbgwRWHTl7_AbVixZiUVc2ctN1wUgW6Mwt5jw/edit#heading=h.d4bcs4fzim9e)   
 * [Staff](https://github.com/internetarchive/olsystem/wiki) (internal)  
 
