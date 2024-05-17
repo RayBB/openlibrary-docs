@@ -2,6 +2,7 @@
 
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
 - [Working on Your Branch] (#working-on-your-branch)
+- [Out-of-Sync Brances(#out-of-sync-branches)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
@@ -91,7 +92,7 @@ upstream        https://github.com/internetarchive/openlibrary.git (push)
 ```
 Note that `origin` is `git@`. If it is not, see [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository).
 
-### Working on Your Branch
+## Working on Your Branch
 
 Before creating a new branch and **each time** before working on an existing branch, make sure your master branch is up-to-date with upstream master 
 ```
@@ -123,7 +124,6 @@ Check the status of your master and working branch on GitHub:
 <img width="777" alt="OL_Git_UpdatedMaster" src="https://github.com/internetarchive/openlibrary/assets/79802377/1c47c7dd-d56e-4098-8924-8689bd91b8a1">
 
 **Your Branch**
-![OL_Git_UpdatedBranch](https://github.com/internetarchive/openlibrary/assets/79802377/8471ea05-0235-41b1-a127-bd80c75d0c3e)
 
 Now, at long last, you can begin to make changes to your branch. 
 When you are ready to commit your changes run:
@@ -136,7 +136,7 @@ git push origin [my/branch]
 
 ## Out-of-Sync Branches
 
-Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts. Here are some commands to run for common out-of-sync situations:
+Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts (See [Resolving rebase conflicts](#resolving-rebase-conflicts). Here are some commands to run for common out-of-sync situations:
 
 **Master is behind upstream master**
 ```
@@ -161,6 +161,7 @@ git rebase master
 git push origin [my/branch] (if master rebase pulled in new changes, use git push -origin HEAD -f )
 ```
 If rebasing your branch still fails or provokes merge conflicts, see Troubleshooting. 
+
 | Info |
 | --- |
 | Force pushing _replaces_ the commits on the remote branch with the commits on your local branch. Non-force pushing just adds new commits. Whenever you perform a rebase, you will have to force push to your branch. |
