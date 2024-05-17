@@ -2,7 +2,6 @@
 
 - [Forking and Cloning the Open Library Repository](#forking-and-cloning-the-open-library-repository)
 - [Working on Your Branch] (#working-on-your-branch)
-- [Out-of-Sync Brances(#out-of-sync-branches)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 - [Making Updates to Your Pull Request](#making-updates-to-your-pull-request)
@@ -116,7 +115,8 @@ git rebase master
 | --- |
 | Sometimes there will be changes in the master branch to the same lines in your branch. This results in a conflict, because `git` can't decide which changes to use. See [Resolving rebase conflicts](#resolving-rebase-conflicts). |
 
-Confirm that everything is up-to-date by running: `git status` 
+Confirm that everything is up-to-date by running: `git status`
+
 The output should be: `Your branch is up to date with 'origin/[master or your-branch]'`
 
 Check the status of your master and working branch on GitHub:
@@ -124,6 +124,7 @@ Check the status of your master and working branch on GitHub:
 <img width="777" alt="OL_Git_UpdatedMaster" src="https://github.com/internetarchive/openlibrary/assets/79802377/1c47c7dd-d56e-4098-8924-8689bd91b8a1">
 
 **Your Branch**
+Add photo!!
 
 Now, at long last, you can begin to make changes to your branch. 
 When you are ready to commit your changes run:
@@ -134,7 +135,7 @@ git commit -m '[Explanation of changes]'
 git push origin [my/branch]
 ```
 
-## Out-of-Sync Branches
+### Out-of-Sync Branches
 
 Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts (See [Resolving rebase conflicts](#resolving-rebase-conflicts). Here are some commands to run for common out-of-sync situations:
 
