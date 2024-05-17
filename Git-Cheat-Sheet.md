@@ -114,16 +114,12 @@ git rebase master
 
 Confirm that everything is up-to-date by running: `git status`
 
-The output should be: `Your branch is up to date with 'origin/[master or your-branch]'`
-
-Check the status of your master and working branch on GitHub:
+Both master and new working branch should be up-to-date with upstream master on GitHub:
 **Master**
 <img width="777" alt="OL_Git_UpdatedMaster" src="https://github.com/internetarchive/openlibrary/assets/79802377/1c47c7dd-d56e-4098-8924-8689bd91b8a1">
 
-**Your Branch**
-Add photo!!
-
 Now, at long last, you can begin to make changes to your branch. 
+
 When you are ready to commit your changes run:
 ```
 git status [you'll see all the files you've made changes to]
