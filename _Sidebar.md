@@ -20,7 +20,7 @@
 8. [FAQs](https://github.com/internetarchive/openlibrary/wiki/FAQs:-Frequently-Asked-Questions) and [More Documentation](5_Projects_Documentation)  
 
 **Developer Guides**  
-* [Developing the My Books & Reading Log](Developing-the-Reading-Log)  
+* [Developing the My Books & Reading Log](5_Projects_Developing-the-Reading-Log)  
 * [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 * [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 * [Using cache](https://github.com/internetarchive/openlibrary/wiki/Using-Cache)
@@ -48,6 +48,6 @@
 
 **Legacy**  
 [Old Getting Started](Developer-Resources/Getting-Started)  
-[Orphaned Editions Planning](Getting-Involved/Orphaned-Editions-Planning)  
-[Canonical Books Page](Canonical-Books-Page)  
+[Orphaned Editions Planning](5_Projects_Orphaned-Editions-Planning)  
+[Canonical Books Page](5_Projects_Canonical-Books-Page)  
 [IA↔OL ID Sync](archive.org-↔-Open-Library-synchronisation)  

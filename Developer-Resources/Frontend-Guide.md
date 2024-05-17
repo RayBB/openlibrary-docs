@@ -19,7 +19,10 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 - **assets**: css/less in /static/css and js in /openlibrary/plugins/openlibrary/js
 - **models**: `/openlibrary/core/` and `/openlibrary/plugins/upstream/models.py`, data + ORM
 - **controllers**: in `/openlibrary/plugins/` (maps urls [via regex] → classes w/ GET + POST functions which receive/serve content to clients)
-- **templates**: in `/openlibrary/templates` and `openlibrary/macros`. Macros are special template components because they can be rendered (by librarians + admins) as `{{macros()}}` in infogami wiki pages
+- **templates**: in `/openlibrary/templates` and `openlibrary/macros`. Macros are special template components because they can be rendered (by librarians + admins) in infogami wiki pages as:
+```
+{{macros()}}
+```
 
 ## CSS, JS, and HTML
 
