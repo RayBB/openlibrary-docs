@@ -1,6 +1,6 @@
 # Welcome to Open Library Hacktoberfest!
 
-It's that time of the year again, everyone: time for [Hacktoberfest](https://hacktoberfest.com/), the annual event for contributing to open source, hosted by DigitalOcean, GitHub, and Twilio! You can participate by making contributions to open-source projects like Open Library and earn exciting rewards. 
+It's that time of the year again, everyone: time for [Hacktoberfest](https://hacktoberfest.com/), the annual event for contributing to open source, hosted by DigitalOcean, GitHub, and Twilio! You can participate by making contributions to open-source projects like Open Library and earn exciting rewards.
 
 ## Getting Started with Hacktoberfest
 

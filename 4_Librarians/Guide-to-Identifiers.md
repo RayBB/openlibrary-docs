@@ -6,12 +6,12 @@ Best practices were discussed at http://webservices.itcs.umich.edu/mediawiki/oai
 - lcauth - Library of Congress authority ID (e.g. https://id.loc.gov/authorities/no2013090983 )
 - viaf id - Virtual International Authority File identifier, records federated from many national name authority files by the OCLC, with one (or more) viaf id per author (c.f. https://viaf.org/)
 - isni - International Standard Name Identifier per ISO27729, one isni per author (c.f. http://www.isni.org/ )
-- orcid - Open Researcher and Contributor ID, one orcid per author identity (occasionally per pseudonym, c.f. https://orcid.org ) 
+- orcid - Open Researcher and Contributor ID, one orcid per author identity (occasionally per pseudonym, c.f. https://orcid.org )
 - wdt id - Wikidata item as used for a person or identity (e.g. https://www.wikidata.org/wiki/Q6290611 )
 
 # Edition identifiers
 
-- oclcid - OCLC control number (many oclcids may refer to records for one edition: use the smallest number; c.f. https://help.oclc.org/Discovery_and_Reference/WorldCat-org/WorldCat-org_Item_Details_screen/About_the_Item_Details_screen) 
+- oclcid - OCLC control number (many oclcids may refer to records for one edition: use the smallest number; c.f. https://help.oclc.org/Discovery_and_Reference/WorldCat-org/WorldCat-org_Item_Details_screen/About_the_Item_Details_screen)
 - lccn - Library of Congress Control Number (c.f. https://www.loc.gov/marc/lccn-namespace.html )
 - olid - Open Library ID (e.g. OL123W, OL234M, etc)
 - ocaid - Open Content Alliance ID (i.e. Archive.org item identifier)
@@ -45,7 +45,6 @@ If you use https://openlibrary.org/books/OL3561303M.json it will return the json
     },
     lccn: ["2002026536"],
     isbn_10: ["039397779X"],
-
 
 # Archive.org identifiers
 

@@ -1,4 +1,3 @@
-
 # Open Library Community Calls
 
 Welcome to the Open Library Community Call! We're thrilled to have you join our community. Whether you're a long-time member or brand new, we encourage everyone to participate in these calls to discuss the evolution of OpenLibrary.org.
@@ -15,18 +14,18 @@ If you haven't already **please fill out the appropriate form on the [Volunteers
 Our calls typically follow this agenda:
 
 1. Welcome
-    - Intros for new people
-    - Shoutouts and wins in the community
-2.  Review unresolved action items
-3.  Weekly Updates
-    - Share what you did last week
-    - What you plan to do this week (or ask for ideas)
-    - Blockers (such as waiting for code review)
-    - Leads can make sure a feature is one that the community agrees on
-4.  Open Mic: A time for any additional topics, questions, or discussions like:
-    - Does it make sense to use this beta library?
-    - Where in the codebase does this happen?
-    - Feedback on new team page
+   - Intros for new people
+   - Shoutouts and wins in the community
+2. Review unresolved action items
+3. Weekly Updates
+   - Share what you did last week
+   - What you plan to do this week (or ask for ideas)
+   - Blockers (such as waiting for code review)
+   - Leads can make sure a feature is one that the community agrees on
+4. Open Mic: A time for any additional topics, questions, or discussions like:
+   - Does it make sense to use this beta library?
+   - Where in the codebase does this happen?
+   - Feedback on new team page
 
 If there's a longer topic you'd like to discuss during the Community Call, please add it to the Agenda under "Open-Mic Topics."
 
@@ -41,6 +40,7 @@ If there's a longer topic you'd like to discuss during the Community Call, pleas
 Note: Design and Communications calls usually have different Zoom links.
 
 ## Roles and Responsibilities
+
 A member of the community will take on each of these roles, which are rotated regularly.
 
 - Document Secretary: Responsible for updating the weekly chart, copying the minutes template, and sending reminders about the Community Call.
@@ -68,15 +68,16 @@ We use Zoom's automated captions (live transcription) for our community calls. Y
 ## FAQs
 
 ### What if I can't attend a call?
+
 Post in Slack or leave a note in the document ahead of time including what you'd like discussed or need help with.
 
 ### How often does the meeting notes link change?
+
 Yearly, around December.
 
 ### Where are the links for the design and communications calls?
 
 The design call notes are in the same document as the community call, to keep things in one place and searchable.
-
 
 ## Get Involved!
 
