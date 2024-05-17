@@ -163,6 +163,7 @@ If rebasing your branch still fails or provokes merge conflicts, see [Troublesho
 | What does force pushing do? |
 | --- |
 | Force pushing _replaces_ the commits on the remote branch with the commits on your local branch. Non-force pushing just adds new commits. Whenever you perform a rebase, you will have to force push to your branch. |
+
 | Force push with care! |
 | --- |
 | You should only force push if working on one of your own branches. If working on a branch which other people are also pushing to, force pushing is dangerous because it can override others' work. In that case, use `--force-with-lease`; this will force push _only_ if someone else hasn't made any changes to the branch. |
