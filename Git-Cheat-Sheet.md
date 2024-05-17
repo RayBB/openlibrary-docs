@@ -187,11 +187,14 @@ When you submit your pull request, the [GitHub CI server](#pre-commit-and-the-gi
 
 If you'd like, you can run these checks before you submit by [installing `pre-commit` locally](#running-pre-commit-locally-recommended), or run a [one-off formatting check](https://github.com/internetarchive/openlibrary/wiki/Testing#linting). 
 
-**3. On GitHub, click Compare & pull request to confirm the commits and files changed are only the changes you have made on your working branch / intend for the PR
+**3. Click Compare & pull request**
+Confirm the commits and files changed are only the changes you have made on your working branch / intend for the PR
 ![OL_Git_PR](https://github.com/internetarchive/openlibrary/assets/79802377/d58c3d92-e281-4775-9eab-084490887d11)
 
 If everything looks right, create your PR based on provided template - your our code is now ready for review!
+
 If not, see [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
+
 If you continue to make changes to an open PR, follow steps in [Working on Your Branch](#working-on-your-branch) to make sure your branch stays up to date.
   
 
