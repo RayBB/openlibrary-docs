@@ -447,7 +447,7 @@ If the text was revised and the update/matching algorithm didn't think it was a 
 
 Remember:
 * keep the substitution variable names and data types unchanged in your translated text (e.g. `%(count)%s`)
-* don't translate embedded HTML markup (e.g. <b>, <a href=>, etc)
+* don't translate embedded HTML markup (e.g. `<b>`, `<a href=>`, etc)
 * do escape any embedded quotes (e.g. `\"`)
 
 ### Validating your translations
@@ -664,7 +664,7 @@ export function initGreeting(greetingElement) {
 **DON'Ts**:
 * Don't display internal status / keyword values from the code directly to the user. These can't be internationalized.
 * Don't do pluralization or string concatenation in code or templates. This mandates ordering in ways that can't be translated. Give the translators completed sentences or phrases, with embedded replacements, to work with so they can create natural translations.
-* Don't use inline styling or links in text, if at all possible. e.g. <em>, <a href=foo>
+* Don't use inline styling or links in text, if at all possible. e.g. `<em>`, `<a href=foo>`
 * Don't update the translated message catalogs. Because the merging process is inexact, it's better for the translators to handle this so that they can validate the results. Do update the message templates though (ie `messages.pot`)
 * Don't hard code in `1` for singular nouns (e.g. `1 edition`) because in some languages, `0 editions` is singular and translated as `0 edition`. Instead, substitute a variable, as you would with the plural. E.g. `$ungettext("There is %(count)d person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)` and **not** `$ungettext("There is 1 person waiting for this book.", "There are %(count)d people waiting for this book.", wlsize, count=wlsize)`
 
