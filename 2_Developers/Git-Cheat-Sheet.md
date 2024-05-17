@@ -124,10 +124,10 @@ If not, read on!
 
 Your master or working branch may get out-of-sync. In general, **do not use VSCODE or GITHUB MERGE** to resolve merge conflicts. Here are some commands to run for common out-of-sync situations:
 
+(Note: You check the status of your branch by running `git status` or going to `github.com/your-username/openlibrary`)
+
 **Master is behind upstream master**
 ![OL_Git_UnsyncedMaster](https://github.com/internetarchive/openlibrary/assets/79802377/80fe990e-72be-4eff-beb2-b4ad7f888378)
-
-**Note:** You can see the status of your branch by running `git status` or going to `github.com/your-username/openlibrary`
 
 ```
 git switch master
