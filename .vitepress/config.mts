@@ -1,9 +1,8 @@
 import { defineConfig } from "vitepress";
 import { generateSidebar } from "vitepress-sidebar";
-import { withPwa } from '@vite-pwa/vitepress'
 
 // https://vitepress.dev/reference/site-config
-export default withPwa(defineConfig({
+export default defineConfig({
   title: "Open Library Docs",
   description: "A new docs experience for Open Library",
   ignoreDeadLinks: 'localhostLinks',
@@ -29,4 +28,4 @@ export default withPwa(defineConfig({
       },
     ],
   },
-}));
+});
