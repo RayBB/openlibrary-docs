@@ -127,6 +127,8 @@ Your master or working branch may get out-of-sync. In general, **do not use VSCO
 **Master is behind upstream master**
 ![OL_Git_UnsyncedMaster](https://github.com/internetarchive/openlibrary/assets/79802377/80fe990e-72be-4eff-beb2-b4ad7f888378)
 
+**Note:** You can see the status of your branch by running `git status` or going to `github.com/your-username/openlibrary`
+
 ```
 git switch master
 git pull upstream master
