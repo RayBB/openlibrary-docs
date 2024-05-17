@@ -19,7 +19,7 @@ export default defineConfig({
       // scanStartPath: "./docs",
       collapsed: true,
       useFolderLinkFromIndexFile: true,
-      // excludeFiles: []
+      excludeFiles: ["_Sidebar.md", "_Footer.md"]
     }),
 
     socialLinks: [
