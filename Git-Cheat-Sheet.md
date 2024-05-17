@@ -158,7 +158,7 @@ git switch [my/branch]
 git rebase master
 git push origin [my/branch] (if master rebase pulled in new changes, use git push -origin HEAD -f )
 ```
-If rebasing your branch still fails or provokes merge conflicts, see Troubleshooting(#troubleshooting-your-pull-request). 
+If rebasing your branch still fails or provokes merge conflicts, see [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request). 
 
 | What does force pushing do? |
 | --- |
