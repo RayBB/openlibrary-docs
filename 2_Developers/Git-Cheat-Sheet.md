@@ -6,7 +6,6 @@
 - [Updating Your Pull Request](#updating-your-pull-request)
 - [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request)
 - [Commit History Manipulation](#commit-history-manipulation)
-- [Resolving Rebase Conflicts](#resolving-rebase-conflicts)
 - [Pre-commit and the GitHub CI](#pre-commit-and-the-github-ci)
 
 ## Forking and Cloning the Open Library Repository
@@ -264,6 +263,7 @@ To learn more, see [Working on Your Branch](#working-on-your-branch).
 **Tips for what to do in common situations, such as:**
 - [Rebase Fails with Merge Conflict Error](#rebase-fails-with-merge-conflict-error)
 - [PR Includes Unrelated Commits](#pr-includes-unrelated-commits)
+- [Manual Merge Conflict Resolution](#manual-merge-conflict-resolution)
 - [Commits Include Unrelated Changes](#commits-include-unrelated-changes) 
 - [Failing an Automated GitHub CI Check](#the-github-ci-server)
 - [Failing a Local Pre-Commit Check](#running-pre-commit-locally-recommended)
@@ -271,6 +271,7 @@ To learn more, see [Working on Your Branch](#working-on-your-branch).
 
 ### Rebase Fails With Merge Conflict Error
 Sometimes when you try to `rebase` your branch after [updating your master branch](#working-on-your-branch), you'll get an error message like this:
+
 <img width="626" alt="Merge Conflict Output" src="https://github.com/internetarchive/openlibrary/assets/140550988/7307587a-4a09-4313-aef9-9bba1a459380">
 
 There is a fairly simple way to resolve a conflict like this in VSCode's editor, **but** you first want to make 100% sure that you're dealing with an actual [merge conflict](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts), as this error can sometimes happen as a result of accidental commits on one of your branches or another out-of-date branch issue. 
@@ -463,7 +464,7 @@ pick 23961be Clean up trailing whitespace
 
 If you decide you want to cancel the rebase, delete everything, and then save. That tells `git` to do nothing.
 
-To continue with the rebase, save the file. `git` will then replay all the instructions/commits in that file. If there is a conflict, it will pause to let you fix them. See [Resolving rebase conflicts](#resolving-rebase-conflicts).
+To continue with the rebase, save the file. `git` will then replay all the instructions/commits in that file. If there is a conflict, it will pause to let you fix them. See [Manual Merge Conflict Resolution](#manual-merge-conflict-resolution).
 
 ## Pre-commit and the GitHub CI
 To automatically ensure that certain formatting practices are maintained throughout the codebase, and that any incoming pull requests pass a set of requisite JavaScript and Python checks, Open Library uses GitHub's Continuous Integration (CI) Server with a set of [`pre-commit` hooks](https://pre-commit.com/) to run a series of automated checks on incoming PRs.
