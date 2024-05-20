@@ -258,6 +258,88 @@ git push -f origin HEAD
 To learn more, see [Working on Your Branch](#working-on-your-branch).
   
 ## Troubleshooting Your Pull Request
+**Tips for what to do in common situations, such as:**
+- [PR Includes Unrelated Commits](#pr-includes-unrelated-commits)
+- [Commits Include Unrelated Changes](#commits-include-unrelated-changes) 
+- [Failing an Automated GitHub CI Check](#the-github-ci-server)
+- [Failing a Local Pre-Commit Check](#running-pre-commit-locally-recommended)
+- [Failing the `Generate POT` Check](#failing-the-generate-pot-check)
+
+### PR Includes Unrelated Commits
+Sometimes if you have a look at the outgoing changes in the VSCode Source Control tab or the "Files changed" in your submitted PR, you'll notice that there are other changes included along with yours that either a) you made but didn't intend to include in this PR, or b) were made by other people.
+
+The most common reason this would happen is that you pulled in the upstream changes but forgot to push to your remote branch as well. So before proceeding, you'll want to confirm that you've pushed everything up:
+```
+git switch master
+git pull --ff-only upstream master
+git push origin master
+git switch your-branch
+git push -f origin HEAD
+```
+
+If you can see that the extra commits are now gone, you're good to go. If not, this means that you'll need to manually remove the unneeded commits from your branch, like so:
+
+1. Switch to the correct branch and run the following command. If using VSCode, it's recommended that you do this in the [built-in terminal](https://code.visualstudio.com/docs/terminal/basics) to ensure that the next few steps also happen in VSCode. 
+```
+git rebase -i master
+```
+This will open a text editor that you can use to select which commits you actually want included in your PR, i.e.:
+```
+pick eb8ab51 [Your commit message]
+pick a18d382 [Someone else's commit you don't want]
+pick 76b9883 [Your commit message]
+
+# Rebase ef7d551..23961be onto ef7d551 (7 commands)
+```
+To remove an unwanted commit, simply switch the text from `pick` to `drop` in the text editor and close the window. Once this is done, you can double-check that the unwanted commits are now gone, and force-push your changes:
+```
+git push -f origin HEAD
+```
+**Note:** If the text editor opens in something other than VSCode and you're unsure how to close it, and/or you'd like to try some more advanced commit manipulation methods, see [Commit History Manipulation](#commit-history-manipulation) to learn more.
+
+### Commits Include Unrelated Changes
+Sometimes if you have a look at the outgoing changes in the VSCode Source Control tab or the "Files changed" in your submitted PR, you'll notice that there are a number of changes made and/or files changed that you didn't intend to include in the PR. 
+
+If you look at the commit history ("Commits" tab on GitHub) and can confirm that those changes each come from someone else's commit or a separate commit of yours that was accidentally included, you can follow the steps in [PR Includes Unrelated Commits](#pr-includes-unrelated-commits). 
+
+But if you can see that the unrelated changes are actually included in commits you do want to keep, you can do the following:
+1. Ensure your master branch is up to date:
+```
+git switch master
+git pull --ff-only upstream master
+git push origin master
+git switch your-branch
+``` 
+
+2. "Soft" reset as many commits as you need, i.e.:
+```
+git reset --soft HEAD~[number of commits to undo]
+```
+This will effectively undo your commit (or commits) and return the changes to staging. You can then undo any changes you don't want included, i.e.:
+In the VSCode Source Control tab:
+- Hover over the changed you file you want to undo changes to
+- Hit the minus sign to remove it from staging
+- Hit the reverse symbol to undo the changes
+
+In the terminal:
+```
+# Remove unwanted file from staging -- or use a . instead of filename to unstage all
+git restore --staged path/to/your/file
+
+# Undo changes to selected file
+git checkout -- path/to/your/file
+```
+You can then re-commit your desired changes, and push your changes back up:
+
+```
+# Add any files you want to commit back to staging if needed
+git add file-to-include
+git commit -m "Your original commit message"
+
+# Force push to overwrite the remote version
+git push -f origin HEAD
+```
+
 ### Failing the `Generate POT` check
 If your commit involves adding, removing or altering text that will be visible to the user and is properly internationalized, an update of the translation template file will be automatically bundled in with your changes via `pre-commit`. 
 
