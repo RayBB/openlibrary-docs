@@ -268,6 +268,7 @@ To learn more, see [Working on Your Branch](#working-on-your-branch).
 - [Failing an Automated GitHub CI Check](#the-github-ci-server)
 - [Failing a Local Pre-Commit Check](#running-pre-commit-locally-recommended)
 - [Failing the `Generate POT` Check](#failing-the-generate-pot-check)
+- [Could Not Read From Remote Repository](#could-not-read-from-remote-repository)
 
 ### Rebase Fails With Merge Conflict Error
 Sometimes when you try to `rebase` your branch after [updating your master branch](#working-on-your-branch), you'll get an error message like this:
@@ -419,6 +420,18 @@ If you're not running `pre-commit` locally:
 - Your code will "fail" the `pre-commit` check run by the GitHub Continuous Integration (CI) server
 - The CI will then push a new commit to your remote branch that contains the necessary `messages.pot` updates and now passes the `pre-commit` check 
 - You don't need to do anything else after this, but if you want to make and push further changes to the PR, it would be wise to first run a `git pull origin HEAD` to pull in the new `messages.pot` changes and avoid conflicts in future pushes
+
+### Could Not Read from Remote Repository
+It may happen that when you try to pull in the `upstream` version of the repository, you'll get the following error:
+```
+fatal: 'upstream' does not appear to be a git repository
+fatal: Could not read from remote repository
+
+Please make sure you have the correct access rights and the repository exists.
+```
+This just means that your branch has accidentally gotten disconnected from the OL master branch. All you need to do to fix it is [Add `upstream` repo to list of remotes](#add-upstream-repo-to-list-of-remotes) and [double-check that it worked](#verify-the-new-remote-named-upstream). 
+
+You can then safely try pulling again to keep everything up to date.
 
 
 ## Commit History Manipulation
