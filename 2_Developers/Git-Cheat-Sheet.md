@@ -309,15 +309,16 @@ Similarly, if someone else had made conflicting changes but you hadn't rebased t
 **Note:** You'll only want to do this if you're 100% sure you're dealing with a real merge conflict, i.e. you can see a recent commit to the codebase that would conflict with one of your commits. To double-check and confirm you've got a true merge conflict, see [Rebase Fails with Merge Conflict Error](#rebase-fails-with-merge-conflict-error).
 
 Once you've ensured you do have a merge conflict, you can start the `rebase` again in VSCode by switching to your branch and running `git rebase master` and use its built-in merge editor to resolve the conflict(s):
-If `git` finds conflicts it cannot resolve and you're using VSCode, it will open a Merge Conflict editor which looks like this:
+
 ![Merge Conflict Editor](https://github.com/internetarchive/openlibrary/assets/140550988/a9a6a5fa-f850-43c3-819e-b9014031012a)
+
 Conflicting changes will be highlighted, and you'll have three main options:
 1. "Accept Current Change" - Line becomes `<p>Hello world!</p>`, your commit now overwrites theirs, and includes changing "Hi world!" back to "Hello world!"
 2. "Accept Incoming" - Line becomes `<div>Hi world!</div>`, you undo all your own changes to the line and keep it as they have it
 3. Custom/Combination -- 
 - To use a combination of the two changes, i.e. `<p>Hi world!</p>` select "Resolve in Merge Editor," which will open this view:
 ![Full Merge Editor](https://github.com/internetarchive/openlibrary/assets/140550988/b04f8f34-dfd3-4c7d-abf6-bd82405558df)
-- Either select "Use Combination" or edit the result text directly to match the desired combination
+- Either select "Accept Combination" or edit the result text directly to match the desired combination
 - Select "Complete Merge"
 - You'll see your resulting change ready to go in the source control tab, with your previous commit message already filled in, and you can just hit "Continue" to re-commit and finish up 
 
@@ -325,6 +326,7 @@ Once you're done rebasing, you'll want to force-push your changes up using:
 ```
 git push -f origin HEAD
 ```
+And then congratulate yourself on making it through a merge conflict resolution!
 
 ### PR Includes Unrelated Commits
 Sometimes if you have a look at the outgoing changes in the VSCode Source Control tab or the "Commits" in your submitted PR, you'll notice that there are other changes included along with yours that either a) you made but didn't intend to include in this PR, or b) were made by other people.
@@ -377,12 +379,13 @@ git switch your-branch
 git reset --soft HEAD~[number of commits to undo]
 ```
 This will effectively undo your commit (or commits) and return the changes to staging. You can then undo any changes you don't want included, i.e.:
+
 In the VSCode Source Control tab:
 - Hover over the changed you file you want to undo changes to
 - Hit the minus sign to remove it from staging
 - Hit the reverse symbol to undo the changes
 
-In the terminal:
+Or, in the terminal:
 ```
 # Remove unwanted file from staging -- or use a . instead of filename to unstage all
 git restore --staged path/to/your/file
