@@ -161,6 +161,7 @@ git rebase master
 If rebasing your branch fails or provokes merge conflicts, see [Troubleshooting Your Pull Request](#troubleshooting-your-pull-request). 
 
 When you're done working and try to push your branch with `git push origin HEAD`, you may encounter the following error:
+
 <img width="571" alt="OL_Failed_Push" src="https://github.com/internetarchive/openlibrary/assets/140550988/8eaa623b-eff9-4d81-8099-e40bfea732de">
 
 This usually means that, as a result of the rebase, you'll need to force push* your updates:
@@ -258,15 +259,74 @@ git push -f origin HEAD
 To learn more, see [Working on Your Branch](#working-on-your-branch).
   
 ## Troubleshooting Your Pull Request
+**Note:** If you encounter any errors you don't understand and/or don't want to try working through this troubleshooting guide yourself, feel free to reach out to the issue's lead, who can best case guide you to the correct resources or worst case just make any necessary fixes on your remote branch for you.
+
 **Tips for what to do in common situations, such as:**
+- [Rebase Fails with Merge Conflict Error](#rebase-fails-with-merge-conflict-error)
 - [PR Includes Unrelated Commits](#pr-includes-unrelated-commits)
 - [Commits Include Unrelated Changes](#commits-include-unrelated-changes) 
 - [Failing an Automated GitHub CI Check](#the-github-ci-server)
 - [Failing a Local Pre-Commit Check](#running-pre-commit-locally-recommended)
 - [Failing the `Generate POT` Check](#failing-the-generate-pot-check)
 
+### Rebase Fails With Merge Conflict Error
+Sometimes when you try to `rebase` your branch after [updating your master branch](#working-on-your-branch), you'll get an error message like this:
+<img width="626" alt="Merge Conflict Output" src="https://github.com/internetarchive/openlibrary/assets/140550988/7307587a-4a09-4313-aef9-9bba1a459380">
+
+There is a fairly simple way to resolve a conflict like this in VSCode's editor, **but** you first want to make 100% sure that you're dealing with an actual [merge conflict](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts), as this error can sometimes happen as a result of accidental commits on one of your branches or another out-of-date branch issue. 
+
+If this is the case, using the merge conflict resolution tools in VSCode or GitHub will only create more problems, so before starting a manual resolution, you'll want to run:
+```
+git rebase --abort
+```
+And then check in with your issue's lead to determine what steps to follow and/ or double-check to ensure you're dealing with an actual merge conflict by:
+1. Following the steps in [Working on Your Branch](#working-on-your-branch) to confirm that your master is up to date and not "ahead" by any commits before trying to rebase again.
+2. Ensuring that your PR does not include any unrelated commits, by checking the "Outgoing" commits in the VSCode Source Control tab and/or the "Commits" tab on your PR on GitHub. If you find any, follow the steps in [PR Includes Unrelated Commits](#pr-includes-unrelated-commits).
+3. Ensuring that your commits don't include any unrelated changes, by checking the "Outgoing" changes in the VSCode Source Control tab and/or the "Files changed" tab on your PR on GitHub. If you find any, follow the steps in [Commits Include Unrelated Changes](#commits-include-unrelated-changes).
+4. Ensuring that you aren't getting this conflict because the `pre-commit` CI made some commits on your behalf. You'll see these in the "Commits" section on GitHub, and you'll want to pull them into your branch with `git pull upstream name-of-your-branch` before trying to rebase. After this, you'll need to run a `git push -f origin HEAD` to keep everything up to date.
+
+If you've tried each of the above steps, and you're still getting the merge conflict error, you can now begin to resolve it manually:
+
+### Manual Merge Conflict Resolution 
+**Note:** Manual merge conflict resolution can get a little tricky, so if at any time you want to stop and ask for input from your issue's lead, you can simply run `git rebase --abort` to return everything to its pre-rebase state. The lead will also be able to edit your branch for you on GitHub to resolve the conflict if necessary.
+
+A [merge conflict](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts) happens when your changes conflict with other changes that have just been added to the repository.
+
+For instance if you changed:
+```
+<div>Hello world!</div>
+```
+to
+```
+<p>Hello world!</p>
+```
+
+And then you pulled in someone else's change from `upstream` that had for instance changed `Hello world!` to `Hi world!`, you would be faced with a merge conflict, because git would not know whether to make the line `<p>Hi world!</p>` (both changes combined) or treat your version (`<p>Hello world!</p>`) or their version (`<div>Hi World!</div>`) as authoritative.
+
+Similarly, if someone else had made conflicting changes but you hadn't rebased to include them before submitting your PR, GitHub would add a warning to the PR that your branch could not be merged until conflicts were resolved.
+
+**Note:** You'll only want to do this if you're 100% sure you're dealing with a real merge conflict, i.e. you can see a recent commit to the codebase that would conflict with one of your commits. To double-check and confirm you've got a true merge conflict, see [Rebase Fails with Merge Conflict Error](#rebase-fails-with-merge-conflict-error).
+
+Once you've ensured you do have a merge conflict, you can start the `rebase` again in VSCode by switching to your branch and running `git rebase master` and use its built-in merge editor to resolve the conflict(s):
+If `git` finds conflicts it cannot resolve and you're using VSCode, it will open a Merge Conflict editor which looks like this:
+![Merge Conflict Editor](https://github.com/internetarchive/openlibrary/assets/140550988/a9a6a5fa-f850-43c3-819e-b9014031012a)
+Conflicting changes will be highlighted, and you'll have three main options:
+1. "Accept Current Change" - Line becomes `<p>Hello world!</p>`, your commit now overwrites theirs, and includes changing "Hi world!" back to "Hello world!"
+2. "Accept Incoming" - Line becomes `<div>Hi world!</div>`, you undo all your own changes to the line and keep it as they have it
+3. Custom/Combination -- 
+- To use a combination of the two changes, i.e. `<p>Hi world!</p>` select "Resolve in Merge Editor," which will open this view:
+![Full Merge Editor](https://github.com/internetarchive/openlibrary/assets/140550988/b04f8f34-dfd3-4c7d-abf6-bd82405558df)
+- Either select "Use Combination" or edit the result text directly to match the desired combination
+- Select "Complete Merge"
+- You'll see your resulting change ready to go in the source control tab, with your previous commit message already filled in, and you can just hit "Continue" to re-commit and finish up 
+
+Once you're done rebasing, you'll want to force-push your changes up using:
+```
+git push -f origin HEAD
+```
+
 ### PR Includes Unrelated Commits
-Sometimes if you have a look at the outgoing changes in the VSCode Source Control tab or the "Files changed" in your submitted PR, you'll notice that there are other changes included along with yours that either a) you made but didn't intend to include in this PR, or b) were made by other people.
+Sometimes if you have a look at the outgoing changes in the VSCode Source Control tab or the "Commits" in your submitted PR, you'll notice that there are other changes included along with yours that either a) you made but didn't intend to include in this PR, or b) were made by other people.
 
 The most common reason this would happen is that you pulled in the upstream changes but forgot to push to your remote branch as well. So before proceeding, you'll want to confirm that you've pushed everything up:
 ```
@@ -404,14 +464,6 @@ pick 23961be Clean up trailing whitespace
 If you decide you want to cancel the rebase, delete everything, and then save. That tells `git` to do nothing.
 
 To continue with the rebase, save the file. `git` will then replay all the instructions/commits in that file. If there is a conflict, it will pause to let you fix them. See [Resolving rebase conflicts](#resolving-rebase-conflicts).
-
-## Resolving Rebase Conflicts
-
-Sometimes when you `rebase` your branch, you will get conflicts! This happens when the master branch edited some of the same lines that your branch has edited, and `git` can't determine which changes to use. So it asks you to decide :)
-
-If it hits a conflict during the rebase, it will stop, and let you fix it. I find fixing conflicts in VS Code to work well. In VS Code, open up the Source Control panel (Ctrl-Shift-G). Conflicts will be shown in red at the top with a "C" next to them. Click on the file to find and resolve the conflicts. Once you've resolved them all, press the "+" button next to the file in the source control panel; this is the same as running `git add FILE`. Once you've resolved all the conflicts, run `git rebase --continue` to continue the rebase.
-
-If the conflicts look too much, and you want to abandon the rebase and go back to where your code was before, run `git rebase --abort`.
 
 ## Pre-commit and the GitHub CI
 To automatically ensure that certain formatting practices are maintained throughout the codebase, and that any incoming pull requests pass a set of requisite JavaScript and Python checks, Open Library uses GitHub's Continuous Integration (CI) Server with a set of [`pre-commit` hooks](https://pre-commit.com/) to run a series of automated checks on incoming PRs.
