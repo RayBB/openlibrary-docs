@@ -273,7 +273,13 @@ To learn more, see [Working on Your Branch](#working-on-your-branch).
 ### Rebase Fails With Merge Conflict Error
 Sometimes when you try to `rebase` your branch after [updating your master branch](#working-on-your-branch), you'll get an error message like this:
 
-<img width="626" alt="Merge Conflict Output" src="https://github.com/internetarchive/openlibrary/assets/140550988/7307587a-4a09-4313-aef9-9bba1a459380">
+```
+Auto-merging openlibrary/templates/about/team.json
+CONFLICT (content): Merge conflict in openlibrary/templates/about/team.json
+error: could not apply 447122b8d... Switch out personal URL for team page
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+```
 
 There is a fairly simple way to resolve a conflict like this in VSCode's editor, **but** you first want to make 100% sure that you're dealing with an actual [merge conflict](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts), as this error can sometimes happen as a result of accidental commits on one of your branches or another out-of-date branch issue. 
 
