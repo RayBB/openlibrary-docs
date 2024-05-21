@@ -10,7 +10,7 @@
 9. [Applying to Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
 
 **Developer Resources**  
-1. [Front-end Guide: JS, CSS, HTML](Developer-Resources/Frontend-Guide) 
+1. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) 
 2. [Internationalization](Internationalization)  
 3. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
 4. [Solr Search Engine Manual](Solr)  
