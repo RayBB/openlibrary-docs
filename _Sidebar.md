@@ -10,13 +10,14 @@
 9. [Applying to Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
 
 **Developer Resources**  
-1. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) 
-2. [Internationalization](Internationalization)  
-3. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
-4. [Solr Search Engine Manual](Solr)  
-5. [Imports](Developer's-Guide-to-Data-Importing)  
-6. [BookWorm / Affiliate Server ](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit#heading=h.xmcr55qgzsig)  
-7. [Writing Bots](Developer-Resources/Writing-Bots)  
+1. [FAQs: Frequently Asked Questions](https://github.com/internetarchive/openlibrary/wiki/FAQs)
+2. [Front-end Guide: JS, CSS, HTML](Frontend-Guide) 
+3. [Internationalization](Internationalization)  
+4. [Infogami](https://openlibrary.org/dev/docs/infogami) & [Data Model](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)  
+5. [Solr Search Engine Manual](Solr)  
+6. [Imports](Developer's-Guide-to-Data-Importing)  
+7. [BookWorm / Affiliate Server ](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit#heading=h.xmcr55qgzsig)  
+8. [Writing Bots](Developer-Resources/Writing-Bots)  
 
 **Developer Guides**  
 * [Developing the My Books & Reading Log](5_Projects_Developing-the-Reading-Log)  
