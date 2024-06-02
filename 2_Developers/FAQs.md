@@ -10,6 +10,7 @@
 - [How can I debug when things go wrong?](https://github.com/internetarchive/openlibrary/wiki/Debugging-and-Performance-Profiling)
 - [How do I import production book & author data into my local environment?](https://github.com/internetarchive/openlibrary/wiki/Loading-Production-Book-Data)
 - [How can I login as a user in my local environment?](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin)
+- [How do I create and activate new accounts locally?](https://github.com/internetarchive/openlibrary/wiki/Creating-and-Logging-in-as-a-new-user-on-your-local-client)
 - [How do I add a new route to Open Library? (tutorial)](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/README.md#tutorial-implementing-a-new-route)
 - [How do I add new Javascript functionality to a template?](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#adding-new-javascript-files-to-html-templates)
 - How do I find the right [CSS file](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#working-with-css) to add style rules?
