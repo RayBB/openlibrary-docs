@@ -96,7 +96,7 @@ Because new commits are frequently merged into the Open Library repository, it's
 Before creating a new branch and **each time** you start work on an existing branch, you should run the following commands to make sure your master branch is up to date:
 ```
 git switch master
-git git pull --ff-only upstream master
+git pull --ff-only upstream master
 git push origin master
 ```
 **Note:** When running the `pull --ff-only`, you may see the error `fatal: Not possible to fast-forward`. If so, see [Out-of-Sync Branches](#out-of-sync-branches) for more instructions re: getting your branch up to date.
