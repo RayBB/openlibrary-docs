@@ -1,6 +1,4 @@
-# Internationalization
-
-## i18n Contributor's Guide
+### i18n Contributor's Guide
 
 I18n pages allow for the translation of content to various languages, enabling users to access localized versions of a webpage based on their locale preferences. For instance, when a user accesses https://openlibrary.org/subjects, they are redirected to https://openlibrary.org/subjects.en or https://openlibrary.org/subjects.es, depending on their selected language. Any text that is visible to the patron should be internationalized. The basics of web.py's `templator` I18N support is described here: http://webpy.org/cookbook/i18n_support_in_template_file
 
