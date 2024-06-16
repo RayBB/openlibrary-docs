@@ -66,12 +66,12 @@ $ sudo tail -f /1/var/log/nginx/access.log | grep -F '0.32.37.207'
 
 This will let you see the traffic from that IP and determine if it should be blocked. Use your discretion to check any given IP to see whether the pattern looks abusive / spammy -- e.g. Internet Archive makes many requests to /api/books.json and still we don't want to ban it, for example. If you determine it should be blocked, then we need to get the denanoymized IP and add it to our deny.conf. 
 
-On `ol-www0` in `/openlibrary` you can run `obfi.sh` with the offending anonymized IP `0.32.37.207` as follows:
+On `ol-www0` in `/openlibrary` you can run `decode_ip.sh` with the offending anonymized IP `0.32.37.207` as follows:
 ```
-sudo -E SEED_PATH=http://seedserver.us.archive.org/key/seed.txt ./obfi.sh 0.32.37.207
+sudo -E SEED_PATH=http://seedserver.us.archive.org/key/seed.txt ./decode_ip.sh 0.32.37.207
 ```
 
-If for some reason `obfi.sh` is not working, as a last resort, you can disable anonymization temporarily by editing `/opt/openlibrary/docker/nginx.conf` to add `($remote_addr)` to the start of `log_format` in `nginx.conf` to de-anonymize IPs:
+If for some reason `decode_ip.sh` is not working, as a last resort, you can disable anonymization temporarily by editing `/opt/openlibrary/docker/nginx.conf` to add `($remote_addr)` to the start of `log_format` in `nginx.conf` to de-anonymize IPs:
 
 ```
 log_format iacombined '($remote_addr) $remote_addr_ipscrub $host $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_time';
