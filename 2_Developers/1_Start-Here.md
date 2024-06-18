@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-If you don't have Docker, VSCode, and a dev environment checkout the [Environment Setup](/2_Developers/0_Environment-Setup.md).
+If you don't have Docker, VSCode, and a dev environment checkout the [Environment Setup](2_Developers/0_Environment-Setup.md).
 
 ## Getting Started
 
@@ -19,9 +19,9 @@ If you don't have Docker, VSCode, and a dev environment checkout the [Environmen
 6. Your PR will be reviewed/merged in about one week! 🎉
 
 ## What's next?
-- Read the in depth [contributing guide](/2_Developers/CONTRIBUTING.md)
-- [Import production data](/2_Developers/misc/Loading-Production-Book-Data.md)
-- Read some [FAQs](/2_Developers/FAQs.md)
+- Read the in depth [contributing guide](2_Developers/CONTRIBUTING.md)
+- [Import production data](2_Developers/misc/Loading-Production-Book-Data.md)
+- Read some [FAQs](2_Developers/FAQs.md)
 - Checkout the architecture of the app
 - Write a bot for us
 - Improve the docs
