@@ -3,11 +3,12 @@
 2. [Using `git` in Open Library](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 3. [Finding good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22)  
 4. [Testing Your Code](Developer-Resources/Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
-5. [Submitting good Pull Requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)  
-6. [Asking Questions on Gitter Chat](https://gitter.im/theopenlibrary/Lobby)  
-7. [Joining the Community Slack](https://openlibrary.org/volunteer)  
-8. [Attending Weekly Community Calls @ 9a PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call) 
-9. [Applying to Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
+5. [Loading Production Site Data ↦ Dev Instance](Loading-Production-Book-Data)  
+6. [Submitting good Pull Requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)  
+7. [Asking Questions on Gitter Chat](https://gitter.im/theopenlibrary/Lobby)  
+8. [Joining the Community Slack](https://openlibrary.org/volunteer)  
+9. [Attending Weekly Community Calls @ 9a PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call) 
+10. [Applying to Google Summer of Code](Google-Summer-of-Code) & [Fellowship Opportunities](#Fellowships) 
 
 **Developer Resources**  
 1. [FAQs: Frequently Asked Questions](https://github.com/internetarchive/openlibrary/wiki/FAQs)
