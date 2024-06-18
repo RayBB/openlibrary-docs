@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-If you don't have Docker, VSCode, and a dev environment checkout the [Environment Setup](2_Developers/0_Environment-Setup).
+If you don't have Docker, VSCode, and a dev environment checkout the [Environment Setup](../2_Developers/0_Environment-Setup).
 
 ## Getting Started
 
