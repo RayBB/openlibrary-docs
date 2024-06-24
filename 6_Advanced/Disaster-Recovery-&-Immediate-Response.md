@@ -70,6 +70,7 @@ On `ol-www0` in `/openlibrary` you can run `decode_ip.sh` with the offending ano
 ```
 sudo -E SEED_PATH=http://seedserver.us.archive.org/key/seed.txt ./decode_ip.sh 0.32.37.207
 ```
+Note: if you run `decode.sh` and get a file not found error, run it again. This is a work around until a fix is merged for a race condition around the creation of the IP map.
 
 If for some reason `decode_ip.sh` is not working, as a last resort, you can disable anonymization temporarily by editing `/opt/openlibrary/docker/nginx.conf` to add `($remote_addr)` to the start of `log_format` in `nginx.conf` to de-anonymize IPs:
 
