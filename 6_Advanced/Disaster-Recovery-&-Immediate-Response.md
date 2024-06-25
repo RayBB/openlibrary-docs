@@ -68,6 +68,7 @@ This will let you see the traffic from that IP and determine if it should be blo
 
 On `ol-www0` in `/openlibrary` you can run `decode_ip.sh` with the offending anonymized IP `0.32.37.207` as follows:
 ```
+cd /opt/openlibrary/scripts
 sudo -E SEED_PATH=http://seedserver.us.archive.org/key/seed.txt ./decode_ip.sh 0.32.37.207
 ```
 Note: if you run `decode.sh` and get a file not found error, run it again. This is a work around until a fix is merged for a race condition around the creation of the IP map.
