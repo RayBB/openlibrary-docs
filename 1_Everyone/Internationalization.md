@@ -156,6 +156,14 @@ When syntaxing messages that are split up by nested HTML tags, consider if the m
 * While working, avoid moving extra spaces to the beginning or end `<a></a>` tags, which will cause weird links that look like[ this](https://github.com/internetarchive/openlibrary/wiki#internationalization)
 * You may run across some untranslated HTML in the JavaScript test files; this is fine, and should be left as is 
 
+### Enforcement
+
+If your pull request includes new or changed HTML files that don't follow the above guidelines, these changes will be flagged by the `detect_missing_i18n` pre-commit script and will fail CI. The CI output may be truncated, so you are encouraged to [install the pre-commit framework](https://pre-commit.com/) and run `pre-commit run detect-missing-i18n` to see which lines in your changes are missing i18n.
+
+If the i18n error or warning is a false positive, you may append `$# detect-missing-i18n-skip-line` to the end of your line ([example](https://github.com/internetarchive/openlibrary/pull/9428/files#diff-dcb478978163863442d37bddcdf510e3d04fb305a80fa28307cd0cd49556a41eR16)). You may also insert a line above the detected error that only contains `$# detect-missing-i18n-skip-line` ([example](https://github.com/internetarchive/openlibrary/pull/9428/files#diff-bcf3ac61effa00d5a5e5e195cf8be38f6e11d3949e56d4474dd236c89bb01ae4R255)).
+
+Do not add your file to the `EXCLUDE_LIST` array within the `detect_missing_i18n` script. This list is intended only for files that had existing errors at the time the pre-commit check was created, and these errors will be addressed and taken out of the list over time.
+
 ---
 
 \* You should try to avoid this where possible because it requires the translator to copy the HTML exactly—but sometimes you can't avoid it. Note you _should not_ split up the sentence; it might not make sense in other languages.
