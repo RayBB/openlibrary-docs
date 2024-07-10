@@ -229,16 +229,30 @@ A Partial is a targeted endpoint that returns only the minimal html required for
 
 In PR [#8824](https://github.com/internetarchive/openlibrary/pull/8824) you can see a complete example of where the "blocking" synchronous book price widget was removed from the Book Page and replaced with an asynchronous javascript call to a Partial that fetched book data after page load.
 
-First, we need to register a new Partial to return the right html for our component:
-https://github.com/jimchamp/openlibrary/blob/a220e5624caabe8f289151c9d347f48f2110069f/openlibrary/plugins/openlibrary/code.py#L1031-L1038
+In order for the data-infused partial to be rendered within a template, you’ll need to edit &/or create the following files and understand how they need to interact:
 
-Second, javascript is added to fetch the html for this component using the Partial endpoint:
-* 
-https://github.com/internetarchive/openlibrary/blob/37db01e97fafaeec1f36951050b06f836442ca71/openlibrary/plugins/openlibrary/js/affiliate-links.js#L54
-* https://github.com/jimchamp/openlibrary/blob/a220e5624caabe8f289151c9d347f48f2110069f/openlibrary/plugins/openlibrary/js/index.js#L536-L541
+**What files do I need?** 
+ 1. The template - the html file in the [templates folder](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/templates) where you intend the partial to render
+ 2. The partial - an html file in the [macros folder](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/macros)
+ 3. The partial’s JS - a js file in the [js folder](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins/openlibrary/js) that makes the call to the partials endpoint and receives the data to load into the partial
+ 4. [index.js](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/js/index.js) - the js file that connects the partial to its JS file
+ 5. [code.py](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/code.py) - the python file where the Partials endpoint lives. The JS file makes a call to this endpoint, passing in the macro or placeholder. The GET function makes a call to the backend, then calls the macro with the returned data, and returns the data-infused macro back to the partial’s JS.
 
-Finally, we update the origin template so the logic for synchronously loading the component is removed and is replaced with the a html container that can be populated by the Partial using javascript:   
-* https://github.com/internetarchive/openlibrary/pull/8824/files#diff-93ec72c37de495b619f24641f2b9defc4ea1205bb5450bb6baa33498831721efL195-R195
+**How to get these files to interact?**
+ 1. Connect the Template to the Partial (2 methods)
+	 - Placeholder: Create an HTML element with an id in the file where you’d like the Partial to render.  
+		 - Eg: Here in the [work_search.html](https://github.com/merwhite11/openlibrary/blob/2df06de69aa9cf555377af1a2b90ad467de35aff/openlibrary/templates/work_search.html#L126) template, the div with the id “fulltext-search-suggestion” serves as a placeholder for where the [Fulltext-Search-Suggestion](https://github.com/merwhite11/openlibrary/blob/1001/feature/fulltext-search-box/openlibrary/macros/FulltextSearchSuggestion.html) partial will be inserted.
+	 - Direct call: Directly call the partial in the template, passing in the parameters  
+		 - Eg: In [view.html](https://github.com/internetarchive/openlibrary/blob/3cb7cfeb658f6e97b05f23e4e248ac9d0a8db3a8/openlibrary/templates/type/edition/view.html#L317) template, the [AffiliateLinks](https://github.com/merwhite11/openlibrary/blob/1001/feature/fulltext-search-box/openlibrary/macros/AffiliateLinks.html) partial is called directly.
+		
+ 2.  Connect the Partial placeholder or the Partial itself to the Partial’s JS
+	 - This connection takes place in [index.js](https://github.com/merwhite11/openlibrary/blob/2df06de69aa9cf555377af1a2b90ad467de35aff/openlibrary/plugins/openlibrary/js/index.js#L551)
+	 - The element with the id we assigned to the placeholder/partial above is selected
+	 - The partial's JS file is imported and the init function called
+   
+
+3.  Connect the Partial’s JS to the Partial endpoint
+    - The [Partial’s JS](https://github.com/internetarchive/openlibrary/blob/37db01e97fafaeec1f36951050b06f836442ca71/openlibrary/plugins/openlibrary/js/affiliate-links.js#L54) makes a call to the [Partial endpoint](https://github.com/internetarchive/openlibrary/blob/3cb7cfeb658f6e97b05f23e4e248ac9d0a8db3a8/openlibrary/plugins/openlibrary/code.py#L1045). The call returns the data-infused partial to the partial’s js where it’s added to the template or the placeholder on the template.
 
 ## Infogami Types
 
