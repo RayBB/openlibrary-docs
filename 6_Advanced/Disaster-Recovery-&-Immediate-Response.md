@@ -25,6 +25,13 @@ Before continuing, you may want to check our [Port-mortems](https://github.com/i
 2. You can also block & revert changes per specific accounts via https://openlibrary.org/admin/people
   * If the edit to a page contains any of the spam words or email of the user is from the blacklisted domains, the edit won’t be accepted. New registrations with emails from those domains are also not accepted.
 
+## Power Outages at Data Center
+
+Once services return, please make sure all services are running and that VMs are ssh'able (this can probably be a script).
+
+If a machine is up but not reachable, [manually restart baremetal](https://gnt-webmgr.us.archive.org/).
+If a machine is up and reachable but services are not running, check `docker ps` on the host.
+
 ## Handling Abuse & DDOS (Denial of Service Attack)
 
 We have a few graphs on our main dashboard to [monitor the traffic of the top requesting IPs](https://grafana.us.archive.org/d/000000176/open-library-dev?orgId=1&refresh=1m&from=now-24h&to=now) to observe changes in pattern/behaviour:
