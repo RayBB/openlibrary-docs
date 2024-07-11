@@ -80,39 +80,6 @@ sudo -E SEED_PATH=http://seedserver.us.archive.org/key/seed.txt ./decode_ip.sh 0
 ```
 Note: if you run `decode.sh` and get a file not found error, run it again. This is a work around until a fix is merged for a race condition around the creation of the IP map.
 
-If for some reason `decode_ip.sh` is not working, as a last resort, you can disable anonymization temporarily by editing `/opt/openlibrary/docker/nginx.conf` to add `($remote_addr)` to the start of `log_format` in `nginx.conf` to de-anonymize IPs:
-
-```
-log_format iacombined '($remote_addr) $remote_addr_ipscrub $host $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_time';
-```
-
-3. `docker restart openlibrary-web_nginx-1`
-4. Find the real IP. Either use a custom regex to find the same requests again (if there's something unique about them you can grep with) or run the command from the beginning again over the last few minutes to find the deanonymized version of the IP:
-
-```sh
-$ sudo tail -n 17000 /1/var/log/nginx/access.log | grep -oE '^[0-9.()]+' | sort | uniq -c | sort -rn | head -n 25
-``` 
-
-5. Add the `deny` rules for individual abusing IPs to /opt/olsystem/etc/deny.conf or update the rules in `/opt/openlibrary/docker/web_nginx.conf` to deny IPs or user-agents in specific cases. Because `/opt/olsystem/etc/nginx/deny.conf` is in olsystem, which is volumed mounted, **and** the docker nginx files in `/opt/openlibrary` are volume mounted, simply  edit the files and restart the nginx docker container to apply your changes.
-
-6. Confirm offending IPs appear to be blocked back on ol-www1, e.g. look for 403's:
-
-```
-sudo tail -f /1/var/log/nginx/access.log | grep "XXX.XXX.XXX"
-
-YYY.YYY.YYY.YYY openlibrary.org - [01/Dec/2023:20:14:45 +0000] "GET /authors/OL7283999A/Petala_Parreira?sort=random_1701448397.338931&mode=everything HTTP/2.0" 403 185 "-" "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.123 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" 0.000 IP:XXX.XXX.XXX.XXX
-```
-
-8. Undo temporary IP de-anonymization by removing the `($remote_addr)` segment of `/opt/openlibrary/docker/nginx.conf` in the `log_format` rule:
-
-```
-log_format iacombined '$remote_addr_ipscrub $host $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_time;
-```
-
-9. And then restart everything one last time: `docker restart openlibrary-web_nginx-1`
-
-See related outage events: https://github.com/internetarchive/openlibrary/wiki/Disaster-History-Log#2017-11-09-1000pm-pst
-
 ## Solr Search Issues
 
 You can restart solr via docker as:
