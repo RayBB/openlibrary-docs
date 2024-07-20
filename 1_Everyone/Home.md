@@ -378,14 +378,29 @@ Don't see what you're looking for? Check [questions asked by contributors on Git
 
 # Recipes
 
-Topics which could use recipes
+Topics which could still use recipes
 
-* Setting a Cookie
 * Currently Logged-in Patron
 * Fetching patron's lists
 * Fetching books from Open Library with Availability
 * Getting a patron's S3 Keys
 * [Caching/memoizing a function](https://github.com/internetarchive/openlibrary/wiki/Using-Cache)
+
+## Adding new db table schema to Open Library
+
+See: https://github.com/internetarchive/openlibrary/pull/7928
+
+## Setting / unsetting a Cookie on login or registration
+
+You might want to set a cookie when a patron logs in or registers to persist information, such as a setting, across page views. For instance, if a patron logs in and they have print disabled access (something we'd need to check on every page view) we can save this using a session cookie:
+
+`web.setcookie('sfw', 'yes', expires="")`
+
+Setting cookies example:
+https://github.com/internetarchive/openlibrary/pull/7935/files#diff-ef23faa0d3112e7eef1f574a58b0710f9604f911f5a57e795e45c13c4b91fa19R342
+
+Clearing cookies example:
+https://github.com/internetarchive/openlibrary/pull/8490/files#diff-884f3a712a7e51cce625ca19060335684272f33a967702b19e66e48dbdd1be69R131-R133
 
 ## Magic incantation: Accessing `web.ctx`
 
