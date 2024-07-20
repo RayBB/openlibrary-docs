@@ -2,7 +2,7 @@
 1. [Setting up your developer environment](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-docker-installation-guide-for-open-library-developers)  
 2. [Using `git` in Open Library](https://github.com/internetarchive/openlibrary/wiki/Git-Cheat-Sheet)  
 3. [Finding good `First Issues`](https://github.com/internetarchive/openlibrary/issues?q=is%3Aopen+is%3Aissue+label%3A%22Needs%3A+Help%22+label%3A%22Good+First+Issue%22)  
-4. [Code Recipes][https://github.com/internetarchive/openlibrary/wiki#recipes]
+4. [Code Recipes](https://github.com/internetarchive/openlibrary/wiki#recipes)
 5. [Testing Your Code](Developer-Resources/Testing), [Debugging & Performance Profiling](Debugging-and-Performance-Profiling)  
 6. [Loading Production Site Data ↦ Dev Instance](Loading-Production-Book-Data)  
 7. [Submitting good Pull Requests](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)  
