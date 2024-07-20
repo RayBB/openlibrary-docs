@@ -380,11 +380,17 @@ Don't see what you're looking for? Check [questions asked by contributors on Git
 
 Topics which could still use recipes
 
-* Currently Logged-in Patron
 * Fetching patron's lists
-* Fetching books from Open Library with Availability
 * Getting a patron's S3 Keys
 * [Caching/memoizing a function](https://github.com/internetarchive/openlibrary/wiki/Using-Cache)
+
+## Fetching books from Open Library with Availability
+
+See: https://openlibrary.org/dev/docs/api/search
+
+## Currently Logged-in Patron
+
+https://github.com/internetarchive/openlibrary/pull/8597/files#diff-ef23faa0d3112e7eef1f574a58b0710f9604f911f5a57e795e45c13c4b91fa19R798
 
 ## Adding new db table schema to Open Library
 
