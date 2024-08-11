@@ -26,8 +26,9 @@ The following resources are for developers doing bulk book record creation via o
 2. [Import by MARC](#MARC-Records)
 3. [Import by Archive.org Identifier](#Import-by-OCAID)
 4. [Import by JSON](#Importing-JSON)
-5. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
-6. [Pipeline Internals](#Pipeline-Internals)
+5. [Batch import by JSONL](#Batch-importing-JSONL)
+6. [Import by ONIX Feeds](Processing-ONIX-Feeds) (incomplete)
+7. [Pipeline Internals](#Pipeline-Internals)
 
 ## Production Automatic Import Pipeline
 
@@ -377,6 +378,15 @@ This assumes you have a `cookies.txt` with your session cookie. See [API Authent
 }'
 {"authors": [{"key": "/authors/OL15A", "name": "Author McAuthor", "status": "created"}], "success": true, "edition": {"key": "/books/OL19M", "status": "created"}, "work": {"key": "/works/OL9W", "status": "created"}}
 ```
+
+## Batch importing JSONL
+Sufficiently privileged patrons can make use of a bulk import endpoint at `/import/batch/new`, which accepts a plain text file of JSONL, with one import per line, e.g.:
+```json
+{"identifiers": {"open_textbook_library": ["1581"]}, "source_records": ["open_textbook_library:1581"], "title": "Legal Fundamentals of Healthcare Law", "languages": ["eng"], "subjects": ["Medicine", "Law"], "publishers": ["University of West Florida Pressbooks"], "publish_date": "2024", "authors": [{"name": "Tiffany Jackman"}], "lc_classifications": ["RA440", "KF385.A4"]}
+{"identifiers": {"open_textbook_library": ["1580"]}, "source_records": ["open_textbook_library:1580"], "title": "Introduction to Literature: Fairy Tales, Folk Tales, and How They Shape Us", "languages": ["eng"], "subjects": ["Humanities", "Literature, Rhetoric, and Poetry"], "publishers": ["University of West Florida Pressbooks"], "publish_date": "2023", "authors": [{"name": "Judy Young"}], "lc_classifications": ["PE1408"]}
+```
+
+Such imports will be pre-validated so one can see in advance which records may be problematic. `#` characters are also allowed at the start of the line as a comment, even though this is not valid JSONL. See https://github.com/internetarchive/openlibrary/pull/8122 for more.
 
 ## MARC Records
 
