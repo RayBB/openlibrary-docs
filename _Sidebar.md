@@ -19,7 +19,7 @@
 5. [Solr Search Engine Manual](Solr)  
 6. [Imports](Developer's-Guide-to-Data-Importing)  
 7. [BookWorm / Affiliate Server ](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit#heading=h.xmcr55qgzsig)  
-8. [Writing Bots](Developer-Resources/Writing-Bots)  
+8. [Writing Bots](Writing-Bots)  
 
 **Developer Guides**  
 * [Developing the My Books & Reading Log](5_Projects_Developing-the-Reading-Log)  
