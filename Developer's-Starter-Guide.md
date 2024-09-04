@@ -19,7 +19,7 @@ Working backwards from what you see on the site. In this guide, we're going to w
 
 ### HTML Templates
 
-When a patron navigates through the Open Library website and requests pages, like the one pictured below, they will be served "rendered" html content from the [`openlibrary/templates`](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/templates) directory.
+When a patron navigates through the Open Library website and requests pages (like the screenshot pictured below), the patron will be served "rendered" html content from the [`openlibrary/templates`](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/templates) directory.
 
 <img width="500" alt="Screenshot 2024-09-04 at 6 12 47 AM" src="https://github.com/user-attachments/assets/8f8de2d6-e255-492d-8552-3e11b69c50fc">
 
