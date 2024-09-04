@@ -96,9 +96,9 @@ When we call `render_template('book', ...)` we are fetching the `templates/book.
 
 When a single template becomes too large and unmanageable, or when the programmer recognizes an opportunity to clean up a template by factoring-out common or shared pieces of logic, they may choose to break a template into smaller logical components and move them into their own separate micro-templates. These micro-templates can live beside other templates in the `templates/` directory. If these micro-templates are very self-contained and make sense to be rendered as their own widget, such the `QueryCarousel`, you might consider saving your template in the `macros` directory, which is folder of templates that have a few additional special properties.
 
-## Macros
+## [Macros](https://openlibrary.org/dev/docs/infogami#anchor7)
 
-When refactoring  programmer may decide it makes sense to move the code to the `macros` directory. A `macro` is simply a special type of `template` that can be accessed using `{{}}` syntax by the page editor in Open Library.
+When refactoring  programmer may decide it makes sense to move the code to the `macros` directory. A `macro` is simply a special type of `template` that can be accessed using `{{}}` syntax by the page editor in Open Library. You can read more about macros in our very stale/outdated [infogami documentation](https://openlibrary.org/dev/docs/infogami#anchor7). 
 
 Here's what the infogami edit UI looks like for a collection:
 <img width="610" alt="Screenshot 2024-09-04 at 8 31 02 AM" src="https://github.com/user-attachments/assets/a74e9582-5cc4-456b-bcdd-b5fcde5f50c7">
