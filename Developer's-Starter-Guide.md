@@ -105,7 +105,7 @@ Here's what the infogami edit UI looks like for a collection:
 Here's what the page looks like when it's rendered with a macro:
 <img width="624" alt="Screenshot 2024-09-04 at 8 31 28 AM" src="https://github.com/user-attachments/assets/1b72db4e-8258-40f4-aa8c-206ffc82d5bc">
 
-## Understanding controllers & routers
+## Next: Understanding controllers & routers
 
 So far, by extrapolating from what's written in this guide, we hope you've learned how you may be able to:
 1. Find the corresponding html template file for an Open Library webpage somewhere in the `templates/` directory
