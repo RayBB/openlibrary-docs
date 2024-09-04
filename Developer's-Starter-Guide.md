@@ -32,6 +32,9 @@ Here are a few examples of common templates:
 * Login & Register: [`login.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/login.html) and [`account/create.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/account/create.html)
 
 > [!NOTE]  
+> Some pages, like the /books page, are first-class "registered" [Infogami `types`](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/templates/type) and are powered through the Infogami wiki framework that runs Open Library. This is true for `books`, `authors`, `lists`, and a few other types. Because these are first-class registered types handled by infogami, You won't find [plugin](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins) controllers for them in Open Library. Their html templates can be found in the special [`templates/type`](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/templates/type) directory. When Open Library notices a url containing a key for one of these special types, infogami fetches the corresponding object from the database and passes it as `page` straight into the template. So for the books page, which is [`templates/type/edition/view.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/edition/view.html), the `page` value defined in its [`$def with (page, ...)`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/edition/view.html#L1) header is actually a [`book` edition or work object](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/models.py#L44) whose properties are defined [here](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/models.py#L44).
+
+> [!NOTE]  
 > You may notice that most the html pages within the templates folder don't include the `<html>`, `<head>`, and `<footer>` sections of the website, just the contents of the body. This is because Open Library is set up such that nearly all `page` templates get automatically wrapped by the [`site`](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/templates/site.html) template.
 
 ### The Site Wrapper
@@ -75,7 +78,12 @@ The `$def with(...)` line is how the template declares what variables it needs t
 From python, the corresponding code to render this `templates/books.html` template would be:
 
 ```
-render_template('books', book_title="The Hobbit", bookcover_url="https://covers.openlibrary.org/b/id/14624642-L.jpg", author="J.R.R. Tolkien")
+render_template(
+  'books',  # name of the template in templates/ directory without .html
+  book_title="The Hobbit",
+  bookcover_url="https://covers.openlibrary.org/b/id/14624642-L.jpg",
+  author="J.R.R. Tolkien"
+)
 ```
 
 > [!TIP]  
