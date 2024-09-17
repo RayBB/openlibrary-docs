@@ -1,6 +1,6 @@
 # Responding to a Outage
 
-- [ ] 1. Report outage on `#openlibrary` and `#ops` on Slack
+- [ ] 1. Report outage on `#openlibrary` and `#ops` on Slack, follow the [escalation guide](https://docs.google.com/spreadsheets/d/1uu2zQ76TPbx9pP3uSYJ0opldgOHVzlK3Mz35Yk3pUq0/edit?gid=0#gid=0)
 - [ ] 2. :exclamation: **Search** previous [post mortem](https://github.com/internetarchive/openlibrary/issues?q=label%3A%22Type%3A+Post-Mortem%22) reports for insights and solutions to common issues 
 - [ ] 3. Consult the [First Responder's Quickstart & Troubleshooting](#Troubleshooting) section to identify likely suspects
 - [ ] 4. Check the [monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring):
