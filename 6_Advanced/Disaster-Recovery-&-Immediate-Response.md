@@ -1,4 +1,4 @@
-The Emergency Response Guide for OpenLibrary.org
+The Emergency Response Guide for OpenLibrary.org first-responders.
 
 # Responding to a Outage
 
