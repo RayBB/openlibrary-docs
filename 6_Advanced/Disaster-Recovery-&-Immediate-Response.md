@@ -106,7 +106,7 @@ docker builder prune
 docker image prune -a --filter "until=168h"
 ```
 
-!CAUTION:
+[!CAUTION]
 > When `docker prune` is being run, unfortunately the rest of `docker` typically becomes unresponsive; [see this issue](https://github.com/docker/for-mac/issues/2501). When this happens, the *wrong* intervention is to try and restart the server with ganeti. When you do, not only will docker still be responsive until the prune finishes, but *additionally* all docker containers that _were_ running will stop and be unreachable.
 
 ## Docker images
