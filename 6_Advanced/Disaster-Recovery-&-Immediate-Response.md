@@ -4,14 +4,12 @@ The Emergency Response Guide for OpenLibrary.org first-responders.
 
 - [ ] 1. Report outage on `#openlibrary` and `#ops` on Slack, follow the [escalation guide](https://docs.google.com/spreadsheets/d/1uu2zQ76TPbx9pP3uSYJ0opldgOHVzlK3Mz35Yk3pUq0/edit?gid=0#gid=0)
 - [ ] 2. :exclamation: **Search** previous [post mortem](https://github.com/internetarchive/openlibrary/issues?q=label%3A%22Type%3A+Post-Mortem%22) reports for insights and solutions to common issues 
-- [ ] 3. Consult the [First Responder's Quickstart & Troubleshooting](#Troubleshooting) section to identify likely suspects
-- [ ] 4. Check the [monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring):
+- [ ] 3. Check the [public monitoring dashboards](https://github.com/internetarchive/openlibrary/wiki/Monitoring) and [internal](https://github.com/internetarchive/olsystem/wiki#error-reporting--analytics):
     - [NAGIOS](https://monitor.archive.org/cgi-bin/nagios3/status.cgi?hostgroup=24.openlibrary&style=detail)
     - [HAProxy](https://openlibrary.org/admin?stats)
-    - https://status.archivelab.org/?admin=true - links to more org dashboards
-- [ ] 5. If the baremetal machine is hanging, contact #ops on slack or [manually restart baremetal](https://gnt-webmgr.us.archive.org/)
-- [ ] 6. If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
-- [ ] 7. Create a new [postmortem](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Post-Mortem%2C+Priority%3A+0%2C+GJ%3A+Triage+Exception&template=post_mortem.md&title=) issue
+- [ ] 4. If the bare-metal machine is hanging, contact #ops on slack or [manually restart baremetal](https://gnt-webmgr.us.archive.org/)
+- [ ] 5. If there's a fiber outage and openlibrary.org's servers don't resolve (even to Sorry service), ask in #openlibrary or #ops for openlibrary.org to be temporarily pointed to the active Sorry server
+- [ ] 6. Create a new [postmortem](https://github.com/internetarchive/openlibrary/issues/new?assignees=&labels=Type%3A+Post-Mortem%2C+Priority%3A+0%2C+GJ%3A+Triage+Exception&template=post_mortem.md&title=) issue and _proceed to this guide_:
 
 # Diagnostic's Guide
 
