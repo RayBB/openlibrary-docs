@@ -99,8 +99,15 @@ There are few servers which we expect to fill up. ol-db1/2 and ol-covers0/1 are 
 The following will prune unattached images which were created more than 1 week ago (168h):
 
 ```
+# to prune the build cache
+docker builder prune
+
+# prune unused images created more than 1 week ago
 docker image prune -a --filter "until=168h"
 ```
+
+!CAUTION:
+> When `docker prune` is being run, unfortunately the rest of `docker` typically becomes unresponsive; [see this issue](https://github.com/docker/for-mac/issues/2501). When this happens, the *wrong* intervention is to try and restart the server with ganeti. When you do, not only will docker still be responsive until the prune finishes, but *additionally* all docker containers that _were_ running will stop and be unreachable.
 
 ## Docker images
 
