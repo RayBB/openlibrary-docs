@@ -1,3 +1,5 @@
+The Emergency Response Guide for OpenLibrary.org
+
 # Responding to a Outage
 
 - [ ] 1. Report outage on `#openlibrary` and `#ops` on Slack, follow the [escalation guide](https://docs.google.com/spreadsheets/d/1uu2zQ76TPbx9pP3uSYJ0opldgOHVzlK3Mz35Yk3pUq0/edit?gid=0#gid=0)
