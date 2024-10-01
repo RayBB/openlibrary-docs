@@ -386,7 +386,7 @@ Sufficiently privileged patrons can make use of a bulk import endpoint at `/impo
 {"identifiers": {"open_textbook_library": ["1580"]}, "source_records": ["open_textbook_library:1580"], "title": "Introduction to Literature: Fairy Tales, Folk Tales, and How They Shape Us", "languages": ["eng"], "subjects": ["Humanities", "Literature, Rhetoric, and Poetry"], "publishers": ["University of West Florida Pressbooks"], "publish_date": "2023", "authors": [{"name": "Judy Young"}], "lc_classifications": ["PE1408"]}
 ```
 
-Such imports will be pre-validated so one can see in advance which records may be problematic. `#` characters are also allowed at the start of the line as a comment, even though this is not valid JSONL. See https://github.com/internetarchive/openlibrary/pull/8122 for more.
+Such imports will be pre-validated so one can see in advance which records may be problematic. `#` characters are also allowed at the start of the line as a comment, even though this is not valid JSONL. Imports should be formatted according to the [import schema](https://github.com/internetarchive/openlibrary-client/tree/master/olclient/schemata). For the notes associating the PR that added this feature, see https://github.com/internetarchive/openlibrary/pull/8122.
 
 ## MARC Records
 
