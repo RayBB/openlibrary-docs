@@ -57,3 +57,18 @@ In `openlibrary.plugins.upstream.account.py`, there should be a class called `xa
 In order to log-in to an account,  result['itemname'] on line 121 (on this image), must be set to the account's username that you are trying to log into.
 
 Once this is set, you should be able to log into that account with the same email on your typical log-in screen. Remember; in order to access your admin account again, you'll have to change the item name back to `@openlibrary`.
+
+## Step 4 (Optional): Adding users to user groups
+
+Depending on the behavior that you are trying to recreate locally, it might become necessary to add your users to different user groups. For example, you may need to create merge requests using a user assigned to the librarians usergroup in order to test the merge process. The test user that you have created following the above instructions will only have basic permissions and will not be able to access librarian tools. By adding that user to the librarians usergroup, you will be able to log in as that user and access the functionality that you wish to test. With your local development instance running, the list of all usergroups can be viewed at [http://localhost:8080/usergroup](http://localhost:8080/usergroup). 
+
+![Screenshot of the open library usergroup page](https://github.com/user-attachments/assets/d28a9e81-63d9-4f7c-acae-a0df5d6796db)
+
+Following the librarian user example, we can find the librarians usergroup page at [http://localhost:8080/usergroup/librarians](http://localhost:8080/usergroup/librarians). To add a user to a specific usergroup, open the page for that group from the list pictured above and append, `?m=edit`, to the end of the url. This will load the edit form for that usergroup which will allow you to add your newly created user.
+
+![Screenshot of the edit page for the librarians usergroup page](https://github.com/user-attachments/assets/e6146d93-6319-41ab-8605-9b9764f50afd)
+
+In the above screenshot, the librarians usergroup is being edited at the url, [http://localhost:8080/usergroup/librarians?m=edit](http://localhost:8080/usergroup/librarians?m=edit). To add your user, in the members section, enter `/people/` followed by the user's screen name (`/people/test_username` for the user, `test_username`, in the above example) and then click save once you are finished. After saving your changes, any valid users that you have added should now be added to that specific usergroup. You can verify this by logging in as that user and ensuring that the appropriate pages for that usergroup are now accessible. You can also check by navigating to the newly updated usergroup page to see if the user appears in the list of usergroup members.
+
+![Screenshot of the librarians usergroup page with the newly added test user in the list of members](https://github.com/user-attachments/assets/aac8f287-e2ba-4db3-8ba2-5850cbaca9c8)
+
