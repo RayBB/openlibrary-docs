@@ -7,7 +7,7 @@ If you haven't already **please fill out the appropriate form on the [Volunteers
 ## Important Links
 
 - [Zoom Meeting](https://zoom.us/j/369477551) for Community Call
-- [2024 Community Calls Meeting Notes](https://docs.google.com/document/d/11jMuWxaGClzK29VCK-ZhxFfk2737c3VynI-LJiraCJo/edit)
+- [2025 Community Calls Meeting Notes](https://docs.google.com/document/d/15c7v9l30rIPmFG_Vq753Jfv5hWiP5uNidGsRM3ZItWg)
 
 ## Agenda
 
