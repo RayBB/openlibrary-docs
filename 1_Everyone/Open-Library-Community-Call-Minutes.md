@@ -4,6 +4,8 @@ This document tracks of the minutes/notes.
 See also: [Important Open Library Documents](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/)
 # Meeting Minutes by Year
 
+- [2025](https://docs.google.com/document/d/15c7v9l30rIPmFG_Vq753Jfv5hWiP5uNidGsRM3ZItWg/)
+- [2024](https://docs.google.com/document/d/11jMuWxaGClzK29VCK-ZhxFfk2737c3VynI-LJiraCJo/)
 - [2023](https://docs.google.com/document/d/1joLJzuY3YM1g6nZZSaqqM35DC_CVLbiOG9vhj21UKmw/)
 - [2022](https://docs.google.com/document/d/1LEbzsLZ1F9_YIQOoZzO7GoZnG1z-rudhZ9HNtsameTc/)
 - [2021](https://docs.google.com/document/d/1YXh4SvaY9kyI-IIYnVQPDQIeDHoDcvvqvyHfkkTfPX8/)
