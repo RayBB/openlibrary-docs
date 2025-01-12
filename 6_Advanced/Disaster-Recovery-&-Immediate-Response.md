@@ -13,7 +13,7 @@ The Emergency Response Guide for OpenLibrary.org first-responders.
 
 # Diagnostic's Guide
 
-Before continuing, you may want to check our [Port-mortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22+) to see if this is a known / already solved problem.
+Before continuing, check our [Performance Monitoring Guide](https://docs.google.com/document/d/1QQuQtEjTP2V5OuoU13tTKTlB2cypq76uP4IdSeTRQjA/edit?tab=t.0) [Port-mortems](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+label%3A%22Type%3A+Post-Mortem%22+) to see if this is a known / already solved problem.
 
 1. Is [CPU load high on web nodes](https://grafana.us.archive.org/d/b7a222a0-d4fe-49a4-a5c4-b071ce756fda/ol-cluster-load?orgId=1&refresh=1m) and/or is there a [spike in # of transactions](https://sentry.archive.org/organizations/ia-ux/alerts/rules/details/23/)?
     * [Handling Abuse & DDOS (Denial of Service Attack)](https://github.com/internetarchive/openlibrary/wiki/Disaster-Recovery-&-Immediate-Response#handling-abuse--ddos-denial-of-service-attack)
