@@ -1,12 +1,16 @@
-[**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/programs/2024/organizations/internet-archive)
+→ [**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/programs/2024/organizations/internet-archive)
 
-[**See Open Library's GSoC 2024 Proposal**](https://docs.google.com/document/d/1Wh3tAxS4T9eKLa5x8iILft964v8zriaq-hKcu300Lg4/edit#heading=h.mn497pr3rien)
+→ **Open Library's 2025 Call For Proposals (CFP) is not yet available.** 
+    [**See 2024 CFP**](https://docs.google.com/document/d/1Wh3tAxS4T9eKLa5x8iILft964v8zriaq-hKcu300Lg4/edit#heading=h.mn497pr3rien)
+
+* **[Welcome](#Welcome)**
+  * [History](#History) | [Your Chances](#Your-Chances) | [Advice for Contributors](#Advice-For-Contributors)
+* **[Drafting a Proposal](#Drafting-a-Proposal)** 
+  * [Requirements](#Requirements) | [Walkthrough](#Walkthrough) | [Sample](#Sample) | [Tips](#Tips)
+* **[Selection Process](#selection-process)** 
+  * [Fellowship Qualities](#Fellowship-Qualities) | [Fellowship Checklist](#Fellowship-Checklist)
 
 ---
-
-* **[Welcome](#Welcome)**: [History](#History) | [Your Chances](#Your-Chances) | [Advice for Contributors](#Advice-For-Contributors)
-* **[Drafting a Proposal](#Drafting-a-Proposal)** | [Requirements](#Requirements) | [Walkthrough](#Walkthrough) | [Sample](#Sample) | [Tips](#Tips)
-* **[](#)**
 
 # Welcome
 
@@ -98,7 +102,20 @@ Start with an initial paragraph that provides a very clear, concise, short overv
 
 > For GSoC, I propose adding a `Sponsor Book` button that will show up on the 23M books on Open Library that are not yet readable. This button will connect to a minimal UX flow for sponsoring a book that I've [diagramed]. I've also [diagramed] approximately what the code flow will look like to implement this, with relevant services, data stores, APIs, URLs, files, and functions referenced.
 
-See also the [Bonus Proposal](#Bonus-Proposal) below for a more detailed example of a good "solution".
+Here's a micro-proposal with a more detailed example of a good "solution" breakdown:
+
+```
+Context: Open Library is an important platform because it helps underserved learners read library books online for free online -- many municipalities don't have as well funded libraries as NYPL and BPL and so the availability of digital reading options is a critical consideration. The Open Library catalog, however, is currently missing hundreds of high quality born-digital educational web books (for instance, [this book on the Rust programming language](https://github.com/rust-lang/book) published on github) are difficult to discover because they're not indexed or catalogued many places online. This book has 12k :star: and there are many books like it, signifying there's a large audience (likely tens of thousands of patrons) interested in the subject matter. Open Library already has a large patron-base and so adding support for books like these could have a big impact both for patrons and the authors of these high quality web books.
+
+Proposal: A low-cost and effective program that will allow librarians on Open Library to propose linking books to URLs for open access readable editions online:
+
+1. The /addbook page will be updated so any patron can submit the URL of a web book, along with some basic metadata to help reviewers assess the quality of the submission.
+2. A privileged librarian will go to a new page called /review where (similar to the /merges UI) a librarian can evaluate the book's quality. Here is figma link to how this /review page might look:
+   design showing a table where the fields are: (ol_edition_key, web_book_url, reviewer=None, status="approved")
+3. In order to ensure only high quality of books are approved, there will be a standard checklist guide written that librarians can use to see if the web book meets all the criteria. This guide will be one of the deliverables.
+4. Today, Open Library book pages have a read or borrow button when a readable edition is available in the library. I propose we make this button more flexible to include web_books as an option and possibly convert it into a dropdown button (see img) because this will allow us to offer many different options, such as external links to the web_book
+5. Finally, we would make sure that when a web_book is approved by a librarian, it will enter the solr search engine so that patrons can facet/search by web_books specifically or see when a web_book happens to be available in the catalog. For this I will refer to the [video tutorial on adding fields to solr](https://archive.org/details/openlibrary-tour-2020/2021-10-26-OpenLibrary-Community-Celebration.mp4) and make the necessary changes to the main backend [search code](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py) and the [search UI template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html) to make these changes.
+```
 
 4. What gives you confidence your solution is possible and achievable? What are the risks and challenges and how might we address them?
 
@@ -148,23 +165,5 @@ When selecting fellows, we try to identify individuals who demonstrate:
 * [ ] Provides concrete solutions, not generic, indefensible, broad-sweeping, unqualified solutions like "will be solved using machine learning"
 
 **Good luck!**
-
-## Bonus Proposal
-
-Proposals don't need to be long and they don't need to be for GSoC. Here's an example of a proposal that would make a great issue on our github:
-
-```
-Open Library is an important platform because it helps underserved learners read library books online for free online -- many municipalities don't have as well funded libraries as NYPL and BPL and so the availability of digital reading options is a critical consideration. The Open Library catalog, however, is currently missing hundreds of high quality born-digital educational web books (for instance, [this book on the Rust programming language](https://github.com/rust-lang/book) published on github) are difficult to discover because they're not indexed or catalogued many places online. This book has 12k :star: and there are many books like it, signifying there's a large audience (likely tens of thousands of patrons) interested in the subject matter. Open Library already has a large patron-base and so adding support for books like these could have a big impact both for patrons and the authors of these high quality web books.
-
-Proposal for a low-cost and effective program that will allow librarians on Open Library to propose linking books to URLs for open access readable editions online:
-
-1. The /addbook page will be updated so any patron can submit the URL of a web book, along with some basic metadata to help reviewers assess the quality of the submission.
-2. A privileged librarian will go to a new page called /review where (similar to the /merges UI) a librarian can evaluate the book's quality. Here is figma link to how this /review page might look:
-   design showing a table where the fields are: (ol_edition_key, web_book_url, reviewer=None, status="approved")
-3. In order to ensure only high quality of books are approved, there will be a standard checklist guide written that librarians can use to see if the web book meets all the criteria. This guide will be one of the deliverables.
-4. Today, Open Library book pages have a read or borrow button when a readable edition is available in the library. I propose we make this button more flexible to include web_books as an option and possibly convert it into a dropdown button (see img) because this will allow us to offer many different options, such as external links to the web_book
-5. Finally, we would make sure that when a web_book is approved by a librarian, it will enter the solr search engine so that patrons can facet/search by web_books specifically or see when a web_book happens to be available in the catalog. For this I will refer to the [video tutorial on adding fields to solr](https://archive.org/details/openlibrary-tour-2020/2021-10-26-OpenLibrary-Community-Celebration.mp4) and make the necessary changes to the main backend [search code](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py) and the [search UI template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html) to make these changes.
-```
-
 
 
