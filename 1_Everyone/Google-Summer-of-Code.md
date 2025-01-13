@@ -4,6 +4,10 @@
 
 ---
 
+* **[Welcome](#Welcome)**: [History](#History) | [Your Chances](#Your-Chances) | [Advice for Contributors](#Advice-For-Contributors)
+* **[Drafting a Proposal](#Drafting-a-Proposal)** | [Requirements](#Requirements) | [Walkthrough](#Walkthrough) | [Sample](#Sample) | [Tips](#Tips)
+* **[](#)**
+
 # Welcome
 
 Google Summer of Code (GSoC) is a global program (paid mentorship program) focused on bringing more developers into open source software development. Contributors with an open source organization on a 3 month programming project during their break from school. You can read more [on Google's GSoC website](https://summerofcode.withgoogle.com). The program is run by Google, which selects aligns organizations to mentor contributors on projects.
@@ -20,128 +24,7 @@ Each year, the Internet Archive applies as an organization to participate in Goo
 
 Assuming Open Library is given a GSoC seat: Typically, hundreds of candidates email us to inquire about GSoC. 25 or so set up the Open Library code base, join the community slack channel, make contributions to the project, and submit applications. So if you're very dedicated and invest time meeting mentors and working with them to understand the codebase and the project's needs and problems, you're chances are ~4% (1/25).
 
-# Drafting a Fellowship Proposal
-
-## Sample
-
-You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
-
-## Example Proposal Concept
-
-The following mock proposal is effective because it:
-
-- Demonstrates the value of Open Library and the problem it helps solve
-- Defines a very specific, focused problem and justifies its value in measurable terms
-- Identifies open questions, risks, and concerns a mentor may have
-- Proposes a detailed & feasible step by step plan, with justification behind design decisions, and directly address the risks & questions.
-- Is specific enough that this can be handed to someone else and they'd be able to make progress towards the desired outcome
-- Engineering knowledge is demonstrated about the codebase
-- Product & design knowledge is demonstrated about the critical pieces required to produce a working product/prototype as well as original ideas
-- Shows the mentor how they will know if the plan is successful
-
-## Requirements
-
-Your proposal should be **focused**, **thematic**, **realistic**, and **metric-driven**:
-
-e.g.
-
-- I believe [Theme] is important for Internet Archive and Open Library because...
-- [Theme] is best measured by metric X because...
-- I have an idea on how to increase X by Y%
-- Here's evidence X can be increased by Y%
-- Here's is my proposal for increasing X by Y% (diagrams? wireframes? architecture overview? features?)
-- Here are the risks (what could go wrong)
-- Here are my open questions (for mentors)
-
-## General Advice
-
-1. Your application **should not** just be a collection of issues. Group issues into logical themes. For instance, "my theme for phase one of my roadmap is making Open Library more accessible to people in non-US countries".
-2. Ask lots of questions -- some of your ideas may be easy in principle, but hard because Open Library's code base can be difficult to work with, an issue may take longer than expected! Ask mentors how long they think an issue will take, it's one of the most important pieces of value they can offer.
-3. Consider creating Open Library issues proposing features you'd like to include in your application. Get feedback from the community and see whether it's something they also value and will support.
-4. Have an idea of what success means / looks like from the very beginning. How will you know if you've won? Brewster suggests one strategy is, "start with the aspirational blog post and work backwards".
-
-## Choosing a Meaningful Theme
-
-Depending on what you specifically valuable about Open Library, here is an example of what an application may say:
-
-> The reason I am drawn to Open Library is I feel every country should have a library system. Right now, X countries don't have public library systems. As a result, I am designing a plan to increase the number of international users who visit Open Library and borrow books. First, we'll add an option to account creation that allows users to select their country and language (see issue #XXX on github)...
-
-## What Does a Good Proposal Look Like?
-
-A good summary addresses the following 6 questions (replace `Open Library` with whatever project you're applying for):
-
-1. What is Open Library, what is its importance to you, and how do you personally measure its impact?
-
-> Open Library is a non-profit website run by Internet Archive which helps millions of patrons access digital library books for free. Not every library is equal. Some cities don’t have libraries at all. Open Library is an opportunity to provide equal opportunity to readers all over the globe. To me, success means extending the reach of Open Library so more people may access books who are currently without sufficient local libraries.
-
-2. What **opportunity** exists for Open Library and how does it related to your impact metric?
-
-The opportunity you mention should be directly related to the "solution" you reference in #5.
-
-> Today, Open Library is limited to the books Internet Archive decides should be acquired and made available through their library program. But there’s an opportunity to democratize Open Library’s bookshelves and extend this power to patrons so every reader in the world may be empowered to Sponsor books of their choosing.
-
-3. Why now? Why is this opportunity possible now (and wasn’t possible before?)
-
-> Last year, Open Library added a Want to Read button to their website enabling patrons to tell us which books we are missing from the library. To our surprise, over 400k unique patrons clicked this button since we added it, teaching us that patrons are eager to tell us which books they want. I believe some percentage of these patrons may also be willing to make a monetary donation to sponsor the accessioning of these desirable books.
-
-4. What does the solution look like?
-
-> For GSoC, we’d like to test this hypothesis by adding a `Sponsor this Book` button that will show up on the 23M remaining books which Open Library knows about but have not yet been obtained.
-
-5. What does success of your solution look like? What is the potential impact, who will benefit?
-
-> Success means establishing a new distribution channel to receive donations, promoting long-term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship.
-
-### Open Library's Value & a Missed Opportunity
-
-Open Library is an important platform because it helps underserved learners read library books online for free online. Most municipalities don't have as well funded libraries as NYPL and BPL and so the availability of digital reading options is a critical consideration. However, the library is currently missing an opportunity because hundreds of high quality born-digital educational web books (for instance, [this book on the Rust programming language](https://github.com/rust-lang/book) published on github) are not indexed in the catalog. This book has 12k :star: and there are many books like it, signifying there's a large audience (likely tens of thousands of patrons) interested in the subject matter.
-
-### Challenges & Risks
-
-As a reviewer, you may be wondering: How do we find or submit good web books? How do we evaluate the quality of a web book? Who will be allowed to submit web books and is there a review process? What technologies or processes are needed to make such an initiative possible? And is there a way we can build such a system so that the benefits will outweigh the risks and the time investment? Finally, what will the experience be like to search for and read web_books from Open Library? After talking to members of staff about their questions, I've also included any policy considerations which may need to be addressed when linking to external websites from Open Library?
-
-### Proposal
-
-In this proposal, I will address some of the above concerns, make a case for why this feature is paramount for us to work on, and recommend a clear and specific path forward which will address these questions, reduce uncertainty & risk, and promote confidence in a solution that will be both feasible, low-costs, and effective:
-
-1. The /addbook page will be updated so any patron can submit the URL of a web book, along with some basic metadata to help reviewers assess the quality of the submission.
-2. A privileged librarian will go to a new page called /review where (similar to the /merges UI) a librarian can evaluate the book's quality. Here is figma link to how this /review page might look:
-   design showing a table where the fields are: (ol_edition_key, web_book_url, reviewer=None, status="approved")
-3. In order to ensure only high quality of books are approved, there will be a standard checklist guide written that librarians can use to see if the web book meets all the criteria. This guide will be one of the deliverables.
-4. Today, Open Library book pages have a read or borrow button when a readable edition is available in the library. I propose we make this button more flexible to include web_books as an option and possibly convert it into a dropdown button (see img) because this will allow us to offer many different options, such as external links to the web_book
-5. Finally, we would make sure that when a web_book is approved by a librarian, it will enter the solr search engine so that patrons can facet/search by web_books specifically or see when a web_book happens to be available in the catalog. For this I will refer to the [video tutorial on adding fields to solr](https://archive.org/details/openlibrary-tour-2020/2021-10-26-OpenLibrary-Community-Celebration.mp4) and make the necessary changes to the main backend [search code](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py) and the [search UI template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html) to make these changes.
-
-### Evaluating Success
-
-One might evaluate success in any number of ways. Here are some ideas, though careful as you'll want to justify and create a case for why these evaluation metrics are the right ones (either categorically and/or with respect to your specific proposal):
-
-- how many times a patron clicks submits a web book
-- how many times a librarian approves a submitted web_book
-- how many times a web_book button has been clicked by a patron
-
-### Qualities
-
-When selecting fellows, we try to identify individuals who demonstrate:
-* **Initiative**: proactively moving a project forward by doing what one can, even if there are blockers.
-* **Strategy**: choosing issues that are both impactful for the project and also part of some thoughtful greater plan.
-* **Ability to Prioritize**: discerning which elements of an issue are critical to invest time on v. just to get done (or asking if it's not clear), not taking on too much, factoring in how long things will take
-* **Problem Solving**: Figuring out how things work
-* **Communication**: asking as soon as one is blocked or needs help understanding how something works, with the right context and steps one has taken, and taking notes so others can also learn.
-
-### For Staff & Mentors
-
-When evaluating GSoC candidates, we create a table and individually rank proposals on a scale of 1-5. We dark out our scores so that other mentors are not influenced by our scores while performing their own independent evaluations. When all staff have voted, we tally up the results and discuss the top candidates.
-
-While evaluating, staff considers aspects like whether the applicant:
-
-- Has demonstrated commitment to open source ethos & technologies
-- Has demonstrated capability to complete technical tasks mentioned in their proposal
-- Has produced a roadmap that is defensible, specific, focused, practical, and achievable
-- Has done work to perform research and produce aids such as schemas, mock ups and designs, or diagrams to demonstrate how their solution works and that their solution will work
-- Demonstrates understanding or sensitivity to real world limitations, risks, and costs of potential solutions (e.g. budget, compute needs, accuracy of models, potential bias of solutions, etc)
-- Knows how to use their proposal well to answer staff's questions and respect our time -- does not include copious "filler" intro paragraphs or appeal to generic, indefensible, broad-sweeping solutions like "will solve using machine learning"
-
-### Contributing Effectively
+## Advice for Contributors
 
 An essay on the topic by @mekarpeles: https://www.facebook.com/michael.karpeles/posts/10103690294172760
 
@@ -162,4 +45,126 @@ One issue done well shows us a contributor:
 * takes the time upfront to understand the issue and clarify questions before developing a solution that doesn't achieve the desired outcome
 * respects staff time by trying to make issues easier to review, following instructions, including screenshots, testing their code, maybe even asking chatgpt for feedback on their code before submitting (using tools available to them)
 
-### Good luck!
+# Drafting a Proposal
+
+We're not looking for you to have all the answers. We're looking for honesty, integrity, and well reasoned ideas that are achievable to implement and demonstrate that you have these [fellowship qualities](#Fellowship-Qualities)
+
+## Requirements
+
+Your proposal should be **focused**, **thematic**, **realistic**, **timely**, **high-impact**, and **metric-driven**:
+
+e.g.
+
+- I believe right now the Internet Archive's Open Library needs to focus on [Theme] because [Impact]...
+- [Theme] is best measured by metric X because...
+- Now is the right time [timely] to work on [Theme] because [impact]
+- I have a [realistic] idea on how to increase X by Y%
+- Here's my supporting evidence this idea will increase X by Y%
+- Here's is my proposal for increasing X by Y% (diagrams? wireframes? architecture overview? features?)
+- Here are the risks (what could go wrong)
+- Here are my open questions (for mentors)
+
+## Walkthrough
+
+What Does a Good Proposal Look Like?
+
+A good proposal:
+- Defines a very specific, focused problem and justifies its value in measurable terms
+- Demonstrates the value of Open Library and the problem it helps solve
+- Identifies open questions, risks, and concerns a mentor may have (it's okay for there to be risks and valuable for us to know you are someone who thinks about and can identify risks!)
+- Proposes a detailed & feasible step by step plan, with justification behind design decisions, and directly address the risks & questions.
+- Is specific enough that this can be handed to someone else and they'd be able to make progress towards the desired outcome
+- Engineering knowledge is demonstrated about the codebase
+- Product & design knowledge is demonstrated about the critical pieces required to produce a working product/prototype as well as original ideas
+- Shows the mentor how they will know if the plan is successful
+
+A good proposal addresses the following 5 questions (replace `Open Library` with whatever project you're applying for):
+
+1. What unique **opportunity** is Open Library missing and what is the potential impact?
+
+What's more important than the impact being impressive is that it's realistic, well calculated, and that the type of value is well aligned with our library mission.
+
+> Today, Open Library catalog is limited to books the Internet Archive decides to acquire and make available through their library program. But there’s an opportunity to democratize Open Library’s bookshelves and extend this power to patrons so every reader in the world may be empowered to Sponsor books of their choosing. There are 10M patrons using Open Library and if even .05% (half a percent) donated a book, that would add 50,000 books. Some sources suggest an average paperback book costs [~$10 USD](https://www.bookbrunch.co.uk/page/free-article/rrps-are-rising--but-books-have-never-been-cheaper/#:~:text=An%20analysis%20of%20the%20top,%C2%A39.54%20to%20%C2%A310.38.) so this program could generate $.5M of book value for the community.
+
+2. Why is now the ideal time for this opportunity (as opposed to another time?)
+
+Give us confidence by showing us evidence: have other organizations succeeded at doing something similar? Has some discovery or change in the world made something new possible? 
+
+> Last year, Open Library added a Want to Read button to their website enabling patrons to tell us which books we are missing from the library. To our surprise, over 400k unique patrons clicked this button since we added it, teaching us that patrons are eager to tell us which books they want. I believe some percentage of these patrons may also be willing to make a monetary donation to sponsor the accessioning of these desirable books.
+
+3. What does the solution look like?
+
+Start with an initial paragraph that provides a very clear, concise, short overview of the solution before going into the details. Flowcharts or architectural diagrams, designs, and other aids may be helpful.
+
+> For GSoC, I propose adding a `Sponsor Book` button that will show up on the 23M books on Open Library that are not yet readable. This button will connect to a minimal UX flow for sponsoring a book that I've [diagramed]. I've also [diagramed] approximately what the code flow will look like to implement this, with relevant services, data stores, APIs, URLs, files, and functions referenced.
+
+See also the [Bonus Proposal](#Bonus-Proposal) below for a more detailed example of a good "solution".
+
+4. What gives you confidence your solution is possible and achievable? What are the risks and challenges and how might we address them?
+
+Show that you have the relevant experience or skills, understand the risks, and can problem solve. Identifying risks is only a good thing because the risk will exist whether acknowledged or not. Risks that are missed or brought up later in the process are some of the biggest threats to the success of your proposal.
+
+> In a previous job, I engineered a marketplace checkout flow and based on the flow I'm proposing, this will be very similar. A patron will click a button to sponsor a book, be brought to amazon to buy the book, and then enter Internet Archive has their shipping address. One challenge will be whether patrons get confused by the user experience and if they may forget to change the address. I propose we first prioritize integration of a minimal working system and then get feedback from a few patrons to see if this is an issue, and then consider whether a tighter integration  may be a better approach (e.g. perhaps the patron donates the funds and then we try to automate submitting of these orders on their behalf). This also has risks, depending on when the donation is made, if there are chargebacks, or if the book price changes between time of donation and purchase. We may also want to consider whether there's a review process for sponsoring a book, if certain books shouldn't be eligible for sponsorship, and if there are any policy considerations we may wish to discuss (e.g. should we restrict to certain date ranges or topics?).
+
+5. Evaluating success: If your proposal is successful, how will you know? What does success look like [as a metric] and what positive change does bring?
+
+> Success means establishing a new distribution channel to receive donations, promoting long-term sustainability. We also hope to improve and democratize our holdings by empowering thousands of patrons to participate in book sponsorship. Success looks like 1000 new books that were previously unavailable becoming available for the world and patrons having a way to crowdfund books that may otherwise be inaccessible to them. It hopefully inspires other libraries to try similar programs where patrons have the ability to more directly impact library holdings, which strengthens the whole library ecosystem. We will want analytics in place to see how often the `Sponsor` button is clicked versus how often it converts, as a baseline for how much time we invest supporting the feature. 
+
+## Sample
+
+You can view a sample proposal template [here](https://docs.google.com/document/d/1FkKxvI6sbi7Nj42WdVmkHwiycPR3PR_VV44cwHPCOnM/edit#heading=h.z6ne0og04bp5).
+
+## Tips
+
+1. Your application **should not** just be a collection of issues. Group issues into logical themes. For instance, "my theme for phase one of my roadmap is making Open Library more accessible to people in non-US countries".
+2. Ask lots of questions -- some of your ideas may be easy in principle, but hard because Open Library's code base can be difficult to work with, an issue may take longer than expected! Ask mentors how long they think an issue will take, it's one of the most important pieces of value they can offer.
+3. Consider creating Open Library issues proposing features you'd like to include in your application. Get feedback from the community and see whether it's something they also value and will support.
+4. Have an idea of what success means / looks like from the very beginning. How will you know if you've won? Brewster suggests one strategy is, "start with the aspirational blog post and work backwards".
+
+# Selection Process
+
+When evaluating GSoC candidates, we create a table and individually rank proposals on a scale of 1-5. We dark out our scores so that other mentors are not influenced by our scores while performing their own independent evaluations. When all staff have voted, we tally up the results and discuss the top candidates.
+
+While evaluating, staff considers aspects like whether the applicant demonstrates [Fellowship Qualities](#Fellowship-Qualities) and satisfies the [Fellowship Checklist](#Fellowship-Checklist):
+
+## Fellowship Qualities
+
+When selecting fellows, we try to identify individuals who demonstrate:
+* **Initiative**: proactively moving a project forward by doing what one can, even if there are blockers.
+* **Strategy**: choosing issues that are both impactful for the project and also part of some thoughtful greater plan.
+* **Ability to Prioritize**: discerning which elements of an issue are critical to invest time on v. just to get done (or asking if it's not clear), not taking on too much, factoring in how long things will take
+* **Problem Solving**: Figuring out how things work
+* **Communication**: asking as soon as one is blocked or needs help understanding how something works, with the right context and steps one has taken, and taking notes so others can also learn.
+
+## Fellowship Checklist
+
+* [ ] Follows code of conduct and demonstrates commitment to the open source ethos
+* [ ] Demonstrates ability to complete technical tasks mentioned in their proposal
+* [ ] Has produced a roadmap that is defensible, specific, focused, practical, impactful, and achievable
+* [ ] Has performed research and produced effective aids such as schemas, mockups, designs, or diagrams to demonstrate how their solution works and that their solution will work
+* [ ] Demonstrates understanding or sensitivity to real world limitations, risks, and costs of potential solutions (e.g. budget, compute needs, accuracy of models, potential bias of solutions, etc), as well as potential solutions
+* [ ] Demonstrates ability to organize, strategize, prioritize, and time manage
+* [ ] Respects staff's time by communicating effectively and not adding lots of "filler" paragraphs
+* [ ] Provides concrete solutions, not generic, indefensible, broad-sweeping, unqualified solutions like "will be solved using machine learning"
+
+**Good luck!**
+
+## Bonus Proposal
+
+Proposals don't need to be long and they don't need to be for GSoC. Here's an example of a proposal that would make a great issue on our github:
+
+```
+Open Library is an important platform because it helps underserved learners read library books online for free online -- many municipalities don't have as well funded libraries as NYPL and BPL and so the availability of digital reading options is a critical consideration. The Open Library catalog, however, is currently missing hundreds of high quality born-digital educational web books (for instance, [this book on the Rust programming language](https://github.com/rust-lang/book) published on github) are difficult to discover because they're not indexed or catalogued many places online. This book has 12k :star: and there are many books like it, signifying there's a large audience (likely tens of thousands of patrons) interested in the subject matter. Open Library already has a large patron-base and so adding support for books like these could have a big impact both for patrons and the authors of these high quality web books.
+
+Proposal for a low-cost and effective program that will allow librarians on Open Library to propose linking books to URLs for open access readable editions online:
+
+1. The /addbook page will be updated so any patron can submit the URL of a web book, along with some basic metadata to help reviewers assess the quality of the submission.
+2. A privileged librarian will go to a new page called /review where (similar to the /merges UI) a librarian can evaluate the book's quality. Here is figma link to how this /review page might look:
+   design showing a table where the fields are: (ol_edition_key, web_book_url, reviewer=None, status="approved")
+3. In order to ensure only high quality of books are approved, there will be a standard checklist guide written that librarians can use to see if the web book meets all the criteria. This guide will be one of the deliverables.
+4. Today, Open Library book pages have a read or borrow button when a readable edition is available in the library. I propose we make this button more flexible to include web_books as an option and possibly convert it into a dropdown button (see img) because this will allow us to offer many different options, such as external links to the web_book
+5. Finally, we would make sure that when a web_book is approved by a librarian, it will enter the solr search engine so that patrons can facet/search by web_books specifically or see when a web_book happens to be available in the catalog. For this I will refer to the [video tutorial on adding fields to solr](https://archive.org/details/openlibrary-tour-2020/2021-10-26-OpenLibrary-Community-Celebration.mp4) and make the necessary changes to the main backend [search code](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py) and the [search UI template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html) to make these changes.
+```
+
+
+
