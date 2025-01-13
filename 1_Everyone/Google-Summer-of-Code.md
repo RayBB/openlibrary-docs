@@ -16,7 +16,9 @@ Internet Archive has participated in Google Summer of Code for 3+ years. Open Li
 
 ## Your chances
 
-Typically, hundreds of candidates email us to inquire about GSoC. 25 or so set up the Open Library code base, join the community slack channel, make contributions to the project, and submit applications. So if you're very dedicated and invest time meeting mentors and working with them to understand the codebase and the project's needs and problems, you're chances could be ~1/25!
+Each year, the Internet Archive applies as an organization to participate in Google Summer of Code and most years we're accepted: we don't know in advance how many seats we will be awarded by Google. We first endorse certain proposals, google tells us how many seats the entire organization gets, and the Wayback Machine, Open Library, and Archive.org divide seats as available. Some years this means Open Library may not get a seat even if the Internet Archive is participating, but most years Open Library has received a seat (our team has worked with ~5 GSoC applicants).
+
+Assuming Open Library is given a GSoC seat: Typically, hundreds of candidates email us to inquire about GSoC. 25 or so set up the Open Library code base, join the community slack channel, make contributions to the project, and submit applications. So if you're very dedicated and invest time meeting mentors and working with them to understand the codebase and the project's needs and problems, you're chances are ~4% (1/25).
 
 # Drafting a Fellowship Proposal
 
@@ -117,6 +119,15 @@ One might evaluate success in any number of ways. Here are some ideas, though ca
 - how many times a librarian approves a submitted web_book
 - how many times a web_book button has been clicked by a patron
 
+### Qualities
+
+When selecting fellows, we try to identify individuals who demonstrate:
+* **Initiative**: proactively moving a project forward by doing what one can, even if there are blockers.
+* **Strategy**: choosing issues that are both impactful for the project and also part of some thoughtful greater plan.
+* **Ability to Prioritize**: discerning which elements of an issue are critical to invest time on v. just to get done (or asking if it's not clear), not taking on too much, factoring in how long things will take
+* **Problem Solving**: Figuring out how things work
+* **Communication**: asking as soon as one is blocked or needs help understanding how something works, with the right context and steps one has taken, and taking notes so others can also learn.
+
 ### For Staff & Mentors
 
 When evaluating GSoC candidates, we create a table and individually rank proposals on a scale of 1-5. We dark out our scores so that other mentors are not influenced by our scores while performing their own independent evaluations. When all staff have voted, we tally up the results and discuss the top candidates.
@@ -129,3 +140,26 @@ While evaluating, staff considers aspects like whether the applicant:
 - Has done work to perform research and produce aids such as schemas, mock ups and designs, or diagrams to demonstrate how their solution works and that their solution will work
 - Demonstrates understanding or sensitivity to real world limitations, risks, and costs of potential solutions (e.g. budget, compute needs, accuracy of models, potential bias of solutions, etc)
 - Knows how to use their proposal well to answer staff's questions and respect our time -- does not include copious "filler" intro paragraphs or appeal to generic, indefensible, broad-sweeping solutions like "will solve using machine learning"
+
+### Contributing Effectively
+
+An essay on the topic by @mekarpeles: https://www.facebook.com/michael.karpeles/posts/10103690294172760
+
+We **love** when folks are passionate and eager to participate! I'd like to offer some tips on how one might use eagerness to their advantage (because it's also possible for eagerness to work against us).
+
+It can be tempting to demonstrate enthusiasm by showing we can jump into many different issues at once. However, one secret is: context switching across multiple projects is incredibly costly—for both contributors & staff.
+
+**Example:** Imagine being the only chef in a restaurant and there are 800 patrons who want to be fed different meals from a menu with 10 recipes. We could offer to cook for every patron at the same time, but then you may need to know 10 different recipes, switch between chopping / simmering / sautéing / baking / plating, making sure no one waits too long, that tables get their meals together, that no sauce gets burned, no ingredient gets missed, and that no dish is cold. And that patrons are happy with their meal (because otherwise it may get sent back and disrupt all the other dishes you're working on).
+
+In my experience (both in terms of making a bigger impact and gaining more experience), being given the opportunity to focus on a specific part of a project can both help a contributor better understand how each parts integrates together and allows us to align & stack our victories together to achieve greater impact.
+
+We get a lot of confidence when a contributor:
+* asks to work on an issue because it is part of a thought out plan, that they are able to execute on.
+* asks a clarifying question because the requirements are unclear or something seems strange about the approach
+
+One issue done well shows us a contributor:
+* has the ability to prioritize and strategically plan: to evaluate and identify which issues (and their parts) are important to the project and achievable to them
+* takes the time upfront to understand the issue and clarify questions before developing a solution that doesn't achieve the desired outcome
+* respects staff time by trying to make issues easier to review, following instructions, including screenshots, testing their code, maybe even asking chatgpt for feedback on their code before submitting (using tools available to them)
+
+### Good luck!
