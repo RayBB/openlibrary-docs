@@ -5,7 +5,7 @@ Typically, logging into the Open Library entails cross-authenticating with an In
 However, all is not lost! By delving into the python shell within your web container, we can directly add users through infogami, bypassing the typical process account creation process. 
 
 ## Step 1: Loading up Infogami 
-First, we have to execute the Python REPL within the `web` container in Docker; one way to accomplish this is `docker compose web exec python`.
+First, we have to execute the Python REPL within the `web` container in Docker; one way to accomplish this is `docker compose exec web python`.
 
 From here, we have to load up Infogami, and get it started. 
 ```
