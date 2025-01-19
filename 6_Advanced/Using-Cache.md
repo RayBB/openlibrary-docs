@@ -1,6 +1,45 @@
+## What is Cache?
+
 Cache is a way of taking expensive values we've computed and storing them in resident memory for a period of time. A good example is "top books this week" -- such a query likely won't change much if we re-run it multiple times a second, whereas doing so may have a significant (even untenable) consequence on CPU or the database. Therefore, we `cache` the computed value for some period of time (e.g. 1 hour).
 
-## How cache works
+## Minimal Reference Example
+
+```
+from openlibrary.core import cache
+
+def fibonacci(n):
+    return (
+        fibonacci(n - 1) + fibonacci(n - 2)
+        if n >= 1 
+        else (1 if n > 0 else 0)
+    )
+
+cached_fibonacci = cache.memcache_memoize(fibonacci, key_prefix='fib', timeout=60*5)
+```
+
+## How Cache Lifecycle Works
+
+When a function is cached and run for the first time, there is no value to retrieve from cache to return to the waiting patron, and so the lookup will fail. Therefore, since the patron is waiting on the value, it is computed on the main thread of the web application and saved in cache. The next time the cached version of the function is called, the value will be looked up in cache and returned to the patron **unless** the timeout expiration period has been reached, in which case the **stale** value from cache will be returned to the patron and the function will, in the background, be asynchronously re-run **on a memcache thread**. This way we can avoid a patron having to wait and be blocked on an expensive function being run.
+
+## Caching web.ctx
+
+Because of how memcache asynchronously recomputes functions on worker threads, outside the context of the main application, two important considerations follow:
+
+1. Privacy: Every patron's request will have different `web.ctx` objects with information unique and sensitive to their specific request(s) and so we want to be very careful not to cache these objects and leak their private information to other patrons.
+2. Limited Access: Many request or application-specific objects, like the `web.ctx` object, are necessary for accessing things like the database but are not available from the context of memcached threads.
+
+In [some cases](https://github.com/internetarchive/openlibrary/issues/10318#issuecomment-2598903078), the function you're caching will need access to the `web.ctx` object. To achieve this safely, your cached function should use `delegate.fakeload()` which will hydrate a minimal, `web.ctx` object that can be safely used within the context of the cached function. In the following example, our cached function presumably calls a function that needs access to the `lang` property of the `web.ctx` object. Since `web.ctx` is not available in/from the memcache worker thread, we can use `delegate.fakeload()` to initiate a safe `web.ctx` object and then we can inject our desired `lang` value into the hydrated object.
+
+
+```
+def my_cachable_function(web_ctx_lang):
+if 'env' not in web.ctx:
+    delegate.fakeload()
+    web.ctx.lang = web_ctx_lang
+```
+
+
+## Walkthrough
 
 Let's assume you have an expensive function like fibonacci:
 ```
@@ -22,7 +61,7 @@ cached_fibonacci = cache.memcache_memoize(fibonacci, key_prefix='fib', timeout=6
 
 This call to `memcache_memoize` returns a cache-enabled version of `fibonacci` that will cache each computed value for 5 minutes using the key `fib` in union with whatever `args` and `kwargs` get passed into `fibonacci`. In practice, for our example, we might expect the cache `key` of `cached_fibonacci` to look like `fib-4`.
 
-## How to use cache
+## Reference Code
 
 See [generic_carousel](https://github.com/internetarchive/openlibrary/blob/3bad3325e1392102db485dea34db67a186af2dcf/openlibrary/plugins/openlibrary/home.py#L181-L208)'s use of `cache.memcache_memoize` in `plugins/openlibrary/home.py` to cache the any result computed by `get_ia_carousel_books` function for 2 minutes.
 
