@@ -34,6 +34,7 @@ logged_in_user = accounts.get_current_user()
 username = logged_in_user and logged_in_user.key.split('/')[-1]
 account = username and OpenLibraryAccount.get(username=username)
 s3_keys = web.ctx.site.store.get(account._key).get('s3_keys')
+```
 
 # Fetching Privacy Settings
 
