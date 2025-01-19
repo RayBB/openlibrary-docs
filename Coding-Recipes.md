@@ -1,4 +1,6 @@
 * [Setup](#The-Magic-Incantation)
+* [Caching a Function](#Using-Cache)
+* [Fetching Things in Bulk](#Fetching-Things-in-Bulk)
 
 # The Magic Incantation
 
@@ -36,7 +38,14 @@ account = username and OpenLibraryAccount.get(username=username)
 s3_keys = web.ctx.site.store.get(account._key).get('s3_keys')
 ```
 
-# Fetching Privacy Settings
+# Fetching Things in Bulk
+
+```
+keys = ["/works/OL5285479W", "/works/OL257943W", "/works/OL27448W"]
+docs = web.ctx.site.get_many(keys)
+```
+
+# Privacy Settings
 
 How to determine, given a set of patron usernames, which have public reading logs / can be followed?
 
