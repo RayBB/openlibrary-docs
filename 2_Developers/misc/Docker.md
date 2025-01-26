@@ -62,6 +62,16 @@ Please use [Docker Desktop >= 4.3.0](https://docs.docker.com/desktop/mac/release
 
 If you are experiencing issues building JS, you may need to increase the RAM available to Docker. The defaults of 2GB ram and 1GB Swap are not enough. We recommend requirements of 4GB ram and 2GB swap. This resolved the error message of `Killed` when running `build-assets`.
 
+If you are experiencing this issue: 
+```
+failed to solve: openlibrary/olbase:latest: failed to resolve source metadata for docker.io/openlibrary/olbase:latest: no match for platform in manifest: not found
+```
+Update the file `docker/Dockerfile.oldev` line 1
+from:
+```FROM openlibrary/olbase:latest```
+to:
+```FROM --platform=linux/amd64 openlibrary/olbase:latest```
+
 ### For All Users
 All commands are from the project root directory, where `compose.yaml` is (i.e. `path/to/your/forked/and/cloned/openlibrary`):
 
