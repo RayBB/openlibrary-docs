@@ -6,7 +6,7 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
   - [Working with CSS](#working-with-css)
   - [Working with HTML Templates](#working-with-html)
 - [Working with Javascript](#working-with-javascript)
-- [Overview of HTTP Endpoints](/2_Developers/3_Backend/Endpoints)  
+- [Developer Code Navigation](https://github.com/internetarchive/openlibrary/wiki/Developer-Code-Navigation) + [Overview of HTTP Endpoints](/2_Developers/3_Backend/Endpoints)  
 - [Routing & Templates](#routing-and-templates)
 - [URL Routing](#url-routing)
 - [The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
