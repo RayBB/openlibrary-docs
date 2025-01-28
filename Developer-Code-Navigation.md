@@ -58,3 +58,7 @@
   * Related PRs: [ Increase search path for shift-click common parent #10247 ](https://github.com/internetarchive/openlibrary/pull/10247), [ Restrict ILE dragging to ile-selectable items #8495 ](https://github.com/internetarchive/openlibrary/pull/8495), [ Work Merge UI + ILE (Integrated Librarian Environment) #3408 ](https://github.com/internetarchive/openlibrary/pull/3408)
   * [Index](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/js/ile/index.js)
   * [SelectionManager](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/js/ile/utils/SelectionManager/SelectionManager.js)
+
+* Endpoints
+  * [Works](https://github.com/internetarchive/openlibrary/wiki/Endpoints#works)
+  * [Editions](https://github.com/internetarchive/openlibrary/wiki/Endpoints#editions)
