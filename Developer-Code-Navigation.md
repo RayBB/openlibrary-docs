@@ -35,3 +35,26 @@
   * TODO ask @cdrini
 * Community Tags / Observations
   * TODO ask @jimchamp
+
+## Librarian Tools
+
+* Author Merges
+  * Related PRs: [ Preserve mrid when deprecated keys are passed in merge_authors #10237 ](https://github.com/internetarchive/openlibrary/pull/10237), [ Add retry logic to author merge request status update #10268 ](https://github.com/internetarchive/openlibrary/pull/10268), [ support comma separated author merge url #10114 ](https://github.com/internetarchive/openlibrary/pull/10114)
+  * [Controller](https://github.com/internetarchive/openlibrary/blob/c8e26213fb0516ec68228fb5ce140687594cab6b/openlibrary/plugins/upstream/merge_authors.py#L249)
+  * [Template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/merge/authors.html)
+
+* Work Merges
+  * Related PRs: [ Work Merge UI + ILE (Integrated Librarian Environment) #3408 ](https://github.com/internetarchive/openlibrary/pull/3408), [ Displays author name on merge #9920 ](https://github.com/internetarchive/openlibrary/pull/9920), [ Work Merge Undo #6948 ](https://github.com/internetarchive/openlibrary/pull/6948)
+  * [Controller](https://github.com/internetarchive/openlibrary/blob/c8e26213fb0516ec68228fb5ce140687594cab6b/openlibrary/plugins/upstream/code.py#L136)
+  * [Template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/merge/works.html)
+  * [MergeUI (Vue.js)](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/components/MergeUI.vue)
+
+* Merge Queue
+  * Related PRs: [ Merge Queue tweaks #8591 ](https://github.com/internetarchive/openlibrary/pull/8591), [ adds sort, submitter, reviewer dropdown menus to merge queue #7868 ](https://github.com/internetarchive/openlibrary/pull/7868)
+  * [Controller](https://github.com/internetarchive/openlibrary/blob/c8e26213fb0516ec68228fb5ce140687594cab6b/openlibrary/plugins/upstream/edits.py#L31)
+  * [Template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/merge_request_table/merge_request_table.html)
+
+* ILE (Integrated Librarian Environment)
+  * Related PRs: [ Increase search path for shift-click common parent #10247 ](https://github.com/internetarchive/openlibrary/pull/10247), [ Restrict ILE dragging to ile-selectable items #8495 ](https://github.com/internetarchive/openlibrary/pull/8495), [ Work Merge UI + ILE (Integrated Librarian Environment) #3408 ](https://github.com/internetarchive/openlibrary/pull/3408)
+  * [Index](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/js/ile/index.js)
+  * [SelectionManager](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/js/ile/utils/SelectionManager/SelectionManager.js)
