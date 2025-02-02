@@ -129,11 +129,11 @@ Priority describes how urgent the bug is. Very urgent bugs generally have an act
 
 Color|Label|Description 
 -|-|-
-![d12f29](https://via.placeholder.com/30x30/d12f29/d12f29.jpg) | **Priority 0: Immediate** | Issues that prevent users from using the site, or that corrupt site data. [managed]
-![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 1: Urgent** | Do this week, receiving emails, time sensitive. [managed]
-![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 2: High** | Important, as time permits. [managed]
-![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 3: Normal** | Issues that we can consider at our leisure. [managed]
-![ff8899](https://via.placeholder.com/30x30/ff8899/ff8899.jpg) | **Priority 4: Low** | An issue, but should be worked on when no other pressing work can be done. [managed]
+![d12f29](https://singlecolorimage.com/get/d12f29/30x30) | **Priority 0: Immediate** | Issues that prevent users from using the site, or that corrupt site data. [managed]
+![ff8899](https://singlecolorimage.com/get/ff8899/30x30) | **Priority 1: Urgent** | Do this week, receiving emails, time sensitive. [managed]
+![ff8899](https://singlecolorimage.com/get/ff8899/30x30) | **Priority 2: High** | Important, as time permits. [managed]
+![ff8899](https://singlecolorimage.com/get/ff8899/30x30) | **Priority 3: Normal** | Issues that we can consider at our leisure. [managed]
+![ff8899](https://singlecolorimage.com/get/ff8899/30x30) | **Priority 4: Low** | An issue, but should be worked on when no other pressing work can be done. [managed]
 
 When a priority label is applied to an issue by the submitter, or on any issue without an owner, it represents a suggestion, not a decision. Priorities are not immutable - even while an issue is being worked on, the owner may decide to move the priority up or down.
 
@@ -172,12 +172,12 @@ What kind of issue this is.  Is it something that is broken that should (perhaps
 
 Color|Label|Description 
 -|-|-
-![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Bug** | Something isn't as intended. [managed]
-![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Feature** | Issue describes new functionality we'd like to implement. [managed]
-![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Question** | This issue doesn't require code. A question needs an answer. [managed]
-![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Refactor/Clean-up** | Issues related to reorganization/clean-up of data or code (e.g. for maintainability). Specifically "restructuring of an existing body of code, altering its internal structure **without changing its external behavior**. (https://refactoring.com). [managed]
-![e08000](https://via.placeholder.com/30x30/e08000/e08000.jpg) | **Type: Epic** | A feature or refactor that is big enough to require subissues. [managed]
-![ff9900](https://via.placeholder.com/30x30/ff9900/ff9900.jpg) | **Type: Subtask of Epic** | A subtask that is part of the work breakdown of an epic issue (see comments). [managed]
+![ff9900](https://singlecolorimage.com/get/ff9900/30x30) | **Type: Bug** | Something isn't as intended. [managed]
+![ff9900](https://singlecolorimage.com/get/ff9900/30x30) | **Type: Feature** | Issue describes new functionality we'd like to implement. [managed]
+![ff9900](https://singlecolorimage.com/get/ff9900/30x30) | **Type: Question** | This issue doesn't require code. A question needs an answer. [managed]
+![ff9900](https://singlecolorimage.com/get/ff9900/30x30) | **Type: Refactor/Clean-up** | Issues related to reorganization/clean-up of data or code (e.g. for maintainability). Specifically "restructuring of an existing body of code, altering its internal structure **without changing its external behavior**. (https://refactoring.com). [managed]
+![e08000](https://singlecolorimage.com/get/e08000/30x30) | **Type: Epic** | A feature or refactor that is big enough to require subissues. [managed]
+![ff9900](https://singlecolorimage.com/get/ff9900/30x30) | **Type: Subtask of Epic** | A subtask that is part of the work breakdown of an epic issue (see comments). [managed]
 
 Epics and subtasks are used when we want to separate out the ownership, comment stream, and timing of different parts of a large project.  The Epic is closed when all its subtasks have been closed.  For most issues, putting a checklist in the comment stream suffices (when everything is checked off, the issue can be closed). The "Needs: Breakdown" label can be used for any issue (epic or not) that needs a decision identifying the list of steps that will be taken in order to close the issue.
 
@@ -189,10 +189,10 @@ Use these labels to distinguish between issues that we're actively working on, t
 
 Color|Label|Description 
 -|-|-
-![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Backlogged** | No one working on it, not in any milestone, but want to leave open to consider later. [managed]
-![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Blocked** | Progress has stopped, we are waiting for something. [managed]
-![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Scheduled** | A decision has been made that this issue should be addressed. [managed]
-![e07cf9](https://via.placeholder.com/30x30/e07cf9/e07cf9.jpg) | **State: Work In Progress** | This issue is being actively worked on. [managed]
+![e07cf9](https://singlecolorimage.com/get/e07cf9/30x30) | **State: Backlogged** | No one working on it, not in any milestone, but want to leave open to consider later. [managed]
+![e07cf9](https://singlecolorimage.com/get/e07cf9/30x30) | **State: Blocked** | Progress has stopped, we are waiting for something. [managed]
+![e07cf9](https://singlecolorimage.com/get/e07cf9/30x30) | **State: Scheduled** | A decision has been made that this issue should be addressed. [managed]
+![e07cf9](https://singlecolorimage.com/get/e07cf9/30x30) | **State: Work In Progress** | This issue is being actively worked on. [managed]
 
 If no state label is present, the issue needs assessment.  
 
@@ -208,16 +208,16 @@ These labels indicate that an issue or pull request is stuck because the owner n
 
 Color|Label|Description 
 -|-|-
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Triage** | This issue needs triage. The team needs to decide who should own it, what to do, by when. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Breakdown** | This big issue needs a checklist or subissues to describe a breakdown of work. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Community Discussion** | This issue is to be brought up in the next community call. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Detail** | Submitter needs to provide more detail for this issue to be assessed (see comments). [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Feedback** | A proposed feature or bug resolution needs community feedback prior to forging ahead. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Help** | Issues, typically substantial ones, that need a dedicated developer to take them on. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Review** | This issue/PR needs to be reviewed in order to be closed or merged (see comments). [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Special Deploy** | PR needs a non-standard deploy. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Submitter Input** | This issue/PR needs a response from the submitter. [managed]
-![0052cc](https://via.placeholder.com/30x30/0052cc/0052cc.jpg) | **Needs: Investigation** | This issue/PR needs a root-cause analysis to determine a solution. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Triage** | This issue needs triage. The team needs to decide who should own it, what to do, by when. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Breakdown** | This big issue needs a checklist or subissues to describe a breakdown of work. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Community Discussion** | This issue is to be brought up in the next community call. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Detail** | Submitter needs to provide more detail for this issue to be assessed (see comments). [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Feedback** | A proposed feature or bug resolution needs community feedback prior to forging ahead. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Help** | Issues, typically substantial ones, that need a dedicated developer to take them on. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Review** | This issue/PR needs to be reviewed in order to be closed or merged (see comments). [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Special Deploy** | PR needs a non-standard deploy. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Submitter Input** | This issue/PR needs a response from the submitter. [managed]
+![0052cc](https://singlecolorimage.com/get/0052cc/30x30) | **Needs: Investigation** | This issue/PR needs a root-cause analysis to determine a solution. [managed]
 
 If you see one or more of these labels on an issue, assume we are not making progress on it.  
 
@@ -232,10 +232,10 @@ It is considered good form, immediately prior to closing a bug, to add a label i
 
 Color|Label|Description 
 -|-|-
-![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Duplicate** | This issue or pull request already exists (see comments for pointer to it). [managed]
-![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Not Reproducible** | Closed because we cannot reproduce the issue. [managed]
-![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Not an Issue** | Questions and discussions resolved or moved to Gitter or Slack. [managed]
-![cfd3d7](https://via.placeholder.com/30x30/cfd3d7/cfd3d7.jpg) | **Close: Will Not Fix** | Closed because we have decided not to address this (e.g. out of scope). [managed]
+![cfd3d7](https://singlecolorimage.com/get/cfd3d7/30x30) | **Close: Duplicate** | This issue or pull request already exists (see comments for pointer to it). [managed]
+![cfd3d7](https://singlecolorimage.com/get/cfd3d7/30x30) | **Close: Not Reproducible** | Closed because we cannot reproduce the issue. [managed]
+![cfd3d7](https://singlecolorimage.com/get/cfd3d7/30x30) | **Close: Not an Issue** | Questions and discussions resolved or moved to Gitter or Slack. [managed]
+![cfd3d7](https://singlecolorimage.com/get/cfd3d7/30x30) | **Close: Will Not Fix** | Closed because we have decided not to address this (e.g. out of scope). [managed]
 
 Some observations:
 
@@ -251,21 +251,21 @@ There are some issues that affect multiple modules, or are related to a user sto
 
 Color|Label|Description 
 -|-|-
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Accessibility** | Work related to disability accessibility. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Book Sponsorship** | Issues related to the workflow for book sponsorship. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Backup/Restore** | Issues related to disaster recovery, backup/restore, data dumps. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Design** | Issues related to UI design, branding, etc. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Development** | Issues related to the developer experience and the dev environment. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Identifiers** | Issues related to ISBN's or other identifiers in metadata. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Internationalization** | Making OpenLibrary work for both foreign-language users and books. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Performance** | Issues related to UI or Server performance. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Reading Log** | Related to workflows for creating, modifying, displaying a user's reading log. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Search** | Issues related to search UI and backend. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Upgrade to Python 3** | Issues relating to the systemwide upgrade from Python 2 to Python 3. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Testing** | Work related to tests that need to be written or fixed. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Translation** | Work related to language accessibility. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Public-APIs** | Issues related to APIs accessible to external parties. [managed]
-![2eb8db](https://via.placeholder.com/30x30/2eb8db/2eb8db.jpg) | **Theme: Editing** | Issues related to APIs accessible to external parties. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Accessibility** | Work related to disability accessibility. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Book Sponsorship** | Issues related to the workflow for book sponsorship. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Backup/Restore** | Issues related to disaster recovery, backup/restore, data dumps. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Design** | Issues related to UI design, branding, etc. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Development** | Issues related to the developer experience and the dev environment. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Identifiers** | Issues related to ISBN's or other identifiers in metadata. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Internationalization** | Making OpenLibrary work for both foreign-language users and books. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Performance** | Issues related to UI or Server performance. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Reading Log** | Related to workflows for creating, modifying, displaying a user's reading log. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Search** | Issues related to search UI and backend. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Upgrade to Python 3** | Issues relating to the systemwide upgrade from Python 2 to Python 3. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Testing** | Work related to tests that need to be written or fixed. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Translation** | Work related to language accessibility. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Public-APIs** | Issues related to APIs accessible to external parties. [managed]
+![2eb8db](https://singlecolorimage.com/get/2eb8db/30x30) | **Theme: Editing** | Issues related to APIs accessible to external parties. [managed]
 
 The unifying characteristic of Themes is that they involve issues that touch many parts of the repo (UI, Server, Configuration, Documentation, Data).
 
@@ -277,14 +277,14 @@ The broad area this issue is related to, often suggesting who first should consi
 
 Color|Label|Description 
 -|-|-
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Admin/Maintenance** | Issues relating to support scripts, bots, cron jobs and admin web pages. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Configuration** | Issues related to system configuration (production, staging, or development). [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Data** | Issues that affect book/author metadata or user/account data. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Documentation** | Issues related to developer or ops or data documentation. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Librarians** | Issues related to features that librarians particularly need. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Mobile/Responsive** | Affects the responsive UI on mobile devices. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: Server** | Issues with the server or its plugins. [managed]
-![fcbe9f](https://via.placeholder.com/30x30/fcbe9f/fcbe9f.jpg) | **Affects: UI** | The issue is focused on the web user interface and user experience. [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: Admin/Maintenance** | Issues relating to support scripts, bots, cron jobs and admin web pages. [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: Configuration** | Issues related to system configuration (production, staging, or development). [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: Data** | Issues that affect book/author metadata or user/account data. [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: Documentation** | Issues related to developer or ops or data documentation. [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: Librarians** | Issues related to features that librarians particularly need. [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: Mobile/Responsive** | Affects the responsive UI on mobile devices. [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: Server** | Issues with the server or its plugins. [managed]
+![fcbe9f](https://singlecolorimage.com/get/fcbe9f/30x30) | **Affects: UI** | The issue is focused on the web user interface and user experience. [managed]
 
 It is preferred that an issue only have one `Affects:` label, but we're not religious about it. If you notice that an issue affects multiple areas in the above list, you may want to split it into multiple issues, one per area.  If it makes sense to resolve them independently, that's enough.  If they all need to be resolved in a coordinated fashion, create an `Type: Epic` issue which can remain open until all the subissues are closed.
 
@@ -294,14 +294,14 @@ These labels identify the specific module or service that the issue relates to. 
 
 Color|Label|Description 
 -|-|-
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Accounts** | Issues related to authentication, account maintenance, etc. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Docker** | Issues related to the configuration or use of Docker. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Git** | Issues related to the git repo, branches, commit messages, etc. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Infogami** | Issues related to the configuration or use of the Infogami subsystem. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: JavaScript** | Issues related to the JavaScript functionality. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Memcache** | Issues related to the configuration or use of the Memcache subsystem. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: Solr** | Issues related to the configuration or use of the Solr subsystem. [managed]
-![c2e0c6](https://via.placeholder.com/30x30/c2e0c6/c2e0c6.jpg) | **Module: CSS** | Issues related to CSS stylesheets. [managed] 
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: Accounts** | Issues related to authentication, account maintenance, etc. [managed]
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: Docker** | Issues related to the configuration or use of Docker. [managed]
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: Git** | Issues related to the git repo, branches, commit messages, etc. [managed]
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: Infogami** | Issues related to the configuration or use of the Infogami subsystem. [managed]
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: JavaScript** | Issues related to the JavaScript functionality. [managed]
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: Memcache** | Issues related to the configuration or use of the Memcache subsystem. [managed]
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: Solr** | Issues related to the configuration or use of the Solr subsystem. [managed]
+![c2e0c6](https://singlecolorimage.com/get/c2e0c6/30x30) | **Module: CSS** | Issues related to CSS stylesheets. [managed] 
 
 A common search might be something like `label:"Affects: Server" label:"Module: Solr" label:"State: Work In Progress"` to see who is actively working on calls to solr in the server.  If you wanted to pick up issues in that area, you could see who else is doing so.
 
@@ -311,7 +311,7 @@ A few remaining labels that are not in any group, because of github conventions,
 
 Color|Label|Description 
 -|-|-
-![7057ff](https://via.placeholder.com/30x30/7057ff/7057ff.jpg) | **Good First Issue** | Easy issue. Good for newcomers. [managed]
+![7057ff](https://singlecolorimage.com/get/7057ff/30x30) | **Good First Issue** | Easy issue. Good for newcomers. [managed]
 
 A `good first issue` should be clear, should not require a lot of context, should be low risk and easy to review.  Issues that involve high priority or global changes to the production system code are not good candidates.
 
