@@ -9,12 +9,15 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
   * [Trace **step-by-step** the Lifecycle of a Network Request](https://github.com/internetarchive/openlibrary/wiki/The-Lifecycle-of-a-Network-Request) through the application
   * [Add a new Endpoint](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins#tutorial-implementing-a-new-route)
 * Contribute to the Front-end
-  * [Work with HTML Templates](../Frontend-Guide#working-with-html), [asynchronously load Template Partials](../Frontend-Guide#partials), and [Internationalize (i18n) Templates](../Internationalization)
+  * [Work with HTML Templates](../Frontend-Guide#working-with-html)
+    * [Asynchronously load Template Partials](../Frontend-Guide#partials)
+    * [Internationalize (i18n) Templates](../Internationalization)
   * [Work with and build JS & CSS](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#css-js-and-html)
 * Contribute to the Backend
-  * [Understand the Database Model (DDL)](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
+  * [Understand our Database Model (DDL)](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
   * [Work with Solr search engine](https://github.com/internetarchive/openlibrary/wiki/Solr)
-  * [Diagram the Production Architecture](../Production-Service-Architecture) and [Understand the Tech Stack](https://openlibrary.org/about/tech)
+  * [Diagram the Production Architecture](../Production-Service-Architecture)
+  * [Understand Infogami](https://openlibrary.org/dev/docs/infogami) and the [Tech Stack](https://openlibrary.org/about/tech)
 * Manage your developer environment
   * [Import production data into your local environment](https://github.com/internetarchive/openlibrary/wiki/Loading-Production-Book-Data) 
   * [Login as admin in your local environment](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin) or [Create new users](https://github.com/internetarchive/openlibrary/wiki/Creating-and-Logging-in-as-a-new-user-on-your-local-client#creating-and-logging-into-new-users)
