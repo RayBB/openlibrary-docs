@@ -54,3 +54,11 @@ usernames = ['mekBot', 'ScarTissue', 'seabelis', 'brewster', 'jachamp']
 user_prefs = web.ctx.site.get_many([f'/people/{username}/preferences' for username in usernames])
 followable = dict((user.key.split('/')[2], user.notifications.public_readlog == 'yes') for user in user_prefs)
 ```
+
+# Currently Logged In Patron?
+
+The following must be called within a controller that has access to `web.ctx`:
+
+```
+user = accounts.get_current_user()
+```
