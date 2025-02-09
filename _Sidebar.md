@@ -1,4 +1,3 @@
-## Start Here
 Welcome to the Open Library Handbook! Here you will learn **how to**...
 
 * **Get Set Up**  
