@@ -3,7 +3,7 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
 * **Get Set Up**  
   * [Install Open Library](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-installation-guide-for-open-library-developers)
   * [Find a Good First Issue](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+-linked%3Apr+label%3A%22Good+First+Issue%22+no%3Aassignee)
-  * [Use Git correctly to work on an issue](../Git-Cheat-Sheet)
+  * [Use Git to work on an issue](../Git-Cheat-Sheet)
   * [Test](../Testing), [Feature Flag](Feature-Flagging), [Debug & Profile](/Debugging-and-Performance-Profiling) your code
   * [Submit a good Pull Request](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)
 * **Understand the Codebase**  
@@ -17,7 +17,7 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
   * [Work with and build JS & CSS](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#css-js-and-html)
 * **Contribute to the Back-end**  
   * [Understand our Database Model (DDL)](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
-  * [Work with Solr search engine](https://github.com/internetarchive/openlibrary/wiki/Solr). 
+  * [Work with Solr search engine](https://github.com/internetarchive/openlibrary/wiki/Solr) 
   * [Work on the Import Pipeline](Developer's-Guide-to-Data-Importing) and [Write Librarian Bots](Writing-Bots)  
   * [Use Public APIs](https://openlibrary.org/developers/api)
   * [Diagram the Production Architecture](../Production-Service-Architecture)  
