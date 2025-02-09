@@ -1,3 +1,5 @@
+Welcome to the Open Library Handbook! Here you will learn **how to**...
+
 * **Get Set Up**  
   * [Install Open Library](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-installation-guide-for-open-library-developers)
   * [Find a Good First Issue](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+-linked%3Apr+label%3A%22Good+First+Issue%22+no%3Aassignee)
