@@ -1,21 +1,19 @@
-## Core View
+## Core Views
 
-* Authentication
-  * [Account Create](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L264-L333)
-  * [Account Login](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L399-L476)
-* [My Books](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/mybooks.py) Account Page
-  * Related PRs: [My Books page interim Mobile Navigation Fixes #6860](https://github.com/internetarchive/openlibrary/pull/7431)
-  * Sidebar ask @szgrune
-* The Books Page (e.g. https://openlibrary.org/books/OL12547191M)
-  * PRs: [Canonical Books Page (Merging works & Editions UI) #123](https://github.com/internetarchive/openlibrary/pull/3553/files)
-  * Controller: Infogami Type
-  * [Edition Model](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/models.py#L42-L498) which extends [Core Model](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/models.py#L225-L463)
-  * [Template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/edition/view.html)
-    * [Sidebar](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/macros/databarWork.html)
-* The Search Page (e.g. https://openlibrary.org/search?q=goody)
-  * [Controller](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py)
-  * [Template](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html)
-    * [Result Cards](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/macros/SearchResultsWork.html)
+| Page             | Screenshot | URL Endpoints → Controllers | Templates | Models | Reference PRs | Maintainer |
+|------------------|------------|-----------------------------|-----------|--------|---------------|------------|
+| **Homepage**     | ![image](https://github.com/user-attachments/assets/295ee51b-4898-4cd4-8859-2b9c63b7f7ef) | [`/`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/home.py#L94-L102) | [`home.html`]() | | | `@mekarpeles` |
+| **Books Page**   | <img width="696" alt="Screenshot 2025-02-09 at 9 53 42 AM" src="https://github.com/user-attachments/assets/15a1e491-8334-418c-b5cf-377a1e3edb90" /> | [`/books/OL{edition_id}M/` <br> `/works/OL{work_id}W/`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/models.py#L1233-L1234) | [`type/edition/view.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/type/edition/view.html) <br><ul><li>[Sidebar](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/macros/databarWork.html)</li></ul> | [`Edition`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/models.py#L42-L498) + [`Work`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/models.py#L557-L837) which extend [`core/models.py`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/models.py#L224-L463) | [Unified Books Page: Merging Work & Edition UI #123](https://github.com/internetarchive/openlibrary/pull/3553/files) | `@jimchamp` |
+| **Subjects Page** | <img width="706" alt="Screenshot 2025-02-09 at 9 55 29 AM" src="https://github.com/user-attachments/assets/57842965-0f24-45ed-9b35-a3002921302c" /> | [`/subjects/{subject}`](https://github.com/internetarchive/openlibrary/blob/06fe991e78d543ae0dd42a6dbaece5a126883ba5/openlibrary/plugins/worksearch/subjects.py#L25-L49) | [`subjects.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/subjects.html) | | | `@jimchamp` |
+| **Search Page**      | <img width="682" alt="Screenshot 2025-02-09 at 9 56 57 AM" src="https://github.com/user-attachments/assets/1c9e97a7-537b-46b0-bdad-b83ac45790f2" /> | [`/search?q={query}`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/worksearch/code.py) | [`work_search.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/work_search.html) <br><ul><li>[`SearchResultsWork.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/macros/SearchResultsWork.html)</li></ul> | | | `@cdrini` |
+| **Account Creation** | <img width="630" alt="Screenshot 2025-02-09 at 9 58 08 AM" src="https://github.com/user-attachments/assets/c4f0c7b6-54f4-40e6-aa10-1cbbe7472313" /> | [`/account/create`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L264-L333) | [`create.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/account/create.html) | | | `@cdrini` |
+| **Account Login**    | <img width="634" alt="Screenshot 2025-02-09 at 9 58 30 AM" src="https://github.com/user-attachments/assets/23853bd7-00ee-4452-8576-43d1fb488169" /> | [`/account/login`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L399-L476) | [`login.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/login.html) | | | `@cdrini` |
+| **My Books Page** | <img width="704" alt="Screenshot 2025-02-09 at 9 59 27 AM" src="https://github.com/user-attachments/assets/7b825d2c-4c88-4688-a984-133b3b662bfc" /> | [`/account/books`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L838-L857) → [`/people/{username}/books`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/mybooks.py#L44-L57) | [`account/view.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/account/view.html) | | [My Books page interim Mobile Navigation Fixes #6860](https://github.com/internetarchive/openlibrary/pull/7431) | `@mekarpeles`<br>`@szgrune` |
+
+
+
+
+
 
 ## Imports
 
