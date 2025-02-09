@@ -19,14 +19,14 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
   * [Understand our Database Model (DDL)](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
   * [Work with Solr search engine](https://github.com/internetarchive/openlibrary/wiki/Solr) 
   * [Work on the Import Pipeline](Developer's-Guide-to-Data-Importing) and [Write Librarian Bots](Writing-Bots)  
-  * [Use Public APIs](https://openlibrary.org/developers/api)
+  * [Use or Write APIs](https://openlibrary.org/developers/api)
   * [Diagram the Production Architecture](Production-Service-Architecture)  
   * [Understand Infogami](https://openlibrary.org/dev/docs/infogami) and the [Tech Stack] (https://openlibrary.org/about/tech)
 * **Manage your developer environment**  
   * [Import production data into your local environment](https://github.com/internetarchive/openlibrary/wiki/Loading-Production-Book-Data) 
   * [Login as admin in your local environment](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin) or [Create new users](https://github.com/internetarchive/openlibrary/wiki/Creating-and-Logging-in-as-a-new-user-on-your-local-client#creating-and-logging-into-new-users)
 * **Lookup Common [Recipes](Coding-Recipes)**  
-  * [Use cache](Using-Cache) or [cookies](#setting--unsetting-a-cookie-on-login-or-registration) 
+  * [Use cache](Using-Cache), [cookies](#setting--unsetting-a-cookie-on-login-or-registration), [fetching from db](https://github.com/internetarchive/openlibrary/wiki/Coding-Recipes#fetching-things-in-bulk) 
 * **Participate in the Community**  
   * [Request for a slack invite](https://openlibrary.org/volunteer)
   * [Attend Weekly Community Calls, Tues @ 9a PT](https://github.com/internetarchive/openlibrary/wiki/Community-Call) 
