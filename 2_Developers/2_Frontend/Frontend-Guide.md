@@ -20,7 +20,7 @@ Welcome to the Front-End Guide for Open Library, a primer for making front-end c
 - **assets**: css/less in /static/css and js in /openlibrary/plugins/openlibrary/js
 - **models**: `/openlibrary/core/` and `/openlibrary/plugins/upstream/models.py`, data + ORM
 - **controllers**: in `/openlibrary/plugins/` (maps urls [via regex] → classes w/ GET + POST functions which receive/serve content to clients)
-- **templates**: in `/openlibrary/templates` and `openlibrary/macros`. Macros are special template components because they can be rendered (by librarians + admins) in infogami wiki pages as:
+- **templates**: in `/openlibrary/templates` and `openlibrary/macros`. Macros are special template components because they can be rendered (by librarians + admins) within infogami wiki pages using the syntax:
 ```
 {{macros()}}
 ```
@@ -212,9 +212,7 @@ Are you trying to find an existing Router within our `plugins/`? You can try to 
 
 ## The Lifecycle of a Network Request 
 
-Here's how a network request from a patron flows through the Open Library application: When a user submits a url, like https://openlibrary.org/home, the url is first checked by /openlibrary/core/processors/readableurls.py to see (a) if the url has to be re-written (e.g. did you know that http://openlibrary.org/b/OL10317216M is a valid url?) and (b) whether the url contains names which need to be translated from terms our patrons use (e.g. /books/OL...M) to the internal infogami type names registered in the database (e.g. /editions/OL...M).
-
-From here, a distinction is made between pages which are custom defined by us (whose controllers live in /openlibrary/plugins) and pages which are managed by infogami (and whose controllers are implicitly defined -- i.e. there is no explicit controller in the code). In the case of /home, this is an endpoint we defined and has a controller defined in /openlibrary/plugins/openlibrary/home.py. This controller declares the url pattern it's responsible for (i.e. /home), fetches the data it needs from various models, and (where applicable) explicitly passes this data into a template (in this case, /openlibrary/templates/home/index.html). The controller then returns the rendered result of this template injected with data to the patron. This differs from the magical process by which urls are resolved for infogami pages.
+[The lifecycle of an Open Library network request](https://github.com/internetarchive/openlibrary/wiki/The-Lifecycle-of-a-Network-Request).
 
 ## Adding a new Router
 
@@ -255,12 +253,7 @@ In order for the data-infused partial to be rendered within a template, you’ll
 3.  Connect the Partial’s JS to the Partial endpoint
     - The [Partial’s JS](https://github.com/internetarchive/openlibrary/blob/37db01e97fafaeec1f36951050b06f836442ca71/openlibrary/plugins/openlibrary/js/affiliate-links.js#L54) makes a call to the [Partial endpoint](https://github.com/internetarchive/openlibrary/blob/3cb7cfeb658f6e97b05f23e4e248ac9d0a8db3a8/openlibrary/plugins/openlibrary/code.py#L1045). The call returns the data-infused partial to the partial’s js where it’s added to the template or the placeholder on the template.
 
-## Infogami Types
 
-Open Library sits on top of a Wiki/CRM platform called Infogami which helps us define page types. By default, an infogami page (like https://openlibrary.org/about) is of /type/page. We've defined a bunch of other special page types (e.g. /type/page, /type/edition, /type/work, /type/author, /type/user -- see all of them here: https://openlibrary.org/type). Unlike endpoints we define (e.g. by registering controllers within /openlibrary/plugins), infogami has a generic engine which implicitly / invisibly defines controllers for all infogami pages. This engine intrinsically resolves pages of designed types directly to their corresponding templates, without there being any explicit controller represented in the code. This can sometimes make it really confusing when you're trying to figure out where the code is for a specific endpoint (spoiler: it probably only exists abstractly).
-
-When you request a url (for an infogami page), /openlibrary/core/processors/readableurls.py again first maps the url to the correct underlying infogami type, the infogami engine generically fetches the requested page object (e.g. /about or /edition/OL...M) from the infogami database (infostore) and then passes it directly to the infogami template with the matching type as defined in /openlibrary/templates/type (e.g. edition, page, work, author, etc).
-Re-iterated, infogami pages don't have different explicit controllers defined within the code -- urls which address infogami pages are caught by infogami, the matching db object is fetched by infogami and passed as generic variable called page into special infogami-specific templates which live in /openlibrary/templates/type/{type}/view.html via the line $def with (page). The corresponding properties and attributes of page are confusingly defined (according to the page's type) in /openlibrary/plugins/upstream/models.py
 
 ### Working in Docker
 
