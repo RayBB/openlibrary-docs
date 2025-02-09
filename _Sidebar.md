@@ -25,7 +25,7 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
 * **Manage your developer environment**  
   * [Import production data into your local environment](https://github.com/internetarchive/openlibrary/wiki/Loading-Production-Book-Data) 
   * [Login as admin in your local environment](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin) or [Create new users](https://github.com/internetarchive/openlibrary/wiki/Creating-and-Logging-in-as-a-new-user-on-your-local-client#creating-and-logging-into-new-users)
-* **Lookup Common [Recipes](#recipes)**  
+* **Lookup Common [Recipes](Coding-Recipes)**  
   * [Use cache](Using-Cache) or [cookies](#setting--unsetting-a-cookie-on-login-or-registration) 
 * **Participate in the Community**  
   * [Request for a slack invite](https://openlibrary.org/volunteer)
