@@ -40,7 +40,9 @@ This `home` controller class asserts a url pattern that it's responsible for han
 
 ### Models & Views
 
-Inside the controller, relevant data needed by the page will often be fetched from various [models](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/models.py) that make calls to the database.
+Web.py, the python micro-web framework used by Open Library, exposes a variable called `web.ctx` which maintains the context of the application and the client during/across a http request. Web.py also maintains a `web.db` connection to our postgres database. Web.py allows us to fetch query parameters from the patron's request, consult the patron's anonymized IP or request headers, check the patron's cookie to see if they're logged in, etc.
+
+Once inside the controller, the `web.ctx`, `web.db`, and [core models](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/models.py) may be used to fetch the relevant data required to respond to the patron's request.
 
 Once the necessary data is fetched (where applicable), the controller either returns the raw data to the patron in the form of an API (json, opds, etc) or passes it into a template file (in this case, [`templates/home/index.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/home/index.html)), where it is then rendered, and returned to the patron.
 
