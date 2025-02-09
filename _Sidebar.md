@@ -1,5 +1,5 @@
-## Welcome
-to the Open Library Handbook! Here you will learn **how to**...
+## Start Here
+Welcome to the Open Library Handbook! Here you will learn **how to**...
 
 * **Get Set Up**  
   * [Install Open Library](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-installation-guide-for-open-library-developers)
