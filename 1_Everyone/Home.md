@@ -1,33 +1,3 @@
-Welcome to the Open Library Handbook! Here you will learn **how to**...
-
-* Get Set Up
-  * [Install Open Library](https://github.com/internetarchive/openlibrary/tree/master/docker#welcome-to-the-installation-guide-for-open-library-developers)
-  * [Find a Good First Issue](https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue+is%3Aopen+-linked%3Apr+label%3A%22Good+First+Issue%22+no%3Aassignee)
-  * [Use Git correctly to work on an issue](../Git-Cheat-Sheet)
-* Understand the Codebase
-  * [Identify **which file(s)** power each URL Endpoint](../Endpoints)
-  * [Trace **step-by-step** the Lifecycle of a Network Request](https://github.com/internetarchive/openlibrary/wiki/The-Lifecycle-of-a-Network-Request) through the application
-  * [Add a new Endpoint](https://github.com/internetarchive/openlibrary/tree/master/openlibrary/plugins#tutorial-implementing-a-new-route)
-* Contribute to the Front-end
-  * [Work with HTML Templates](../Frontend-Guide#working-with-html)
-    * [Asynchronously load Template Partials](../Frontend-Guide#partials)
-    * [Internationalize (i18n) Templates](../Internationalization)
-  * [Work with and build JS & CSS](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#css-js-and-html)
-* Contribute to the Backend
-  * [Understand our Database Model (DDL)](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
-  * [Work with Solr search engine](https://github.com/internetarchive/openlibrary/wiki/Solr)
-  * [Diagram the Production Architecture](../Production-Service-Architecture)
-  * [Understand Infogami](https://openlibrary.org/dev/docs/infogami) and the [Tech Stack](https://openlibrary.org/about/tech)
-* Manage your developer environment
-  * [Import production data into your local environment](https://github.com/internetarchive/openlibrary/wiki/Loading-Production-Book-Data) 
-  * [Login as admin in your local environment](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin) or [Create new users](https://github.com/internetarchive/openlibrary/wiki/Creating-and-Logging-in-as-a-new-user-on-your-local-client#creating-and-logging-into-new-users)
-* [Implement Common Recipes](#recipes)
-  * [Use cache](../Using-Cache) or [cookies](../#setting--unsetting-a-cookie-on-login-or-registration) 
-* [Submit a good Pull Request](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#submitting-pull-requests)
-  * [Test](../Testing) and [Debug & Profile](/Debugging-and-Performance-Profiling) your code
-* [Join the Community](https://openlibrary.org/volunteer)
-  * [Volunteer for a Fellowship](https://github.com/internetarchive/openlibrary/wiki#fellowships) or [Apply for GSoC](../Google-Summer-of-Code)
-
 # About Open Library
 
 For a top-level executive summary of the Open Library project, please see the [Main Open Library Index](https://docs.google.com/document/d/1KJr3A81Gew7nfuyo9PnCLCjNBDs5c7iR4loOGm1Pafs/edit#heading=h.2pqg6f58xqb3). This document contains a year-by-year breakdown of board reports, roadmaps, community call documents, a project index, and top-level team documents spanning engineering, design, communications, and more.
