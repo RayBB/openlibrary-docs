@@ -1,12 +1,13 @@
 Welcome to the Front-End Guide for Open Library, a primer for making front-end changes to the openlibrary.org website.
  
 - [File Organization Overview](#File-Organization-Overview)
+- [Overview of Endpoints](../Endpoints)  
 - [CSS & HTML](#css-js-and-html)
   - [Building CSS & JS](#building-css-and-js)
   - [Working with CSS](#working-with-css)
   - [Working with HTML Templates](#working-with-html)
 - [Working with Javascript](#working-with-javascript)
-- [Developer Code Navigation](https://github.com/internetarchive/openlibrary/wiki/Developer-Code-Navigation) + [Overview of HTTP Endpoints](/2_Developers/3_Backend/Endpoints)  
+
 - [Routing & Templates](#routing-and-templates)
 - [URL Routing](#url-routing)
 - [The Lifecycle of a Network Request](#The-Lifecycle-of-a-Network-Request)
