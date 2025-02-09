@@ -1,16 +1,15 @@
 → [**Apply to Google Summer of Code**](https://summerofcode.withgoogle.com/programs/2024/organizations/internet-archive)
 
-→ **Open Library's 2025 Call For Proposals (CFP) is not yet available.** 
-    [**See 2024 CFP**](https://docs.google.com/document/d/1Wh3tAxS4T9eKLa5x8iILft964v8zriaq-hKcu300Lg4/edit#heading=h.mn497pr3rien)
-
-* **[Welcome](#Welcome)**
-  * [History](#History) | [Your Chances](#Your-Chances) | [Advice for Contributors](#Advice-For-Contributors)
-* **[Drafting a Proposal](#Drafting-a-Proposal)** 
-  * [Requirements](#Requirements) | [Walkthrough](#Walkthrough) | [Sample](#Sample) | [Tips](#Tips)
-* **[Selection Process](#selection-process)** 
-  * [Fellowship Qualities](#Fellowship-Qualities) | [Fellowship Checklist](#Fellowship-Checklist)
+→ [**Open Library's 2025 Call For Proposals (CFP)**](https://docs.google.com/document/d/1oHNwPNYmHV5q3puBfv6IQFs-4gTe9XLN2iz2Lgse-1k/edit?tab=t.0#heading=h.mn497pr3rien) 
 
 ---
+
+* **[Welcome](#Welcome)**
+  * [History](#History), [Your Chances](#Your-Chances), and [Advice for Contributors](#Advice-For-Contributors)
+* **[Drafting a Proposal](#Drafting-a-Proposal)** 
+  * [Requirements](#Requirements), [Walkthrough](#Walkthrough), [Sample](#Sample), and [Tips](#Tips)
+* **[Selection Process](#selection-process)** 
+  * [Fellowship Qualities](#Fellowship-Qualities), [Fellowship Checklist](#Fellowship-Checklist)
 
 # Welcome
 
