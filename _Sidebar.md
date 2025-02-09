@@ -36,7 +36,7 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
 
 **Developer Guides**  
 * [BookWorm / Affiliate Server](https://docs.google.com/document/d/1KRtKYFEp40rgWlxWR1G3v60YSKIQBXbKQTjTloD0Vbg/edit#heading=h.xmcr55qgzsig)  
-* [Developing the My Books & Reading Log](5_Projects_Developing-the-Reading-Log)  
+* [Developing the My Books & Reading Log](https://archive.org/embed/openlibrary-tour-2020/openlibrary-mybooks-primer.mp4)  
 * [Developing the Books page](https://archive.org/details/openlibrary-tour-2020/book-page-developers-guide.mp4)  
 * [Understanding the "Read" Button](https://archive.org/details/openlibrary-tour-2020/openlibrary-availability-button-technical-walkthrough.mp4)  
 
