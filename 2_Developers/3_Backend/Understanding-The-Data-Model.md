@@ -1,11 +1,44 @@
+## Adding new Tables
+
 Interested in adding new table to our schema? Check out this reference PR: https://github.com/internetarchive/openlibrary/pull/7928/files
 
-# Infogami 
-Each Infogami page (i.e. something with a URL) has an associated type. Each type contains a schema that states what fields can be used with it and what format those fields are in. Those are used to generate view and edit templates which can then be further customized as a particular type requires.
+## Querying for Data
 
-Infogami provides a generic way through it's wiki to create new types as needed. 
+The [`bookshelves`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/core/bookshelves.py#L78-L90) core model shows us how we can use a database connection on the backend to query for data
+
+```
+from openlibrary.core import db
+oldb = db.get_db() # i.e. web.database(**web.config.db_parameters)
+query = "SELECT count(*) from bookshelves_books"
+oldb.query(query)
+```
+
+### Fetching Things Individually or in Bulk
+
+From within routers/controllers, it's much more common to use the `web.ctx.site` object to fetch individual or multiple records.
+
+
+```
+doc = web.ctx.site.get("/works/OL5285479W")
+keys = ["/works/OL5285479W", "/works/OL257943W", "/works/OL27448W"]
+docs = web.ctx.site.get_many(keys)
+```
+
+## Understanding Infogami, Infobase, and Web.py
+
+Open Library is built using a wiki engine called [infogami](https://openlibrary.org/dev/docs/infogami) which sits on top of the
+`web.py` python micro-web framework (comparable to flask). Web.py uses a variable called `web.ctx` to maintain the context of the application during/across a http request. Web.py also maintains a postgres database connection using `web.db`. Infogami extends and wraps the `web.db` controller by offering a system called `infobase` which behaves like an ORM (db wrapper) to allow us to define arbitrary data types like works, editions, authors, etc.
+
+At the simplest level, Infobase works by relying on 2 tables: `things` and `data`:
+* `things` gives every object in our system and ID, a type, and a reference to its data in the data table.
+* `data` is just a massive catalog of json data that can be references by querying and joining things
+
+Infogami injects a utility called `site` into web.py's `web.ctx` (https://webpy.org/cookbook/ctx) variable (ctx maintains information and connections specific to the current client). The `web.ctx.site` utility handles queries and joins for you so you can request and key from the things table, fetch all its corresponding data, and also leverage and models and functions we have defined for that thing's type.
 
 # Infogami Database Schema
+
+Every Infogami page on Open Library (i.e. something with a URL) has an associated type. Each type contains a schema that states what fields can be used with it and what format those fields are in. Those are used to generate view and edit templates which can then be further customized as a particular type requires. Infogami provides a generic way through it's wiki to create new types as needed. 
+
 Aside from the tables listed [here](#open-library-feature-tables), Open Library in essence only really has **only two database tables**. By default they will have the same pretty basic functionality through Infogami
 
 ### Thing table
