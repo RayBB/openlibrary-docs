@@ -15,6 +15,7 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
     * [Asynchronously load Template Partials](Frontend-Guide#partials)
     * [Internationalize (i18n) Templates](Internationalization)
   * [Work with and build JS & CSS](https://github.com/internetarchive/openlibrary/wiki/Frontend-Guide#css-js-and-html)
+  * [Refer to our Design Pattern Library](Design-Pattern-Library) and [Figma Design System](https://www.figma.com/file/dYQkIJOJeMo9hx7ewZQH9x/Open-Library%3A-Design-System-%26-Component-Library)
 * **Contribute to the Back-end**  
   * [Understand our Database Model (DDL)](https://github.com/internetarchive/openlibrary/wiki/Understanding-The-Data-Model)
   * [Work with Solr search engine](https://github.com/internetarchive/openlibrary/wiki/Solr) 
