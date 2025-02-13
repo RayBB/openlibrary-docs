@@ -22,7 +22,7 @@ Welcome to the Open Library Handbook! Here you will learn **how to**...
   * [Work on the Import Pipeline](Developer's-Guide-to-Data-Importing) and [Write Librarian Bots](Writing-Bots)  
   * [Use or Write APIs](https://openlibrary.org/developers/api)
   * [Diagram the Production Architecture](Production-Service-Architecture)  
-  * [Understand Infogami](https://openlibrary.org/dev/docs/infogami) and the [Tech Stack] (https://openlibrary.org/about/tech)
+  * [Understand Infogami](https://openlibrary.org/dev/docs/infogami) and the [Tech Stack](https://openlibrary.org/about/tech)
 * **Manage your developer environment**  
   * [Import production data into your local environment](https://github.com/internetarchive/openlibrary/wiki/Loading-Production-Book-Data) 
   * [Login as admin in your local environment](https://github.com/internetarchive/openlibrary/blob/master/CONTRIBUTING.md#logging-in-as-admin) or [Create new users](https://github.com/internetarchive/openlibrary/wiki/Creating-and-Logging-in-as-a-new-user-on-your-local-client#creating-and-logging-into-new-users)
