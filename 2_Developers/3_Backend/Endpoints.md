@@ -7,8 +7,14 @@
 | **Account Creation** | <img width="630" alt="Screenshot 2025-02-09 at 9 58 08 AM" src="https://github.com/user-attachments/assets/c4f0c7b6-54f4-40e6-aa10-1cbbe7472313" /> | [`/account/create`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L264-L333) | [`create.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/account/create.html) | | | `@cdrini` |
 | **Account Login**    | <img width="634" alt="Screenshot 2025-02-09 at 9 58 30 AM" src="https://github.com/user-attachments/assets/23853bd7-00ee-4452-8576-43d1fb488169" /> | [`/account/login`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L399-L476) | [`login.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/login.html) | | | `@cdrini` |
 | **My Books Page** | <img width="704" alt="Screenshot 2025-02-09 at 9 59 27 AM" src="https://github.com/user-attachments/assets/7b825d2c-4c88-4688-a984-133b3b662bfc" /> | [`/account/books`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/account.py#L838-L857) → [`/people/{username}/books`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/mybooks.py#L44-L57) | [`account/view.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/account/view.html) | | [My Books page interim Mobile Navigation Fixes #6860](https://github.com/internetarchive/openlibrary/pull/7431) | `@mekarpeles`<br>`@szgrune` |
-
+| **Authors**    | <img width="634" alt="Screenshot 2025-02-15 at 1 37 22 PM" src="https://github.com/user-attachments/assets/7960e843-45ef-4a3b-a946-6e6cc4feb3a2" /> | [`/authors`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/code.py) | [`search/authors.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/login.html) | | |  |
+| **Trending**    | <img width="634" alt="Screenshot 2025-02-15 at 1 39 51 PM" src="https://github.com/user-attachments/assets/6523c6a3-22d1-45cd-a288-e0f8f00af50d"  /> | [`/trending`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/code.py) | [`templates/trending.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/trending.html) | | |  |
+| **Barcodescanner**    | <img width="634" alt="Screenshot 2025-02-15 at 1 43 43 PM" src="https://github.com/user-attachments/assets/ab22d8fd-f84e-481a-97f7-33c1edf6e107" /> | [`/barcodescanner`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/code.py) | [`components/BarcodeScanner.vue`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/components/BarcodeScanner.vue) | | |  |
+| **merges**    | <img width="634" alt="Screenshot 2025-02-15 at 1 45 46 PM" src="https://github.com/user-attachments/assets/843c04c7-00b1-48bd-992c-064d5cb9e3b3" /> | [`/merges`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/upstream/edits.py) | [`templates/merge_request_table/merge_request_table.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/components/BarcodeScanner.vue) | | |  |
+| **people**    | <img width="634" alt="Screenshot 2025-02-15 at 1 33 13 PM" src="https://github.com/user-attachments/assets/60b9233c-d9e8-4121-9bfe-715cfd81b0b6" /> | [`/people/{username}/lists and /people/{username}/lists/OL{id}L`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/lists.py) | [`templates/lists/lists.html`](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/templates/lists/lists.html) | | |  |
 ## List of all Routes
+
+
 
 An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes (endpoints) and the files in which they appear. Informed via: grep -ri "path \= \"[/]" *
 
@@ -100,7 +106,7 @@ An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes 
        `openlibrary/plugins/upstream/covers.py:    path = "(/works/OL\d+W)/manage-covers"`
        `openlibrary/plugins/upstream/covers.py:    path = "(/authors/OL\d+A)/manage-photos"`
        `openlibrary/plugins/upstream/code.py:    path = "/images/.*"`
-
+      
     `Special Book Collections:`
        `openlibrary/plugins/openlibrary/borrow_home.py:    path = "/read"`
        `openlibrary/plugins/openlibrary/borrow_home.py:    path = "/borrow"`
@@ -170,6 +176,7 @@ An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes 
        `openlibrary/plugins/worksearch/code.py:    path = "/search"`
        `openlibrary/plugins/worksearch/subjects.py:    path = "/subjects"`
        `openlibrary/plugins/worksearch/publishers.py:    path = "/publishers"`
+       `openlibrary/plugins/worksearch/code.py:    path = "/barcodescanner"`
 
      `Importing:`
        `openlibrary/plugins/importapi/code.py:add_hook("import", importapi)`
@@ -236,6 +243,43 @@ An Explorer's Map to the Chasm Which is Open Library -- A mapping of url routes 
 - [Importing](#importing)
 - [Subjects](#subjects)
 - [List of All Routes](#list-of-all-routes)
+
+## Authors
+
+### Feshing the authors
+**Body:**
+
+     {
+        "type": "/type/work",
+        "authors": {"author": {"key": author.key}},
+        "limit": limit,
+        "offset": offset,
+    }
+
+**Paths:**
+
+        path = r"(/authors/OL\d+A)/works"
+        encoding = "json"
+- Find rest APIs here [Routes for Authors](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/api.py)
+
+## Trending
+
+### Feshing the Trending books
+**Body:**
+
+        {
+            'query': f"/trending/{period}",
+            'works': [dict(work) for work in works],
+            'days': days,
+            'hours': i.hours,
+        }
+
+**Paths:**
+
+        path = "/trending(/?.*)"
+        # path = "/trending/(now|daily|weekly|monthly|yearly|forever)"
+        encoding = "json"
+- Find rest APIs here [Routes for Authors](https://github.com/internetarchive/openlibrary/blob/master/openlibrary/plugins/openlibrary/api.py)
 
 ## Lists
 
