@@ -24,7 +24,7 @@ Using a debugger is one of the best ways to understand how code works and to fin
 To use:
 1. `docker compose up -d` as usual and [**login as admin**](https://github.com/internetarchive/openlibrary/wiki/Getting-Started#logging-in). (Note this has to be done before changing the docker-compose file; see https://github.com/internetarchive/openlibrary/issues/2122 )
 2. Open the repo in VS Code -- `code .`
-3. Edit around line 8 of `compose.yaml` to say `workers 1` instead of `4`
+3. Edit around line 6 of `compose.yaml` to say `workers 1` instead of `4` and `timeout` to be `180000000` instead of `180`
 4. By default, a worker only lives for 500 seconds -- this will interrupt the debugger; this setting should be increased (by e.g. 10x) or removed.
 5. `docker compose up -d`
 6. Go to http://localhost:8080/admin/attach_debugger and click "Start"
