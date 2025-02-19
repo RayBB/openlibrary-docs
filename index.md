@@ -11,7 +11,7 @@ hero:
 features:
   - title: Developers
     details: Write some code
-    link: "2_Developers/1_Start-Here"
+    link: "2_Developers/"
   - title: Everyone
     details: Learn how to contribute to the project
     link: "1_Everyone/"
