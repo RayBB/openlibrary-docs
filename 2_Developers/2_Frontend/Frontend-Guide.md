@@ -1,7 +1,7 @@
 Welcome to the Front-End Guide for Open Library, a primer for making front-end changes to the openlibrary.org website.
  
 - [File Organization Overview](#File-Organization-Overview)
-- [Overview of Endpoints](../Endpoints)  
+- [Overview of Endpoints](../3_Backend/Endpoints.md)  
 - [CSS & HTML](#css-js-and-html)
   - [Building CSS & JS](#building-css-and-js)
   - [Working with CSS](#working-with-css)
