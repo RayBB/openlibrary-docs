@@ -23,6 +23,6 @@ features:
     link: "1_Everyone/Internationalization"
 ---
 
-These are the (beta) docs for contributing to Open Library on the technical side of things.
+These are the docs for contributing to Open Library.
 
 Click on one of the roles above to start your adventure!
