@@ -5,7 +5,7 @@ import { generateSidebar } from "vitepress-sidebar";
 export default defineConfig({
   title: "Open Library Docs",
   description: "A new docs experience for Open Library",
-  base: process.env.NODE_ENV === 'production' ? '/openlibrary-docs/' : '',
+  base: process.env.NODE_ENV === 'production' ? '/openlibrary/' : '',
   ignoreDeadLinks: true, // 'localhostLinks', // It shouldn't be true but is needed for now to build the site.
   srcExclude: ["_Sidebar.md"], // Ignore the sidebar so we don't get dead link reports
   themeConfig: {
